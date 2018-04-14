@@ -1,3 +1,12 @@
 // 
 // badge.scss
 //
+
+
+
+// Creates the "soft" badge variant
+@each $color, $value in $theme-colors {
+  .badge-#{$color}-soft {
+    @include badge-variant-soft(theme-color-level($color, $badge-soft-bg-level), $value);
+  }
+}

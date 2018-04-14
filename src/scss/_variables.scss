@@ -43,7 +43,7 @@ $pink:       #ff679b; // Needs value
 $red:        #E63757;
 $orange:     #fd7e14; // Needs value
 $yellow:     #F6C343;
-$green:      #30E398;
+$green:      #00D97E;
 $teal:       #02a8b5; // Needs value
 $cyan:       #39afd1; // Needs value
 
@@ -66,7 +66,7 @@ $colors: map-merge((
 ), $colors);
 
 $primary:       $blue;
-$secondary:     $gray-700;
+$secondary:     $gray-600;
 $success:       $green;
 $info:          $cyan;
 $warning:       $yellow;
@@ -95,7 +95,7 @@ $yiq-contrasted-threshold: 150 !default;
 
 // Customize the light and dark text colors for use in our YIQ color contrast function.
 $yiq-text-dark: $gray-900;
-$yiq-text-light: $white !default;
+$yiq-text-light: $white;
 
 // Options
 //
@@ -726,7 +726,7 @@ $popover-arrow-outer-color:         fade-in($popover-border-color, .05) !default
 
 $badge-font-size:                   75% !default;
 $badge-font-weight:                 $font-weight-bold;
-$badge-padding-y:                   .25em !default;
+$badge-padding-y:                   .33em;
 $badge-padding-x:                   .4em !default;
 $badge-border-radius:               $border-radius !default;
 
@@ -777,6 +777,10 @@ $alert-margin-bottom:               1rem !default;
 $alert-border-radius:               $border-radius !default;
 $alert-link-font-weight:            $font-weight-bold !default;
 $alert-border-width:                $border-width !default;
+
+$alert-bg-level:                    -10;
+$alert-border-level:                -9;
+$alert-color-level:                 6 !default;
 
 
 // Progress bars
@@ -834,13 +838,13 @@ $figure-caption-color:              $gray-600 !default;
 
 // Breadcrumbs
 
-$breadcrumb-padding-y:              $spacer/1.5;
-$breadcrumb-padding-x:              0;
-$breadcrumb-item-padding:           .5rem;
+$breadcrumb-padding-y:              .75rem !default;
+$breadcrumb-padding-x:              1rem !default;
+$breadcrumb-item-padding:           .5rem !default;
 
 $breadcrumb-margin-bottom:          1rem !default;
 
-$breadcrumb-bg:                     transparent;
+$breadcrumb-bg:                     $gray-200;
 $breadcrumb-divider-color:          $gray-400;
 $breadcrumb-active-color:           $gray-500;
 $breadcrumb-divider:                "/" !default;

@@ -5,10 +5,16 @@ Email: coderthemes@gmail.com
 File: Main Css File
 */
 
-//Core files
+//Core setup
 @import "bootstrap/functions";
 @import "bootstrap/variables";
+
+// Core setup overrides
 @import "_variables";
+@import "_variables_custom";
+@import "mixins/_badge";
+
+// Core libraries
 @import "bootstrap/bootstrap";
 
 //Fonts
