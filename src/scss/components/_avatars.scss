@@ -1,0 +1,21 @@
+// 
+// avatar.scss
+//
+
+.avatar {
+  border-radius: 50%;
+  width: $spacer * 3;
+  height: $spacer * 3;
+  &.avatar-xs {
+    width: $spacer * 1.5;
+    height: $spacer*1.5;
+  }
+  &.avatar-sm {
+    width: $spacer * 2;
+    height: $spacer * 2;
+  }
+  &.avatar-lg {
+    width: $spacer * 5;
+    height: $spacer * 5;
+  }
+}

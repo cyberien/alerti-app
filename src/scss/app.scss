@@ -17,16 +17,19 @@ File: Main Css File
 // Core libraries
 @import "bootstrap/bootstrap";
 
-//Fonts
+// Fonts
 @import "fonts/_nunito";
 @import "fonts/_cerebri";
 
-//Components
+// Component Overrides
 @import "components/_alerts";
 @import "components/_badge";
 @import "components/_buttons";
 @import "components/_card";
 @import "components/_type";
+
+// Custom Components
+@import "components/_avatars";
 
 // Utilities
 @import "utilities/_text";
