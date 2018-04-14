@@ -1,0 +1,32 @@
+
+// 
+// card.scss
+//
+
+//Card Box
+.card-box {
+  padding: 20px;
+  border-radius: 3px;
+  margin-bottom: 30px;
+  background-color: $white;
+
+  .header-title {
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    font-size: $font-size-base;
+    margin-top: 0;
+  }
+
+  .card-drop {
+    font-size: 20px;
+    line-height: 0;
+    color: inherit;
+  }
+}
+
+
+// Card
+.card-title,.card-header {
+  margin-top: 0 !important;
+}

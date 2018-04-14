@@ -1,0 +1,26 @@
+/*
+Template Name: Highdmin - Responsive Bootstrap 4 Admin Dashboard
+Author: CoderThemes
+Email: coderthemes@gmail.com
+File: Main Css File
+*/
+
+//Core files
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "_variables";
+@import "bootstrap/bootstrap";
+
+//Fonts
+@import "fonts/_nunito";
+@import "fonts/_cerebri";
+
+//Components
+@import "components/_alerts";
+@import "components/_badge";
+@import "components/_buttons";
+@import "components/_card";
+@import "components/_type";
+
+// Utilities
+@import "utilities/_text";
