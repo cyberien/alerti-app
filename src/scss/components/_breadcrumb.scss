@@ -1,0 +1,12 @@
+.breadcrumb-sm {
+  padding: $breadcrumb-padding-y-sm $breadcrumb-padding-x-sm;
+  margin-bottom: $breadcrumb-margin-bottom-sm;
+  font-size: $breadcrumb-font-size-sm;
+
+  .breadcrumb-item {
+    + .breadcrumb-item::before {
+      padding-right: $breadcrumb-item-padding-sm;
+      padding-left: $breadcrumb-item-padding-sm;
+    }
+  }
+}
