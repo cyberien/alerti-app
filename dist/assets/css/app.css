@@ -3703,7 +3703,7 @@ tbody.collapse.show {
   padding-right: 0.5rem;
   padding-left: 0.5rem;
   color: #D3DCE6;
-  content: "/"; }
+  content: ""; }
 
 .breadcrumb-item + .breadcrumb-item:hover::before {
   text-decoration: underline; }
@@ -3796,7 +3796,7 @@ tbody.collapse.show {
   display: inline-block;
   padding: 0.33em 0.4em;
   font-size: 75%;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1;
   text-align: center;
   white-space: nowrap;
@@ -7129,13 +7129,22 @@ a.text-dark:hover, a.text-dark:focus {
   .alert-dark .alert-link {
     color: #FFFFFF; }
 
-.breadcrumb-sm {
-  padding: 0.5rem 0.5rem;
-  margin-bottom: 0.25rem;
-  font-size: 0.75rem; }
-  .breadcrumb-sm .breadcrumb-item + .breadcrumb-item::before {
-    padding-right: 0.25rem;
-    padding-left: 0.25rem; }
+.breadcrumb-item + .breadcrumb-item::before {
+  width: .3rem;
+  height: .6rem;
+  margin-left: .3rem;
+  margin-right: .3rem;
+  -webkit-mask: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIxMHB4IiBoZWlnaHQ9IjE2cHgiIHZpZXdCb3g9IjAgMCAxMCAxNiIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4gICAgICAgIDx0aXRsZT5TaGFwZTwvdGl0bGU+ICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPiAgICA8ZGVmcz48L2RlZnM+ICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+ICAgICAgICA8ZyBpZD0iY2hldnJvbi1yaWdodCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMi4wMDAwMDAsIDIuMDAwMDAwKSIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2Utd2lkdGg9IjIuNSI+ICAgICAgICAgICAgPHBvbHlsaW5lIGlkPSJTaGFwZSIgcG9pbnRzPSIwIDEyIDYgNiAwIDAiPjwvcG9seWxpbmU+ICAgICAgICA8L2c+ICAgIDwvZz48L3N2Zz4=) no-repeat 50% 50%;
+  mask: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIxMHB4IiBoZWlnaHQ9IjE2cHgiIHZpZXdCb3g9IjAgMCAxMCAxNiIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4gICAgICAgIDx0aXRsZT5TaGFwZTwvdGl0bGU+ICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPiAgICA8ZGVmcz48L2RlZnM+ICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+ICAgICAgICA8ZyBpZD0iY2hldnJvbi1yaWdodCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMi4wMDAwMDAsIDIuMDAwMDAwKSIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2Utd2lkdGg9IjIuNSI+ICAgICAgICAgICAgPHBvbHlsaW5lIGlkPSJTaGFwZSIgcG9pbnRzPSIwIDEyIDYgNiAwIDAiPjwvcG9seWxpbmU+ICAgICAgICA8L2c+ICAgIDwvZz48L3N2Zz4=) no-repeat 50% 50%;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  background: #D3DCE6; }
+
+.badge {
+  vertical-align: middle; }
+
+.btn .badge {
+  top: -2px; }
 
 .badge-primary-soft {
   color: #3075E3;
@@ -7143,7 +7152,7 @@ a.text-dark:hover, a.text-dark:focus {
   .badge-primary-soft[href]:hover, .badge-primary-soft[href]:focus {
     color: #3075E3;
     text-decoration: none;
-    background-color: #aac5f2; }
+    background-color: #c0d4f6; }
 
 .badge-secondary-soft {
   color: #8492A6;
@@ -7151,7 +7160,7 @@ a.text-dark:hover, a.text-dark:focus {
   .badge-secondary-soft[href]:hover, .badge-secondary-soft[href]:focus {
     color: #8492A6;
     text-decoration: none;
-    background-color: #c8cfd8; }
+    background-color: #d7dce2; }
 
 .badge-success-soft {
   color: #00D97E;
@@ -7159,7 +7168,7 @@ a.text-dark:hover, a.text-dark:focus {
   .badge-success-soft[href]:hover, .badge-success-soft[href]:focus {
     color: #00D97E;
     text-decoration: none;
-    background-color: #a0f0cf; }
+    background-color: #b6f4da; }
 
 .badge-info-soft {
   color: #39afd1;
@@ -7167,7 +7176,7 @@ a.text-dark:hover, a.text-dark:focus {
   .badge-info-soft[href]:hover, .badge-info-soft[href]:focus {
     color: #39afd1;
     text-decoration: none;
-    background-color: #addeed; }
+    background-color: #c2e7f1; }
 
 .badge-warning-soft {
   color: #F6C343;
@@ -7175,7 +7184,7 @@ a.text-dark:hover, a.text-dark:focus {
   .badge-warning-soft[href]:hover, .badge-warning-soft[href]:focus {
     color: #F6C343;
     text-decoration: none;
-    background-color: #fae4a9; }
+    background-color: #fcebc1; }
 
 .badge-danger-soft {
   color: #E63757;
@@ -7183,7 +7192,7 @@ a.text-dark:hover, a.text-dark:focus {
   .badge-danger-soft[href]:hover, .badge-danger-soft[href]:focus {
     color: #E63757;
     text-decoration: none;
-    background-color: #f4aab6; }
+    background-color: #f7c0ca; }
 
 .badge-light-soft {
   color: #EFF2F7;
@@ -7191,7 +7200,7 @@ a.text-dark:hover, a.text-dark:focus {
   .badge-light-soft[href]:hover, .badge-light-soft[href]:focus {
     color: #EFF2F7;
     text-decoration: none;
-    background-color: #dddde9; }
+    background-color: #ededf3; }
 
 .badge-dark-soft {
   color: #273444;
@@ -7199,7 +7208,7 @@ a.text-dark:hover, a.text-dark:focus {
   .badge-dark-soft[href]:hover, .badge-dark-soft[href]:focus {
     color: #273444;
     text-decoration: none;
-    background-color: #b9bcc2; }
+    background-color: #c6c9ce; }
 
 .card-box {
   padding: 20px;
@@ -7222,10 +7231,6 @@ a.text-dark:hover, a.text-dark:focus {
 
 .table thead th {
   border-bottom-width: 1px; }
-
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-  margin: 10px 0;
-  font-weight: 600; }
 
 .avatar {
   border-radius: 50%;

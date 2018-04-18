@@ -2,7 +2,14 @@
 // badge.scss
 //
 
+.badge {
+  vertical-align: middle;
+}
 
+// Quick fix for badges in buttons
+.btn .badge {
+  top: -2px;
+}
 
 // Creates the "soft" badge variant
 @each $color, $value in $theme-colors {

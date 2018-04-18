@@ -37,15 +37,15 @@ $grays: map-merge((
 ), $grays);
 
 $blue:       #3075E3;
-$indigo:     #727cf5; // Needs value
+$indigo:     #727cf5; // NOT USED
 $purple:     #6b5eae;
-$pink:       #ff679b; // Needs value
+$pink:       #ff679b; // NOT USED
 $red:        #E63757;
-$orange:     #fd7e14; // Needs value
+$orange:     #fd7e14; // NOT USED
 $yellow:     #F6C343;
 $green:      #00D97E;
-$teal:       #02a8b5; // Needs value
-$cyan:       #39afd1; // Needs value
+$teal:       #02a8b5; // NOT USED
+$cyan:       #39afd1; // NOT USED
 
 
 $colors: ();
@@ -725,7 +725,7 @@ $popover-arrow-outer-color:         fade-in($popover-border-color, .05) !default
 // Badges
 
 $badge-font-size:                   75% !default;
-$badge-font-weight:                 $font-weight-bold;
+$badge-font-weight:                 $font-weight-normal;
 $badge-padding-y:                   .33em;
 $badge-padding-x:                   .4em !default;
 $badge-border-radius:               $border-radius !default;
@@ -847,7 +847,7 @@ $breadcrumb-margin-bottom:          1rem !default;
 $breadcrumb-bg:                     $gray-200;
 $breadcrumb-divider-color:          $gray-400;
 $breadcrumb-active-color:           $gray-600;
-$breadcrumb-divider:                "/" !default;
+$breadcrumb-divider:                "";
 
 
 // Carousel

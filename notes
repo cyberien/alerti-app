@@ -1,9 +1,14 @@
 Alerts: 
-- Not sure if the 10% color vibe is working
+x Not sure if the 10% color vibe is working
 
 Badges: 
-- .badge-light-soft is broken...the color is way too light
+x .badge-light-soft is broken...the color is way too light
 - Soft badges should maybe just used the darkened color the way that alerts do?
 
 Breadcrumbs: 
 - Should have a .breadcrumb-#{color} version? I only really want the primary/dark/white/light versions?
+
+Button groups:
+- Have that dumb focus state, but so does every other theme?
+- The .btn-group-vertical is rounded wrong, but I think if I update BS library it will fix
+
