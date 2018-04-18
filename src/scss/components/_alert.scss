@@ -1,0 +1,22 @@
+// //
+// // Base styles
+// //
+
+// // Provide class for links that match alerts
+.alert-link {
+  text-decoration: $alert-link-text-decoration;
+}
+
+// Alternate styles
+//
+// Generate contextual modifier classes for colorizing the alert.
+
+@each $color, $value in $theme-colors {
+  .alert-#{$color} {
+    @include alert-variant(theme-color-level($color, $alert-bg-level), theme-color-level($color, $alert-border-level), color-yiq(theme-color-level($color, $alert-bg-level)));
+    .close,
+    .alert-link {
+      color: color-yiq(theme-color-level($color, $alert-bg-level));
+    }
+  }
+}

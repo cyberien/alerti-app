@@ -775,12 +775,12 @@ $alert-padding-y:                   .75rem !default;
 $alert-padding-x:                   1.25rem !default;
 $alert-margin-bottom:               1rem !default;
 $alert-border-radius:               $border-radius !default;
-$alert-link-font-weight:            $font-weight-bold !default;
+$alert-link-font-weight:            $font-weight-normal;
 $alert-border-width:                $border-width !default;
 
-$alert-bg-level:                    -10;
-$alert-border-level:                -9;
-$alert-color-level:                 6 !default;
+$alert-bg-level:                    0;
+$alert-border-level:                0;
+$alert-color-level:                 6;
 
 
 // Progress bars
@@ -846,7 +846,7 @@ $breadcrumb-margin-bottom:          1rem !default;
 
 $breadcrumb-bg:                     $gray-200;
 $breadcrumb-divider-color:          $gray-400;
-$breadcrumb-active-color:           $gray-500;
+$breadcrumb-active-color:           $gray-600;
 $breadcrumb-divider:                "/" !default;
 
 
@@ -877,7 +877,7 @@ $carousel-transition:               transform .6s ease !default;
 $close-font-size:                   $font-size-base * 1.5 !default;
 $close-font-weight:                 $font-weight-bold !default;
 $close-color:                       $black !default;
-$close-text-shadow:                 0 1px 0 $white !default;
+$close-text-shadow:                 none;
 
 // Code
 
