@@ -17,3 +17,17 @@ $breadcrumb-font-size-sm:              $font-size-base * .8;
 $badge-soft-bg-level: -10;
 
 $display-letter-spacing: -.02em;
+
+
+// Sidebar
+
+$sidebar-width:                     250px;
+$main-content-padding-x:            $spacer; 
+$main-content-padding-y:            $spacer;
+
+
+// Nav vertical
+$navbar-vertical-nav-link-padding-y:           .5rem;
+$navbar-vertical-padding-y:                    $spacer;
+$navbar-vertical-padding-x:                    $spacer;
+$navbar-vertical-divider-bg:                   $gray-300;

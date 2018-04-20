@@ -1,0 +1,40 @@
+// Sidebar navigation
+//
+
+.sidebar {
+  position: absolute;
+  width: $sidebar-width;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  overflow: scroll;
+}
+
+// This should be optional. 
+.main-content {
+  margin-left: $sidebar-width;
+  padding: $main-content-padding-x $main-content-padding-y;
+}
+
+
+
+
+// Vertical Nav?
+.navbar-vertical {
+  padding: $navbar-vertical-padding-y $navbar-vertical-padding-x;
+
+  .nav-link {
+    display: flex;
+    align-items: center;
+  }
+
+}
+
+.navbar-vertical-divider {
+  @include nav-divider($navbar-vertical-divider-bg, $spacer);
+}
+
+.nav-link-icon {
+  margin-right: .625rem;
+  font-size: ($font-size-base * 1.2);
+}
