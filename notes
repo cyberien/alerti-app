@@ -31,7 +31,8 @@ Tooltip:
 - Do I want a white background? Or just use the default? Gray is a little weird?
 
 Navbars: 
-- Might need to change structure to suit the underline active one? Or should I just relegate that to navs only?
+x Might need to change structure to suit the underline active one? Or should I just relegate that to navs only? [Solved]
+- Would love to allow for custom "margin-x" for .card-header-tabs
 
 
 Other: 

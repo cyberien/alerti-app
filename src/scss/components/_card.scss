@@ -6,8 +6,10 @@
 
 .card-header-tabs {
   margin-top: -$card-spacer-y;
+  margin-right: 0;
+  margin-left: 0;
 
-  // Ensures the height of card headers with _just_ .nav-tabs or a .card-header-title are the same
+  // Ensures the height of card headers always stays the same, whether it's a .card-header-title, .card-header-tabs, or other content
   .nav-link {
     padding-top: $card-spacer-y;
     padding-bottom: $card-spacer-y

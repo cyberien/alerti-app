@@ -14,13 +14,20 @@
     border-right-width: 0;
     border-top-width: 0;
     
-    &:not(.active){
+    &:not(.active) {
       color: $gray-600;
-      &:hover{
+      &:hover {
         color: $gray-700;
       }
     }
 
+  }
+
+  .nav-item:first-child .nav-link {
+    margin-left: 0;
+  }
+  .nav-item:last-child .nav-link {
+    margin-right: 0;
   }
 
   // Removes the primary color underline from dropdowns in .nav-tabs
