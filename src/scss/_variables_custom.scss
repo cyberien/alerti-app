@@ -22,8 +22,7 @@ $display-letter-spacing: -.02em;
 // Sidebar
 
 $sidebar-width:                     250px;
-$main-content-padding-x:            $spacer; 
-$main-content-padding-y:            $spacer;
+$sidebar-border-color:              $gray-200;
 
 
 // Nav vertical
@@ -31,3 +30,11 @@ $navbar-vertical-nav-link-padding-y:           .5rem;
 $navbar-vertical-padding-y:                    $spacer;
 $navbar-vertical-padding-x:                    $spacer;
 $navbar-vertical-divider-bg:                   $gray-300;
+
+
+$nav-tabs-link-active-border-width:           1px;
+$nav-tabs-link-margin-x:                      .75rem; // Margin used for X so active underline matches width of label
+$nav-tabs-link-padding-y:                     $card-spacer-y; // This keeps the height the same as the card header
+
+// Smaller nav tabs
+$nav-tabs-sm-font-size:                       .8125rem;

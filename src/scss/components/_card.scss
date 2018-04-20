@@ -2,3 +2,14 @@
 // 
 // card.scss
 //
+
+
+.card-header-tabs {
+  margin-top: -$card-spacer-y;
+
+  // Ensures the height of card headers with _just_ .nav-tabs or a .card-header-title are the same
+  .nav-link {
+    padding-top: $card-spacer-y;
+    padding-bottom: $card-spacer-y
+  }
+}

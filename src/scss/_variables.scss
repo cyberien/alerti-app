@@ -578,11 +578,11 @@ $nav-link-disabled-color:           $gray-600 !default;
 
 $nav-tabs-border-color:             $gray-300 !default;
 $nav-tabs-border-width:             $border-width !default;
-$nav-tabs-border-radius:            $border-radius !default;
-$nav-tabs-link-hover-border-color:  $gray-200 $gray-200 $nav-tabs-border-color !default;
-$nav-tabs-link-active-color:        $gray-700 !default;
-$nav-tabs-link-active-bg:           $white;
-$nav-tabs-link-active-border-color: $gray-300 $gray-300 $nav-tabs-link-active-bg !default;
+$nav-tabs-border-radius:            0;
+$nav-tabs-link-hover-border-color:  transparent transparent transparent;
+$nav-tabs-link-active-color:        $black;
+$nav-tabs-link-active-bg:           transparent;
+$nav-tabs-link-active-border-color: transparent transparent theme-color("primary");
 
 $nav-pills-border-radius:           $border-radius !default;
 $nav-pills-link-active-color:       $component-active-color !default;
@@ -660,7 +660,7 @@ $jumbotron-bg:                      $gray-200;
 
 // Cards
 
-$card-spacer-y:                     .75rem !default;
+$card-spacer-y:                     1rem;
 $card-spacer-x:                     $spacer;
 $card-border-width:                 $border-width !default;
 $card-border-radius:                $border-radius-lg;

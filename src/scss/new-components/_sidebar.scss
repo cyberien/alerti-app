@@ -8,12 +8,12 @@
   left: 0;
   height: 100vh;
   overflow: scroll;
+  border-right: 1px solid $sidebar-border-color;
 }
 
 // This should be optional. 
 .main-content {
   margin-left: $sidebar-width;
-  padding: $main-content-padding-x $main-content-padding-y;
 }
 
 
