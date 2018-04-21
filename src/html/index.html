@@ -20,7 +20,7 @@
 
         <nav class="navbar navbar-expand-lg bg-white navbar-light">
           <div class="container">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="#">Dashkit</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -76,11 +76,20 @@
           </div>
         </nav>
         <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Library</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Data</li>
-          </ol>
+          <div class="bg-primary">
+            <div class="container">
+              <ol class="breadcrumb breadcrumb-dark">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Library</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Data</li>
+              </ol>
+              <!-- <div class="row">
+                <div class="col-12">
+                  
+                </div>
+              </div> -->
+            </div>
+          </div>
         </nav>
 
       <div class="container mt-5">
@@ -98,17 +107,23 @@
               <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs">
                   <li class="nav-item">
-                    <a class="nav-link active" href="#">Sales</a>
+                    <a class="nav-link active" href="#sales" data-toggle="tab" role="tab" aria-controls="sales" aria-selected="true">Sales</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Orders</a>
+                      <a class="nav-link" href="#orders" data-toggle="tab" role="tab" aria-controls="orders" aria-selected="false">Orders</a>
                   </li>
                 </ul>
               </div>
               <div class="card-body">
-                <h5 class="card-title">Finance</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="tab-content">
+                  <div class="tab-pane show active" id="sales" role="tabpanel" aria-labelledby="sales-tab">
+                    <p class="card-text">This is all about sales.</p>
+                  </div>
+                  <div class="tab-pane" id="orders" role="tabpanel" aria-labelledby="orders-tab">
+                    <p class="card-text">This is all about orders.</p>
+                    <p class="card-text">This is all about orders.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -138,9 +153,9 @@
             </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row row-eq-height">
         <div class="col-6">
-            <div class="card">
+            <div class="card h-100">
               <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs">
                   <li class="nav-item">
@@ -171,6 +186,25 @@
               </div>
             </div>
           </div>
+
+          <div class="col-6">
+            <div class="card h-100">
+              <div class="card-header">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="card-header-title">Active Users</div>
+                  <a class="btn-sm btn btn-outline-secondary" href="#">Download</a>
+                  <!-- <select class="form-control form-control-sm w-25">
+                    <option value="small">Small</option>
+                  </select> -->
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Finance</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+        </div>
 
       </div>
 

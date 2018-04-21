@@ -16,6 +16,7 @@ Button groups:
 Cards: 
 x The rounding on the accordion are wrong – seems like sometimes the border calc is off – fix this. [Updating to 4.1 fixed]
 - Cards need $gray-200 divider that uses opacity, not just a hard number
+- Fix card-header heights for button-sm, nav-tabs, titles, etc.
 
 Carousel: 
 - Fix the page indicators, the next/prev handles

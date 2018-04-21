@@ -3,6 +3,9 @@
 // Variables should follow the `$component-state-property-size` formula for
 // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
 
+
+$font-size-xs:                         ($font-size-base * .8125);
+
 $alert-link-text-decoration:           underline;
 
 // Extended vars

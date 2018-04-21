@@ -3,6 +3,10 @@
 // card.scss
 //
 
+.card {
+  margin-bottom: $spacer;
+}
+
 
 .card-header-tabs {
   margin-top: -$card-spacer-y;
