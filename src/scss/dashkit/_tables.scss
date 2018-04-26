@@ -1,0 +1,15 @@
+// 
+// tables.scss
+// Extended from Bootstrap
+//
+
+// 
+// Bootstrap Overrides =====================================
+//
+
+.table {
+  thead th {
+    border-top-width: 0;
+    border-bottom-width: $table-border-width;
+  }
+}

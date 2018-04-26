@@ -11,7 +11,7 @@
         <link href="assets/libs/feather-icon/css/feather.css" rel="stylesheet" type="text/css" />
 
         <!-- CSS -->
-        <link href="assets/css/app.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/theme.css" rel="stylesheet" type="text/css" />
 
     </head>
 
@@ -107,12 +107,51 @@
                   </li>
                 </ul>
               </div>
-              <div class="card-body">
-                <div class="tab-content">
-                  <div class="tab-pane show active" id="sales" role="tabpanel" aria-labelledby="sales-tab">
-                    <p class="card-text">This is all about sales.</p>
+              <div class="tab-content">
+                <div class="tab-pane show active" id="sales" role="tabpanel" aria-labelledby="sales-tab">
+                    <div class="card-body pt-0">
+                      <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>@twitter</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+
+                      <div class="custom-control custom-checkbox-toggle">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1"></label>
+                      </div>
+
+                      
+                  
+                    </div>
                   </div>
-                  <div class="tab-pane" id="orders" role="tabpanel" aria-labelledby="orders-tab">
+                <div class="tab-pane" id="orders" role="tabpanel" aria-labelledby="orders-tab">
+                  <div class="card-body">
                     <p class="card-text">This is all about orders.</p>
                     <p class="card-text">This is all about orders.</p>
                   </div>
@@ -150,7 +189,7 @@
               <div class="card-body">
                 <h5 class="card-title">Finance</h5>
                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="#" class="btn-floating btn btn-primary">Go somewhere</a>
               </div>
             </div>
           </div>

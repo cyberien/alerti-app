@@ -21,7 +21,7 @@ var gulp = require('gulp'),
 const paths = {
     src: {
         scss: {
-            app: "src/scss/app.scss",
+            app: "src/scss/theme.scss",
             all: "src/scss/**/*.scss"
         },
         js: {
@@ -52,9 +52,9 @@ const paths = {
         },
         css: {
             root: "dist/assets/css",
-            app: "dist/assets/css/app.css",
-            app_minify: "assets/css/app.min.css",
-            app_minify_file_name: "app.min.css"
+            app: "dist/assets/css/theme.css",
+            app_minify: "assets/css/theme.min.css",
+            app_minify_file_name: "theme.min.css"
         },
     }
 };

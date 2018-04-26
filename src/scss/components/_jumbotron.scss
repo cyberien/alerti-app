@@ -1,6 +1,0 @@
-.jumbotron {
-  padding: ($jumbotron-padding / 2);
-  @include media-breakpoint-up(sm) {
-    padding: $jumbotron-padding;
-  }
-}
