@@ -1,0 +1,59 @@
+// 
+// dropdowns.scss
+// Extended from Bootstrap
+//
+
+// 
+// Bootstrap Overrides =====================================
+//
+
+.dropdown {
+
+	// Toggle
+
+	&-toggle {
+		display: flex;
+		align-items: center;
+
+		// Replace arrow
+
+		&:after {
+			margin-left: auto;
+		}
+	}
+
+	// Menu
+
+	&-menu {
+		font-size: $dropdown-link-font-size;
+	}
+
+	// Item
+
+	&-item {
+
+		// Focus
+
+		&:focus {
+			background-color: $dropdown-link-hover-bg;
+			color: $dropdown-link-hover-color;
+		}
+
+		// Active
+
+		&.active {
+			position: relative;
+
+			// Line
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: $dropdown-item-padding-y;
+				bottom: $dropdown-item-padding-y;
+				left: 0;
+				border-left: 2px solid $primary;
+			}
+		}
+	}
+}

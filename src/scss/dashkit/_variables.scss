@@ -287,7 +287,7 @@ $text-muted:                  $gray-600;
 $blockquote-small-color:      $gray-600 !default;
 $blockquote-font-size:        ($font-size-base * 1.25);
 
-$hr-border-color:             $gray-300;
+$hr-border-color:             $border-color;
 $hr-border-width:             $border-width !default;
 
 $mark-padding:                .2em !default;
@@ -551,12 +551,12 @@ $dropdown-border-width:             $border-width !default;
 $dropdown-divider-bg:               $gray-200 !default;
 $dropdown-box-shadow:               0 .5rem 1rem rgba($black, .175) !default;
 
-$dropdown-link-color:               $body-color;
-$dropdown-link-hover-color:         $headings-color;
-$dropdown-link-hover-bg:            $gray-100 !default;
+$dropdown-link-color:               $text-muted;
+$dropdown-link-hover-color:         $body-color;
+$dropdown-link-hover-bg:            transparent;
 
-$dropdown-link-active-color:        $component-active-color;
-$dropdown-link-active-bg:           $component-active-bg;
+$dropdown-link-active-color:        $dropdown-link-hover-color;
+$dropdown-link-active-bg:           $dropdown-link-hover-bg;
 
 $dropdown-link-disabled-color:      $gray-600 !default;
 
@@ -582,7 +582,7 @@ $zindex-tooltip:                    1070 !default;
 // Navs
 
 $nav-link-padding-y:                .5rem !default;
-$nav-link-padding-x:                1rem !default;
+$nav-link-padding-x:                $spacer;
 $nav-link-disabled-color:           $gray-600 !default;
 
 $nav-tabs-border-color:             $gray-300 !default;
@@ -599,10 +599,10 @@ $nav-pills-link-active-bg:          $component-active-bg;
 
 // Navbar
 
-$navbar-padding-y:                  ($spacer / 4);
+$navbar-padding-y:                  1rem;
 $navbar-padding-x:                  $spacer;
 
-$navbar-nav-link-padding-x:         .5rem !default;
+$navbar-nav-link-padding-x:         1.5rem;
 
 $navbar-brand-font-size:            $font-size-lg !default;
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
@@ -909,41 +909,52 @@ $pre-scrollable-max-height:         340px !default;
 // Dashkit =====================================
 //
 
+// Type
 
-$font-size-xs:                         ($font-size-base * .8125);
-
-$alert-link-text-decoration:           underline;
-
-// Extended vars
-$breadcrumb-padding-y-sm:              .5rem;
-$breadcrumb-padding-x-sm:              .5rem;
-$breadcrumb-item-padding-sm:           .25rem;
-
-$breadcrumb-margin-bottom-sm:          .25rem;
-$breadcrumb-font-size-sm:              $font-size-base * .8;
-
-// Custom variables
-$badge-soft-bg-level: -10;
-
+$font-size-xs: ($font-size-base * .8125);
 $display-letter-spacing: -.02em;
 
 
-// Sidebar
+// Alerts
 
-$sidebar-width:                     250px;
-$sidebar-border-color:              $gray-200;
-
-
-// Nav vertical
-$navbar-vertical-nav-link-padding-y:           .5rem;
-$navbar-vertical-padding-y:                    $spacer;
-$navbar-vertical-padding-x:                    $spacer;
-$navbar-vertical-divider-bg:                   $gray-300;
+$alert-link-text-decoration: underline;
 
 
-$nav-tabs-link-active-border-width:           1px;
-$nav-tabs-link-margin-x:                      .75rem; // Margin used for X so active underline matches width of label
-$nav-tabs-link-padding-y:                     $card-spacer-y; // This keeps the height the same as the card header
+// Breadcrumbs
 
-// Smaller nav tabs
-$nav-tabs-sm-font-size:                       .8125rem;
+$breadcrumb-padding-y-sm: .5rem;
+$breadcrumb-padding-x-sm: .5rem;
+$breadcrumb-item-padding-sm: .25rem;
+
+$breadcrumb-margin-bottom-sm: .25rem;
+$breadcrumb-font-size-sm: $font-size-base * .8;
+
+
+// Badges
+
+$badge-soft-bg-level: -10;
+
+$badge-padding-x: .5em;
+
+// Navs
+
+$nav-tabs-link-active-border-width: 1px;
+$nav-tabs-link-margin-x: .75rem; // Margin used for X so active underline matches width of label
+$nav-tabs-link-padding-y: $card-spacer-y; // This keeps the height the same as the card header
+
+$nav-tabs-sm-font-size: .8125rem;
+
+
+// Navbar
+
+$navbar-title-font-size: 0.625rem;
+
+$navbar-nav-link-icon-width: 1.625rem;
+
+$navbar-vertical-width: 250px;
+$navbar-vertical-divider-margin-y: 1.5rem;
+
+
+// Dropdowns
+
+$dropdown-link-font-size: $font-size-sm;
