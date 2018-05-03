@@ -17,20 +17,20 @@
   <body>
 
     <!-- NAVBAR (VERTICAL) -->
-    <nav class="navbar navbar-vertical fixed-left navbar-expand-sm navbar-light bg-white">
-
-      <!-- Header -->
-      <div class="navbar-header">
+    <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white">
         
-        <!-- Brand -->
-        <a class="navbar-brand" href="#">
-          <img src="assets/images/1.png" class="navbar-brand-img" alt="...">
-        </a>
+      <!-- Brand -->
+      <a class="navbar-brand" href="#">
+        <img src="assets/images/1.png" class="navbar-brand-img" alt="...">
+      </a>
 
-      </div>
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-      <!-- Body -->
-      <div class="navbar-body">
+      <!-- Collapse -->
+      <div class="collapse navbar-collapse" id="navbarCollapse">
         
         <!-- Nav -->
         <ul class="navbar-nav">
@@ -67,7 +67,7 @@
               <a class="dropdown-item" href="#">Signup</a>
               <a class="dropdown-item" href="#">Forgot password</a>
               
-              <!-- Third-level dropdown -->
+              <!-- Dropdown (thid-level) -->
               <div class="dropdown">
 
                 <!-- Dropdown toggle -->
@@ -121,55 +121,27 @@
           </li>
         </ul>
 
-      </div>
-
-      <!-- Footer -->
-      <div class="navbar-footer">
-        
-        <!-- User (dropdown) -->
-        <div class="dropdown">
-
-          <!-- Dropdown toggle -->
-          <a href="#" class="navbar-user dropdown-toggle" role="button" id="navbarUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            
-            <!-- Image -->
+        <!-- User -->
+        <div class="dropdown mt-auto">
+          <a class="navbar-user dropdown-toggle" href="#" role="button" id="navbarUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <div class="navbar-user-img">
               <img src="assets/images/2.jpg" alt="...">
             </div>
-
-            <!-- Body -->
             <div class="navbar-user-body">
-              
-              <!-- Heading -->
               <h6 class="mb-0">
                 Dave Gamache
               </h6>
-
-              <!-- Content -->
               <p class="text-muted mb-0">
-                <small>System admin</small>
+                System admin
               </p>
-
             </div>
-
-          </a> <!-- / .navbar-user -->
-
-          <!-- Dropdown menu -->
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">
-              Profile
-            </a>
-            <a class="dropdown-item" href="#">
-              Settings
-            </a>
-            <a class="dropdown-item" href="#">
-              Logout
-            </a>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarUser">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
           </div>
-
-        </div> <!-- / .dropdown -->
-
-      </div> <!-- / .navbar-footer -->
+      </div>
 
     </nav>
     

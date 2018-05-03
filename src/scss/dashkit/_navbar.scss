@@ -35,131 +35,58 @@
 //
 
 .navbar {
+  box-shadow: 0 0 1px 0 $border-color;
 
   // Vertical
   //
-  // Creates vertically positioned navbar
+  // Creates a vertically aligned version of navbar
 
   &-vertical {
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: stretch;
-    justify-content: flex-start;
-    width: 100%;
-    padding: 0;
-    box-shadow: 0 0 1px 0 $border-color;
+    
+    // Expand
+    // 
+    // Make navbar vertically aligned at specified breakpoints
 
-    // Dropdown
-
-    .dropdown {
-
-      // Menu
-
-      &-menu {
-        position: relative !important;
-        top: auto; left: auto; bottom: auto; right: auto;
-        padding: 0;
-        border: 0;
-      }
-
-      // Item
-
-      &-item {
-        padding-left: ($navbar-nav-link-padding-x + $navbar-nav-link-icon-width);
-      }
-    }
-  }
-
-
-  // Expand
-  //
-  // Expands navbar at specified grid breakpoints
-
-  &-expand {
-
-    // Navbar vertical specific
-
-    @at-root .navbar-vertical#{&} {
-
-      // Go through grid breakpoints
-
+    &.navbar-expand {
+      
       @each $breakpoint, $dimension in $grid-breakpoints {
           
         &-#{$breakpoint} {
             
           @include media-breakpoint-up(#{$breakpoint}) {
-              width: $navbar-vertical-width;
-          }
-        }
-      }
-    }
-  }
+            position: fixed;
+            top: 0; bottom: 0;
+            flex-direction: column;
+            width: $navbar-vertical-width;
 
+            // Fixed left
 
-  // Fixed
-  //
-  // Positions navbar fixed to one of the sides
-
-  &.fixed {
-    
-    // Left, Right
-
-    &-left, &-right {
-      position: fixed;
-      top: 0; bottom: 0;
-    }
-
-    // Left
-
-    &-left {
-      left: 0;
-    }
-
-    // Right
-
-    &-right {
-      right: 0;
-    }
-  }
-
-
-  // Nav
-  //
-  // Navbar navigation
-
-  &-nav {
-
-    // Navbar vertical specific
-
-    @at-root .navbar-vertical #{&} {
-      flex-direction: column;
-      align-items: stretch;
-      margin-left: -$navbar-padding-x;
-      margin-right: -$navbar-padding-x;
-
-      // Nav
-
-      .nav {
-
-        // Link
-
-        &-link {
-          padding: $nav-link-padding-y $nav-link-padding-x;
-
-          // Active
-
-          &.active {
-            position: relative;
-
-            // Line
-            
-            &:before {
-              content: '';
-              position: absolute;
-              top: $nav-link-padding-y;
-              bottom: $nav-link-padding-y;
+            &.fixed-left {
               left: 0;
-              border-left: 2px solid $primary;
+            }
+
+            // Fixed right
+
+            &.fixed-right {
+              right: 0;
+            }
+
+            // Collapse
+
+            .navbar-collapse {
+              flex-direction: column;
+              align-items: stretch;
+              width: 100%;
+
+              > * {
+                min-width: 100%;
+              }
+            }
+
+            // Nav
+
+            .navbar-nav {
+              flex-direction: column;
             }
           }
         }
@@ -167,10 +94,72 @@
     }
   }
 
+  // Nav
+  //
+  // Navbar nav overrides
+
+  &-nav {
+    margin-left: -$navbar-padding-x;
+    margin-right: -$navbar-padding-x;
+
+    // Nav
+
+    .nav {
+
+      // Link
+
+      &-link {
+        padding-left: $navbar-padding-x;
+        padding-right: $navbar-padding-x;
+
+        // Active
+
+        &.active {
+          position: relative;
+
+          // Line
+
+          &:before {
+            content: '';
+            position: absolute;
+            top: $nav-link-padding-y;
+            bottom: $nav-link-padding-y;
+            left: 0;
+            border-left: 2px solid $primary;
+          }
+        }
+      }
+    }
+  }
+
+
+  // Dropdown
+  //
+  // Navbar dropdowns overrides
+
+  .dropdown {
+
+    // Menu
+
+    &-menu {
+      position: relative !important;
+      top: auto; bottom: auto; left: auto; right: auto;
+      width: 100%;
+      padding: 0;
+      border: 0;
+    }
+
+    // Item
+
+    &-item {
+      padding-left: ($dropdown-item-padding-x + $navbar-nav-link-icon-width);
+    }
+  }
+
 
   // Title
   // 
-  // Creates navbar title
+  // Creates navbar titles
 
   &-title {
     font-size: $navbar-title-font-size;
@@ -180,7 +169,7 @@
 
   // Brand
   //
-  // Navbar brand text or image
+  // Navbar brand overrides
 
   &-brand {
     display: flex;
@@ -190,80 +179,39 @@
 
     &-img {
       max-width: 100%;
-      max-height: 3.5rem;
-    }
-  }
+      max-height: 2rem;
 
-
-  // Header
-  //
-  // Navbar header
-
-  &-header {
-
-    // Navbar vertical specific
-
-    @at-root .navbar-vertical #{&} {
-      padding: $navbar-padding-y $navbar-padding-x;
-    }
-  }
-
-
-  // Body
-  //
-  // Full height navbar body
-
-  &-body {
-
-    // Navbar vertical specific
-
-    @at-root .navbar-vertical #{&} {
-      width: 100%; height: 100%;
-      padding: $navbar-padding-y $navbar-padding-x;
-      overflow-y: auto;
-    }
-  }
-
-
-  // Footer
-  //
-  // Navbar footer fixed at the bottom
-
-  &-footer {
-    
-    // Navbar vertical specific
-
-    @at-root .navbar-vertical #{&} {
-      width: 100%; height: auto;
-      padding: $navbar-padding-y $navbar-padding-x;
-      border-top: 1px solid $border-color;
+      @include media-breakpoint-up(md) {
+        max-height: 3.5rem;
+      }
     }
   }
 
 
   // User
   //
-  // Expandable user component
+  // Navbar user block
 
   &-user {
     display: flex;
     align-items: center;
+    margin-left: -$navbar-padding-x;
+    margin-right: -$navbar-padding-x;
+    padding: $navbar-padding-y $navbar-padding-x 0;
+    border-top: 1px solid $border-color;
     color: $body-color;
 
-    // Hover
-
-    &:hover, &:focus, &:active, &:focus:active {
+    @include media-breakpoint-up(md) {
       color: $body-color;
-      text-decoration: none;
     }
 
     // Image
 
     &-img {
+      margin-right: 1rem;
 
       > img {
         max-width: 2rem; height: auto;
-        margin-right: 1rem;
         border-radius: 10rem;
 
         @supports(object-fit: cover) {
