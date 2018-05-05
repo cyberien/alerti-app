@@ -1,0 +1,25 @@
+// 
+// card.scss
+// Extended from Bootstrap
+//
+
+// 
+// Bootstrap Overrides =====================================
+//
+
+.card {
+  margin-bottom: $spacer;
+}
+
+
+.card-header-tabs {
+  margin-top: -$card-spacer-y;
+  margin-right: 0;
+  margin-left: 0;
+
+  // Ensures the height of card headers always stays the same, whether it's a .card-header-title, .card-header-tabs, or other content
+  .nav-link {
+    padding-top: $card-spacer-y;
+    padding-bottom: $card-spacer-y
+  }
+}

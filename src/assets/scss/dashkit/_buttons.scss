@@ -1,0 +1,14 @@
+// 
+// buttons.scss
+// Extended from Bootstrap
+//
+
+// 
+// Bootstrap Overrides =====================================
+//
+
+.btn-outline-secondary {
+  &:not(:hover):not([aria-expanded="true"]):not([aria-pressed="true"]){
+    border-color: $gray-400;
+  }
+}

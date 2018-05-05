@@ -1,143 +1,137 @@
 /**
  * Gulp file to automate the various tasks
  */
-"use strict";
 
-var gulp = require('gulp'),
-    concat = require('gulp-concat'),
-    uglify = require('gulp-uglify'),
-    rename = require('gulp-rename'),
-    sass = require('gulp-sass'),
-    maps = require('gulp-sourcemaps'),
-    del = require('del'),
-    autoprefixer = require('gulp-autoprefixer'),
-    htmlreplace = require('gulp-html-replace'),
-    npmDist = require('gulp-npm-dist'),
-    cssmin = require('gulp-cssmin'),
-    gulpCopy = require('gulp-copy'),
-    connect = require('gulp-connect'),
-    gulpSequence = require('gulp-sequence');
+var autoprefixer = require('gulp-autoprefixer');
+var browserSync = require('browser-sync').create();
+var csscomb = require('gulp-csscomb');
+var cache = require('gulp-cache');
+var cssnano = require('gulp-cssnano');
+var del = require('del');
+var imagemin = require('gulp-imagemin');
+var gulp = require('gulp');
+var gulpIf = require('gulp-if');
+var npmDist = require('gulp-npm-dist');
+var postcss = require('gulp-postcss');
+var runSequence = require('run-sequence');
+var sass = require('gulp-sass');
+var uglify = require('gulp-uglify');
+var useref = require('gulp-useref-plus');
+var wait = require('gulp-wait');
 
-const paths = {
-    src: {
-        scss: {
-            app: "src/scss/theme.scss",
-            all: "src/scss/**/*.scss"
-        },
-        js: {
-            all: "src/js/**"
+// Define paths
 
-        },
-        html: {
-            root: "src/html",
-            all: "src/html/*.html"
-        },
-        assets: {
-            images: "src/assets/images/**",
-            fonts: "src/assets/fonts/**",
+var paths = {
+  dist: {
+    base: 'dist',
+    img:  'dist/assets/img',
+    libs: 'dist/assets/plugins'
+  },
+  base: {
+    base: './',
+    node: 'node_modules'
+  },
+  src: {
+    base: 'src',
+    css:  'src/assets/css',
+    html: 'src/*.html',
+    img:  'src/assets/img/**/*.+(png|jpg|gif|svg)',
+    js:   'src/assets/js/**/*.js',
+    scss: 'src/assets/scss/**/*.scss'
+  }
+}
 
-        }
+// Compile SASS
+
+gulp.task('sass', function() {
+  return gulp.src(paths.src.scss)
+    .pipe(wait(500))
+    .pipe(sass().on('error', sass.logError))
+    .pipe(postcss([require('postcss-flexbugs-fixes')]))
+    .pipe(autoprefixer({
+        browsers: ['> 1%']
+    }))
+    .pipe(csscomb())
+    .pipe(gulp.dest(paths.src.css))
+    .pipe(browserSync.reload({
+        stream: true
+    }));
+});
+
+// Live reload
+
+gulp.task('browserSync', function() {
+  browserSync.init({
+    server: {
+        baseDir: [paths.src.base, paths.base.base]
     },
-    dist: {
-        root: "dist",
-        all: 'dist/**/*',
-        libs: {
-            root: "./dist/assets/libs"
-        },
-        assets: {
-            root: "./dist/assets/"
-        },
-        js: {
-            root: "dist/assets/js",
-        },
-        css: {
-            root: "dist/assets/css",
-            app: "dist/assets/css/theme.css",
-            app_minify: "assets/css/theme.min.css",
-            app_minify_file_name: "theme.min.css"
-        },
-    }
-};
-
-gulp.task('compileSass', function () {
-    return gulp.src(paths.src.scss.app)
-        .pipe(maps.init())
-        .pipe(sass().on('error', sass.logError))
-        .pipe(autoprefixer())
-        .pipe(maps.write('./'))
-        .pipe(gulp.dest(paths.dist.css.root));
+  })
 });
 
-gulp.task("minifyCss", ["compileSass"], function () {
-    return gulp.src(paths.dist.css.app)
-        .pipe(cssmin())
-        .pipe(rename(paths.dist.css.app_minify_file_name))
-        .pipe(gulp.dest(paths.dist.css.root))
-        .pipe(connect.reload());
+// Watch for changes
+
+gulp.task('watch', ['browserSync', 'sass'], function() {
+  gulp.watch(paths.src.scss, ['sass']);
+  gulp.watch(paths.src.js, browserSync.reload);
+  gulp.watch(paths.src.html, browserSync.reload); 
 });
 
+// Clean
 
-gulp.task('clean', function () {
-    return del.sync(paths.dist.all, { force: true });
+gulp.task('clean:dist', function() {
+  return del.sync(paths.dist.base);
 });
 
-gulp.task('renameSources', function () {
-    return gulp.src([paths.src.html.all])
-        .pipe(htmlreplace({
-            'css': paths.dist.css.app_minify
-        }))
-        .pipe(gulp.dest(paths.dist.root))
-        .pipe(connect.reload());
+// Copy
+
+gulp.task('copy:assets', function() {
+  return gulp.src([
+    paths.src.base + '/**/*',
+    '!' + paths.src.base + '/assets/scss', '!' + paths.src.base + '/assets/scss/**'
+    ])
+    .pipe(gulp.dest(paths.dist.base))
 });
 
-gulp.task('copyLibs', function () {
-    return gulp.src(npmDist(), { base: './node_modules/' })
-        .pipe(rename(function (path) {
-            path.dirname = path.dirname.replace(/\/dist/, '').replace(/\\dist/, '');
-        }))
-        .pipe(gulp.dest(paths.dist.libs.root));
+gulp.task('copy:libs', function() {
+  gulp.src(npmDist(), {base: paths.base.node})
+    .pipe(gulp.dest(paths.dist.libs));
 });
 
-gulp.task('copyHtml', function () {
-    return gulp.src(paths.src.html.all)
-        .pipe(gulp.dest(paths.dist.root))
-        .pipe(connect.reload());
+// Replace and optimize
+
+gulp.task('useref', function() {
+  return gulp.src(paths.src.html)
+    .pipe(useref({
+      transformPath: function(filePath) {
+        return filePath.replace('node_modules/','../node_modules/')
+      }
+    }))
+    .pipe(gulpIf('*.js', uglify()))
+    .pipe(gulpIf('*.css', cssnano()))
+    .pipe(gulp.dest(paths.dist.base))
 });
 
-gulp.task('copyJs', function () {
-    return gulp.src([paths.src.js.all], { base: './src/assets' })
-        .pipe(gulp.dest(paths.dist.js.root))
-        .pipe(connect.reload());
+// Optimize images
+
+gulp.task('images', function() {
+  return gulp.src(paths.src.img)
+    .pipe(cache(imagemin()))
+    .pipe(gulp.dest(paths.dist.img))
 });
 
-gulp.task('copyAssets', function () {
-    return gulp.src([paths.src.assets.images, paths.src.assets.fonts], { base: './src/assets' })
-        .pipe(gulp.dest(paths.dist.assets.root));
+// Build
+
+gulp.task('build', function(callback) {
+  runSequence('clean:dist', 'copy:assets', 'copy:libs',
+    ['sass', 'useref'], 
+    callback);
 });
 
 
-gulp.task('connect', function () {
-    connect.server({
-        root: paths.dist.root,
-        livereload: true
-    });
-});
+// Default
 
-
-gulp.task("build", gulpSequence('clean', 'copyAssets', 'copyJs', ['copyHtml', 'copyLibs'], 'minifyCss', 'renameSources'));
-
-
-gulp.task('watch', ['build'], function () {
-    gulp.watch(paths.src.scss.all, ['minifyCss']);
-    gulp.watch(paths.src.html.all, ['copyHtml']);
-    gulp.watch(paths.src.js.all, ['copyJs']);
-});
-
-
-gulp.task("default", ["connect", 'watch']);
-
-gulp.task('doc', function () {
-    connect.server({
-        root: 'docs'
-    });
+gulp.task('default', function (callback) {
+  runSequence(['sass','browserSync', 'watch'],
+    callback
+  )
 });
