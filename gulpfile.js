@@ -25,7 +25,7 @@ var paths = {
   dist: {
     base: 'dist',
     img:  'dist/assets/img',
-    libs: 'dist/assets/plugins'
+    libs: 'dist/assets/libs'
   },
   base: {
     base: './',
