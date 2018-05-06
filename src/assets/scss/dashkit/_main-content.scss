@@ -1,0 +1,32 @@
+//
+// main-content.scss
+// Dashkit component
+//
+
+// Main content offset
+//
+// Offsets the main content depending on the sidebar positioning
+
+.navbar-vertical.navbar-expand {
+  
+  @each $breakpoint, $dimension in $grid-breakpoints {
+      
+    &-#{$breakpoint} {
+        
+      @include media-breakpoint-up(#{$breakpoint}) {
+
+        // Left
+
+        &.fixed-left + .main-content {
+          margin-left: $navbar-vertical-width;
+        }
+
+        // Right
+
+        &.fixed-right + .main-content {
+          margin-right: $navbar-vertical-width;
+        }
+      }
+    }
+  }
+}

@@ -12,7 +12,6 @@
   box-shadow: $navbar-box-shadow;
 }
 
-
 // Navbar collapse
 
 .navbar-collapse {
@@ -106,6 +105,16 @@
 // Dashkit ===================================
 //
 
+
+// Navbar fixed
+//
+// Adds special zindex to custom fixed-left and fixed-right classes
+
+.navbar[class*="fixed-"] {
+  z-index: $zindex-fixed;
+}
+
+
 // Vertical
 //
 // Creates a vertically aligned version of the navbar
@@ -153,14 +162,6 @@
     font-size: $font-size-xs;
     text-transform: uppercase;
     letter-spacing: 8%;
-  }
-
-
-  // Navbar brand
-  
-  .navbar-brand {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
   }
 
 

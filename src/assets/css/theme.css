@@ -11526,6 +11526,11 @@ a.text-dark:focus
     }
 }
 
+.navbar[class*='fixed-']
+{
+    z-index: 1030;
+}
+
 .navbar-vertical .navbar-nav .nav-link
 {
     display: flex;
@@ -11565,12 +11570,6 @@ a.text-dark:focus
 
     letter-spacing: 8%; 
     text-transform: uppercase;
-}
-
-.navbar-vertical .navbar-brand
-{
-    padding-top: 1rem;
-    padding-bottom: 1rem;
 }
 
 .navbar-vertical .navbar-user
@@ -12241,4 +12240,62 @@ h6,
 
     src: url('../fonts/cerebrisans/cerebrisans-semibold.eot');
     src: url('../fonts/cerebrisans/cerebrisans-semibold.eot?#iefix') format('embedded-opentype'), url('../fonts/cerebrisans/cerebrisans-semibold.woff') format('woff'), url('../fonts/cerebrisans/cerebrisans-semibold.ttf') format('truetype');
+}
+
+.navbar-vertical.navbar-expand-xs.fixed-left + .main-content
+{
+    margin-left: 250px;
+}
+
+.navbar-vertical.navbar-expand-xs.fixed-right + .main-content
+{
+    margin-right: 250px;
+}
+
+@media (min-width: 576px)
+{
+    .navbar-vertical.navbar-expand-sm.fixed-left + .main-content
+    {
+        margin-left: 250px;
+    }
+    .navbar-vertical.navbar-expand-sm.fixed-right + .main-content
+    {
+        margin-right: 250px;
+    }
+}
+
+@media (min-width: 768px)
+{
+    .navbar-vertical.navbar-expand-md.fixed-left + .main-content
+    {
+        margin-left: 250px;
+    }
+    .navbar-vertical.navbar-expand-md.fixed-right + .main-content
+    {
+        margin-right: 250px;
+    }
+}
+
+@media (min-width: 992px)
+{
+    .navbar-vertical.navbar-expand-lg.fixed-left + .main-content
+    {
+        margin-left: 250px;
+    }
+    .navbar-vertical.navbar-expand-lg.fixed-right + .main-content
+    {
+        margin-right: 250px;
+    }
+}
+
+@media (min-width: 1200px)
+{
+    .navbar-vertical.navbar-expand-xl.fixed-left + .main-content
+    {
+        margin-left: 250px;
+    }
+    .navbar-vertical.navbar-expand-xl.fixed-right + .main-content
+    {
+        margin-right: 250px;
+    }
 }
