@@ -25,6 +25,10 @@
 // Dashkit =====================================
 //
 
+// Light
+//
+// Makes the breadcrumb text color dark
+
 .breadcrumb-light {
   // Use <a> instead of adding ".breadcrumb-link" so it stays the same as Bootstrap's API
   .breadcrumb-item > a {  
@@ -44,6 +48,11 @@
   }
 }
 
+
+// Light
+//
+// Makes the breadcrumb text color light
+
 .breadcrumb-dark {
   // Use <a> instead of adding ".breadcrumb-link" so it stays the same as Bootstrap's API
   .breadcrumb-item > a {  
@@ -61,4 +70,16 @@
   .breadcrumb-item.active {
     color: $navbar-dark-color;
   }
+}
+
+
+// Top
+//
+// To use below the topbar
+
+.breadcrumb-top {
+  padding: $breadcrumb-top-padding-y $breadcrumb-top-padding-x;
+}
+.breadcrumb-top .breadcrumb-item {
+  font-size: $font-size-sm;
 }

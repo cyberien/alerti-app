@@ -451,16 +451,6 @@ $display-letter-spacing: -.02em;
 $alert-link-text-decoration: underline;
 
 
-// Breadcrumbs
-
-$breadcrumb-padding-y-sm: .5rem;
-$breadcrumb-padding-x-sm: .5rem;
-$breadcrumb-item-padding-sm: .25rem;
-
-$breadcrumb-margin-bottom-sm: .25rem;
-$breadcrumb-font-size-sm: $font-size-base * .8;
-
-
 // Badges
 
 $badge-soft-bg-level: -10;
@@ -479,9 +469,24 @@ $nav-tabs-sm-font-size: .8125rem;
 
 // Navbar
 
+$navbar-box-shadow: 0 0 1px 0 fade-out(black, .9);
+
 $navbar-vertical-width: 250px;
 $navbar-vertical-padding-x: 1.5rem;
 
 $navbar-icon-min-width: 1.75rem;
 
 $navbar-user-img-width: 2rem;
+
+
+// Breadcrumbs
+
+$breadcrumb-padding-y-sm: .5rem;
+$breadcrumb-padding-x-sm: .5rem;
+$breadcrumb-item-padding-sm: .25rem;
+
+$breadcrumb-margin-bottom-sm: .25rem;
+$breadcrumb-font-size-sm: $font-size-base * .8;
+
+$breadcrumb-top-padding-y: 1rem;
+$breadcrumb-top-padding-x: $navbar-padding-x;
