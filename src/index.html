@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
 
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_o5hd5vvqpoqiwwmi.css">
+
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="assets/fonts/feather/feather.css">
+
     <!-- Theme CSS -->
     <!-- build:css assets/css/theme.min.css -->
     <link rel="stylesheet" href="assets/css/theme.css">
@@ -17,133 +22,168 @@
 
     <!-- NAVBAR (vertical)
     ================================================== -->    
-    <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white">
-        
-      <!-- Brand -->
-      <a class="navbar-brand" href="#">
-        <img src="assets/img/1.png" class="navbar-brand-img" alt="...">
-      </a>
+    <nav class="navbar navbar-vertical fixed-left navbar-expand-sm navbar-light bg-white">
+      <div class="container-fluid">
+          
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">
+          <img src="assets/img/1.png" class="navbar-brand-img" alt="...">
+        </a>
 
-      <!-- Toggler -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <!-- Collapse -->
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        
-        <!-- Nav -->
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">
-              <i class="icon-briefcase"></i> Finance
-            </a>
-          </li>
-          <li class="nav-item dropdown">
-
-            <!-- Dropdown toggle -->
-            <a class="nav-link dropdown-toggle" href="#" id="navbarPages" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="icon-file"></i> Pages
-            </a>
-
-            <!-- Dropdown menu -->
-            <div class="dropdown-menu" aria-labelledby="navbarPages">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-
-          </li>
-          <li class="nav-item dropdown">
-
-            <!-- Dropdown toggle -->
-            <a class="nav-link dropdown-toggle" href="#" id="navbarAuth" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="icon-layers"></i> Auth
-            </a>
-
-            <!-- Drodpown menu -->
-            <div class="dropdown-menu" aria-labelledby="navbarAuth">
-              <a class="dropdown-item" href="#">Login</a>
-              <a class="dropdown-item" href="#">Signup</a>
-              <a class="dropdown-item" href="#">Forgot password</a>
-              
-              <!-- Dropdown (thid-level) -->
-              <div class="dropdown">
-
-                <!-- Dropdown toggle -->
-                <a class="dropdown-item dropdown-toggle" href="#" id="navbarProfile" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Profile</a>
-
-                <!-- Dropdown menu -->
-                <div class="dropdown-menu" aria-labelledby="navbarProfile">
-                  <a class="dropdown-item" href="#">Level 3</a>
-                  <a class="dropdown-item" href="#">Most indented</a>
-                  <a class="dropdown-item" href="#">No more</a>
+        <!-- Collapse -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          
+            <!-- Navigation -->
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">
+                  <i class="fe fe-briefcase"></i> Finance
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#navbarPages" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbarPages">
+                  <i class="fe fe-file"></i> Pages
+                </a>
+                <div class="collapse" id="navbarPages">
+                  <ul class="nav nav-sm flex-column">
+                    <li class="nav-item">
+                      <a href="#" class="nav-link active">
+                        Page one
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">
+                        Page two
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">
+                        Page three
+                      </a>
+                    </li>
+                  </ul>
                 </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#navbarAuth" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbarAuth">
+                  <i class="fe fe-layers"></i> Auth
+                </a>
+                <div class="collapse" id="navbarAuth">
+                  <ul class="nav nav-sm flex-column">
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">
+                        Login
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">
+                        Sign up
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">
+                        Forgot password
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#navbarProfile" class="nav-link" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbarProfile">
+                        Profile
+                      </a>
+                      <div class="collapse" id="navbarProfile">
+                        <ul class="nav nav-sm flex-column">
+                          <li class="nav-item">
+                            <a href="#" class="nav-link active">
+                              Level 3
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a href="#" class="nav-link">
+                              Most indented
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a href="#" class="nav-link">
+                              No more
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">
+                        Settings
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
 
+            <!-- Divider -->
+            <hr class="my-3">
+
+            <!-- Heading -->
+            <h6 class="navbar-heading">
+              Documentation
+            </h6>
+
+            <!-- Navigation -->
+            <ul class="navbar-nav mb-3">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="fe fe-file"></i> Bootstrap
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="fe fe-layers"></i> Dashkit
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="fe fe-file"></i> Get started
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="fe fe-layers"></i> Changelog <span class="badge badge-secondary ml-auto">2</span>
+                </a>
+              </li>
+            </ul>
+
+            <!-- User -->
+            <div class="navbar-user mt-auto">
+
+              <!-- Image -->
+              <div class="navbar-user-img">
+                <img src="assets/img/2.jpg" alt="...">
               </div>
 
-              <a class="dropdown-item" href="#">Settings</a>
+              <!-- Body -->
+              <div class="navbar-user-body">
 
-            </div>
+                <!-- Heading -->
+                <h6 class="mb-0">
+                  Dave Gamache
+                </h6>
 
-          </li>
-        </ul>
+                <!-- Subheading -->
+                <p class="text-muted mb-0">
+                  <small>System admin</small>
+                </p>
+                
+              </div>
 
-        <!-- Divider -->
-        <hr class="my-3">
+            </div> <!-- / .navbar-user -->
 
-        <!-- Title -->
-        <h6 class="navbar-title">
-          Documentation
-        </h6>
+        </div> <!-- / .navbar-collapse -->
 
-        <!-- Nav -->
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="icon-file"></i> Bootstrap
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="icon-layers"></i> Dashkit
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="icon-file"></i> Get started
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="icon-layers"></i> Changelog <span class="badge badge-secondary ml-auto">2</span>
-            </a>
-          </li>
-        </ul>
-
-        <!-- User -->
-        <div class="dropdown mt-auto">
-          <a class="navbar-user dropdown-toggle" href="#" role="button" id="navbarUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <div class="navbar-user-img">
-              <img src="assets/img/2.jpg" alt="...">
-            </div>
-            <div class="navbar-user-body">
-              <h6 class="mb-0">
-                Dave Gamache
-              </h6>
-              <p class="text-muted mb-0">
-                System admin
-              </p>
-            </div>
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarUser">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </div>
-
-      </div>
+      </div> <!-- / .container-fluid -->
     </nav>
     
     <!-- JAVASCRIPT

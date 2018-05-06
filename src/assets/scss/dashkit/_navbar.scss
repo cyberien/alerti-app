@@ -3,30 +3,14 @@
 // Extended from Bootstrap
 //
 
+//
 // Bootstrap Overrides =======================
+//
 
-.navbar {
+// Navbar icons
 
-  // Nav
-
-  &-nav {
-
-    .nav {
-
-      // Link
-
-      &-link {
-        display: flex;
-        align-items: center;
-
-        // Icons
-
-        > [class*="icon"] {
-          min-width: $navbar-nav-link-icon-width;
-        }
-      }
-    }
-  }
+.navbar-nav .nav-link > .fe {
+  min-width: $navbar-icon-min-width;
 }
 
 
@@ -34,192 +18,246 @@
 // Dashkit ===================================
 //
 
-.navbar {
+// Vertical
+//
+// Creates a vertically aligned version of the navbar
+
+.navbar-vertical {
   box-shadow: 0 0 1px 0 $border-color;
 
-  // Vertical
-  //
-  // Creates a vertically aligned version of navbar
+  // Navbar collapse
 
-  &-vertical {
-    
-    // Expand
-    // 
-    // Make navbar vertically aligned at specified breakpoints
-
-    &.navbar-expand {
-      
-      @each $breakpoint, $dimension in $grid-breakpoints {
-          
-        &-#{$breakpoint} {
-            
-          @include media-breakpoint-up(#{$breakpoint}) {
-            position: fixed;
-            top: 0; bottom: 0;
-            flex-direction: column;
-            width: $navbar-vertical-width;
-
-            // Fixed left
-
-            &.fixed-left {
-              left: 0;
-            }
-
-            // Fixed right
-
-            &.fixed-right {
-              right: 0;
-            }
-
-            // Collapse
-
-            .navbar-collapse {
-              flex-direction: column;
-              align-items: stretch;
-              width: 100%;
-
-              > * {
-                min-width: 100%;
-              }
-            }
-
-            // Nav
-
-            .navbar-nav {
-              flex-direction: column;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  // Nav
-  //
-  // Navbar nav overrides
-
-  &-nav {
+  .navbar-collapse {
     margin-left: -$navbar-padding-x;
     margin-right: -$navbar-padding-x;
-
-    // Nav
-
-    .nav {
-
-      // Link
-
-      &-link {
-        padding-left: $navbar-padding-x;
-        padding-right: $navbar-padding-x;
-
-        // Active
-
-        &.active {
-          position: relative;
-
-          // Line
-
-          &:before {
-            content: '';
-            position: absolute;
-            top: $nav-link-padding-y;
-            bottom: $nav-link-padding-y;
-            left: 0;
-            border-left: 2px solid $primary;
-          }
-        }
-      }
-    }
+    padding-left: $navbar-padding-x;
+    padding-right: $navbar-padding-x;
   }
 
 
-  // Dropdown
-  //
-  // Navbar dropdowns overrides
+  // Navbar navigation
 
-  .dropdown {
-
-    // Menu
-
-    &-menu {
-      position: relative !important;
-      top: auto; bottom: auto; left: auto; right: auto;
-      width: 100%;
-      padding: 0;
-      border: 0;
-    }
-
-    // Item
-
-    &-item {
-      padding-left: ($dropdown-item-padding-x + $navbar-nav-link-icon-width);
-    }
+  .navbar-nav {
+    margin-left: -$navbar-padding-x;
+    margin-right: -$navbar-padding-x;
   }
 
-
-  // Title
-  // 
-  // Creates navbar titles
-
-  &-title {
-    font-size: $navbar-title-font-size;
-    text-transform: uppercase;
-  }
-
-
-  // Brand
-  //
-  // Navbar brand overrides
-
-  &-brand {
+  .navbar-nav .nav-link {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    padding-left: $navbar-padding-x;
+    padding-right: $navbar-padding-x;
 
-    // Image
+    &.active {
+      position: relative;
 
-    &-img {
-      max-width: 100%;
-      max-height: 2rem;
-
-      @include media-breakpoint-up(md) {
-        max-height: 3.5rem;
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: $nav-link-padding-y;
+        bottom: $nav-link-padding-y;
+        border-left: 2px solid $primary;
       }
     }
   }
 
+  .navbar-nav .nav-link[data-toggle="collapse"] {
 
-  // User
-  //
-  // Navbar user block
+    &:after {
+      content: '\e92e';
+      font-family: 'Feather';
+      margin-left: auto;
+      color: $text-muted;
+    }
 
-  &-user {
+    // Expanded
+
+    &[aria-expanded="true"] {
+
+      &:after {
+        content: '\e931';
+      }
+    }
+  }
+
+  // Second level
+  .navbar-nav .nav .nav-link {
+    padding-left: $navbar-padding-x + $navbar-icon-min-width;
+  }
+
+  // Third level
+  .navbar-nav .nav .nav .nav-link {
+    padding-left: $navbar-padding-x * 1.5 + $navbar-icon-min-width;
+  }
+
+
+  // Navbar heading
+
+  .navbar-heading {
+    font-size: $font-size-xs;
+    text-transform: uppercase;
+    letter-spacing: 8%;
+  }
+
+
+  // Navbar brand
+  
+  .navbar-brand {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .navbar-brand-img {
+    max-width: 100%;
+    max-height: 2rem;
+  }
+
+
+  // Navbar user
+
+  .navbar-user {
     display: flex;
     align-items: center;
     margin-left: -$navbar-padding-x;
     margin-right: -$navbar-padding-x;
-    padding: $navbar-padding-y $navbar-padding-x 0;
+    padding: 1rem $navbar-padding-x;
     border-top: 1px solid $border-color;
-    color: $body-color;
+  }
 
-    @include media-breakpoint-up(md) {
-      color: $body-color;
-    }
+  .navbar-user-img {
+    margin-right: 1rem;
 
-    // Image
+    > img {
+      max-width: $navbar-user-img-width; 
+      height: auto;
+      border-radius: $navbar-user-img-width;
 
-    &-img {
-      margin-right: 1rem;
-
-      > img {
-        max-width: 2rem; height: auto;
-        border-radius: 10rem;
-
-        @supports(object-fit: cover) {
-          width: 2rem; height: 2rem;
-          object-fit: cover;
-        }
+      @supports(object-fit: cover) {
+        width: $navbar-user-img-width; 
+        height: $navbar-user-img-width;
+        object-fit: cover;
       }
     }
   }
 
+
+  // Expanded
+  // 
+  // Expanded navbar specific styles
+  
+  &.navbar-expand {
+    
+    @each $breakpoint, $dimension in $grid-breakpoints {
+        
+      &-#{$breakpoint} {
+          
+        @include media-breakpoint-up(#{$breakpoint}) {
+          display: block;
+          position: fixed;
+          top: 0; bottom: 0;
+          width: $navbar-vertical-width;
+          padding-left: $navbar-vertical-padding-x;
+          padding-right: $navbar-vertical-padding-x;
+          overflow-y: auto;
+
+
+          // Container
+
+          > .container-fluid {
+            flex-direction: column;
+            align-items: stretch;
+            min-height: 100%;
+            padding-left: 0;
+            padding-right: 0;
+          }
+
+
+          // Fixes the vertical navbar to the left
+
+          &.fixed-left {
+            left: 0;
+          }
+
+
+          // Fixed the vertical navbar to the right
+
+          &.fixed-right {
+            right: 0;
+          }
+
+
+          // Navbar collapse
+
+          .navbar-collapse {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            margin-left: -$navbar-vertical-padding-x;
+            margin-right: -$navbar-vertical-padding-x;
+            padding-left: $navbar-vertical-padding-x;
+            padding-right: $navbar-vertical-padding-x;
+
+            > * {
+              min-width: 100%;
+            }
+          }
+
+
+          // Navbar navigation
+
+          .navbar-nav {
+            flex-direction: column;
+            margin-left: -$navbar-vertical-padding-x;
+            margin-right: -$navbar-vertical-padding-x;
+          }
+
+          .navbar-nav .nav-link {
+            padding-left: $navbar-vertical-padding-x;
+            padding-right: $navbar-vertical-padding-x;
+          }
+
+          .navbar-nav .nav-link > .fe {
+            min-width: $navbar-icon-min-width;
+          }
+
+          // Second level
+          .navbar-nav .nav .nav-link {
+            padding-left: $navbar-vertical-padding-x + $navbar-icon-min-width;
+          }
+
+          // Third level
+          .navbar-nav .nav .nav .nav-link {
+            padding-left: $navbar-vertical-padding-x * 1.5 + $navbar-icon-min-width;
+          }
+
+
+          // Navbar brand
+
+          .navbar-brand {
+            display: block;
+            text-align: center;
+            padding-top: (2rem - $navbar-padding-y);
+            padding-bottom: (2rem - $navbar-padding-y);
+            margin: 0;
+          }
+
+          .navbar-brand-img {
+            max-height: 3.5rem;
+          }
+
+
+          // Navbar user
+
+          .navbar-user {
+            margin-left: -$navbar-vertical-padding-x;
+            margin-right: -$navbar-vertical-padding-x;
+            padding-top: 1rem;
+            padding-left: $navbar-vertical-padding-x;
+            padding-right: $navbar-vertical-padding-x;
+            padding-bottom: (1rem - $navbar-padding-y);
+          }
+        }
+      }
+    }
+  }
 }
