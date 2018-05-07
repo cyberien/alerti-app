@@ -73,13 +73,10 @@
 }
 
 
-// Top
+// Small
 //
-// To use below the topbar
+// Reduces font size
 
-.breadcrumb-top {
-  padding: $breadcrumb-top-padding-y $breadcrumb-top-padding-x;
-}
-.breadcrumb-top .breadcrumb-item {
-  font-size: $font-size-sm;
+.breadcrumb-sm {
+  font-size: $breadcrumb-font-size-sm;
 }

@@ -195,18 +195,30 @@
       <nav class="navbar navbar-expand-sm navbar-light bg-white">
         <div class="container-fluid">
 
-          <!-- Brand -->
-          <a class="navbar-brand" href="#">
-            <img src="assets/img/1.png" alt="..." class="navbar-brand-img">
-          </a>
-      
           <!-- Toggler -->
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topbarCollapse" aria-controls="topbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
+
+          <!-- Brand -->
+          <a class="navbar-brand order-sm-0" href="#">
+            Dashboard
+          </a>
+
+          <!-- Account -->
+          <div class="dropdown navbar-account ml-2 order-sm-2">
+            <a class="dropdown-toggle" href="#" role="button" id="navbarAccount" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img src="assets/img/3.png" class="navbar-account-img" alt="...">
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarUser">
+              <a href="#" class="dropdown-item">Profile</a>
+              <a href="#" class="dropdown-item">Settings</a>
+              <a href="#" class="dropdown-item">Sign out</a>
+            </div>
+          </div>
           
           <!-- Collapse -->
-          <div class="collapse navbar-collapse" id="topbarCollapse">
+          <div class="collapse navbar-collapse order-sm-1" id="topbarCollapse">
 
             <!-- Navigation -->
             <ul class="navbar-nav mr-auto">
@@ -242,11 +254,57 @@
         </div> <!-- / .container-fluid -->
       </nav>
 
-      <!-- BREADCRUMB -->
-      <nav class="bg-light" aria-label="breadcrumb" >
+      <!-- SUBNAV -->
+      <div class="navbar navbar-expand-xs navbar-light bg-white">
         <div class="container-fluid">
 
-          <ol class="breadcrumb breadcrumb-light breadcrumb-top">
+          <!-- Overflow -->
+          <div class="navbar-overflow">
+
+            <!-- Navigation -->
+            <ul class="navbar-nav nav-sm ml-auto mr-auto">
+              <li class="nav-item">
+                <a href="#" class="nav-link active">
+                  Dashboard
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  Pages
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  Components
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  Docs
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  Account
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  Finance
+                </a>
+              </li>
+            </ul>
+
+          </div> <!-- / .navbar-overflow -->
+
+        </div> <!-- / .container-fluid -->
+      </div>
+
+      <!-- BREADCRUMB -->
+      <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <div class="container-fluid">
+
+          <ol class="navbar-breadcrumb breadcrumb breadcrumb-sm breadcrumb-light">
             <li class="breadcrumb-item">
               <a href="#">Home</a>
             </li>
@@ -257,9 +315,9 @@
               Data
             </li>
           </ol>
-            
+
         </div> <!-- / .container-fluid -->
-      </nav>
+      </nav> <!-- / .breadcrumb-top -->
 
     </main>
     
