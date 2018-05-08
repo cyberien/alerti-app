@@ -34,7 +34,8 @@
 // Navbar icons
 
 .navbar-nav .nav-link > .fe {
-  min-width: $navbar-icon-min-width;
+  min-width: $navbar-icon-min-width; // Note: Test if we actually need this?
+  font-size: $font-size-lg;
 }
 
 
@@ -245,7 +246,7 @@
   .navbar-heading {
     font-size: $font-size-xs;
     text-transform: uppercase;
-    letter-spacing: 8%;
+    letter-spacing: .04em;
   }
 
 
