@@ -28,6 +28,16 @@
   margin-right: -$navbar-padding-x;
   padding-left: $navbar-padding-x;
   padding-right: $navbar-padding-x;
+
+  // Spacer to replace margin / padding as those
+  // cause .navbar-collapse to "jump" when collapsing
+  
+  &:before {
+    content: '';
+    display: block;
+    border-top: 1px solid $border-color;
+    margin: $navbar-padding-y (-$navbar-padding-x);
+  }
 }
 
 
@@ -40,6 +50,10 @@
 
 
 // Navbar brand
+
+.navbar-brand {
+  margin-right: 0;
+}
 
 .navbar-brand-img {
   max-width: 100%;
@@ -84,6 +98,16 @@
     &-#{$breakpoint} {
         
       @include media-breakpoint-up(#{$breakpoint}) {
+
+        // Navbar collapse
+
+        .navbar-collapse {
+          flex-grow: inherit;
+          
+          &:before {
+            display: none;
+          }
+        }
 
         // Navbar navigation
 
@@ -148,6 +172,7 @@
     display: none;
   }
 }
+
 .navbar-overflow .navbar-nav {
   flex-direction: row;
   flex-wrap: nowrap;
@@ -176,26 +201,97 @@
 }
 
 
-// Navbar account
+// Navbar user
 //
-// Adds account dropdown
+// Navbar user notification area
 
-.navbar-account .dropdown-toggle {
+.navbar-user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-user .dropdown-toggle {
+
+  // Remove the default dropdown arrow
 
   &:after {
     display: none;
   }
 }
 
-.navbar-account-img {
-  width: $navbar-user-img-width;
-  height: auto;
-  border-radius: $navbar-user-img-width;
 
-  @supports(object-fit: cover) {
-    width: $navbar-user-img-width;
-    height: $navbar-user-img-width;
-    object-fit: cover;
+// Navbar icon
+//
+// Typycally used in the .navbar-user component
+
+.navbar-icon {
+  display: block;
+  font-size: $font-size-lg;
+
+  &.active {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0; right: 0;
+      width: 10px; height: 10px;
+      border: 2px solid $white;
+      border-radius: 50%;
+      background-color: $primary;
+    }
+  }
+}
+
+.navbar-light .navbar-icon {
+  color: $navbar-light-color;
+
+  &:hover {
+    color: $navbar-light-hover-color;
+  }
+}
+
+.navbar-dark .navbar-icon {
+  color: $navbar-dark-color;
+
+  &:hover {
+    color: $navbar-dark-hover-color;
+  }
+}
+
+
+// Navbar avatar
+//
+// Typycally used in the .navbar-user component
+
+.navbar-avatar {
+  display: block;
+
+  > img {
+    height: $navbar-user-img-size; width: auto;
+    border-radius: $navbar-user-img-size;
+    background-color: #F3BCD9;
+
+    @supports(object-fit: cover) {
+      width: $navbar-user-img-size;
+      object-fit: cover;
+    }
+  }
+
+  &.active {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: -2px; right: -2px;
+      width: 14px; height: 14px;
+      border: 2px solid $white;
+      border-radius: 50%;
+      background-color: $success;
+    }
   }
 }
 
@@ -205,6 +301,8 @@
 // Creates a vertically aligned version of the navbar
 
 .navbar-vertical {
+
+  // Navbar navigation
 
   .navbar-nav .nav-link {
     display: flex;
@@ -218,6 +316,7 @@
       font-family: 'Feather';
       margin-left: auto;
       color: $text-muted;
+      transition: $transition-base;
     }
 
     // Expanded
@@ -225,7 +324,7 @@
     &[aria-expanded="true"] {
 
       &:after {
-        content: '\e931';
+        transform: rotate(-180deg);
       }
     }
   }
@@ -247,34 +346,6 @@
     font-size: $font-size-xs;
     text-transform: uppercase;
     letter-spacing: .04em;
-  }
-
-
-  // Navbar user
-
-  .navbar-user {
-    display: flex;
-    align-items: center;
-    margin-left: -$navbar-padding-x;
-    margin-right: -$navbar-padding-x;
-    padding: 1rem $navbar-padding-x;
-    border-top: 1px solid $border-color;
-  }
-
-  .navbar-user-img {
-    margin-right: 1rem;
-
-    > img {
-      max-width: $navbar-user-img-width; 
-      height: auto;
-      border-radius: $navbar-user-img-width;
-
-      @supports(object-fit: cover) {
-        width: $navbar-user-img-width; 
-        height: $navbar-user-img-width;
-        object-fit: cover;
-      }
-    }
   }
 
 
@@ -326,6 +397,7 @@
           // Navbar collapse
 
           .navbar-collapse {
+            flex: 1;
             display: flex;
             flex-direction: column;
             align-items: stretch;
@@ -386,7 +458,6 @@
             text-align: center;
             padding-top: (2rem - $navbar-padding-y);
             padding-bottom: (2rem - $navbar-padding-y);
-            margin: 0;
           }
 
           .navbar-brand-img {
@@ -399,10 +470,18 @@
           .navbar-user {
             margin-left: -$navbar-vertical-padding-x;
             margin-right: -$navbar-vertical-padding-x;
-            padding-top: 1rem;
+            padding-top: $spacer;
+            padding-bottom: $spacer - $navbar-padding-y;
             padding-left: $navbar-vertical-padding-x;
             padding-right: $navbar-vertical-padding-x;
-            padding-bottom: (1rem - $navbar-padding-y);
+            border-top: 1px solid $border-color;
+
+            // Dropup menu
+
+            .dropup .dropdown-menu {
+              left: 50%;
+              transform: translateX(-50%);
+            }
           }
         }
       }
