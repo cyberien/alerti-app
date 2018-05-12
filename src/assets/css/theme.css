@@ -11415,8 +11415,6 @@ a.text-dark:focus
 
 .navbar-brand-img
 {
-    display: block;
-
     max-width: 100%;
     max-height: 1.5rem;
 }
