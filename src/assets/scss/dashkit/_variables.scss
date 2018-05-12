@@ -465,6 +465,9 @@ $code-color: $cyan;
 // Type
 
 $font-size-xs: ($font-size-base * .6666666667); // 10px
+
+$headings-letter-spacing: -.02em;
+
 $display-letter-spacing: -.02em;
 
 
@@ -513,3 +516,20 @@ $breadcrumb-item-padding-sm: .25rem;
 
 $breadcrumb-margin-bottom-sm: .25rem;
 $breadcrumb-font-size-sm: $font-size-sm;
+
+
+// Main content
+
+$main-content-padding-x: 40px;
+
+
+// Page header
+
+$page-header-margin-y: 40px;
+$page-header-padding-y: 24px;
+$page-header-border-color: $border-color;
+
+
+// Chart
+
+$chart-height: 35%; // % of its width

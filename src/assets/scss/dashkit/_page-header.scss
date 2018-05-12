@@ -1,0 +1,15 @@
+//
+// page-header.scss
+// Dashkit component
+//
+
+// Page header
+//
+// General styles
+
+.page-header {
+  margin-top: $page-header-margin-y;
+  margin-bottom: $page-header-margin-y;
+  padding-bottom: $page-header-padding-y;
+  border-bottom: 1px solid $page-header-border-color;
+}

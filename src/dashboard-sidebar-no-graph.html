@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include("partials/head.html", {
+      "pageTitle": "Dashkit"
+    })
+  </head>
+  <body>
+
+    <!-- SIDEBAR
+    ================================================== -->
+    @@include("partials/sidebar.html")
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <main class="main-content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            
+            <!-- Page header -->
+            <div class="page-header">
+              <div class="row align-items-center">
+                <div class="col">
+                  
+                  <!-- Pretitle -->
+                  <h6 class="text-uppercase text-muted">
+                    Overview
+                  </h6>
+
+                  <!-- Title -->
+                  <h1 class="mb-0">
+                    Dashboard
+                  </h1>
+
+                </div>
+                <div class="col-auto">
+                  
+                  <!-- Button -->
+                  <a href="#" class="btn btn-primary">
+                    Create Report
+                  </a>
+
+                </div>
+              </div> <!-- / .row -->
+            </div> <!-- / .page-header -->
+
+            <!-- Performance -->
+            <div class="card text-center">
+              <div class="card-header">
+                <div class="row align-items-center">
+                  <div class="col">
+                
+                    <!-- Title -->
+                    <h4 class="text-left mb-0">
+                      Performance
+                    </h4>
+
+                  </div>
+                  <div class="col-auto">
+
+                    <!-- Tabs -->
+                    <ul class="nav nav-tabs card-header-tabs">
+                      <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                          All
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">
+                          Direct
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">
+                          Organic
+                        </a>
+                      </li>
+                    </ul>
+
+                  </div>
+                </div> <!-- / .row -->
+
+              </div>
+              <div class="card-body">
+                
+                <!-- Chart -->
+                <div class="chart">
+                  <canvas id="lineChart" class="chart-canvas"></canvas>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div> <!-- / .row -->
+        <div class="row">
+          <div class="col-12 col-lg-8">
+            
+            <!-- Orders -->
+            <div class="card text-center">
+              <div class="card-header">
+                <div class="row align-items-center">
+                  <div class="col">
+                
+                    <!-- Title -->
+                    <h4 class="text-left mb-0">
+                      Orders
+                    </h4>
+
+                  </div>
+                  <div class="col-auto">
+
+                  </div>
+                </div> <!-- / .row -->
+
+              </div>
+              <div class="card-body">
+                
+                <!-- Chart -->
+                <div class="chart">
+                  <canvas id="barChart" class="chart-canvas"></canvas>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container-fluid -->
+    </main>
+    
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("partials/scripts.html")
+
+  </body>
+</html>

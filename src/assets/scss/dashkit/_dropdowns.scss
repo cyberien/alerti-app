@@ -1,0 +1,20 @@
+//
+// dropdowns.scss
+// Extended from Bootstrap
+// 
+
+//
+// Bootstrap Overrides =======================
+//
+
+
+// Dropdown toggle
+//
+// Removes focus state
+
+.dropdown-toggle {
+    
+    &:focus {
+        outline: none !important;
+    }
+}

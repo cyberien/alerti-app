@@ -6,6 +6,7 @@
 @import 'breadcrumb';
 @import 'buttons';
 @import 'card';
+@import 'dropdowns';
 @import 'jumbotron';
 @import 'list-group';
 @import 'nav';
@@ -17,4 +18,8 @@
 
 // Dashkit only components
 
+@import 'avatar';
+@import 'chart';
+@import 'icon';
 @import 'main-content';
+@import 'page-header';

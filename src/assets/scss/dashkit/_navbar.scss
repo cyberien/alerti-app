@@ -223,26 +223,10 @@
 
 
 // Navbar icon
-//
-// Typycally used in the .navbar-user component
 
 .navbar-icon {
   display: block;
   font-size: $font-size-lg;
-
-  &.active {
-    position: relative;
-
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0; right: 0;
-      width: 10px; height: 10px;
-      border: 2px solid $white;
-      border-radius: 50%;
-      background-color: $primary;
-    }
-  }
 }
 
 .navbar-light .navbar-icon {
@@ -263,36 +247,9 @@
 
 
 // Navbar avatar
-//
-// Typycally used in the .navbar-user component
 
 .navbar-avatar {
   display: block;
-
-  > img {
-    height: $navbar-user-img-size; width: auto;
-    border-radius: $navbar-user-img-size;
-    background-color: #F3BCD9;
-
-    @supports(object-fit: cover) {
-      width: $navbar-user-img-size;
-      object-fit: cover;
-    }
-  }
-
-  &.active {
-    position: relative;
-
-    &:before {
-      content: '';
-      position: absolute;
-      bottom: -2px; right: -2px;
-      width: 14px; height: 14px;
-      border: 2px solid $white;
-      border-radius: 50%;
-      background-color: $success;
-    }
-  }
 }
 
 
@@ -343,6 +300,8 @@
   // Navbar heading
 
   .navbar-heading {
+    padding-top: $nav-link-padding-y;
+    padding-bottom: $nav-link-padding-y;
     font-size: $font-size-xs;
     text-transform: uppercase;
     letter-spacing: .04em;
