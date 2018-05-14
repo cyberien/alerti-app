@@ -8,6 +8,7 @@
 // General styles
 
 .avatar {
+  display: block;
 
   > img {
     height: $navbar-user-img-size; width: auto;

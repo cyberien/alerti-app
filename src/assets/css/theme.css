@@ -6033,7 +6033,7 @@ input[type='button'].btn-block
 
 .progress
 {
-    font-size: .70312rem;
+    font-size: .70313rem;
 
     display: flex;
     overflow: hidden;
@@ -11706,11 +11706,6 @@ a.text-dark:focus
 .navbar-dark .navbar-icon:hover
 {
     color: rgba(255, 255, 255, .75);
-}
-
-.navbar-avatar
-{
-    display: block;
 }
 
 .navbar-vertical .navbar-nav .nav-link
