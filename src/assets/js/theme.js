@@ -12,22 +12,27 @@ var Charts = (function() {
   // Variables
   // =========
 
-  // Fonts
+  // Charts
+  var charts = {
+    barChart: $('#barChart'),
+    lineChart: $('#lineChart'),
+    donutChart: $('#donutChart')
+  };
 
+  // Fonts
   var fonts = {
     base: 'Cerebri Sans'
   }
 
-  // Charts
-  var charts = {
-    lineChart: $('#lineChart'),
-    barChart: $('#barChart')
-  };
-
   // Colors
   var colors = {
-    primary: '#2c7be5',
+    primary: {
+      100: '#D2DDEC',
+      300: '#A6C5F7',
+      700: '#2C7BE5',
+    },
     gray: {
+      100: '#95AAC9',
       300: '#E3EBF6',
       700: '#6E84A3'
     },
@@ -35,73 +40,84 @@ var Charts = (function() {
   };
 
   // Options
-  var options = {
-    responsive: true,
-    maintainAspectRatio: false,
-    scales: {
-      yAxes: [{
-        gridLines: {
-          borderDash: [2],
-          borderDashOffset: [2],
-          color: colors.gray['300'],
-          drawBorder: false,
-          drawTicks: false,
-          lineWidth: 0,
-          zeroLineWidth: 0,
-          zeroLineColor: colors.gray['300'],
-          zeroLineBorderDash: [2],
-          zeroLineBorderDashOffset: [2]
-        },
-        ticks: {
-          beginAtZero: true,
-          callback: function(value) {
-            if ( !(value % 10) ) {
-              return '$' + value + 'k'
-            }
-          },
-          fontColor: colors.gray['700'],
-          fontFamily: fonts.base,
-          fontSize: 13,
-          padding: 10
+  //
+  // Set as global to allow overrides via chart specific options
+
+  // General
+  Chart.defaults.global.responsive = true;
+  Chart.defaults.global.maintainAspectRatio = false;
+
+  // Colors
+  Chart.defaults.global.defaultColor = colors.primary[700];
+
+  // Fonts
+  Chart.defaults.global.defaultFontColor = colors.gray[700];
+  Chart.defaults.global.defaultFontFamily = fonts.base;
+  Chart.defaults.global.defaultFontSize = 13;
+
+  // Layout
+  Chart.defaults.global.layout.padding = 0;
+
+  // Legend
+  Chart.defaults.global.legend.display = false;
+
+  // Point
+  Chart.defaults.global.elements.point.radius = 0;
+
+  // Line
+  Chart.defaults.global.elements.line.tension = .4;
+  Chart.defaults.global.elements.line.borderWidth = 3;
+  Chart.defaults.global.elements.line.borderColor = colors.primary[700];
+  Chart.defaults.global.elements.line.backgroundColor = colors.transparent;
+  Chart.defaults.global.elements.line.borderCapStyle = 'rounded';
+
+  // Rectangle
+  Chart.defaults.global.elements.rectangle.backgroundColor = colors.primary[700];
+
+  // Arc
+  Chart.defaults.global.elements.arc.borderWidth = 4;
+  Chart.defaults.global.elements.arc.backgroundColor = colors.primary[700];
+
+  // Doughnuts
+  Chart.defaults.doughnut.cutoutPercentage = 83;
+
+  // yAxes
+  Chart.scaleService.updateScaleDefaults('linear', {
+    gridLines: {
+      borderDash: [2],
+      borderDashOffset: [2],
+      color: colors.gray[300],
+      drawBorder: false,
+      drawTicks: false,
+      lineWidth: 0,
+      zeroLineWidth: 0,
+      zeroLineColor: colors.gray[300],
+      zeroLineBorderDash: [2],
+      zeroLineBorderDashOffset: [2]
+    },
+    ticks: {
+      beginAtZero: true,
+      padding: 10,
+      callback: function(value) {
+        if ( !(value % 10) ) {
+          return '$' + value + 'k'
         }
-      }],
-      xAxes: [{
-        gridLines: {
-          drawBorder: false,
-          drawOnChartArea: false,
-          drawTicks: false
-        },
-        ticks: {
-          fontColor: colors.gray['700'],
-          fontFamily: fonts.base,
-          fontSize: 13,
-          padding: 20
-        },
-        maxBarThickness: 10
-      }]
-    },
-    layout: {
-      padding: 0
-    },
-    legend: {
-      display: false
-    },
-    elements: {
-      point: {
-        radius: 0
-      },
-      line: {
-        tension: .4,
-        borderWidth: 3,
-        borderColor: colors.primary,
-        backgroundColor: colors.transparent,
-        borderCapStyle: 'rounded'
-      },
-      rectangle: {
-        backgroundColor: colors.primary
       }
     }
-  };
+  });
+
+  // xAxes
+  Chart.scaleService.updateScaleDefaults('category', {
+    gridLines: {
+      drawBorder: false,
+      drawOnChartArea: false,
+      drawTicks: false
+    },
+    ticks: {
+      padding: 20
+    },
+    maxBarThickness: 10
+  });
 
 
   // Methods
@@ -111,7 +127,6 @@ var Charts = (function() {
     barChart: function() {
       new Chart(charts.barChart, {
         type: 'bar',
-        options: options,
         data: {
           labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
           datasets: [{
@@ -120,10 +135,25 @@ var Charts = (function() {
         }
       });
     },
+    donutChart: function() {
+      new Chart(charts.donutChart, {
+        type: 'doughnut',
+        data: {
+          labels: ['Desktop', 'Tablet', 'Mobile'],
+          datasets: [{
+            data: [60,25,15],
+            backgroundColor: [
+              colors.primary[700],
+              colors.primary[300],
+              colors.primary[100]
+            ]
+          }]
+        }
+      });
+    },
     lineChart: function() {
       new Chart(charts.lineChart, {
         type: 'line',
-        options: options,
         data: {
           labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
           datasets: [{
@@ -139,6 +169,8 @@ var Charts = (function() {
   // ======
 
   // Init charts
+  //
+  // Only init the charts present of the page
 
   for( var chart in charts ) {
 
@@ -154,11 +186,13 @@ var Charts = (function() {
 
 var Navbar = (function() {
 
+
   // Variables
   // =========
 
   var $nav = $('.navbar-nav, .navbar-nav .nav');
   var $navCollapse = $('.navbar-nav .collapse');
+
 
   // Methods
   // =======
@@ -166,6 +200,7 @@ var Navbar = (function() {
   function accordion($this) {
     $this.closest($nav).find($navCollapse).not($this).collapse('hide');
   }
+
 
   // Events
   // ======
