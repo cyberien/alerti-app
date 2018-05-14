@@ -91,8 +91,8 @@ var Charts = (function() {
         radius: 0
       },
       line: {
-        tension: .5,
-        borderWidth: 4,
+        tension: .4,
+        borderWidth: 3,
         borderColor: colors.primary,
         backgroundColor: colors.transparent,
         borderCapStyle: 'rounded'

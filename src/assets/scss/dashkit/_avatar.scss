@@ -13,47 +13,32 @@
   > img {
     height: $navbar-user-img-size; width: auto;
     border-radius: $navbar-user-img-size;
-    background-color: #F3BCD9;
 
     @supports(object-fit: cover) {
       width: $navbar-user-img-size;
       object-fit: cover;
     }
   }
+}
 
-  // Online, offline
-  //
-  // Adds a circle indicator
+// Online, offline
+//
+// Adds a circle indicator
 
-  &-online, &-offline {
-    position: relative;
+.avatar-online, 
+.avatar-offline {
+  position: relative;
 
-    &:before {
-      content: '';
-      position: absolute;
-      bottom: -2px; right: -2px;
-      width: 14px; height: 14px;
-      border: 2px solid $white;
-      border-radius: 50%;
-    }
-  }
-    
-  // Online
-
-  &-online {
-    position: relative;
-
-    &:before {
-      background-color: $success;
-    }
-  }
-
-  // Offline
-
-  &-offline {
-    
-    &:before {
-      background-color: $gray-500;
-    }
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: -2px; right: -2px;
+    width: 14px; height: 14px;
+    border: 2px solid $white;
+    border-radius: 50%;
   }
 }
+  
+// Online status
+.avatar-online:before {   background-color: $success; }
+.avatar-offline:before {  background-color: $gray-500; }

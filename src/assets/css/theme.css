@@ -11415,8 +11415,10 @@ a.text-dark:focus
 
 .navbar-brand-img
 {
+    display: block;
+
     max-width: 100%;
-    max-height: 2rem;
+    max-height: 1.5rem;
 }
 
 .navbar-nav
@@ -12458,7 +12460,6 @@ h6.text-uppercase
     height: 2rem;
 
     border-radius: 2rem;
-    background-color: #f3bcd9;
 }
 @supports ((-o-object-fit: cover) or (object-fit: cover))
 {
@@ -12492,10 +12493,6 @@ h6.text-uppercase
     border-radius: 50%;
 }
 
-.avatar-online
-{
-    position: relative;
-}
 .avatar-online:before
 {
     background-color: #00d97e;
