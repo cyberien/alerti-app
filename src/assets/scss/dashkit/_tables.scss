@@ -8,8 +8,18 @@
 //
 
 .table {
+
   thead th {
+    background-color: $table-head-bg;
     border-top-width: 0;
     border-bottom-width: $table-border-width;
+    font-size: .866666667em;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: $table-head-color;
   }
+}
+
+.table-sm {
+  font-size: $font-size-sm;
 }

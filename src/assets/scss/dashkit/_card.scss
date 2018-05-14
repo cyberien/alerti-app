@@ -11,7 +11,19 @@
   margin-bottom: $spacer;
 }
 
+.card-header {
+    display: flex;
+    align-items: center;
+    min-height: $card-header-min-height;
 
+    > * {
+        flex: 1;
+    }
+}
+
+.card-header-title {
+    margin-bottom: 0;
+}
 
 .card-header-tabs {
   margin-top: -$card-spacer-y;
@@ -21,6 +33,6 @@
   // Ensures the height of card headers always stays the same, whether it's a .card-header-title, .card-header-tabs, or other content
   .nav-link {
     padding-top: $card-spacer-y;
-    padding-bottom: $card-spacer-y
+    padding-bottom: $card-spacer-y;
   }
 }

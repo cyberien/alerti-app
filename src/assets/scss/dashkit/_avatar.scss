@@ -9,17 +9,35 @@
 
 .avatar {
   display: block;
+  border-radius: 50%;
 
   > img {
-    height: $navbar-user-img-size; width: auto;
-    border-radius: $navbar-user-img-size;
+    height: $avatar-img-size; width: auto;
+    border-radius: $avatar-img-size;
 
     @supports(object-fit: cover) {
-      width: $navbar-user-img-size;
+      width: $avatar-img-size;
       object-fit: cover;
     }
   }
 }
+
+
+// Avatar sizes
+
+.avatar-sm {
+
+  > img {
+    height: $avatar-img-size-sm; width: auto;
+    border-radius: $avatar-img-size-sm;
+
+    @supports(object-fit: cover) {
+      width: $avatar-img-size-sm;
+      object-fit: cover;
+    }
+  }
+}
+
 
 // Online, offline
 //
@@ -40,5 +58,25 @@
 }
   
 // Online status
-.avatar-online:before {   background-color: $success; }
-.avatar-offline:before {  background-color: $gray-500; }
+
+.avatar-online:before {
+  background-color: $success;
+}
+.avatar-offline:before {
+  background-color: $gray-500;
+}
+
+
+// Avatar stacked
+//
+// Stacks avatars horizontally
+
+.avatar-stacked {
+  display: flex;
+}
+.avatar-stacked .avatar {
+  border: 2px solid currentColor;
+}
+.avatar-stacked .avatar + .avatar {
+  margin-left: -.5rem;
+}
