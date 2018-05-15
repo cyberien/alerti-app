@@ -7,39 +7,63 @@
 //
 // General styles
 
-@mixin avatar($size) {
+.avatar {
+  position: relative;
   display: block;
-  border: 0.08333em solid transparent;
-  border-radius: $size;
-  font-size: $size;
+  width: $avatar-size-base;
+  height: $avatar-size-base;
+  font-size: $avatar-size-base;
+  border-width: .075em;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: $avatar-size-base;
   line-height: 0;
+}
 
-  > img {
-    width: $size; height: auto;
-    border-radius: $size;
+.avatar-img {
+  width: auto; height: 100%;
+  border-radius: inherit;
 
-    @supports(object-fit: cover) {
-      height: $size;
-      object-fit: cover;
-    }
+  @supports(object-fit: cover) {
+    width: 100%; height: 100%;
+    object-fit: cover;
   }
 }
 
-.avatar {
-  @include avatar($avatar-img-size-base);
+.avatar-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; height: 100%;
+  border-radius: inherit;
+  background-color: $gray-600;
+  font-size: .25em;
+  color: white;
 }
+
+
+// Sizes
+
+@mixin avatar($size) {
+  width: $size;
+  height: $size;
+  font-size: $size;
+  border-radius: $size;
+}
+
 .avatar-xs {
-  @include avatar($avatar-img-size-xs);
+  @include avatar($avatar-size-xs);
 }
 .avatar-sm {
-  @include avatar($avatar-img-size-sm);
+  @include avatar($avatar-size-sm);
 }
 .avatar-lg {
-  @include avatar($avatar-img-size-lg);
+  @include avatar($avatar-size-lg);
 }
 .avatar-xl {
-  @include avatar($avatar-img-size-xl);
+  @include avatar($avatar-size-xl);
 }
+
 
 // Online, offline
 //
@@ -47,24 +71,27 @@
 
 .avatar-online, 
 .avatar-offline {
-  position: relative;
 
-  &:before {
+  &::after {
     content: '';
     position: absolute;
-    bottom: -2px; right: -2px;
-    width: 14px; height: 14px;
-    border: 2px solid $white;
+    bottom: 0; right: 0;
+    width: .3em; height: .3em;
+    border-width: .05em;
+    border-style: solid;
+    border-color: inherit;
     border-radius: 50%;
+    transform: translate(12.5%, 12.5%);
+    background-clip: content-box;
   }
 }
   
 // Online status
 
-.avatar-online:before {
+.avatar-online::after {
   background-color: $success;
 }
-.avatar-offline:before {
+.avatar-offline::after {
   background-color: $gray-500;
 }
 
@@ -75,7 +102,8 @@
 
 .avatar-stacked {
   display: flex;
-}
-.avatar-stacked .avatar + .avatar {
-  margin-left: -.5em;
+
+  .avatar + .avatar {
+    margin-left: -.333em;
+  }
 }
