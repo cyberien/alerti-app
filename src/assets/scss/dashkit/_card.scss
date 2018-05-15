@@ -42,3 +42,13 @@
   padding-top: ($card-header-height - $font-size-sm * $line-height-base) / 2 !important;
   padding-bottom: ($card-header-height - $font-size-sm * $line-height-base) / 2 !important;
 }
+
+.card-table th:first-child,
+.card-table td:first-child {
+  padding-left: $card-spacer-x !important;
+}
+
+.card-table th:last-child,
+.card-table td:last-child {
+  padding-right: $card-spacer-x !important;
+}

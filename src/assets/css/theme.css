@@ -11180,6 +11180,18 @@ a.text-dark:focus
     padding-bottom: 1.26562rem !important;
 }
 
+.card-table th:first-child,
+.card-table td:first-child
+{
+    padding-left: 1.5rem !important;
+}
+
+.card-table th:last-child,
+.card-table td:last-child
+{
+    padding-right: 1.5rem !important;
+}
+
 .dropdown-toggle:focus
 {
     outline: none !important;
