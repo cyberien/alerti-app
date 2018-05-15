@@ -526,8 +526,9 @@ $main-content-padding-x: 40px;
 
 // Page header
 
-$page-header-margin-y: 40px;
-$page-header-padding-y: 24px;
+$page-header-spacer-y: 1.5rem;
+
+$page-header-border-width: 1px;
 $page-header-border-color: $border-color;
 
 
@@ -538,5 +539,8 @@ $card-header-height: 3.75rem;
 
 // Avatar
 
-$avatar-img-size: 2rem;
-$avatar-img-size-sm: 1.5rem;
+$avatar-img-size-base: 3.75rem;
+$avatar-img-size-xs: 1.5rem;
+$avatar-img-size-sm: 2.375rem;
+$avatar-img-size-lg: 5rem;
+$avatar-img-size-xl: 7.5rem;

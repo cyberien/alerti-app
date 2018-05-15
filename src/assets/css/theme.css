@@ -12501,40 +12501,138 @@ h6.text-uppercase
 
 .avatar
 {
+    font-size: 3.75rem;
+    line-height: 0; 
+
     display: block;
 
-    border-radius: 50%;
+    border: .08333em solid transparent;
+    border-radius: 3.75rem;
 }
 .avatar > img
 {
-    width: auto;
-    height: 2rem;
+    width: 3.75rem;
+    height: auto;
 
-    border-radius: 2rem;
+    border-radius: 3.75rem;
 }
 @supports ((-o-object-fit: cover) or (object-fit: cover))
 {
     .avatar > img
     {
-        width: 2rem;
+        height: 3.75rem;
 
         -o-object-fit: cover;
            object-fit: cover;
     }
 }
 
-.avatar-sm > img
+.avatar-xs
 {
-    width: auto;
-    height: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 0; 
+
+    display: block;
+
+    border: .08333em solid transparent;
+    border-radius: 1.5rem;
+}
+.avatar-xs > img
+{
+    width: 1.5rem;
+    height: auto;
 
     border-radius: 1.5rem;
 }
 @supports ((-o-object-fit: cover) or (object-fit: cover))
 {
+    .avatar-xs > img
+    {
+        height: 1.5rem;
+
+        -o-object-fit: cover;
+           object-fit: cover;
+    }
+}
+
+.avatar-sm
+{
+    font-size: 2.375rem;
+    line-height: 0; 
+
+    display: block;
+
+    border: .08333em solid transparent;
+    border-radius: 2.375rem;
+}
+.avatar-sm > img
+{
+    width: 2.375rem;
+    height: auto;
+
+    border-radius: 2.375rem;
+}
+@supports ((-o-object-fit: cover) or (object-fit: cover))
+{
     .avatar-sm > img
     {
-        width: 1.5rem;
+        height: 2.375rem;
+
+        -o-object-fit: cover;
+           object-fit: cover;
+    }
+}
+
+.avatar-lg
+{
+    font-size: 5rem;
+    line-height: 0; 
+
+    display: block;
+
+    border: .08333em solid transparent;
+    border-radius: 5rem;
+}
+.avatar-lg > img
+{
+    width: 5rem;
+    height: auto;
+
+    border-radius: 5rem;
+}
+@supports ((-o-object-fit: cover) or (object-fit: cover))
+{
+    .avatar-lg > img
+    {
+        height: 5rem;
+
+        -o-object-fit: cover;
+           object-fit: cover;
+    }
+}
+
+.avatar-xl
+{
+    font-size: 7.5rem;
+    line-height: 0; 
+
+    display: block;
+
+    border: .08333em solid transparent;
+    border-radius: 7.5rem;
+}
+.avatar-xl > img
+{
+    width: 7.5rem;
+    height: auto;
+
+    border-radius: 7.5rem;
+}
+@supports ((-o-object-fit: cover) or (object-fit: cover))
+{
+    .avatar-xl > img
+    {
+        height: 7.5rem;
 
         -o-object-fit: cover;
            object-fit: cover;
@@ -12577,14 +12675,9 @@ h6.text-uppercase
     display: flex;
 }
 
-.avatar-stacked .avatar
-{
-    border: 2px solid currentColor;
-}
-
 .avatar-stacked .avatar + .avatar
 {
-    margin-left: -.5rem;
+    margin-left: -.5em;
 }
 
 .chart
@@ -12683,11 +12776,22 @@ h6.text-uppercase
 
 .page-header
 {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    padding-bottom: 24px;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 
     border-bottom: 1px solid #e3ebf6;
+}
+
+.page-header-tabs
+{
+    margin-bottom: -1.5rem; 
+
+    border-bottom: 0;
+}
+.page-header-tabs .nav-link
+{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 }
 
 .custom-checkbox-toggle

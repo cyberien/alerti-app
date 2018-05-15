@@ -7,37 +7,39 @@
 //
 // General styles
 
-.avatar {
+@mixin avatar($size) {
   display: block;
-  border-radius: 50%;
+  border: 0.08333em solid transparent;
+  border-radius: $size;
+  font-size: $size;
+  line-height: 0;
 
   > img {
-    height: $avatar-img-size; width: auto;
-    border-radius: $avatar-img-size;
+    width: $size; height: auto;
+    border-radius: $size;
 
     @supports(object-fit: cover) {
-      width: $avatar-img-size;
+      height: $size;
       object-fit: cover;
     }
   }
 }
 
-
-// Avatar sizes
-
+.avatar {
+  @include avatar($avatar-img-size-base);
+}
+.avatar-xs {
+  @include avatar($avatar-img-size-xs);
+}
 .avatar-sm {
-
-  > img {
-    height: $avatar-img-size-sm; width: auto;
-    border-radius: $avatar-img-size-sm;
-
-    @supports(object-fit: cover) {
-      width: $avatar-img-size-sm;
-      object-fit: cover;
-    }
-  }
+  @include avatar($avatar-img-size-sm);
 }
-
+.avatar-lg {
+  @include avatar($avatar-img-size-lg);
+}
+.avatar-xl {
+  @include avatar($avatar-img-size-xl);
+}
 
 // Online, offline
 //
@@ -74,9 +76,6 @@
 .avatar-stacked {
   display: flex;
 }
-.avatar-stacked .avatar {
-  border: 2px solid currentColor;
-}
 .avatar-stacked .avatar + .avatar {
-  margin-left: -.5rem;
+  margin-left: -.5em;
 }
