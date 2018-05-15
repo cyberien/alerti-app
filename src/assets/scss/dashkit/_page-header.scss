@@ -8,8 +8,17 @@
 // General styles
 
 .page-header {
-  margin-top: $page-header-margin-y;
-  margin-bottom: $page-header-margin-y;
-  padding-bottom: $page-header-padding-y;
-  border-bottom: 1px solid $page-header-border-color;
+  padding-top: $page-header-spacer-y;
+  padding-bottom: $page-header-spacer-y;
+  border-bottom: $page-header-border-width solid $page-header-border-color;
+}
+
+.page-header-tabs {
+  border-bottom: 0;
+  margin-bottom: -$page-header-spacer-y;
+
+  .nav-link {
+    padding-top: $page-header-spacer-y;
+    padding-bottom: $page-header-spacer-y;
+  }
 }

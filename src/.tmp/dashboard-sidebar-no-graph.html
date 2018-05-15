@@ -42,8 +42,10 @@
           <div class="dropdown">
         
             <!-- Toggle -->
-            <a href="#" id="sidebarIcon" class="avatar avatar-online dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <img src="assets/img/2.png" alt="...">
+            <a href="#" id="sidebarIcon" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <div class="avatar avatar-sm avatar-online border-white">
+                <img src="assets/img/2.png" class="avatar-img" alt="...">
+              </div>
             </a>
 
             <!-- Menu -->
@@ -185,8 +187,10 @@
             <div class="dropup">
           
               <!-- Toggle -->
-              <a href="#" id="sidebarIconCopy" class="avatar avatar-online dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img src="assets/img/2.png" alt="...">
+              <a href="#" id="sidebarIconCopy" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="avatar avatar-sm avatar-online border-white">
+                  <img src="assets/img/2.png" class="avatar-img" alt="...">
+                </div>
               </a>
 
               <!-- Menu -->
@@ -218,7 +222,7 @@
           <div class="col-12">
             
             <!-- Page header -->
-            <div class="page-header">
+            <div class="page-header mb-4">
               <div class="row align-items-center">
                 <div class="col">
                   
@@ -303,12 +307,26 @@
                   <div class="col">
                 
                     <!-- Title -->
-                    <h4 class="mb-0">
+                    <h4 class="card-header-title">
                       Orders
                     </h4>
 
                   </div>
                   <div class="col-auto">
+                    
+                    <!-- Caption -->
+                    <span class="text-muted">
+                      Show affiliates:
+                    </span>
+
+                  </div>
+                  <div class="col-auto">
+
+                    <!-- Toggle -->
+                    <div class="custom-control custom-checkbox-toggle">
+                      <input type="checkbox" class="custom-control-input" id="cardToggle">
+                      <label class="custom-control-label" for="cardToggle"></label>
+                    </div>
 
                   </div>
                 </div> <!-- / .row -->
@@ -396,15 +414,25 @@
                   </div>
                 </div> <!-- / .row -->
               </div>
-              <div class="table-responsive">
-                <table class="table table-sm mb-0">
+              <div class="table-responsive mb-0">
+                <table class="table table-sm card-table">
                   <thead>
                     <tr>
-                      <th>Project</th>
-                      <th>Status</th>
-                      <th>Progress</th>
-                      <th>Due date</th>
-                      <th class="text-right">Team</th>
+                      <th>
+                        Project
+                      </th>
+                      <th>
+                        Status
+                      </th>
+                      <th>
+                        Progress
+                      </th>
+                      <th>
+                        Due date
+                      </th>
+                      <th class="text-right">
+                        Team
+                      </th>
                       <th></th>
                     </tr>
                   </thead>
@@ -424,21 +452,21 @@
                       </td>
                       <td>
                         <div class="avatar-stacked justify-content-end">
-                          <div class="avatar avatar-sm border-white">
-                            <img src="assets/img/3.jpg" alt="...">
+                          <div class="avatar avatar-xs border-white">
+                            <img src="assets/img/3.jpg" class="avatar-img" alt="...">
                           </div>
-                          <div class="avatar avatar-sm border-white">
-                            <img src="assets/img/4.jpg" alt="...">
+                          <div class="avatar avatar-xs border-white">
+                            <img src="assets/img/4.jpg" class="avatar-img" alt="...">
                           </div>
-                          <div class="avatar avatar-sm border-white">
-                            <img src="assets/img/5.jpg" alt="...">
+                          <div class="avatar avatar-xs border-white">
+                            <img src="assets/img/5.jpg" class="avatar-img" alt="...">
                           </div>
-                          <div class="avatar avatar-sm border-white">
-                            <img src="assets/img/6.jpg" alt="...">
+                          <div class="avatar avatar-xs border-white">
+                            <img src="assets/img/6.jpg" class="avatar-img" alt="...">
                           </div>
                         </div>
                       </td>
-                      <td>
+                      <td class="text-right">
                         <div class="dropdown">
                           <a href="#" class="lead text-muted" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fe fe-more-vertical"></i>
@@ -455,7 +483,6 @@
                             </a>
                           </div>
                         </div>
-                        
                       </td>
                     </tr>
                     <tr>
@@ -473,18 +500,18 @@
                       </td>
                       <td>
                         <div class="avatar-stacked justify-content-end">
-                          <div class="avatar avatar-sm border-white">
-                            <img src="assets/img/4.jpg" alt="...">
+                          <div class="avatar avatar-xs border-white">
+                            <img src="assets/img/4.jpg" class="avatar-img" alt="...">
                           </div>
-                          <div class="avatar avatar-sm border-white">
-                            <img src="assets/img/5.jpg" alt="...">
+                          <div class="avatar avatar-xs border-white">
+                            <img src="assets/img/5.jpg" class="avatar-img" alt="...">
                           </div>
-                          <div class="avatar avatar-sm border-white">
-                            <img src="assets/img/6.jpg" alt="...">
+                          <div class="avatar avatar-xs border-white">
+                            <img src="assets/img/6.jpg" class="avatar-img" alt="...">
                           </div>
                         </div>
                       </td>
-                      <td>
+                      <td class="text-right">
                         <div class="dropdown">
                           <a href="#" class="lead text-muted" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fe fe-more-vertical"></i>
@@ -518,18 +545,18 @@
                       </td>
                       <td>
                         <div class="avatar-stacked justify-content-end">
-                          <div class="avatar avatar-sm border-white">
-                            <img src="assets/img/4.jpg" alt="...">
+                          <div class="avatar avatar-xs border-white">
+                            <img src="assets/img/4.jpg" class="avatar-img" alt="...">
                           </div>
-                          <div class="avatar avatar-sm border-white">
-                            <img src="assets/img/5.jpg" alt="...">
+                          <div class="avatar avatar-xs border-white">
+                            <img src="assets/img/5.jpg" class="avatar-img" alt="...">
                           </div>
-                          <div class="avatar avatar-sm border-white">
-                            <img src="assets/img/6.jpg" alt="...">
+                          <div class="avatar avatar-xs border-white">
+                            <img src="assets/img/6.jpg" class="avatar-img" alt="...">
                           </div>
                         </div>
                       </td>
-                      <td>
+                      <td class="text-right">
                         <div class="dropdown">
                           <a href="#" class="lead text-muted" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fe fe-more-vertical"></i>
@@ -546,7 +573,6 @@
                             </a>
                           </div>
                         </div>
-                        
                       </td>
                     </tr>
                     <tr>
@@ -564,15 +590,15 @@
                       </td>
                       <td>
                         <div class="avatar-stacked justify-content-end">
-                          <div class="avatar avatar-sm border-white">
-                            <img src="assets/img/5.jpg" alt="...">
+                          <div class="avatar avatar-xs border-white">
+                            <img src="assets/img/5.jpg" class="avatar-img" alt="...">
                           </div>
-                          <div class="avatar avatar-sm border-white">
-                            <img src="assets/img/6.jpg" alt="...">
+                          <div class="avatar avatar-xs border-white">
+                            <img src="assets/img/6.jpg" class="avatar-img" alt="...">
                           </div>
                         </div>
                       </td>
-                      <td>
+                      <td class="text-right">
                         <div class="dropdown">
                           <a href="#" class="lead text-muted" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fe fe-more-vertical"></i>
@@ -589,7 +615,6 @@
                             </a>
                           </div>
                         </div>
-                        
                       </td>
                     </tr>
                     <tr>
@@ -607,21 +632,21 @@
                       </td>
                       <td>
                         <div class="avatar-stacked justify-content-end">
-                          <div class="avatar avatar-sm border-white">
-                            <img src="assets/img/3.jpg" alt="...">
+                          <div class="avatar avatar-xs border-white">
+                            <img src="assets/img/3.jpg" class="avatar-img" alt="...">
                           </div>
-                          <div class="avatar avatar-sm border-white">
-                            <img src="assets/img/4.jpg" alt="...">
+                          <div class="avatar avatar-xs border-white">
+                            <img src="assets/img/4.jpg" class="avatar-img" alt="...">
                           </div>
-                          <div class="avatar avatar-sm border-white">
-                            <img src="assets/img/5.jpg" alt="...">
+                          <div class="avatar avatar-xs border-white">
+                            <img src="assets/img/5.jpg" class="avatar-img" alt="...">
                           </div>
-                          <div class="avatar avatar-sm border-white">
-                            <img src="assets/img/6.jpg" alt="...">
+                          <div class="avatar avatar-xs border-white">
+                            <img src="assets/img/6.jpg" class="avatar-img" alt="...">
                           </div>
                         </div>
                       </td>
-                      <td>
+                      <td class="text-right">
                         <div class="dropdown">
                           <a href="#" class="lead text-muted" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fe fe-more-vertical"></i>
@@ -638,7 +663,6 @@
                             </a>
                           </div>
                         </div>
-                        
                       </td>
                     </tr>
                   </tbody>

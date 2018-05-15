@@ -12,27 +12,56 @@
 }
 
 .card-header {
-    display: flex;
-    align-items: center;
-    min-height: $card-header-min-height;
+  display: flex;
+  align-items: center;
+  min-height: $card-header-height;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: $font-size-sm;
 
-    > * {
-        flex: 1;
-    }
+  > * {
+    flex: 1;
+  }
 }
 
+
+//
+// Dashkit ===================================
+//
+
+// Card header
+//
+// Make sure the card header is always the same height with its content
+// centered vertically
+
 .card-header-title {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .card-header-tabs {
-  margin-top: -$card-spacer-y;
-  margin-right: 0;
-  margin-left: 0;
+  margin: 0;
+}
 
-  // Ensures the height of card headers always stays the same, whether it's a .card-header-title, .card-header-tabs, or other content
-  .nav-link {
-    padding-top: $card-spacer-y;
-    padding-bottom: $card-spacer-y;
+.card-header-tabs .nav-link {
+  padding-top: ($card-header-height - $font-size-sm * $line-height-base) / 2 !important;
+  padding-bottom: ($card-header-height - $font-size-sm * $line-height-base) / 2 !important;
+}
+
+
+// Card table
+//
+// Make sure the card table content is aligned with the rest of the
+// card content
+
+.card-table {
+
+  th, td {
+
+    &:first-child {
+      padding-left: $card-spacer-x !important;
+    }
+    &:last-child {
+      padding-right: $card-spacer-x !important;
+    }
   }
 }

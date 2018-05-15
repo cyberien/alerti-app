@@ -174,7 +174,7 @@ var Charts = (function() {
 
   for( var chart in charts ) {
 
-    if ( chart.length ) {
+    if ( charts[chart].length ) {
       init[chart]();
     }
   }
