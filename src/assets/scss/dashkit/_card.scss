@@ -12,27 +12,33 @@
 }
 
 .card-header {
-    display: flex;
-    align-items: center;
-    min-height: $card-header-min-height;
+  display: flex;
+  align-items: center;
+  min-height: $card-header-height;
+  padding-top: 0;
+  padding-bottom: 0;
 
-    > * {
-        flex: 1;
-    }
+  > * {
+    flex: 1;
+  }
 }
 
+
+//
+// Dashkit ===================================
+//
+
 .card-header-title {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .card-header-tabs {
-  margin-top: -$card-spacer-y;
-  margin-right: 0;
-  margin-left: 0;
+  margin: 0;
+}
 
-  // Ensures the height of card headers always stays the same, whether it's a .card-header-title, .card-header-tabs, or other content
-  .nav-link {
-    padding-top: $card-spacer-y;
-    padding-bottom: $card-spacer-y;
-  }
+// Make sure tabs underline always sticks to the bottom line
+
+.card-header-tabs .nav-link {
+  padding-top: ($card-header-height - $font-size-sm * $line-height-base) / 2 !important;
+  padding-bottom: ($card-header-height - $font-size-sm * $line-height-base) / 2 !important;
 }

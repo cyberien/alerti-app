@@ -531,14 +531,9 @@ $page-header-padding-y: 24px;
 $page-header-border-color: $border-color;
 
 
-// Chart
-
-$chart-height: 35%; // % of its width
-
-
 // Cards
 
-$card-header-min-height: ($font-size-sm * $line-height-base + $card-spacer-y * 2);
+$card-header-height: 3.75rem;
 
 
 // Avatar

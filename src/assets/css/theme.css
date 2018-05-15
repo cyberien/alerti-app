@@ -11153,7 +11153,9 @@ a.text-dark:focus
 {
     display: flex;
 
-    min-height: 3.21875rem; 
+    min-height: 3.75rem;
+    padding-top: 0;
+    padding-bottom: 0; 
 
     align-items: center;
 }
@@ -11169,14 +11171,13 @@ a.text-dark:focus
 
 .card-header-tabs
 {
-    margin-top: -1rem;
-    margin-right: 0;
-    margin-left: 0;
+    margin: 0;
 }
+
 .card-header-tabs .nav-link
 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 1.26562rem !important;
+    padding-bottom: 1.26562rem !important;
 }
 
 .dropdown-toggle:focus
