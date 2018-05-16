@@ -6033,7 +6033,7 @@ input[type='button'].btn-block
 
 .progress
 {
-    font-size: .70313rem;
+    font-size: .70312rem;
 
     display: flex;
     overflow: hidden;
@@ -11402,8 +11402,15 @@ a.text-dark:focus
 }
 .nav-tabs-sm .nav-link
 {
+<<<<<<< HEAD
     padding-top: .57692rem;
     padding-bottom: .57692rem;
+=======
+    margin-right: .5rem; 
+    margin-left: .5rem;
+    padding-top: 1.15385rem;
+    padding-bottom: 1.15385rem;
+>>>>>>> 89eea39920f05623d4e74ac5beb4383bd97d72f0
 }
 
 .nav-sm .nav-link
@@ -11454,8 +11461,6 @@ a.text-dark:focus
 
 .navbar-brand-img
 {
-    display: block;
-
     max-width: 100%;
     max-height: 1.5rem;
 }
