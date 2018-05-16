@@ -5261,12 +5261,12 @@ input[type='button'].btn-block
 
 .card-title
 {
-    margin-bottom: .5rem;
+    margin-bottom: 1rem;
 }
 
 .card-subtitle
 {
-    margin-top: -.25rem;
+    margin-top: -.5rem;
     margin-bottom: 0;
 }
 
@@ -5288,7 +5288,7 @@ input[type='button'].btn-block
 .card-header
 {
     margin-bottom: 0;
-    padding: .5rem 1.5rem;
+    padding: 1rem 1.5rem;
 
     border-bottom: 1px solid #edf2f9; 
     background-color: transparent;
@@ -5304,7 +5304,7 @@ input[type='button'].btn-block
 
 .card-footer
 {
-    padding: .5rem 1.5rem;
+    padding: 1rem 1.5rem;
 
     border-top: 1px solid #edf2f9; 
     background-color: transparent;
@@ -5317,7 +5317,7 @@ input[type='button'].btn-block
 .card-header-tabs
 {
     margin-right: -.75rem;
-    margin-bottom: -.5rem;
+    margin-bottom: -1rem;
     margin-left: -.75rem;
 
     border-bottom: 0;
@@ -5482,7 +5482,7 @@ input[type='button'].btn-block
 
 .card-columns .card
 {
-    margin-bottom: .5rem;
+    margin-bottom: 1rem;
 }
 
 @media (min-width: 576px)
@@ -6033,7 +6033,7 @@ input[type='button'].btn-block
 
 .progress
 {
-    font-size: .70312rem;
+    font-size: .70313rem;
 
     display: flex;
     overflow: hidden;
@@ -11156,6 +11156,8 @@ a.text-dark:focus
     display: flex;
 
     min-height: 3.75rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
 
     align-items: center;
 }
@@ -11198,6 +11200,32 @@ a.text-dark:focus
 .card-table tbody th:last-child
 {
     padding-right: 1.5rem !important;
+}
+
+.card-avatar
+{
+    margin-top: -3rem;
+    margin-bottom: 1rem;
+}
+
+.card-avatar.avatar-xs
+{
+    margin-top: -2.25rem;
+}
+
+.card-avatar.avatar-sm
+{
+    margin-top: -2.5rem;
+}
+
+.card-avatar.avatar-lg
+{
+    margin-top: -3.5rem;
+}
+
+.card-avatar.avatar-xl
+{
+    margin-top: -5.5rem;
 }
 
 .dropdown-toggle:focus
@@ -11365,7 +11393,7 @@ a.text-dark:focus
 {
     margin-right: .75rem;
     margin-left: .75rem;
-    padding: .5rem 0;
+    padding: 1rem 0;
 
     border-top-width: 0; 
     border-right-width: 0;
@@ -11402,15 +11430,10 @@ a.text-dark:focus
 }
 .nav-tabs-sm .nav-link
 {
-<<<<<<< HEAD
-    padding-top: .57692rem;
-    padding-bottom: .57692rem;
-=======
     margin-right: .5rem; 
     margin-left: .5rem;
     padding-top: 1.15385rem;
     padding-bottom: 1.15385rem;
->>>>>>> 89eea39920f05623d4e74ac5beb4383bd97d72f0
 }
 
 .nav-sm .nav-link
@@ -12520,8 +12543,12 @@ h6.text-uppercase
 
     display: block;
 
-    width: 48px;
-    height: 48px;
+    width: 3rem;
+    height: 3rem;
+}
+.avatar .border
+{
+    border-width: 4px !important;
 }
 
 .avatar-img
@@ -12547,11 +12574,6 @@ h6.text-uppercase
 
     align-items: center;
     justify-content: center;
-}
-
-.avatar .border
-{
-    border-width: 4px !important;
 }
 
 .avatar-online::before,
@@ -12582,15 +12604,13 @@ h6.text-uppercase
 
 .avatar-xs
 {
-    width: 24px;
-    height: 24px;
+    width: 1.5rem;
+    height: 1.5rem;
 }
-
 .avatar-xs .border
 {
     border-width: 2px !important;
 }
-
 .avatar-xs .avatar-title
 {
     font-size: .625rem;
@@ -12604,15 +12624,13 @@ h6.text-uppercase
 
 .avatar-sm
 {
-    width: 32px;
-    height: 32px;
+    width: 2rem;
+    height: 2rem;
 }
-
 .avatar-sm .border
 {
     border-width: 3px !important;
 }
-
 .avatar-sm .avatar-title
 {
     font-size: .8125rem;
@@ -12626,15 +12644,13 @@ h6.text-uppercase
 
 .avatar-lg
 {
-    width: 64px;
-    height: 64px;
+    width: 4rem;
+    height: 4rem;
 }
-
 .avatar-lg .border
 {
     border-width: 5px !important;
 }
-
 .avatar-lg .avatar-title
 {
     font-size: 28px;
@@ -12648,15 +12664,13 @@ h6.text-uppercase
 
 .avatar-xl
 {
-    width: 128px;
-    height: 128px;
+    width: 8rem;
+    height: 8rem;
 }
-
 .avatar-xl .border
 {
     border-width: 6px !important;
 }
-
 .avatar-xl .avatar-title
 {
     font-size: 42px;
@@ -12672,25 +12686,25 @@ h6.text-uppercase
 {
     display: flex;
 }
+.avatar-group .avatar + .avatar
+{
+    margin-left: -.75rem;
+}
 .avatar-group .avatar-xs + .avatar-xs
 {
-    margin-left: -6px;
+    margin-left: -.375rem;
 }
 .avatar-group .avatar-sm + .avatar-sm
 {
-    margin-left: -8px;
-}
-.avatar-group .avatar + .avatar
-{
-    margin-left: -12px;
+    margin-left: -.5rem;
 }
 .avatar-group .avatar-lg + .avatar-lg
 {
-    margin-left: -16px;
+    margin-left: -1rem;
 }
 .avatar-group .avatar-xl + .avatar-xl
 {
-    margin-left: -32px;
+    margin-left: -2rem;
 }
 
 .chart

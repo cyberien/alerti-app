@@ -374,7 +374,7 @@ $jumbotron-bg: $gray-200;
 
 // Cards
 
-$card-spacer-y: .5rem;
+$card-spacer-y: 1rem;
 $card-spacer-x: $spacer;
 $card-border-width: $border-width;
 $card-border-radius: $border-radius-lg;
@@ -542,8 +542,8 @@ $card-header-height: 3.75rem;
 
 // Avatar
 
-$avatar-size-base: 48px;
-$avatar-size-xs: 24px;
-$avatar-size-sm: 32px;
-$avatar-size-lg: 64px;
-$avatar-size-xl: 128px;
+$avatar-size-base: 3rem;
+$avatar-size-xs: 1.5rem;
+$avatar-size-sm: 2rem;
+$avatar-size-lg: 4rem;
+$avatar-size-xl: 8rem;
