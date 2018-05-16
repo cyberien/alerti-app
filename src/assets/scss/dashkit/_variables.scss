@@ -374,7 +374,7 @@ $jumbotron-bg: $gray-200;
 
 // Cards
 
-$card-spacer-y: 1rem;
+$card-spacer-y: .5rem;
 $card-spacer-x: $spacer;
 $card-border-width: $border-width;
 $card-border-radius: $border-radius-lg;
@@ -521,12 +521,14 @@ $breadcrumb-font-size-sm: $font-size-sm;
 
 // Main content
 
-$main-content-padding-x: 40px;
+$main-content-padding-x: 2.5rem;
 
 
 // Page header
 
-$page-header-spacer-y: 1.5rem;
+$page-header-margin-bottom: 2.5rem;
+$page-header-padding-top: 2.5rem;
+$page-header-padding-bottom: 1.5rem;
 
 $page-header-border-width: 1px;
 $page-header-border-color: $border-color;
@@ -539,8 +541,8 @@ $card-header-height: 3.75rem;
 
 // Avatar
 
-$avatar-size-base: 3.75rem;
-$avatar-size-xs: 1.5rem;
-$avatar-size-sm: 2.375rem;
-$avatar-size-lg: 5rem;
-$avatar-size-xl: 7.5rem;
+$avatar-size-base: 48px;
+$avatar-size-xs: 24px;
+$avatar-size-sm: 32px;
+$avatar-size-lg: 64px;
+$avatar-size-xl: 128px;

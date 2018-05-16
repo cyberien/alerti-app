@@ -8,17 +8,19 @@
 // General styles
 
 .page-header {
-  padding-top: $page-header-spacer-y;
-  padding-bottom: $page-header-spacer-y;
+  margin-bottom: $page-header-margin-bottom;
+  padding-top: $page-header-padding-top;
+  padding-bottom: $page-header-padding-bottom;
   border-bottom: $page-header-border-width solid $page-header-border-color;
 }
 
 .page-header-tabs {
+  margin-top: -$page-header-padding-top;
+  margin-bottom: -$page-header-padding-bottom;
   border-bottom: 0;
-  margin-bottom: -$page-header-spacer-y;
 
   .nav-link {
-    padding-top: $page-header-spacer-y;
-    padding-bottom: $page-header-spacer-y;
+    padding-top: $page-header-padding-top;
+    padding-bottom: $page-header-padding-bottom;
   }
 }

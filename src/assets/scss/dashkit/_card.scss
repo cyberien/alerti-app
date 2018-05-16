@@ -15,11 +15,9 @@
   display: flex;
   align-items: center;
   min-height: $card-header-height;
-  padding-top: 0;
-  padding-bottom: 0;
   font-size: $font-size-sm;
 
-  > * {
+  > .row {
     flex: 1;
   }
 }
@@ -39,7 +37,8 @@
 }
 
 .card-header-tabs {
-  margin: 0;
+  margin-top: -$card-spacer-y;
+  margin-bottom: -$card-spacer-y;
 }
 
 .card-header-tabs .nav-link {
@@ -54,8 +53,13 @@
 // card content
 
 .card-table {
+  margin-bottom:0;
 
-  th, td {
+  thead th {
+    border-top-width: 0;
+  }
+  
+  thead th, tbody th {
 
     &:first-child {
       padding-left: $card-spacer-x !important;

@@ -11,15 +11,20 @@
 
   thead th {
     background-color: $table-head-bg;
-    border-top-width: 0;
-    border-bottom-width: $table-border-width;
-    font-size: .866666667em;
     text-transform: uppercase;
+    font-weight: $font-weight-bold;
     letter-spacing: .08em;
     color: $table-head-color;
+    border-bottom-width: $table-border-width;
   }
 }
 
 .table-sm {
-  font-size: $font-size-sm;
+  
+  thead th {
+    font-size: $font-size-xs;
+  }
+  tbody td {
+    font-size: $font-size-sm;
+  }
 }

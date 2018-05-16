@@ -12,22 +12,11 @@
   display: block;
   width: $avatar-size-base;
   height: $avatar-size-base;
-  font-size: $avatar-size-base;
-  border-width: .075em;
-  border-style: solid;
-  border-color: transparent;
-  border-radius: $avatar-size-base;
-  line-height: 0;
 }
 
 .avatar-img {
-  width: auto; height: 100%;
-  border-radius: inherit;
-
-  @supports(object-fit: cover) {
-    width: 100%; height: 100%;
-    object-fit: cover;
-  }
+  width: 100%; height: 100%;
+  object-fit: cover;
 }
 
 .avatar-title {
@@ -35,75 +24,136 @@
   align-items: center;
   justify-content: center;
   width: 100%; height: 100%;
-  border-radius: inherit;
-  background-color: $gray-600;
-  font-size: .25em;
+  background-color: $gray-500;
+  font-size: 20px;
   color: white;
 }
 
-
-// Sizes
-
-@mixin avatar($size) {
-  width: $size;
-  height: $size;
-  font-size: $size;
-  border-radius: $size;
-}
-
-.avatar-xs {
-  @include avatar($avatar-size-xs);
-}
-.avatar-sm {
-  @include avatar($avatar-size-sm);
-}
-.avatar-lg {
-  @include avatar($avatar-size-lg);
-}
-.avatar-xl {
-  @include avatar($avatar-size-xl);
+.avatar .border {
+  border-width: 4px !important;
 }
 
 
-// Online, offline
+// Status
 //
-// Adds a circle indicator
+// Adds a status cicle in the bottom right corner
 
-.avatar-online, 
-.avatar-offline {
-
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: 0; right: 0;
-    width: .3em; height: .3em;
-    border-width: .05em;
-    border-style: solid;
-    border-color: inherit;
-    border-radius: 50%;
-    transform: translate(12.5%, 12.5%);
-    background-clip: content-box;
-  }
+.avatar-online::before,
+.avatar-offline::before, {
+  content: '';
+  position: absolute;
+  bottom: 0; right: 0;
+  width: 30%; height: 30%;
+  border-radius: 50%;
+  border: 3px solid $white;
 }
-  
-// Online status
 
-.avatar-online::after {
+.avatar-online::before {
   background-color: $success;
 }
-.avatar-offline::after {
+
+.avatar-offline::before {
   background-color: $gray-500;
 }
 
 
-// Avatar stacked
+// Sizes
 //
-// Stacks avatars horizontally
+// Controls the size of avatar images, avatar sizes, and avatar statuses
 
-.avatar-stacked {
+.avatar-xs {
+  width: $avatar-size-xs;
+  height: $avatar-size-xs;
+}
+
+.avatar-xs .border {
+  border-width: 2px !important;
+}
+
+.avatar-xs .avatar-title {
+  font-size: $font-size-xs;
+}
+
+.avatar-xs.avatar-online::before,
+.avatar-xs.avatar-offline::before {
+  border-width: 1px;
+}
+
+.avatar-sm {
+  width: $avatar-size-sm;
+  height: $avatar-size-sm;
+}
+
+.avatar-sm .border {
+  border-width: 3px !important;
+}
+
+.avatar-sm .avatar-title {
+  font-size: $font-size-sm;
+}
+
+.avatar-sm.avatar-online::before,
+.avatar-sm.avatar-offline::before {
+  border-width: 2px;
+}
+
+.avatar-lg {
+  width: $avatar-size-lg;
+  height: $avatar-size-lg;
+}
+
+.avatar-lg .border {
+  border-width: 5px !important;
+}
+
+.avatar-lg .avatar-title {
+  font-size: 28px;
+}
+
+.avatar-lg.avatar-online::before,
+.avatar-lg.avatar-offline::before {
+  border-width: 4px;
+}
+
+.avatar-xl {
+  width: $avatar-size-xl;
+  height: $avatar-size-xl;
+}
+
+.avatar-xl .border {
+  border-width: 6px !important;
+}
+
+.avatar-xl .avatar-title {
+  font-size: 42px;
+}
+
+.avatar-xl.avatar-online::before,
+.avatar-xl.avatar-offline::before {
+  border-width: 5px;
+}
+
+
+// Avatar group
+//
+// Shifts every next avatar to the left by 33%
+
+.avatar-group {
   display: flex;
 
-  .avatar + .avatar {
-    margin-left: -.333em;
+  .avatar-xs +.avatar-xs {
+    margin-left: -$avatar-size-xs / 4;
+  }
+  .avatar-sm +.avatar-sm {
+    margin-left: -$avatar-size-sm / 4;
+  }
+  .avatar +.avatar {
+    margin-left: -$avatar-size-base / 4;
+  }
+  .avatar-lg +.avatar-lg {
+    margin-left: -$avatar-size-lg / 4;
+  }
+  .avatar-xl +.avatar-xl {
+    margin-left: -$avatar-size-xl / 4;
   }
 }
