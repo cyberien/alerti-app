@@ -56,6 +56,8 @@
     // Calculates the exact padding necessary to vertically fill the .card-header
     padding-top: (($font-size-base / $nav-tabs-sm-font-size) * $nav-tabs-link-padding-y);
     padding-bottom: (($font-size-base / $nav-tabs-sm-font-size) * $nav-tabs-link-padding-y);
+    margin-left: $nav-tabs-sm-link-margin-x;
+    margin-right: $nav-tabs-sm-link-margin-x;
   }
 }
 

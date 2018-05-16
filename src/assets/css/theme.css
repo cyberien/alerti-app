@@ -6033,7 +6033,7 @@ input[type='button'].btn-block
 
 .progress
 {
-    font-size: .70313rem;
+    font-size: .70312rem;
 
     display: flex;
     overflow: hidden;
@@ -11396,6 +11396,8 @@ a.text-dark:focus
 }
 .nav-tabs-sm .nav-link
 {
+    margin-right: .5rem; 
+    margin-left: .5rem;
     padding-top: 1.15385rem;
     padding-bottom: 1.15385rem;
 }
