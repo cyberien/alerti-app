@@ -11204,26 +11204,30 @@ a.text-dark:focus
 
 .card-avatar
 {
-    margin-top: -3rem;
     margin-bottom: 1rem;
 }
 
-.card-avatar.avatar-xs
+.card-avatar-top
+{
+    margin-top: -3rem;
+}
+
+.card-avatar-top.avatar-xs
 {
     margin-top: -2.25rem;
 }
 
-.card-avatar.avatar-sm
+.card-avatar-top.avatar-sm
 {
     margin-top: -2.5rem;
 }
 
-.card-avatar.avatar-lg
+.card-avatar-top.avatar-lg
 {
     margin-top: -3.5rem;
 }
 
-.card-avatar.avatar-xl
+.card-avatar-top.avatar-xl
 {
     margin-top: -5.5rem;
 }

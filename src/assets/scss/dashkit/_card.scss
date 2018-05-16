@@ -78,18 +78,20 @@
 // Moves card avatar up by 50%
 
 .card-avatar {
-  margin-top: -($card-spacer-x + $avatar-size-base / 2);
   margin-bottom: $card-spacer-y;
 }
-.card-avatar.avatar-xs {
+.card-avatar-top {
+  margin-top: -($card-spacer-x + $avatar-size-base / 2);
+}
+.card-avatar-top.avatar-xs {
   margin-top: -($card-spacer-x + $avatar-size-xs / 2);;
 }
-.card-avatar.avatar-sm {
+.card-avatar-top.avatar-sm {
   margin-top: -($card-spacer-x + $avatar-size-sm / 2);;
 }
-.card-avatar.avatar-lg {
+.card-avatar-top.avatar-lg {
   margin-top: -($card-spacer-x + $avatar-size-lg / 2);;
 }
-.card-avatar.avatar-xl {
+.card-avatar-top.avatar-xl {
   margin-top: -($card-spacer-x + $avatar-size-xl / 2);;
 }
