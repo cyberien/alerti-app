@@ -14,7 +14,25 @@
 
 .dropdown-toggle {
     
-    &:focus {
-        outline: none !important;
-    }
+  &:focus {
+      outline: none !important;
+  }
+}
+
+
+//
+// Dashkit ===================================
+//
+
+// Dropdown ellipses
+
+.dropdown-ellipses {
+  font-size: $font-size-lg;
+  color: $gray-400;
+}
+
+// Remove dropdown arrow
+
+.dropdown-ellipses::after {
+  display: none;
 }

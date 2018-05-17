@@ -41,6 +41,8 @@
 .card-header-tabs {
   margin-top: -$card-spacer-y / 2;
   margin-bottom: -$card-spacer-y / 2;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .card-header-tabs .nav-link {
@@ -94,4 +96,15 @@
 }
 .card-avatar-top.avatar-xl {
   margin-top: -($card-spacer-x + $avatar-size-xl / 2);;
+}
+
+
+// Card dropdown
+//
+// Places dropdowns in the top right corner
+
+.card-dropdown {
+  position: absolute;
+  top: $card-spacer-x;
+  right: $card-spacer-x;
 }
