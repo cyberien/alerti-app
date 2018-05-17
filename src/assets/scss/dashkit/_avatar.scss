@@ -12,10 +12,14 @@
   display: block;
   width: $avatar-size-base;
   height: $avatar-size-base;
+}
 
-  .border {
-    border-width: 4px !important;
-  }
+.avatar .border {
+  border-width: 4px !important;
+}
+
+.avatar .rounded {
+  border-radius: 4px !important;
 }
 
 .avatar-img {
@@ -61,17 +65,23 @@
 //
 // Controls the size of avatar images, avatar sizes, and avatar statuses
 
+// Extra small
+
 .avatar-xs {
   width: $avatar-size-xs;
   height: $avatar-size-xs;
+}
 
-  .border {
-     border-width: 2px !important;
-  }
+.avatar-xs .border {
+  border-width: 2px !important;
+}
 
-  .avatar-title {
-    font-size: $font-size-xs;
-  }
+.avatar-xs .rounded {
+  border-radius: 2px !important;
+}
+
+.avatar-xs .avatar-title {
+  font-size: $font-size-xs;
 }
 
 .avatar-xs.avatar-online::before,
@@ -79,17 +89,23 @@
   border-width: 1px;
 }
 
+// Small
+
 .avatar-sm {
   width: $avatar-size-sm;
   height: $avatar-size-sm;
+}
 
-  .border {
-    border-width: 3px !important;
-  }
+.avatar-sm .border {
+  border-width: 3px !important;
+}
 
-  .avatar-title {
-    font-size: $font-size-sm;
-  }
+.avatar-sm .rounded {
+  border-radius: 3px !important;
+}
+
+.avatar-sm .avatar-title {
+  font-size: $font-size-sm;
 }
 
 .avatar-sm.avatar-online::before,
@@ -97,17 +113,23 @@
   border-width: 2px;
 }
 
+// Large
+
 .avatar-lg {
   width: $avatar-size-lg;
   height: $avatar-size-lg;
+}
 
-  .border {
-    border-width: 5px !important;
-  }
+.avatar-lg .border {
+  border-width: 5px !important;
+}
 
-  .avatar-title {
-    font-size: 28px;
-  }
+.avatar-lg .rounded {
+  border-radius: 6px !important;
+}
+
+.avatar-lg .avatar-title {
+  font-size: 28px;
 }
 
 .avatar-lg.avatar-online::before,
@@ -115,17 +137,23 @@
   border-width: 4px;
 }
 
+// Extra large
+
 .avatar-xl {
   width: $avatar-size-xl;
   height: $avatar-size-xl;
+}
 
-  .border {
-    border-width: 6px !important;
-  }
+.avatar-xl .border {
+  border-width: 6px !important;
+}
 
-  .avatar-title {
-    font-size: 42px;
-  }
+.avatar-xl .rounded {
+  border-radius: 12px !important;
+}
+
+.avatar-xl .avatar-title {
+  font-size: 42px;
 }
 
 .avatar-xl.avatar-online::before,

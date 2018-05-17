@@ -12576,9 +12576,15 @@ h6.text-uppercase
     width: 3rem;
     height: 3rem;
 }
+
 .avatar .border
 {
     border-width: 4px !important;
+}
+
+.avatar .rounded
+{
+    border-radius: 4px !important;
 }
 
 .avatar-img
@@ -12637,10 +12643,17 @@ h6.text-uppercase
     width: 1.5rem;
     height: 1.5rem;
 }
+
 .avatar-xs .border
 {
     border-width: 2px !important;
 }
+
+.avatar-xs .rounded
+{
+    border-radius: 2px !important;
+}
+
 .avatar-xs .avatar-title
 {
     font-size: .625rem;
@@ -12657,10 +12670,17 @@ h6.text-uppercase
     width: 2rem;
     height: 2rem;
 }
+
 .avatar-sm .border
 {
     border-width: 3px !important;
 }
+
+.avatar-sm .rounded
+{
+    border-radius: 3px !important;
+}
+
 .avatar-sm .avatar-title
 {
     font-size: .8125rem;
@@ -12677,10 +12697,17 @@ h6.text-uppercase
     width: 4rem;
     height: 4rem;
 }
+
 .avatar-lg .border
 {
     border-width: 5px !important;
 }
+
+.avatar-lg .rounded
+{
+    border-radius: 6px !important;
+}
+
 .avatar-lg .avatar-title
 {
     font-size: 28px;
@@ -12697,10 +12724,17 @@ h6.text-uppercase
     width: 8rem;
     height: 8rem;
 }
+
 .avatar-xl .border
 {
     border-width: 6px !important;
 }
+
+.avatar-xl .rounded
+{
+    border-radius: 12px !important;
+}
+
 .avatar-xl .avatar-title
 {
     font-size: 42px;
@@ -12742,6 +12776,84 @@ h6.text-uppercase
     position: relative;
 
     height: 300px;
+}
+
+.header
+{
+    margin-bottom: 2.5rem;
+}
+
+.header-img-top
+{
+    width: 100%;
+    height: autol;
+}
+@media (min-width: 768px)
+{
+    .header-img-top
+    {
+        width: calc(100% + 2.5rem * 2 + 24px);
+        margin-right: calc(-2.5rem - 12px); 
+        margin-left: calc(-2.5rem - 12px);
+    }
+}
+
+.header-body
+{
+    padding-top: 2.5rem;
+    padding-bottom: 1.5rem;
+
+    border-bottom: 1px solid #e3ebf6;
+}
+
+.header-pretitle
+{
+    letter-spacing: .08em;
+    text-transform: uppercase;
+
+    color: #95aac9;
+}
+
+.header-title
+{
+    margin-bottom: 0;
+}
+
+.header-tabs
+{
+    margin-bottom: -1.5rem;
+
+    border-bottom: 0;
+}
+.header-tabs .nav-link
+{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.header-avatar-top
+{
+    margin-top: -4rem;
+}
+
+.header-avatar-top.avatar-xs
+{
+    margin-top: -3.25rem;
+}
+
+.header-avatar-top.avatar-sm
+{
+    margin-top: -3.5rem;
+}
+
+.header-avatar-top.avatar-lg
+{
+    margin-top: -4.5rem;
+}
+
+.header-avatar-top.avatar-xl
+{
+    margin-top: -6.5rem;
 }
 
 .icon.active
@@ -12829,28 +12941,6 @@ h6.text-uppercase
     {
         margin-right: 250px;
     }
-}
-
-.page-header
-{
-    margin-bottom: 2.5rem;
-    padding-top: 2.5rem;
-    padding-bottom: 1.5rem;
-
-    border-bottom: 1px solid #e3ebf6;
-}
-
-.page-header-tabs
-{
-    margin-top: -2.5rem;
-    margin-bottom: -1.5rem;
-
-    border-bottom: 0;
-}
-.page-header-tabs .nav-link
-{
-    padding-top: 2.5rem;
-    padding-bottom: 1.5rem;
 }
 
 .custom-checkbox-toggle
