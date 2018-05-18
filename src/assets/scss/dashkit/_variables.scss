@@ -90,7 +90,8 @@ $theme-colors: map-merge((
   "warning":    $warning,
   "danger":     $danger,
   "light":      $light,
-  "dark":       $dark
+  "dark":       $dark,
+  "black":      $black
 ), $theme-colors);
 // stylelint-enable
 
@@ -542,17 +543,15 @@ $breadcrumb-font-size-sm: $font-size-sm;
 
 // Main content
 
+$main-content-padding-y: 40px;
 $main-content-padding-x: 40px; // in px to combine with $grid-gutter-width
 
 
 // Header
 
+$header-margin-top: 1rem;
 $header-margin-bottom: 2.5rem;
-$header-padding-top: 2.5rem;
-$header-padding-bottom: 1.5rem;
-
-$header-border-width: 1px;
-$header-border-color: $border-color;
+$header-spacing-y: 1.5rem;
 
 
 // Cards

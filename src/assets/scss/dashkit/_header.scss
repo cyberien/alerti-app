@@ -8,23 +8,17 @@
 // General styles
 
 .header {
+  margin-top: $header-margin-top;
   margin-bottom: $header-margin-bottom;
 }
 
 .header-img-top {
   width: 100%; height: auto;
-
-  @include media-breakpoint-up(md) {
-    width: calc(100% + #{$main-content-padding-x} * 2 + #{$grid-gutter-width});
-    margin-left: calc(-#{$main-content-padding-x} - #{$grid-gutter-width / 2});
-    margin-right: calc(-#{$main-content-padding-x} - #{$grid-gutter-width / 2});
-  }
 }
 
 .header-body {
-  padding-top: $header-padding-top;
-  padding-bottom: $header-padding-bottom;
-  border-bottom: $header-border-width solid $header-border-color;
+  padding-top: $header-spacing-y;
+  padding-bottom: $header-spacing-y;
 }
 
 .header-pretitle {
@@ -38,32 +32,11 @@
 }
 
 .header-tabs {
-  margin-bottom: -$header-padding-bottom;
-  border-bottom: 0;
+  margin-bottom: -$header-spacing-y;
+  border-bottom-width: 0;
 
   .nav-link {
-    padding-top: $header-padding-bottom;
-    padding-bottom: $header-padding-bottom;
+    padding-top: $header-spacing-y;
+    padding-bottom: $header-spacing-y;
   }
-}
-
-
-// Header avatar
-//
-// Moves header avatar up by 50%
-
-.header-avatar-top {
-  margin-top: -($header-padding-top + $avatar-size-base / 2);
-}
-.header-avatar-top.avatar-xs {
-  margin-top: -($header-padding-top + $avatar-size-xs / 2);;
-}
-.header-avatar-top.avatar-sm {
-  margin-top: -($header-padding-top + $avatar-size-sm / 2);;
-}
-.header-avatar-top.avatar-lg {
-  margin-top: -($header-padding-top + $avatar-size-lg / 2);;
-}
-.header-avatar-top.avatar-xl {
-  margin-top: -($header-padding-top + $avatar-size-xl / 2);;
 }
