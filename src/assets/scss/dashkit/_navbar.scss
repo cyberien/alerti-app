@@ -222,30 +222,6 @@
 }
 
 
-// Navbar icon
-
-.navbar-icon {
-  display: block;
-  font-size: $font-size-lg;
-}
-
-.navbar-light .navbar-icon {
-  color: $navbar-light-color;
-
-  &:hover {
-    color: $navbar-light-hover-color;
-  }
-}
-
-.navbar-dark .navbar-icon {
-  color: $navbar-dark-color;
-
-  &:hover {
-    color: $navbar-dark-hover-color;
-  }
-}
-
-
 // Vertical
 //
 // Creates a vertically aligned version of the navbar

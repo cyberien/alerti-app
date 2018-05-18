@@ -1,0 +1,77 @@
+//
+// forms.scss
+// Extended from Bootstrap
+//
+
+
+//
+// Bootstrap Overrides ===================================
+//
+
+// Input groups
+
+.input-group-text {
+  background-color: $input-bg;
+  color: $input-placeholder-color;
+}
+
+.input-group-prepend {
+  
+  .input-group-text {
+    padding-right: $input-padding-x / 2;
+    border-right-color: transparent;
+  }
+}
+
+.input-group-append {
+  
+  .input-group-text {
+    padding-left: $input-padding-x / 2;
+    border-left-color: transparent;
+  }
+}
+
+.form-control-prepended {
+  padding-left: $input-padding-x / 2;
+  border-left-color: transparent;
+}
+
+.form-control-appended {
+  padding-right: $input-padding-x / 2;
+  border-right-color: transparent;
+}
+
+
+// Help text
+
+.form-text {
+  margin-top: 0;
+  margin-bottom: $label-margin-bottom;
+}
+
+
+//
+// Dashkit ===================================
+//
+
+// Rounded controls
+
+.from-control-rounded {
+  border-radius: 20rem;
+}
+
+.input-group-prepend-rounded {
+
+  .input-group-text {
+    border-top-left-radius: 20rem;
+    border-bottom-left-radius: 20rem;
+  }
+}
+
+.input-group-append-rounded {
+
+  .input-group-text {
+    border-top-right-radius: 20rem;
+    border-bottom-right-radius: 20rem;
+  }
+}

@@ -27,7 +27,14 @@
 
             <!-- Form -->
             <form class="form-inline mr-3 d-none d-md-flex">
-              <input type="search" class="form-control" placeholder="Search" aria-label="Search">
+              <div class="input-group">
+                <div class="input-group-prepend input-group-prepend-rounded">
+                  <div class="input-group-text">
+                    <i class="fe fe-search"></i>
+                  </div>
+                </div>
+                <input type="search" class="form-control from-control-rounded form-control-prepended" placeholder="Search" aria-label="Search">
+              </div>
             </form>
 
             <!-- User -->
@@ -37,12 +44,14 @@
               <div class="dropdown mr-3 d-none d-md-flex">
                 
                 <!-- Toggle -->
-                <a href="#" id="topbarIcon" class="navbar-icon dropdown-toggle active" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="fe fe-bell"></i>
+                <a href="#" class="text-muted" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="icon active">
+                    <i class="fe fe-bell"></i>
+                  </span>
                 </a>
 
                 <!-- Menu -->
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="topbarIcon">
+                <div class="dropdown-menu dropdown-menu-right">
                   <a href="#" class="dropdown-item">Action</a>
                   <a href="#" class="dropdown-item">Another action</a>
                   <a href="#" class="dropdown-item">Something else here</a>
@@ -2185,6 +2194,249 @@
               </div>
             </div> <!-- / .row -->
             
+          </div>
+        </div> <!-- / .row -->
+
+        <!-- FORMS -->
+        <div class="row">
+          <div class="col-12">
+            
+            <!-- Header -->
+            <div class="header mt-4">
+              <div class="header-body">
+                <div class="row">
+                  <div class="col-12">
+                    
+                    <!-- Preheading -->
+                    <h6 class="header-pretitle">
+                      Dashkit components
+                    </h6>
+
+                    <!-- Title -->
+                    <h1 class="header-title">
+                      Forms
+                    </h1>
+
+                  </div>
+                </div> <!-- / .row -->
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12 col-lg-3">
+                
+                <!-- Heading -->
+                <h1 class="display-4 text-center mb-1">
+                  Sign up
+                </h1>
+                
+                <!-- Subheading -->
+                <p class="text-muted text-center mb-4">
+                  Free access to our dashboard.
+                </p>
+                
+                <!-- Form -->
+                <form>
+
+                  <!-- Email address -->
+                  <div class="form-group">
+
+                    <!-- Label -->
+                    <label>Email Address</label>
+
+                    <!-- Input -->
+                    <input type="email" class="form-control" placeholder="name@address.com">
+
+                  </div>
+
+                  <!-- Password -->
+                  <div class="form-group mb-4">
+
+                    <!-- Label -->
+                    <label>Password</label>
+
+                    <!-- Input group -->
+                    <div class="input-group">
+
+                      <!-- Input -->
+                      <input type="password" class="form-control form-control-appended" placeholder="Enter your password">
+
+                      <!-- Icon -->
+                      <div class="input-group-append">
+                        <span class="input-group-text">
+                          <i class="fe fe-eye"></i>
+                        </span>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <!-- Submit -->
+                  <div class="form-group">
+                    <button class="btn btn-lg btn-block btn-primary">
+                      Sign up
+                    </button>
+                  </div>
+
+                  <!-- Link -->
+                  <div class="form-group">
+                    <div class="small text-muted text-center">
+                      Already have an account? <a href="#">Log in</a>.
+                    </div>
+                  </div>
+
+                </form>
+
+              </div>
+              <div class="col-12 col-lg-3">
+                
+                <!-- Heading -->
+                <h1 class="display-4 text-center mb-1">
+                  Sign in
+                </h1>
+                
+                <!-- Subheading -->
+                <p class="text-muted text-center mb-4">
+                  Free access to our dashboard.
+                </p>
+                
+                <!-- Form -->
+                <form>
+
+                  <!-- Email address -->
+                  <div class="form-group">
+
+                    <!-- Label -->
+                    <label>Email Address</label>
+
+                    <!-- Input -->
+                    <input type="email" class="form-control" placeholder="name@address.com">
+
+                  </div>
+
+                  <!-- Password -->
+                  <div class="form-group mb-4">
+
+                    <div class="row">
+                      <div class="col">
+                            
+                        <!-- Label -->
+                        <label>Password</label>
+
+                      </div>
+                      <div class="col-auto">
+                        
+                        <!-- Help text -->
+                        <a href="#" class="form-text small text-muted">
+                          Forgot password?
+                        </a>
+
+                      </div>
+                    </div> <!-- / .row -->
+
+                    <!-- Input group -->
+                    <div class="input-group">
+
+                      <!-- Input -->
+                      <input type="password" class="form-control form-control-appended" placeholder="Enter your password">
+
+                      <!-- Icon -->
+                      <div class="input-group-append">
+                        <span class="input-group-text">
+                          <i class="fe fe-eye"></i>
+                        </span>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <!-- Submit -->
+                  <div class="form-group">
+                    <button class="btn btn-lg btn-block btn-primary">
+                      Sign in
+                    </button>
+                  </div>
+
+                  <!-- Link -->
+                  <div class="form-group">
+                    <div class="small text-muted text-center">
+                      Don't have an account yet? <a href="#">Sign up</a>.
+                    </div>
+                  </div>
+                  
+                </form>
+
+              </div>
+              <div class="col-12 col-lg-3">
+                
+                <!-- Heading -->
+                <h1 class="display-4 text-center mb-1">
+                  Password reset
+                </h1>
+                
+                <!-- Subheading -->
+                <p class="text-muted text-center mb-4">
+                  Enter your email to get a password reset link.
+                </p>
+                
+                <!-- Form -->
+                <form>
+
+                  <!-- Email address -->
+                  <div class="form-group mb-4">
+
+                    <!-- Label -->
+                    <label>Email Address</label>
+
+                    <!-- Input -->
+                    <input type="email" class="form-control" placeholder="name@address.com">
+
+                  </div>
+
+                  <!-- Submit -->
+                  <div class="form-group">
+                    <button class="btn btn-lg btn-block btn-primary">
+                      Reset Password
+                    </button>
+                  </div>
+
+                  <!-- Link -->
+                  <div class="form-group">
+                    <div class="small text-muted text-center">
+                      Remember your password? <a href="#">Log in</a>.
+                    </div>
+                  </div>
+                  
+                </form>
+
+              </div>
+              <div class="col-12 col-lg-3">
+                <div class="text-center">
+                
+                  <!-- Preheading -->
+                  <h6 class="text-uppercase text-muted mb-3">
+                    404 error
+                  </h6>
+
+                  <!-- Heading -->
+                  <h1 class="display-4">
+                    There’s no page here 😭
+                  </h1>
+
+                  <!-- Subheading -->
+                  <p class="text-muted mb-3">
+                    Looks like you ended up here by accident? 
+                  </p>
+
+                  <!-- Button -->
+                  <a href="#" class="btn btn-lg btn-primary">
+                    Return to your dashboard
+                  </a>
+                
+                </div>
+              </div>
+            </div> <!-- / .row -->
+
           </div>
         </div> <!-- / .row -->
 

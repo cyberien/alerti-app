@@ -60,6 +60,8 @@ var Charts = (function() {
 
   // Legend
   Chart.defaults.global.legend.display = false;
+  Chart.defaults.global.legend.position = 'bottom';
+  Chart.defaults.global.legend.labels.usePointStyle = true;
 
   // Point
   Chart.defaults.global.elements.point.radius = 0;
@@ -148,6 +150,11 @@ var Charts = (function() {
               colors.primary[100]
             ]
           }]
+        },
+        options: {
+          legend: {
+            display: true
+          }
         }
       });
     },

@@ -108,6 +108,11 @@ $yiq-text-light: $white;
 $spacer: 1.5rem;
 $spacers: ();
 $spacers: map-merge((
+  -5: -($spacer * 3),
+  -4: -($spacer * 1.5),
+  -3: -$spacer,
+  -2: -($spacer * .5),
+  -1: -($spacer * .25),
   0: 0,
   1: ($spacer * .25),
   2: ($spacer * .5),
@@ -160,7 +165,7 @@ $line-height-sm: 1.75;
 $border-width: 1px;
 $border-color: $gray-300;
 
-$border-radius: .375rem;
+$border-radius: .25rem;
 $border-radius-lg: .5rem;
 $border-radius-sm: .25rem;
 
@@ -198,6 +203,11 @@ $h3-font-size: 1.0625rem;
 $h4-font-size: 0.9375rem;
 $h5-font-size: 0.8125rem;
 $h6-font-size: 0.625rem;
+
+$display1-size: 4rem;
+$display2-size: 3.25rem;
+$display3-size: 2.625rem;
+$display4-size: 2rem;
 
 $display1-weight: 600;
 $display2-weight: 600;
@@ -279,6 +289,10 @@ $btn-focus-box-shadow: $input-btn-focus-box-shadow;
 
 $btn-link-disabled-color: $gray-500;
 
+$btn-border-radius: $border-radius;
+$btn-border-radius-lg: $border-radius;
+$btn-border-radius-sm: $border-radius;
+
 
 // Forms
 
@@ -297,12 +311,18 @@ $input-line-height-lg: $input-btn-line-height-lg;
 $input-color: $body-color;
 $input-border-color: $gray-400;
 
+$input-border-radius: $border-radius;
+$input-border-radius-lg: $border-radius;
+$input-border-radius-sm: $border-radius;
+
 $input-focus-border-color: $primary;
 $input-focus-box-shadow: transparent;
 
 $input-placeholder-color: $gray-500;
 
 $input-height-inner-sm: ($font-size-sm * $input-btn-line-height-sm) + ($input-btn-padding-y-sm * 2);
+
+$form-group-margin-bottom: 1.375rem;
 
 $input-group-addon-bg: $gray-100;
 
@@ -348,8 +368,8 @@ $navbar-toggler-padding-x: 0;
 
 $navbar-dark-toggler-border-color: transparent;
 
-$navbar-light-color:                $gray-700;
-$navbar-light-hover-color:          $black;
+$navbar-light-color: $gray-700;
+$navbar-light-hover-color: $black;
 $navbar-light-toggler-border-color: transparent;
 
 
