@@ -15,10 +15,133 @@
     ================================================== -->
     <div class="main-content">
       <div class="container-fluid">
+
+        <!-- TOPBAR -->
+        <nav class="navbar navbar-expand-md navbar-light bg-white">
+          <div class="container-fluid">
+
+            <!-- Brand -->
+            <a class="navbar-brand mr-auto" href="#">
+              Dashboard
+            </a>
+
+            <!-- Form -->
+            <form class="form-inline mr-3 d-none d-md-flex">
+              <input type="search" class="form-control" placeholder="Search" aria-label="Search">
+            </form>
+
+            <!-- User -->
+            <div class="navbar-user">
+              
+              <!-- Dropdown -->
+              <div class="dropdown mr-3 d-none d-md-flex">
+                
+                <!-- Toggle -->
+                <a href="#" id="topbarIcon" class="navbar-icon dropdown-toggle active" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fe fe-bell"></i>
+                </a>
+
+                <!-- Menu -->
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="topbarIcon">
+                  <a href="#" class="dropdown-item">Action</a>
+                  <a href="#" class="dropdown-item">Another action</a>
+                  <a href="#" class="dropdown-item">Something else here</a>
+                </div>
+
+              </div>
+
+              <!-- Dropdown -->
+              <div class="dropdown">
+                
+                <!-- Toggle -->
+                <a href="#" class="avatar avatar-sm avatar-online dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <img src="assets/img/2.png" alt="..." class="avatar-img rounded-circle">
+                </a>
+
+                <!-- Menu -->
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a href="#" class="dropdown-item">Action</a>
+                  <a href="#" class="dropdown-item">Another action</a>
+                  <a href="#" class="dropdown-item">Something else here</a>
+                </div>
+
+              </div>
+
+            </div>
+          
+          </div> <!-- / .container-fluid -->
+        </nav>
+
+        <!-- SUBNAV -->
+        <div class="navbar navbar-expand-xs navbar-light bg-white">
+          <div class="container-fluid">
+
+            <!-- Overflow -->
+            <div class="navbar-overflow">
+
+              <!-- Navigation -->
+              <ul class="navbar-nav nav-sm ml-auto mr-auto">
+                <li class="nav-item">
+                  <a href="#" class="nav-link active">
+                    Dashboard
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    Pages
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    Components
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    Docs
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    Account
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    Finance
+                  </a>
+                </li>
+              </ul>
+
+            </div> <!-- / .navbar-overflow -->
+
+          </div> <!-- / .container-fluid -->
+        </div>
+
+        <!-- BREADCRUMB -->
+        <nav class="navbar navbar-expand-sm navbar-light bg-light">
+          <div class="container-fluid">
+
+            <ol class="navbar-breadcrumb breadcrumb breadcrumb-sm breadcrumb-light">
+              <li class="breadcrumb-item">
+                <a href="#">Home</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="#">Library</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Data
+              </li>
+            </ol>
+
+          </div> <!-- / .container-fluid -->
+        </nav>
+
+        <!-- HEADERS -->
         <div class="row">
           <div class="col-12">
       
-            <!-- Headers -->
+            <!-- Header -->
             <div class="header">
               <div class="header-body">
                 <div class="row">
@@ -389,6 +512,8 @@
         
           </div>
         </div> <!-- / .row -->
+
+        <!-- AVATARS -->
         <div class="row">
           <div class="col-12">
 
@@ -585,6 +710,8 @@
 
           </div>
         </div> <!-- . row -->
+
+        <!-- CARDS -->
         <div class="row">
           <div class="col-12">
             
@@ -1613,6 +1740,454 @@
             
           </div>
         </div> <!-- / .row -->
+
+        <!-- CHARTS -->
+        <div class="row">
+          <div class="col-12">
+
+            <!-- Header -->
+            <div class="header mt-4">
+              <div class="header-body">
+                <div class="row">
+                  <div class="col-12">
+
+                    <!-- Pretitle -->
+                    <h6 class="header-pretitle">
+                      Dashkit components
+                    </h6>
+                    
+                    <!-- Title -->
+                    <h1 class="header-title">
+                      Charts
+                    </h1>
+
+                  </div>
+                </div> <!-- / .row -->
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <div class="row align-items-center">
+                  <div class="col">
+                
+                    <!-- Title -->
+                    <h4 class="card-header-title">
+                      Performance
+                    </h4>
+
+                  </div>
+                  <div class="col-auto">
+
+                    <!-- Tabs -->
+                    <ul class="nav nav-tabs nav-tabs-sm card-header-tabs">
+                      <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                          All
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">
+                          Direct
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">
+                          Organic
+                        </a>
+                      </li>
+                    </ul>
+
+                  </div>
+                </div> <!-- / .row -->
+
+              </div>
+              <div class="card-body">
+                
+                <!-- Chart -->
+                <div class="chart">
+                  <canvas id="lineChart" class="chart-canvas"></canvas>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12 col-sm-8">
+
+                <div class="card">
+                  <div class="card-header">
+                    <div class="row align-items-center">
+                      <div class="col">
+                    
+                        <!-- Title -->
+                        <h4 class="card-header-title">
+                          Orders
+                        </h4>
+
+                      </div>
+                      <div class="col-auto">
+                        
+                        <!-- Caption -->
+                        <span class="text-muted">
+                          Show affiliates:
+                        </span>
+
+                      </div>
+                      <div class="col-auto">
+
+                        <!-- Toggle -->
+                        <div class="custom-control custom-checkbox-toggle">
+                          <input type="checkbox" class="custom-control-input" id="cardToggle">
+                          <label class="custom-control-label" for="cardToggle"></label>
+                        </div>
+
+                      </div>
+                    </div> <!-- / .row -->
+
+                  </div>
+                  <div class="card-body">
+                    
+                    <!-- Chart -->
+                    <div class="chart">
+                      <canvas id="barChart" class="chart-canvas"></canvas>
+                    </div>
+
+                  </div>
+                </div>
+                
+              </div>
+              <div class="col-12 col-sm-4">
+                
+                <div class="card">
+                  <div class="card-header">
+                    <div class="row align-items-center">
+                      <div class="col">
+                    
+                        <!-- Title -->
+                        <h4 class="card-header-title">
+                          Devices
+                        </h4>
+
+                      </div>
+                      <div class="col-auto">
+
+                        <!-- Tabs -->
+                        <ul class="nav nav-tabs nav-tabs-sm card-header-tabs">
+                          <li class="nav-item">
+                            <a class="nav-link active" href="#">
+                              All
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">
+                              Direct
+                            </a>
+                          </li>
+                        </ul>
+
+                      </div>
+                    </div> <!-- / .row -->
+
+                  </div>
+                  <div class="card-body">
+                    
+                    <!-- Chart -->
+                    <div class="chart">
+                      <canvas id="donutChart" class="chart-canvas"></canvas>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div> <!-- / .row -->
+            <div class="row">
+              <div class="col-12">
+                
+                <div class="card">
+                  <div class="card-header">
+                    <div class="row align-items-center">
+                      <div class="col">
+
+                        <!-- Title -->
+                        <h4 class="card-header-title">
+                          Projects
+                        </h4>
+
+                      </div>
+                      <div class="col-auto">
+
+                        <!-- Button -->
+                        <a href="#" class="btn btn-sm btn-outline-secondary">
+                          Export
+                        </a>
+                        
+                      </div>
+                    </div> <!-- / .row -->
+                  </div>
+                  <div class="table-responsive mb-0">
+                    <table class="table table-sm card-table">
+                      <thead>
+                        <tr>
+                          <th>
+                            Project
+                          </th>
+                          <th>
+                            Status
+                          </th>
+                          <th>
+                            Progress
+                          </th>
+                          <th>
+                            Due date
+                          </th>
+                          <th class="text-right">
+                            Team
+                          </th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            Something cool
+                          </td>
+                          <td>
+                            <span class="text-success">●</span> In progress
+                          </td>
+                          <td>
+                            55%
+                          </td>
+                          <td>
+                            <time datetime="2018-10-24">10/24/18</time>
+                          </td>
+                          <td>
+                            <div class="avatar-group justify-content-end">
+                              <div class="avatar avatar-xs">
+                                <img src="assets/img/3.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                              </div>
+                              <div class="avatar avatar-xs">
+                                <img src="assets/img/4.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                              </div>
+                              <div class="avatar avatar-xs">
+                                <img src="assets/img/5.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                              </div>
+                              <div class="avatar avatar-xs">
+                                <img src="assets/img/6.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                              </div>
+                            </div>
+                          </td>
+                          <td class="text-right">
+                            <div class="dropdown">
+                              <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fe fe-more-vertical"></i>
+                              </a>
+                              <div class="dropdown-menu dropdown-menu-right">
+                                <a href="#" class="dropdown-item">
+                                  Action
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                  Another action
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                  Something else here
+                                </a>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Something cool
+                          </td>
+                          <td>
+                            <span class="text-warning">●</span> In progress
+                          </td>
+                          <td>
+                            55%
+                          </td>
+                          <td>
+                            <time datetime="2018-10-24">10/24/18</time>
+                          </td>
+                          <td>
+                            <div class="avatar-group justify-content-end">
+                              <div class="avatar avatar-xs">
+                                <img src="assets/img/4.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                              </div>
+                              <div class="avatar avatar-xs">
+                                <img src="assets/img/5.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                              </div>
+                              <div class="avatar avatar-xs">
+                                <img src="assets/img/6.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                              </div>
+                            </div>
+                          </td>
+                          <td class="text-right">
+                            <div class="dropdown">
+                              <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fe fe-more-vertical"></i>
+                              </a>
+                              <div class="dropdown-menu dropdown-menu-right">
+                                <a href="#" class="dropdown-item">
+                                  Action
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                  Another action
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                  Something else here
+                                </a>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Something cool
+                          </td>
+                          <td>
+                            <span class="text-danger">●</span> Cancelled
+                          </td>
+                          <td>
+                            55%
+                          </td>
+                          <td>
+                            <time datetime="2018-10-24">10/24/18</time>
+                          </td>
+                          <td>
+                            <div class="avatar-group justify-content-end">
+                              <div class="avatar avatar-xs">
+                                <img src="assets/img/4.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                              </div>
+                              <div class="avatar avatar-xs">
+                                <img src="assets/img/5.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                              </div>
+                              <div class="avatar avatar-xs">
+                                <img src="assets/img/6.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                              </div>
+                            </div>
+                          </td>
+                          <td class="text-right">
+                            <div class="dropdown">
+                              <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fe fe-more-vertical"></i>
+                              </a>
+                              <div class="dropdown-menu dropdown-menu-right">
+                                <a href="#" class="dropdown-item">
+                                  Action
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                  Another action
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                  Something else here
+                                </a>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Something cool
+                          </td>
+                          <td>
+                            <span class="text-success">●</span> In progress
+                          </td>
+                          <td>
+                            55%
+                          </td>
+                          <td>
+                            <time datetime="2018-10-24">10/24/18</time>
+                          </td>
+                          <td>
+                            <div class="avatar-group justify-content-end">
+                              <div class="avatar avatar-xs">
+                                <img src="assets/img/5.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                              </div>
+                              <div class="avatar avatar-xs">
+                                <img src="assets/img/6.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                              </div>
+                            </div>
+                          </td>
+                          <td class="text-right">
+                            <div class="dropdown">
+                              <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="fe fe-more-vertical"></span>
+                              </a>
+                              <div class="dropdown-menu dropdown-menu-right">
+                                <a href="#" class="dropdown-item">
+                                  Action
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                  Another action
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                  Something else here
+                                </a>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Something cool
+                          </td>
+                          <td>
+                            <span class="text-success">●</span> In progress
+                          </td>
+                          <td>
+                            55%
+                          </td>
+                          <td>
+                            <time datetime="2018-10-24">10/24/18</time>
+                          </td>
+                          <td>
+                            <div class="avatar-group justify-content-end">
+                              <div class="avatar avatar-xs">
+                                <img src="assets/img/3.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                              </div>
+                              <div class="avatar avatar-xs">
+                                <img src="assets/img/4.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                              </div>
+                              <div class="avatar avatar-xs">
+                                <img src="assets/img/5.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                              </div>
+                              <div class="avatar avatar-xs">
+                                <img src="assets/img/6.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                              </div>
+                            </div>
+                          </td>
+                          <td class="text-right">
+                            <div class="dropdown">
+                              <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fe fe-more-vertical"></i>
+                              </a>
+                              <div class="dropdown-menu dropdown-menu-right">
+                                <a href="#" class="dropdown-item">
+                                  Action
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                  Another action
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                  Something else here
+                                </a>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+              </div>
+            </div> <!-- / .row -->
+            
+          </div>
+        </div> <!-- / .row -->
+
       </div> <!-- / .container-fluid -->
     </div>
     

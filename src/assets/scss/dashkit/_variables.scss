@@ -522,7 +522,7 @@ $breadcrumb-font-size-sm: $font-size-sm;
 
 // Main content
 
-$main-content-padding-x: 2.5rem;
+$main-content-padding-x: 40px; // in px to combine with $grid-gutter-width
 
 
 // Header

@@ -42,3 +42,18 @@
     }
   }
 }
+
+
+// Navbar
+//
+// Adjust the navbar position if wrapped in .main-content
+
+.main-content .navbar {
+  margin-left: -$grid-gutter-width / 2;
+  margin-right: -$grid-gutter-width / 2;
+
+  @include media-breakpoint-up(md) {
+    margin-left: -($main-content-padding-x + $grid-gutter-width / 2);
+    margin-right: -($main-content-padding-x + $grid-gutter-width / 2);
+  }
+}
