@@ -19,7 +19,7 @@
 }
 
 .avatar .rounded {
-  border-radius: 4px !important;
+  border-radius: 6px !important;
 }
 
 .avatar-img {
@@ -77,7 +77,7 @@
 }
 
 .avatar-xs .rounded {
-  border-radius: 2px !important;
+  border-radius: 4px !important;
 }
 
 .avatar-xs .avatar-title {
@@ -101,7 +101,7 @@
 }
 
 .avatar-sm .rounded {
-  border-radius: 3px !important;
+  border-radius: 4px !important;
 }
 
 .avatar-sm .avatar-title {
@@ -125,7 +125,7 @@
 }
 
 .avatar-lg .rounded {
-  border-radius: 6px !important;
+  border-radius: 8px !important;
 }
 
 .avatar-lg .avatar-title {
@@ -149,7 +149,7 @@
 }
 
 .avatar-xl .rounded {
-  border-radius: 12px !important;
+  border-radius: 8px !important;
 }
 
 .avatar-xl .avatar-title {
@@ -159,6 +159,30 @@
 .avatar-xl.avatar-online::before,
 .avatar-xl.avatar-offline::before {
   border-width: 5px;
+}
+
+// Extra extra large
+
+.avatar-xxl {
+  width: $avatar-size-xxl;
+  height: $avatar-size-xxl;
+}
+
+.avatar-xxl .border {
+  border-width: 7px !important;
+}
+
+.avatar-xxl .rounded {
+  border-radius: 12px !important;
+}
+
+.avatar-xxl .avatar-title {
+  font-size: 42px;
+}
+
+.avatar-xxl.avatar-online::before,
+.avatar-xxl.avatar-offline::before {
+  border-width: 6px;
 }
 
 
