@@ -16,7 +16,8 @@ var Charts = (function() {
   var charts = {
     barChart: $('#barChart'),
     lineChart: $('#lineChart'),
-    donutChart: $('#donutChart')
+    donutChart: $('#donutChart'),
+    lineChartDark: $('#lineChartDark')
   };
 
   // Fonts
@@ -34,7 +35,8 @@ var Charts = (function() {
     gray: {
       100: '#95AAC9',
       300: '#E3EBF6',
-      700: '#6E84A3'
+      700: '#6E84A3',
+      900: '#283E59'
     },
     transparent: 'transparent'
   };
@@ -161,6 +163,27 @@ var Charts = (function() {
     lineChart: function() {
       new Chart(charts.lineChart, {
         type: 'line',
+        data: {
+          labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+          datasets: [{
+            data: [0,10,5,15,10,20,15,25,20,30,25,40]
+          }]
+        }
+      });
+    },
+    lineChartDark: function() {
+      new Chart(charts.lineChartDark, {
+        type: 'line',
+        options: {
+          scales: {
+            yAxes: [{
+              gridLines: {
+                color: colors.gray[900],
+                zeroLineColor:colors.gray[900]
+              }
+            }]
+          }
+        },
         data: {
           labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
           datasets: [{
