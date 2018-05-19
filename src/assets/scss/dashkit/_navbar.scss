@@ -16,8 +16,8 @@
 // Container
 
 .navbar > [class*="container"] {
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: $grid-gutter-width / 2;
+  padding-right: $grid-gutter-width / 2;
 }
 
 
@@ -296,13 +296,14 @@
           padding-right: $navbar-vertical-padding-x;
           overflow-y: auto;
 
-
           // Container
 
-          > .container-fluid {
+          > [class*="container"] {
             flex-direction: column;
             align-items: stretch;
             min-height: 100%;
+            padding-left: 0;
+            padding-right: 0;
           }
 
 

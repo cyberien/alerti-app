@@ -362,6 +362,8 @@ $nav-pills-link-active-bg: $component-active-bg;
 
 // Navbar
 
+$navbar-padding-x: 0;
+
 $navbar-brand-font-size: $font-size-lg;
 $navbar-brand-padding-y: 0;
 
@@ -549,9 +551,12 @@ $main-content-padding-x: 40px; // in px to combine with $grid-gutter-width
 
 // Header
 
-$header-margin-top: 1rem;
 $header-margin-bottom: 2.5rem;
+
 $header-spacing-y: 1.5rem;
+
+$header-body-border-width: 1px;
+$header-body-border-color: $border-color;
 
 
 // Cards

@@ -8,7 +8,6 @@
 // General styles
 
 .header {
-  margin-top: $header-margin-top;
   margin-bottom: $header-margin-bottom;
 }
 
@@ -17,6 +16,12 @@
 }
 
 .header-body {
+  padding-top: $header-spacing-y;
+  padding-bottom: $header-spacing-y;
+  border-bottom: $header-body-border-width solid $header-body-border-color;
+}
+
+.header-footer {
   padding-top: $header-spacing-y;
   padding-bottom: $header-spacing-y;
 }
