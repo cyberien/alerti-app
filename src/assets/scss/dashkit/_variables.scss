@@ -166,9 +166,9 @@ $line-height-sm: 1.75;
 $border-width: 1px;
 $border-color: $gray-300;
 
-$border-radius: .25rem;
-$border-radius-lg: .5rem;
-$border-radius-sm: .25rem;
+$border-radius: 0.375rem;
+$border-radius-lg: 0.5rem;
+$border-radius-sm: 0.25rem;
 
 $component-active-bg: $primary;
 
@@ -290,10 +290,6 @@ $btn-focus-box-shadow: $input-btn-focus-box-shadow;
 
 $btn-link-disabled-color: $gray-500;
 
-$btn-border-radius: $border-radius;
-$btn-border-radius-lg: $border-radius;
-$btn-border-radius-sm: $border-radius;
-
 
 // Forms
 
@@ -311,10 +307,6 @@ $input-line-height-lg: $input-btn-line-height-lg;
 
 $input-color: $body-color;
 $input-border-color: $gray-400;
-
-$input-border-radius: $border-radius;
-$input-border-radius-lg: $border-radius;
-$input-border-radius-sm: $border-radius;
 
 $input-focus-border-color: $primary;
 $input-focus-box-shadow: transparent;
@@ -576,3 +568,18 @@ $avatar-size-xl: 8rem;
 // Progress bars
 
 $progress-height-sm: 0.25rem;
+
+
+// Comment
+
+$comment-margin-bottom: 1rem;
+
+$comment-body-padding-y: 1rem;
+$comment-body-padding-x: 1.25rem;
+$comment-body-bg: $gray-100;
+$comment-body-border-radius: $border-radius;
+$comment-body-font-size: $font-size-sm;
+
+$comment-time-margin-bottom: .5625rem;
+$comment-time-font-size: $font-size-xs;
+$comment-time-color: $text-muted;

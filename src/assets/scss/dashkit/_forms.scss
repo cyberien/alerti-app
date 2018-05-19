@@ -42,6 +42,16 @@
 }
 
 
+// Form control raw
+//
+// Removes borders and paddings from inputs and text areas
+
+.form-control-raw {
+  padding: 0;
+  border-width: 0;
+}
+
+
 // Help text
 
 .form-text {
