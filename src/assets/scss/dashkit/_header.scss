@@ -21,6 +21,10 @@
   border-bottom: $header-body-border-width solid $header-body-border-color;
 }
 
+.header.bg-dark .header-body {
+  border-bottom-color: fade-out($header-body-border-color, .9);
+}
+
 .header-footer {
   padding-top: $header-spacing-y;
   padding-bottom: $header-spacing-y;

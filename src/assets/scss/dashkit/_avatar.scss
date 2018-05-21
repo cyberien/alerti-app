@@ -193,6 +193,8 @@
 .avatar-group {
   display: flex;
 
+  // Shift every next avatar left
+
   .avatar +.avatar {
     margin-left: -$avatar-size-base / 4;
   }
@@ -207,5 +209,14 @@
   }
   .avatar-xl +.avatar-xl {
     margin-left: -$avatar-size-xl / 4;
+  }
+
+  // Bring an avatar to front on hover
+
+  .avatar {
+
+    &:hover {
+      z-index: 1;
+    }
   }
 }
