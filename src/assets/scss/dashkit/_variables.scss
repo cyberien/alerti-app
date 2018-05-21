@@ -91,7 +91,8 @@ $theme-colors: map-merge((
   "danger":     $danger,
   "light":      $light,
   "dark":       $dark,
-  "black":      $black
+  "black":      $black,
+  "white":      $white
 ), $theme-colors);
 // stylelint-enable
 
@@ -584,3 +585,8 @@ $comment-body-font-size: $font-size-sm;
 $comment-time-margin-bottom: .5625rem;
 $comment-time-font-size: $font-size-xs;
 $comment-time-color: $text-muted;
+
+
+// Modal
+
+$modal-dialog-vertical-width: 350px;

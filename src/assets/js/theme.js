@@ -27,18 +27,19 @@ var Charts = (function() {
 
   // Colors
   var colors = {
-    primary: {
-      100: '#D2DDEC',
-      300: '#A6C5F7',
-      700: '#2C7BE5',
-    },
     gray: {
       100: '#95AAC9',
       300: '#E3EBF6',
       700: '#6E84A3',
       900: '#283E59'
     },
-    transparent: 'transparent'
+    primary: {
+      100: '#D2DDEC',
+      300: '#A6C5F7',
+      700: '#2C7BE5',
+    },
+    transparent: 'transparent',
+    white: '#FFFFFF'
   };
 
   // Options
@@ -150,7 +151,8 @@ var Charts = (function() {
               colors.primary[700],
               colors.primary[300],
               colors.primary[100]
-            ]
+            ],
+            hoverBorderColor: colors.white
           }]
         },
         options: {

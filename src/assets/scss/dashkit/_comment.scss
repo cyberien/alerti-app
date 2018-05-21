@@ -12,6 +12,7 @@
 }
 
 .comment-body {
+  display: inline-block;
   padding: $comment-body-padding-y $comment-body-padding-x;
   background-color: $comment-body-bg;
   border-radius: $comment-body-border-radius;

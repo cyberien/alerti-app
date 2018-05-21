@@ -1,0 +1,41 @@
+//
+// modal.scss
+// Extended from Bootstrap
+//
+
+//
+// Bootstrap Overrides =======================
+//
+
+
+//
+// Dashkit ===================================
+//
+
+// Modal dialog vertical
+//
+// Creates a vertically aligned version of the modal dialog
+
+.modal-dialog-vertical {
+  width: 100%; height: 100%;
+  max-width: $modal-dialog-vertical-width;
+  margin: 0;
+
+  .modal-content {
+    width: inherit; height: inherit;
+    max-height: 100%;
+    padding: 1.5rem;
+    border-width: 0;
+    border-radius: 0;
+    overflow-y: auto;
+  }
+}
+
+.modal.fade .modal-dialog {
+  transform: translateX(-100%);
+  opacity: 1;
+}
+
+.modal.show .modal-dialog {
+  transform: translateX(0);
+}

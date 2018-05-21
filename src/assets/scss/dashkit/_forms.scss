@@ -44,7 +44,7 @@
 
 // Form control raw
 //
-// Removes borders and paddings from inputs and text areas
+// Removes borders and paddings form inputs and text areas
 
 .form-control-raw {
   padding: 0;
@@ -66,7 +66,7 @@
 
 // Rounded controls
 
-.from-control-rounded {
+.form-control-rounded {
   border-radius: 20rem;
 }
 
@@ -83,5 +83,17 @@
   .input-group-text {
     border-top-right-radius: 20rem;
     border-bottom-right-radius: 20rem;
+  }
+}
+
+
+// Expand
+//
+// Increase width of the form control on focus
+
+.form-control-expand {
+
+  &:focus {
+    width: 315px;
   }
 }
