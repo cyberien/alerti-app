@@ -8,6 +8,7 @@
   <body>
 
     <!-- SIDEBAR
+
     ================================================== -->
     @@include("partials/sidebar.html")
 
@@ -39,13 +40,13 @@
 
           <!-- Form -->
           <form class="form-inline mr-4 d-none d-md-flex">
-            <div class="input-group">
-              <div class="input-group-prepend input-group-prepend-rounded">
+            <div class="input-group input-group-rounded input-group-merge">
+              <input type="search" class="form-control form-control-prepended dropdown-toggle" data-toggle="dropdown" placeholder="Search" aria-label="Search">
+              <div class="input-group-prepend">
                 <div class="input-group-text">
                   <i class="fe fe-search"></i>
                 </div>
               </div>
-              <input type="search" class="form-control form-control-rounded form-control-prepended form-control-expand dropdown-toggle" data-toggle="dropdown" placeholder="Search" aria-label="Search">
             </div>
           </form>
 
@@ -619,7 +620,7 @@
           <div class="col-12">
 
             <!-- Header -->
-            <div class="header mb-5">
+            <div class="header mt-5">
               <div class="header-body">
                 <div class="row">
                   <div class="col">
@@ -843,7 +844,7 @@
           <div class="col-12">
             
             <!-- Header -->
-            <div class="header mb-5">
+            <div class="header mt-5">
               <div class="header-body">
                 <div class="row">
                   <div class="col">
@@ -1873,7 +1874,7 @@
           <div class="col-12">
 
             <!-- Header -->
-            <div class="header mb-5">
+            <div class="header mt-5">
               <div class="header-body">
                 <div class="row">
                   <div class="col-12">
@@ -2320,7 +2321,7 @@
           <div class="col-12">
             
             <!-- Header -->
-            <div class="header mb-5">
+            <div class="header mt-5">
               <div class="header-body">
                 <div class="row">
                   <div class="col-12">
@@ -2374,7 +2375,7 @@
                     <label>Password</label>
 
                     <!-- Input group -->
-                    <div class="input-group">
+                    <div class="input-group input-group-merge">
 
                       <!-- Input -->
                       <input type="password" class="form-control form-control-appended" placeholder="Enter your password">
@@ -2453,7 +2454,7 @@
                     </div> <!-- / .row -->
 
                     <!-- Input group -->
-                    <div class="input-group">
+                    <div class="input-group input-group-merge">
 
                       <!-- Input -->
                       <input type="password" class="form-control form-control-appended" placeholder="Enter your password">
@@ -2563,7 +2564,7 @@
           <div class="col-12">
 
             <!-- Header -->
-            <div class="header mb-5">
+            <div class="header mt-5">
               <div class="header-body">
                 <div class="row">
                   <div class="col-12">
@@ -2874,7 +2875,7 @@
           <div class="col-12">
             
             <!-- Header -->
-            <div class="header mb-5">
+            <div class="header mt-5">
               <div class="header-body">
                 <div class="row">
                   <div class="col-12">
@@ -2906,6 +2907,187 @@
 
           </div>
         </div>
+
+        <!-- Input groups -->
+        <div class="row">
+          <div class="col-12">  
+
+            <!-- Header -->
+            <div class="header mt-5">
+              <div class="header-body">
+                <div class="row">
+                  <div class="col-12">
+                    
+                    <!-- Preheading -->
+                    <h6 class="header-pretitle">
+                      Dashkit components
+                    </h6>
+
+                    <!-- Title -->
+                    <h1 class="header-title">
+                      Input group merge
+                    </h1>
+
+                  </div>
+                </div> <!-- / .row -->
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-12">
+                
+                <p>
+                  <code>.input-control-merge</code> should be added to the <code>.input-group</code> container to enable input group text merge with form controls. <code>.form-control</code> should always go first and followed by <code>.input-group-prepend</code> or <code>.input-group-append</code>. <code>.form-control-prepended</code> or <code>.form-control-appended</code> should be added to the <code>.form-control</code> input to ensure proper paddings and border radius values.
+                </p>
+
+              </div>
+            </div> <!-- / .row -->
+            <div class="row">
+              <div class="col-4">
+                
+                <form class="mb-3">
+                  <div class="input-group input-group-sm input-group-merge">
+                    <input type="text" class="form-control">
+                  </div>
+                </form>
+
+                <form class="mb-3">
+                  <div class="input-group input-group-sm input-group-merge">
+                    <input type="text" class="form-control form-control-prepended">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <i class="fe fe-search"></i>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+
+                <form class="mb-3">
+                  <div class="input-group input-group-sm input-group-merge">
+                    <input type="text" class="form-control form-control-appended">
+                    <div class="input-group-append">
+                      <div class="input-group-text">
+                        <i class="fe fe-copy"></i>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+
+                <form class="mb-3">
+                  <div class="input-group input-group-sm input-group-merge">
+                    <input type="text" class="form-control form-control-prepended form-control-appended">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <i class="fe fe-search"></i>
+                      </div>
+                    </div>
+                    <div class="input-group-append">
+                      <div class="input-group-text">
+                        <i class="fe fe-copy"></i>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+
+              </div>
+              <div class="col-4">
+                
+                <form class="mb-3">
+                  <div class="input-group input-group-merge">
+                    <input type="text" class="form-control">
+                  </div>
+                </form>
+
+                <form class="mb-3">
+                  <div class="input-group input-group-merge">
+                    <input type="text" class="form-control form-control-prepended">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <i class="fe fe-search"></i>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+
+                <form class="mb-3">
+                  <div class="input-group input-group-merge">
+                    <input type="text" class="form-control form-control-appended">
+                    <div class="input-group-append">
+                      <div class="input-group-text">
+                        <i class="fe fe-copy"></i>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+
+                <form class="mb-3">
+                  <div class="input-group input-group-merge">
+                    <input type="text" class="form-control form-control-prepended form-control-appended">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <i class="fe fe-search"></i>
+                      </div>
+                    </div>
+                    <div class="input-group-append">
+                      <div class="input-group-text">
+                        <i class="fe fe-copy"></i>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+
+              </div>
+              <div class="col-4">
+                
+                <form class="mb-3">
+                  <div class="input-group input-group-lg input-group-merge">
+                    <input type="text" class="form-control">
+                  </div>
+                </form>
+
+                <form class="mb-3">
+                  <div class="input-group input-group-lg input-group-merge">
+                    <input type="text" class="form-control form-control-prepended">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <i class="fe fe-search"></i>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+
+                <form class="mb-3">
+                  <div class="input-group input-group-lg input-group-merge">
+                    <input type="text" class="form-control form-control-appended">
+                    <div class="input-group-append">
+                      <div class="input-group-text">
+                        <i class="fe fe-copy"></i>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+
+                <form class="mb-3">
+                  <div class="input-group input-group-lg input-group-merge">
+                    <input type="text" class="form-control form-control-prepended form-control-appended">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <i class="fe fe-search"></i>
+                      </div>
+                    </div>
+                    <div class="input-group-append">
+                      <div class="input-group-text">
+                        <i class="fe fe-copy"></i>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+
+              </div>
+            </div> <!-- / .row -->
+
+          </div>
+        </div> <!-- / .row -->
 
       </div> <!-- / .container-fluid -->
 
