@@ -14823,7 +14823,7 @@ h6.text-uppercase
 }
 .avatar-xs .avatar-title
 {
-    font-size: 10xp;
+    font-size: 10px;
 }
 .avatar-xs.avatar-online::before,
 .avatar-xs.avatar-offline::before

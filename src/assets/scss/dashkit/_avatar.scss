@@ -67,7 +67,7 @@
 // ($avatarSize, $borderWidth, $borderRadius, $fontSize, $statusBorderWidth)
 
 .avatar-xs {
-  @include avatar($avatar-size-xs, 2px, 4px, 10xp, 1px);
+  @include avatar($avatar-size-xs, 2px, 4px, 10px, 1px);
 }
 
 .avatar-sm {
