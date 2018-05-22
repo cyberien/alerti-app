@@ -14813,22 +14813,18 @@ h6.text-uppercase
     width: 1.625rem;
     height: 1.625rem;
 }
-
 .avatar-xs .border
 {
     border-width: 2px !important;
 }
-
 .avatar-xs .rounded
 {
     border-radius: 4px !important;
 }
-
 .avatar-xs .avatar-title
 {
-    font-size: .625rem;
+    font-size: 10xp;
 }
-
 .avatar-xs.avatar-online::before,
 .avatar-xs.avatar-offline::before
 {
@@ -14840,22 +14836,18 @@ h6.text-uppercase
     width: 2.5rem;
     height: 2.5rem;
 }
-
 .avatar-sm .border
 {
     border-width: 3px !important;
 }
-
 .avatar-sm .rounded
 {
     border-radius: 4px !important;
 }
-
 .avatar-sm .avatar-title
 {
-    font-size: .8125rem;
+    font-size: 13px;
 }
-
 .avatar-sm.avatar-online::before,
 .avatar-sm.avatar-offline::before
 {
@@ -14867,22 +14859,18 @@ h6.text-uppercase
     width: 4rem;
     height: 4rem;
 }
-
 .avatar-lg .border
 {
     border-width: 5px !important;
 }
-
 .avatar-lg .rounded
 {
     border-radius: 8px !important;
 }
-
 .avatar-lg .avatar-title
 {
     font-size: 28px;
 }
-
 .avatar-lg.avatar-online::before,
 .avatar-lg.avatar-offline::before
 {
@@ -14894,22 +14882,18 @@ h6.text-uppercase
     width: 5.125rem;
     height: 5.125rem;
 }
-
 .avatar-xl .border
 {
     border-width: 6px !important;
 }
-
 .avatar-xl .rounded
 {
     border-radius: 8px !important;
 }
-
 .avatar-xl .avatar-title
 {
-    font-size: 42px;
+    font-size: 36px;
 }
-
 .avatar-xl.avatar-online::before,
 .avatar-xl.avatar-offline::before
 {
@@ -14921,22 +14905,18 @@ h6.text-uppercase
     width: 8rem;
     height: 8rem;
 }
-
 .avatar-xxl .border
 {
     border-width: 5px !important;
 }
-
 .avatar-xxl .rounded
 {
     border-radius: 12px !important;
 }
-
 .avatar-xxl .avatar-title
 {
     font-size: 42px;
 }
-
 .avatar-xxl.avatar-online::before,
 .avatar-xxl.avatar-offline::before
 {

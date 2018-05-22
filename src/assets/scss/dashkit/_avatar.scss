@@ -64,126 +64,28 @@
 // Sizes
 //
 // Controls the size of avatar images, avatar sizes, and avatar statuses
-
-// Extra small
+// ($avatarSize, $borderWidth, $borderRadius, $fontSize, $statusBorderWidth)
 
 .avatar-xs {
-  width: $avatar-size-xs;
-  height: $avatar-size-xs;
+  @include avatar($avatar-size-xs, 2px, 4px, 10xp, 1px);
 }
-
-.avatar-xs .border {
-  border-width: 2px !important;
-}
-
-.avatar-xs .rounded {
-  border-radius: 4px !important;
-}
-
-.avatar-xs .avatar-title {
-  font-size: $font-size-xs;
-}
-
-.avatar-xs.avatar-online::before,
-.avatar-xs.avatar-offline::before {
-  border-width: 1px;
-}
-
-// Small
 
 .avatar-sm {
-  width: $avatar-size-sm;
-  height: $avatar-size-sm;
+  @include avatar($avatar-size-sm, 3px, 4px, 13px, 2px);
 }
-
-.avatar-sm .border {
-  border-width: 3px !important;
-}
-
-.avatar-sm .rounded {
-  border-radius: 4px !important;
-}
-
-.avatar-sm .avatar-title {
-  font-size: $font-size-sm;
-}
-
-.avatar-sm.avatar-online::before,
-.avatar-sm.avatar-offline::before {
-  border-width: 2px;
-}
-
-// Large
 
 .avatar-lg {
-  width: $avatar-size-lg;
-  height: $avatar-size-lg;
+  @include avatar($avatar-size-lg, 5px, 8px, 28px, 4px);
 }
-
-.avatar-lg .border {
-  border-width: 5px !important;
-}
-
-.avatar-lg .rounded {
-  border-radius: 8px !important;
-}
-
-.avatar-lg .avatar-title {
-  font-size: 28px;
-}
-
-.avatar-lg.avatar-online::before,
-.avatar-lg.avatar-offline::before {
-  border-width: 4px;
-}
-
-// Extra large
 
 .avatar-xl {
-  width: $avatar-size-xl;
-  height: $avatar-size-xl;
+  @include avatar($avatar-size-xl, 6px, 8px, 36px, 5px);
 }
-
-.avatar-xl .border {
-  border-width: 6px !important;
-}
-
-.avatar-xl .rounded {
-  border-radius: 8px !important;
-}
-
-.avatar-xl .avatar-title {
-  font-size: 42px;
-}
-
-.avatar-xl.avatar-online::before,
-.avatar-xl.avatar-offline::before {
-  border-width: 5px;
-}
-
-// Extra extra large
 
 .avatar-xxl {
-  width: $avatar-size-xxl;
-  height: $avatar-size-xxl;
+  @include avatar($avatar-size-xxl, 5px, 12px, 42px, 6px);
 }
 
-.avatar-xxl .border {
-  border-width: 5px !important;
-}
-
-.avatar-xxl .rounded {
-  border-radius: 12px !important;
-}
-
-.avatar-xxl .avatar-title {
-  font-size: 42px;
-}
-
-.avatar-xxl.avatar-online::before,
-.avatar-xxl.avatar-offline::before {
-  border-width: 6px;
-}
 
 
 // Avatar group
