@@ -13296,6 +13296,8 @@ a.text-white:focus
 }
 .input-group.input-group-merge > .input-group-prepend > .input-group-text
 {
+    padding-right: .375rem;
+
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out; 
 
     border-right-width: 0;
@@ -13305,6 +13307,8 @@ a.text-white:focus
 
 .input-group.input-group-merge > .input-group-append > .input-group-text
 {
+    padding-left: .375rem;
+
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out; 
 
     border-left-width: 0;
@@ -13317,14 +13321,28 @@ a.text-white:focus
     border-radius: .5rem;
 }
 
+.input-group-lg.input-group-merge > .form-group-prepended
+{
+    padding-left: .5rem;
+}
+
+.input-group-lg.input-group-merge > .form-group-appended
+{
+    padding-right: .5rem;
+}
+
 .input-group-lg.input-group-merge > .input-group-prepend > .input-group-text
 {
+    padding-right: .5rem;
+
     border-top-left-radius: .5rem;
     border-bottom-left-radius: .5rem;
 }
 
 .input-group-lg.input-group-merge > .input-group-append > .input-group-text
 {
+    padding-left: .5rem;
+
     border-top-right-radius: .5rem;
     border-bottom-right-radius: .5rem;
 }
@@ -13334,14 +13352,28 @@ a.text-white:focus
     border-radius: .25rem;
 }
 
+.input-group-sm.input-group-merge > .form-group-prepended
+{
+    padding-left: .25rem;
+}
+
+.input-group-sm.input-group-merge > .form-group-appended
+{
+    padding-right: .25rem;
+}
+
 .input-group-sm.input-group-merge > .input-group-prepend > .input-group-text
 {
+    padding-right: .25rem;
+
     border-top-left-radius: .25rem;
     border-bottom-left-radius: .25rem;
 }
 
 .input-group-sm.input-group-merge > .input-group-append > .input-group-text
 {
+    padding-left: .25rem;
+
     border-top-right-radius: .25rem;
     border-bottom-right-radius: .25rem;
 }
