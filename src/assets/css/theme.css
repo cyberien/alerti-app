@@ -559,8 +559,8 @@ h6,
 
 hr
 {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 
     border: 0;
     border-top: 1px solid #e3ebf6;
@@ -4298,7 +4298,7 @@ input[type='button'].btn-block
     text-align: center;
     white-space: nowrap;
 
-    color: #12263f;
+    color: #95aac9;
     border: 1px solid #d2ddec;
     border-radius: .375rem; 
     background-color: #fff;
@@ -5977,7 +5977,7 @@ input[type='button'].btn-block
 {
     position: relative;
 
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     padding: .75rem 1.25rem;
 
     border: 1px solid transparent;
@@ -13107,7 +13107,7 @@ a.text-white:focus
 
 .btn-rounded-circle
 {
-    width: calc(1em * 1.5 + 1rem);
+    width: calc(1em * 1.5 + 1rem + 1px * 2);
     padding-right: 0;
     padding-left: 0;
 
@@ -13117,13 +13117,13 @@ a.text-white:focus
 .btn-rounded-circle.btn-lg,
 .btn-group-lg > .btn-rounded-circle.btn
 {
-    width: calc(1em * 1.5 + 1rem);
+    width: calc(1em * 1.5 + 1rem + 1px * 2);
 }
 
 .btn-rounded-circle.btn-sm,
 .btn-group-sm > .btn-rounded-circle.btn
 {
-    width: calc(1em * 1.75 + .25rem);
+    width: calc(1em * 1.75 + .25rem + 1px * 2);
 }
 
 .card
@@ -13395,6 +13395,21 @@ a.text-white:focus
     border-bottom-right-radius: 20rem;
 }
 
+.input-group-raw > .form-control
+{
+    padding: 0;
+
+    border-width: 0;
+}
+
+.input-group-raw > .input-group-prepend > .input-group-text,
+.input-group-raw > .input-group-append > .input-group-text
+{
+    padding: 0;
+
+    border-width: 0;
+}
+
 .jumbotron
 {
     padding: 1rem;
@@ -13583,7 +13598,6 @@ a.text-white:focus
     width: inherit;
     height: inherit;
     max-height: 100%;
-    padding: 1.5rem;
 
     border-width: 0;
     border-radius: 0;
@@ -14636,6 +14650,11 @@ a.text-white:focus
     color: #95aac9;
     border-bottom-width: 1px; 
     background-color: #f9fbfd;
+}
+
+.table tbody td
+{
+    vertical-align: middle;
 }
 
 .table-sm thead th

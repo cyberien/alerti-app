@@ -17,6 +17,10 @@
     color: $table-head-color;
     border-bottom-width: $table-border-width;
   }
+
+  tbody td {
+    vertical-align: middle;
+  }
 }
 
 .table-sm {

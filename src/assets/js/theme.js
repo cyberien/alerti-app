@@ -135,7 +135,7 @@ var Charts = (function() {
         data: {
           labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
           datasets: [{
-            data: [0,10,5,15,10,20,15,25,20,30,25,40]
+            data: [25,20,30,22,17,10,18,26,28,26,20,32]
           }]
         }
       });

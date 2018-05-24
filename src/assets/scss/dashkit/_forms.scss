@@ -189,3 +189,20 @@
     }
   }
 }
+
+.input-group-raw {
+
+  > .form-control {
+    padding: 0;
+    border-width: 0;
+  }
+
+  > .input-group-prepend,
+  > .input-group-append {
+
+    > .input-group-text {
+      padding: 0;
+      border-width: 0;
+    }
+  }
+}

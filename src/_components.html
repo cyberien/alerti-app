@@ -8,7 +8,6 @@
   <body>
 
     <!-- SIDEBAR
-
     ================================================== -->
     @@include("partials/sidebar.html")
 
@@ -991,15 +990,21 @@
 
                     <div class="row align-items-center">
                       <div class="col">
-                        
-                        <!-- Progress -->
-                        <div class="d-flex align-items-center">
-                          <div class="small mr-2">29%</div>
-                          <div class="progress progress-sm flex-fill">
-                            <div class="progress-bar" role="progressbar" style="width: 29%" aria-valuenow="29" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
-                        </div>
+                        <div class="row align-items-center no-gutters">
+                          <div class="col-auto">
 
+                            <div class="small mr-2">29%</div>
+                            
+                          </div>
+                          <div class="col">
+                            
+                            <!-- Progress -->
+                            <div class="progress progress-sm">
+                              <div class="progress-bar" role="progressbar" style="width: 29%" aria-valuenow="29" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+
+                          </div>
+                        </div> <!-- / .row -->
                       </div>
                       <div class="col-auto">
                         
@@ -1499,12 +1504,21 @@
                         </p>
 
                         <!-- Progress -->
-                        <div class="d-flex align-items-center">
-                          <div class="small mr-2">29%</div>
-                          <div class="progress progress-sm flex-fill">
-                            <div class="progress-bar" role="progressbar" style="width: 29%" aria-valuenow="29" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="row align-items-center no-gutters">
+                          <div class="col-auto">
+
+                            <div class="small mr-2">29%</div>
+                            
                           </div>
-                        </div>
+                          <div class="col">
+                            
+                            <!-- Progress -->
+                            <div class="progress progress-sm">
+                              <div class="progress-bar" role="progressbar" style="width: 29%" aria-valuenow="29" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+
+                          </div>
+                        </div> <!-- / .row -->
                         
                       </div>
                       <div class="col-auto">
@@ -1958,7 +1972,7 @@
                         
                         <!-- Caption -->
                         <span class="text-muted">
-                          Show affiliates:
+                          Show affiliate:
                         </span>
 
                       </div>
@@ -2079,7 +2093,7 @@
                       <tbody>
                         <tr>
                           <td>
-                            Something cool
+                            Something Cool
                           </td>
                           <td>
                             <span class="text-success">●</span> In progress
@@ -2127,7 +2141,7 @@
                         </tr>
                         <tr>
                           <td>
-                            Something cool
+                            Something Cool
                           </td>
                           <td>
                             <span class="text-warning">●</span> In progress
@@ -2172,7 +2186,7 @@
                         </tr>
                         <tr>
                           <td>
-                            Something cool
+                            Something Cool
                           </td>
                           <td>
                             <span class="text-danger">●</span> Cancelled
@@ -2217,7 +2231,7 @@
                         </tr>
                         <tr>
                           <td>
-                            Something cool
+                            Something Cool
                           </td>
                           <td>
                             <span class="text-success">●</span> In progress
@@ -2259,7 +2273,7 @@
                         </tr>
                         <tr>
                           <td>
-                            Something cool
+                            Something Cool
                           </td>
                           <td>
                             <span class="text-success">●</span> In progress
@@ -2695,7 +2709,7 @@
 
                     <!-- Image -->
                     <p class="mb-3">
-                      <img src="assets/img/9.png" alt="..." class="img-fluid">
+                      <img src="assets/img/9.png" alt="..." class="img-fluid rounded">
                     </p>
 
                     <!-- Buttons -->
@@ -2841,7 +2855,7 @@
                     <hr>
 
                     <!-- Form -->
-                    <div class="row">
+                    <div class="row align-items-center">
                       <div class="col-auto">
 
                         <!-- Avatar -->
@@ -2855,7 +2869,7 @@
                         <!-- Input -->
                         <form>
                           <label class="sr-only">Leave a comment...</label>
-                          <textarea class="form-control" placeholder="Leave a comment"></textarea>
+                          <textarea class="form-control" placeholder="Leave a comment" rows="1"></textarea>
                         </form>
 
                       </div>
