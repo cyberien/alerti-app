@@ -13228,6 +13228,12 @@ a.text-white:focus
     right: 1.5rem;
 }
 
+.card-inactive
+{
+    border-style: dashed;
+    background-color: transparent;
+}
+
 .dropdown-toggle:focus
 {
     outline: none !important;

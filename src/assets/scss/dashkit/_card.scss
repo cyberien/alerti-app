@@ -111,3 +111,11 @@
   top: $card-spacer-x;
   right: $card-spacer-x;
 }
+
+
+// Card inactive
+
+.card-inactive {
+  border-style: dashed;
+  background-color: transparent;
+}

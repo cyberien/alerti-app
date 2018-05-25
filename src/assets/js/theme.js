@@ -15,6 +15,7 @@ var Charts = (function() {
   // Charts
   var charts = {
     barChart: $('#barChart'),
+    barChartHours: $('#barChartHours'),
     lineChart: $('#lineChart'),
     donutChart: $('#donutChart'),
     lineChartDark: $('#lineChartDark')
@@ -136,6 +137,32 @@ var Charts = (function() {
           labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
           datasets: [{
             data: [25,20,30,22,17,10,18,26,28,26,20,32]
+          }]
+        }
+      });
+    },
+    barChartHours: function() {
+      new Chart(charts.barChartHours, {
+        type: 'bar',
+        options: {
+          scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: true,
+                padding: 10,
+                callback: function(value) {
+                  if ( !(value % 10) ) {
+                    return value + 'hrs'
+                  }
+                }
+              }
+            }]
+          }
+        },
+        data: {
+          labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+          datasets: [{
+            data: [21, 12, 28, 15, 5, 12, 17, 2]
           }]
         }
       });

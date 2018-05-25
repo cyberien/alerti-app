@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include("partials/head.html", {
+      "pageTitle": "Dashkit"
+    })
+  </head>
+  <body>
+
+    <!-- MODALS
+    ================================================== -->
+    @@include("partials/modals.html")
+
+    <!-- SIDEBAR
+    ================================================== -->
+    @@include("partials/sidebar.html")
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content">
+
+      <!-- HEADER -->
+      <div class="header">
+
+        <!-- Image -->
+        <img src="assets/img/7.jpg" class="header-img-top" alt="...">
+        
+        <div class="container-fluid">
+
+          <!-- Body -->
+          <div class="header-body mt--6">
+            <div class="row align-items-end">
+              <div class="col-auto">
+                
+                <!-- Avatar -->
+                <div class="avatar avatar-xxl header-avatar-top">
+                  <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+                </div>
+
+              </div>
+              <div class="col">
+                
+                <!-- Pretitle -->
+                <h6 class="header-pretitle">
+                  Members
+                </h6>
+
+                <!-- Title -->
+                <h1 class="header-title">
+                  Casey Fyfe
+                </h1>
+
+              </div>
+              <div class="col-auto">
+                
+                <!-- Button -->
+                <a href="#" class="btn btn-primary">
+                  Subscribe
+                </a>
+
+              </div>
+            </div> <!-- / .row -->
+            <div class="row align-items-center">
+              <div class="col">
+                
+                <!-- Nav -->
+                <ul class="nav nav-tabs header-tabs">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link active">
+                      Posts
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      Groups
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      Projects
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      Files
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      Subscribers
+                    </a>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </div> <!-- / .header-body -->
+
+        </div>
+      </div>
+
+      <!-- CONTENT -->
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-xl-8">
+            
+            <!-- Card -->
+            <div class="card">
+              <div class="card-body"></div>
+            </div>
+
+          </div>
+          <div class="col-12 col-xl-4">
+            
+            <!-- Card -->
+            <div class="card">
+              <div class="card-body">
+
+                <div class="row align-items-center">
+                  <div class="col">
+                    
+                    <!-- Title -->
+                    <h5 class="mb-0">
+                      Birthday
+                    </h5>
+
+                  </div>
+                  <div class="col-auto">
+                    
+                    <time class="small text-muted" datetime="1988-10-24">
+                      10/24/88
+                    </time>
+
+                  </div>
+                </div> <!-- / .row -->
+
+                <!-- Divider -->
+                <hr>
+
+                <div class="row align-items-center">
+                  <div class="col">
+                    
+                    <!-- Title -->
+                    <h5 class="mb-0">
+                      Joined
+                    </h5>
+
+                  </div>
+                  <div class="col-auto">
+                    
+                    <time class="small text-muted" datetime="2018-10-28">
+                      10/24/18
+                    </time>
+
+                  </div>
+                </div> <!-- / .row -->
+
+                <!-- Divider -->
+                <hr>
+
+                <div class="row align-items-center">
+                  <div class="col">
+                    
+                    <!-- Title -->
+                    <h5 class="mb-0">
+                      Location
+                    </h5>
+
+                  </div>
+                  <div class="col-auto">
+                    
+                    <small class="text-muted">
+                      Los Angeles, CA
+                    </small>
+
+                  </div>
+                </div> <!-- / .row -->
+
+                <!-- Divider -->
+                <hr>
+
+                <div class="row align-items-center">
+                  <div class="col">
+                    
+                    <!-- Title -->
+                    <h5 class="mb-0">
+                      Website
+                    </h5>
+
+                  </div>
+                  <div class="col-auto">
+                    
+                    <a href="#" class="small">
+                      www.davegamache.com
+                    </a>
+
+                  </div>
+                </div> <!-- / .row -->
+
+              </div>
+            </div>
+
+            <!-- Weekly Hours -->
+            <div class="card">
+              <div class="card-header">
+                
+                <!-- Title -->
+                <h4 class="card-header-title">
+                  Weekly Hours
+                </h4>
+
+              </div>
+              <div class="card-body">
+                
+                <!-- Chart -->
+                <div class="chart">
+                  <canvas id="barChartHours" class="chart-canvas"></canvas>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container-fluid -->
+    </div> <!-- / .main-content -->
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("partials/scripts.html")
+
+  </body>
+</html>
