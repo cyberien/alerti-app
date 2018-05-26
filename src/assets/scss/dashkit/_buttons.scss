@@ -9,6 +9,11 @@
 
 .btn-white {
   border-color: $gray-300;
+
+  @include hover-focus {
+    background-color: $gray-100;
+    border-color: $gray-400;
+  }
 }
 
 .btn-outline-secondary {

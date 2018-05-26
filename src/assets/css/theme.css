@@ -13099,6 +13099,12 @@ a.text-white:focus
 {
     border-color: #e3ebf6;
 }
+.btn-white:hover,
+.btn-white:focus
+{
+    border-color: #d2ddec; 
+    background-color: #f9fbfd;
+}
 
 .btn-outline-secondary:not(:hover):not([aria-expanded='true']):not([aria-pressed='true'])
 {
@@ -13129,17 +13135,17 @@ a.text-white:focus
 .card
 {
     margin-bottom: 1.5rem;
+
+    box-shadow: 0 .75rem 1.5rem rgba(18, 38, 63, .03);
 }
 
 .card-header
 {
-    font-size: .8125rem; 
-
     display: flex;
 
     min-height: 3.75rem;
     padding-top: .5rem;
-    padding-bottom: .5rem;
+    padding-bottom: .5rem; 
 
     align-items: center;
 }
@@ -13163,8 +13169,8 @@ a.text-white:focus
 
 .card-header-tabs .nav-link
 {
-    padding-top: 1.26562rem !important;
-    padding-bottom: 1.26562rem !important;
+    padding-top: calc((3.75rem - 1em * 1.5) / 2) !important;
+    padding-bottom: calc((3.75rem - 1em * 1.5) / 2) !important;
 }
 
 .card-table
@@ -13232,6 +13238,7 @@ a.text-white:focus
 {
     border-style: dashed;
     background-color: transparent;
+    box-shadow: none;
 }
 
 .dropdown-toggle:focus
@@ -15022,7 +15029,7 @@ h6.text-uppercase
 
 .header
 {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
 }
 
 .header-img-top
@@ -15097,6 +15104,11 @@ h6.text-uppercase
     border: 2px solid #fff;
     border-radius: 50%;
     background-color: #2c7be5;
+}
+
+.fe
+{
+    padding-bottom: .125em;
 }
 
 @media (min-width: 768px)

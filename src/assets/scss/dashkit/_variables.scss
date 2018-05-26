@@ -520,7 +520,7 @@ $main-content-padding-x: 24px; // in px to combine with $grid-gutter-width
 
 // Header
 
-$header-margin-bottom: 2.5rem;
+$header-margin-bottom: 2rem;
 
 $header-spacing-y: 1.5rem;
 
@@ -531,6 +531,7 @@ $header-body-border-color: $border-color;
 // Cards
 
 $card-header-height: 3.75rem;
+$card-box-shadow: 0 .75rem 1.5rem transparentize($black, .97);
 
 
 // Avatar
