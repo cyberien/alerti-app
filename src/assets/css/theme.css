@@ -14969,6 +14969,11 @@ h6.text-uppercase
     letter-spacing: .08em;
 }
 
+a:focus
+{
+    outline: none !important;
+}
+
 @font-face
 {
     font-family: 'Cerebri Sans';

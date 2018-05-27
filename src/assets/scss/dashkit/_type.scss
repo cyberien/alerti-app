@@ -33,6 +33,18 @@ h6.text-uppercase {
 }
 
 
+// Links
+//
+// Removes focus outline
+
+a {
+
+  &:focus {
+    outline: none !important;
+  }
+}
+
+
 // 
 // Dashkit =====================================
 //
