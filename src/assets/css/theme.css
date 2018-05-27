@@ -13317,6 +13317,11 @@ a.text-body:focus
     border-color: #d2ddec;
 }
 
+.btn-group .btn + .btn
+{
+    margin-left: 0;
+}
+
 .btn-rounded-circle
 {
     width: calc(1em * 1.5 + 1rem + 1px * 2);
@@ -15214,6 +15219,11 @@ h6.text-uppercase
     position: relative;
 
     height: 300px;
+}
+
+.chart-sm
+{
+    height: 225px;
 }
 
 .comment

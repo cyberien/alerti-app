@@ -9,5 +9,8 @@
 
 .chart {
   position: relative;
-  height: 300px;
+  height: $chart-height;
+}
+.chart-sm {
+  height: $chart-height-sm;
 }

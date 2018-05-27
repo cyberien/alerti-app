@@ -22,6 +22,16 @@
   }
 }
 
+// Button group
+//
+// Prevent buttons jittering on hover
+
+.btn-group .btn + .btn {
+  margin-left: 0;
+}
+
+
+
 
 //
 // Dashkit ===================================
