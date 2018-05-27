@@ -13933,7 +13933,8 @@ a.text-body:focus
 
 .navbar-nav .nav-link > .fe
 {
-    font-size: 1.0625rem; 
+    font-size: 1.0625rem;
+    line-height: 1.40625rem; 
 
     min-width: 1.75rem;
 }
@@ -15332,6 +15333,8 @@ h6.text-uppercase
 
 .fe
 {
+    line-height: inherit;
+
     padding-bottom: .125em;
 }
 
