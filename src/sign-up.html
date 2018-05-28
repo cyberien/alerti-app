@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include("partials/head.html", {
+      "pageTitle": "Dashkit"
+    })
+  </head>
+  <body>
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content bg-white">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-4">
+            
+            <div class="text-center mt-4 mb-4">
+
+              <!-- Heading -->
+              <h1 class="display-4 mb-2">
+                Sign up
+              </h1>
+              
+              <!-- Subheading -->
+              <p class="text-muted mb-5">
+                Free access to our dashboard.
+              </p>
+              
+              <!-- Form -->
+              <form class="text-left mb-4">
+
+                <!-- Email address -->
+                <div class="form-group">
+
+                  <!-- Label -->
+                  <label>Email Address</label>
+
+                  <!-- Input -->
+                  <input type="email" class="form-control" placeholder="name@address.com">
+
+                </div>
+
+                <!-- Password -->
+                <div class="form-group mb-5">
+
+                  <!-- Label -->
+                  <label>Password</label>
+
+                  <!-- Input group -->
+                  <div class="input-group input-group-merge">
+
+                    <!-- Input -->
+                    <input type="password" class="form-control form-control-appended" placeholder="Enter your password">
+
+                    <!-- Icon -->
+                    <div class="input-group-append">
+                      <span class="input-group-text">
+                        <i class="fe fe-eye"></i>
+                      </span>
+                    </div>
+
+                  </div>
+                </div>
+
+                <!-- Submit -->
+                <div class="form-group">
+                  <button class="btn btn-lg btn-block btn-primary">
+                    Sign up
+                  </button>
+                </div>
+
+              </form>
+
+              <!-- Link -->
+              <small class="text-muted text-center">
+                Already have an account? <a href="#">Log in</a>.
+              </small>
+
+            </div>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </div>
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("partials/scripts.html")
+
+  </body>
+</html>
