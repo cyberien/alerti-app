@@ -1,29 +1,25 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
-
-    <!-- Libs CSS -->
-    <!-- build:css assets/fonts/feather/feather.min.css -->
-    <link rel="stylesheet" href="assets/fonts/feather/feather.css">
-    <!-- endbuild -->
-
-    <!-- Theme CSS -->
-    <!-- build:css assets/css/theme.min.css -->
-    <link rel="stylesheet" href="assets/css/theme.css">
-    <!-- endbuild -->
-
-    <title>Dashkit</title>
+    @@include("partials/head.html", {
+      "pageTitle": "Dashkit"
+    })
   </head>
   <body class="bg-white border-top border-top-2 border-primary">
 
     <!-- CONTENT
     ================================================== -->
     <div class="container">
-      <div class="row align-items-center justify-content-center vh-100">
-        <div class="col-12 col-md-4">
+      <div class="row align-items-center vh-100">
+        <div class="col-12 col-md-7 offset-md-1 order-sm-2">
+
+          <!-- Image -->
+          <div class="text-center">
+            <img src="assets/img/15.png" alt="..." class="img-fluid">
+          </div>
+
+        </div>
+        <div class="col-12 col-md-4 order-sm-1">
           
           <!-- Heading -->
           <h1 class="display-4 text-center mb-3">
@@ -95,22 +91,7 @@
 
     <!-- JAVASCRIPT
     ================================================== -->
-    <!-- Libs JS -->
-    <!-- build:js assets/libs/jquery/jquery.min.js -->
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <!-- endbuild -->
-    <!-- build:js assets/libs/bootstrap/js/bootstrap.bundle.min.js -->
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- endbuild -->
-    <!-- build:js assets/libs/chart.js/Chart.min.js -->
-    <script src="node_modules/chart.js/dist/Chart.min.js"></script>
-    <script src="assets/libs/chart.js/Chart.extension.js"></script>
-    <!-- endbuild -->
-
-    <!-- Theme JS -->
-    <!-- build:js assets/js/theme.min.js -->
-    <script src="assets/js/theme.js"></script>
-    <!-- endbuild -->
+    @@include("partials/scripts.html")
 
   </body>
 </html>
