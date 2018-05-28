@@ -8,6 +8,7 @@
 //
 
 // Changing nav tabs to be bottom highlight style
+
 .nav-tabs {
 
   .nav-link {
@@ -67,5 +68,19 @@
 
   .nav-link {
     font-size: $font-size-sm;
+  }
+}
+
+
+// Nav + button group
+//
+// Change the look of .btn-white when .active
+
+.nav.btn-group {
+
+  .btn-white.active {
+    background-color: $primary;
+    border-color: $primary;
+    color: $white;
   }
 }

@@ -1,0 +1,17 @@
+//
+// background.scss
+//
+
+.bg-fixed-bottom {
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 100% auto;
+  background-attachment: fixed;
+}
+
+// Calculate the width of the main container because 
+// the background-attachment property will use 100vw instead
+
+.navbar-vertical ~ .main-content.bg-fixed-bottom {
+  background-size: calc(100% - #{$navbar-vertical-width});
+}

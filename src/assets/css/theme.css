@@ -13317,11 +13317,6 @@ a.text-body:focus
     border-color: #d2ddec;
 }
 
-.btn-group .btn + .btn
-{
-    margin-left: 0;
-}
-
 .btn-rounded-circle
 {
     width: calc(1em * 1.5 + 1rem + 1px * 2);
@@ -13341,6 +13336,11 @@ a.text-body:focus
 .btn-group-sm > .btn-rounded-circle.btn
 {
     width: calc(1em * 1.75 + .25rem + 1px * 2);
+}
+
+.btn-group .btn + .btn
+{
+    margin-left: 0;
 }
 
 .card
@@ -13905,6 +13905,13 @@ a.text-body:focus
 .nav-sm .nav-link
 {
     font-size: .8125rem;
+}
+
+.nav.btn-group .btn-white.active
+{
+    color: #fff; 
+    border-color: #2c7be5;
+    background-color: #2c7be5;
 }
 
 .navbar
@@ -15002,6 +15009,19 @@ a:focus
 
     src: url('../fonts/cerebrisans/cerebrisans-semibold.eot');
     src: url('../fonts/cerebrisans/cerebrisans-semibold.eot?#iefix') format('embedded-opentype'), url('../fonts/cerebrisans/cerebrisans-semibold.woff') format('woff'), url('../fonts/cerebrisans/cerebrisans-semibold.ttf') format('truetype');
+}
+
+.bg-fixed-bottom
+{
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-position: right bottom;
+    background-size: 100% auto;
+}
+
+.navbar-vertical ~ .main-content.bg-fixed-bottom
+{
+    background-size: calc(100% - 250px);
 }
 
 .avatar
