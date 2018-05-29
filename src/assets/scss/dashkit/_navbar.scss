@@ -12,15 +12,6 @@
   border-bottom: 1px solid $border-color;
 }
 
-
-// Container
-
-.navbar > [class*="container"] {
-  padding-left: $grid-gutter-width / 2;
-  padding-right: $grid-gutter-width / 2;
-}
-
-
 // Navbar collapse
 
 .navbar-collapse {
@@ -99,6 +90,15 @@
     &-#{$breakpoint} {
         
       @include media-breakpoint-up(#{$breakpoint}) {
+        padding-left: 0;
+        padding-right: 0;
+
+        // Container
+
+        .navbar > [class*="container"] {
+          padding-left: 0;
+          padding-right: 0;
+        }
 
         // Navbar collapse
 
@@ -126,7 +126,7 @@
 
             &:before {
               top: auto;
-              bottom: -$navbar-padding-y;
+              bottom: calc(-#{$navbar-padding-y} - 1px);
               right: $navbar-nav-link-padding-x;
               left: $navbar-nav-link-padding-x;
               border-left: 0;
@@ -138,7 +138,6 @@
     }
   }
 }
-
 
 
 //
@@ -220,6 +219,28 @@
   &:after {
     display: none;
   }
+}
+
+
+// Navbar form control
+//
+// Expands to 315px on focus
+
+.navbar-form-control:focus {
+  width: 315px;
+
+  ~ .dropdown-menu {
+    display: block;
+    width: 350px;
+  }
+}
+
+
+// Navbar link icon
+
+.navbar-nav .nav-link > .fe {
+  display: inline-block;
+  min-width: $navbar-icon-min-width;
 }
 
 
@@ -364,10 +385,6 @@
                 border-bottom: 0;
               }
             }
-          }
-
-          .navbar-nav .nav-link > .fe {
-            min-width: $navbar-icon-min-width;
           }
 
           // Second level

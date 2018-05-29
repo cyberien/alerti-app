@@ -4868,7 +4868,7 @@ input[type='button'].btn-block
 {
     display: block;
 
-    padding: .5rem 1rem;
+    padding: .5625rem 1rem;
 }
 .nav-link:hover,
 .nav-link:focus
@@ -4963,7 +4963,7 @@ input[type='button'].btn-block
 
     display: flex;
 
-    padding: .75rem 0; 
+    padding: .75rem 1rem; 
 
     flex-wrap: wrap;
     align-items: center;
@@ -4986,7 +4986,7 @@ input[type='button'].btn-block
 
     display: inline-block;
 
-    margin-right: 0;
+    margin-right: 1rem;
     padding-top: 0;
     padding-bottom: 0;
 
@@ -5024,8 +5024,8 @@ input[type='button'].btn-block
 {
     display: inline-block;
 
-    padding-top: .5rem;
-    padding-bottom: .5rem;
+    padding-top: .5625rem;
+    padding-bottom: .5625rem;
 }
 
 .navbar-collapse
@@ -13928,24 +13928,18 @@ a.text-body:focus
     border-bottom: 1px solid #e3ebf6;
 }
 
-.navbar > [class*='container']
-{
-    padding-right: 12px; 
-    padding-left: 12px;
-}
-
 .navbar-collapse
 {
-    margin-right: 0;
-    margin-left: 0;
-    padding-right: 0; 
-    padding-left: 0;
+    margin-right: -1rem;
+    margin-left: -1rem;
+    padding-right: 1rem; 
+    padding-left: 1rem;
 }
 .navbar-collapse:before
 {
     display: block;
 
-    margin: .75rem 0; 
+    margin: .75rem -1rem; 
 
     content: '';
 
@@ -13973,14 +13967,14 @@ a.text-body:focus
 
 .navbar-nav
 {
-    margin-right: 0; 
-    margin-left: 0;
+    margin-right: -1rem; 
+    margin-left: -1rem;
 }
 
 .navbar-nav .nav-link
 {
-    padding-right: 0; 
-    padding-left: 0;
+    padding-right: 1rem; 
+    padding-left: 1rem;
 }
 .navbar-nav .nav-link.active
 {
@@ -13989,8 +13983,8 @@ a.text-body:focus
 .navbar-nav .nav-link.active:before
 {
     position: absolute;
-    top: .5rem;
-    bottom: .5rem;
+    top: .5625rem;
+    bottom: .5625rem;
     left: 0;
 
     content: '';
@@ -13998,6 +13992,16 @@ a.text-body:focus
     border-left: 2px solid #2c7be5;
 }
 
+.navbar-expand-xs
+{
+    padding-right: 0; 
+    padding-left: 0;
+}
+.navbar-expand-xs .navbar > [class*='container']
+{
+    padding-right: 0; 
+    padding-left: 0;
+}
 .navbar-expand-xs .navbar-collapse
 {
     flex-grow: inherit;
@@ -14006,13 +14010,11 @@ a.text-body:focus
 {
     display: none;
 }
-
 .navbar-expand-xs .navbar-nav
 {
     margin-right: 0; 
     margin-left: 0;
 }
-
 .navbar-expand-xs .navbar-nav .nav-link
 {
     padding-right: .5rem; 
@@ -14026,7 +14028,7 @@ a.text-body:focus
 {
     top: auto;
     right: .5rem;
-    bottom: -.75rem;
+    bottom: calc(-.75rem - 1px);
     left: .5rem;
 
     border-bottom: 1px solid #2c7be5; 
@@ -14035,6 +14037,16 @@ a.text-body:focus
 
 @media (min-width: 576px)
 {
+    .navbar-expand-sm
+    {
+        padding-right: 0; 
+        padding-left: 0;
+    }
+    .navbar-expand-sm .navbar > [class*='container']
+    {
+        padding-right: 0; 
+        padding-left: 0;
+    }
     .navbar-expand-sm .navbar-collapse
     {
         flex-grow: inherit;
@@ -14061,7 +14073,7 @@ a.text-body:focus
     {
         top: auto;
         right: .5rem;
-        bottom: -.75rem;
+        bottom: calc(-.75rem - 1px);
         left: .5rem;
 
         border-bottom: 1px solid #2c7be5; 
@@ -14071,6 +14083,16 @@ a.text-body:focus
 
 @media (min-width: 768px)
 {
+    .navbar-expand-md
+    {
+        padding-right: 0; 
+        padding-left: 0;
+    }
+    .navbar-expand-md .navbar > [class*='container']
+    {
+        padding-right: 0; 
+        padding-left: 0;
+    }
     .navbar-expand-md .navbar-collapse
     {
         flex-grow: inherit;
@@ -14097,7 +14119,7 @@ a.text-body:focus
     {
         top: auto;
         right: .5rem;
-        bottom: -.75rem;
+        bottom: calc(-.75rem - 1px);
         left: .5rem;
 
         border-bottom: 1px solid #2c7be5; 
@@ -14107,6 +14129,16 @@ a.text-body:focus
 
 @media (min-width: 992px)
 {
+    .navbar-expand-lg
+    {
+        padding-right: 0; 
+        padding-left: 0;
+    }
+    .navbar-expand-lg .navbar > [class*='container']
+    {
+        padding-right: 0; 
+        padding-left: 0;
+    }
     .navbar-expand-lg .navbar-collapse
     {
         flex-grow: inherit;
@@ -14133,7 +14165,7 @@ a.text-body:focus
     {
         top: auto;
         right: .5rem;
-        bottom: -.75rem;
+        bottom: calc(-.75rem - 1px);
         left: .5rem;
 
         border-bottom: 1px solid #2c7be5; 
@@ -14143,6 +14175,16 @@ a.text-body:focus
 
 @media (min-width: 1200px)
 {
+    .navbar-expand-xl
+    {
+        padding-right: 0; 
+        padding-left: 0;
+    }
+    .navbar-expand-xl .navbar > [class*='container']
+    {
+        padding-right: 0; 
+        padding-left: 0;
+    }
     .navbar-expand-xl .navbar-collapse
     {
         flex-grow: inherit;
@@ -14169,7 +14211,7 @@ a.text-body:focus
     {
         top: auto;
         right: .5rem;
-        bottom: -.75rem;
+        bottom: calc(-.75rem - 1px);
         left: .5rem;
 
         border-bottom: 1px solid #2c7be5; 
@@ -14209,7 +14251,7 @@ a.text-body:focus
 
 .navbar-overflow .navbar-nav .nav-link
 {
-    padding-bottom: 1.25rem;
+    padding-bottom: 1.3125rem;
 }
 .navbar-overflow .navbar-nav .nav-link.active:before
 {
@@ -14218,7 +14260,7 @@ a.text-body:focus
 
 .navbar-breadcrumb
 {
-    padding: .5rem 0;
+    padding: .5625rem 0;
 }
 
 .navbar-user
@@ -14233,6 +14275,24 @@ a.text-body:focus
 .navbar-user .dropdown-toggle:after
 {
     display: none;
+}
+
+.navbar-form-control:focus
+{
+    width: 315px;
+}
+.navbar-form-control:focus ~ .dropdown-menu
+{
+    display: block;
+
+    width: 350px;
+}
+
+.navbar-nav .nav-link > .fe
+{
+    display: inline-block;
+
+    min-width: 1.75rem;
 }
 
 .navbar-vertical .navbar-nav .nav-link
@@ -14261,20 +14321,20 @@ a.text-body:focus
 
 .navbar-vertical .navbar-nav .nav .nav-link
 {
-    padding-left: 1.75rem;
+    padding-left: 2.75rem;
 }
 
 .navbar-vertical .navbar-nav .nav .nav .nav-link
 {
-    padding-left: 1.75rem;
+    padding-left: 3.25rem;
 }
 
 .navbar-vertical .navbar-heading
 {
     font-size: .625rem;
 
-    padding-top: .5rem;
-    padding-bottom: .5rem;
+    padding-top: .5625rem;
+    padding-bottom: .5625rem;
 
     letter-spacing: .04em; 
     text-transform: uppercase;
@@ -14346,17 +14406,13 @@ a.text-body:focus
 }
 .navbar-vertical.navbar-expand-xs .navbar-nav .nav-link.active:before
 {
-    top: .5rem;
+    top: .5625rem;
     right: auto;
-    bottom: .5rem;
+    bottom: .5625rem;
     left: 0;
 
     border-bottom: 0; 
     border-left: 2px solid #2c7be5;
-}
-.navbar-vertical.navbar-expand-xs .navbar-nav .nav-link > .fe
-{
-    min-width: 1.75rem;
 }
 .navbar-vertical.navbar-expand-xs .navbar-nav .nav .nav-link
 {
@@ -14465,17 +14521,13 @@ a.text-body:focus
     }
     .navbar-vertical.navbar-expand-sm .navbar-nav .nav-link.active:before
     {
-        top: .5rem;
+        top: .5625rem;
         right: auto;
-        bottom: .5rem;
+        bottom: .5625rem;
         left: 0;
 
         border-bottom: 0; 
         border-left: 2px solid #2c7be5;
-    }
-    .navbar-vertical.navbar-expand-sm .navbar-nav .nav-link > .fe
-    {
-        min-width: 1.75rem;
     }
     .navbar-vertical.navbar-expand-sm .navbar-nav .nav .nav-link
     {
@@ -14585,17 +14637,13 @@ a.text-body:focus
     }
     .navbar-vertical.navbar-expand-md .navbar-nav .nav-link.active:before
     {
-        top: .5rem;
+        top: .5625rem;
         right: auto;
-        bottom: .5rem;
+        bottom: .5625rem;
         left: 0;
 
         border-bottom: 0; 
         border-left: 2px solid #2c7be5;
-    }
-    .navbar-vertical.navbar-expand-md .navbar-nav .nav-link > .fe
-    {
-        min-width: 1.75rem;
     }
     .navbar-vertical.navbar-expand-md .navbar-nav .nav .nav-link
     {
@@ -14705,17 +14753,13 @@ a.text-body:focus
     }
     .navbar-vertical.navbar-expand-lg .navbar-nav .nav-link.active:before
     {
-        top: .5rem;
+        top: .5625rem;
         right: auto;
-        bottom: .5rem;
+        bottom: .5625rem;
         left: 0;
 
         border-bottom: 0; 
         border-left: 2px solid #2c7be5;
-    }
-    .navbar-vertical.navbar-expand-lg .navbar-nav .nav-link > .fe
-    {
-        min-width: 1.75rem;
     }
     .navbar-vertical.navbar-expand-lg .navbar-nav .nav .nav-link
     {
@@ -14825,17 +14869,13 @@ a.text-body:focus
     }
     .navbar-vertical.navbar-expand-xl .navbar-nav .nav-link.active:before
     {
-        top: .5rem;
+        top: .5625rem;
         right: auto;
-        bottom: .5rem;
+        bottom: .5625rem;
         left: 0;
 
         border-bottom: 0; 
         border-left: 2px solid #2c7be5;
-    }
-    .navbar-vertical.navbar-expand-xl .navbar-nav .nav-link > .fe
-    {
-        min-width: 1.75rem;
     }
     .navbar-vertical.navbar-expand-xl .navbar-nav .nav .nav-link
     {
