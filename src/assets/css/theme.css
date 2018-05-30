@@ -4868,7 +4868,7 @@ input[type='button'].btn-block
 {
     display: block;
 
-    padding: .5625rem 1rem;
+    padding: .625rem 1rem;
 }
 .nav-link:hover,
 .nav-link:focus
@@ -5024,8 +5024,8 @@ input[type='button'].btn-block
 {
     display: inline-block;
 
-    padding-top: .5625rem;
-    padding-bottom: .5625rem;
+    padding-top: .625rem;
+    padding-bottom: .625rem;
 }
 
 .navbar-collapse
@@ -13983,8 +13983,8 @@ a.text-body:focus
 .navbar-nav .nav-link.active:before
 {
     position: absolute;
-    top: .5625rem;
-    bottom: .5625rem;
+    top: .625rem;
+    bottom: .625rem;
     left: 0;
 
     content: '';
@@ -14251,7 +14251,7 @@ a.text-body:focus
 
 .navbar-overflow .navbar-nav .nav-link
 {
-    padding-bottom: 1.3125rem;
+    padding-bottom: 1.375rem;
 }
 .navbar-overflow .navbar-nav .nav-link.active:before
 {
@@ -14260,7 +14260,7 @@ a.text-body:focus
 
 .navbar-breadcrumb
 {
-    padding: .5625rem 0;
+    padding: .625rem 0;
 }
 
 .navbar-user
@@ -14333,8 +14333,8 @@ a.text-body:focus
 {
     font-size: .625rem;
 
-    padding-top: .5625rem;
-    padding-bottom: .5625rem;
+    padding-top: .625rem;
+    padding-bottom: .625rem;
 
     letter-spacing: .04em; 
     text-transform: uppercase;
@@ -14406,9 +14406,9 @@ a.text-body:focus
 }
 .navbar-vertical.navbar-expand-xs .navbar-nav .nav-link.active:before
 {
-    top: .5625rem;
+    top: .625rem;
     right: auto;
-    bottom: .5625rem;
+    bottom: .625rem;
     left: 0;
 
     border-bottom: 0; 
@@ -14521,9 +14521,9 @@ a.text-body:focus
     }
     .navbar-vertical.navbar-expand-sm .navbar-nav .nav-link.active:before
     {
-        top: .5625rem;
+        top: .625rem;
         right: auto;
-        bottom: .5625rem;
+        bottom: .625rem;
         left: 0;
 
         border-bottom: 0; 
@@ -14637,9 +14637,9 @@ a.text-body:focus
     }
     .navbar-vertical.navbar-expand-md .navbar-nav .nav-link.active:before
     {
-        top: .5625rem;
+        top: .625rem;
         right: auto;
-        bottom: .5625rem;
+        bottom: .625rem;
         left: 0;
 
         border-bottom: 0; 
@@ -14753,9 +14753,9 @@ a.text-body:focus
     }
     .navbar-vertical.navbar-expand-lg .navbar-nav .nav-link.active:before
     {
-        top: .5625rem;
+        top: .625rem;
         right: auto;
-        bottom: .5625rem;
+        bottom: .625rem;
         left: 0;
 
         border-bottom: 0; 
@@ -14869,9 +14869,9 @@ a.text-body:focus
     }
     .navbar-vertical.navbar-expand-xl .navbar-nav .nav-link.active:before
     {
-        top: .5625rem;
+        top: .625rem;
         right: auto;
-        bottom: .5625rem;
+        bottom: .625rem;
         left: 0;
 
         border-bottom: 0; 

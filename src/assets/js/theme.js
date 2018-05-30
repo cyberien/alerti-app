@@ -1,32 +1,29 @@
-/**
- * Theme JS
- */
+//
+// theme.js
+// Theme specific JavaScript
+//
 
 'use strict';
 
 
-/*** Charts ***/
+//
+// ThemeCharts ==================================
+//
 
-var Charts = (function() {
-
-  // Variables
-  // =========
-
-  // Charts
-  var charts = {
-    barChart: $('#barChart'),
-    barChartHours: $('#barChartHours'),
-    lineChart: $('#lineChart'),
-    donutChart: $('#donutChart'),
-    lineChartDark: $('#lineChartDark')
-  };
+var ThemeCharts = (function() {
 
   // Fonts
+  //
+  // Global fonts
+
   var fonts = {
     base: 'Cerebri Sans'
   }
 
   // Colors
+  //
+  // Global colors
+
   var colors = {
     gray: {
       100: '#95AAC9',
@@ -39,55 +36,61 @@ var Charts = (function() {
       300: '#A6C5F7',
       700: '#2C7BE5',
     },
+    white: '#FFFFFF',
     transparent: 'transparent',
-    white: '#FFFFFF'
   };
 
   // Options
   //
   // Set as global to allow overrides via chart specific options
 
-  // General
-  Chart.defaults.global.responsive = true;
-  Chart.defaults.global.maintainAspectRatio = false;
-
-  // Colors
-  Chart.defaults.global.defaultColor = colors.primary[700];
-
-  // Fonts
-  Chart.defaults.global.defaultFontColor = colors.gray[700];
-  Chart.defaults.global.defaultFontFamily = fonts.base;
-  Chart.defaults.global.defaultFontSize = 13;
-
-  // Layout
-  Chart.defaults.global.layout.padding = 0;
-
-  // Legend
-  Chart.defaults.global.legend.display = false;
-  Chart.defaults.global.legend.position = 'bottom';
-  Chart.defaults.global.legend.labels.usePointStyle = true;
-
-  // Point
-  Chart.defaults.global.elements.point.radius = 0;
-
-  // Line
-  Chart.defaults.global.elements.line.tension = .4;
-  Chart.defaults.global.elements.line.borderWidth = 3;
-  Chart.defaults.global.elements.line.borderColor = colors.primary[700];
-  Chart.defaults.global.elements.line.backgroundColor = colors.transparent;
-  Chart.defaults.global.elements.line.borderCapStyle = 'rounded';
-
-  // Rectangle
-  Chart.defaults.global.elements.rectangle.backgroundColor = colors.primary[700];
-
-  // Arc
-  Chart.defaults.global.elements.arc.borderWidth = 4;
-  Chart.defaults.global.elements.arc.backgroundColor = colors.primary[700];
-
-  // Doughnuts
-  Chart.defaults.doughnut.cutoutPercentage = 83;
+  var options = {
+    defaults: {
+      global: {
+        responsive: true,
+        maintainAspectRatio: false,
+        defaultColor: colors.primary[700],
+        defaultFontColor: colors.gray[700],
+        defaultFontFamily: fonts.base,
+        defaultFontSize: 13,
+        layout: {
+          padding: 0
+        },
+        legend: {
+          display: false,
+          position: 'bottom',
+          labels: {
+            usePointStyle: true
+          }
+        },
+        elements: {
+          point: {
+            radius: 0
+          },
+          line: {
+            tension: .4,
+            borderWidth: 3,
+            borderColor: colors.primary[700],
+            backgroundColor: colors.transparent,
+            borderCapStyle: 'rounded'
+          },
+          rectangle: {
+            backgroundColor: colors.primary[700]
+          },
+          arc: {
+            borderWidth: 4,
+            backgroundColor: colors.primary[700]
+          }
+        }
+      },
+      doughnut: {
+        cutoutPercentage: 83
+      }
+    }
+  }
 
   // yAxes
+
   Chart.scaleService.updateScaleDefaults('linear', {
     gridLines: {
       borderDash: [2],
@@ -113,6 +116,7 @@ var Charts = (function() {
   });
 
   // xAxes
+
   Chart.scaleService.updateScaleDefaults('category', {
     gridLines: {
       drawBorder: false,
@@ -125,144 +129,289 @@ var Charts = (function() {
     maxBarThickness: 10
   });
 
-
   // Methods
-  // =======
-
-  var init = {
-    barChart: function() {
-      new Chart(charts.barChart, {
-        type: 'bar',
-        data: {
-          labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-          datasets: [{
-            data: [25,20,30,22,17,10,18,26,28,26,20,32]
-          }]
-        }
-      });
-    },
-    barChartHours: function() {
-      new Chart(charts.barChartHours, {
-        type: 'bar',
-        options: {
-          scales: {
-            yAxes: [{
-              ticks: {
-                beginAtZero: true,
-                padding: 10,
-                callback: function(value) {
-                  if ( !(value % 10) ) {
-                    return value + 'hrs'
-                  }
-                }
-              }
-            }]
-          }
-        },
-        data: {
-          labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-          datasets: [{
-            data: [21, 12, 28, 15, 5, 12, 17, 2]
-          }]
-        }
-      });
-    },
-    donutChart: function() {
-      new Chart(charts.donutChart, {
-        type: 'doughnut',
-        data: {
-          labels: ['Desktop', 'Tablet', 'Mobile'],
-          datasets: [{
-            data: [60,25,15],
-            backgroundColor: [
-              colors.primary[700],
-              colors.primary[300],
-              colors.primary[100]
-            ],
-            hoverBorderColor: colors.white
-          }]
-        },
-        options: {
-          legend: {
-            display: true
-          }
-        }
-      });
-    },
-    lineChart: function() {
-      new Chart(charts.lineChart, {
-        type: 'line',
-        data: {
-          labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-          datasets: [{
-            data: [0,10,5,15,10,20,15,25,20,30,25,40]
-          }]
-        }
-      });
-    },
-    lineChartDark: function() {
-      new Chart(charts.lineChartDark, {
-        type: 'line',
-        options: {
-          scales: {
-            yAxes: [{
-              gridLines: {
-                color: colors.gray[900],
-                zeroLineColor:colors.gray[900]
-              }
-            }]
-          }
-        },
-        data: {
-          labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-          datasets: [{
-            data: [0,10,5,15,10,20,15,25,20,30,25,40]
-          }]
-        }
-      });
-    }
-  };
-
-
-  // Events
-  // ======
-
-  // Init charts
   //
-  // Only init the charts present of the page
+  // Chart methods
 
-  for( var chart in charts ) {
-
-    if ( charts[chart].length ) {
-      init[chart]();
+  function makeGlobal(parent, options) {
+    for (var item in options) {
+      if (typeof options[item] !== 'object') {
+        parent[item] = options[item];
+      } else {
+        makeGlobal(parent[item], options[item]);
+      }
     }
   }
+
+  // Events
+  //
+  // Chart events
+
+  makeGlobal(Chart, options);
+
+  // Return
+  //
+  // Make variables global
+
+  return {
+    fonts: fonts,
+    colors: colors,
+    options: options
+  };
   
 })();
 
 
-/*** Navbar ***/
+//
+// Header ==================================
+// Header card charts
+//
+
+var headerChart = (function() {
+
+  // Variables
+
+  var $headerChart = $('#headerChart');
+
+  // Init
+  //
+  // Init header chart
+
+  function init(chart) {
+    new Chart(chart, {
+      type: 'line',
+      options: {
+        scales: {
+          yAxes: [{
+            gridLines: {
+              color: ThemeCharts.colors.gray[900],
+              zeroLineColor: ThemeCharts.colors.gray[900]
+            }
+          }]
+        }
+      },
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        datasets: [{
+          data: [0,10,5,15,10,20,15,25,20,30,25,40]
+        }]
+      }
+    });
+  }
+
+  // Events
+  //
+  // Header chart events
+
+  if ($headerChart.length) {
+    init($headerChart);
+  }
+
+})();
+
+
+//
+// Performance ==================================
+// Performance card charts
+//
+
+var performanceChart = (function() {
+
+  // Variables
+
+  var $performanceChart = $('#performanceChart');
+
+  // Init
+  //
+  // Init header chart
+
+  function init(chart) {
+    new Chart(chart, {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        datasets: [{
+          data: [0,10,5,15,10,20,15,25,20,30,25,40]
+        }]
+      }
+    });
+  }
+
+  // Events
+  //
+  // Performance chart events
+
+  if ($performanceChart.length) {
+    init($performanceChart);
+  }
+
+})();
+
+
+//
+// Orders ==================================
+// Orders card charts
+//
+
+var ordersChart = (function() {
+
+  // Variables
+
+  var $ordersChart = $('#ordersChart');
+
+  // Init
+  //
+  // Init header chart
+
+  function init(chart) {
+    new Chart(chart, {
+      type: 'bar',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        datasets: [{
+          data: [25,20,30,22,17,10,18,26,28,26,20,32]
+        }]
+      }
+    });
+  }
+
+  // Events
+  //
+  // Orders chart events
+
+  if ($ordersChart.length) {
+    init($ordersChart);
+  }
+
+})();
+
+
+//
+// Devices ==================================
+// Devices card charts
+//
+
+var devicesChart = (function() {
+
+  // Variables
+
+  var $devicesChart = $('#devicesChart');
+
+  // Init
+  //
+  // Init header chart
+
+  function init(chart) {
+    new Chart(chart, {
+      type: 'doughnut',
+      options: {
+        legend: {
+          display: true
+        }
+      },
+      data: {
+        labels: ['Desktop', 'Tablet', 'Mobile'],
+        datasets: [{
+          data: [60,25,15],
+          backgroundColor: [
+            ThemeCharts.colors.primary[700],
+            ThemeCharts.colors.primary[300],
+            ThemeCharts.colors.primary[100]
+          ],
+          hoverBorderColor: ThemeCharts.colors.white
+        }]
+      }
+    });
+  }
+
+  // Events
+  //
+  // Devices chart events
+
+  if ($devicesChart.length) {
+    init($devicesChart);
+  }
+
+})();
+
+
+//
+// Weekly hours ==================================
+// Weekly hours card charts
+//
+
+var weeklyHoursChart = (function() {
+
+  // Variables
+
+  var $weeklyHoursChart = $('#weeklyHoursChart');
+
+  // Init
+  //
+  // Init header chart
+
+  function init(chart) {
+    new Chart(chart, {
+      type: 'bar',
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true,
+              padding: 10,
+              callback: function(value) {
+                if ( !(value % 10) ) {
+                  return value + 'hrs'
+                }
+              }
+            }
+          }]
+        }
+      },
+      data: {
+        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+        datasets: [{
+          data: [21, 12, 28, 15, 5, 12, 17, 2]
+        }]
+      }
+    });
+  }
+
+  // Events
+  //
+  // Weekly hours chart events
+
+  if ($weeklyHoursChart.length) {
+    init($weeklyHoursChart);
+  }
+
+})();
+
+
+//
+// Navbar ==================================
+//
+
 
 var Navbar = (function() {
 
 
   // Variables
-  // =========
 
   var $nav = $('.navbar-nav, .navbar-nav .nav');
   var $navCollapse = $('.navbar-nav .collapse');
 
-
   // Methods
-  // =======
+  //
+  // Navbar methods
 
   function accordion($this) {
     $this.closest($nav).find($navCollapse).not($this).collapse('hide');
   }
 
-
   // Events
-  // ======
+  //
+  // Navbar events
 
   $navCollapse.on({
     'show.bs.collapse': function() {
@@ -273,25 +422,28 @@ var Navbar = (function() {
 })();
 
 
-/*** Tooltip ***/
+//
+// Tooltips ==================================
+//
+
 
 var Tooltip = (function() {
 
   // Variables
-  // =========
 
   var $tooltip = $('[data-toggle="tooltip"]');
 
   // Methods
-  // =======
+  //
+  // Tooltips methods
 
   function init() {
     $tooltip.tooltip();
   }
 
-
   // Events
-  // ======
+  //
+  // Tooltip events
 
   if( $tooltip.length ) {
     init();
