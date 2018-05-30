@@ -5,24 +5,23 @@
 
 'use strict';
 
-
 //
 // ThemeCharts ==================================
 //
 
 var ThemeCharts = (function() {
 
+  // Variables
+  // 
+  // Theme chart variables
+
   // Fonts
-  //
-  // Global fonts
 
   var fonts = {
     base: 'Cerebri Sans'
   }
 
   // Colors
-  //
-  // Global colors
 
   var colors = {
     gray: {
@@ -41,8 +40,6 @@ var ThemeCharts = (function() {
   };
 
   // Options
-  //
-  // Set as global to allow overrides via chart specific options
 
   var options = {
     defaults: {
@@ -129,25 +126,65 @@ var ThemeCharts = (function() {
     maxBarThickness: 10
   });
 
+  // Tabs
+
+  var $chartTabs = $('[data-toggle="tab"][data-chart]');
+
+
   // Methods
   //
-  // Chart methods
+  // Theme chart functions
 
-  function makeGlobal(parent, options) {
+  // Parse global options
+
+  function parseOptions(parent, options) {
     for (var item in options) {
       if (typeof options[item] !== 'object') {
         parent[item] = options[item];
       } else {
-        makeGlobal(parent[item], options[item]);
+        parseOptions(parent[item], options[item]);
       }
     }
   }
 
+  // Toggle chart types and datasets on tab click
+
+  function toggleCharts(tab) {
+    var chart = tab.data('target');
+    var data = tab.data('chart');
+
+    updateChart(chart, data);
+  }
+
+  // Update chart
+
+  function updateChart(chart, data) {
+    var currentChart = window[chart];
+
+    // Update settings
+    parseOptions(currentChart, data);
+
+    // Draw chart
+    currentChart.update();
+  }
+
+
   // Events
   //
-  // Chart events
+  // Run functions on windows load or special events
 
-  makeGlobal(Chart, options);
+  // Parse global options
+
+  parseOptions(Chart, options);
+
+  // Toggle chart types and datasets on tab click
+
+  $chartTabs.on({
+    'shown.bs.tab': function() {
+      toggleCharts($(this));
+    }
+  });
+
 
   // Return
   //
@@ -167,7 +204,7 @@ var ThemeCharts = (function() {
 // Header card charts
 //
 
-var headerChart = (function() {
+var Header = (function() {
 
   // Variables
 
@@ -178,7 +215,7 @@ var headerChart = (function() {
   // Init header chart
 
   function init(chart) {
-    new Chart(chart, {
+    window.headerChart = new Chart(chart, {
       type: 'line',
       options: {
         scales: {
@@ -215,7 +252,7 @@ var headerChart = (function() {
 // Performance card charts
 //
 
-var performanceChart = (function() {
+var Performance = (function() {
 
   // Variables
 
@@ -226,7 +263,7 @@ var performanceChart = (function() {
   // Init header chart
 
   function init(chart) {
-    new Chart(chart, {
+    performanceChart = new Chart(chart, {
       type: 'line',
       data: {
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
@@ -253,7 +290,7 @@ var performanceChart = (function() {
 // Orders card charts
 //
 
-var ordersChart = (function() {
+var Orders = (function() {
 
   // Variables
 
@@ -264,7 +301,7 @@ var ordersChart = (function() {
   // Init header chart
 
   function init(chart) {
-    new Chart(chart, {
+    window.ordersChart = new Chart(chart, {
       type: 'bar',
       data: {
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
@@ -291,7 +328,7 @@ var ordersChart = (function() {
 // Devices card charts
 //
 
-var devicesChart = (function() {
+var Devices = (function() {
 
   // Variables
 
@@ -302,7 +339,7 @@ var devicesChart = (function() {
   // Init header chart
 
   function init(chart) {
-    new Chart(chart, {
+    window.devicesChart = new Chart(chart, {
       type: 'doughnut',
       options: {
         legend: {
@@ -340,7 +377,7 @@ var devicesChart = (function() {
 // Weekly hours card charts
 //
 
-var weeklyHoursChart = (function() {
+var WeeklyHours = (function() {
 
   // Variables
 
@@ -351,7 +388,7 @@ var weeklyHoursChart = (function() {
   // Init header chart
 
   function init(chart) {
-    new Chart(chart, {
+   window.weeklyHoursChart = new Chart(chart, {
       type: 'bar',
       options: {
         scales: {
