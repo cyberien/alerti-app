@@ -570,9 +570,38 @@
                     </div>
                   </li>
                   <li class="nav-item">
-                    <a href="profile.html" class="nav-link">
+                    <a href="#sidebarProfile" class="nav-link" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarProject">
                       Profile
                     </a>
+                    <div class="collapse" id="sidebarProfile">
+                      <ul class="nav nav-sm flex-column">
+                        <li class="nav-item">
+                          <a href="profile-posts.html" class="nav-link">
+                            Posts
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="profile-groups.html" class="nav-link">
+                            Groups
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="profile-projects.html" class="nav-link">
+                            Projects
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="profile-files.html" class="nav-link">
+                            Files
+                          </a>
+                        </li>
+                          <li class="nav-item">
+                          <a href="profile-subscribers.html" class="nav-link">
+                            Subscribers
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
                   </li>
                   <li class="nav-item">
                     <a href="feed.html" class="nav-link">
@@ -731,8 +760,8 @@
                 
                 <!-- Nav -->
                 <ul class="nav nav-tabs header-tabs">
-                  <li class="nav-item">
-                    <a href="#" class="nav-link text-center active" data-toggle="tab" data-target="headerChart" data-chart='{"data":{"datasets":[{"data":[0,10,5,15,10,20,15,25,20,30,25,40]}]}}'>
+                  <li class="nav-item" data-toggle="chart" data-target="#headerChart" data-update='{"data":{"datasets":[{"data":[0,10,5,15,10,20,15,25,20,30,25,40]}]}}'>
+                    <a href="#" class="nav-link text-center active" data-toggle="tab">
                       <h6 class="header-pretitle text-secondary">
                         Earnings
                       </h6>
@@ -741,8 +770,8 @@
                       </h3>
                     </a>
                   </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link text-center" data-toggle="tab" data-target="headerChart" data-chart='{"data":{"datasets":[{"data":[7,35,12,27,34,17,19,30,28,32,24,39]}]}}'>
+                  <li class="nav-item" data-toggle="chart" data-target="#headerChart" data-update='{"data":{"datasets":[{"data":[7,35,12,27,34,17,19,30,28,32,24,39]}]}}'>
+                    <a href="#" class="nav-link text-center" data-toggle="tab">
                       <h6 class="header-pretitle text-secondary">
                         Sessions
                       </h6>
@@ -751,8 +780,8 @@
                       </h3>
                     </a>
                   </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link text-center" data-toggle="tab" data-target="headerChart" data-chart='{"data":{"datasets":[{"data":[2,12,35,25,36,25,34,16,4,14,15,37]}]}}'>
+                  <li class="nav-item" data-toggle="chart" data-target="#headerChart" data-update='{"data":{"datasets":[{"data":[2,12,35,25,36,25,34,16,4,14,15,37]}]}}'>
+                    <a href="#" class="nav-link text-center" data-toggle="tab">
                       <h6 class="header-pretitle text-secondary">
                         Bounce
                       </h6>
@@ -809,7 +838,7 @@
 
                     <!-- Toggle -->
                     <div class="custom-control custom-checkbox-toggle">
-                      <input type="checkbox" class="custom-control-input" id="cardToggle">
+                      <input type="checkbox" class="custom-control-input" id="cardToggle" data-toggle="chart" data-target="#ordersChart" data-add='{"data":{"datasets":[{"data":[15,10,20,12,7,0,8,16,18,16,10,22],"backgroundColor":"#d2ddec","label":"Affiliate"}]}}'>
                       <label class="custom-control-label" for="cardToggle"></label>
                     </div>
 
@@ -865,13 +894,13 @@
 
                     <!-- Tabs -->
                     <ul class="nav nav-tabs nav-tabs-sm card-header-tabs">
-                      <li class="nav-item">
-                        <a href="#" class="nav-link active" data-toggle="tab" data-target="devicesChart" data-chart='{"data":{"datasets":[{"data":[60,25,15]}]}}'>
+                      <li class="nav-item" data-toggle="chart" data-target="#devicesChart" data-update='{"data":{"datasets":[{"data":[60,25,15]}]}}'>
+                        <a href="#" class="nav-link active" data-toggle="tab">
                           All
                         </a>
                       </li>
-                      <li class="nav-item">
-                        <a href="#" class="nav-link" data-toggle="tab" data-target="devicesChart" data-chart='{"data":{"datasets":[{"data":[15,45,20]}]}}'>
+                      <li class="nav-item" data-toggle="chart" data-target="#devicesChart" data-update='{"data":{"datasets":[{"data":[15,45,20]}]}}'>
+                        <a href="#" class="nav-link" data-toggle="tab">
                           Direct
                         </a>
                       </li>

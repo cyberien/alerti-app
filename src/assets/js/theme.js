@@ -15,14 +15,15 @@ var ThemeCharts = (function() {
   // 
   // Theme chart variables
 
-  // Fonts
+  // Toggle
+  var $toggle = $('[data-toggle="chart"]');
 
+  // Fonts
   var fonts = {
     base: 'Cerebri Sans'
   }
 
   // Colors
-
   var colors = {
     gray: {
       100: '#95AAC9',
@@ -35,12 +36,12 @@ var ThemeCharts = (function() {
       300: '#A6C5F7',
       700: '#2C7BE5',
     },
+    black: '#12263F',
     white: '#FFFFFF',
     transparent: 'transparent',
   };
 
   // Options
-
   var options = {
     defaults: {
       global: {
@@ -78,6 +79,97 @@ var ThemeCharts = (function() {
             borderWidth: 4,
             backgroundColor: colors.primary[700]
           }
+        },
+        tooltips: {
+          enabled: false,
+          mode: 'index',
+          intersect: false,
+          custom: function(model) {
+
+            // Get tooltip
+            var $tooltip = $('#chartjs-tooltip');
+
+            // Create tooltip on first render
+            if (!$tooltip.length) {
+              $tooltip = $('<div id="chartjs-tooltip" class="popover bs-popover-top" role="tooltip"></div>');
+
+              // Append to body
+              $('body').append($tooltip);
+            }
+
+            // Hide if no tooltip
+            if (model.opacity === 0) {
+              $tooltip.css('display', 'block');
+              return;
+            }
+
+            function getBody(bodyItem) {
+              return bodyItem.lines;
+            }
+
+            // Fill with content
+            if (model.body) {
+              var titleLines = model.title || [];
+              var bodyLines = model.body.map(getBody);
+              var html = '';
+
+              // Add arrow
+              html += '<div class="arrow"></div>';
+
+              // Add header
+              titleLines.forEach(function(title) {
+                html += '<h3 class="popover-header text-center">' + title + '</h3>';
+              });
+
+              // Add body
+              bodyLines.forEach(function(body, i) {
+                var colors = model.labelColors[i];
+                var styles = 'background-color: ' + colors.backgroundColor;
+                var indicator = '<span class="popover-body-indicator" style="' + styles + '"></span>';
+                html += '<div class="popover-body d-flex align-items-center">' + indicator + body + '</div>';
+              });
+
+              $tooltip.html(html);
+            }
+
+            // Get tooltip position
+            var $canvas = $(this._chart.canvas);
+
+            var canvasWidth = $canvas.outerWidth();
+            var canvasHeight = $canvas.outerHeight();
+
+            var canvasTop = $canvas.offset().top;
+            var canvasLeft = $canvas.offset().left;
+
+            var tooltipWidth = $tooltip.outerWidth();
+            var tooltipHeight = $tooltip.outerHeight();
+
+            var top = canvasTop + model.caretY - tooltipHeight - 16;
+            var left = canvasLeft + model.caretX - tooltipWidth / 2;
+
+            // Display tooltip
+            $tooltip.css({
+              'top': top + 'px',
+              'left':  left + 'px',
+              'display': 'block',
+            });
+
+          },
+          callbacks: {
+            label: function(item, data) {
+              var label = data.datasets[item.datasetIndex].label || '';
+              var yLabel = item.yLabel;
+              var content = '';
+
+              if (data.datasets.length > 1) {
+                content += '<span class="popover-body-label mr-auto">' + label + '</span>';
+              }
+
+              content += '<span class="popover-body-value">$' + yLabel + 'k</span>';
+
+              return content;
+            }
+          }
         }
       },
       doughnut: {
@@ -87,7 +179,6 @@ var ThemeCharts = (function() {
   }
 
   // yAxes
-
   Chart.scaleService.updateScaleDefaults('linear', {
     gridLines: {
       borderDash: [2],
@@ -113,7 +204,6 @@ var ThemeCharts = (function() {
   });
 
   // xAxes
-
   Chart.scaleService.updateScaleDefaults('category', {
     gridLines: {
       drawBorder: false,
@@ -126,17 +216,12 @@ var ThemeCharts = (function() {
     maxBarThickness: 10
   });
 
-  // Tabs
-
-  var $chartTabs = $('[data-toggle="tab"][data-chart]');
-
 
   // Methods
   //
   // Theme chart functions
 
   // Parse global options
-
   function parseOptions(parent, options) {
     for (var item in options) {
       if (typeof options[item] !== 'object') {
@@ -147,25 +232,66 @@ var ThemeCharts = (function() {
     }
   }
 
-  // Toggle chart types and datasets on tab click
-
-  function toggleCharts(tab) {
-    var chart = tab.data('target');
-    var data = tab.data('chart');
-
-    updateChart(chart, data);
+  // Push options
+  function pushOptions(parent, options) {
+    for (var item in options) {
+      if (Array.isArray(options[item])) {
+        options[item].forEach(function(data) {
+          parent[item].push(data);
+        });
+      } else {
+        pushOptions(parent[item], options[item]);
+      }
+    }
   }
 
-  // Update chart
+  // Pop options
+  function popOptions(parent, options) {
+    for (var item in options) {
+      if (Array.isArray(options[item])) {
+        options[item].forEach(function(data) {
+          parent[item].pop();
+        });
+      } else {
+        popOptions(parent[item], options[item]);
+      }
+    }
+  }
 
-  function updateChart(chart, data) {
-    var currentChart = window[chart];
+  // Toggle options
+  function toggleOptions(elem) {
+    var options = elem.data('add');
+    var $target = $(elem.data('target'));
+    var $chart = $target.data('chart');
 
-    // Update settings
-    parseOptions(currentChart, data);
+    if (elem.is(':checked')) {
 
-    // Draw chart
-    currentChart.update();
+      // Add options
+      pushOptions($chart, options);
+
+      // Update chart
+      $chart.update();
+    } else {
+
+      // Remove options
+      popOptions($chart, options);
+
+      // Update chart
+      $chart.update();
+    }
+  }
+
+  // Update options
+  function updateOptions(elem) {
+    var options = elem.data('update');
+    var $target = $(elem.data('target'));
+    var $chart = $target.data('chart');
+
+    // Parse options
+    parseOptions($chart, options);
+
+    // Update chart
+    $chart.update();
   }
 
 
@@ -174,14 +300,23 @@ var ThemeCharts = (function() {
   // Run functions on windows load or special events
 
   // Parse global options
-
   parseOptions(Chart, options);
 
-  // Toggle chart types and datasets on tab click
+  // Toggle options
+  $toggle.on({
+    'change': function() {
+      var $this = $(this);
 
-  $chartTabs.on({
-    'shown.bs.tab': function() {
-      toggleCharts($(this));
+      if ($this.is('[data-add]')) {
+        toggleOptions($this);
+      }
+    },
+    'click': function() {
+      var $this = $(this);
+
+      if ($this.is('[data-update]')) {
+        updateOptions($this);
+      }
     }
   });
 
@@ -212,10 +347,12 @@ var Header = (function() {
 
   // Init
   //
-  // Init header chart
+  // Init chart
 
-  function init(chart) {
-    window.headerChart = new Chart(chart, {
+  function init($chart) {
+
+    // Create chart
+    var headerChart = new Chart($chart, {
       type: 'line',
       options: {
         scales: {
@@ -230,11 +367,16 @@ var Header = (function() {
       data: {
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         datasets: [{
+          label: 'Performance',
           data: [0,10,5,15,10,20,15,25,20,30,25,40]
         }]
       }
     });
-  }
+
+    // Save to jQuery object
+    $chart.data('chart', headerChart);
+
+  };
 
   // Events
   //
@@ -260,18 +402,24 @@ var Performance = (function() {
 
   // Init
   //
-  // Init header chart
+  // Init chart
 
-  function init(chart) {
-    performanceChart = new Chart(chart, {
+  function init($chart) {
+
+    // Create chart
+    var performanceChart = new Chart($chart, {
       type: 'line',
       data: {
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         datasets: [{
+          label: 'Performance',
           data: [0,10,5,15,10,20,15,25,20,30,25,40]
         }]
       }
     });
+
+    // Save to jQuery object
+    $chart.data('chart', performanceChart);
   }
 
   // Events
@@ -298,18 +446,24 @@ var Orders = (function() {
 
   // Init
   //
-  // Init header chart
+  // Init chart
 
-  function init(chart) {
-    window.ordersChart = new Chart(chart, {
+  function init($chart) {
+
+    // Create chart
+    var ordersChart = new Chart($chart, {
       type: 'bar',
       data: {
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         datasets: [{
+          label: 'Sales',
           data: [25,20,30,22,17,10,18,26,28,26,20,32]
         }]
       }
     });
+
+    // Save to jQuery object
+    $chart.data('chart', ordersChart);
   }
 
   // Events
@@ -336,10 +490,12 @@ var Devices = (function() {
 
   // Init
   //
-  // Init header chart
+  // Init chart
 
-  function init(chart) {
-    window.devicesChart = new Chart(chart, {
+  function init($chart) {
+
+    // Create chart
+    var devicesChart = new Chart($chart, {
       type: 'doughnut',
       options: {
         legend: {
@@ -349,7 +505,8 @@ var Devices = (function() {
       data: {
         labels: ['Desktop', 'Tablet', 'Mobile'],
         datasets: [{
-          data: [60,25,15],
+          labels: ['test', 'test', 'test'],
+          data: [60, 25, 15],
           backgroundColor: [
             ThemeCharts.colors.primary[700],
             ThemeCharts.colors.primary[300],
@@ -359,6 +516,9 @@ var Devices = (function() {
         }]
       }
     });
+
+    // Save to jQuery object
+    $chart.data('chart', devicesChart);
   }
 
   // Events
@@ -385,10 +545,12 @@ var WeeklyHours = (function() {
 
   // Init
   //
-  // Init header chart
+  // Init chart
 
-  function init(chart) {
-   window.weeklyHoursChart = new Chart(chart, {
+  function init($chart) {
+
+    // Create chart
+    var weeklyHoursChart = new Chart($chart, {
       type: 'bar',
       options: {
         scales: {
@@ -412,6 +574,9 @@ var WeeklyHours = (function() {
         }]
       }
     });
+
+    // Save to jQuery object
+    $chart.data('chart', weeklyHoursChart);
   }
 
   // Events

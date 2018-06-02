@@ -14,3 +14,17 @@
 .chart-sm {
   height: $chart-height-sm;
 }
+
+
+// Tooltip
+//
+// Custom tooltip
+
+#chartjs-tooltip {
+  z-index: 0;
+}
+
+#chartjs-tooltip .arrow {
+  top: 100%; left: 50%;
+  transform: translateX(-50%) translateX(-.5rem);
+}

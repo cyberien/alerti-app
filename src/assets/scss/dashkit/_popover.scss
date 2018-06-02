@@ -7,6 +7,22 @@
 // Bootstrap Overrides =====================================
 //
 
+.popover {
+  padding: $popover-padding-y $popover-padding-x;
+
+  &:hover {
+    display: block !important;
+  }
+}
+
 .popover-header {
-  border-bottom-color: $gray-200;
+  margin-bottom: $popover-header-margin-bottom;
+  border-bottom: 0;
+}
+
+.popover-body-indicator {
+  display: inline-block;
+  width: .5rem; height: .5rem;
+  margin-right: .25rem;
+  border-radius: 50%;
 }

@@ -387,11 +387,18 @@ $tooltip-arrow-color: $tooltip-bg;
 // Popovers
 
 $popover-bg: $white;
-$popover-border-color: $gray-300;
+$popover-max-width: 10rem;
+$popover-padding-x: .95rem;
+$popover-padding-y: .8rem;
+$popover-box-shadow: 0 0 1rem transparentize($black, .97);
 
 $popover-header-bg: $popover-bg;
-$popover-header-padding-y: .8rem;
-$popover-header-padding-x: .95rem;
+$popover-header-padding-y: 0;
+$popover-header-padding-x: 0;
+$popover-header-margin-bottom: .25rem;
+
+$popover-body-color: $text-muted;
+
 
 
 // Badges
@@ -481,7 +488,7 @@ $badge-padding-x: .5em;
 
 // Navs
 
-$nav-link-padding-y: .625rem;
+$nav-link-padding-y: .5rem;
 $nav-link-padding-x: 1rem;
 
 $nav-tabs-link-active-border-width: 1px;
