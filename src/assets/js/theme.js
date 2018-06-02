@@ -63,7 +63,8 @@ var ThemeCharts = (function() {
         },
         elements: {
           point: {
-            radius: 0
+            radius: 0,
+            backgroundColor: colors.primary[700]
           },
           line: {
             tension: .4,
@@ -99,7 +100,7 @@ var ThemeCharts = (function() {
 
             // Hide if no tooltip
             if (model.opacity === 0) {
-              $tooltip.css('display', 'block');
+              $tooltip.css('display', 'none');
               return;
             }
 
@@ -166,14 +167,28 @@ var ThemeCharts = (function() {
               }
 
               content += '<span class="popover-body-value">$' + yLabel + 'k</span>';
-
               return content;
             }
           }
         }
       },
       doughnut: {
-        cutoutPercentage: 83
+        cutoutPercentage: 83,
+        tooltips: {
+          callbacks: {
+            title: function(item, data) {
+              var title = data.labels[item[0].index];
+              return title;
+            },
+            label: function(item, data) {
+              var value = data.datasets[0].data[item.index];
+              var content = '';
+
+              content += '<span class="popover-body-value">' + value + '%</span>';
+              return content;
+            }
+          }
+        }
       }
     }
   }
@@ -505,7 +520,6 @@ var Devices = (function() {
       data: {
         labels: ['Desktop', 'Tablet', 'Mobile'],
         datasets: [{
-          labels: ['test', 'test', 'test'],
           data: [60, 25, 15],
           backgroundColor: [
             ThemeCharts.colors.primary[700],
