@@ -44,3 +44,15 @@
 .modal.show .modal-dialog-vertical {
   transform: translateX(0);
 }
+
+
+// Modal card
+
+.modal-card {
+  margin-bottom: 0;
+
+  .card-body {
+    max-height: $modal-card-body-max-height;
+    overflow-y: auto;
+  }
+}

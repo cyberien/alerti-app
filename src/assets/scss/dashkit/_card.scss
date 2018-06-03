@@ -14,12 +14,14 @@
 
 .card-header {
   display: flex;
+  flex-direction: row;
+  flex-grow: 1;
   align-items: center;
   min-height: $card-header-min-height;
   padding-top: $card-spacer-y / 2;
   padding-bottom: $card-spacer-y / 2;
 
-  > .row {
+  > * {
     flex: 1;
   }
 }

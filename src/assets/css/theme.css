@@ -13353,14 +13353,16 @@ a.text-body:focus
 .card-header
 {
     display: flex;
+    flex-direction: row;
 
     min-height: 3.75rem;
     padding-top: .5rem;
     padding-bottom: .5rem; 
 
+    flex-grow: 1;
     align-items: center;
 }
-.card-header > .row
+.card-header > *
 {
     flex: 1 1;
 }
@@ -13884,6 +13886,17 @@ a.text-body:focus
 .modal.show .modal-dialog-vertical
 {
     transform: translateX(0);
+}
+
+.modal-card
+{
+    margin-bottom: 0;
+}
+.modal-card .card-body
+{
+    overflow-y: auto; 
+
+    max-height: 350px;
 }
 
 .nav-tabs .nav-link
