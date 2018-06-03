@@ -538,7 +538,7 @@ $header-body-border-color: $border-color;
 
 // Cards
 
-$card-header-height: 3.75rem;
+$card-header-min-height: 3.75rem;
 $card-box-shadow: 0 .75rem 1.5rem transparentize($black, .97);
 
 
@@ -581,3 +581,10 @@ $modal-dialog-vertical-width: 350px;
 
 $chart-height: 300px;
 $chart-height-sm: 225px;
+
+
+// Dropdowns
+
+$dropdown-card-min-width: 350px;
+$dropdown-card-header-min-height: 3.125rem;
+$dropdown-card-body-max-height: 350px;

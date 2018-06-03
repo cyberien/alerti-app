@@ -13469,6 +13469,23 @@ a.text-body:focus
     display: none;
 }
 
+.dropdown-menu-card
+{
+    min-width: 350px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.dropdown-menu-card .card-header
+{
+    min-height: 3.125rem;
+}
+.dropdown-menu-card .card-body
+{
+    overflow-y: auto; 
+
+    max-height: 350px;
+}
+
 .form-text
 {
     margin-top: 0;
@@ -14288,9 +14305,7 @@ a.text-body:focus
 }
 .navbar-form-control:focus ~ .dropdown-menu
 {
-    display: block;
-
-    width: 350px;
+    display: flex;
 }
 
 .navbar-nav .nav-link > .fe

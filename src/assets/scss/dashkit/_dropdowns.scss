@@ -36,3 +36,21 @@
 .dropdown-ellipses::after {
   display: none;
 }
+
+
+// Dropdown card
+
+.dropdown-menu-card {
+  min-width: $dropdown-card-min-width;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  .card-header {
+    min-height: $dropdown-card-header-min-height;
+  }
+
+  .card-body {
+    max-height: $dropdown-card-body-max-height;
+    overflow-y: auto;
+  }
+}

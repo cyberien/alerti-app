@@ -15,7 +15,7 @@
 .card-header {
   display: flex;
   align-items: center;
-  min-height: $card-header-height;
+  min-height: $card-header-min-height;
   padding-top: $card-spacer-y / 2;
   padding-bottom: $card-spacer-y / 2;
 
@@ -46,8 +46,8 @@
 }
 
 .card-header-tabs .nav-link {
-  padding-top: calc((#{$card-header-height} - 1em * #{$line-height-base}) / 2) !important;
-  padding-bottom: calc((#{$card-header-height} - 1em * #{$line-height-base}) / 2) !important;
+  padding-top: calc((#{$card-header-min-height} - 1em * #{$line-height-base}) / 2) !important;
+  padding-bottom: calc((#{$card-header-min-height} - 1em * #{$line-height-base}) / 2) !important;
 }
 
 
