@@ -17,15 +17,22 @@
 // Creates a vertically aligned version of the modal dialog
 
 .modal-dialog-vertical {
-  width: 100%; height: 100%;
+  height: 100%;
   max-width: $modal-dialog-vertical-width;
   margin: 0;
 
   .modal-content {
-    width: inherit; height: inherit;
-    max-height: 100%;
+    height: inherit;
     border-width: 0;
     border-radius: 0;
+  }
+
+  .modal-header {
+    border-radius: inherit;
+  }
+
+  .modal-body {
+    height: inherit;
     overflow-y: auto;
   }
 }

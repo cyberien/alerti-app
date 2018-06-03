@@ -13837,21 +13837,26 @@ a.text-body:focus
 
 .modal-dialog-vertical
 {
-    width: 100%;
     max-width: 350px;
     height: 100%;
     margin: 0;
 }
 .modal-dialog-vertical .modal-content
 {
-    overflow-y: auto; 
-
-    width: inherit;
     height: inherit;
-    max-height: 100%;
 
     border-width: 0;
     border-radius: 0;
+}
+.modal-dialog-vertical .modal-header
+{
+    border-radius: inherit;
+}
+.modal-dialog-vertical .modal-body
+{
+    overflow-y: auto; 
+
+    height: inherit;
 }
 
 .modal.fade .modal-dialog-vertical
