@@ -15405,17 +15405,64 @@ a:focus
     height: 300px;
 }
 
+.chart.chart-appended
+{
+    height: calc(300px - 3.71875rem);
+}
+
 .chart-sm
 {
     height: 225px;
 }
 
-#chartjs-tooltip
+.chart-sm.chart-appended
+{
+    height: calc(225px - 3.71875rem);
+}
+
+.chart-legend
+{
+    font-size: .8125rem;
+
+    display: flex;
+
+    margin-top: 2.5rem;
+
+    text-align: center;
+
+    color: #95aac9; 
+
+    justify-content: center;
+}
+
+.chart-legend-item
+{
+    display: inline-flex;
+
+    align-items: center;
+}
+.chart-legend-item + .chart-legend-item
+{
+    margin-left: 1rem;
+}
+
+.chart-legend-indicator
+{
+    display: inline-block;
+
+    width: .5rem;
+    height: .5rem;
+    margin-right: .375rem;
+
+    border-radius: 50%;
+}
+
+#chart-tooltip
 {
     z-index: 0;
 }
 
-#chartjs-tooltip .arrow
+#chart-tooltip .arrow
 {
     top: 100%;
     left: 50%;

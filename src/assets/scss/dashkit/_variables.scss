@@ -584,6 +584,11 @@ $modal-card-body-max-height: 350px;
 $chart-height: 300px;
 $chart-height-sm: 225px;
 
+$chart-legend-margin-top: 2.5rem;
+$chart-legend-font-size: $font-size-sm;
+$chart-legend-color: $text-muted;
+$chart-legend-height: $chart-legend-margin-top + $chart-legend-font-size * $line-height-base;
+
 
 // Dropdowns
 

@@ -28,6 +28,7 @@ var ThemeCharts = (function() {
     gray: {
       100: '#95AAC9',
       300: '#E3EBF6',
+      600: '#95AAC9',
       700: '#6E84A3',
       900: '#283E59'
     },
@@ -47,8 +48,8 @@ var ThemeCharts = (function() {
       global: {
         responsive: true,
         maintainAspectRatio: false,
-        defaultColor: colors.primary[700],
-        defaultFontColor: colors.gray[700],
+        defaultColor: colors.primary[600],
+        defaultFontColor: colors.gray[600],
         defaultFontFamily: fonts.base,
         defaultFontSize: 13,
         layout: {
@@ -58,7 +59,8 @@ var ThemeCharts = (function() {
           display: false,
           position: 'bottom',
           labels: {
-            usePointStyle: true
+            usePointStyle: true,
+            padding: 16
           }
         },
         elements: {
@@ -88,11 +90,11 @@ var ThemeCharts = (function() {
           custom: function(model) {
 
             // Get tooltip
-            var $tooltip = $('#chartjs-tooltip');
+            var $tooltip = $('#chart-tooltip');
 
             // Create tooltip on first render
             if (!$tooltip.length) {
-              $tooltip = $('<div id="chartjs-tooltip" class="popover bs-popover-top" role="tooltip"></div>');
+              $tooltip = $('<div id="chart-tooltip" class="popover bs-popover-top" role="tooltip"></div>');
 
               // Append to body
               $('body').append($tooltip);
@@ -188,6 +190,21 @@ var ThemeCharts = (function() {
               return content;
             }
           }
+        },
+        legendCallback: function(chart) {
+          var data = chart.data;
+          var content = '';
+
+          data.labels.forEach(function(label, index) {
+            var bgColor = data.datasets[0].backgroundColor[index];
+
+            content += '<span class="chart-legend-item">';
+            content += '<i class="chart-legend-indicator" style="background-color: ' + bgColor + '"></i>';
+            content += label;
+            content += '</span>';
+          });
+
+          return content;
         }
       }
     }
@@ -463,6 +480,7 @@ var Orders = (function() {
   //
   // Init chart
 
+  // Init chart
   function init($chart) {
 
     // Create chart
@@ -485,10 +503,11 @@ var Orders = (function() {
   //
   // Orders chart events
 
+  // Init chart
   if ($ordersChart.length) {
     init($ordersChart);
   }
-
+  
 })();
 
 
@@ -503,20 +522,16 @@ var Devices = (function() {
 
   var $devicesChart = $('#devicesChart');
 
-  // Init
+  // Methods
   //
-  // Init chart
+  // Chart functions
 
+  // Init chart
   function init($chart) {
 
     // Create chart
     var devicesChart = new Chart($chart, {
       type: 'doughnut',
-      options: {
-        legend: {
-          display: true
-        }
-      },
       data: {
         labels: ['Desktop', 'Tablet', 'Mobile'],
         datasets: [{
@@ -535,13 +550,26 @@ var Devices = (function() {
     $chart.data('chart', devicesChart);
   }
 
+  // Generate legend
+  function generateLegend($chart) {
+    var content = $chart.data('chart').generateLegend();
+    var legend = $chart.data('target');
+    var $legend = $(legend);
+
+    $legend.html(content);
+  }
+
   // Events
   //
-  // Devices chart events
+  // Chart events
 
+  // Init chart
   if ($devicesChart.length) {
     init($devicesChart);
   }
+
+  // Generate legend
+  generateLegend($devicesChart);
 
 })();
 
