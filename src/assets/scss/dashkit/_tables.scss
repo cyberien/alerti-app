@@ -28,7 +28,20 @@
   thead th {
     font-size: $font-size-xs;
   }
+
   tbody td {
     font-size: $font-size-sm;
+  }
+}
+
+
+//
+// Dashkit =====================================
+//
+
+.table-nowrap {
+
+  th, td {
+    white-space: nowrap;
   }
 }

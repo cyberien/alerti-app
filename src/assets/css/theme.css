@@ -15049,6 +15049,12 @@ body
     font-size: .8125rem;
 }
 
+.table-nowrap th,
+.table-nowrap td
+{
+    white-space: nowrap;
+}
+
 h1,
 .h1
 {
