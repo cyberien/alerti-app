@@ -563,13 +563,14 @@ var Devices = (function() {
   //
   // Chart events
 
-  // Init chart
   if ($devicesChart.length) {
-    init($devicesChart);
-  }
 
-  // Generate legend
-  generateLegend($devicesChart);
+    // Init chart
+    init($devicesChart);
+
+    // Generate legend
+    generateLegend($devicesChart);
+  }
 
 })();
 
