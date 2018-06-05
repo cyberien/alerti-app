@@ -7,7 +7,14 @@
 // Bootstrap Overrides =====================================
 //
 
+.alert {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 // Allow for a text-decoration since links are the same color as the alert text.
+
 .alert-link {
   text-decoration: $alert-link-text-decoration;
 }

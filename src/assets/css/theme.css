@@ -12889,6 +12889,14 @@ a.text-body:focus
     }
 }
 
+.alert
+{
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
 .alert-link
 {
     text-decoration: underline;
