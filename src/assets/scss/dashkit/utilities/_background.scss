@@ -13,5 +13,9 @@
 // the background-attachment property will use 100vw instead
 
 .navbar-vertical ~ .main-content.bg-fixed-bottom {
-  background-size: calc(100% - #{$navbar-vertical-width});
+  background-size: 100%;
+
+  @include media-breakpoint-up(md) {
+    background-size: calc(100% - #{$navbar-vertical-width}); 
+  }
 }

@@ -102,7 +102,7 @@ var ThemeCharts = (function() {
 
             // Hide if no tooltip
             if (model.opacity === 0) {
-              $tooltip.css('display', 'none');
+              $tooltip.css('display', 'block');
               return;
             }
 
@@ -129,7 +129,8 @@ var ThemeCharts = (function() {
                 var colors = model.labelColors[i];
                 var styles = 'background-color: ' + colors.backgroundColor;
                 var indicator = '<span class="popover-body-indicator" style="' + styles + '"></span>';
-                html += '<div class="popover-body d-flex align-items-center">' + indicator + body + '</div>';
+                var align = (bodyLines.length > 1) ? 'justify-content-left' : 'justify-content-center';
+                html += '<div class="popover-body d-flex align-items-center ' + align + '">' + indicator + body + '</div>';
               });
 
               $tooltip.html(html);

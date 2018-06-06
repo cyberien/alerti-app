@@ -33,11 +33,11 @@ h6.text-uppercase {
 }
 
 
-// Links
+// Links, buttons
 //
 // Removes focus outline
 
-a {
+a, button {
 
   &:focus {
     outline: none !important;

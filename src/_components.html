@@ -9,7 +9,9 @@
 
     <!-- SIDEBAR
     ================================================== -->
-    @@include("partials/sidebar.html")
+    @@include("partials/sidebar.html", {
+      "userNav": true
+    })
 
     <!-- MAIN CONTENT
     ================================================== -->
@@ -40,7 +42,7 @@
           <!-- Form -->
           <form class="form-inline mr-4 d-none d-md-flex">
             <div class="input-group input-group-rounded input-group-merge">
-              <input type="search" class="form-control form-control-prepended dropdown-toggle" data-toggle="dropdown" placeholder="Search" aria-label="Search">
+              <input type="search" class="form-control form-control-prepended" placeholder="Search" aria-label="Search">
               <div class="input-group-prepend">
                 <div class="input-group-text">
                   <i class="fe fe-search"></i>

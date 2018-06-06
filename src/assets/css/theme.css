@@ -14060,8 +14060,7 @@ a.text-body:focus
 }
 .navbar-expand-xs .navbar-nav .nav-link
 {
-    padding-right: .5rem; 
-    padding-left: .5rem;
+    padding: .625rem .5rem;
 }
 .navbar-expand-xs .navbar-nav .nav-link.active
 {
@@ -14105,8 +14104,7 @@ a.text-body:focus
     }
     .navbar-expand-sm .navbar-nav .nav-link
     {
-        padding-right: .5rem; 
-        padding-left: .5rem;
+        padding: .625rem .5rem;
     }
     .navbar-expand-sm .navbar-nav .nav-link.active
     {
@@ -14151,8 +14149,7 @@ a.text-body:focus
     }
     .navbar-expand-md .navbar-nav .nav-link
     {
-        padding-right: .5rem; 
-        padding-left: .5rem;
+        padding: .625rem .5rem;
     }
     .navbar-expand-md .navbar-nav .nav-link.active
     {
@@ -14197,8 +14194,7 @@ a.text-body:focus
     }
     .navbar-expand-lg .navbar-nav .nav-link
     {
-        padding-right: .5rem; 
-        padding-left: .5rem;
+        padding: .625rem .5rem;
     }
     .navbar-expand-lg .navbar-nav .nav-link.active
     {
@@ -14243,8 +14239,7 @@ a.text-body:focus
     }
     .navbar-expand-xl .navbar-nav .nav-link
     {
-        padding-right: .5rem; 
-        padding-left: .5rem;
+        padding: .625rem .5rem;
     }
     .navbar-expand-xl .navbar-nav .nav-link.active
     {
@@ -14320,10 +14315,6 @@ a.text-body:focus
     display: none;
 }
 
-.navbar-form-control:focus
-{
-    width: 315px;
-}
 .navbar-form-control:focus ~ .dropdown-menu
 {
     display: flex;
@@ -14442,8 +14433,7 @@ a.text-body:focus
 }
 .navbar-vertical.navbar-expand-xs .navbar-nav .nav-link
 {
-    padding-right: 1.5rem; 
-    padding-left: 1.5rem;
+    padding: .5rem 1.5rem;
 }
 .navbar-vertical.navbar-expand-xs .navbar-nav .nav-link.active:before
 {
@@ -14557,8 +14547,7 @@ a.text-body:focus
     }
     .navbar-vertical.navbar-expand-sm .navbar-nav .nav-link
     {
-        padding-right: 1.5rem; 
-        padding-left: 1.5rem;
+        padding: .5rem 1.5rem;
     }
     .navbar-vertical.navbar-expand-sm .navbar-nav .nav-link.active:before
     {
@@ -14673,8 +14662,7 @@ a.text-body:focus
     }
     .navbar-vertical.navbar-expand-md .navbar-nav .nav-link
     {
-        padding-right: 1.5rem; 
-        padding-left: 1.5rem;
+        padding: .5rem 1.5rem;
     }
     .navbar-vertical.navbar-expand-md .navbar-nav .nav-link.active:before
     {
@@ -14789,8 +14777,7 @@ a.text-body:focus
     }
     .navbar-vertical.navbar-expand-lg .navbar-nav .nav-link
     {
-        padding-right: 1.5rem; 
-        padding-left: 1.5rem;
+        padding: .5rem 1.5rem;
     }
     .navbar-vertical.navbar-expand-lg .navbar-nav .nav-link.active:before
     {
@@ -14905,8 +14892,7 @@ a.text-body:focus
     }
     .navbar-vertical.navbar-expand-xl .navbar-nav .nav-link
     {
-        padding-right: 1.5rem; 
-        padding-left: 1.5rem;
+        padding: .5rem 1.5rem;
     }
     .navbar-vertical.navbar-expand-xl .navbar-nav .nav-link.active:before
     {
@@ -15114,7 +15100,8 @@ h6.text-uppercase
     letter-spacing: .08em;
 }
 
-a:focus
+a:focus,
+button:focus
 {
     outline: none !important;
 }
@@ -15159,7 +15146,14 @@ a:focus
 
 .navbar-vertical ~ .main-content.bg-fixed-bottom
 {
-    background-size: calc(100% - 250px);
+    background-size: 100%;
+}
+@media (min-width: 768px)
+{
+    .navbar-vertical ~ .main-content.bg-fixed-bottom
+    {
+        background-size: calc(100% - 250px);
+    }
 }
 
 .border-2
