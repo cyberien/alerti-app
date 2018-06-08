@@ -13462,11 +13462,6 @@ a.text-body:focus
     box-shadow: none;
 }
 
-.dropdown-toggle:focus
-{
-    outline: none !important;
-}
-
 .dropdown-ellipses
 {
     font-size: 1.0625rem;
@@ -13971,6 +13966,17 @@ a.text-body:focus
     border-bottom: 1px solid #e3ebf6;
 }
 
+.navbar-brand
+{
+    margin-right: 0;
+}
+
+.navbar-brand-img
+{
+    max-width: 100%;
+    max-height: 1.5rem;
+}
+
 .navbar-collapse
 {
     margin-right: -1rem;
@@ -13987,25 +13993,6 @@ a.text-body:focus
     content: '';
 
     border-top: 1px solid #e3ebf6;
-}
-
-.navbar-nav .nav-link > .fe
-{
-    font-size: 1.0625rem;
-    line-height: 1.40625rem; 
-
-    min-width: 1.75rem;
-}
-
-.navbar-brand
-{
-    margin-right: 0;
-}
-
-.navbar-brand-img
-{
-    max-width: 100%;
-    max-height: 1.5rem;
 }
 
 .navbar-nav
@@ -14033,6 +14020,19 @@ a.text-body:focus
     content: '';
 
     border-left: 2px solid #2c7be5;
+}
+
+.navbar-nav .nav-link > .fe
+{
+    font-size: 1.0625rem;
+    line-height: 1.40625rem; 
+
+    min-width: 1.75rem;
+}
+
+.navbar-nav .dropdown-menu
+{
+    border: none;
 }
 
 .navbar-expand-xs
@@ -14075,6 +14075,10 @@ a.text-body:focus
 
     border-bottom: 1px solid #2c7be5; 
     border-left: 0;
+}
+.navbar-expand-xs .navbar-nav .dropdown-menu
+{
+    border: 1px solid rgba(18, 38, 63, .1);
 }
 
 @media (min-width: 576px)
@@ -14119,6 +14123,10 @@ a.text-body:focus
 
         border-bottom: 1px solid #2c7be5; 
         border-left: 0;
+    }
+    .navbar-expand-sm .navbar-nav .dropdown-menu
+    {
+        border: 1px solid rgba(18, 38, 63, .1);
     }
 }
 
@@ -14165,6 +14173,10 @@ a.text-body:focus
         border-bottom: 1px solid #2c7be5; 
         border-left: 0;
     }
+    .navbar-expand-md .navbar-nav .dropdown-menu
+    {
+        border: 1px solid rgba(18, 38, 63, .1);
+    }
 }
 
 @media (min-width: 992px)
@@ -14210,6 +14222,10 @@ a.text-body:focus
         border-bottom: 1px solid #2c7be5; 
         border-left: 0;
     }
+    .navbar-expand-lg .navbar-nav .dropdown-menu
+    {
+        border: 1px solid rgba(18, 38, 63, .1);
+    }
 }
 
 @media (min-width: 1200px)
@@ -14254,6 +14270,10 @@ a.text-body:focus
 
         border-bottom: 1px solid #2c7be5; 
         border-left: 0;
+    }
+    .navbar-expand-xl .navbar-nav .dropdown-menu
+    {
+        border: 1px solid rgba(18, 38, 63, .1);
     }
 }
 

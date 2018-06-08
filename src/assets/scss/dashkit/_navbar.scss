@@ -12,6 +12,19 @@
   border-bottom: 1px solid $border-color;
 }
 
+
+// Navbar brand
+
+.navbar-brand {
+  margin-right: 0;
+}
+
+.navbar-brand-img {
+  max-width: 100%;
+  max-height: 1.5rem;
+}
+
+
 // Navbar collapse
 
 .navbar-collapse {
@@ -29,27 +42,6 @@
     border-top: 1px solid $border-color;
     margin: $navbar-padding-y (-$navbar-padding-x);
   }
-}
-
-
-// Navbar icons
-
-.navbar-nav .nav-link > .fe {
-  min-width: $navbar-icon-min-width; // Note: Test if we actually need this?
-  font-size: $font-size-lg;
-  line-height: ($font-size-base * $line-height-base);
-}
-
-
-// Navbar brand
-
-.navbar-brand {
-  margin-right: 0;
-}
-
-.navbar-brand-img {
-  max-width: 100%;
-  max-height: 1.5rem;
 }
 
 
@@ -79,6 +71,22 @@
 }
 
 
+// Navbar icons
+
+.navbar-nav .nav-link > .fe {
+  min-width: $navbar-icon-min-width; // Note: Test if we actually need this?
+  font-size: $font-size-lg;
+  line-height: ($font-size-base * $line-height-base);
+}
+
+
+// Navbar dropdowns
+
+.navbar-nav .dropdown-menu {
+  border: none;
+}
+
+
 // Expanded
 // 
 // Expanded navbar specific styles
@@ -93,12 +101,14 @@
         padding-left: 0;
         padding-right: 0;
 
+
         // Container
 
         .navbar > [class*="container"] {
           padding-left: 0;
           padding-right: 0;
         }
+
 
         // Navbar collapse
 
@@ -109,6 +119,7 @@
             display: none;
           }
         }
+
 
         // Navbar navigation
 
@@ -137,6 +148,14 @@
             }
           }
         }
+
+
+        // Navbar dropdowns
+
+        .navbar-nav .dropdown-menu {
+          border: $dropdown-border-width solid $dropdown-border-color;
+        }
+
       }
     }
   }

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-light bg-white">
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
   <div class="container">
 
     <!-- Toggler -->
@@ -12,7 +12,7 @@
     </a>
 
     <!-- Form -->
-    <form class="form-inline mr-4 d-none d-md-flex">
+    <form class="form-inline mr-4 d-none d-lg-flex">
       <div class="input-group input-group-rounded input-group-merge">
         <input type="search" class="form-control form-control-prepended  dropdown-toggle navbar-form-control" placeholder="Search" aria-label="Search">
         <div class="input-group-prepend">
@@ -137,7 +137,7 @@
     <div class="navbar-user">
       
       <!-- Dropdown -->
-      <div class="dropdown mr-4 d-none d-md-flex">
+      <div class="dropdown mr-4 d-none d-lg-flex">
         
         <!-- Toggle -->
         <a href="#" class="text-muted" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -424,7 +424,7 @@
     </div>
 
     <!-- Collapse -->
-    <div class="collapse navbar-collapse mr-auto order-md-first" id="navbar">
+    <div class="collapse navbar-collapse mr-auto order-lg-first" id="navbar">
 
       <!-- Form -->
       <form class="mt-4 mb-3 d-md-none">
@@ -438,20 +438,46 @@
             Dashboard
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="topnavPages" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Pages
           </a>
+          <ul class="dropdown-menu" aria-labelledby="topnavPages">
+            <li>
+              <a class="dropdown-item" href="#">Action</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Another action</a>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-item dropdown-toggle" href="#" id="topnavDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Something else here</a>
+              <div class="dropdown-menu" aria-labelledby="topnavLayouts">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+          </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="topnavLayouts" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Layouts
           </a>
+          <div class="dropdown-menu" aria-labelledby="topnavLayouts">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="topnavDocs" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Docs
           </a>
+          <div class="dropdown-menu" aria-labelledby="topnavDocs">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
         </li>
         <li class="nav-item d-md-none">
           <a class="nav-link" href="#">

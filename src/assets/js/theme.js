@@ -5,6 +5,61 @@
 
 'use strict';
 
+
+//
+// Dropdowns
+//
+
+var Dropdowns = (function() {
+
+  // Variables
+  //
+  // Dropdown variales
+
+  var $dropdown = $('.dropdown');
+  var $dropdownSubmenu = $('.dropdown-menu .dropdown-menu');
+  var $dropdownSubmenuToggle = $('.dropdown-menu .dropdown-toggle');
+
+
+  // Methods
+  //
+  // Droddown functions
+
+  // Toggle submenu
+  function toggleSubmenu(toggle) {
+    toggle.next($dropdownSubmenu).toggleClass('show');
+  }
+
+  // Hide submenu
+  function hideSubmenu(dropdown) {
+    var $submenu = dropdown.find($dropdownSubmenu);
+
+    // Check if there is a submenu
+    if ($submenu.length) {
+      $submenu.removeClass('show');
+    }
+  }
+
+
+  // Events
+  //
+  // Dropdown events
+
+  // Toggle submenu
+  $dropdownSubmenuToggle.on('click', function() {
+    toggleSubmenu($(this));
+
+    return false;
+  });
+
+  // Hide submenu
+  $dropdown.on('hide.bs.dropdown', function() {
+    hideSubmenu($(this));
+  });
+
+})();
+
+
 //
 // ThemeCharts ==================================
 //
@@ -102,7 +157,7 @@ var ThemeCharts = (function() {
 
             // Hide if no tooltip
             if (model.opacity === 0) {
-              $tooltip.css('display', 'block');
+              $tooltip.css('display', 'none');
               return;
             }
 
