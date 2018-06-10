@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include("partials/head.html", {
+      "pageTitle": "Dashkit"
+    })
+  </head>
+  <body>
+
+    <!-- MODALS
+    ================================================== -->
+    @@include("partials/modals.html")
+
+    <!-- SIDEBAR
+    ================================================== -->
+    @@include("partials/sidebar.html", {
+      "userNav": true
+    })
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10 col-xl-8">
+            
+            <!-- Header -->
+            <div class="header mt-md-5">
+              <div class="header-body">
+
+                <!-- Title -->
+                <h1 class="header-title">
+                  Comments
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="header-subtitle">
+                  Used to show a user or company’s photo, initials, online status, or in a stack all together.
+                </p>
+
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="card">
+              <div class="card-body">
+                
+                <div class="comment">
+                  <div class="row">
+                    <div class="col-auto">
+
+                      <!-- Avatar -->
+                      <a class="avatar" href="#">
+                        <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                      </a>
+
+                    </div>
+                    <div class="col ml--2">
+                      
+                      <!-- Body -->
+                      <div class="comment-body">
+
+                        <div class="row">
+                          <div class="col">
+
+                            <!-- Title -->
+                            <h5 class="comment-title">
+                              Casey Fyfe
+                            </h5>
+
+                          </div>
+                          <div class="col-auto">
+
+                            <!-- Time -->
+                            <time class="comment-time">
+                              11:12
+                            </time>
+
+                          </div>
+                        </div> <!-- / .row -->
+
+                        <!-- Text -->
+                        <p class="comment-text">
+                          I can’t even begin to express how good this final season of The Americans has been. If you haven’t been watching, I implore you to do so. Also, I’ve always wanted to implore someone
+                        </p>
+
+                      </div>
+
+                    </div>
+                  </div> <!-- / .row -->
+                </div>
+
+              </div>
+              <div class="card-footer bg-dark">
+                <code class="highlight html bg-dark">
+                  &lt;div&nbsp;class=&quot;comment&quot;&gt;<br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;row&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;class=&quot;avatar&quot;&nbsp;href=&quot;#&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/6.jpg&quot;&nbsp;alt=&quot;...&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col&nbsp;ml--2&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;comment-body&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;row&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col&quot;&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h5&nbsp;class=&quot;comment-title&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Casey&nbsp;Fyfe<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h5&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;time&nbsp;class=&quot;comment-time&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11:12<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/time&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&nbsp;class=&quot;comment-text&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I&nbsp;can&#x2019;t&nbsp;even&nbsp;begin&nbsp;to&nbsp;express&nbsp;how&nbsp;good&nbsp;this&nbsp;final&nbsp;season&nbsp;of&nbsp;The&nbsp;Americans&nbsp;has&nbsp;been.&nbsp;If&nbsp;you&nbsp;haven&#x2019;t&nbsp;been&nbsp;watching,&nbsp;I&nbsp;implore&nbsp;you&nbsp;to&nbsp;do&nbsp;so.&nbsp;Also,&nbsp;I&#x2019;ve&nbsp;always&nbsp;wanted&nbsp;to&nbsp;implore&nbsp;someone<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&lt;/div&gt;<br/>&lt;/div&gt;
+                </code>
+              </div>
+            </div>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container-fluid -->
+    </div> <!-- / .main-content -->
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("partials/scripts.html")
+
+  </body>
+</html>

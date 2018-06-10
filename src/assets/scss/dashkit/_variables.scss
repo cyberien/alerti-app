@@ -62,7 +62,8 @@ $theme-colors: map-merge((
   "light":      $light,
   "dark":       $dark,
   "white":      $white,
-  "body":       $gray-100 // body background
+  "body":       $gray-100, // body background
+  "gray-900":   $gray-900
 ), $theme-colors);
 // stylelint-enable
 

@@ -3,10 +3,79 @@
 // Extended from Bootstrap
 // 
 
+//
+// Bootstrap overrides ==================================
+//
+
+// Dropdown arrows
+//
+// Replace original arrows with Feather icons
+
+.dropup, .dropright, .dropdown, .dropleft {
+
+  > .dropdown-toggle {
+
+    &:after {
+      width: auto; height: auto;
+      border: none;
+      vertical-align: middle;
+      font-family: 'Feather';
+    }
+  }
+}
+
+.dropup > .dropdown-toggle {
+
+  &:after {
+    content: '\e931';
+  }
+}
+
+.dropright > .dropdown-toggle {
+
+  &:after {
+    content: '\e930';
+  }
+}
+
+.dropdown > .dropdown-toggle {
+
+  &:after {
+    content: '\e92e';
+  }
+}
+
+.dropup > .dropdown-toggle {
+
+  &:after {
+    content: '\e931';
+  }
+}
+
+
+// Dropdown menu animation
+//
+// Animate dropdown menu appearance
+
+.dropdown-menu {
+  animation: dropdownMenu .15s;
+}
+
+@keyframes dropdownMenu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
 
 //
 // Dashkit ===================================
 //
+
 
 // Dropdown ellipses
 //

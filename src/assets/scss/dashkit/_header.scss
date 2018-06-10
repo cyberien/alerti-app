@@ -40,6 +40,12 @@
   margin-bottom: 0;
 }
 
+.header-subtitle {
+  margin-top: map-get($spacers, 2);
+  margin-bottom: 0;
+  color: $text-muted;
+}
+
 .header-tabs {
   margin-bottom: -$header-spacing-y;
   border-bottom-width: 0;

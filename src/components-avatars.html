@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include("partials/head.html", {
+      "pageTitle": "Dashkit"
+    })
+  </head>
+  <body>
+
+    <!-- MODALS
+    ================================================== -->
+    @@include("partials/modals.html")
+
+    <!-- SIDEBAR
+    ================================================== -->
+    @@include("partials/sidebar.html", {
+      "userNav": true
+    })
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10 col-xl-8">
+            
+            <!-- Header -->
+            <div class="header mt-md-5">
+              <div class="header-body">
+
+                <!-- Title -->
+                <h1 class="header-title">
+                  Avatars
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="header-subtitle">
+                  Used to show a user or company’s photo, initials, online status, or in a stack all together.
+                </p>
+
+              </div>
+            </div>
+
+            <!-- Heading -->
+            <h2 class="mb-2">
+              Sizing
+            </h2>
+            
+            <!-- Subheading -->
+            <p class="text-muted mb-4">
+              Using Bootstrap’s typical naming structure, you can create a standard avatar, or scale it up to different sizes based on what’s needed.
+            </p>
+
+            <!-- Card -->
+            <div class="card">
+              <div class="card-body">
+                
+                <div class="avatar avatar-xxl">
+                  <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                </div>
+
+                <div class="avatar avatar-xl">
+                  <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                </div>
+
+                <div class="avatar avatar-lg">
+                  <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                </div>
+
+                <div class="avatar">
+                  <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                </div>
+
+                <div class="avatar avatar-sm">
+                  <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                </div>
+
+                <div class="avatar avatar-xs">
+                  <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                </div>
+
+              </div>
+              <div class="card-footer bg-dark">
+                <code class="highlight html bg-dark">
+                  &lt;div&nbsp;class=&quot;avatar&nbsp;avatar-xxl&quot;&gt;<br/>&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/6.jpg&quot;&nbsp;alt=&quot;...&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&quot;&gt;<br/>&lt;/div&gt;<br/><br/>&lt;div&nbsp;class=&quot;avatar&nbsp;avatar-xl&quot;&gt;<br/>&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/6.jpg&quot;&nbsp;alt=&quot;...&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&quot;&gt;<br/>&lt;/div&gt;<br/><br/>&lt;div&nbsp;class=&quot;avatar&nbsp;avatar-lg&quot;&gt;<br/>&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/6.jpg&quot;&nbsp;alt=&quot;...&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&quot;&gt;<br/>&lt;/div&gt;<br/><br/>&lt;div&nbsp;class=&quot;avatar&quot;&gt;<br/>&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/6.jpg&quot;&nbsp;alt=&quot;...&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&quot;&gt;<br/>&lt;/div&gt;<br/><br/>&lt;div&nbsp;class=&quot;avatar&nbsp;avatar-sm&quot;&gt;<br/>&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/6.jpg&quot;&nbsp;alt=&quot;...&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&quot;&gt;<br/>&lt;/div&gt;<br/><br/>&lt;div&nbsp;class=&quot;avatar&nbsp;avatar-xs&quot;&gt;<br/>&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/6.jpg&quot;&nbsp;alt=&quot;...&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&quot;&gt;<br/>&lt;/div&gt;
+                </code>
+              </div>
+            </div>
+
+            <!-- Divider -->
+            <hr class="my-5">
+
+            <!-- Heading -->
+            <h2 class="mb-2">
+              Status Indicator
+            </h2>
+            
+            <!-- Subheading -->
+            <p class="text-muted mb-4">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, minus repellendus ex veniam nesciunt est ratione, tempore soluta maxime, sunt, esse! Rem perferendis illo blanditiis recusandae molestias beatae magni odio.
+            </p>
+
+            <!-- Card -->
+            <div class="card">
+              <div class="card-body">
+                
+                <div class="avatar avatar-xxl avatar-offline">
+                  <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                </div>
+
+                <div class="avatar avatar-xl avatar-online">
+                  <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                </div>
+
+                <div class="avatar avatar-lg avatar-offline">
+                  <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                </div>
+
+                <div class="avatar avatar-online">
+                  <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                </div>
+
+                <div class="avatar avatar-sm avatar-offline">
+                  <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                </div>
+
+                <div class="avatar avatar-xs avatar-online">
+                  <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                </div>
+
+              </div>
+              <div class="card-footer bg-dark">
+                <code class="highlight html bg-dark">
+                  &lt;div&nbsp;class=&quot;avatar&nbsp;avatar-online&quot;&gt;<br/>&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/6.jpg&quot;&nbsp;alt=&quot;...&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&quot;&gt;<br/>&lt;/div&gt;<br/><br/>&lt;div&nbsp;class=&quot;avatar&nbsp;avatar-offline&quot;&gt;<br/>&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/6.jpg&quot;&nbsp;alt=&quot;...&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&quot;&gt;<br/>&lt;/div&gt;
+                </code>
+              </div>
+            </div>
+
+            <!-- Divider -->
+            <hr class="my-5">
+
+            <!-- Heading -->
+            <h2 class="mb-2">
+              Shape
+            </h2>
+            
+            <!-- Subheading -->
+            <p class="text-muted mb-4">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, minus repellendus ex veniam nesciunt est ratione, tempore soluta maxime, sunt, esse! Rem perferendis illo blanditiis recusandae molestias beatae magni odio.
+            </p>
+
+            <!-- Card -->
+            <div class="card">
+              <div class="card-body">
+                
+                <div class="avatar avatar-xxl">
+                  <img src="assets/img/8.jpg" alt="..." class="avatar-img rounded">
+                </div>
+
+                <div class="avatar avatar-xxl">
+                  <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                </div>
+
+                <div class="avatar avatar-lg">
+                  <img src="assets/img/8.jpg" alt="..." class="avatar-img rounded">
+                </div>
+
+                <div class="avatar avatar-lg">
+                  <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                </div>
+
+                <div class="avatar">
+                  <img src="assets/img/8.jpg" alt="..." class="avatar-img rounded">
+                </div>
+
+                <div class="avatar">
+                  <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                </div>
+
+              </div>
+              <div class="card-footer bg-dark">
+                <code class="highlight html bg-dark">
+                  &lt;div&nbsp;class=&quot;avatar&quot;&gt;<br/>&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/8.jpg&quot;&nbsp;alt=&quot;...&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded&quot;&gt;<br/>&lt;/div&gt;<br/><br/>&lt;div&nbsp;class=&quot;avatar&quot;&gt;<br/>&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/6.jpg&quot;&nbsp;alt=&quot;...&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&quot;&gt;<br/>&lt;/div&gt;
+                </code>
+              </div>
+            </div>
+
+            <!-- Divider -->
+            <hr class="my-5">
+
+            <!-- Heading -->
+            <h2 class="mb-2">
+              Initials
+            </h2>
+            
+            <!-- Subheading -->
+            <p class="text-muted mb-4">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, minus repellendus ex veniam nesciunt est ratione, tempore soluta maxime, sunt, esse! Rem perferendis illo blanditiis recusandae molestias beatae magni odio.
+            </p>
+
+            <!-- Card -->
+            <div class="card">
+              <div class="card-body">
+                
+                <div class="avatar avatar-xxl">
+                  <span class="avatar-title rounded-circle">CF</span>
+                </div>
+
+                <div class="avatar avatar-lg">
+                  <span class="avatar-title rounded-circle">CF</span>
+                </div>
+
+                <div class="avatar">
+                  <span class="avatar-title rounded-circle">CF</span>
+                </div>
+
+                <div class="avatar avatar-sm">
+                  <span class="avatar-title rounded-circle">CF</span>
+                </div>
+
+                <div class="avatar avatar-xs">
+                  <span class="avatar-title rounded-circle">CF</span>
+                </div>
+
+              </div>
+              <div class="card-footer bg-dark">
+                <code class="highlight html bg-dark">
+                  &lt;div&nbsp;class=&quot;avatar&nbsp;avatar-xxl&quot;&gt;<br/>&nbsp;&nbsp;&lt;span&nbsp;class=&quot;avatar-title&nbsp;rounded-circle&quot;&gt;CF&lt;/span&gt;<br/>&lt;/div&gt;<br/><br/>&lt;div&nbsp;class=&quot;avatar&nbsp;avatar-lg&quot;&gt;<br/>&nbsp;&nbsp;&lt;span&nbsp;class=&quot;avatar-title&nbsp;rounded-circle&quot;&gt;CF&lt;/span&gt;<br/>&lt;/div&gt;<br/><br/>&lt;div&nbsp;class=&quot;avatar&quot;&gt;<br/>&nbsp;&nbsp;&lt;span&nbsp;class=&quot;avatar-title&nbsp;rounded-circle&quot;&gt;CF&lt;/span&gt;<br/>&lt;/div&gt;<br/><br/>&lt;div&nbsp;class=&quot;avatar&nbsp;avatar-sm&quot;&gt;<br/>&nbsp;&nbsp;&lt;span&nbsp;class=&quot;avatar-title&nbsp;rounded-circle&quot;&gt;CF&lt;/span&gt;<br/>&lt;/div&gt;<br/><br/>&lt;div&nbsp;class=&quot;avatar&nbsp;avatar-xs&quot;&gt;<br/>&nbsp;&nbsp;&lt;span&nbsp;class=&quot;avatar-title&nbsp;rounded-circle&quot;&gt;CF&lt;/span&gt;<br/>&lt;/div&gt;
+                </code>
+              </div>
+            </div>
+
+            <!-- Divider -->
+            <hr class="my-5">
+
+            <!-- Heading -->
+            <h2 class="mb-2">
+              Groups
+            </h2>
+            
+            <!-- Subheading -->
+            <p class="text-muted mb-4">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, minus repellendus ex veniam nesciunt est ratione, tempore soluta maxime, sunt, esse! Rem perferendis illo blanditiis recusandae molestias beatae magni odio.
+            </p>
+
+            <!-- Card -->
+            <div class="card">
+              <div class="card-body">
+                
+                <div class="avatar-group">
+                  <div class="avatar avatar-lg">
+                    <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+                  </div>
+                  <div class="avatar avatar-lg">
+                    <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+                  </div>
+                  <div class="avatar avatar-lg">
+                    <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+                  </div>
+                  <div class="avatar avatar-lg">
+                    <span class="avatar-title rounded-circle border border-white">CF</span>
+                  </div>
+                </div>
+
+                <div class="avatar-group">
+                  <div class="avatar">
+                    <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+                  </div>
+                  <div class="avatar">
+                    <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+                  </div>
+                  <div class="avatar">
+                    <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+                  </div>
+                  <div class="avatar">
+                    <span class="avatar-title rounded-circle border border-white">CF</span>
+                  </div>
+                </div>
+
+                <div class="avatar-group">
+                  <div class="avatar avatar-xs">
+                    <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+                  </div>
+                  <div class="avatar avatar-xs">
+                    <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+                  </div>
+                  <div class="avatar avatar-xs">
+                    <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+                  </div>
+                  <div class="avatar avatar-xs">
+                    <span class="avatar-title rounded-circle border border-white">CF</span>
+                  </div>
+                </div>
+
+              </div>
+              <div class="card-footer bg-dark">
+                <code class="highlight html bg-dark">
+                  &lt;div&nbsp;class=&quot;avatar-group&quot;&gt;<br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;avatar&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/6.jpg&quot;&nbsp;alt=&quot;...&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&nbsp;border&nbsp;border-white&quot;&gt;<br/>&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;avatar&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/6.jpg&quot;&nbsp;alt=&quot;...&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&nbsp;border&nbsp;border-white&quot;&gt;<br/>&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;avatar&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/6.jpg&quot;&nbsp;alt=&quot;...&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&nbsp;border&nbsp;border-white&quot;&gt;<br/>&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;avatar&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;avatar-title&nbsp;rounded-circle&nbsp;border&nbsp;border-white&quot;&gt;CF&lt;/span&gt;<br/>&nbsp;&nbsp;&lt;/div&gt;<br/>&lt;/div&gt;
+                </code>
+              </div>
+            </div>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container-fluid -->
+    </div> <!-- / .main-content -->
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("partials/scripts.html")
+
+  </body>
+</html>

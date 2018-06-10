@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include("partials/head.html", {
+      "pageTitle": "Dashkit"
+    })
+  </head>
+  <body>
+
+    <!-- MODALS
+    ================================================== -->
+    @@include("partials/modals.html")
+
+    <!-- SIDEBAR
+    ================================================== -->
+    @@include("partials/sidebar.html", {
+      "userNav": true
+    })
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10 col-xl-8">
+            
+            <!-- Header -->
+            <div class="header mt-md-5">
+              <div class="header-body">
+
+                <!-- Title -->
+                <h1 class="header-title">
+                  Cards
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="header-subtitle">
+                  Used to show a user or company’s photo, initials, online status, or in a stack all together.
+                </p>
+
+              </div>
+            </div>
+
+            <!-- Heading -->
+            <h2 class="mb-2">
+              Title
+            </h2>
+            
+            <!-- Subheading -->
+            <p class="text-muted mb-4">
+              Using Bootstrap’s typical naming structure, you can create a standard avatar, or scale it up to different sizes based on what’s needed.
+            </p>
+
+            <!-- Card -->
+            <div class="card">
+              <div class="card-header">
+                
+                <h4 class="card-header-title">
+                  Card title
+                </h4>
+
+              </div>
+              <div class="card-body">
+                
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis tempora architecto, sit a repellat dignissimos consequatur mollitia qui consequuntur recusandae numquam voluptate maiores, non cumque illo laboriosam sint dolores. Nostrum.
+                </p>
+
+              </div>
+              <div class="card-footer bg-dark">
+                <code class="highlight html bg-dark">
+                  &lt;div&nbsp;class=&quot;card&quot;&gt;<br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;card-header&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&nbsp;class=&quot;card-header-title&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Card&nbsp;title<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h4&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&lt;/div&gt;<br/>&lt;/div&gt;
+                </code>
+              </div>
+            </div>
+
+            <!-- Divider -->
+            <hr class="my-5">
+
+            <!-- Heading -->
+            <h2 class="mb-2">
+              Title + Nav
+            </h2>
+            
+            <!-- Subheading -->
+            <p class="text-muted mb-4">
+              Using Bootstrap’s typical naming structure, you can create a standard avatar, or scale it up to different sizes based on what’s needed.
+            </p>
+
+            <!-- Card -->
+            <div class="card">
+              <div class="card-header">
+                <div class="row align-items-center">
+                  <div class="col">
+
+                    <h4 class="card-header-title">
+                      Card title
+                    </h4>
+                    
+                  </div>
+                  <div class="col-auto">
+
+                    <ul class="nav nav-tabs nav-tabs-sm card-header-tabs">
+                     <li class="nav-item">
+                       <a href="#" class="nav-link active">
+                         Active
+                       </a>
+                     </li>
+                     <li class="nav-item">
+                       <a href="#" class="nav-link">
+                         Link
+                       </a>
+                     </li>
+                     <li class="nav-item">
+                       <a href="#" class="nav-link">
+                         Link
+                       </a>
+                     </li>
+                    </ul>
+
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis tempora architecto, sit a repellat dignissimos consequatur mollitia qui consequuntur recusandae numquam voluptate maiores, non cumque illo laboriosam sint dolores. Nostrum.
+                </p>
+
+              </div>
+              <div class="card-footer bg-dark">
+                <code class="highlight html bg-dark">
+                  &lt;div&nbsp;class=&quot;card&quot;&gt;<br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;card-header&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;row&nbsp;align-items-center&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col&quot;&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&nbsp;class=&quot;card-header-title&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Card&nbsp;title<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h4&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;nav&nbsp;nav-tabs&nbsp;nav-tabs-sm&nbsp;card-header-tabs&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;nav-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;nav-link&nbsp;active&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Active<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;nav-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;nav-link&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Link<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;nav-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;nav-link&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Link<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&lt;/div&gt;<br/>&lt;/div&gt;
+                </code>
+              </div>
+            </div>
+
+            <!-- Divider -->
+            <hr class="my-5">
+
+            <!-- Heading -->
+            <h2 class="mb-2">
+              Inactive
+            </h2>
+            
+            <!-- Subheading -->
+            <p class="text-muted mb-4">
+              Using Bootstrap’s typical naming structure, you can create a standard avatar, or scale it up to different sizes based on what’s needed.
+            </p>
+
+            <!-- Card -->
+            <div class="card card-inactive">
+              <div class="card-body">
+                
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis tempora architecto, sit a repellat dignissimos consequatur mollitia qui consequuntur recusandae numquam voluptate maiores, non cumque illo laboriosam sint dolores. Nostrum.
+                </p>
+
+              </div>
+              <div class="card-footer bg-dark">
+                <code class="highlight html bg-dark">
+                  &lt;div&nbsp;class=&quot;card&nbsp;card-inactive&quot;&gt;<br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;card-body&quot;&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&nbsp;class=&quot;card-text&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet,&nbsp;consectetur&nbsp;adipisicing&nbsp;elit,&nbsp;sed&nbsp;do&nbsp;eiusmod<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tempor&nbsp;incididunt&nbsp;ut&nbsp;labore&nbsp;et&nbsp;dolore&nbsp;magna&nbsp;aliqua.&nbsp;Ut&nbsp;enim&nbsp;ad&nbsp;minim&nbsp;veniam,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;quis&nbsp;nostrud&nbsp;exercitation&nbsp;ullamco&nbsp;laboris&nbsp;nisi&nbsp;ut&nbsp;aliquip&nbsp;ex&nbsp;ea&nbsp;commodo<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;consequat.&nbsp;Duis&nbsp;aute&nbsp;irure&nbsp;dolor&nbsp;in&nbsp;reprehenderit&nbsp;in&nbsp;voluptate&nbsp;velit&nbsp;esse<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cillum&nbsp;dolore&nbsp;eu&nbsp;fugiat&nbsp;nulla&nbsp;pariatur.&nbsp;Excepteur&nbsp;sint&nbsp;occaecat&nbsp;cupidatat&nbsp;non<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;proident,&nbsp;sunt&nbsp;in&nbsp;culpa&nbsp;qui&nbsp;officia&nbsp;deserunt&nbsp;mollit&nbsp;anim&nbsp;id&nbsp;est&nbsp;laborum.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;<br/><br/>&nbsp;&nbsp;&lt;/div&gt;<br/>&lt;/div&gt;<br/>
+                </code>
+              </div>
+            </div>
+
+            <!-- Divider -->
+            <hr class="my-5">
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container-fluid -->
+    </div> <!-- / .main-content -->
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("partials/scripts.html")
+
+  </body>
+</html>

@@ -22,6 +22,7 @@
     
     &:not(.active) {
       color: $gray-600;
+
       &:hover {
         color: $gray-700;
       }
@@ -32,6 +33,7 @@
   .nav-item:first-child .nav-link {
     margin-left: 0;
   }
+
   .nav-item:last-child .nav-link {
     margin-right: 0;
   }
@@ -47,6 +49,24 @@
 // 
 // Dashkit =====================================
 //
+
+// Nav overflow
+//
+// Allow links to overflow and make horizontally scrollable
+
+.nav-overflow {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 1px; // to prevent active links border bottom from hiding
+
+  // Hide scrollbar
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 
 // Creates a small version of the .nav-tabs
 

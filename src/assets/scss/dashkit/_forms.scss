@@ -103,12 +103,12 @@
     border-radius: $input-border-radius-lg;
   }
 
-  > .form-group-prepended {
+  > .form-control-prepended {
     padding-left: $input-padding-x-lg / 2;
 
   }
 
-  > .form-group-appended {
+  > .form-control-appended {
     padding-right: $input-padding-x-lg / 2;
 
   }
@@ -138,14 +138,13 @@
     border-radius: $input-border-radius-sm;
   }
 
-  > .form-group-prepended {
+  > .form-control-prepended {
     padding-left: $input-padding-x-sm / 2;
 
   }
 
-  > .form-group-appended {
+  > .form-control-appended {
     padding-right: $input-padding-x-sm / 2;
-
   }
 
   > .input-group-prepend {
@@ -205,4 +204,55 @@
       border-width: 0;
     }
   }
+}
+
+
+// Flatpickr
+//
+// Flatpickr plugin overrides
+
+.flatpickr-calendar {
+  color: $body-color;
+
+  * {
+    color: inherit !important;
+    fill: currentColor !important;
+  }
+
+  .flatpickr-months {
+    padding-top: .625rem;
+    padding-bottom: .625rem;
+  }
+
+  .flatpickr-prev-month,
+  .flatpickr-next-month {
+    top: .625rem;
+  }
+
+  .flatpickr-current-month {
+    font-size: 115%;
+  }
+
+  .flatpickr-day {
+    border-radius: $border-radius;
+
+    &:hover {
+      background-color: $light;
+    }
+  }
+
+  .flatpickr-day.prevMonthDay {
+    color: $text-muted !important;
+  }
+
+  .flatpickr-day.today {
+    border-color: $border-color;
+  }
+
+  .flatpickr-day.selected {
+    background-color: $primary;
+    border-color: $primary;
+    color: white !important;
+  }
+
 }

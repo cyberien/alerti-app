@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include("partials/head.html", {
+      "pageTitle": "Dashkit"
+    })
+  </head>
+  <body>
+
+    <!-- MODALS
+    ================================================== -->
+    @@include("partials/modals.html")
+
+    <!-- SIDEBAR
+    ================================================== -->
+    @@include("partials/sidebar.html", {
+      "userNav": true
+    })
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10 col-xl-8">
+            
+            <!-- Header -->
+            <div class="header mt-md-5">
+              <div class="header-body">
+
+                <!-- Title -->
+                <h1 class="header-title">
+                  Dropdowns
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="header-subtitle">
+                  Used to show a user or company’s photo, initials, online status, or in a stack all together.
+                </p>
+
+              </div>
+            </div>
+
+            <!-- Heading -->
+            <h2 class="mb-2">
+              Ellipses
+            </h2>
+
+            <!-- Subheading -->
+            <p class="text-muted mb-4">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus ratione minima incidunt, atque praesentium soluta sed eum commodi voluptatibus doloribus quos blanditiis eaque, non. Nostrum sapiente cum dolorum fugiat illum!
+            </p>
+
+            <!-- Card -->
+            <div class="card">
+              <div class="card-header">
+                <div class="row align-items-center">
+                  <div class="col">
+                    
+                    <h4 class="card-header-title">
+                      Latest orders
+                    </h4>
+
+                  </div>
+                  <div class="col-auto">
+                    
+                    <div class="dropdown">
+                      <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fe fe-more-vertical"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a href="#" class="dropdown-item">
+                          Action
+                        </a>
+                        <a href="#" class="dropdown-item">
+                          Another action
+                        </a>
+                        <a href="#" class="dropdown-item">
+                          Something else here
+                        </a>
+                      </div>
+                    </div>
+
+                  </div>
+                </div> <!-- / .row -->
+              </div>
+              <div class="card-footer bg-dark">
+                <code class="highlight html bg-dark">
+                  &lt;div&nbsp;class=&quot;dropdown&quot;&gt;<br/>&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-ellipses&nbsp;dropdown-toggle&quot;&nbsp;role=&quot;button&quot;&nbsp;data-toggle=&quot;dropdown&quot;&nbsp;aria-haspopup=&quot;true&quot;&nbsp;aria-expanded=&quot;false&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;i&nbsp;class=&quot;fe&nbsp;fe-more-vertical&quot;&gt;&lt;/i&gt;<br/>&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dropdown-menu&nbsp;dropdown-menu-right&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Action<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Another&nbsp;action<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Something&nbsp;else&nbsp;here<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&lt;/div&gt;<br/>&lt;/div&gt;
+                </code>
+              </div>
+            </div>
+
+            <!-- Divider -->
+            <hr class="my-5">
+
+            <!-- Heading -->
+            <h2 class="mb-2">
+              Card
+            </h2>
+
+            <!-- Subheading -->
+            <p class="text-muted mb-4">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus ratione minima incidunt, atque praesentium soluta sed eum commodi voluptatibus doloribus quos blanditiis eaque, non. Nostrum sapiente cum dolorum fugiat illum!
+            </p>
+
+            <!-- Card -->
+            <div class="card">
+              <div class="card-body">
+                
+                <div class="dropdown">
+                  <a href="#" class="btn btn-primary dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Card dropdown
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-card">
+                    <div class="card-body">
+                        
+                      <p class="card-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat recusandae rem autem impedit ad odio, enim tempore possimus non minus quod dignissimos ipsum eveniet odit, ratione molestiae, velit a dolorem!
+                      </p>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="card-footer bg-dark">
+                <code class="highlight html bg-dark">
+                  &lt;div&nbsp;class=&quot;dropdown&quot;&gt;<br/>&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;btn&nbsp;btn-primary&nbsp;dropdown-toggle&quot;&nbsp;role=&quot;button&quot;&nbsp;data-toggle=&quot;dropdown&quot;&nbsp;aria-haspopup=&quot;true&quot;&nbsp;aria-expanded=&quot;false&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;Card&nbsp;dropdown<br/>&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dropdown-menu&nbsp;dropdown-menu-card&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;card-body&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&nbsp;class=&quot;card-text&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet,&nbsp;consectetur&nbsp;adipisicing&nbsp;elit.&nbsp;Quaerat&nbsp;recusandae&nbsp;rem&nbsp;autem&nbsp;impedit&nbsp;ad&nbsp;odio,&nbsp;enim&nbsp;tempore&nbsp;possimus&nbsp;non&nbsp;minus&nbsp;quod&nbsp;dignissimos&nbsp;ipsum&nbsp;eveniet&nbsp;odit,&nbsp;ratione&nbsp;molestiae,&nbsp;velit&nbsp;a&nbsp;dolorem!<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&lt;/div&gt;<br/>&lt;/div&gt;
+                </code>
+              </div>
+            </div>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container-fluid -->
+    </div> <!-- / .main-content -->
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("partials/scripts.html")
+
+  </body>
+</html>

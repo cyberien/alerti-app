@@ -86,6 +86,10 @@
   border: none;
 }
 
+.navbar-nav .dropdown-menu .dropdown-menu {
+  margin-left: $dropdown-item-padding-x / 2;
+}
+
 
 // Expanded
 // 
@@ -154,6 +158,10 @@
 
         .navbar-nav .dropdown-menu {
           border: $dropdown-border-width solid $dropdown-border-color;
+        }
+
+        .navbar-nav .dropdown-menu .dropdown-menu {
+          margin-left: 0;
         }
 
       }

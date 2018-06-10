@@ -7,7 +7,7 @@
 
 
 //
-// Dropdowns
+// Dropdowns ==================================
 //
 
 var Dropdowns = (function() {
@@ -16,7 +16,8 @@ var Dropdowns = (function() {
   //
   // Dropdown variales
 
-  var $dropdown = $('.dropdown');
+  var $dropdown = $('.dropup, .dropright, .dropdown, .dropleft');
+  var $dropdownMenu = $('.dropdown-menu');
   var $dropdownSubmenu = $('.dropdown-menu .dropdown-menu');
   var $dropdownSubmenuToggle = $('.dropdown-menu .dropdown-toggle');
 
@@ -27,6 +28,13 @@ var Dropdowns = (function() {
 
   // Toggle submenu
   function toggleSubmenu(toggle) {
+    var $siblingDropdown = toggle.closest($dropdown).siblings($dropdown);
+    var $siblingSubmenu = $siblingDropdown.find($dropdownMenu);
+
+    // Hide sibling submenus
+    $siblingSubmenu.removeClass('show');
+
+    // Show / hide current submenu
     toggle.next($dropdownSubmenu).toggleClass('show');
   }
 
@@ -568,6 +576,52 @@ var Orders = (function() {
 
 
 //
+// Orders Alias ==================================
+// Orders card charts
+//
+
+var OrdersAlias = (function() {
+
+  // Variables
+
+  var $ordersChartAlias = $('#ordersChartAlias');
+
+  // Init
+  //
+  // Init chart
+
+  // Init chart
+  function init($chart) {
+
+    // Create chart
+    var ordersChartAlias = new Chart($chart, {
+      type: 'bar',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        datasets: [{
+          label: 'Sales',
+          data: [25,20,30,22,17,10,18,26,28,26,20,32]
+        }]
+      }
+    });
+
+    // Save to jQuery object
+    $chart.data('chart', ordersChartAlias);
+  }
+
+  // Events
+  //
+  // Orders chart events
+
+  // Init chart
+  if ($ordersChartAlias.length) {
+    init($ordersChartAlias);
+  }
+  
+})();
+
+
+//
 // Devices ==================================
 // Devices card charts
 //
@@ -626,6 +680,70 @@ var Devices = (function() {
 
     // Generate legend
     generateLegend($devicesChart);
+  }
+
+})();
+
+
+//
+// Devices Alias ==================================
+// Devices card charts
+//
+
+var DevicesAlias = (function() {
+
+  // Variables
+
+  var $devicesChartAlias = $('#devicesChartAlias');
+
+  // Methods
+  //
+  // Chart functions
+
+  // Init chart
+  function init($chart) {
+
+    // Create chart
+    var devicesChartAlias = new Chart($chart, {
+      type: 'doughnut',
+      data: {
+        labels: ['Desktop', 'Tablet', 'Mobile'],
+        datasets: [{
+          data: [60, 25, 15],
+          backgroundColor: [
+            ThemeCharts.colors.primary[700],
+            ThemeCharts.colors.primary[300],
+            ThemeCharts.colors.primary[100]
+          ],
+          hoverBorderColor: ThemeCharts.colors.white
+        }]
+      }
+    });
+
+    // Save to jQuery object
+    $chart.data('chart', devicesChartAlias);
+  }
+
+  // Generate legend
+  function generateLegend($chart) {
+    var content = $chart.data('chart').generateLegend();
+    var legend = $chart.data('target');
+    var $legend = $(legend);
+
+    $legend.html(content);
+  }
+
+  // Events
+  //
+  // Chart events
+
+  if ($devicesChartAlias.length) {
+
+    // Init chart
+    init($devicesChartAlias);
+
+    // Generate legend
+    generateLegend($devicesChartAlias);
   }
 
 })();
@@ -693,7 +811,6 @@ var WeeklyHours = (function() {
 // Navbar ==================================
 //
 
-
 var Navbar = (function() {
 
 
@@ -727,7 +844,6 @@ var Navbar = (function() {
 // Tooltips ==================================
 //
 
-
 var Tooltip = (function() {
 
   // Variables
@@ -750,4 +866,59 @@ var Tooltip = (function() {
     init();
   }
   
+})();
+
+
+//
+// Highlight.js ==================================
+//
+
+var Highlight = (function() {
+  
+  // Variables
+
+  var $highlight = $('.highlight');
+
+  // Methods
+
+  function init(i, block) {
+    hljs.highlightBlock(block);
+  }
+
+  // Events
+
+  $highlight.each(function(i, block) {
+    init(i, block);
+  });
+
+})();
+
+
+//
+// Flatpickr ==================================
+//
+
+var Flatpickr = (function() {
+
+  // Varialbes
+
+  var $formControl = $('#formControlFlatpickr');
+
+  // Methods
+  //
+  // Flatpicks methods
+
+  function init($input) {
+    $input.flatpickr();
+  }
+
+  // Events
+  //
+  // Flatpickr events
+
+  if ($formControl.length) {
+    init($formControl);
+  }
+
+
 })();

@@ -9,7 +9,7 @@
 
 .avatar {
   position: relative;
-  display: block;
+  display: inline-block;
   width: $avatar-size-base;
   height: $avatar-size-base;
 }
@@ -83,7 +83,11 @@
 }
 
 .avatar-xxl {
-  @include avatar($avatar-size-xxl, 5px, 12px, 42px, 6px);
+  @include avatar($avatar-size-xl, 6px, 8px, 36px, 5px);
+
+  @include media-breakpoint-up(md) {
+    @include avatar($avatar-size-xxl, 5px, 12px, 42px, 6px); 
+  }
 }
 
 
@@ -93,7 +97,7 @@
 // Avatars placed inline with negative margin
 
 .avatar-group {
-  display: flex;
+  display: inline-flex;
 
   // Shift every next avatar left
 
