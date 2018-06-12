@@ -20,11 +20,11 @@
 // Dashkit ===================================
 //
 
-// Form control raw
+// Form control flush
 //
 // Removes borders and paddings from inputs and text areas
 
-.form-control-raw {
+.form-control-flush {
   padding: 0;
   border-width: 0;
 }
@@ -189,7 +189,7 @@
   }
 }
 
-.input-group-raw {
+.input-group-flush {
 
   > .form-control {
     padding: 0;

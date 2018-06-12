@@ -62,8 +62,7 @@ $theme-colors: map-merge((
   "light":      $light,
   "dark":       $dark,
   "white":      $white,
-  "body":       $gray-100, // body background
-  "gray-900":   $gray-900
+  "body":       $gray-100 // body background
 ), $theme-colors);
 // stylelint-enable
 
@@ -433,6 +432,11 @@ $alert-color-level: 6;
 // Progress bars
 
 $progress-border-radius: 200px; // Always rounds even if height is manually set higher
+
+
+// List groups
+
+$list-group-border-color: $border-color;
 
 
 // Figures

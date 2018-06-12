@@ -107,7 +107,7 @@
           <div class="col-12">
             
             <!-- Files -->
-            <div class="card">
+            <div class="card" id="fileList">
               <div class="card-header">
                 <div class="row align-items-center">
                   <div class="col">
@@ -125,8 +125,10 @@
                       <label class="small text-muted">
                         Sorted by:
                       </label>
-                      <select class="form-control form-control-sm form-control-raw">
-                        <option value="0">Latest</option>
+                      <select class="form-control form-control-sm form-control-flush" id="fileListSort">
+                        <option selected disabled>None</option>
+                        <option value="asc">Asc</option>
+                        <option value="desc">Desc</option>
                       </select>
                     </form>
 
@@ -147,8 +149,8 @@
                     
                     <!-- Form -->
                     <form>
-                      <div class="input-group input-group-raw input-group-merge">
-                        <input type="search" class="form-control form-control-prepended" placeholder="Search">
+                      <div class="input-group input-group-flush input-group-merge">
+                        <input type="search" class="form-control form-control-prepended search" placeholder="Search">
                         <div class="input-group-prepend">
                           <div class="input-group-text">
                             <span class="fe fe-search"></span>
@@ -162,250 +164,257 @@
               </div>
               <div class="card-body">
 
-                <div class="row align-items-center">
-                  <div class="col-auto">
+                <!-- List -->
+                <ul class="list-group list-group-flush list my--3">
+                  <li class="list-group-item px-0">
                     
-                    <!-- Avatar -->
-                    <div class="avatar avatar-lg">
-                      <img src="assets/img/11.png" alt="..." class="avatar-img rounded">
-                    </div>
+                    <div class="row align-items-center">
+                      <div class="col-auto">
+                        
+                        <!-- Avatar -->
+                        <div class="avatar avatar-lg">
+                          <img src="assets/img/11.png" alt="..." class="avatar-img rounded">
+                        </div>
 
-                  </div>
-                  <div class="col ml--2">
-
-                    <!-- Title -->
-                    <h4 class="card-title mb-1">
-                      Launchday logo
-                    </h4>
-
-                    <!-- Text -->
-                    <p class="card-text small text-muted mb-1">
-                      1.5mb PNG
-                    </p>
-
-                    <!-- Time -->
-                    <p class="card-text small text-muted">
-                      Uploaded by Dave Gamache on <time datetime="2018-01-03">Jan 3, 2018</time>
-                    </p>
-                    
-                  </div>
-                  <div class="col-auto">
-                    
-                    <!-- Button -->
-                    <a href="#" class="btn btn-sm btn-white d-none d-md-inline-block">
-                      Download
-                    </a>
-
-                  </div>
-                  <div class="col-auto">
-                    
-                    <!-- Dropdown -->
-                    <div class="dropdown">
-                      <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fe fe-more-vertical"></i>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-right">
-                        <a href="#" class="dropdown-item">
-                          Action
-                        </a>
-                        <a href="#" class="dropdown-item">
-                          Another action
-                        </a>
-                        <a href="#" class="dropdown-item">
-                          Something else here
-                        </a>
                       </div>
-                    </div>
+                      <div class="col ml--2">
 
-                  </div>
-                </div> <!-- / .row -->
+                        <!-- Title -->
+                        <h4 class="card-title mb-1 name">
+                          Lorem ipsum dolor
+                        </h4>
 
-                <!-- Divider -->
-                <hr>
+                        <!-- Text -->
+                        <p class="card-text small text-muted mb-1">
+                          1.5mb PNG
+                        </p>
 
-                <div class="row align-items-center">
-                  <div class="col-auto">
-                    
-                    <!-- Avatar -->
-                    <div class="avatar avatar-lg">
-                      <span class="avatar-title rounded bg-white text-secondary">
-                        <span class="fe fe-folder"></span>
-                      </span>
-                    </div>
-
-                  </div>
-                  <div class="col ml--2">
-
-                    <!-- Title -->
-                    <h4 class="card-title mb-1">
-                      Launchday logo
-                    </h4>
-
-                    <!-- Text -->
-                    <p class="card-text small text-muted mb-1">
-                      1.5mb PNG
-                    </p>
-
-                    <!-- Time -->
-                    <p class="card-text small text-muted">
-                      Uploaded by Dave Gamache on <time datetime="2018-01-03">Jan 3, 2018</time>
-                    </p>
-                    
-                  </div>
-                  <div class="col-auto">
-                    
-                    <!-- Button -->
-                    <a href="#" class="btn btn-sm btn-white d-none d-md-inline-block">
-                      Download
-                    </a>
-
-                  </div>
-                  <div class="col-auto">
-                    
-                    <!-- Dropdown -->
-                    <div class="dropdown">
-                      <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fe fe-more-vertical"></i>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-right">
-                        <a href="#" class="dropdown-item">
-                          Action
-                        </a>
-                        <a href="#" class="dropdown-item">
-                          Another action
-                        </a>
-                        <a href="#" class="dropdown-item">
-                          Something else here
-                        </a>
+                        <!-- Time -->
+                        <p class="card-text small text-muted">
+                          Uploaded by Dave Gamache on <time datetime="2018-01-03">Jan 3, 2018</time>
+                        </p>
+                        
                       </div>
-                    </div>
-
-                  </div>
-                </div> <!-- / .row -->
-
-                <!-- Divider -->
-                <hr>
-
-                <div class="row align-items-center">
-                  <div class="col-auto">
-                    
-                    <!-- Avatar -->
-                    <div class="avatar avatar-lg">
-                      <img src="assets/img/11.png" alt="..." class="avatar-img rounded">
-                    </div>
-
-                  </div>
-                  <div class="col ml--2">
-
-                    <!-- Title -->
-                    <h4 class="card-title mb-1">
-                      Launchday logo
-                    </h4>
-
-                    <!-- Text -->
-                    <p class="card-text small text-muted mb-1">
-                      1.5mb PNG
-                    </p>
-
-                    <!-- Time -->
-                    <p class="card-text small text-muted">
-                      Uploaded by Dave Gamache on <time datetime="2018-01-03">Jan 3, 2018</time>
-                    </p>
-                    
-                  </div>
-                  <div class="col-auto">
-                    
-                    <!-- Button -->
-                    <a href="#" class="btn btn-sm btn-white d-none d-md-inline-block">
-                      Download
-                    </a>
-
-                  </div>
-                  <div class="col-auto">
-                    
-                    <!-- Dropdown -->
-                    <div class="dropdown">
-                      <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fe fe-more-vertical"></i>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-right">
-                        <a href="#" class="dropdown-item">
-                          Action
+                      <div class="col-auto">
+                        
+                        <!-- Button -->
+                        <a href="#" class="btn btn-sm btn-white d-none d-md-inline-block">
+                          Download
                         </a>
-                        <a href="#" class="dropdown-item">
-                          Another action
-                        </a>
-                        <a href="#" class="dropdown-item">
-                          Something else here
-                        </a>
+
                       </div>
-                    </div>
+                      <div class="col-auto">
+                        
+                        <!-- Dropdown -->
+                        <div class="dropdown">
+                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#" class="dropdown-item">
+                              Action
+                            </a>
+                            <a href="#" class="dropdown-item">
+                              Another action
+                            </a>
+                            <a href="#" class="dropdown-item">
+                              Something else here
+                            </a>
+                          </div>
+                        </div>
 
-                  </div>
-                </div> <!-- / .row -->
-
-                <!-- Divider -->
-                <hr>
-
-                <div class="row align-items-center">
-                  <div class="col-auto">
-                    
-                    <!-- Avatar -->
-                    <div class="avatar avatar-lg">
-                      <span class="avatar-title rounded bg-white text-secondary">
-                        <span class="fe fe-folder"></span>
-                      </span>
-                    </div>
-
-                  </div>
-                  <div class="col ml--2">
-
-                    <!-- Title -->
-                    <h4 class="card-title mb-1">
-                      Launchday logo
-                    </h4>
-
-                    <!-- Text -->
-                    <p class="card-text small text-muted mb-1">
-                      1.5mb PNG
-                    </p>
-
-                    <!-- Time -->
-                    <p class="card-text small text-muted">
-                      Uploaded by Dave Gamache on <time datetime="2018-01-03">Jan 3, 2018</time>
-                    </p>
-                    
-                  </div>
-                  <div class="col-auto">
-                    
-                    <!-- Button -->
-                    <a href="#" class="btn btn-sm btn-white d-none d-md-inline-block">
-                      Download
-                    </a>
-
-                  </div>
-                  <div class="col-auto">
-                    
-                    <!-- Dropdown -->
-                    <div class="dropdown">
-                      <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fe fe-more-vertical"></i>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-right">
-                        <a href="#" class="dropdown-item">
-                          Action
-                        </a>
-                        <a href="#" class="dropdown-item">
-                          Another action
-                        </a>
-                        <a href="#" class="dropdown-item">
-                          Something else here
-                        </a>
                       </div>
-                    </div>
+                    </div> <!-- / .row -->
 
-                  </div>
-                </div> <!-- / .row -->
+                  </li>
+                  <li class="list-group-item px-0">
+                    
+                    <div class="row align-items-center">
+                      <div class="col-auto">
+                        
+                        <!-- Avatar -->
+                        <div class="avatar avatar-lg">
+                          <span class="avatar-title rounded bg-white text-secondary">
+                            <span class="fe fe-folder"></span>
+                          </span>
+                        </div>
+
+                      </div>
+                      <div class="col ml--2">
+
+                        <!-- Title -->
+                        <h4 class="card-title mb-1 name">
+                          Consectetur adipisicing elit
+                        </h4>
+
+                        <!-- Text -->
+                        <p class="card-text small text-muted mb-1">
+                          1.5mb PNG
+                        </p>
+
+                        <!-- Time -->
+                        <p class="card-text small text-muted">
+                          Uploaded by Dave Gamache on <time datetime="2018-01-03">Jan 3, 2018</time>
+                        </p>
+                        
+                      </div>
+                      <div class="col-auto">
+                        
+                        <!-- Button -->
+                        <a href="#" class="btn btn-sm btn-white d-none d-md-inline-block">
+                          Download
+                        </a>
+
+                      </div>
+                      <div class="col-auto">
+                        
+                        <!-- Dropdown -->
+                        <div class="dropdown">
+                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#" class="dropdown-item">
+                              Action
+                            </a>
+                            <a href="#" class="dropdown-item">
+                              Another action
+                            </a>
+                            <a href="#" class="dropdown-item">
+                              Something else here
+                            </a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div> <!-- / .row -->
+
+                  </li>
+                  <li class="list-group-item px-0">
+                    
+                    <div class="row align-items-center">
+                      <div class="col-auto">
+                        
+                        <!-- Avatar -->
+                        <div class="avatar avatar-lg">
+                          <img src="assets/img/11.png" alt="..." class="avatar-img rounded">
+                        </div>
+
+                      </div>
+                      <div class="col ml--2">
+
+                        <!-- Title -->
+                        <h4 class="card-title mb-1 name">
+                          Sed do eiusmod tempor
+                        </h4>
+
+                        <!-- Text -->
+                        <p class="card-text small text-muted mb-1">
+                          1.5mb PNG
+                        </p>
+
+                        <!-- Time -->
+                        <p class="card-text small text-muted">
+                          Uploaded by Dave Gamache on <time datetime="2018-01-03">Jan 3, 2018</time>
+                        </p>
+                        
+                      </div>
+                      <div class="col-auto">
+                        
+                        <!-- Button -->
+                        <a href="#" class="btn btn-sm btn-white d-none d-md-inline-block">
+                          Download
+                        </a>
+
+                      </div>
+                      <div class="col-auto">
+                        
+                        <!-- Dropdown -->
+                        <div class="dropdown">
+                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#" class="dropdown-item">
+                              Action
+                            </a>
+                            <a href="#" class="dropdown-item">
+                              Another action
+                            </a>
+                            <a href="#" class="dropdown-item">
+                              Something else here
+                            </a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div> <!-- / .row -->
+
+                  </li>
+                  <li class="list-group-item px-0">
+                    
+                    <div class="row align-items-center">
+                      <div class="col-auto">
+                        
+                        <!-- Avatar -->
+                        <div class="avatar avatar-lg">
+                          <span class="avatar-title rounded bg-white text-secondary">
+                            <span class="fe fe-folder"></span>
+                          </span>
+                        </div>
+
+                      </div>
+                      <div class="col ml--2">
+
+                        <!-- Title -->
+                        <h4 class="card-title mb-1 name">
+                          Excepteur sint occaecat
+                        </h4>
+
+                        <!-- Text -->
+                        <p class="card-text small text-muted mb-1">
+                          1.5mb PNG
+                        </p>
+
+                        <!-- Time -->
+                        <p class="card-text small text-muted">
+                          Uploaded by Dave Gamache on <time datetime="2018-01-03">Jan 3, 2018</time>
+                        </p>
+                        
+                      </div>
+                      <div class="col-auto">
+                        
+                        <!-- Button -->
+                        <a href="#" class="btn btn-sm btn-white d-none d-md-inline-block">
+                          Download
+                        </a>
+
+                      </div>
+                      <div class="col-auto">
+                        
+                        <!-- Dropdown -->
+                        <div class="dropdown">
+                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#" class="dropdown-item">
+                              Action
+                            </a>
+                            <a href="#" class="dropdown-item">
+                              Another action
+                            </a>
+                            <a href="#" class="dropdown-item">
+                              Something else here
+                            </a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div> <!-- / .row -->
+
+                  </li>
+                </ul>
 
               </div>
             </div>

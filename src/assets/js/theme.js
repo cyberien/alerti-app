@@ -920,5 +920,49 @@ var Flatpickr = (function() {
     init($formControl);
   }
 
+})();
+
+
+//
+// File list ==================================
+//
+
+var FileList = (function() {
+
+  // Varialbes
+
+  var $fileList = $('#fileList');
+  var $fileListSort = $('#fileListSort');
+
+  var list;
+  var options = {
+    valueNames: ['name']
+  };
+
+  // Methods
+
+  // Init
+  function init($list) {
+    list = new List($list.get(0), options);
+  }
+
+  // Sort
+  function sort($sort) {
+    var value = $sort.val();
+
+    list.sort('name', {order: value});
+  }
+
+  // Events
+
+  // Init
+  if ($fileList.length) {
+    init($fileList);
+  }
+
+  // Sort
+  $fileListSort.on('change', function() {
+    sort($(this));
+  })
 
 })();

@@ -15,7 +15,8 @@
     "chart.js": "^2.7.2",
     "flatpickr": "^4.5.0",
     "jquery": "^3.2.1",
-    "jquery-mask-plugin": "^1.14.13"
+    "jquery-mask-plugin": "^1.14.13",
+    "list.js": "^1.5.0"
   },
   "devDependencies": {
     "browser-sync": "^2.18.2",
