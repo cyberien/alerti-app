@@ -434,7 +434,7 @@
       <!-- Navigation -->
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link active" href="#">
+          <a class="nav-link" href="#">
             Dashboard
           </a>
         </li>
@@ -593,7 +593,7 @@
               </a>
             </li>
             <li>
-              <a class="dropdown-item" href="dashboard-topnav.html">
+              <a class="dropdown-item @@if (page == 'dashboard-topnav.html') { active }" href="dashboard-topnav.html">
                 Topnav
               </a>
             </li>
@@ -608,7 +608,7 @@
                 <a class="dropdown-item" href="dashboard-side-topnav-no-hero.html">
                   Side + topnav
                 </a>
-                <a class="dropdown-item" href="dashboard-topnav-no-hero.html">
+                <a class="dropdown-item @@if (page == 'dashboard-topnav-no-hero.html') { active }" href="dashboard-topnav-no-hero.html">
                   Topnav
                 </a>
               </div>

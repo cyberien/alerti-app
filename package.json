@@ -1,28 +1,18 @@
 {
-  "name": "Dashkit",
+  "private": true,
+  "name": "Dummy",
   "version": "1.0.0",
-  "description": "Fully responsive web application ui kit",
-  "main": "index.js",
+  "description": "",
+  "main": "gulpfile.js",
+  "author": "Simpleqode",
   "scripts": {
-    "test": "echo \\\"Error: no test defined yet\\\" && exit 1"
-  },
-  "author": "hackerwolf",
-  "repository": {
-    "url": ""
-  },
-  "dependencies": {
-    "bootstrap": "^4.0.0",
-    "chart.js": "^2.7.2",
-    "flatpickr": "^4.5.0",
-    "jquery": "^3.2.1",
-    "jquery-mask-plugin": "^1.14.13",
-    "list.js": "^1.5.0"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "browser-sync": "^2.18.2",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
+    "gulp-autoprefixer": "^5.0.0",
     "gulp-cache": "^1.0.1",
     "gulp-csscomb": "^3.0.8",
     "gulp-cssnano": "^2.1.2",
@@ -30,13 +20,21 @@
     "gulp-if": "^2.0.2",
     "gulp-npm-dist": "^1.0.1",
     "gulp-postcss": "^7.0.0",
-    "gulp-rename": "^1.2.3",
-    "gulp-sass": "^3.1.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.1",
     "gulp-uglify": "^3.0.0",
     "gulp-useref-plus": "0.0.8",
     "gulp-wait": "0.0.2",
     "postcss-flexbugs-fixes": "^3.0.0",
     "run-sequence": "^2.2.0",
     "stream-combiner2": "^1.1.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "chart.js": "^2.7.2",
+    "flatpickr": "^4.5.0",
+    "jquery": "^3.3.1",
+    "jquery-mask-plugin": "^1.14.15",
+    "list.js": "^1.5.0"
   }
 }

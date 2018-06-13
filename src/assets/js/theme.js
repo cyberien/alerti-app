@@ -782,6 +782,22 @@ var WeeklyHours = (function() {
               }
             }
           }]
+        },
+        tooltips: {
+          callbacks: {
+            label: function(item, data) {
+              var label = data.datasets[item.datasetIndex].label || '';
+              var yLabel = item.yLabel;
+              var content = '';
+
+              if (data.datasets.length > 1) {
+                content += '<span class="popover-body-label mr-auto">' + label + '</span>';
+              }
+
+              content += '<span class="popover-body-value">' + yLabel + 'hrs</span>';
+              return content;
+            }
+          }
         }
       },
       data: {
@@ -900,7 +916,7 @@ var Highlight = (function() {
 
 var Flatpickr = (function() {
 
-  // Varialbes
+  // Variables
 
   var $formControl = $('#formControlFlatpickr');
 
@@ -929,7 +945,7 @@ var Flatpickr = (function() {
 
 var FileList = (function() {
 
-  // Varialbes
+  // Variables
 
   var $fileList = $('#fileList');
   var $fileListSort = $('#fileListSort');

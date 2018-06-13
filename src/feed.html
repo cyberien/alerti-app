@@ -14,7 +14,9 @@
     <!-- SIDEBAR
     ================================================== -->
     @@include("partials/sidebar.html", {
-      "userNav": true
+      "category": "pages",
+      "page": "feed.html",
+      "user": true
     })
 
     <!-- MAIN CONTENT
@@ -705,7 +707,7 @@
                 <hr>
 
                 <!-- Form -->
-                <div class="row align-items-center">
+                <div class="row align-items-top">
                   <div class="col-auto">
 
                     <!-- Avatar -->
@@ -719,7 +721,7 @@
                     <!-- Input -->
                     <form>
                       <label class="sr-only">Leave a comment...</label>
-                      <textarea class="form-control" placeholder="Leave a comment" rows="1"></textarea>
+                      <textarea class="form-control" placeholder="Leave a comment" rows="2"></textarea>
                     </form>
 
                   </div>

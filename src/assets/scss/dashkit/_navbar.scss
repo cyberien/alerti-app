@@ -145,7 +145,7 @@
 
             &:before {
               top: auto;
-              bottom: calc(-#{$navbar-padding-y} - 1px);
+              bottom: calc(-#{$navbar-padding-y} - 2px);
               right: $navbar-nav-link-padding-x;
               left: $navbar-nav-link-padding-x;
               border-left: 0;

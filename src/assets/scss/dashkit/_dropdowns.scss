@@ -53,6 +53,16 @@
 }
 
 
+// Dropdown toggle
+//
+// Right align arrows
+
+.dropdown-item.dropdown-toggle {
+  display: flex;
+  justify-content: space-between;
+}
+
+
 // Dropdown menu animation
 //
 // Animate dropdown menu appearance

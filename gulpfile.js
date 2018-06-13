@@ -11,8 +11,8 @@ const gulp = require('gulp');
 const gulpif = require('gulp-if');
 const npmdist = require('gulp-npm-dist');
 const postcss = require('gulp-postcss');
-const rename = require('gulp-rename');
 const runsequence = require('run-sequence');
+const replace = require('gulp-replace');
 const sass = require('gulp-sass');
 const uglify = require('gulp-uglify');
 const useref = require('gulp-useref-plus');
@@ -137,9 +137,6 @@ gulp.task('copy:all', function() {
 
 gulp.task('copy:libs', function() {
   gulp.src(npmdist(), { base: paths.base.node.dir })
-    .pipe(rename(function(path) {
-      path.dirname = path.dirname.replace(/\/dist/, '').replace(/\\dist/, '');
-    }))
     .pipe(gulp.dest(paths.dist.libs.dir));
 });
 
@@ -150,11 +147,10 @@ gulp.task('useref', function() {
       basepath: '@file',
       indent: true
     }))
-    .pipe(useref({
-      transformPath: function(filePath) {
-      return filePath.replace('node_modules/', '../node_modules/')
-      }
-    }))
+    .pipe(replace('<link rel="stylesheet" href="node_modules/', '<link rel="stylesheet" href="assets/libs/'))
+    .pipe(replace('<link href="node_modules/', '<link href="assets/libs/'))
+    .pipe(replace('<script src="node_modules/', '<script src="assets/libs/'))
+    .pipe(useref())
     .pipe(gulpif('*.js', uglify()))
     .pipe(gulpif('*.css', cssnano()))
     .pipe(gulp.dest(paths.dist.base.dir))

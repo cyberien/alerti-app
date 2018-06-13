@@ -13494,6 +13494,13 @@ a.text-body:focus
     content: '\e931';
 }
 
+.dropdown-item.dropdown-toggle
+{
+    display: flex;
+
+    justify-content: space-between;
+}
+
 .dropdown-menu
 {
     animation: dropdownMenu .15s;
@@ -13953,6 +13960,12 @@ a.text-body:focus
     background-color: #283e59;
 }
 
+.list-group-lg .list-group-item
+{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
 .modal-dialog-vertical
 {
     max-width: 350px;
@@ -14186,7 +14199,7 @@ a.text-body:focus
 {
     top: auto;
     right: .5rem;
-    bottom: calc(-.75rem - 1px);
+    bottom: calc(-.75rem - 2px);
     left: .5rem;
 
     border-bottom: 1px solid #2c7be5; 
@@ -14238,7 +14251,7 @@ a.text-body:focus
     {
         top: auto;
         right: .5rem;
-        bottom: calc(-.75rem - 1px);
+        bottom: calc(-.75rem - 2px);
         left: .5rem;
 
         border-bottom: 1px solid #2c7be5; 
@@ -14291,7 +14304,7 @@ a.text-body:focus
     {
         top: auto;
         right: .5rem;
-        bottom: calc(-.75rem - 1px);
+        bottom: calc(-.75rem - 2px);
         left: .5rem;
 
         border-bottom: 1px solid #2c7be5; 
@@ -14344,7 +14357,7 @@ a.text-body:focus
     {
         top: auto;
         right: .5rem;
-        bottom: calc(-.75rem - 1px);
+        bottom: calc(-.75rem - 2px);
         left: .5rem;
 
         border-bottom: 1px solid #2c7be5; 
@@ -14397,7 +14410,7 @@ a.text-body:focus
     {
         top: auto;
         right: .5rem;
-        bottom: calc(-.75rem - 1px);
+        bottom: calc(-.75rem - 2px);
         left: .5rem;
 
         border-bottom: 1px solid #2c7be5; 
@@ -15363,7 +15376,8 @@ button:focus
 
     display: inline-block;
 
-    width: 3rem;
+    width: auto;
+    min-width: 3rem; 
     height: 3rem;
 }
 
@@ -15377,13 +15391,15 @@ button:focus
     border-radius: 6px !important;
 }
 
+.avatar .rounded-circle
+{
+    border-radius: 100rem !important;
+}
+
 .avatar-img
 {
-    width: 100%;
+    width: auto;
     height: 100%;
-
-    -o-object-fit: cover;
-       object-fit: cover;
 }
 
 .avatar-title
@@ -15430,7 +15446,8 @@ button:focus
 
 .avatar-xs
 {
-    width: 1.625rem;
+    width: auto;
+    min-width: 1.625rem; 
     height: 1.625rem;
 }
 .avatar-xs .border
@@ -15453,7 +15470,8 @@ button:focus
 
 .avatar-sm
 {
-    width: 2.5rem;
+    width: auto;
+    min-width: 2.5rem; 
     height: 2.5rem;
 }
 .avatar-sm .border
@@ -15476,7 +15494,8 @@ button:focus
 
 .avatar-lg
 {
-    width: 4rem;
+    width: auto;
+    min-width: 4rem; 
     height: 4rem;
 }
 .avatar-lg .border
@@ -15499,7 +15518,8 @@ button:focus
 
 .avatar-xl
 {
-    width: 5.125rem;
+    width: auto;
+    min-width: 5.125rem; 
     height: 5.125rem;
 }
 .avatar-xl .border
@@ -15522,7 +15542,8 @@ button:focus
 
 .avatar-xxl
 {
-    width: 5.125rem;
+    width: auto;
+    min-width: 5.125rem; 
     height: 5.125rem;
 }
 .avatar-xxl .border
@@ -15546,7 +15567,8 @@ button:focus
 {
     .avatar-xxl
     {
-        width: 8rem;
+        width: auto;
+        min-width: 8rem; 
         height: 8rem;
     }
     .avatar-xxl .border

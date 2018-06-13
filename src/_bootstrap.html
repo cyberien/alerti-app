@@ -1,17 +1,9 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
-  <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
-
-    <!-- Theme CSS -->
-    <!-- build:css assets/css/theme.min.css -->
-    <link rel="stylesheet" href="assets/css/theme.css">
-    <!-- endbuild -->
-
-    <title>Dashkit</title>
+    @@include("partials/head.html", {
+      "pageTitle": "Dashkit"
+    })
   </head>
   <body>
       
@@ -2839,32 +2831,7 @@
 
     <!-- JAVASCRIPT
     ================================================== -->
-
-    <!-- PLugins JS -->
-    <!-- build:js assets/libs/jquery/jquery.min.js -->
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <!-- endbuild -->
-    <!-- build:js assets/libs/bootstrap/js/bootstrap.bundle.min.js -->
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- endbuild -->
-    <!-- build:js assets/libs/feather-icons/dist/feather.min.js -->
-    <script src="node_modules/feather-icons/dist/feather.min.js"></script>
-    <!-- endbuild -->
-
-    <!-- Theme JS -->
-    <!-- build:js assets/js/theme.min.js -->
-    <script src="assets/js/theme.js"></script>
-    <!-- endbuild -->
-
-    <!-- Inline JS -->
-    <script>
-      $(function () {
-        $('[data-toggle="popover"]').popover()
-      })
-      $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-      })
-    </script>
+    @@include("partials/scripts.html")
 
   </body>
 </html>

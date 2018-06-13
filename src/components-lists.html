@@ -14,7 +14,9 @@
     <!-- SIDEBAR
     ================================================== -->
     @@include("partials/sidebar.html", {
-      "userNav": true
+      "category": "components",
+      "page": "components-lists.html",
+      "user": true
     })
 
     <!-- MAIN CONTENT
@@ -40,6 +42,39 @@
 
               </div>
             </div>
+
+            <!-- Heading -->
+            <h2 class="mb-2">
+              Large
+            </h2>
+            
+            <!-- Subheading -->
+            <p class="text-muted mb-4">
+              <code>.list-group-lg</code> items have their <code>padding-top</code> and <code>padding-bottom</code> increased.
+            </p>
+
+            <!-- Card -->
+            <div class="card">
+              <div class="card-body">
+                
+                <ul class="list-group list-group-lg">
+                  <li class="list-group-item active">Cras justo odio</li>
+                  <li class="list-group-item">Dapibus ac facilisis in</li>
+                  <li class="list-group-item">Morbi leo risus</li>
+                  <li class="list-group-item">Porta ac consectetur ac</li>
+                  <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+
+              </div>
+              <div class="card-footer bg-dark">
+                <code class="highlight html bg-dark">
+                  &lt;ul&nbsp;class=&quot;list-group&nbsp;list-group-lg&quot;&gt;<br/>&nbsp;&nbsp;&lt;li&nbsp;class=&quot;list-group-item&nbsp;active&quot;&gt;Cras&nbsp;justo&nbsp;odio&lt;/li&gt;<br/>&nbsp;&nbsp;&lt;li&nbsp;class=&quot;list-group-item&quot;&gt;Dapibus&nbsp;ac&nbsp;facilisis&nbsp;in&lt;/li&gt;<br/>&nbsp;&nbsp;&lt;li&nbsp;class=&quot;list-group-item&quot;&gt;Morbi&nbsp;leo&nbsp;risus&lt;/li&gt;<br/>&nbsp;&nbsp;&lt;li&nbsp;class=&quot;list-group-item&quot;&gt;Porta&nbsp;ac&nbsp;consectetur&nbsp;ac&lt;/li&gt;<br/>&nbsp;&nbsp;&lt;li&nbsp;class=&quot;list-group-item&quot;&gt;Vestibulum&nbsp;at&nbsp;eros&lt;/li&gt;<br/>&lt;/ul&gt;
+                </code>
+              </div>
+            </div>
+
+            <!-- Divider -->
+            <hr class="my-5">
 
             <!-- Heading -->
             <h2 class="mb-2">
@@ -110,7 +145,7 @@
               <div class="card-body">
 
                 <!-- List -->
-                <ul class="list-group list-group-flush list my--3">
+                <ul class="list-group list-group-lg list-group-flush list my--4">
                   <li class="list-group-item px-0">
                     
                     <div class="row align-items-center">
@@ -368,6 +403,7 @@
                 </code>
               </div>
             </div>
+
           </div>
         </div> <!-- / .row -->
       </div> <!-- / .container-fluid -->
