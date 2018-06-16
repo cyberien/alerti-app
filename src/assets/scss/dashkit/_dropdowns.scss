@@ -119,3 +119,13 @@
     overflow-y: auto;
   }
 }
+
+
+// Dropdown small
+//
+// Creates small version of the dropdown menu
+
+.dropdown-menu-sm .dropdown-item {
+  padding: $dropdown-item-padding-y-sm $dropdown-item-padding-x-sm;
+  font-size: $font-size-sm;
+}

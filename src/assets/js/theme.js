@@ -69,7 +69,7 @@ var Dropdowns = (function() {
 
 
 //
-// ThemeCharts ==================================
+// Charts global ==================================
 //
 
 var ThemeCharts = (function() {
@@ -386,8 +386,39 @@ var ThemeCharts = (function() {
     // Parse options
     parseOptions($chart, options);
 
+    // Toggle ticks
+    toggleTicks(elem, $chart);
+
     // Update chart
     $chart.update();
+  }
+
+  // Toggle ticks
+  function toggleTicks(elem, $chart) {
+    var prefix = elem.data('tick-prefix') ? elem.data('tick-prefix') : '';
+    var suffix = elem.data('tick-suffix') ? elem.data('tick-suffix') : '';
+    
+    // Update yAxes ticks
+    $chart.options.scales.yAxes[0].ticks.callback = function(value) {
+      if ( !(value % 10) ) {
+        return prefix + value + suffix;
+      }
+    }
+
+    // Update tooltips
+    $chart.options.tooltips.callbacks.label = function(item, data) {
+      var label = data.datasets[item.datasetIndex].label || '';
+      var yLabel = item.yLabel;
+      var content = '';
+
+      if (data.datasets.length > 1) {
+        content += '<span class="popover-body-label mr-auto">' + label + '</span>';
+      }
+
+      content += '<span class="popover-body-value">' + prefix + yLabel + suffix + '</span>';
+      return content;
+    }
+
   }
 
 
@@ -773,8 +804,6 @@ var WeeklyHours = (function() {
         scales: {
           yAxes: [{
             ticks: {
-              beginAtZero: true,
-              padding: 10,
               callback: function(value) {
                 if ( !(value % 10) ) {
                   return value + 'hrs'
@@ -940,45 +969,45 @@ var Flatpickr = (function() {
 
 
 //
-// File list ==================================
+// List.js ==================================
 //
 
-var FileList = (function() {
+var Lists = (function() {
 
   // Variables
 
-  var $fileList = $('#fileList');
-  var $fileListSort = $('#fileListSort');
-
-  var list;
-  var options = {
-    valueNames: ['name']
-  };
+  var $lists = $('[data-toggle="lists"]');
+  var $listsSort = $('[data-sort]');
 
   // Methods
 
   // Init
   function init($list) {
-    list = new List($list.get(0), options);
+    new List($list.get(0), getOptions($list));
   }
 
-  // Sort
-  function sort($sort) {
-    var value = $sort.val();
+  // Get options
+  function getOptions($list) {
+    var options = {
+      valueNames: $list.data('lists-values'),
+      listClass: $list.data('lists-class') ? $list.data('lists-class') : 'list'
+    }
 
-    list.sort('name', {order: value});
+    return options;
   }
 
   // Events
 
   // Init
-  if ($fileList.length) {
-    init($fileList);
+  if ($lists.length) {
+    $lists.each(function() {
+      init($(this));
+    });
   }
 
   // Sort
-  $fileListSort.on('change', function() {
-    sort($(this));
-  })
+  $listsSort.on('click', function() {
+    return false;
+  });
 
 })();

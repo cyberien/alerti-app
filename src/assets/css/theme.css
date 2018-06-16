@@ -13547,6 +13547,13 @@ a.text-body:focus
     max-height: 350px;
 }
 
+.dropdown-menu-sm .dropdown-item
+{
+    font-size: .8125rem; 
+
+    padding: .125rem 1rem;
+}
+
 .form-text
 {
     margin-top: 0;
@@ -14484,11 +14491,6 @@ a.text-body:focus
     display: none;
 }
 
-.navbar-form-control:focus ~ .dropdown-menu
-{
-    display: flex;
-}
-
 .navbar-nav .nav-link > .fe
 {
     display: inline-block;
@@ -15210,6 +15212,13 @@ body
     white-space: nowrap;
 }
 
+.table [data-sort]::after
+{
+    margin-left: .25rem; 
+
+    content: url('data:image/svg+xml;utf8,<svg width=\'6\' height=\'10\' viewBox=\'0 0 6 10\' fill=\'none\' xmlns=\'http://www.w3.org/2000/svg\'><path fill-rule=\'evenodd\' clip-rule=\'evenodd\' d=\'M3 0L6 4H0L3 0ZM3 10L0 6H6L3 10Z\' fill=\'%2395AAC9\'/></svg>');
+}
+
 h1,
 .h1
 {
@@ -15254,6 +15263,16 @@ h6,
 .h6
 {
     margin-bottom: .5625rem;
+}
+
+h1 > a,
+h2 > a,
+h3 > a,
+h4 > a,
+h5 > a,
+h6 > a
+{
+    color: inherit;
 }
 
 .display-1,
@@ -15375,43 +15394,25 @@ button:focus
     position: relative;
 
     display: inline-block;
-
-    width: auto;
-    min-width: 3rem; 
-    height: 3rem;
-}
-
-.avatar .border
-{
-    border-width: 4px !important;
-}
-
-.avatar .rounded
-{
-    border-radius: 6px !important;
-}
-
-.avatar .rounded-circle
-{
-    border-radius: 100rem !important;
 }
 
 .avatar-img
 {
-    width: auto;
+    width: 100%;
     height: 100%;
+
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .avatar-title
 {
-    font-size: 20px;
-
     display: flex;
 
     width: 100%;
     height: 100%;
 
-    color: white; 
+    color: #fff; 
     background-color: #b1c2d9;
 
     align-items: center;
@@ -15444,10 +15445,32 @@ button:focus
     background-color: #b1c2d9;
 }
 
+.avatar
+{
+    width: 3rem;
+    height: 3rem;
+}
+.avatar .border
+{
+    border-width: 4px !important;
+}
+.avatar .rounded
+{
+    border-radius: 6px !important;
+}
+.avatar .avatar-title
+{
+    font-size: 20px;
+}
+.avatar.avatar-online::before,
+.avatar.avatar-offline::before
+{
+    border-width: 3px;
+}
+
 .avatar-xs
 {
-    width: auto;
-    min-width: 1.625rem; 
+    width: 1.625rem;
     height: 1.625rem;
 }
 .avatar-xs .border
@@ -15470,8 +15493,7 @@ button:focus
 
 .avatar-sm
 {
-    width: auto;
-    min-width: 2.5rem; 
+    width: 2.5rem;
     height: 2.5rem;
 }
 .avatar-sm .border
@@ -15494,8 +15516,7 @@ button:focus
 
 .avatar-lg
 {
-    width: auto;
-    min-width: 4rem; 
+    width: 4rem;
     height: 4rem;
 }
 .avatar-lg .border
@@ -15518,8 +15539,7 @@ button:focus
 
 .avatar-xl
 {
-    width: auto;
-    min-width: 5.125rem; 
+    width: 5.125rem;
     height: 5.125rem;
 }
 .avatar-xl .border
@@ -15542,8 +15562,7 @@ button:focus
 
 .avatar-xxl
 {
-    width: auto;
-    min-width: 5.125rem; 
+    width: 5.125rem;
     height: 5.125rem;
 }
 .avatar-xxl .border
@@ -15567,8 +15586,7 @@ button:focus
 {
     .avatar-xxl
     {
-        width: auto;
-        min-width: 8rem; 
+        width: 8rem;
         height: 8rem;
     }
     .avatar-xxl .border
@@ -15617,6 +15635,31 @@ button:focus
 .avatar-group .avatar:hover
 {
     z-index: 1;
+}
+
+.avatar-4by3
+{
+    width: 4rem;
+}
+
+.avatar-xs.avatar-4by3
+{
+    width: 2.16667rem;
+}
+
+.avatar-sm.avatar-4by3
+{
+    width: 3.33333rem;
+}
+
+.avatar-lg.avatar-4by3
+{
+    width: 5.33333rem;
+}
+
+.avatar-xl.avatar-4by3
+{
+    width: 6.83333rem;
 }
 
 .chart

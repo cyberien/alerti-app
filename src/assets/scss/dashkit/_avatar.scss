@@ -10,25 +10,11 @@
 .avatar {
   position: relative;
   display: inline-block;
-  width: auto;
-  height: $avatar-size-base;
-  min-width: $avatar-size-base;
-}
-
-.avatar .border {
-  border-width: 4px !important;
-}
-
-.avatar .rounded {
-  border-radius: 6px !important;
-}
-
-.avatar .rounded-circle {
-  border-radius: 100rem !important;
 }
 
 .avatar-img {
-  width: auto; height: 100%;
+  width: 100%; height: 100%;
+  object-fit: cover;
 }
 
 .avatar-title {
@@ -37,8 +23,7 @@
   justify-content: center;
   width: 100%; height: 100%;
   background-color: $gray-500;
-  font-size: 20px;
-  color: white;
+  color: $white;
 }
 
 
@@ -69,6 +54,10 @@
 //
 // Controls the size of avatar images, avatar sizes, and avatar statuses
 // ($avatarSize, $borderWidth, $borderRadius, $fontSize, $statusBorderWidth)
+
+.avatar {
+  @include avatar($avatar-size-base, 4px, 6px, 20px, 3px);
+}
 
 .avatar-xs {
   @include avatar($avatar-size-xs, 2px, 4px, 10px, 1px);
@@ -129,4 +118,29 @@
       z-index: 1;
     }
   }
+}
+
+
+// 4 by 3
+//
+// Creates avatars of a different aspect ratio
+
+.avatar-4by3 {
+  width: $avatar-size-base * 4 / 3;
+}
+
+.avatar-xs.avatar-4by3 {
+  width: $avatar-size-xs * 4 / 3;
+}
+
+.avatar-sm.avatar-4by3 {
+  width: $avatar-size-sm * 4 / 3;
+}
+
+.avatar-lg.avatar-4by3 {
+  width: $avatar-size-lg * 4 / 3;
+}
+
+.avatar-xl.avatar-4by3 {
+  width: $avatar-size-xl * 4 / 3;
 }

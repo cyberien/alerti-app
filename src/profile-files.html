@@ -42,7 +42,7 @@
                 </div>
 
               </div>
-              <div class="col mb-3">
+              <div class="col mb-3 ml--3 ml-md--2">
                 
                 <!-- Pretitle -->
                 <h6 class="header-pretitle">
@@ -70,27 +70,27 @@
                 <!-- Nav -->
                 <ul class="nav nav-tabs nav-overflow header-tabs">
                   <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="profile-posts.html" class="nav-link">
                       Posts
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="profile-groups.html" class="nav-link">
                       Groups
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="profile-projects.html" class="nav-link">
                       Projects
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="#" class="nav-link active">
+                    <a href="profile-files.html" class="nav-link active">
                       Files
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="profile-subscribers.html" class="nav-link">
                       Subscribers
                     </a>
                   </li>
@@ -109,7 +109,7 @@
           <div class="col-12">
             
             <!-- Files -->
-            <div class="card" id="fileList">
+            <div class="card" data-toggle="lists" data-lists-values='["name"]'>
               <div class="card-header">
                 <div class="row align-items-center">
                   <div class="col">
@@ -122,18 +122,26 @@
                   </div>
                   <div class="col-auto">
                     
-                    <!-- Form -->
-                    <form class="form-inline">
-                      <label class="small text-muted">
-                        Sorted by:
-                      </label>
-                      <select class="form-control form-control-sm form-control-flush" id="fileListSort">
-                        <option selected disabled>None</option>
-                        <option value="asc">Asc</option>
-                        <option value="desc">Desc</option>
-                      </select>
-                    </form>
+                    <!-- Dropdown -->
+                    <div class="dropdown">
 
+                      <!-- Toggle -->
+                      <a href="#" class="small text-muted dropdown-toggle" data-toggle="dropdown">
+                        Sorted by:
+                      </a>
+
+                      <!-- Menu -->
+                      <div class="dropdown-menu dropdown-menu-sm">
+                        <a class="dropdown-item sort" data-sort="name" href="#">
+                          Asc
+                        </a>
+                        <a class="dropdown-item sort" data-sort="name" href="#">
+                          Desc
+                        </a>
+                      </div>
+
+                    </div>
+    
                   </div>
                   <div class="col-auto">
                     
@@ -174,16 +182,16 @@
                       <div class="col-auto">
                         
                         <!-- Avatar -->
-                        <div class="avatar avatar-lg">
+                        <a href="#" class="avatar avatar-lg">
                           <img src="assets/img/11.png" alt="..." class="avatar-img rounded">
-                        </div>
+                        </a>
 
                       </div>
                       <div class="col ml--2">
 
                         <!-- Title -->
                         <h4 class="card-title mb-1 name">
-                          Lorem ipsum dolor
+                          <a href="#">Lorem ipsum dolor</a>
                         </h4>
 
                         <!-- Text -->
@@ -235,18 +243,18 @@
                       <div class="col-auto">
                         
                         <!-- Avatar -->
-                        <div class="avatar avatar-lg">
+                        <a href="#" class="avatar avatar-lg">
                           <span class="avatar-title rounded bg-white text-secondary">
                             <span class="fe fe-folder"></span>
                           </span>
-                        </div>
+                        </a>
 
                       </div>
                       <div class="col ml--2">
 
                         <!-- Title -->
                         <h4 class="card-title mb-1 name">
-                          Consectetur adipisicing elit
+                          <a href="#">Consectetur adipisicing elit</a>
                         </h4>
 
                         <!-- Text -->
@@ -298,16 +306,16 @@
                       <div class="col-auto">
                         
                         <!-- Avatar -->
-                        <div class="avatar avatar-lg">
+                        <a href="#" class="avatar avatar-lg">
                           <img src="assets/img/11.png" alt="..." class="avatar-img rounded">
-                        </div>
+                        </a>
 
                       </div>
                       <div class="col ml--2">
 
                         <!-- Title -->
                         <h4 class="card-title mb-1 name">
-                          Sed do eiusmod tempor
+                          <a href="#">Sed do eiusmod tempor</a>
                         </h4>
 
                         <!-- Text -->
@@ -359,18 +367,18 @@
                       <div class="col-auto">
                         
                         <!-- Avatar -->
-                        <div class="avatar avatar-lg">
+                        <a href="#" class="avatar avatar-lg">
                           <span class="avatar-title rounded bg-white text-secondary">
                             <span class="fe fe-folder"></span>
                           </span>
-                        </div>
+                        </a>
 
                       </div>
                       <div class="col ml--2">
 
                         <!-- Title -->
                         <h4 class="card-title mb-1 name">
-                          Excepteur sint occaecat
+                          <a href="#">Excepteur sint occaecat</a>
                         </h4>
 
                         <!-- Text -->

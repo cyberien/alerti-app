@@ -3,9 +3,8 @@
 // This is a custom mixin for generating avatar component sizes
 
 @mixin avatar($avatarSize, $borderWidth, $borderRadius, $fontSize, $statusBorderWidth) {
-  width: auto;
+  width: $avatarSize;
   height: $avatarSize;
-  min-width: $avatarSize;
 
   // Bordered version
 

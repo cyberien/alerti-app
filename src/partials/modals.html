@@ -2,7 +2,7 @@
 <div class="modal fade" id="modalMembers" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
-      <div class="modal-card">
+      <div class="modal-card" data-toggle="lists" data-lists-values='["name"]'>
         <div class="card-header">
           <div class="row align-items-center">
             <div class="col">
@@ -28,7 +28,7 @@
           <!-- Form -->
           <form>
             <div class="input-group input-group-flush input-group-merge">
-              <input type="search" class="form-control form-control-prepended" placeholder="Search">
+              <input type="search" class="form-control form-control-prepended search" placeholder="Search">
               <div class="input-group-prepend">
                 <div class="input-group-text">
                   <span class="fe fe-search"></span>
@@ -39,143 +39,150 @@
 
         </div>
         <div class="card-body">
-          
-          <div class="row align-items-center">
-            <div class="col-auto">
+
+          <!-- List group -->
+          <div class="list-group list-group-flush list my--3">
+            <li class="list-group-item px-0">
               
-              <!-- Avatar -->
-              <div class="avatar">
-                <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
-              </div>
+              <div class="row align-items-center">
+                <div class="col-auto">
+                  
+                  <!-- Avatar -->
+                  <a href="profile-posts.html" class="avatar">
+                    <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                  </a>
 
-            </div>
-            <div class="col ml--2">
+                </div>
+                <div class="col ml--2">
 
-              <!-- Title -->
-              <h4 class="mb-1">
-                Casey Fyfe
-              </h4>
+                  <!-- Title -->
+                  <h4 class="mb-1 name">
+                    <a href="profile-posts.html">Casey Fyfe</a>
+                  </h4>
 
-              <!-- Time -->
-              <p class="small mb-0">
-                <span class="text-success">●</span> Online
-              </p>
+                  <!-- Time -->
+                  <p class="small mb-0">
+                    <span class="text-success">●</span> Online
+                  </p>
+                  
+                </div>
+                <div class="col-auto">
+                  
+                  <!-- Button -->
+                  <a href="#" class="btn btn-sm btn-white">
+                    Add
+                  </a>
+
+                </div>
+              </div> <!-- / .row -->
+
+            </li>
+            <li class="list-group-item px-0">
               
-            </div>
-            <div class="col-auto">
+              <div class="row align-items-center">
+                <div class="col-auto">
+                  
+                  <!-- Avatar -->
+                  <a href="profile-posts.html" class="avatar">
+                    <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                  </a>
+
+                </div>
+                <div class="col ml--2">
+
+                  <!-- Title -->
+                  <h4 class="mb-1 name">
+                    <a href="profile-posts.html">Jane Roe</a>
+                  </h4>
+
+                  <!-- Time -->
+                  <p class="small mb-0">
+                    <span class="text-success">●</span> Online
+                  </p>
+                  
+                </div>
+                <div class="col-auto">
+                  
+                  <!-- Button -->
+                  <a href="#" class="btn btn-sm btn-white">
+                    Add
+                  </a>
+
+                </div>
+              </div> <!-- / .row -->
+
+            </li>
+            <li class="list-group-item px-0">
               
-              <!-- Button -->
-              <a href="#" class="btn btn-sm btn-white">
-                Add
-              </a>
+              <div class="row align-items-center">
+                <div class="col-auto">
+                  
+                  <!-- Avatar -->
+                  <a href="profile-posts.html" class="avatar">
+                    <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                  </a>
 
-            </div>
-          </div> <!-- / .row -->
+                </div>
+                <div class="col ml--2">
 
-          <!-- Divider -->
-          <hr>
+                  <!-- Title -->
+                  <h4 class="mb-1 name">
+                    <a href="profile-posts.html">Casey Fyfe</a>
+                  </h4>
 
-          <div class="row align-items-center">
-            <div class="col-auto">
+                  <!-- Time -->
+                  <p class="small mb-0">
+                    <span class="text-success">●</span> Online
+                  </p>
+                  
+                </div>
+                <div class="col-auto">
+                  
+                  <!-- Button -->
+                  <a href="#" class="btn btn-sm btn-white">
+                    Add
+                  </a>
+
+                </div>
+              </div> <!-- / .row -->
+
+            </li>
+            <li class="list-group-item px-0">
               
-              <!-- Avatar -->
-              <div class="avatar">
-                <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
-              </div>
+              <div class="row align-items-center">
+                <div class="col-auto">
+                  
+                  <!-- Avatar -->
+                  <a href="profile-posts.html" class="avatar">
+                    <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                  </a>
 
-            </div>
-            <div class="col ml--2">
+                </div>
+                <div class="col ml--2">
 
-              <!-- Title -->
-              <h4 class="mb-1">
-                Casey Fyfe
-              </h4>
+                  <!-- Title -->
+                  <h4 class="mb-1 name">
+                    <a href="profile-posts.html">Jane Roe</a>
+                  </h4>
 
-              <!-- Time -->
-              <p class="small mb-0">
-                <span class="text-success">●</span> Online
-              </p>
-              
-            </div>
-            <div class="col-auto">
-              
-              <!-- Button -->
-              <a href="#" class="btn btn-sm btn-white">
-                Add
-              </a>
+                  <!-- Time -->
+                  <p class="small mb-0">
+                    <span class="text-success">●</span> Online
+                  </p>
+                  
+                </div>
+                <div class="col-auto">
+                  
+                  <!-- Button -->
+                  <a href="#" class="btn btn-sm btn-white">
+                    Add
+                  </a>
 
-            </div>
-          </div> <!-- / .row -->
+                </div>
+              </div> <!-- / .row -->
 
-          <!-- Divider -->
-          <hr>
-
-          <div class="row align-items-center">
-            <div class="col-auto">
-              
-              <!-- Avatar -->
-              <div class="avatar">
-                <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
-              </div>
-
-            </div>
-            <div class="col ml--2">
-
-              <!-- Title -->
-              <h4 class="mb-1">
-                Casey Fyfe
-              </h4>
-
-              <!-- Time -->
-              <p class="small mb-0">
-                <span class="text-success">●</span> Online
-              </p>
-              
-            </div>
-            <div class="col-auto">
-              
-              <!-- Button -->
-              <a href="#" class="btn btn-sm btn-white">
-                Add
-              </a>
-
-            </div>
-          </div> <!-- / .row -->
-
-          <!-- Divider -->
-          <hr>
-
-          <div class="row align-items-center">
-            <div class="col-auto">
-              
-              <!-- Avatar -->
-              <div class="avatar">
-                <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
-              </div>
-
-            </div>
-            <div class="col ml--2">
-
-              <!-- Title -->
-              <h4 class="mb-1">
-                Casey Fyfe
-              </h4>
-
-              <!-- Time -->
-              <p class="small mb-0">
-                <span class="text-success">●</span> Online
-              </p>
-              
-            </div>
-            <div class="col-auto">
-              
-              <!-- Button -->
-              <a href="#" class="btn btn-sm btn-white">
-                Add
-              </a>
-
-            </div>
-          </div> <!-- / .row -->
+            </li>
+          </div>
 
         </div>
       </div>
@@ -187,12 +194,12 @@
 <div class="modal fade" id="sidebarModalSearch" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-dialog-vertical" role="document">
     <div class="modal-content">
-      <div class="modal-body">
+      <div class="modal-body" data-toggle="lists" data-lists-values='["name"]'>
      
         <!-- Form -->
         <form class="mb-4">
           <div class="input-group input-group-merge">
-            <input type="search" class="form-control form-control-prepended" placeholder="Search">
+            <input type="search" class="form-control form-control-prepended search" placeholder="Search">
             <div class="input-group-prepend">
               <div class="input-group-text">
                 <span class="fe fe-search"></span>
@@ -201,361 +208,195 @@
           </div>
         </form>
 
-        <!-- Heading -->
-        <h6 class="text-uppercase text-muted mb-4">
-          Teams
-        </h6>
+        <!-- List group -->
+        <div class="my--3">
+          <div class="list-group list-group-flush list">
+            <a href="team-overview.html" class="list-group-item px-0">
+              <div class="row align-items-center">
+                <div class="col-auto">
+                  
+                  <!-- Avatar -->
+                  <div class="avatar">
+                    <img src="assets/img/8.jpg" alt="..." class="avatar-img rounded">
+                  </div>
 
-        <!-- Teams -->
-        <div class="mb-5">
-
-          <div class="row align-items-center">
-            <div class="col-auto">
-              
-              <!-- Avatar -->
-              <div class="avatar">
-                <img src="assets/img/8.jpg" alt="..." class="avatar-img rounded">
-              </div>
-
-            </div>
-            <div class="col ml--2">
-
-              <!-- Title -->
-              <h4 class="mb-1">
-                Bloomberg
-              </h4>
-
-              <!-- Time -->
-              <p class="small text-muted mb-0">
-                <span class="fe fe-clock"></span> <time datetime="2018-05-24">Updated 2hr ago</time>
-              </p>
-              
-            </div>
-            <div class="col-auto">
-              
-              <!-- Dropdown -->
-              <div class="dropdown">
-                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="fe fe-more-vertical"></i>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right">
-                  <a href="#" class="dropdown-item">
-                    Action
-                  </a>
-                  <a href="#" class="dropdown-item">
-                    Another action
-                  </a>
-                  <a href="#" class="dropdown-item">
-                    Something else here
-                  </a>
                 </div>
-              </div>
-              
-            </div>
-          </div> <!-- / .row -->
+                <div class="col ml--2">
 
-          <!-- Divider -->
-          <hr>
+                  <!-- Title -->
+                  <h4 class="text-body mb-1 name">
+                    Bloomberg
+                  </h4>
 
-          <div class="row align-items-center">
-            <div class="col-auto">
-              
-              <!-- Avatar -->
-              <div class="avatar">
-                <img src="assets/img/8.jpg" alt="..." class="avatar-img rounded">
-              </div>
-
-            </div>
-            <div class="col ml--2">
-
-              <!-- Title -->
-              <h4 class="mb-1">
-                Bloomberg
-              </h4>
-
-              <!-- Time -->
-              <p class="small text-muted mb-0">
-                <span class="fe fe-clock"></span> <time datetime="2018-05-24">Updated 2hr ago</time>
-              </p>
-              
-            </div>
-            <div class="col-auto">
-              
-              <!-- Dropdown -->
-              <div class="dropdown">
-                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="fe fe-more-vertical"></i>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right">
-                  <a href="#" class="dropdown-item">
-                    Action
-                  </a>
-                  <a href="#" class="dropdown-item">
-                    Another action
-                  </a>
-                  <a href="#" class="dropdown-item">
-                    Something else here
-                  </a>
+                  <!-- Time -->
+                  <p class="small text-muted mb-0">
+                    <span class="fe fe-clock"></span> <time datetime="2018-05-24">Updated 2hr ago</time>
+                  </p>
+                  
                 </div>
-              </div>
-              
-            </div>
-          </div> <!-- / .row -->
+              </div> <!-- / .row -->
+            </a>
+            <a href="team-overview.html" class="list-group-item px-0">
+              <div class="row align-items-center">
+                <div class="col-auto">
+                  
+                  <!-- Avatar -->
+                  <div class="avatar">
+                    <img src="assets/img/8.jpg" alt="..." class="avatar-img rounded">
+                  </div>
 
-        </div>
-
-        <!-- Heading -->
-        <h6 class="text-uppercase text-muted mb-4">
-          Projects
-        </h6>
-
-        <!-- Projects -->
-        <div class="mb-5">
-
-          <div class="row align-items-center">
-            <div class="col-auto">
-              
-              <!-- Avatar -->
-              <div class="avatar">
-                <img src="assets/img/9.png" alt="..." class="avatar-img rounded">
-              </div>
-
-            </div>
-            <div class="col ml--2">
-
-              <!-- Title -->
-              <h4 class="mb-1">
-                New Landing Page
-              </h4>
-
-              <!-- Time -->
-              <p class="small text-muted mb-0">
-                <span class="fe fe-clock"></span> <time datetime="2018-05-24">Updated 4hr ago</time>
-              </p>
-              
-            </div>
-            <div class="col-auto">
-              
-              <!-- Dropdown -->
-              <div class="dropdown">
-                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="fe fe-more-vertical"></i>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right">
-                  <a href="#" class="dropdown-item">
-                    Action
-                  </a>
-                  <a href="#" class="dropdown-item">
-                    Another action
-                  </a>
-                  <a href="#" class="dropdown-item">
-                    Something else here
-                  </a>
                 </div>
-              </div>
-              
-            </div>
-          </div> <!-- / .row -->
+                <div class="col ml--2">
 
-          <!-- Divider -->
-          <hr>
+                  <!-- Title -->
+                  <h4 class="text-body mb-1 name">
+                    Bloomberg
+                  </h4>
 
-          <div class="row align-items-center">
-            <div class="col-auto">
-              
-              <!-- Avatar -->
-              <div class="avatar">
-                <img src="assets/img/9.png" alt="..." class="avatar-img rounded">
-              </div>
-
-            </div>
-            <div class="col ml--2">
-
-              <!-- Title -->
-              <h4 class="mb-1">
-                New Landing Page
-              </h4>
-
-              <!-- Time -->
-              <p class="small text-muted mb-0">
-                <span class="fe fe-clock"></span> <time datetime="2018-05-24">Updated 4hr ago</time>
-              </p>
-              
-            </div>
-            <div class="col-auto">
-              
-              <!-- Dropdown -->
-              <div class="dropdown">
-                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="fe fe-more-vertical"></i>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right">
-                  <a href="#" class="dropdown-item">
-                    Action
-                  </a>
-                  <a href="#" class="dropdown-item">
-                    Another action
-                  </a>
-                  <a href="#" class="dropdown-item">
-                    Something else here
-                  </a>
+                  <!-- Time -->
+                  <p class="small text-muted mb-0">
+                    <span class="fe fe-clock"></span> <time datetime="2018-05-24">Updated 2hr ago</time>
+                  </p>
+                  
                 </div>
-              </div>
-              
-            </div>
-          </div> <!-- / .row -->
+              </div> <!-- / .row -->
+            </a>
+            <a href="project-overview.html" class="list-group-item px-0">
 
-          <!-- Divider -->
-          <hr>
+              <div class="row align-items-center">
+                <div class="col-auto">
+                  
+                  <!-- Avatar -->
+                  <div class="avatar">
+                    <img src="assets/img/9.png" alt="..." class="avatar-img rounded">
+                  </div>
 
-          <div class="row align-items-center">
-            <div class="col-auto">
-              
-              <!-- Avatar -->
-              <div class="avatar">
-                <img src="assets/img/9.png" alt="..." class="avatar-img rounded">
-              </div>
-
-            </div>
-            <div class="col ml--2">
-
-              <!-- Title -->
-              <h4 class="mb-1">
-                New Landing Page
-              </h4>
-
-              <!-- Time -->
-              <p class="small text-muted mb-0">
-                <span class="fe fe-clock"></span> <time datetime="2018-05-24">Updated 4hr ago</time>
-              </p>
-              
-            </div>
-            <div class="col-auto">
-              
-              <!-- Dropdown -->
-              <div class="dropdown">
-                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="fe fe-more-vertical"></i>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right">
-                  <a href="#" class="dropdown-item">
-                    Action
-                  </a>
-                  <a href="#" class="dropdown-item">
-                    Another action
-                  </a>
-                  <a href="#" class="dropdown-item">
-                    Something else here
-                  </a>
                 </div>
-              </div>
-              
-            </div>
-          </div> <!-- / .row -->
+                <div class="col ml--2">
 
-        </div>
+                  <!-- Title -->
+                  <h4 class="text-body mb-1 name">
+                    New Landing Page
+                  </h4>
 
-        <!-- Heading -->
-        <h6 class="text-uppercase text-muted mb-4">
-          People
-        </h6>
-
-        <!-- People -->
-        <div class="mb-0">
-          
-          <div class="row align-items-center">
-            <div class="col-auto">
-              
-              <!-- Avatar -->
-              <div class="avatar">
-                <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
-              </div>
-
-            </div>
-            <div class="col ml--2">
-              
-              <!-- Title -->
-              <h4 class="mb-1">
-                Casey Fyfe
-              </h4>
-
-              <!-- Status -->
-              <p class="small mb-0">
-                <span class="text-success">●</span> Online
-              </p>
-
-            </div>
-            <div class="col-auto">
-              
-              <!-- Dropdown -->
-              <div class="dropdown">
-                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" data-expanded="false">
-                  <i class="fe fe-more-vertical"></i>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right">
-                  <a href="#" class="dropdown-item">
-                    Action
-                  </a>
-                  <a href="#" class="dropdown-item">
-                    Another action
-                  </a>
-                  <a href="#" class="dropdown-item">
-                    Something else here
-                  </a>
+                  <!-- Time -->
+                  <p class="small text-muted mb-0">
+                    <span class="fe fe-clock"></span> <time datetime="2018-05-24">Updated 4hr ago</time>
+                  </p>
+                  
                 </div>
-              </div>
+              </div> <!-- / .row -->
 
-            </div>
-          </div> <!-- / .row -->
-          
-          <!-- Divider -->
-          <hr>
+            </a>
+            <a href="project-overview.html" class="list-group-item px-0">
 
-          <div class="row align-items-center">
-            <div class="col-auto">
-              
-              <!-- Avatar -->
-              <div class="avatar">
-                <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
-              </div>
+              <div class="row align-items-center">
+                <div class="col-auto">
+                  
+                  <!-- Avatar -->
+                  <div class="avatar">
+                    <img src="assets/img/9.png" alt="..." class="avatar-img rounded">
+                  </div>
 
-            </div>
-            <div class="col ml--2">
-              
-              <!-- Title -->
-              <h4 class="mb-1">
-                Casey Fyfe
-              </h4>
-
-              <!-- Status -->
-              <p class="small mb-0">
-                <span class="text-success">●</span> Online
-              </p>
-
-            </div>
-            <div class="col-auto">
-              
-              <!-- Dropdown -->
-              <div class="dropdown">
-                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" data-expanded="false">
-                  <i class="fe fe-more-vertical"></i>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right">
-                  <a href="#" class="dropdown-item">
-                    Action
-                  </a>
-                  <a href="#" class="dropdown-item">
-                    Another action
-                  </a>
-                  <a href="#" class="dropdown-item">
-                    Something else here
-                  </a>
                 </div>
-              </div>
+                <div class="col ml--2">
 
-            </div>
-          </div> <!-- / .row -->
+                  <!-- Title -->
+                  <h4 class="text-body mb-1 name">
+                    New Landing Page
+                  </h4>
 
+                  <!-- Time -->
+                  <p class="small text-muted mb-0">
+                    <span class="fe fe-clock"></span> <time datetime="2018-05-24">Updated 4hr ago</time>
+                  </p>
+                  
+                </div>
+              </div> <!-- / .row -->
+
+            </a>
+            <a href="project-overview.html" class="list-group-item px-0">
+
+              <div class="row align-items-center">
+                <div class="col-auto">
+                  
+                  <!-- Avatar -->
+                  <div class="avatar">
+                    <img src="assets/img/9.png" alt="..." class="avatar-img rounded">
+                  </div>
+
+                </div>
+                <div class="col ml--2">
+
+                  <!-- Title -->
+                  <h4 class="text-body mb-1 name">
+                    New Landing Page
+                  </h4>
+
+                  <!-- Time -->
+                  <p class="small text-muted mb-0">
+                    <span class="fe fe-clock"></span> <time datetime="2018-05-24">Updated 4hr ago</time>
+                  </p>
+                  
+                </div>
+              </div> <!-- / .row -->
+            
+            </a>
+            <a href="profile-posts.html" class="list-group-item px-0">
+            
+              <div class="row align-items-center">
+                <div class="col-auto">
+                  
+                  <!-- Avatar -->
+                  <div class="avatar">
+                    <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                  </div>
+
+                </div>
+                <div class="col ml--2">
+                  
+                  <!-- Title -->
+                  <h4 class="text-body mb-1 name">
+                    Casey Fyfe
+                  </h4>
+
+                  <!-- Status -->
+                  <p class="text-body small mb-0">
+                    <span class="text-success">●</span> Online
+                  </p>
+
+                </div>
+              </div> <!-- / .row -->
+
+            </a>
+            <a href="profile-posts.html" class="list-group-item px-0">
+
+              <div class="row align-items-center">
+                <div class="col-auto">
+                  
+                  <!-- Avatar -->
+                  <div class="avatar">
+                    <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                  </div>
+
+                </div>
+                <div class="col ml--2">
+                  
+                  <!-- Title -->
+                  <h4 class="text-body mb-1 name">
+                    Casey Fyfe
+                  </h4>
+
+                  <!-- Status -->
+                  <p class="text-body small mb-0">
+                    <span class="text-success">●</span> Online
+                  </p>
+
+                </div>
+              </div> <!-- / .row -->
+            
+            </a>
+          </div>
         </div>
       
       </div>
@@ -583,235 +424,242 @@
         
       </div>
       <div class="modal-body">
+
+        <!-- List group -->
+        <div class="list-group list-group-flush my--3">
+          <a class="list-group-item px-0" href="#">
           
-        <a href="#" class="row">
-          <div class="col-auto">
-            
-            <!-- Avatar -->
-            <div class="avatar avatar-sm">
-              <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
-            </div>
+            <div class="row">
+              <div class="col-auto">
+                
+                <!-- Avatar -->
+                <div class="avatar avatar-sm">
+                  <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                </div>
 
-          </div>
-          <div class="col ml--2">
-            
-            <!-- Content -->
-            <div class="small text-muted">
-              <strong class="text-body">Casey Fyfe</strong> shared your post with <strong class="text-body">Kelly Quist</strong>, <strong class="text-body">John Waters</strong>, and <strong class="text-body">3 others</strong>.
-            </div>
+              </div>
+              <div class="col ml--2">
+                
+                <!-- Content -->
+                <div class="small text-muted">
+                  <strong class="text-body">Casey Fyfe</strong> shared your post with <strong class="text-body">Kelly Quist</strong>, <strong class="text-body">John Waters</strong>, and <strong class="text-body">3 others</strong>.
+                </div>
 
-          </div>
-          <div class="col-auto">
+              </div>
+              <div class="col-auto">
 
-            <small class="text-muted">
-              2m
-            </small>
-            
-          </div>
-        </a> <!-- / .row -->
+                <small class="text-muted">
+                  2m
+                </small>
+                
+              </div>
+            </div> <!-- / .row -->
 
-        <!-- Divider -->
-        <hr>
+          </a>
+          <a class="list-group-item px-0" href="#">
 
-        <a href="#" class="row">
-          <div class="col-auto">
-            
-            <!-- Avatar -->
-            <div class="avatar avatar-sm">
-              <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
-            </div>
+            <div class="row">
+              <div class="col-auto">
+                
+                <!-- Avatar -->
+                <div class="avatar avatar-sm">
+                  <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                </div>
 
-          </div>
-          <div class="col ml--2">
-            
-            <!-- Content -->
-            <div class="small text-muted">
-              <strong class="text-body">Johnathan Goldstein</strong> reacted to your post with a 😍
-            </div>
+              </div>
+              <div class="col ml--2">
+                
+                <!-- Content -->
+                <div class="small text-muted">
+                  <strong class="text-body">Johnathan Goldstein</strong> reacted to your post with a 😍
+                </div>
 
-          </div>
-          <div class="col-auto">
+              </div>
+              <div class="col-auto">
 
-            <small class="text-muted">
-              2m
-            </small>
-            
-          </div>
-        </a> <!-- / .row -->
+                <small class="text-muted">
+                  2m
+                </small>
+                
+              </div>
+            </div> <!-- / .row -->
 
-        <!-- Divider -->
-        <hr>
+          </a>
+          <a class="list-group-item px-0" href="#">
 
-        <a href="#" class="row">
-          <div class="col-auto">
-            
-            <!-- Avatar -->
-            <div class="avatar avatar-sm">
-              <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
-            </div>
+            <div class="row">
+              <div class="col-auto">
+                
+                <!-- Avatar -->
+                <div class="avatar avatar-sm">
+                  <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                </div>
 
-          </div>
-          <div class="col ml--2">
-            
-            <!-- Content -->
-            <div class="small text-muted">
-              <strong class="text-body">Tim Klingon</strong> commented <blockquote class="text-body">“I don’t think this really makes sense to do without approval from Johnathan since he’s the one...” </blockquote>
-            </div>
+              </div>
+              <div class="col ml--2">
+                
+                <!-- Content -->
+                <div class="small text-muted">
+                  <strong class="text-body">Tim Klingon</strong> commented <blockquote class="text-body">“I don’t think this really makes sense to do without approval from Johnathan since he’s the one...” </blockquote>
+                </div>
 
-          </div>
-          <div class="col-auto">
+              </div>
+              <div class="col-auto">
 
-            <small class="text-muted">
-              2m
-            </small>
-            
-          </div>
-        </a> <!-- / .row -->
+                <small class="text-muted">
+                  2m
+                </small>
+                
+              </div>
+            </div> <!-- / .row -->
 
-        <!-- Divider -->
-        <hr>
+          </a>
+          <a class="list-group-item px-0" href="#">
 
-        <a href="#" class="row">
-          <div class="col-auto">
-            
-            <!-- Avatar -->
-            <div class="avatar avatar-sm">
-              <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
-            </div>
+            <div class="row">
+              <div class="col-auto">
+                
+                <!-- Avatar -->
+                <div class="avatar avatar-sm">
+                  <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                </div>
 
-          </div>
-          <div class="col ml--2">
-            
-            <!-- Content -->
-            <div class="small text-muted">
-              <strong class="text-body">Macy Albert</strong> subscribed to you.
-            </div>
+              </div>
+              <div class="col ml--2">
+                
+                <!-- Content -->
+                <div class="small text-muted">
+                  <strong class="text-body">Macy Albert</strong> subscribed to you.
+                </div>
 
-          </div>
-          <div class="col-auto">
+              </div>
+              <div class="col-auto">
 
-            <small class="text-muted">
-              2m
-            </small>
-            
-          </div>
-        </a> <!-- / .row -->
+                <small class="text-muted">
+                  2m
+                </small>
+                
+              </div>
+            </div> <!-- / .row -->
 
-        <!-- Divider -->
-        <hr>
+          </a>
+          <a class="list-group-item px-0" href="#">
 
-        <a href="#" class="row">
-          <div class="col-auto">
-            
-            <!-- Avatar -->
-            <div class="avatar avatar-sm">
-              <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
-            </div>
+            <div class="row">
+              <div class="col-auto">
+                
+                <!-- Avatar -->
+                <div class="avatar avatar-sm">
+                  <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                </div>
 
-          </div>
-          <div class="col ml--2">
-            
-            <!-- Content -->
-            <div class="small text-muted">
-              <strong class="text-body">Casey Fyfe</strong> shared your post with <strong class="text-body">Kelly Quist</strong>, <strong class="text-body">John Waters</strong>, and <strong class="text-body">3 others</strong>.
-            </div>
+              </div>
+              <div class="col ml--2">
+                
+                <!-- Content -->
+                <div class="small text-muted">
+                  <strong class="text-body">Casey Fyfe</strong> shared your post with <strong class="text-body">Kelly Quist</strong>, <strong class="text-body">John Waters</strong>, and <strong class="text-body">3 others</strong>.
+                </div>
 
-          </div>
-          <div class="col-auto">
+              </div>
+              <div class="col-auto">
 
-            <small class="text-muted">
-              2m
-            </small>
-            
-          </div>
-        </a> <!-- / .row -->
+                <small class="text-muted">
+                  2m
+                </small>
+                
+              </div>
+            </div> <!-- / .row -->
 
-        <!-- Divider -->
-        <hr>
+          </a>
+          <a class="list-group-item px-0" href="#">
 
-        <a href="#" class="row">
-          <div class="col-auto">
-            
-            <!-- Avatar -->
-            <div class="avatar avatar-sm">
-              <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
-            </div>
+            <div class="row">
+              <div class="col-auto">
+                
+                <!-- Avatar -->
+                <div class="avatar avatar-sm">
+                  <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                </div>
 
-          </div>
-          <div class="col ml--2">
-            
-            <!-- Content -->
-            <div class="small text-muted">
-              <strong class="text-body">Johnathan Goldstein</strong> reacted to your post with a 😍
-            </div>
+              </div>
+              <div class="col ml--2">
+                
+                <!-- Content -->
+                <div class="small text-muted">
+                  <strong class="text-body">Johnathan Goldstein</strong> reacted to your post with a 😍
+                </div>
 
-          </div>
-          <div class="col-auto">
+              </div>
+              <div class="col-auto">
 
-            <small class="text-muted">
-              2m
-            </small>
-            
-          </div>
-        </a> <!-- / .row -->
+                <small class="text-muted">
+                  2m
+                </small>
+                
+              </div>
+            </div> <!-- / .row -->
 
-        <!-- Divider -->
-        <hr>
+          </a>
+          <a class="list-group-item px-0" href="#">
 
-        <a href="#" class="row">
-          <div class="col-auto">
-            
-            <!-- Avatar -->
-            <div class="avatar avatar-sm">
-              <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
-            </div>
+            <div class="row">
+              <div class="col-auto">
+                
+                <!-- Avatar -->
+                <div class="avatar avatar-sm">
+                  <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                </div>
 
-          </div>
-          <div class="col ml--2">
-            
-            <!-- Content -->
-            <div class="small text-muted">
-              <strong class="text-body">Tim Klingon</strong> commented <blockquote class="text-body">“I don’t think this really makes sense to do without approval from Johnathan since he’s the one...” </blockquote>
-            </div>
+              </div>
+              <div class="col ml--2">
+                
+                <!-- Content -->
+                <div class="small text-muted">
+                  <strong class="text-body">Tim Klingon</strong> commented <blockquote class="text-body">“I don’t think this really makes sense to do without approval from Johnathan since he’s the one...” </blockquote>
+                </div>
 
-          </div>
-          <div class="col-auto">
+              </div>
+              <div class="col-auto">
 
-            <small class="text-muted">
-              2m
-            </small>
-            
-          </div>
-        </a> <!-- / .row -->
+                <small class="text-muted">
+                  2m
+                </small>
+                
+              </div>
+            </div> <!-- / .row -->
 
-        <!-- Divider -->
-        <hr>
+          </a>
+          <a class="list-group-item px-0" href="#">
 
-        <a href="#" class="row">
-          <div class="col-auto">
-            
-            <!-- Avatar -->
-            <div class="avatar avatar-sm">
-              <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
-            </div>
+            <div class="row">
+              <div class="col-auto">
+                
+                <!-- Avatar -->
+                <div class="avatar avatar-sm">
+                  <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                </div>
 
-          </div>
-          <div class="col ml--2">
-            
-            <!-- Content -->
-            <div class="small text-muted">
-              <strong class="text-body">Macy Albert</strong> subscribed to you.
-            </div>
+              </div>
+              <div class="col ml--2">
+                
+                <!-- Content -->
+                <div class="small text-muted">
+                  <strong class="text-body">Macy Albert</strong> subscribed to you.
+                </div>
 
-          </div>
-          <div class="col-auto">
+              </div>
+              <div class="col-auto">
 
-            <small class="text-muted">
-              2m
-            </small>
-            
-          </div>
-        </a> <!-- / .row -->
+                <small class="text-muted">
+                  2m
+                </small>
+                
+              </div>
+            </div> <!-- / .row -->
+
+          </a>
+        </div>
 
       </div>
     </div>

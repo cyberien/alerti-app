@@ -253,18 +253,6 @@
 }
 
 
-// Navbar form control
-//
-// Expands to 315px on focus
-
-.navbar-form-control:focus {
-
-  ~ .dropdown-menu {
-    display: flex;
-  }
-}
-
-
 // Navbar link icon
 
 .navbar-nav .nav-link > .fe {
