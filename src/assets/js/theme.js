@@ -395,30 +395,33 @@ var ThemeCharts = (function() {
 
   // Toggle ticks
   function toggleTicks(elem, $chart) {
-    var prefix = elem.data('tick-prefix') ? elem.data('tick-prefix') : '';
-    var suffix = elem.data('tick-suffix') ? elem.data('tick-suffix') : '';
+    var prefix = elem.data('prefix') ? elem.data('prefix') : '';
+    var suffix = elem.data('suffix') ? elem.data('suffix') : '';
     
-    // Update yAxes ticks
-    $chart.options.scales.yAxes[0].ticks.callback = function(value) {
-      if ( !(value % 10) ) {
-        return prefix + value + suffix;
-      }
-    }
+    if (prefix.length || suffix.length) {
 
-    // Update tooltips
-    $chart.options.tooltips.callbacks.label = function(item, data) {
-      var label = data.datasets[item.datasetIndex].label || '';
-      var yLabel = item.yLabel;
-      var content = '';
-
-      if (data.datasets.length > 1) {
-        content += '<span class="popover-body-label mr-auto">' + label + '</span>';
+      // Update ticks
+      $chart.options.scales.yAxes[0].ticks.callback = function(value) {
+        if ( !(value % 10) ) {
+          return prefix + value + suffix;
+        }
       }
 
-      content += '<span class="popover-body-value">' + prefix + yLabel + suffix + '</span>';
-      return content;
-    }
+      // Update tooltips
+      $chart.options.tooltips.callbacks.label = function(item, data) {
+        var label = data.datasets[item.datasetIndex].label || '';
+        var yLabel = item.yLabel;
+        var content = '';
 
+        if (data.datasets.length > 1) {
+          content += '<span class="popover-body-label mr-auto">' + label + '</span>';
+        }
+
+        content += '<span class="popover-body-value">' + prefix + yLabel + suffix + '</span>';
+        return content;
+      }
+
+    }
   }
 
 
