@@ -13407,7 +13407,11 @@ a.text-body:focus
 
 .card-avatar
 {
-    margin-bottom: 1rem;
+    display: block !important;
+
+    margin-right: auto;
+    margin-bottom: 1rem; 
+    margin-left: auto;
 }
 
 .card-avatar-top

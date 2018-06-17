@@ -564,6 +564,50 @@ var Performance = (function() {
 
 
 //
+// Performance Alias ==================================
+// Performance card charts
+//
+
+var PerformanceAlias = (function() {
+
+  // Variables
+
+  var $performanceChartAlias = $('#performanceChartAlias');
+
+  // Init
+  //
+  // Init chart
+
+  function init($chart) {
+
+    // Create chart
+    var performanceChartAlias = new Chart($chart, {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        datasets: [{
+          label: 'Performance',
+          data: [0,10,5,15,10,20,15,25,20,30,25,40]
+        }]
+      }
+    });
+
+    // Save to jQuery object
+    $chart.data('chart', performanceChartAlias);
+  }
+
+  // Events
+  //
+  // Performance chart events
+
+  if ($performanceChartAlias.length) {
+    init($performanceChartAlias);
+  }
+
+})();
+
+
+//
 // Orders ==================================
 // Orders card charts
 //
@@ -714,70 +758,6 @@ var Devices = (function() {
 
     // Generate legend
     generateLegend($devicesChart);
-  }
-
-})();
-
-
-//
-// Devices Alias ==================================
-// Devices card charts
-//
-
-var DevicesAlias = (function() {
-
-  // Variables
-
-  var $devicesChartAlias = $('#devicesChartAlias');
-
-  // Methods
-  //
-  // Chart functions
-
-  // Init chart
-  function init($chart) {
-
-    // Create chart
-    var devicesChartAlias = new Chart($chart, {
-      type: 'doughnut',
-      data: {
-        labels: ['Desktop', 'Tablet', 'Mobile'],
-        datasets: [{
-          data: [60, 25, 15],
-          backgroundColor: [
-            ThemeCharts.colors.primary[700],
-            ThemeCharts.colors.primary[300],
-            ThemeCharts.colors.primary[100]
-          ],
-          hoverBorderColor: ThemeCharts.colors.white
-        }]
-      }
-    });
-
-    // Save to jQuery object
-    $chart.data('chart', devicesChartAlias);
-  }
-
-  // Generate legend
-  function generateLegend($chart) {
-    var content = $chart.data('chart').generateLegend();
-    var legend = $chart.data('target');
-    var $legend = $(legend);
-
-    $legend.html(content);
-  }
-
-  // Events
-  //
-  // Chart events
-
-  if ($devicesChartAlias.length) {
-
-    // Init chart
-    init($devicesChartAlias);
-
-    // Generate legend
-    generateLegend($devicesChartAlias);
   }
 
 })();

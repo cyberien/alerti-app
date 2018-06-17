@@ -1,0 +1,2719 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include("partials/head.html", {
+      "pageTitle": "Dashkit"
+    })
+  </head>
+  <body>
+
+    <!-- MODALS
+    ================================================== -->
+    @@include("partials/modals.html")
+
+    <!-- SIDEBAR
+    ================================================== -->
+    @@include("partials/sidebar.html", {
+      "category": "components",
+      "page": "components.html",
+      "user": true
+    })
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10 col-xl-8">
+
+            <!-- ALERTS -->
+            <div id="alerts">
+            
+              <!-- Header -->
+              <div class="header mt-md-5">
+                <div class="header-body">
+
+                  <!-- Title -->
+                  <h1 class="header-title">
+                    Alerts
+                  </h1>
+
+                  <!-- Subtitle -->
+                  <p class="header-subtitle">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A repellat, hic ad illo temporibus id natus ducimus doloribus unde sunt nobis cumque odio maxime earum, aliquam ex ullam, dolorem totam!
+                  </p>
+
+                </div>
+              </div>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  
+                  <div class="alert alert-primary" role="alert">
+                    A simple primary alert—check it out!
+                  </div>
+                  <div class="alert alert-secondary" role="alert">
+                    A simple secondary alert—check it out!
+                  </div>
+                  <div class="alert alert-success" role="alert">
+                    A simple success alert—check it out!
+                  </div>
+                  <div class="alert alert-danger" role="alert">
+                    A simple danger alert—check it out!
+                  </div>
+                  <div class="alert alert-warning" role="alert">
+                    A simple warning alert—check it out!
+                  </div>
+                  <div class="alert alert-info" role="alert">
+                    A simple info alert—check it out!
+                  </div>
+                  <div class="alert alert-light" role="alert">
+                    A simple light alert—check it out!
+                  </div>
+                  <div class="alert alert-dark" role="alert">
+                    A simple dark alert—check it out!
+                  </div>
+                  
+                </div>
+              </div>
+
+            </div>
+
+            <!-- AVATARS -->
+            <div id="avatars">
+
+              <!-- Header -->
+              <div class="header mt-md-5">
+                <div class="header-body">
+
+                  <!-- Title -->
+                  <h1 class="header-title">
+                    Avatars <span class="badge badge-soft-primary ml-1 mt--1">Dashkit Only</span>
+                  </h1>
+
+                  <!-- Subtitle -->
+                  <p class="header-subtitle">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti voluptas nisi praesentium, voluptatum, dolores, excepturi sequi laboriosam facilis eum corrupti rerum vero ratione. Voluptas natus animi a, ullam commodi voluptatem.
+                  </p>
+
+                </div>
+              </div>
+
+              <!-- Heading -->
+              <h2 class="mb-2">
+                Sizing
+              </h2>
+              
+              <!-- Subheading -->
+              <p class="text-muted mb-4">
+                Using Bootstrap’s typical naming structure, you can create a standard avatar, or scale it up to different sizes based on what’s needed.
+              </p>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  
+                  <div class="avatar avatar-xxl">
+                    <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                  </div>
+
+                  <div class="avatar avatar-xl">
+                    <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                  </div>
+
+                  <div class="avatar avatar-lg">
+                    <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                  </div>
+
+                  <div class="avatar">
+                    <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                  </div>
+
+                  <div class="avatar avatar-sm">
+                    <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                  </div>
+
+                  <div class="avatar avatar-xs">
+                    <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                  </div>
+
+                </div>
+                <div class="card-footer bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;div&nbsp;class=&quot;avatar&nbsp;avatar-xxl&quot;&gt;<br/>&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/6.jpg&quot;&nbsp;alt=&quot;...&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&quot;&gt;<br/>&lt;/div&gt;<br/><br/>&lt;div&nbsp;class=&quot;avatar&nbsp;avatar-xl&quot;&gt;<br/>&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/6.jpg&quot;&nbsp;alt=&quot;...&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&quot;&gt;<br/>&lt;/div&gt;<br/><br/>&lt;div&nbsp;class=&quot;avatar&nbsp;avatar-lg&quot;&gt;<br/>&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/6.jpg&quot;&nbsp;alt=&quot;...&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&quot;&gt;<br/>&lt;/div&gt;<br/><br/>&lt;div&nbsp;class=&quot;avatar&quot;&gt;<br/>&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/6.jpg&quot;&nbsp;alt=&quot;...&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&quot;&gt;<br/>&lt;/div&gt;<br/><br/>&lt;div&nbsp;class=&quot;avatar&nbsp;avatar-sm&quot;&gt;<br/>&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/6.jpg&quot;&nbsp;alt=&quot;...&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&quot;&gt;<br/>&lt;/div&gt;<br/><br/>&lt;div&nbsp;class=&quot;avatar&nbsp;avatar-xs&quot;&gt;<br/>&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/6.jpg&quot;&nbsp;alt=&quot;...&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&quot;&gt;<br/>&lt;/div&gt;
+                  </code>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <hr class="my-5">
+
+              <!-- Heading -->
+              <h2 class="mb-2">
+                Status Indicator
+              </h2>
+              
+              <!-- Subheading -->
+              <p class="text-muted mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, minus repellendus ex veniam nesciunt est ratione, tempore soluta maxime, sunt, esse! Rem perferendis illo blanditiis recusandae molestias beatae magni odio.
+              </p>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  
+                  <div class="avatar avatar-xxl avatar-offline">
+                    <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                  </div>
+
+                  <div class="avatar avatar-xl avatar-online">
+                    <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                  </div>
+
+                  <div class="avatar avatar-lg avatar-offline">
+                    <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                  </div>
+
+                  <div class="avatar avatar-online">
+                    <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                  </div>
+
+                  <div class="avatar avatar-sm avatar-offline">
+                    <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                  </div>
+
+                  <div class="avatar avatar-xs avatar-online">
+                    <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                  </div>
+
+                </div>
+                <div class="card-footer bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;div&nbsp;class=&quot;avatar&nbsp;avatar-online&quot;&gt;<br/>&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/6.jpg&quot;&nbsp;alt=&quot;...&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&quot;&gt;<br/>&lt;/div&gt;<br/><br/>&lt;div&nbsp;class=&quot;avatar&nbsp;avatar-offline&quot;&gt;<br/>&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/6.jpg&quot;&nbsp;alt=&quot;...&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&quot;&gt;<br/>&lt;/div&gt;
+                  </code>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <hr class="my-5">
+
+              <!-- Heading -->
+              <h2 class="mb-2">
+                Shape
+              </h2>
+              
+              <!-- Subheading -->
+              <p class="text-muted mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, minus repellendus ex veniam nesciunt est ratione, tempore soluta maxime, sunt, esse! Rem perferendis illo blanditiis recusandae molestias beatae magni odio.
+              </p>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  
+                  <div class="avatar avatar-xxl">
+                    <img src="assets/img/8.jpg" alt="..." class="avatar-img rounded">
+                  </div>
+
+                  <div class="avatar avatar-xxl">
+                    <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                  </div>
+
+                  <div class="avatar avatar-lg">
+                    <img src="assets/img/8.jpg" alt="..." class="avatar-img rounded">
+                  </div>
+
+                  <div class="avatar avatar-lg">
+                    <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                  </div>
+
+                  <div class="avatar">
+                    <img src="assets/img/8.jpg" alt="..." class="avatar-img rounded">
+                  </div>
+
+                  <div class="avatar">
+                    <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                  </div>
+
+                </div>
+                <div class="card-footer bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;div&nbsp;class=&quot;avatar&quot;&gt;<br/>&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/8.jpg&quot;&nbsp;alt=&quot;...&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded&quot;&gt;<br/>&lt;/div&gt;<br/><br/>&lt;div&nbsp;class=&quot;avatar&quot;&gt;<br/>&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/6.jpg&quot;&nbsp;alt=&quot;...&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&quot;&gt;<br/>&lt;/div&gt;
+                  </code>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <hr class="my-5">
+
+              <!-- Heading -->
+              <h2 class="mb-2">
+                Initials
+              </h2>
+              
+              <!-- Subheading -->
+              <p class="text-muted mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, minus repellendus ex veniam nesciunt est ratione, tempore soluta maxime, sunt, esse! Rem perferendis illo blanditiis recusandae molestias beatae magni odio.
+              </p>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  
+                  <div class="avatar avatar-xxl">
+                    <span class="avatar-title rounded-circle">CF</span>
+                  </div>
+
+                  <div class="avatar avatar-lg">
+                    <span class="avatar-title rounded-circle">CF</span>
+                  </div>
+
+                  <div class="avatar">
+                    <span class="avatar-title rounded-circle">CF</span>
+                  </div>
+
+                  <div class="avatar avatar-sm">
+                    <span class="avatar-title rounded-circle">CF</span>
+                  </div>
+
+                  <div class="avatar avatar-xs">
+                    <span class="avatar-title rounded-circle">CF</span>
+                  </div>
+
+                </div>
+                <div class="card-footer bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;div&nbsp;class=&quot;avatar&nbsp;avatar-xxl&quot;&gt;<br/>&nbsp;&nbsp;&lt;span&nbsp;class=&quot;avatar-title&nbsp;rounded-circle&quot;&gt;CF&lt;/span&gt;<br/>&lt;/div&gt;<br/><br/>&lt;div&nbsp;class=&quot;avatar&nbsp;avatar-lg&quot;&gt;<br/>&nbsp;&nbsp;&lt;span&nbsp;class=&quot;avatar-title&nbsp;rounded-circle&quot;&gt;CF&lt;/span&gt;<br/>&lt;/div&gt;<br/><br/>&lt;div&nbsp;class=&quot;avatar&quot;&gt;<br/>&nbsp;&nbsp;&lt;span&nbsp;class=&quot;avatar-title&nbsp;rounded-circle&quot;&gt;CF&lt;/span&gt;<br/>&lt;/div&gt;<br/><br/>&lt;div&nbsp;class=&quot;avatar&nbsp;avatar-sm&quot;&gt;<br/>&nbsp;&nbsp;&lt;span&nbsp;class=&quot;avatar-title&nbsp;rounded-circle&quot;&gt;CF&lt;/span&gt;<br/>&lt;/div&gt;<br/><br/>&lt;div&nbsp;class=&quot;avatar&nbsp;avatar-xs&quot;&gt;<br/>&nbsp;&nbsp;&lt;span&nbsp;class=&quot;avatar-title&nbsp;rounded-circle&quot;&gt;CF&lt;/span&gt;<br/>&lt;/div&gt;
+                  </code>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <hr class="my-5">
+
+              <!-- Heading -->
+              <h2 class="mb-2">
+                Groups
+              </h2>
+              
+              <!-- Subheading -->
+              <p class="text-muted mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, minus repellendus ex veniam nesciunt est ratione, tempore soluta maxime, sunt, esse! Rem perferendis illo blanditiis recusandae molestias beatae magni odio.
+              </p>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  
+                  <div class="avatar-group">
+                    <div class="avatar avatar-lg">
+                      <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+                    </div>
+                    <div class="avatar avatar-lg">
+                      <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+                    </div>
+                    <div class="avatar avatar-lg">
+                      <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+                    </div>
+                    <div class="avatar avatar-lg">
+                      <span class="avatar-title rounded-circle border border-white">CF</span>
+                    </div>
+                  </div>
+
+                  <div class="avatar-group">
+                    <div class="avatar">
+                      <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+                    </div>
+                    <div class="avatar">
+                      <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+                    </div>
+                    <div class="avatar">
+                      <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+                    </div>
+                    <div class="avatar">
+                      <span class="avatar-title rounded-circle border border-white">CF</span>
+                    </div>
+                  </div>
+
+                  <div class="avatar-group">
+                    <div class="avatar avatar-xs">
+                      <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+                    </div>
+                    <div class="avatar avatar-xs">
+                      <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+                    </div>
+                    <div class="avatar avatar-xs">
+                      <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+                    </div>
+                    <div class="avatar avatar-xs">
+                      <span class="avatar-title rounded-circle border border-white">CF</span>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="card-footer bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;div&nbsp;class=&quot;avatar-group&quot;&gt;<br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;avatar&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/6.jpg&quot;&nbsp;alt=&quot;...&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&nbsp;border&nbsp;border-white&quot;&gt;<br/>&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;avatar&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/6.jpg&quot;&nbsp;alt=&quot;...&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&nbsp;border&nbsp;border-white&quot;&gt;<br/>&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;avatar&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/6.jpg&quot;&nbsp;alt=&quot;...&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&nbsp;border&nbsp;border-white&quot;&gt;<br/>&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;avatar&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;avatar-title&nbsp;rounded-circle&nbsp;border&nbsp;border-white&quot;&gt;CF&lt;/span&gt;<br/>&nbsp;&nbsp;&lt;/div&gt;<br/>&lt;/div&gt;
+                  </code>
+                </div>
+              </div>
+              
+            </div>
+
+            <!-- BADGES -->
+            <div id="badges">
+
+              <!-- Header -->
+              <div class="header mt-md-5">
+                <div class="header-body">
+
+                  <!-- Title -->
+                  <h1 class="header-title">
+                    Badges
+                  </h1>
+
+                  <!-- Subtitle -->
+                  <p class="header-subtitle">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut tempora earum totam itaque omnis sapiente reprehenderit, ipsum, eveniet quisquam veniam quas ullam ex saepe tempore quasi at aspernatur sed quidem.
+                  </p>
+
+                </div>
+              </div>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  
+                  <span class="badge badge-primary">Primary</span>
+                  <span class="badge badge-secondary">Secondary</span>
+                  <span class="badge badge-success">Success</span>
+                  <span class="badge badge-danger">Danger</span>
+                  <span class="badge badge-warning">Warning</span>
+                  <span class="badge badge-info">Info</span>
+                  <span class="badge badge-light">Light</span>
+                  <span class="badge badge-dark">Dark</span>
+
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <hr class="my-5">
+
+              <!-- Heading -->
+              <h2 class="mb-2">
+                Soft <span class="badge badge-soft-primary ml-1 mt--1">Dashkit Only</span>
+              </h2>
+              
+              <!-- Subheading -->
+              <p class="text-muted mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum itaque, aliquam unde est dignissimos ratione eos distinctio in mollitia beatae aperiam adipisci accusamus vel reiciendis nisi? Quod, voluptate, sint! Nemo!
+              </p>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  
+                  <span class="badge badge-soft-primary">Primary</span>
+                  <span class="badge badge-soft-secondary">Secondary</span>
+                  <span class="badge badge-soft-success">Success</span>
+                  <span class="badge badge-soft-info">Info</span>
+                  <span class="badge badge-soft-warning">Warning</span>
+                  <span class="badge badge-soft-danger">Danger</span>
+                  <span class="badge badge-soft-light">Light</span>
+                  <span class="badge badge-soft-dark">Dark</span>
+
+                </div>
+                <div class="card-footer bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;span&nbsp;class=&quot;badge&nbsp;badge-soft-primary&quot;&gt;Primary&lt;/span&gt;<br/>&lt;span&nbsp;class=&quot;badge&nbsp;badge-soft-secondary&quot;&gt;Secondary&lt;/span&gt;<br/>&lt;span&nbsp;class=&quot;badge&nbsp;badge-soft-success&quot;&gt;Success&lt;/span&gt;<br/>&lt;span&nbsp;class=&quot;badge&nbsp;badge-soft-info&quot;&gt;Info&lt;/span&gt;<br/>&lt;span&nbsp;class=&quot;badge&nbsp;badge-soft-warning&quot;&gt;Warning&lt;/span&gt;<br/>&lt;span&nbsp;class=&quot;badge&nbsp;badge-soft-danger&quot;&gt;Danger&lt;/span&gt;<br/>&lt;span&nbsp;class=&quot;badge&nbsp;badge-soft-light&quot;&gt;Light&lt;/span&gt;<br/>&lt;span&nbsp;class=&quot;badge&nbsp;badge-soft-dark&quot;&gt;Dark&lt;/span&gt;
+                  </code>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- BREADCRUMB -->
+            <div id="breadcrumb">
+
+              <!-- Header -->
+              <div class="header mt-md-5">
+                <div class="header-body">
+
+                  <!-- Title -->
+                  <h1 class="header-title">
+                    Breadcrumb
+                  </h1>
+
+                  <!-- Subtitle -->
+                  <p class="header-subtitle">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A repellat, hic ad illo temporibus id natus ducimus doloribus unde sunt nobis cumque odio maxime earum, aliquam ex ullam, dolorem totam!
+                  </p>
+
+                </div>
+              </div>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item"><a href="#">Library</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Data</li>
+                    </ol>
+                  </nav>
+
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <hr class="my-5">
+
+              <!-- Heading -->
+              <h2 class="mb-2">
+                Light <span class="badge badge-soft-primary ml-1 mt--1">Dashkit Only</span>
+              </h2>
+              
+              <!-- Subheading -->
+              <p class="text-muted mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident est nihil dolor sit quis quia suscipit, omnis quibusdam. Magni eos vero iste necessitatibus laborum quaerat incidunt delectus deserunt expedita commodi.
+              </p>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  
+                  <nav aria-label="breadcrumb breadcrumb-light">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item"><a href="#">Library</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Data</li>
+                    </ol>
+                  </nav>
+
+                </div>
+                <div class="card-footer bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;nav&nbsp;aria-label=&quot;breadcrumb&nbsp;breadcrumb-light&quot;&gt;<br/>&nbsp;&nbsp;&lt;ol&nbsp;class=&quot;breadcrumb&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;breadcrumb-item&quot;&gt;&lt;a&nbsp;href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;breadcrumb-item&quot;&gt;&lt;a&nbsp;href=&quot;#&quot;&gt;Library&lt;/a&gt;&lt;/li&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;breadcrumb-item&nbsp;active&quot;&nbsp;aria-current=&quot;page&quot;&gt;Data&lt;/li&gt;<br/>&nbsp;&nbsp;&lt;/ol&gt;<br/>&lt;/nav&gt;
+                  </code>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <hr class="my-5">
+
+              <!-- Heading -->
+              <h2 class="mb-2">
+                Dark <span class="badge badge-soft-primary ml-1 mt--1">Dashkit Only</span>
+              </h2>
+              
+              <!-- Subheading -->
+              <p class="text-muted mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea necessitatibus fuga a aperiam laudantium amet porro quidem non reiciendis harum excepturi iste quam rem illum, quae repellendus quisquam blanditiis perferendis.
+              </p>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  
+                  <nav aria-label="breadcrumb breadcrumb-dark">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item"><a href="#">Library</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Data</li>
+                    </ol>
+                  </nav>
+
+                </div>
+                <div class="card-footer bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;nav&nbsp;aria-label=&quot;breadcrumb&nbsp;breadcrumb-dark&quot;&gt;<br/>&nbsp;&nbsp;&lt;ol&nbsp;class=&quot;breadcrumb&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;breadcrumb-item&quot;&gt;&lt;a&nbsp;href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;breadcrumb-item&quot;&gt;&lt;a&nbsp;href=&quot;#&quot;&gt;Library&lt;/a&gt;&lt;/li&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;breadcrumb-item&nbsp;active&quot;&nbsp;aria-current=&quot;page&quot;&gt;Data&lt;/li&gt;<br/>&nbsp;&nbsp;&lt;/ol&gt;<br/>&lt;/nav&gt;
+                  </code>
+                </div>
+              </div>
+              
+            </div>
+
+            <!-- BUTTONS -->
+            <div id="buttons">
+              
+              <!-- Header -->
+              <div class="header mt-md-5">
+                <div class="header-body">
+
+                  <!-- Title -->
+                  <h1 class="header-title">
+                    Buttons
+                  </h1>
+
+                  <!-- Subtitle -->
+                  <p class="header-subtitle">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque expedita, nam vitae. Eum neque, impedit delectus ut doloremque placeat aliquam facere saepe illo, atque a amet laboriosam, fugit ipsum debitis.
+                  </p>
+
+                </div>
+              </div>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  
+                  <button type="button" class="btn btn-primary btn-lg">
+                    Large button
+                  </button>
+
+                  <button type="button" class="btn btn-primary">
+                    Base button
+                  </button>
+
+                  <button type="button" class="btn btn-primary btn-sm">
+                    Small button
+                  </button>
+
+                </div>
+              </div>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  
+                  <button type="button" class="btn btn-primary">Primary</button>
+                  <button type="button" class="btn btn-secondary">Secondary</button>
+                  <button type="button" class="btn btn-success">Success</button>
+                  <button type="button" class="btn btn-danger">Danger</button>
+                  <button type="button" class="btn btn-warning">Warning</button>
+                  <button type="button" class="btn btn-info">Info</button>
+                  <button type="button" class="btn btn-light">Light</button>
+                  <button type="button" class="btn btn-dark">Dark</button>
+                  <button type="button" class="btn btn-link">Link</button>
+
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <hr class="my-5">
+
+              <!-- Heading -->
+              <h2 class="mb-2">
+                White <span class="badge badge-soft-primary ml-1 mt--1">Dashkit Only</span>
+              </h2>
+              
+              <!-- Subheading -->
+              <p class="text-muted mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, cumque consequuntur totam, laborum sed sapiente omnis minus delectus nostrum reiciendis soluta numquam, illo provident iusto. Blanditiis optio, labore eaque voluptate.
+              </p>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  
+                  <a href="#" class="btn btn-white">
+                    Button white
+                  </a>
+
+                </div>
+                <div class="card-footer bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;btn&nbsp;btn-white&quot;&gt;<br/>&nbsp;&nbsp;Button<br/>&lt;/a&gt;
+                  </code>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <hr class="my-5">
+
+              <!-- Heading -->
+              <h2 class="mb-2">
+                Rounded circle <span class="badge badge-soft-primary ml-1 mt--1">Dashkit Only</span>
+              </h2>
+              
+              <!-- Subheading -->
+              <p class="text-muted mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, sint illum sunt, officiis ut est voluptatibus, tenetur soluta blanditiis saepe incidunt deserunt aliquid dolorum labore. Libero beatae repellat aliquam? Voluptas.
+              </p>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  
+                  <a href="#" class="btn btn-rounded-circle btn-white">
+                    +
+                  </a>
+
+                </div>
+                <div class="card-footer bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;btn&nbsp;btn-rounded-circle&nbsp;btn-white&quot;&gt;<br/>&nbsp;&nbsp;+<br/>&lt;/a&gt;
+                  </code>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- BUTTON GROUP -->
+            <div id="button-group">
+              
+              <!-- Header -->
+              <div class="header mt-md-5">
+                <div class="header-body">
+
+                  <!-- Title -->
+                  <h1 class="header-title">
+                    Button group
+                  </h1>
+
+                  <!-- Subtitle -->
+                  <p class="header-subtitle">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut tempora earum totam itaque omnis sapiente reprehenderit, ipsum, eveniet quisquam veniam quas ullam ex saepe tempore quasi at aspernatur sed quidem.
+                  </p>
+
+                </div>
+              </div>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  
+                  <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                    <div class="btn-group mr-2" role="group" aria-label="First group">
+                      <button type="button" class="btn btn-secondary">1</button>
+                      <button type="button" class="btn btn-secondary">2</button>
+                      <button type="button" class="btn btn-secondary">3</button>
+                      <button type="button" class="btn btn-secondary">4</button>
+                    </div>
+                    <div class="btn-group mr-2" role="group" aria-label="Second group">
+                      <button type="button" class="btn btn-secondary">5</button>
+                      <button type="button" class="btn btn-secondary">6</button>
+                      <button type="button" class="btn btn-secondary">7</button>
+                    </div>
+                    <div class="btn-group" role="group" aria-label="Third group">
+                      <button type="button" class="btn btn-secondary">8</button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+            <!-- CARDS -->
+            <div id="cards">
+              
+              <!-- Header -->
+              <div class="header mt-md-5">
+                <div class="header-body">
+
+                  <!-- Title -->
+                  <h1 class="header-title">
+                    Cards
+                  </h1>
+
+                  <!-- Subtitle -->
+                  <p class="header-subtitle">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae ullam vero, odio distinctio vitae ex, tempora facilis voluptatum velit excepturi est eveniet delectus asperiores, cupiditate cum amet nostrum ducimus fuga!
+                  </p>
+
+                </div>
+              </div>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis non dolore est fuga nobis ipsum illum eligendi nemo iure repellat, soluta, optio minus ut reiciendis voluptates enim impedit veritatis officiis.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <hr class="my-5">
+
+              <!-- Heading -->
+              <h2 class="mb-2">
+                Card title <span class="badge badge-soft-primary ml-1 mt--1">Dashkit Only</span>
+              </h2>
+              
+              <!-- Subheading -->
+              <p class="text-muted mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora vero magnam qui recusandae rem magni sunt delectus earum odit expedita, laudantium cumque, odio perspiciatis consequatur sint ex id aliquid amet!
+              </p>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-header">
+                  
+                  <h4 class="card-header-title">
+                    Card title
+                  </h4>
+
+                </div>
+                <div class="card-body">
+                  
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis tempora architecto, sit a repellat dignissimos consequatur mollitia qui consequuntur recusandae numquam voluptate maiores, non cumque illo laboriosam sint dolores. Nostrum.
+                  </p>
+
+                </div>
+                <div class="card-footer bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;div&nbsp;class=&quot;card&quot;&gt;<br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;card-header&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&nbsp;class=&quot;card-header-title&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Card&nbsp;title<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h4&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&lt;/div&gt;<br/>&lt;/div&gt;
+                  </code>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <hr class="my-5">
+
+              <!-- Heading -->
+              <h2 class="mb-2">
+                Card header navigation <span class="badge badge-soft-primary ml-1 mt--1">Dashkit Only</span>
+              </h2>
+              
+              <!-- Subheading -->
+              <p class="text-muted mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui facilis quas provident, nam. Quod optio quibusdam illo, cum qui. Odit, magni minus distinctio aspernatur deserunt nemo quasi explicabo assumenda cupiditate.
+              </p>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-header">
+                  <div class="row align-items-center">
+                    <div class="col">
+
+                      <h4 class="card-header-title">
+                        Card title
+                      </h4>
+                      
+                    </div>
+                    <div class="col-auto">
+
+                      <ul class="nav nav-tabs nav-tabs-sm card-header-tabs">
+                       <li class="nav-item">
+                         <a href="#" class="nav-link active">
+                           Active
+                         </a>
+                       </li>
+                       <li class="nav-item">
+                         <a href="#" class="nav-link">
+                           Link
+                         </a>
+                       </li>
+                       <li class="nav-item">
+                         <a href="#" class="nav-link">
+                           Link
+                         </a>
+                       </li>
+                      </ul>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis tempora architecto, sit a repellat dignissimos consequatur mollitia qui consequuntur recusandae numquam voluptate maiores, non cumque illo laboriosam sint dolores. Nostrum.
+                  </p>
+
+                </div>
+                <div class="card-footer bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;div&nbsp;class=&quot;card&quot;&gt;<br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;card-header&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;row&nbsp;align-items-center&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col&quot;&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&nbsp;class=&quot;card-header-title&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Card&nbsp;title<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h4&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;nav&nbsp;nav-tabs&nbsp;nav-tabs-sm&nbsp;card-header-tabs&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;nav-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;nav-link&nbsp;active&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Active<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;nav-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;nav-link&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Link<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;nav-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;nav-link&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Link<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&lt;/div&gt;<br/>&lt;/div&gt;
+                  </code>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <hr class="my-5">
+
+              <!-- Heading -->
+              <h2 class="mb-2">
+                Inactive <span class="badge badge-soft-primary ml-1 mt--1">Dashkit Only</span>
+              </h2>
+              
+              <!-- Subheading -->
+              <p class="text-muted mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto excepturi natus repellat sequi esse quasi soluta, vero assumenda velit nisi quas! Perspiciatis exercitationem quia, soluta quod. Dolores enim expedita suscipit?
+              </p>
+
+              <!-- Card -->
+              <div class="card card-inactive">
+                <div class="card-body">
+                  
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis tempora architecto, sit a repellat dignissimos consequatur mollitia qui consequuntur recusandae numquam voluptate maiores, non cumque illo laboriosam sint dolores. Nostrum.
+                  </p>
+
+                </div>
+                <div class="card-footer bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;div&nbsp;class=&quot;card&nbsp;card-inactive&quot;&gt;<br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;card-body&quot;&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&nbsp;class=&quot;card-text&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet,&nbsp;consectetur&nbsp;adipisicing&nbsp;elit,&nbsp;sed&nbsp;do&nbsp;eiusmod<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tempor&nbsp;incididunt&nbsp;ut&nbsp;labore&nbsp;et&nbsp;dolore&nbsp;magna&nbsp;aliqua.&nbsp;Ut&nbsp;enim&nbsp;ad&nbsp;minim&nbsp;veniam,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;quis&nbsp;nostrud&nbsp;exercitation&nbsp;ullamco&nbsp;laboris&nbsp;nisi&nbsp;ut&nbsp;aliquip&nbsp;ex&nbsp;ea&nbsp;commodo<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;consequat.&nbsp;Duis&nbsp;aute&nbsp;irure&nbsp;dolor&nbsp;in&nbsp;reprehenderit&nbsp;in&nbsp;voluptate&nbsp;velit&nbsp;esse<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cillum&nbsp;dolore&nbsp;eu&nbsp;fugiat&nbsp;nulla&nbsp;pariatur.&nbsp;Excepteur&nbsp;sint&nbsp;occaecat&nbsp;cupidatat&nbsp;non<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;proident,&nbsp;sunt&nbsp;in&nbsp;culpa&nbsp;qui&nbsp;officia&nbsp;deserunt&nbsp;mollit&nbsp;anim&nbsp;id&nbsp;est&nbsp;laborum.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;<br/><br/>&nbsp;&nbsp;&lt;/div&gt;<br/>&lt;/div&gt;<br/>
+                  </code>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <hr class="my-5">
+
+              <!-- Heading -->
+              <h2 class="mb-2">
+                Profile <span class="badge badge-soft-primary ml-1 mt--1">Dashkit Only</span>
+              </h2>
+
+              <!-- Subheading -->
+              <p class="text-muted mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto excepturi natus repellat sequi esse quasi soluta, vero assumenda velit nisi quas! Perspiciatis exercitationem quia, soluta quod. Dolores enim expedita suscipit?
+              </p>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+
+                  <div class="card">
+
+                    <!-- Dropdown -->
+                    <div class="dropdown card-dropdown">
+                      <a href="#" class="dropdown-ellipses dropdown-toggle text-white" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fe fe-more-vertical"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a href="#" class="dropdown-item">
+                          Action
+                        </a>
+                        <a href="#" class="dropdown-item">
+                          Another action
+                        </a>
+                        <a href="#" class="dropdown-item">
+                          Something else here
+                        </a>
+                      </div>
+                    </div>
+
+                    <!-- Image -->
+                    <img src="assets/img/7.jpg" alt="..." class="card-img-top">
+
+                    <!-- Body -->
+                    <div class="card-body text-center">
+
+                      <!-- Avatar -->
+                      <a href="profile-posts.html" class="avatar avatar-xxl card-avatar card-avatar-top">
+                        <img src="assets/img/6.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                      </a>
+
+                      <!-- Title -->
+                      <h2 class="card-title">
+                        <a href="profile-posts.html">Casey Fyfe</a>
+                      </h2>
+
+                      <!-- Text -->
+                      <p class="card-text text-muted">
+                        <small>
+                          You either die Spongebob or you live long enough to become Squidward. Worked at/with @Twitter.
+                        </small>
+                      </p>
+                      
+                      <!-- Buttons -->
+                      <p class="card-text">
+                        <span class="badge badge-soft-secondary">
+                          UX Team
+                        </span>
+                        <span class="badge badge-soft-secondary">
+                          Research Team
+                        </span>
+                      </p>
+                      
+                      <!-- Divider -->
+                      <hr>
+
+                      <div class="row align-items-center justify-content-between">
+                        <div class="col-auto">
+                          
+                          <!-- Status -->
+                          <small>
+                            <span class="text-success">●</span> Online
+                          </small>
+
+                        </div>
+                        <div class="col-auto">
+                          
+                          <!-- Button -->
+                          <a href="#" class="btn btn-sm btn-primary">
+                            Subscribe
+                          </a>
+
+                        </div>
+                      </div> <!-- / .row -->
+
+                    </div> <!-- / .card-body -->
+
+                  </div>
+                  
+                </div>
+                <div class="card-footer bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;div&nbsp;class=&quot;card&quot;&gt;<br/><br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dropdown&nbsp;card-dropdown&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-ellipses&nbsp;dropdown-toggle&nbsp;text-white&quot;&nbsp;role=&quot;button&quot;&nbsp;data-toggle=&quot;dropdown&quot;&nbsp;aria-haspopup=&quot;true&quot;&nbsp;aria-expanded=&quot;false&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i&nbsp;class=&quot;fe&nbsp;fe-more-vertical&quot;&gt;&lt;/i&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dropdown-menu&nbsp;dropdown-menu-right&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Action<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Another&nbsp;action<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Something&nbsp;else&nbsp;here<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/7.jpg&quot;&nbsp;alt=&quot;...&quot;&nbsp;class=&quot;card-img-top&quot;&gt;<br/><br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;card-body&nbsp;text-center&quot;&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;profile-posts.html&quot;&nbsp;class=&quot;avatar&nbsp;avatar-xxl&nbsp;card-avatar&nbsp;card-avatar-top&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/6.jpg&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&nbsp;border&nbsp;border-white&quot;&nbsp;alt=&quot;...&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&nbsp;class=&quot;card-title&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;profile-posts.html&quot;&gt;Casey&nbsp;Fyfe&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h2&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&nbsp;class=&quot;card-text&nbsp;text-muted&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;small&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&nbsp;either&nbsp;die&nbsp;Spongebob&nbsp;or&nbsp;you&nbsp;live&nbsp;long&nbsp;enough&nbsp;to&nbsp;become&nbsp;Squidward.&nbsp;Worked&nbsp;at/with&nbsp;@Twitter.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/small&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&nbsp;class=&quot;card-text&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;badge&nbsp;badge-soft-secondary&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UX&nbsp;Team<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;badge&nbsp;badge-soft-secondary&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Research&nbsp;Team<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;hr&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;row&nbsp;align-items-center&nbsp;justify-content-between&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;small&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;text-success&quot;&gt;&#x25cf;&lt;/span&gt;&nbsp;Online<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/small&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;btn&nbsp;btn-sm&nbsp;btn-primary&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Subscribe<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;&nbsp;<br/><br/>&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&lt;/div&gt;
+                  </code>
+                </div>
+              </div>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row align-items-center">
+                        <div class="col-auto">
+                          
+                          <!-- Avatar -->
+                          <a href="profile-posts.html" class="avatar avatar-lg">
+                            <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                          </a>
+
+                        </div>
+                        <div class="col ml--2">
+                          
+                          <!-- Title -->
+                          <h4 class="card-title mb-1">
+                            <a href="profile-posts.html">Casey Fyfe</a>
+                          </h4>
+
+                          <!-- Text -->
+                          <p class="card-text small text-muted mb-1">
+                            You either die Spongebob or you live long enough to...
+                          </p>
+
+                          <!-- Status -->
+                          <p class="card-text small">
+                            <span class="text-success">●</span> Online
+                          </p>
+
+                        </div>
+                        <div class="col-auto">
+                          
+                          <!-- Button -->
+                          <a href="#" class="btn btn-sm btn-primary d-none d-md-inline-block">
+                            Subscribe
+                          </a>
+
+                        </div>
+                        <div class="col-auto">
+                          
+                          <!-- Dropdown -->
+                          <div class="dropdown">
+                            <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" data-expanded="false">
+                              <i class="fe fe-more-vertical"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                              <a href="#" class="dropdown-item">
+                                Action
+                              </a>
+                              <a href="#" class="dropdown-item">
+                                Another action
+                              </a>
+                              <a href="#" class="dropdown-item">
+                                Something else here
+                              </a>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div> <!-- / .row -->
+                    </div> <!-- / .card-body -->
+                  </div>
+
+                </div>
+                <div class="card-footer bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;div&nbsp;class=&quot;card&quot;&gt;<br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;card-body&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;row&nbsp;align-items-center&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;profile-posts.html&quot;&nbsp;class=&quot;avatar&nbsp;avatar-lg&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/6.jpg&quot;&nbsp;alt=&quot;...&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col&nbsp;ml--2&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&nbsp;class=&quot;card-title&nbsp;mb-1&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;profile-posts.html&quot;&gt;Casey&nbsp;Fyfe&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h4&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&nbsp;class=&quot;card-text&nbsp;small&nbsp;text-muted&nbsp;mb-1&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&nbsp;either&nbsp;die&nbsp;Spongebob&nbsp;or&nbsp;you&nbsp;live&nbsp;long&nbsp;enough&nbsp;to...<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&nbsp;class=&quot;card-text&nbsp;small&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;text-success&quot;&gt;&#x25cf;&lt;/span&gt;&nbsp;Online<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;btn&nbsp;btn-sm&nbsp;btn-primary&nbsp;d-none&nbsp;d-md-inline-block&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Subscribe<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dropdown&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-ellipses&nbsp;dropdown-toggle&quot;&nbsp;role=&quot;button&quot;&nbsp;data-toggle=&quot;dropdown&quot;&nbsp;aria-haspopup=&quot;true&quot;&nbsp;data-expanded=&quot;false&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i&nbsp;class=&quot;fe&nbsp;fe-more-vertical&quot;&gt;&lt;/i&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dropdown-menu&nbsp;dropdown-menu-right&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Action<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Another&nbsp;action<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Something&nbsp;else&nbsp;here<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&lt;/div&gt;<br/>&lt;/div&gt;
+                  </code>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <hr class="my-5">
+
+              <!-- Heading -->
+              <h2 class="mb-2">
+                Team <span class="badge badge-soft-primary ml-1 mt--1">Dashkit Only</span>
+              </h2>
+
+              <!-- Subheading -->
+              <p class="text-muted mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto excepturi natus repellat sequi esse quasi soluta, vero assumenda velit nisi quas! Perspiciatis exercitationem quia, soluta quod. Dolores enim expedita suscipit?
+              </p>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  
+                  <div class="card">
+                    <div class="card-body">
+
+                      <!-- Dropdown -->
+                      <div class="dropdown card-dropdown">
+                        <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fe fe-more-vertical"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a href="#" class="dropdown-item">
+                            Action
+                          </a>
+                          <a href="#" class="dropdown-item">
+                            Another action
+                          </a>
+                          <a href="#" class="dropdown-item">
+                            Something else here
+                          </a>
+                        </div>
+                      </div>
+                      
+                      <!-- Avatar -->
+                      <div class="text-center">
+                        <a href="team-overview.html" class="card-avatar avatar avatar-lg mx-auto">
+                          <img src="assets/img/8.jpg" alt="" class="avatar-img rounded">
+                        </a>
+                      </div>
+
+                      <!-- Title -->
+                      <h2 class="card-title text-center">
+                        <a href="team-overview.html">Bloomberg Industries</a>
+                      </h2>
+
+                      <!-- Text -->
+                      <p class="card-text small text-center text-muted">
+                        We make stunning and cool responsive web and app design which suitable for any project purpose for your business.
+                      </p>
+
+                      <!-- Divider -->
+                      <hr>
+
+                      <div class="row align-items-center">
+                        <div class="col">
+                          
+                          <!-- Time -->
+                          <p class="card-text small text-muted">
+                            <i class="fe fe-clock"></i> Updated 2hr ago
+                          </p>
+
+                        </div>
+                        <div class="col-auto">
+                          
+                          <!-- Avatar group -->
+                          <div class="avatar-group">
+                            <a href="profile-posts.html" class="avatar avatar-xs">
+                              <img src="assets/img/3.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                            </a>
+                            <a href="profile-posts.html" class="avatar avatar-xs">
+                              <img src="assets/img/4.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                            </a>
+                            <a href="profile-posts.html" class="avatar avatar-xs">
+                              <img src="assets/img/5.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                            </a>
+                            <a href="profile-posts.html" class="avatar avatar-xs">
+                              <img src="assets/img/6.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                            </a>
+                            <div class="avatar avatar-xs">
+                              <div class="avatar-title rounded-circle border border-white">+7</div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div> <!-- / .row -->
+
+                    </div> <!-- / .card-body -->
+                  </div>
+
+                </div>
+                <div class="card-footer bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;div&nbsp;class=&quot;card&quot;&gt;<br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;card-body&quot;&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dropdown&nbsp;card-dropdown&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-ellipses&nbsp;dropdown-toggle&quot;&nbsp;role=&quot;button&quot;&nbsp;data-toggle=&quot;dropdown&quot;&nbsp;aria-haspopup=&quot;true&quot;&nbsp;aria-expanded=&quot;false&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i&nbsp;class=&quot;fe&nbsp;fe-more-vertical&quot;&gt;&lt;/i&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dropdown-menu&nbsp;dropdown-menu-right&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Action<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Another&nbsp;action<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Something&nbsp;else&nbsp;here<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;text-center&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;team-overview.html&quot;&nbsp;class=&quot;card-avatar&nbsp;avatar&nbsp;avatar-lg&nbsp;mx-auto&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/8.jpg&quot;&nbsp;alt=&quot;&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&nbsp;class=&quot;card-title&nbsp;text-center&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;team-overview.html&quot;&gt;Bloomberg&nbsp;Industries&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h2&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&nbsp;class=&quot;card-text&nbsp;small&nbsp;text-center&nbsp;text-muted&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We&nbsp;make&nbsp;stunning&nbsp;and&nbsp;cool&nbsp;responsive&nbsp;web&nbsp;and&nbsp;app&nbsp;design&nbsp;which&nbsp;suitable&nbsp;for&nbsp;any&nbsp;project&nbsp;purpose&nbsp;for&nbsp;your&nbsp;business.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;hr&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;row&nbsp;align-items-center&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&nbsp;class=&quot;card-text&nbsp;small&nbsp;text-muted&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i&nbsp;class=&quot;fe&nbsp;fe-clock&quot;&gt;&lt;/i&gt;&nbsp;Updated&nbsp;2hr&nbsp;ago<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;avatar-group&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;profile-posts.html&quot;&nbsp;class=&quot;avatar&nbsp;avatar-xs&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/3.jpg&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&nbsp;border&nbsp;border-white&quot;&nbsp;alt=&quot;...&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;profile-posts.html&quot;&nbsp;class=&quot;avatar&nbsp;avatar-xs&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/4.jpg&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&nbsp;border&nbsp;border-white&quot;&nbsp;alt=&quot;...&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;profile-posts.html&quot;&nbsp;class=&quot;avatar&nbsp;avatar-xs&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/5.jpg&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&nbsp;border&nbsp;border-white&quot;&nbsp;alt=&quot;...&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;profile-posts.html&quot;&nbsp;class=&quot;avatar&nbsp;avatar-xs&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/6.jpg&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&nbsp;border&nbsp;border-white&quot;&nbsp;alt=&quot;...&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;avatar&nbsp;avatar-xs&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;avatar-title&nbsp;rounded-circle&nbsp;border&nbsp;border-white&quot;&gt;+7&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&nbsp;&nbsp;&lt;/div&gt;<br/>&lt;/div&gt;
+                  </code>
+                </div>
+              </div>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row align-items-center">
+                        <div class="col-auto">
+                          
+                          <!-- Avatar -->
+                          <a href="project-team-overview.html" class="avatar avatar-lg">
+                            <img src="assets/img/8.jpg" alt="..." class="avatar-img rounded">
+                          </a>
+
+                        </div>
+                        <div class="col ml--2">
+
+                          <!-- Title -->
+                          <h4 class="card-title mb-1 name">
+                            <a href="team-overview.html">Bloomberg</a>
+                          </h4>
+
+                          <!-- Text -->
+                          <p class="card-text small text-muted mb-1">
+                            We make stunning and cool responsive web and app design...
+                          </p>
+
+                          <!-- Time -->
+                          <p class="card-text small text-muted">
+                            <i class="fe fe-clock"></i> Updated 2hr ago
+                          </p>
+                          
+                        </div>
+                        <div class="col-auto">
+                          
+                          <!-- Avatar group -->
+                          <div class="avatar-group d-none d-md-inline-flex">
+                            <a href="profile-posts.html" class="avatar avatar-xs">
+                              <img src="assets/img/3.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                            </a>
+                            <a href="profile-posts.html" class="avatar avatar-xs">
+                              <img src="assets/img/4.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                            </a>
+                            <a href="profile-posts.html" class="avatar avatar-xs">
+                              <img src="assets/img/5.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                            </a>
+                            <a href="profile-posts.html" class="avatar avatar-xs">
+                              <img src="assets/img/6.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                            </a>
+                          </div>
+
+                        </div>
+                        <div class="col-auto">
+                          
+                          <!-- Dropdown -->
+                          <div class="dropdown">
+                            <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="fe fe-more-vertical"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                              <a href="#" class="dropdown-item">
+                                Action
+                              </a>
+                              <a href="#" class="dropdown-item">
+                                Another action
+                              </a>
+                              <a href="#" class="dropdown-item">
+                                Something else here
+                              </a>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div> <!-- / .row -->
+                    </div> <!-- / .card-body -->
+                  </div>
+
+                </div>
+                <div class="card-footer bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;div&nbsp;class=&quot;card&quot;&gt;<br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;card-body&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;row&nbsp;align-items-center&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;project-team-overview.html&quot;&nbsp;class=&quot;avatar&nbsp;avatar-lg&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/8.jpg&quot;&nbsp;alt=&quot;...&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col&nbsp;ml--2&quot;&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&nbsp;class=&quot;card-title&nbsp;mb-1&nbsp;name&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;team-overview.html&quot;&gt;Bloomberg&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h4&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&nbsp;class=&quot;card-text&nbsp;small&nbsp;text-muted&nbsp;mb-1&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We&nbsp;make&nbsp;stunning&nbsp;and&nbsp;cool&nbsp;responsive&nbsp;web&nbsp;and&nbsp;app&nbsp;design...<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&nbsp;class=&quot;card-text&nbsp;small&nbsp;text-muted&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i&nbsp;class=&quot;fe&nbsp;fe-clock&quot;&gt;&lt;/i&gt;&nbsp;Updated&nbsp;2hr&nbsp;ago<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;avatar-group&nbsp;d-none&nbsp;d-md-inline-flex&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;profile-posts.html&quot;&nbsp;class=&quot;avatar&nbsp;avatar-xs&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/3.jpg&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&nbsp;border&nbsp;border-white&quot;&nbsp;alt=&quot;...&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;profile-posts.html&quot;&nbsp;class=&quot;avatar&nbsp;avatar-xs&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/4.jpg&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&nbsp;border&nbsp;border-white&quot;&nbsp;alt=&quot;...&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;profile-posts.html&quot;&nbsp;class=&quot;avatar&nbsp;avatar-xs&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/5.jpg&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&nbsp;border&nbsp;border-white&quot;&nbsp;alt=&quot;...&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;profile-posts.html&quot;&nbsp;class=&quot;avatar&nbsp;avatar-xs&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/6.jpg&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&nbsp;border&nbsp;border-white&quot;&nbsp;alt=&quot;...&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dropdown&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-ellipses&nbsp;dropdown-toggle&quot;&nbsp;role=&quot;button&quot;&nbsp;data-toggle=&quot;dropdown&quot;&nbsp;aria-haspopup=&quot;true&quot;&nbsp;aria-expanded=&quot;false&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i&nbsp;class=&quot;fe&nbsp;fe-more-vertical&quot;&gt;&lt;/i&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dropdown-menu&nbsp;dropdown-menu-right&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Action<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Another&nbsp;action<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Something&nbsp;else&nbsp;here<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&lt;/div&gt;<br/>&lt;/div&gt;
+                  </code>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <hr class="my-5">
+
+              <!-- Heading -->
+              <h2 class="mb-2">
+                Project <span class="badge badge-soft-primary ml-1 mt--1">Dashkit Only</span>
+              </h2>
+
+              <!-- Subheading -->
+              <p class="text-muted mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto excepturi natus repellat sequi esse quasi soluta, vero assumenda velit nisi quas! Perspiciatis exercitationem quia, soluta quod. Dolores enim expedita suscipit?
+              </p>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  
+                  <div class="card">
+                    <img src="assets/img/9.png" alt="..." class="card-img-top">
+                    <div class="card-body">
+                      <div class="row align-items-center">
+                        <div class="col">
+                      
+                          <!-- Title -->
+                          <h4 class="card-title mb-2 name">
+                            <a href="project-overview.html">New Landing Page</a>
+                          </h4>
+
+                          <!-- Subtitle -->
+                          <p class="card-text small text-muted">
+                            Updated 4hr ago
+                          </p>
+
+                        </div>
+                        <div class="col-auto">
+                          
+                          <!-- Dropdown -->
+                          <div class="dropdown">
+                            <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="fe fe-more-vertical"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                              <a href="#" class="dropdown-item">
+                                Action
+                              </a>
+                              <a href="#" class="dropdown-item">
+                                Another action
+                              </a>
+                              <a href="#" class="dropdown-item">
+                                Something else here
+                              </a>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div> <!-- / .row -->
+
+                      <!-- Divider -->
+                      <hr>
+
+                      <div class="row align-items-center">
+                        <div class="col">
+                          <div class="row align-items-center no-gutters">
+                            <div class="col-auto">
+
+                              <div class="small mr-2">29%</div>
+                              
+                            </div>
+                            <div class="col">
+                              
+                              <!-- Progress -->
+                              <div class="progress progress-sm">
+                                <div class="progress-bar" role="progressbar" style="width: 29%" aria-valuenow="29" aria-valuemin="0" aria-valuemax="100"></div>
+                              </div>
+
+                            </div>
+                          </div> <!-- / .row -->
+                        </div>
+                        <div class="col-auto">
+                          
+                          <!-- Avatar group -->
+                          <div class="avatar-group">
+                            <a href="profile-posts.html" class="avatar avatar-xs">
+                              <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+                            </a>
+                            <a href="profile-posts.html" class="avatar avatar-xs">
+                              <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+                            </a>
+                            <a href="profile-posts.html" class="avatar avatar-xs">
+                              <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+                            </a>
+                            <a href="profile-posts.html" class="avatar avatar-xs">
+                              <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle border border-white">
+                            </a>
+                          </div>
+
+                        </div>
+                      </div> <!-- / .row -->
+
+                    </div> <!-- / .card-body -->
+                  </div>
+
+                </div>
+                <div class="card-footer bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;div&nbsp;class=&quot;card&quot;&gt;<br/>&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/9.png&quot;&nbsp;alt=&quot;...&quot;&nbsp;class=&quot;card-img-top&quot;&gt;<br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;card-body&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;row&nbsp;align-items-center&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&nbsp;class=&quot;card-title&nbsp;mb-2&nbsp;name&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;project-overview.html&quot;&gt;New&nbsp;Landing&nbsp;Page&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h4&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&nbsp;class=&quot;card-text&nbsp;small&nbsp;text-muted&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Updated&nbsp;4hr&nbsp;ago<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dropdown&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-ellipses&nbsp;dropdown-toggle&quot;&nbsp;role=&quot;button&quot;&nbsp;data-toggle=&quot;dropdown&quot;&nbsp;aria-haspopup=&quot;true&quot;&nbsp;aria-expanded=&quot;false&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i&nbsp;class=&quot;fe&nbsp;fe-more-vertical&quot;&gt;&lt;/i&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dropdown-menu&nbsp;dropdown-menu-right&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Action<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Another&nbsp;action<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Something&nbsp;else&nbsp;here<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;hr&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;row&nbsp;align-items-center&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;row&nbsp;align-items-center&nbsp;no-gutters&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;small&nbsp;mr-2&quot;&gt;29%&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;progress&nbsp;progress-sm&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;progress-bar&quot;&nbsp;role=&quot;progressbar&quot;&nbsp;style=&quot;width:&nbsp;29%&quot;&nbsp;aria-valuenow=&quot;29&quot;&nbsp;aria-valuemin=&quot;0&quot;&nbsp;aria-valuemax=&quot;100&quot;&gt;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;avatar-group&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;profile-posts.html&quot;&nbsp;class=&quot;avatar&nbsp;avatar-xs&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/6.jpg&quot;&nbsp;alt=&quot;...&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&nbsp;border&nbsp;border-white&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;profile-posts.html&quot;&nbsp;class=&quot;avatar&nbsp;avatar-xs&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/6.jpg&quot;&nbsp;alt=&quot;...&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&nbsp;border&nbsp;border-white&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;profile-posts.html&quot;&nbsp;class=&quot;avatar&nbsp;avatar-xs&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/6.jpg&quot;&nbsp;alt=&quot;...&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&nbsp;border&nbsp;border-white&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;profile-posts.html&quot;&nbsp;class=&quot;avatar&nbsp;avatar-xs&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/6.jpg&quot;&nbsp;alt=&quot;...&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&nbsp;border&nbsp;border-white&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&nbsp;&nbsp;&lt;/div&gt;<br/>&lt;/div&gt;
+                  </code>
+                </div>
+              </div>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row align-items-center">
+                        <div class="col-auto">
+                          
+                          <!-- Avatar -->
+                          <a href="project-overview.html" class="avatar avatar-lg avatar-4by3">
+                            <img src="assets/img/9.png" alt="..." class="avatar-img rounded">
+                          </a>
+
+                        </div>
+                        <div class="col ml--2">
+
+                          <!-- Title -->
+                          <h4 class="card-title mb-1 name">
+                            <a href="project-overview.html">New Landing Page</a>
+                          </h4>
+
+                          <!-- Text -->
+                          <p class="card-text small text-muted mb-1">
+                            <time>Updated 4hr ago</time>
+                          </p>
+
+                          <!-- Progress -->
+                          <div class="row align-items-center no-gutters">
+                            <div class="col-auto">
+
+                              <div class="small mr-2">29%</div>
+                              
+                            </div>
+                            <div class="col">
+                              
+                              <!-- Progress -->
+                              <div class="progress progress-sm">
+                                <div class="progress-bar" role="progressbar" style="width: 29%" aria-valuenow="29" aria-valuemin="0" aria-valuemax="100"></div>
+                              </div>
+
+                            </div>
+                          </div> <!-- / .row -->
+                          
+                        </div>
+                        <div class="col-auto">
+                          
+                          <!-- Avatar group -->
+                          <div class="avatar-group d-none d-md-inline-flex">
+                            <a href="profile-posts.html" class="avatar avatar-xs">
+                              <img src="assets/img/3.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                            </a>
+                            <a href="profile-posts.html" class="avatar avatar-xs">
+                              <img src="assets/img/4.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                            </a>
+                            <a href="profile-posts.html" class="avatar avatar-xs">
+                              <img src="assets/img/5.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                            </a>
+                            <a href="profile-posts.html" class="avatar avatar-xs">
+                              <img src="assets/img/6.jpg" class="avatar-img rounded-circle border border-white" alt="...">
+                            </a>
+                          </div>
+
+                        </div>
+                        <div class="col-auto">
+                          
+                          <!-- Dropdown -->
+                          <div class="dropdown">
+                            <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="fe fe-more-vertical"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                              <a href="#" class="dropdown-item">
+                                Action
+                              </a>
+                              <a href="#" class="dropdown-item">
+                                Another action
+                              </a>
+                              <a href="#" class="dropdown-item">
+                                Something else here
+                              </a>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div> <!-- / .row -->
+                    </div> <!-- / .card-body -->
+                  </div>
+
+                </div>
+                <div class="card-footer bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;div&nbsp;class=&quot;card&quot;&gt;<br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;card-body&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;row&nbsp;align-items-center&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;project-overview.html&quot;&nbsp;class=&quot;avatar&nbsp;avatar-lg&nbsp;avatar-4by3&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/9.png&quot;&nbsp;alt=&quot;...&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col&nbsp;ml--2&quot;&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&nbsp;class=&quot;card-title&nbsp;mb-1&nbsp;name&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;project-overview.html&quot;&gt;New&nbsp;Landing&nbsp;Page&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h4&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&nbsp;class=&quot;card-text&nbsp;small&nbsp;text-muted&nbsp;mb-1&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;time&gt;Updated&nbsp;4hr&nbsp;ago&lt;/time&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;row&nbsp;align-items-center&nbsp;no-gutters&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;small&nbsp;mr-2&quot;&gt;29%&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;progress&nbsp;progress-sm&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;progress-bar&quot;&nbsp;role=&quot;progressbar&quot;&nbsp;style=&quot;width:&nbsp;29%&quot;&nbsp;aria-valuenow=&quot;29&quot;&nbsp;aria-valuemin=&quot;0&quot;&nbsp;aria-valuemax=&quot;100&quot;&gt;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;&nbsp;&lt;!--&nbsp;/&nbsp;.row&nbsp;--&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;avatar-group&nbsp;d-none&nbsp;d-md-inline-flex&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;profile-posts.html&quot;&nbsp;class=&quot;avatar&nbsp;avatar-xs&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/3.jpg&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&nbsp;border&nbsp;border-white&quot;&nbsp;alt=&quot;...&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;profile-posts.html&quot;&nbsp;class=&quot;avatar&nbsp;avatar-xs&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/4.jpg&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&nbsp;border&nbsp;border-white&quot;&nbsp;alt=&quot;...&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;profile-posts.html&quot;&nbsp;class=&quot;avatar&nbsp;avatar-xs&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/5.jpg&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&nbsp;border&nbsp;border-white&quot;&nbsp;alt=&quot;...&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;profile-posts.html&quot;&nbsp;class=&quot;avatar&nbsp;avatar-xs&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/6.jpg&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&nbsp;border&nbsp;border-white&quot;&nbsp;alt=&quot;...&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dropdown&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-ellipses&nbsp;dropdown-toggle&quot;&nbsp;role=&quot;button&quot;&nbsp;data-toggle=&quot;dropdown&quot;&nbsp;aria-haspopup=&quot;true&quot;&nbsp;aria-expanded=&quot;false&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i&nbsp;class=&quot;fe&nbsp;fe-more-vertical&quot;&gt;&lt;/i&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dropdown-menu&nbsp;dropdown-menu-right&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Action<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Another&nbsp;action<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Something&nbsp;else&nbsp;here<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&lt;/div&gt;<br/>&lt;/div&gt;
+                  </code>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <hr class="my-5">
+
+              <!-- Heading -->
+              <h2 class="mb-2">
+                Files <span class="badge badge-soft-primary ml-1 mt--1">Dashkit Only</span>
+              </h2>
+
+              <!-- Subheading -->
+              <p class="text-muted mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto excepturi natus repellat sequi esse quasi soluta, vero assumenda velit nisi quas! Perspiciatis exercitationem quia, soluta quod. Dolores enim expedita suscipit?
+              </p>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  
+                  <div class="card">
+                    <div class="card-body">
+
+                      <div class="row align-items-center">
+                        <div class="col-auto">
+                          
+                          <!-- Avatar -->
+                          <a href="#" class="avatar avatar-lg">
+                            <img src="assets/img/11.png" alt="..." class="avatar-img rounded">
+                          </a>
+
+                        </div>
+                        <div class="col ml--2">
+
+                          <!-- Title -->
+                          <h4 class="card-title mb-1 name">
+                            <a href="#">Lorem ipsum dolor</a>
+                          </h4>
+
+                          <!-- Text -->
+                          <p class="card-text small text-muted mb-1">
+                            1.5mb PNG
+                          </p>
+
+                          <!-- Time -->
+                          <p class="card-text small text-muted">
+                            Uploaded by Dave Gamache on <time datetime="2018-01-03">Jan 3, 2018</time>
+                          </p>
+                          
+                        </div>
+                        <div class="col-auto">
+                          
+                          <!-- Button -->
+                          <a href="#" class="btn btn-sm btn-white d-none d-md-inline-block">
+                            Download
+                          </a>
+
+                        </div>
+                        <div class="col-auto">
+                          
+                          <!-- Dropdown -->
+                          <div class="dropdown">
+                            <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="fe fe-more-vertical"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                              <a href="#" class="dropdown-item">
+                                Action
+                              </a>
+                              <a href="#" class="dropdown-item">
+                                Another action
+                              </a>
+                              <a href="#" class="dropdown-item">
+                                Something else here
+                              </a>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div> <!-- / .row -->
+
+                    </div>
+                  </div>
+
+                </div>
+                <div class="card-footer bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;div&nbsp;class=&quot;card&quot;&gt;<br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;card-body&quot;&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;row&nbsp;align-items-center&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;avatar&nbsp;avatar-lg&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/11.png&quot;&nbsp;alt=&quot;...&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col&nbsp;ml--2&quot;&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&nbsp;class=&quot;card-title&nbsp;mb-1&nbsp;name&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&gt;Lorem&nbsp;ipsum&nbsp;dolor&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h4&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&nbsp;class=&quot;card-text&nbsp;small&nbsp;text-muted&nbsp;mb-1&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.5mb&nbsp;PNG<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&nbsp;class=&quot;card-text&nbsp;small&nbsp;text-muted&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Uploaded&nbsp;by&nbsp;Dave&nbsp;Gamache&nbsp;on&nbsp;&lt;time&nbsp;datetime=&quot;2018-01-03&quot;&gt;Jan&nbsp;3,&nbsp;2018&lt;/time&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;btn&nbsp;btn-sm&nbsp;btn-white&nbsp;d-none&nbsp;d-md-inline-block&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Download<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dropdown&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-ellipses&nbsp;dropdown-toggle&quot;&nbsp;role=&quot;button&quot;&nbsp;data-toggle=&quot;dropdown&quot;&nbsp;aria-haspopup=&quot;true&quot;&nbsp;aria-expanded=&quot;false&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i&nbsp;class=&quot;fe&nbsp;fe-more-vertical&quot;&gt;&lt;/i&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dropdown-menu&nbsp;dropdown-menu-right&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Action<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Another&nbsp;action<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Something&nbsp;else&nbsp;here<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&nbsp;&nbsp;&lt;/div&gt;<br/>&lt;/div&gt;
+                  </code>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <hr class="my-5">
+
+              <!-- Heading -->
+              <h2 class="mb-2">
+                Statcards <span class="badge badge-soft-primary ml-1 mt--1">Dashkit Only</span>
+              </h2>
+
+              <!-- Subheading -->
+              <p class="text-muted mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto excepturi natus repellat sequi esse quasi soluta, vero assumenda velit nisi quas! Perspiciatis exercitationem quia, soluta quod. Dolores enim expedita suscipit?
+              </p>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row align-items-center">
+                        <div class="col">
+
+                          <!-- Title -->
+                          <h6 class="card-title text-uppercase text-muted mb-2">
+                            Budget
+                          </h6>
+                          
+                          <!-- Heading -->
+                          <span class="h2 mb-0">
+                            $24,500
+                          </span>
+
+                          <!-- Badge -->
+                          <span class="badge badge-soft-success mt--1">
+                            +3.5%
+                          </span>
+
+                        </div>
+                        <div class="col-auto">
+                          
+                          <!-- Icon -->
+                          <span class="h2 fe fe-dollar-sign text-muted mb-0"></span>
+
+                        </div>
+                      </div> <!-- / .row -->
+
+                    </div>
+                  </div>
+
+                </div>
+                <div class="card-footer bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;div&nbsp;class=&quot;card&quot;&gt;<br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;card-body&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;row&nbsp;align-items-center&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col&quot;&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h6&nbsp;class=&quot;card-title&nbsp;text-uppercase&nbsp;text-muted&nbsp;mb-2&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Budget<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h6&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;h2&nbsp;mb-0&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$24,500<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;badge&nbsp;badge-soft-success&nbsp;mt--1&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+3.5%<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;h2&nbsp;fe&nbsp;fe-dollar-sign&nbsp;text-muted&nbsp;mb-0&quot;&gt;&lt;/span&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&nbsp;&nbsp;&lt;/div&gt;<br/>&lt;/div&gt;
+                  </code>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <hr class="my-5">
+
+              <!-- Heading -->
+              <h2 class="mb-2">
+                Posts <span class="badge badge-soft-primary ml-1 mt--1">Dashkit Only</span>
+              </h2>
+
+              <!-- Subheading -->
+              <p class="text-muted mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto excepturi natus repellat sequi esse quasi soluta, vero assumenda velit nisi quas! Perspiciatis exercitationem quia, soluta quod. Dolores enim expedita suscipit?
+              </p>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  
+                  <div class="card">
+                    <div class="card-body text-center">
+                      <div class="row justify-content-center">
+                        <div class="col-12 col-xl-6">
+                      
+                          <!-- Image -->
+                          <img src="assets/img/13.svg" alt="..." class="img-fluid mt--5 mb-4" style="max-width: 272px;">
+
+                          <!-- Title -->
+                          <h2>
+                            We released 2008 new versions of our theme to make the world a better place.
+                          </h2>
+
+                          <!-- Content -->
+                          <p class="text-muted">
+                            This is a true story and totally not made up. This is going to be better in the long run but for now this is the way it is.
+                          </p>
+
+                          <!-- Button -->
+                          <a href="#" class="btn btn-primary">
+                            Try it for free
+                          </a>
+                        
+                        </div>
+                      </div> <!-- / .row -->
+                    </div>
+                  </div>
+
+                </div>
+                <div class="card-footer bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;div&nbsp;class=&quot;card&quot;&gt;<br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;card-body&nbsp;text-center&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;row&nbsp;justify-content-center&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-12&nbsp;col-xl-6&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/13.svg&quot;&nbsp;alt=&quot;...&quot;&nbsp;class=&quot;img-fluid&nbsp;mt--5&nbsp;mb-4&quot;&nbsp;style=&quot;max-width:&nbsp;272px;&quot;&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We&nbsp;released&nbsp;2008&nbsp;new&nbsp;versions&nbsp;of&nbsp;our&nbsp;theme&nbsp;to&nbsp;make&nbsp;the&nbsp;world&nbsp;a&nbsp;better&nbsp;place.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h2&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&nbsp;class=&quot;text-muted&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This&nbsp;is&nbsp;a&nbsp;true&nbsp;story&nbsp;and&nbsp;totally&nbsp;not&nbsp;made&nbsp;up.&nbsp;This&nbsp;is&nbsp;going&nbsp;to&nbsp;be&nbsp;better&nbsp;in&nbsp;the&nbsp;long&nbsp;run&nbsp;but&nbsp;for&nbsp;now&nbsp;this&nbsp;is&nbsp;the&nbsp;way&nbsp;it&nbsp;is.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;btn&nbsp;btn-primary&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Try&nbsp;it&nbsp;for&nbsp;free<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&lt;/div&gt;<br/>&lt;/div&gt;
+                  </code>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- CHARTS -->
+            <div id="charts">
+              
+              <!-- Header -->
+              <div class="header mt-md-5">
+                <div class="header-body">
+
+                  <!-- Title -->
+                  <h1 class="header-title">
+                    Charts <span class="badge badge-soft-primary ml-1 mt--1">Dashkit Only</span> <span class="badge badge-soft-warning ml-1 mt--1">Plugin</span>
+                  </h1>
+
+                  <!-- Subtitle -->
+                  <p class="header-subtitle">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, deserunt, asperiores. Libero consectetur, necessitatibus quam repellat ipsum maxime eligendi cum error quaerat quis sunt, veritatis corrupti. Tempora, tempore at officiis.
+                  </p>
+
+                </div>
+              </div>
+
+              <!-- Heading -->
+              <h2 class="mb-2">
+                Line
+              </h2>
+              
+              <!-- Subheading -->
+              <p class="text-muted mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi est, explicabo neque provident temporibus aut nulla maxime corporis cum, excepturi eaque nam sit praesentium laudantium rem nisi, consectetur, quisquam laborum?
+              </p>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  
+                  <div class="chart">
+                    <canvas id="performanceChart" class="chart-canvas"></canvas>
+                  </div>
+
+                </div>
+                <div class="card-footer bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;div&nbsp;class=&quot;chart&quot;&gt;<br/>&nbsp;&nbsp;&lt;canvas&nbsp;id=&quot;performanceChart&quot;&nbsp;class=&quot;chart-canvas&quot;&gt;&lt;/canvas&gt;<br/>&lt;/div&gt;<br/><br/>&lt;script&gt;<br/>new&nbsp;Chart('performanceChart'),&nbsp;{<br/>&nbsp;&nbsp;type:&nbsp;'line',<br/>&nbsp;&nbsp;data:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;labels:&nbsp;['Jan',&nbsp;'Feb',&nbsp;'Mar',&nbsp;'Apr',&nbsp;'May',&nbsp;'Jun',&nbsp;'Jul',&nbsp;'Aug',&nbsp;'Sep',&nbsp;'Oct',&nbsp;'Nov',&nbsp;'Dec'],<br/>&nbsp;&nbsp;&nbsp;&nbsp;datasets:&nbsp;[{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;label:&nbsp;'Performance',<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data:&nbsp;[0,10,5,15,10,20,15,25,20,30,25,40]<br/>&nbsp;&nbsp;&nbsp;&nbsp;}]<br/>&nbsp;&nbsp;}<br/>});<br/>&lt;/script&gt;
+                  </code>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <hr class="my-5">
+
+              <!-- Heading -->
+              <h2 class="mb-2">
+                Bar
+              </h2>
+              
+              <!-- Subheading -->
+              <p class="text-muted mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi est, explicabo neque provident temporibus aut nulla maxime corporis cum, excepturi eaque nam sit praesentium laudantium rem nisi, consectetur, quisquam laborum?
+              </p>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  
+                  <div class="chart">
+                    <canvas id="ordersChart" class="chart-canvas"></canvas>
+                  </div>
+
+                </div>
+                <div class="card-footer bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;div&nbsp;class=&quot;chart&quot;&gt;<br/>&nbsp;&nbsp;&lt;canvas&nbsp;id=&quot;ordersChart&quot;&nbsp;class=&quot;chart-canvas&quot;&gt;&lt;/canvas&gt;<br/>&lt;/div&gt;<br/><br/>&lt;script&gt;<br/>new&nbsp;Chart('ordersChart',&nbsp;{<br/>&nbsp;&nbsp;type:&nbsp;'bar',<br/>&nbsp;&nbsp;data:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;labels:&nbsp;['Jan',&nbsp;'Feb',&nbsp;'Mar',&nbsp;'Apr',&nbsp;'May',&nbsp;'Jun',&nbsp;'Jul',&nbsp;'Aug',&nbsp;'Sep',&nbsp;'Oct',&nbsp;'Nov',&nbsp;'Dec'],<br/>&nbsp;&nbsp;&nbsp;&nbsp;datasets:&nbsp;[{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;label:&nbsp;'Sales',<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data:&nbsp;[25,20,30,22,17,10,18,26,28,26,20,32]<br/>&nbsp;&nbsp;&nbsp;&nbsp;}]<br/>&nbsp;&nbsp;}<br/>});&lt;/script&gt;
+                  </code>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <hr class="my-5">
+
+              <!-- Heading -->
+              <h2 class="mb-2">
+                Doughnut
+              </h2>
+              
+              <!-- Subheading -->
+              <p class="text-muted mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi est, explicabo neque provident temporibus aut nulla maxime corporis cum, excepturi eaque nam sit praesentium laudantium rem nisi, consectetur, quisquam laborum?
+              </p>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  
+                  <div class="chart">
+                    <canvas id="devicesChart" class="chart-canvas"></canvas>
+                  </div>
+
+                </div>
+                <div class="card-body bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;div&nbsp;class=&quot;chart&quot;&gt;<br/>&nbsp;&nbsp;&lt;canvas&nbsp;id=&quot;devicesChart&quot;&nbsp;class=&quot;chart-canvas&quot;&gt;&lt;/canvas&gt;<br/>&lt;/div&gt;<br/><br/>&lt;script&gt;<br/>new&nbsp;Chart('devicesChart',&nbsp;{<br/>&nbsp;&nbsp;type:&nbsp;'doughnut',<br/>&nbsp;&nbsp;data:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;labels:&nbsp;['Desktop',&nbsp;'Tablet',&nbsp;'Mobile'],<br/>&nbsp;&nbsp;&nbsp;&nbsp;datasets:&nbsp;[{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data:&nbsp;[60,&nbsp;25,&nbsp;15]<br/>&nbsp;&nbsp;&nbsp;&nbsp;}]<br/>&nbsp;&nbsp;}<br/>});<br/>&lt;/script&gt;
+                  </code>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <hr class="my-5">
+
+              <!-- Heading -->
+              <h2 class="mb-2">
+                Toggle chart data
+              </h2>
+              
+              <!-- Subheading -->
+              <p class="text-muted mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi est, explicabo neque provident temporibus aut nulla maxime corporis cum, excepturi eaque nam sit praesentium laudantium rem nisi, consectetur, quisquam laborum?
+              </p>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-header">
+                  <div class="row align-items-center">
+                    <div class="col">
+                  
+                      <!-- Title -->
+                      <h4 class="card-header-title">
+                        Orders
+                      </h4>
+
+                    </div>
+                    <div class="col-auto mr--3">
+                      
+                      <!-- Caption -->
+                      <span class="text-muted">
+                        Show affiliate:
+                      </span>
+
+                    </div>
+                    <div class="col-auto">
+
+                      <!-- Toggle -->
+                      <div class="custom-control custom-checkbox-toggle">
+                        <input type="checkbox" class="custom-control-input" id="cardToggle" data-toggle="chart" data-target="#ordersChartAlias" data-add='{"data":{"datasets":[{"data":[15,10,20,12,7,0,8,16,18,16,10,22],"backgroundColor":"#d2ddec","label":"Affiliate"}]}}'>
+                        <label class="custom-control-label" for="cardToggle"></label>
+                      </div>
+
+                    </div>
+                  </div> <!-- / .row -->
+
+                </div>
+                <div class="card-body">
+                  
+                  <!-- Chart -->
+                  <div class="chart">
+                    <canvas id="ordersChartAlias" class="chart-canvas"></canvas>
+                  </div>
+
+                </div>
+                <div class="card-footer bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;div&nbsp;class=&quot;custom-control&nbsp;custom-checkbox-toggle&quot;&gt;<br/>&nbsp;&nbsp;&lt;input&nbsp;type=&quot;checkbox&quot;&nbsp;class=&quot;custom-control-input&quot;&nbsp;id=&quot;cardToggle&quot;&nbsp;data-toggle=&quot;chart&quot;&nbsp;data-target=&quot;#ordersChart&quot;&nbsp;data-add='{&quot;data&quot;:{&quot;datasets&quot;:[{&quot;data&quot;:[15,10,20,12,7,0,8,16,18,16,10,22],&quot;backgroundColor&quot;:&quot;#d2ddec&quot;,&quot;label&quot;:&quot;Affiliate&quot;}]}}'&gt;<br/>&nbsp;&nbsp;&lt;label&nbsp;class=&quot;custom-control-label&quot;&nbsp;for=&quot;cardToggle&quot;&gt;&lt;/label&gt;<br/>&lt;/div&gt;<br /><br />&lt;div&nbsp;class=&quot;chart&quot;&gt;<br/>&nbsp;&nbsp;&lt;canvas&nbsp;id=&quot;ordersChart&quot;&nbsp;class=&quot;chart-canvas&quot;&gt;&lt;/canvas&gt;<br/>&lt;/div&gt;
+                  </code>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <hr class="my-5">
+
+              <!-- Heading -->
+              <h2 class="mb-2">
+                Update chart data
+              </h2>
+              
+              <!-- Subheading -->
+              <p class="text-muted mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi est, explicabo neque provident temporibus aut nulla maxime corporis cum, excepturi eaque nam sit praesentium laudantium rem nisi, consectetur, quisquam laborum?
+              </p>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-header">
+                  
+                  <!-- Tabs -->
+                  <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item" data-toggle="chart" data-target="#performanceChartAlias" data-update='{"data":{"datasets":[{"data":[0,10,5,15,10,20,15,25,20,30,25,40]}]}}' data-prefix="$" data-suffix="k">
+                      <a class="nav-link active" href="#" data-toggle="tab">
+                        Earned
+                      </a>
+                    </li>
+                    <li class="nav-item" data-toggle="chart" data-target="#performanceChartAlias" data-update='{"data":{"datasets":[{"data":[7,35,12,27,34,17,19,30,28,32,24,39]}]}}' data-prefix="" data-suffix="hr">
+                      <a class="nav-link" href="#" data-toggle="tab">
+                        Hours Worked
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+                <div class="card-body">
+                  
+                  <!-- Chart -->
+                  <div class="chart">
+                    <canvas id="performanceChartAlias" class="chart-canvas"></canvas>
+                  </div>
+
+                </div>
+                <div class="card-footer bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;ul&nbsp;class=&quot;nav&nbsp;nav-tabs&nbsp;card-header-tabs&quot;&gt;<br/>&nbsp;&nbsp;&lt;li&nbsp;class=&quot;nav-item&quot;&nbsp;data-toggle=&quot;chart&quot;&nbsp;data-target=&quot;#performanceChartAlias&quot;&nbsp;data-update='{&quot;data&quot;:{&quot;datasets&quot;:[{&quot;data&quot;:[0,10,5,15,10,20,15,25,20,30,25,40]}]}}'&nbsp;data-prefix=&quot;$&quot;&nbsp;data-suffix=&quot;k&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;class=&quot;nav-link&nbsp;active&quot;&nbsp;href=&quot;#&quot;&nbsp;data-toggle=&quot;tab&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Earned<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&lt;/li&gt;<br/>&nbsp;&nbsp;&lt;li&nbsp;class=&quot;nav-item&quot;&nbsp;data-toggle=&quot;chart&quot;&nbsp;data-target=&quot;#performanceChartAlias&quot;&nbsp;data-update='{&quot;data&quot;:{&quot;datasets&quot;:[{&quot;data&quot;:[7,35,12,27,34,17,19,30,28,32,24,39]}]}}'&nbsp;data-prefix=&quot;&quot;&nbsp;data-suffix=&quot;hr&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;class=&quot;nav-link&quot;&nbsp;href=&quot;#&quot;&nbsp;data-toggle=&quot;tab&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hours&nbsp;Worked<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&lt;/li&gt;<br/>&lt;/ul&gt;<br/><br/>&lt;div&nbsp;class=&quot;chart&quot;&gt;<br/>&nbsp;&nbsp;&lt;canvas&nbsp;id=&quot;performanceChartAlias&quot;&nbsp;class=&quot;chart-canvas&quot;&gt;&lt;/canvas&gt;<br/>&lt;/div&gt;
+                  </code>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- DROPDOWNS -->
+            <div id="dropdowns">
+
+              <!-- Header -->
+              <div class="header mt-md-5">
+                <div class="header-body">
+
+                  <!-- Title -->
+                  <h1 class="header-title">
+                    Dropdowns
+                  </h1>
+
+                  <!-- Subtitle -->
+                  <p class="header-subtitle">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, similique dignissimos eligendi modi alias, saepe. Recusandae praesentium sunt, minima ullam mollitia ipsa quasi harum? Aliquam id sed nemo, iste est.
+                  </p>
+
+                </div>
+              </div>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Dropdown button
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <hr class="my-5">
+
+              <!-- Heading -->
+              <h2 class="mb-2">
+                Dropdown ellipsis <span class="badge badge-soft-primary ml-1 mt--1">Dashkit Only</span>
+              </h2>
+
+              <!-- Subheading -->
+              <p class="text-muted mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus ratione minima incidunt, atque praesentium soluta sed eum commodi voluptatibus doloribus quos blanditiis eaque, non. Nostrum sapiente cum dolorum fugiat illum!
+              </p>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-header">
+                  <div class="row align-items-center">
+                    <div class="col">
+                      
+                      <h4 class="card-header-title">
+                        Latest orders
+                      </h4>
+
+                    </div>
+                    <div class="col-auto">
+                      
+                      <div class="dropdown">
+                        <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fe fe-more-vertical"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a href="#" class="dropdown-item">
+                            Action
+                          </a>
+                          <a href="#" class="dropdown-item">
+                            Another action
+                          </a>
+                          <a href="#" class="dropdown-item">
+                            Something else here
+                          </a>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div> <!-- / .row -->
+                </div>
+                <div class="card-footer bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;div&nbsp;class=&quot;dropdown&quot;&gt;<br/>&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-ellipses&nbsp;dropdown-toggle&quot;&nbsp;role=&quot;button&quot;&nbsp;data-toggle=&quot;dropdown&quot;&nbsp;aria-haspopup=&quot;true&quot;&nbsp;aria-expanded=&quot;false&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;i&nbsp;class=&quot;fe&nbsp;fe-more-vertical&quot;&gt;&lt;/i&gt;<br/>&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dropdown-menu&nbsp;dropdown-menu-right&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Action<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Another&nbsp;action<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Something&nbsp;else&nbsp;here<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&lt;/div&gt;<br/>&lt;/div&gt;
+                  </code>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <hr class="my-5">
+
+              <!-- Heading -->
+              <h2 class="mb-2">
+                Dropdown card <span class="badge badge-soft-primary ml-1 mt--1">Dashkit Only</span>
+              </h2>
+
+              <!-- Subheading -->
+              <p class="text-muted mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus ratione minima incidunt, atque praesentium soluta sed eum commodi voluptatibus doloribus quos blanditiis eaque, non. Nostrum sapiente cum dolorum fugiat illum!
+              </p>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  
+                  <div class="dropdown">
+                    <a href="#" class="btn btn-primary dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Card dropdown
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-card">
+                      <div class="card-body">
+                          
+                        <p class="card-text">
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat recusandae rem autem impedit ad odio, enim tempore possimus non minus quod dignissimos ipsum eveniet odit, ratione molestiae, velit a dolorem!
+                        </p>
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="card-footer bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;div&nbsp;class=&quot;dropdown&quot;&gt;<br/>&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;btn&nbsp;btn-primary&nbsp;dropdown-toggle&quot;&nbsp;role=&quot;button&quot;&nbsp;data-toggle=&quot;dropdown&quot;&nbsp;aria-haspopup=&quot;true&quot;&nbsp;aria-expanded=&quot;false&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;Card&nbsp;dropdown<br/>&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dropdown-menu&nbsp;dropdown-menu-card&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;card-body&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&nbsp;class=&quot;card-text&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet,&nbsp;consectetur&nbsp;adipisicing&nbsp;elit.&nbsp;Quaerat&nbsp;recusandae&nbsp;rem&nbsp;autem&nbsp;impedit&nbsp;ad&nbsp;odio,&nbsp;enim&nbsp;tempore&nbsp;possimus&nbsp;non&nbsp;minus&nbsp;quod&nbsp;dignissimos&nbsp;ipsum&nbsp;eveniet&nbsp;odit,&nbsp;ratione&nbsp;molestiae,&nbsp;velit&nbsp;a&nbsp;dolorem!<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&lt;/div&gt;<br/>&lt;/div&gt;
+                  </code>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <hr class="my-5">
+
+              <!-- Heading -->
+              <h2 class="mb-2">
+                Dropdown multilevel <span class="badge badge-soft-primary ml-1 mt--1">Dashkit Only</span>
+              </h2>
+
+              <!-- Subheading -->
+              <p class="text-muted mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus ratione minima incidunt, atque praesentium soluta sed eum commodi voluptatibus doloribus quos blanditiis eaque, non. Nostrum sapiente cum dolorum fugiat illum!
+              </p>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Dropdown button
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <li>
+                        <a class="dropdown-item" href="#">Action</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Another action</a>
+                      </li>
+                      <li class="dropright">
+                        <a class="dropdown-item dropdown-toggle" href="#" id="dropdownSubmenuButton" data-toggle="dropdown">Something else here</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownSubmenuButton">
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                </div>
+                <div class="card-footer bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;div&nbsp;class=&quot;dropdown&quot;&gt;<br/>&nbsp;&nbsp;&lt;button&nbsp;class=&quot;btn&nbsp;btn-secondary&nbsp;dropdown-toggle&quot;&nbsp;type=&quot;button&quot;&nbsp;id=&quot;dropdownMenuButton&quot;&nbsp;data-toggle=&quot;dropdown&quot;&nbsp;aria-haspopup=&quot;true&quot;&nbsp;aria-expanded=&quot;false&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;Dropdown&nbsp;button<br/>&nbsp;&nbsp;&lt;/button&gt;<br/>&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;dropdown-menu&quot;&nbsp;aria-labelledby=&quot;dropdownMenuButton&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;class=&quot;dropdown-item&quot;&nbsp;href=&quot;#&quot;&gt;Action&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;class=&quot;dropdown-item&quot;&nbsp;href=&quot;#&quot;&gt;Another&nbsp;action&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;dropright&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;class=&quot;dropdown-item&nbsp;dropdown-toggle&quot;&nbsp;href=&quot;#&quot;&nbsp;id=&quot;dropdownSubmenuButton&quot;&nbsp;data-toggle=&quot;dropdown&quot;&gt;Something&nbsp;else&nbsp;here&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dropdown-menu&quot;&nbsp;aria-labelledby=&quot;dropdownSubmenuButton&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;class=&quot;dropdown-item&quot;&nbsp;href=&quot;#&quot;&gt;Action&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;class=&quot;dropdown-item&quot;&nbsp;href=&quot;#&quot;&gt;Another&nbsp;action&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;class=&quot;dropdown-item&quot;&nbsp;href=&quot;#&quot;&gt;Something&nbsp;else&nbsp;here&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br/>&nbsp;&nbsp;&lt;/ul&gt;<br/>&lt;/div&gt;
+                  </code>
+                </div>
+              </div>
+              
+            </div>
+
+            <!-- FORMS -->
+            <div id="forms">
+              
+              <!-- Header -->
+              <div class="header mt-md-5">
+                <div class="header-body">
+
+                  <!-- Title -->
+                  <h1 class="header-title">
+                    Forms
+                  </h1>
+
+                  <!-- Subtitle -->
+                  <p class="header-subtitle">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis unde, id cumque. Cum ipsam recusandae cupiditate quod commodi optio, fugit expedita molestias quis natus magnam doloremque facilis modi, excepturi fugiat.
+                  </p>
+
+                </div>
+              </div>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+
+                  <form>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+                  
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <hr class="my-5">
+
+              <!-- Heading -->
+              <h2 class="mb-2">
+                Rounded <span class="badge badge-soft-primary ml-1 mt--1">Dashkit Only</span>
+              </h2>
+              
+              <!-- Subheading -->
+              <p class="text-muted mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi est, explicabo neque provident temporibus aut nulla maxime corporis cum, excepturi eaque nam sit praesentium laudantium rem nisi, consectetur, quisquam laborum?
+              </p>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  
+                  <input type="text" class="form-control form-control-rounded" placeholder="Form control rounded">
+
+                </div>
+                <div class="card-footer bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;input type=&quot;text&quot; class=&quot;form-control form-control-rounded&quot; placeholder=&quot;Form control rounded&quot;&gt;
+                  </code>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <hr class="my-5">
+
+              <!-- Heading -->
+              <h2 class="mb-2">
+                Flush <span class="badge badge-soft-primary ml-1 mt--1">Dashkit Only</span>
+              </h2>
+              
+              <!-- Subheading -->
+              <p class="text-muted mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi est, explicabo neque provident temporibus aut nulla maxime corporis cum, excepturi eaque nam sit praesentium laudantium rem nisi, consectetur, quisquam laborum?
+              </p>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  
+                  <input type="text" class="form-control form-control-flush" placeholder="Form control flush">
+
+                </div>
+                <div class="card-footer bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;input type=&quot;text&quot; class=&quot;form-control form-control-flush&quot; placeholder=&quot;Form control raw&quot;&gt;
+                  </code>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <hr class="my-5">
+
+              <!-- Heading -->
+              <h2 class="mb-2">
+                Input group merge <span class="badge badge-soft-primary ml-1 mt--1">Dashkit Only</span>
+              </h2>
+              
+              <!-- Subheading -->
+              <p class="text-muted mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi est, explicabo neque provident temporibus aut nulla maxime corporis cum, excepturi eaque nam sit praesentium laudantium rem nisi, consectetur, quisquam laborum?
+              </p>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  
+                  <div class="input-group input-group-merge mb-3">
+                    <input type="text" class="form-control form-control-prepended" placeholder="Input group prepended">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <span class="fe fe-eye"></span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="input-group input-group-merge">
+                    <input type="text" class="form-control form-control-appended" placeholder="Input group appended">
+                    <div class="input-group-append">
+                      <div class="input-group-text">
+                        <span class="fe fe-lock"></span>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="card-footer bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;div&nbsp;class=&quot;input-group&nbsp;input-group-merge&quot;&gt;<br/>&nbsp;&nbsp;&lt;input&nbsp;type=&quot;text&quot;&nbsp;class=&quot;form-control&nbsp;form-control-prepended&quot;&nbsp;placeholder=&quot;Input&nbsp;group&nbsp;prepended&quot;&gt;<br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;input-group-prepend&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;input-group-text&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;fe&nbsp;fe-eye&quot;&gt;&lt;/span&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&lt;/div&gt;<br/>&lt;/div&gt;<br/><br/>&lt;div&nbsp;class=&quot;input-group&nbsp;input-group-merge&quot;&gt;<br/>&nbsp;&nbsp;&lt;input&nbsp;type=&quot;text&quot;&nbsp;class=&quot;form-control&nbsp;form-control-appended&quot;&nbsp;placeholder=&quot;Input&nbsp;group&nbsp;appended&quot;&gt;<br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;input-group-append&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;input-group-text&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;fe&nbsp;fe-lock&quot;&gt;&lt;/span&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&lt;/div&gt;<br/>&lt;/div&gt;
+                  </code>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <hr class="my-5">
+
+              <!-- Heading -->
+              <h2 class="mb-2">
+                Toggle <span class="badge badge-soft-primary ml-1 mt--1">Dashkit Only</span>
+              </h2>
+              
+              <!-- Subheading -->
+              <p class="text-muted mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi est, explicabo neque provident temporibus aut nulla maxime corporis cum, excepturi eaque nam sit praesentium laudantium rem nisi, consectetur, quisquam laborum?
+              </p>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  
+                    <div class="custom-control custom-checkbox-toggle">
+                      <input type="checkbox" class="custom-control-input" id="exampleTogglr">
+                      <label class="custom-control-label" for="exampleTogglr"></label>
+                    </div>
+
+                </div>
+                <div class="card-footer bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;div&nbsp;class=&quot;custom-control&nbsp;custom-checkbox-toggle&quot;&gt;<br/>&nbsp;&nbsp;&lt;input&nbsp;type=&quot;checkbox&quot;&nbsp;class=&quot;custom-control-input&quot;&nbsp;id=&quot;exampleToggle&quot;&gt;<br/>&nbsp;&nbsp;&lt;label&nbsp;class=&quot;custom-control-label&quot;&nbsp;for=&quot;exampleToggle&quot;&gt;&lt;/label&gt;<br/>&lt;/div&gt;
+                  </code>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <hr class="my-5">
+
+              <!-- Divider -->
+              <hr class="my-5">
+
+              <!-- Heading -->
+              <h2 class="mb-2">
+                Date picker <span class="badge badge-soft-primary ml-1 mt--1">Dashkit Only</span>
+              </h2>
+              
+              <!-- Subheading -->
+              <p class="text-muted mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi est, explicabo neque provident temporibus aut nulla maxime corporis cum, excepturi eaque nam sit praesentium laudantium rem nisi, consectetur, quisquam laborum?
+              </p>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  
+                  <input type="text" class="form-control" id="formControlFlatpickr" placeholder="Flatpickr example">
+
+                </div>
+                <div class="card-footer bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;input&nbsp;type=&quot;text&quot;&nbsp;class=&quot;form-control&quot;&nbsp;id=&quot;formControlFlatpickr&quot;&nbsp;placeholder=&quot;Flatpickr&nbsp;example&quot;&gt;<br/><br/>&lt;script&gt;<br/>&nbsp;&nbsp;$('#formControlFlatpickr').flatpickr();<br/>&lt;/script&gt;
+                  </code>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <hr class="my-5">
+
+              <!-- Heading -->
+              <h2 class="mb-2">
+                Input masking <span class="badge badge-soft-primary ml-1 mt--1">Dashkit Only</span>
+              </h2>
+              
+              <!-- Subheading -->
+              <p class="text-muted mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi est, explicabo neque provident temporibus aut nulla maxime corporis cum, excepturi eaque nam sit praesentium laudantium rem nisi, consectetur, quisquam laborum?
+              </p>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  
+                  <input type="text" class="form-control mb-3" placeholder="$" data-mask="#.##0,00" data-mask-reverse="true">
+
+                  <input type="text" class="form-control mb-3" placeholder="(___)___-____" data-mask="(000) 000-0000">
+
+                  <input type="text" class="form-control" placeholder="__/__/____" data-mask="00/00/0000">
+
+                </div>
+                <div class="card-footer bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;US currency example&quot; data-mask=&quot;#.##0,00&quot; data-mask-reverse=&quot;true&quot;&gt;<br/><br/>&lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;US telephone example&quot; data-mask=&quot;(000) 000-0000&quot;&gt;<br/><br/>&lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;US data example&quot; data-mask=&quot;00/00/0000&quot;&gt;
+                  </code>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- LISTS -->
+            <div id="lists">
+
+              <!-- Header -->
+              <div class="header mt-md-5">
+                <div class="header-body">
+
+                  <!-- Title -->
+                  <h1 class="header-title">
+                    Lists
+                  </h1>
+
+                  <!-- Subtitle -->
+                  <p class="header-subtitle">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus corrupti cum quod numquam perferendis suscipit molestiae, totam sequi, consequatur impedit explicabo distinctio, necessitatibus enim voluptas. Vitae tempore, animi est quos?
+                  </p>
+
+                </div>
+              </div>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+
+                  <ul class="list-group">
+                    <li class="list-group-item active">Cras justo odio</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Morbi leo risus</li>
+                    <li class="list-group-item">Porta ac consectetur ac</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                  </ul>
+                  
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <hr class="my-5">
+
+              <!-- Heading -->
+              <h2 class="mb-2">
+                List group large <span class="badge badge-soft-primary ml-1 mt--1">Dashkit Only</span>
+              </h2>
+              
+              <!-- Subheading -->
+              <p class="text-muted mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid laudantium molestias iusto enim illum laborum alias asperiores nihil. Nam inventore voluptatibus molestiae cupiditate consequuntur nemo amet libero quos sit iste!
+              </p>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  
+                  <ul class="list-group list-group-lg">
+                    <li class="list-group-item active">Cras justo odio</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Morbi leo risus</li>
+                    <li class="list-group-item">Porta ac consectetur ac</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                  </ul>
+
+                </div>
+                <div class="card-footer bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;ul&nbsp;class=&quot;list-group&nbsp;list-group-lg&quot;&gt;<br/>&nbsp;&nbsp;&lt;li&nbsp;class=&quot;list-group-item&nbsp;active&quot;&gt;Cras&nbsp;justo&nbsp;odio&lt;/li&gt;<br/>&nbsp;&nbsp;&lt;li&nbsp;class=&quot;list-group-item&quot;&gt;Dapibus&nbsp;ac&nbsp;facilisis&nbsp;in&lt;/li&gt;<br/>&nbsp;&nbsp;&lt;li&nbsp;class=&quot;list-group-item&quot;&gt;Morbi&nbsp;leo&nbsp;risus&lt;/li&gt;<br/>&nbsp;&nbsp;&lt;li&nbsp;class=&quot;list-group-item&quot;&gt;Porta&nbsp;ac&nbsp;consectetur&nbsp;ac&lt;/li&gt;<br/>&nbsp;&nbsp;&lt;li&nbsp;class=&quot;list-group-item&quot;&gt;Vestibulum&nbsp;at&nbsp;eros&lt;/li&gt;<br/>&lt;/ul&gt;
+                  </code>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <hr class="my-5">
+
+              <!-- Heading -->
+              <h2 class="mb-2">
+                List.js <span class="badge badge-soft-primary ml-1 mt--1">Dashkit Only</span> <span class="badge badge-soft-warning ml-1 mt--1">Plugin</span>
+              </h2>
+              
+              <!-- Subheading -->
+              <p class="text-muted mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit veniam consequuntur in incidunt voluptatum ad totam asperiores aliquam, similique quibusdam et id explicabo blanditiis mollitia sed, debitis fuga ex nihil.
+              </p>
+
+              <!-- Card -->
+              <div class="card" data-toggle="lists" data-lists-values='["name"]'>
+                <div class="card-header">
+                  <div class="row align-items-center">
+                    <div class="col">
+
+                      <!-- Title -->
+                      <h4 class="card-header-title">
+                        Add a member
+                      </h4>
+                      
+                    </div>
+                  </div> <!-- / .row -->
+                </div>
+                <div class="card-header">
+                  
+                  <!-- Form -->
+                  <form>
+                    <div class="input-group input-group-flush input-group-merge">
+                      <input type="search" class="form-control form-control-prepended search" placeholder="Search">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">
+                          <span class="fe fe-search"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+
+                </div>
+                <div class="card-body">
+
+                  <!-- List group -->
+                  <div class="list-group list-group-flush list my--3">
+                    <li class="list-group-item px-0">
+                      
+                      <div class="row align-items-center">
+                        <div class="col-auto">
+                          
+                          <!-- Avatar -->
+                          <a href="profile-posts.html" class="avatar">
+                            <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                          </a>
+
+                        </div>
+                        <div class="col ml--2">
+
+                          <!-- Title -->
+                          <h4 class="mb-1 name">
+                            <a href="profile-posts.html">Casey Fyfe</a>
+                          </h4>
+
+                          <!-- Time -->
+                          <p class="small mb-0">
+                            <span class="text-success">●</span> Online
+                          </p>
+                          
+                        </div>
+                        <div class="col-auto">
+                          
+                          <!-- Button -->
+                          <a href="#" class="btn btn-sm btn-white">
+                            Add
+                          </a>
+
+                        </div>
+                      </div> <!-- / .row -->
+
+                    </li>
+                    <li class="list-group-item px-0">
+                      
+                      <div class="row align-items-center">
+                        <div class="col-auto">
+                          
+                          <!-- Avatar -->
+                          <a href="profile-posts.html" class="avatar">
+                            <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                          </a>
+
+                        </div>
+                        <div class="col ml--2">
+
+                          <!-- Title -->
+                          <h4 class="mb-1 name">
+                            <a href="profile-posts.html">Jane Roe</a>
+                          </h4>
+
+                          <!-- Time -->
+                          <p class="small mb-0">
+                            <span class="text-success">●</span> Online
+                          </p>
+                          
+                        </div>
+                        <div class="col-auto">
+                          
+                          <!-- Button -->
+                          <a href="#" class="btn btn-sm btn-white">
+                            Add
+                          </a>
+
+                        </div>
+                      </div> <!-- / .row -->
+
+                    </li>
+                    <li class="list-group-item px-0">
+                      
+                      <div class="row align-items-center">
+                        <div class="col-auto">
+                          
+                          <!-- Avatar -->
+                          <a href="profile-posts.html" class="avatar">
+                            <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                          </a>
+
+                        </div>
+                        <div class="col ml--2">
+
+                          <!-- Title -->
+                          <h4 class="mb-1 name">
+                            <a href="profile-posts.html">Casey Fyfe</a>
+                          </h4>
+
+                          <!-- Time -->
+                          <p class="small mb-0">
+                            <span class="text-success">●</span> Online
+                          </p>
+                          
+                        </div>
+                        <div class="col-auto">
+                          
+                          <!-- Button -->
+                          <a href="#" class="btn btn-sm btn-white">
+                            Add
+                          </a>
+
+                        </div>
+                      </div> <!-- / .row -->
+
+                    </li>
+                    <li class="list-group-item px-0">
+                      
+                      <div class="row align-items-center">
+                        <div class="col-auto">
+                          
+                          <!-- Avatar -->
+                          <a href="profile-posts.html" class="avatar">
+                            <img src="assets/img/6.jpg" alt="..." class="avatar-img rounded-circle">
+                          </a>
+
+                        </div>
+                        <div class="col ml--2">
+
+                          <!-- Title -->
+                          <h4 class="mb-1 name">
+                            <a href="profile-posts.html">Jane Roe</a>
+                          </h4>
+
+                          <!-- Time -->
+                          <p class="small mb-0">
+                            <span class="text-success">●</span> Online
+                          </p>
+                          
+                        </div>
+                        <div class="col-auto">
+                          
+                          <!-- Button -->
+                          <a href="#" class="btn btn-sm btn-white">
+                            Add
+                          </a>
+
+                        </div>
+                      </div> <!-- / .row -->
+
+                    </li>
+                  </div>
+
+                </div>
+                <div class="card-footer bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;div&nbsp;class=&quot;card&quot;&nbsp;data-toggle=&quot;lists&quot;&nbsp;data-lists-values='[&quot;name&quot;]'&gt;<br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;card-header&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;row&nbsp;align-items-center&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col&quot;&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&nbsp;class=&quot;card-header-title&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add&nbsp;a&nbsp;member<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h4&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;card-header&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;form&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;input-group&nbsp;input-group-flush&nbsp;input-group-merge&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;search&quot;&nbsp;class=&quot;form-control&nbsp;form-control-prepended&nbsp;search&quot;&nbsp;placeholder=&quot;Search&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;input-group-prepend&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;input-group-text&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;fe&nbsp;fe-search&quot;&gt;&lt;/span&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/form&gt;<br/><br/>&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;card-body&quot;&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;list-group&nbsp;list-group-flush&nbsp;list&nbsp;my--3&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;list-group-item&nbsp;px-0&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;row&nbsp;align-items-center&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;profile-posts.html&quot;&nbsp;class=&quot;avatar&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/6.jpg&quot;&nbsp;alt=&quot;...&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col&nbsp;ml--2&quot;&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&nbsp;class=&quot;mb-1&nbsp;name&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;profile-posts.html&quot;&gt;Casey&nbsp;Fyfe&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h4&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&nbsp;class=&quot;small&nbsp;mb-0&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;text-success&quot;&gt;&#x25cf;&lt;/span&gt;&nbsp;Online<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;btn&nbsp;btn-sm&nbsp;btn-white&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;list-group-item&nbsp;px-0&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;row&nbsp;align-items-center&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;profile-posts.html&quot;&nbsp;class=&quot;avatar&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/6.jpg&quot;&nbsp;alt=&quot;...&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col&nbsp;ml--2&quot;&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&nbsp;class=&quot;mb-1&nbsp;name&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;profile-posts.html&quot;&gt;Jane&nbsp;Roe&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h4&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&nbsp;class=&quot;small&nbsp;mb-0&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;text-success&quot;&gt;&#x25cf;&lt;/span&gt;&nbsp;Online<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;btn&nbsp;btn-sm&nbsp;btn-white&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;list-group-item&nbsp;px-0&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;row&nbsp;align-items-center&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;profile-posts.html&quot;&nbsp;class=&quot;avatar&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/6.jpg&quot;&nbsp;alt=&quot;...&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col&nbsp;ml--2&quot;&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&nbsp;class=&quot;mb-1&nbsp;name&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;profile-posts.html&quot;&gt;Casey&nbsp;Fyfe&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h4&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&nbsp;class=&quot;small&nbsp;mb-0&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;text-success&quot;&gt;&#x25cf;&lt;/span&gt;&nbsp;Online<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;btn&nbsp;btn-sm&nbsp;btn-white&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;list-group-item&nbsp;px-0&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;row&nbsp;align-items-center&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;profile-posts.html&quot;&nbsp;class=&quot;avatar&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;src=&quot;assets/img/6.jpg&quot;&nbsp;alt=&quot;...&quot;&nbsp;class=&quot;avatar-img&nbsp;rounded-circle&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col&nbsp;ml--2&quot;&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&nbsp;class=&quot;mb-1&nbsp;name&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;profile-posts.html&quot;&gt;Jane&nbsp;Roe&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h4&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&nbsp;class=&quot;small&nbsp;mb-0&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;text-success&quot;&gt;&#x25cf;&lt;/span&gt;&nbsp;Online<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/p&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;btn&nbsp;btn-sm&nbsp;btn-white&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&nbsp;&nbsp;&lt;/div&gt;<br/>&lt;/div&gt;
+                  </code>
+                </div>
+              </div>
+              
+            </div>
+
+            <!-- MODAL -->
+            <div id="modal">
+              
+              <!-- Header -->
+              <div class="header mt-md-5">
+                <div class="header-body">
+
+                  <!-- Title -->
+                  <h1 class="header-title">
+                    Modals
+                  </h1>
+
+                  <!-- Subtitle -->
+                  <p class="header-subtitle">
+                    Used to show a user or company’s photo, initials, online status, or in a stack all together.
+                  </p>
+
+                </div>
+              </div>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+
+                  <button class="btn btn-primary" data-toggle="modal" data-target="#modalMembers">
+                    Launch demo modal
+                  </button>
+                  
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <hr class="my-5">
+
+              <!-- Heading -->
+              <h2 class="mb-2">
+                Vertical
+              </h2>
+              
+              <!-- Subheading -->
+              <p class="text-muted mb-4">
+                Using Bootstrap’s typical naming structure, you can create a standard avatar, or scale it up to different sizes based on what’s needed.
+              </p>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  
+                  <button class="btn btn-primary" data-toggle="modal" data-target="#sidebarModalSearch">
+                    Vertical modal
+                  </button>
+
+                </div>
+                <div class="card-footer bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;div&nbsp;class=&quot;modal&nbsp;fade&quot;&nbsp;id=&quot;sidebarModalSearch&quot;&nbsp;tabindex=&quot;-1&quot;&nbsp;role=&quot;dialog&quot;&nbsp;aria-hidden=&quot;true&quot;&gt;<br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;modal-dialog&nbsp;modal-dialog-vertical&quot;&nbsp;role=&quot;document&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;modal-content&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&lt;/div&gt;<br/>&lt;/div&gt;
+                  </code>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- NAVS -->
+            <div id="navs">
+
+              <!-- Header -->
+              <div class="header mt-md-5">
+                <div class="header-body">
+
+                  <!-- Title -->
+                  <h1 class="header-title">
+                    Navs
+                  </h1>
+
+                  <!-- Subtitle -->
+                  <p class="header-subtitle">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis voluptatibus quae, repellat modi doloremque facere aliquam praesentium. Id, sed ipsa. Amet ipsam dolor deleniti laudantium impedit qui ipsum recusandae sint.
+                  </p>
+
+                </div>
+              </div>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  
+                  <ul class="nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">Active</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <hr class="my-5">
+
+              <!-- Heading -->
+              <h2 class="mb-2">
+                Small <span class="badge badge-soft-primary ml-1 mt--1">Dashkit Only</span>
+              </h2>
+              
+              <!-- Subheading -->
+              <p class="text-muted mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non inventore voluptate deserunt nisi esse rerum dolor, eligendi earum cumque reiciendis. Quia officiis, earum quam asperiores ipsam. Exercitationem, quasi doloribus necessitatibus?
+              </p>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  
+                  <ul class="nav nav-tabs nav-tabs-sm">
+                    <li class="nav-item">
+                      <a href="#" class="nav-link active">
+                        Active
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">
+                        Link
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">
+                        Link
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+                <div class="card-footer bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;ul&nbsp;class=&quot;nav&nbsp;nav-tabs&nbsp;nav-tabs-sm&quot;&gt;<br/>&nbsp;&nbsp;&lt;li&nbsp;class=&quot;nav-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;nav-link&nbsp;active&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Active<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&lt;/li&gt;<br/>&nbsp;&nbsp;&lt;li&nbsp;class=&quot;nav-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;nav-link&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Link<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&lt;/li&gt;<br/>&nbsp;&nbsp;&lt;li&nbsp;class=&quot;nav-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;nav-link&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Link<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&lt;/li&gt;<br/>&lt;/ul&gt;
+                  </code>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <hr class="my-5">
+
+              <!-- Heading -->
+              <h2 class="mb-2">
+                Overflow <span class="badge badge-soft-primary ml-1 mt--1">Dashkit Only</span>
+              </h2>
+              
+              <!-- Subheading -->
+              <p class="text-muted mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum explicabo, ut voluptate aliquam, veritatis id delectus inventore eos neque fuga, ad iusto eius, eaque excepturi voluptas quos harum voluptatibus asperiores.
+              </p>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  
+                  <ul class="nav nav-tabs nav-tabs-sm nav-overflow">
+                    <li class="nav-item">
+                      <a href="#" class="nav-link active">
+                        Active
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">
+                        Link
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">
+                        Link
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+                <div class="card-footer bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;ul&nbsp;class=&quot;nav&nbsp;nav-tabs&nbsp;nav-tabs-sm&nbsp;nav-overflow&quot;&gt;<br/>&nbsp;&nbsp;&lt;li&nbsp;class=&quot;nav-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;nav-link&nbsp;active&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Active<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&lt;/li&gt;<br/>&nbsp;&nbsp;&lt;li&nbsp;class=&quot;nav-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;nav-link&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Link<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&lt;/li&gt;<br/>&nbsp;&nbsp;&lt;li&nbsp;class=&quot;nav-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;nav-link&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Link<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&lt;/li&gt;<br/>&lt;/ul&gt;
+                  </code>
+                </div>
+              </div>
+              
+            </div>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container-fluid -->
+    </div> <!-- / .main-content -->
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("partials/scripts.html")
+
+  </body>
+</html>
