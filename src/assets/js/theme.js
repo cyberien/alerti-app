@@ -841,7 +841,6 @@ var WeeklyHours = (function() {
 
 var Navbar = (function() {
 
-
   // Variables
 
   var $nav = $('.navbar-nav, .navbar-nav .nav');
@@ -891,6 +890,35 @@ var Tooltip = (function() {
   // Tooltip events
 
   if( $tooltip.length ) {
+    init();
+  }
+  
+})();
+
+
+//
+// Popovers ==================================
+//
+
+var Popover = (function() {
+
+  // Variables
+
+  var $popover = $('[data-toggle="popover"]');
+
+  // Methods
+  //
+  // Tooltips methods
+
+  function init() {
+    $popover.popover();
+  }
+
+  // Events
+  //
+  // Tooltip events
+
+  if( $popover.length ) {
     init();
   }
   
