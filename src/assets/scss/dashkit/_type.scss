@@ -48,6 +48,12 @@ h6.text-uppercase {
   letter-spacing: .08em;
 }
 
+// Bold, strong
+
+b, strong {
+  font-weight: $font-weight-bold;
+}
+
 
 // Links, buttons
 //

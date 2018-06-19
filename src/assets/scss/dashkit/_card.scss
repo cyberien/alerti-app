@@ -26,6 +26,10 @@
   }
 }
 
+.card-title {
+  margin-bottom: .5rem;
+}
+
 
 //
 // Dashkit ===================================
@@ -120,6 +124,7 @@
 // Card inactive
 
 .card-inactive {
+  border-color: $border-color;
   border-style: dashed;
   background-color: transparent;
   box-shadow: none;

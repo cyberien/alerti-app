@@ -6283,7 +6283,7 @@ input[type='button'].btn-block
 
 .progress
 {
-    font-size: .70312rem;
+    font-size: .70313rem;
 
     display: flex;
     overflow: hidden;
@@ -13367,6 +13367,11 @@ a.text-body:focus
     flex: 1 1;
 }
 
+.card-title
+{
+    margin-bottom: .5rem;
+}
+
 .card-header-title
 {
     margin-bottom: 0;
@@ -13454,6 +13459,7 @@ a.text-body:focus
 .card-inactive
 {
     border-style: dashed;
+    border-color: #e3ebf6;
     background-color: transparent;
     box-shadow: none;
 }
@@ -13549,13 +13555,6 @@ a.text-body:focus
     overflow-y: auto; 
 
     max-height: 350px;
-}
-
-.dropdown-menu-sm .dropdown-item
-{
-    font-size: .8125rem; 
-
-    padding: .125rem 1rem;
 }
 
 .form-text
@@ -15302,6 +15301,12 @@ h6.text-uppercase
     letter-spacing: .08em;
 }
 
+b,
+strong
+{
+    font-weight: 600;
+}
+
 a:focus,
 button:focus
 {
@@ -15664,6 +15669,11 @@ button:focus
 .avatar-xl.avatar-4by3
 {
     width: 6.83333rem;
+}
+
+.avatar-xxl.avatar-4by3
+{
+    width: 10.66667rem;
 }
 
 .chart

@@ -395,10 +395,10 @@ var ThemeCharts = (function() {
 
   // Toggle ticks
   function toggleTicks(elem, $chart) {
-    var prefix = elem.data('prefix') ? elem.data('prefix') : '';
-    var suffix = elem.data('suffix') ? elem.data('suffix') : '';
     
-    if (prefix.length || suffix.length) {
+    if (elem.data('prefix') !== undefined || elem.data('prefix') !== undefined) {
+      var prefix = elem.data('prefix') ? elem.data('prefix') : '';
+      var suffix = elem.data('suffix') ? elem.data('suffix') : '';
 
       // Update ticks
       $chart.options.scales.yAxes[0].ticks.callback = function(value) {
