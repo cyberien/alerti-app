@@ -6283,7 +6283,7 @@ input[type='button'].btn-block
 
 .progress
 {
-    font-size: .70313rem;
+    font-size: .70312rem;
 
     display: flex;
     overflow: hidden;
@@ -15469,7 +15469,7 @@ button:focus
 }
 .avatar .avatar-title
 {
-    font-size: 20px;
+    font-size: 18px;
 }
 .avatar.avatar-online::before,
 .avatar.avatar-offline::before
@@ -15538,7 +15538,7 @@ button:focus
 }
 .avatar-lg .avatar-title
 {
-    font-size: 28px;
+    font-size: 24px;
 }
 .avatar-lg.avatar-online::before,
 .avatar-lg.avatar-offline::before
@@ -15561,7 +15561,7 @@ button:focus
 }
 .avatar-xl .avatar-title
 {
-    font-size: 36px;
+    font-size: 30px;
 }
 .avatar-xl.avatar-online::before,
 .avatar-xl.avatar-offline::before
