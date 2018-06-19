@@ -68,18 +68,18 @@
 }
 
 .avatar-lg {
-  @include avatar($avatar-size-lg, 5px, 8px, 24px, 4px);
+  @include avatar($avatar-size-lg, 3px, 8px, 24px, 3px);
 }
 
 .avatar-xl {
-  @include avatar($avatar-size-xl, 6px, 8px, 30px, 5px);
+  @include avatar($avatar-size-xl, 4px, 8px, 30px, 4px);
 }
 
 .avatar-xxl {
-  @include avatar($avatar-size-xl, 6px, 8px, 36px, 5px);
+  @include avatar($avatar-size-xl, 6px, 8px, 30px, 4px);
 
   @include media-breakpoint-up(md) {
-    @include avatar($avatar-size-xxl, 5px, 12px, 42px, 6px); 
+    @include avatar($avatar-size-xxl, 4px, 12px, 42px, 4px); 
   }
 }
 

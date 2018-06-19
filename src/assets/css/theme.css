@@ -15530,7 +15530,7 @@ button:focus
 }
 .avatar-lg .border
 {
-    border-width: 5px !important;
+    border-width: 3px !important;
 }
 .avatar-lg .rounded
 {
@@ -15543,7 +15543,7 @@ button:focus
 .avatar-lg.avatar-online::before,
 .avatar-lg.avatar-offline::before
 {
-    border-width: 4px;
+    border-width: 3px;
 }
 
 .avatar-xl
@@ -15553,7 +15553,7 @@ button:focus
 }
 .avatar-xl .border
 {
-    border-width: 6px !important;
+    border-width: 4px !important;
 }
 .avatar-xl .rounded
 {
@@ -15566,7 +15566,7 @@ button:focus
 .avatar-xl.avatar-online::before,
 .avatar-xl.avatar-offline::before
 {
-    border-width: 5px;
+    border-width: 4px;
 }
 
 .avatar-xxl
@@ -15584,12 +15584,12 @@ button:focus
 }
 .avatar-xxl .avatar-title
 {
-    font-size: 36px;
+    font-size: 30px;
 }
 .avatar-xxl.avatar-online::before,
 .avatar-xxl.avatar-offline::before
 {
-    border-width: 5px;
+    border-width: 4px;
 }
 @media (min-width: 768px)
 {
@@ -15600,7 +15600,7 @@ button:focus
     }
     .avatar-xxl .border
     {
-        border-width: 5px !important;
+        border-width: 4px !important;
     }
     .avatar-xxl .rounded
     {
@@ -15613,7 +15613,7 @@ button:focus
     .avatar-xxl.avatar-online::before,
     .avatar-xxl.avatar-offline::before
     {
-        border-width: 6px;
+        border-width: 4px;
     }
 }
 
