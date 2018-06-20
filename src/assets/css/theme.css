@@ -13563,6 +13563,11 @@ a.text-body:focus
     margin-bottom: .5rem;
 }
 
+.form-control[readonly='readonly']
+{
+    background-color: #fff;
+}
+
 .form-control-flush
 {
     padding: 0;
