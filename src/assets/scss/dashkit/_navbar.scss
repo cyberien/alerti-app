@@ -277,6 +277,7 @@
   .navbar-nav .nav-link[data-toggle="collapse"] {
 
     &:after {
+      display: block;
       content: '\e92e';
       font-family: 'Feather';
       margin-left: auto;
@@ -330,7 +331,8 @@
           display: block;
           position: fixed;
           top: 0; bottom: 0;
-          width: $navbar-vertical-width;
+          min-width: $navbar-vertical-width; // IE 10 bug fix
+          max-width: $navbar-vertical-width; // IE 10 bug fix
           padding-left: $navbar-vertical-padding-x;
           padding-right: $navbar-vertical-padding-x;
           overflow-y: auto;
@@ -343,6 +345,13 @@
             min-height: 100%;
             padding-left: 0;
             padding-right: 0;
+
+            // Target IE 10 & 11
+
+            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+              min-height: none;
+              height: 100%;
+            }
           }
 
 

@@ -55,44 +55,44 @@
       <!-- Navigation -->
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link @@if (page == 'index.html') { active }" href="index.html">
+          <a class="nav-link @@if(page=='index.html'){active}" href="index.html">
             <i class="fe fe-home"></i> Dashboard
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#sidebarPages" data-toggle="collapse" role="button" aria-expanded="@@if (category == 'pages' || category == 'profile' || category == 'project' || category == 'team') { true } else { false }" aria-controls="sidebarPages">
+          <a class="nav-link" href="#sidebarPages" data-toggle="collapse" role="button" aria-expanded="@@if(category=='pages'){true}@@if(category!=='pages'){false}" aria-controls="sidebarPages">
             <i class="fe fe-file"></i> Pages
           </a>
-          <div class="collapse @@if (category == 'pages' || category == 'profile' || category == 'project' || category == 'team') { show }" id="sidebarPages">
+          <div class="collapse @@if(category=='pages'){show}" id="sidebarPages">
             <ul class="nav nav-sm flex-column">
               <li class="nav-item">
-                <a href="#sidebarProfile" class="nav-link" data-toggle="collapse" role="button" aria-expanded="@@if (category == 'profile') { true } else { false }" aria-controls="sidebarProfile">
+                <a href="#sidebarProfile" class="nav-link" data-toggle="collapse" role="button" aria-expanded="@@if(subcategory=='profile'){true}@@if(subcategory!=='profile'){false}" aria-controls="sidebarProfile">
                   Profile
                 </a>
-                <div class="collapse @@if (category == 'profile') { show }" id="sidebarProfile">
+                <div class="collapse @@if(subcategory=='profile'){show}" id="sidebarProfile">
                   <ul class="nav nav-sm flex-column">
                     <li class="nav-item">
-                      <a href="profile-posts.html" class="nav-link @@if (page == 'profile-posts.html') { active }">
+                      <a href="profile-posts.html" class="nav-link @@if(page=='profile-posts.html'){active}">
                         Posts
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a href="profile-groups.html" class="nav-link @@if (page == 'profile-groups.html') { active }">
+                      <a href="profile-groups.html" class="nav-link @@if(page=='profile-groups.html'){active}">
                         Groups
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a href="profile-projects.html" class="nav-link @@if (page == 'profile-projects.html') { active }">
+                      <a href="profile-projects.html" class="nav-link @@if(page=='profile-projects.html'){active}">
                         Projects
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a href="profile-files.html" class="nav-link @@if (page == 'profile-files.html') { active }">
+                      <a href="profile-files.html" class="nav-link @@if(page=='profile-files.html'){active}">
                         Files
                       </a>
                     </li>
                       <li class="nav-item">
-                      <a href="profile-subscribers.html" class="nav-link @@if (page == 'profile-subscribers.html') { active }">
+                      <a href="profile-subscribers.html" class="nav-link @@if(page=='profile-subscribers.html'){active}">
                         Subscribers
                       </a>
                     </li>
@@ -100,23 +100,23 @@
                 </div>
               </li>
               <li class="nav-item">
-                <a href="#sidebarProject" class="nav-link" data-toggle="collapse" role="button" aria-expanded="@@if (category == 'project') { true } else { false }" aria-controls="sidebarProject">
+                <a href="#sidebarProject" class="nav-link" data-toggle="collapse" role="button" aria-expanded="@@if(subcategory=='project'){true}@@if(subcategory!=='project'){false}" aria-controls="sidebarProject">
                   Project
                 </a>
-                <div class="collapse @@if (category == 'project') { show }" id="sidebarProject">
+                <div class="collapse @@if(subcategory=='project'){show}" id="sidebarProject">
                   <ul class="nav nav-sm flex-column">
                     <li class="nav-item">
-                      <a href="project-overview.html" class="nav-link @@if (page == 'project-overview.html') { active }">
+                      <a href="project-overview.html" class="nav-link @@if(page=='project-overview.html'){active}">
                         Overview
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a href="project-files.html" class="nav-link @@if (page == 'project-files.html') { active }">
+                      <a href="project-files.html" class="nav-link @@if(page=='project-files.html'){active}">
                         Files
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a href="project-reports.html" class="nav-link @@if (page == 'project-reports.html') { active }">
+                      <a href="project-reports.html" class="nav-link @@if(page=='project-reports.html'){active}">
                         Reports
                       </a>
                     </li>
@@ -124,23 +124,23 @@
                 </div>
               </li>
               <li class="nav-item">
-                <a href="#sidebarTeam" class="nav-link" data-toggle="collapse" role="button" aria-expanded="@@if (category == 'team') { true } else { false }" aria-controls="sidebarTeam">
+                <a href="#sidebarTeam" class="nav-link" data-toggle="collapse" role="button" aria-expanded="@@if(subcategory=='team'){true}@@if(subcategory!=='team'){false}" aria-controls="sidebarTeam">
                   Team
                 </a>
-                <div class="collapse @@if (category == 'team') { show }" id="sidebarTeam">
+                <div class="collapse @@if(subcategory=='team'){show}" id="sidebarTeam">
                   <ul class="nav nav-sm flex-column">
                     <li class="nav-item">
-                      <a href="team-overview.html" class="nav-link @@if (page == 'team-overview.html') { active }">
+                      <a href="team-overview.html" class="nav-link @@if(page=='team-overview.html'){active}">
                         Overview
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a href="team-projects.html" class="nav-link @@if (page == 'team-projects.html') { active }">
+                      <a href="team-projects.html" class="nav-link @@if(page=='team-projects.html'){active}">
                         Projects
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a href="team-members.html" class="nav-link @@if (page == 'team-members.html') { active }">
+                      <a href="team-members.html" class="nav-link @@if(page=='team-members.html'){active}">
                         Members
                       </a>
                     </li>
@@ -148,12 +148,12 @@
                 </div>
               </li>
               <li class="nav-item">
-                <a href="feed.html" class="nav-link @@if (page == 'feed.html') { active }">
+                <a href="feed.html" class="nav-link @@if(page=='feed.html'){active}">
                   Feed
                 </a>
               </li>
               <li class="nav-item">
-                <a href="settings.html" class="nav-link @@if (page == 'settings.html') { active }">
+                <a href="settings.html" class="nav-link @@if(page=='settings.html'){active}">
                   Settings
                 </a>
               </li>
@@ -261,10 +261,10 @@
           </div>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link" href="#sidebarLayouts" data-toggle="collapse" role="button" aria-expanded="@@if (category == 'layouts' && page !== 'index.html' || category == 'dashboards' && page !== 'index.html') { true } else { false }" aria-controls="sidebarLayouts">
+          <a class="nav-link" href="#sidebarLayouts" data-toggle="collapse" role="button" aria-expanded="@@if(category=='layouts'&&page!=='index.html'){true}@@if(category!=='layouts'||category=='layouts'&&page=='index.html'){false}" aria-controls="sidebarLayouts">
             <i class="fe fe-layout"></i> Layouts
           </a>
-          <div class="collapse @@if (category == 'layouts' && page !== 'index.html' || category == 'dashboards' && page !== 'index.html') { show }" id="sidebarLayouts">
+          <div class="collapse @@if(category=='layouts'&&page!=='index.html'){show}" id="sidebarLayouts">
             <ul class="nav nav-sm flex-column">
               <li class="nav-item">
                 <a href="index.html" class="nav-link">
@@ -272,7 +272,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="dashboard-side-topnav.html" class="nav-link @@if (page == 'dashboard-side-topnav.html') { active }">
+                <a href="dashboard-side-topnav.html" class="nav-link @@if(page=='dashboard-side-topnav.html'){active}">
                   Sidenav + top nav
                 </a>
               </li>
@@ -282,18 +282,18 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#sidebarDashboard" class="nav-link" data-toggle="collapse" role="button" aria-expanded="@@if (category == 'dashboards') { true } else { false }" aria-controls="sidebarDashboard">
+                <a href="#sidebarDashboard" class="nav-link" data-toggle="collapse" role="button" aria-expanded="@@if(subcategory=='dashboards'){true}@@if(subcategory!=='dashboards'){false}" aria-controls="sidebarDashboard">
                   Without hero chart
                 </a>
-                <div class="collapse @@if (category == 'dashboards') { show }" id="sidebarDashboard">
+                <div class="collapse @@if(subcategory=='dashboards'){show}" id="sidebarDashboard">
                   <ul class="nav nav-sm flex-column">
                     <li class="nav-item">
-                      <a href="dashboard-no-hero.html" class="nav-link @@if (page == 'dashboard-no-hero.html') { active }">
+                      <a href="dashboard-no-hero.html" class="nav-link @@if(page=='dashboard-no-hero.html'){active}">
                         Sidenav
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a href="dashboard-side-topnav-no-hero.html" class="nav-link @@if (page == 'dashboard-side-topnav-no-hero.html') { active }">
+                      <a href="dashboard-side-topnav-no-hero.html" class="nav-link @@if(page=='dashboard-side-topnav-no-hero.html'){active}">
                         Sidenav + top nav
                       </a>
                     </li>
@@ -326,15 +326,15 @@
       <!-- Navigation -->
       <ul class="navbar-nav mb-md-3">
         <li class="nav-item">
-          <a class="nav-link @@if (page == 'getting-started.html') { active }" href="getting-started.html">
+          <a class="nav-link @@if(page=='getting-started.html'){active}" href="getting-started.html">
             <i class="fe fe-clipboard"></i> Getting started
           </a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link" href="#sidebarComponents" data-toggle="collapse" role="button" aria-expanded="@@if (category == 'components') { true } else { false }" aria-controls="sidebarComponents">
+          <a class="nav-link" href="#sidebarComponents" data-toggle="collapse" role="button" aria-expanded="@@if(category=='components'){true}@@if( category!=='components'){false}" aria-controls="sidebarComponents">
             <i class="fe fe-book-open"></i> Components
           </a>
-          <div class="collapse @@if (category == 'components') { show }" id="sidebarComponents">
+          <div class="collapse @@if(category=='components'){show}" id="sidebarComponents">
             <ul class="nav nav-sm flex-column">
               <li class="nav-item">
                 <a href="components.html#alerts" class="nav-link">
@@ -455,13 +455,13 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link @@if (page == 'changelog.html') { active }" href="changelog.html">
+          <a class="nav-link @@if(page=='changelog.html'){active}" href="changelog.html">
             <i class="fe fe-git-branch"></i> Changelog <span class="badge badge-primary ml-auto">v1.0</span>
           </a>
         </li>
       </ul>
       
-      @@if (user !== false) {
+      @@if(user!==false) {
 
       <!-- User (md) -->
       <div class="navbar-user mt-auto d-none d-md-flex">

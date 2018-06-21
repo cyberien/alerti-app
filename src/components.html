@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     @@include("partials/head.html", {
-      "pageTitle": "Dashkit"
+      "title": "Dashkit"
     })
   </head>
   <body>
@@ -15,6 +15,7 @@
     ================================================== -->
     @@include("partials/sidebar.html", {
       "category": "components",
+      "subcategory": "",
       "page": "components.html",
       "user": true
     })
@@ -1383,7 +1384,7 @@
 
                           <!-- Text -->
                           <p class="card-text small text-muted mb-1">
-                            <time>Updated 2hr ago</time>
+                            <time datetime="2018-06-21">Updated 2hr ago</time>
                           </p>
 
                           <!-- Progress -->
@@ -2019,10 +2020,10 @@
                 <div class="card-body">
                   
                   <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonAlias" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Dropdown button
                     </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonAlias">
                       <li>
                         <a class="dropdown-item" href="#!">Action</a>
                       </li>
@@ -2077,7 +2078,7 @@
                   <form>
                     <div class="form-group">
                       <label for="exampleInputEmail1">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
                     </div>
                     <div class="form-group">
                       <label for="exampleInputPassword1">Password</label>
@@ -4029,14 +4030,16 @@
               
               <!-- Subheading -->
               <p class="text-muted mb-4">
-                <code>.bg-fixed-bottom</code> to fix the background image at the bottom of the <code>.main</code> container (<code>feed.html</code>).
+                <code>.bg-fixed-bottom</code> to fix the background image at the bottom of the <code>.main</code> container (<code>feed.html</code>). <br />
+                <code>.bg-cover</code> to set <code>background-image</code> size to <code>cover</code>.
               </p>
 
               <!-- Card -->
               <div class="card">
                 <div class="card-body bg-dark">
                   <code class="highlight html bg-dark">
-                    &lt;div&nbsp;class=&quot;main-content&nbsp;bg-fixed-bottom&quot;&nbsp;style=&quot;background-image:&nbsp;url(assets/img/illustrations/sticky.svg);&quot;&gt;...&lt;/div&gt;
+                    &lt;div&nbsp;class=&quot;bg-fixed-bottom&quot;&nbsp;style=&quot;background-image:&nbsp;url(assets/img/illustrations/sticky.svg);&quot;&gt;...&lt;/div&gt;<br />
+                    &lt;div&nbsp;class=&quot;bg-cover&quot;&nbsp;style=&quot;background-image:&nbsp;url(...);&quot;&gt;&lt;/div&gt;
                   </code>
                 </div>
               </div>

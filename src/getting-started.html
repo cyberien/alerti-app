@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     @@include("partials/head.html", {
-      "pageTitle": "Dashkit"
+      "title": "Dashkit"
     })
   </head>
   <body>
@@ -15,6 +15,7 @@
     ================================================== -->
     @@include("partials/sidebar.html", {
       "category": "",
+      "subcategory": "",
       "page": "getting-started.html",
       "user": true
     })
@@ -25,6 +26,158 @@
       <div class="container-fluid">
         <div class="row justify-content-center">
           <div class="col-12 col-lg-10 col-xl-8">
+
+              <!-- Header -->
+              <div class="header mt-md-5">
+                <div class="header-body">
+
+                  <!-- Title -->
+                  <h1 class="header-title">
+                    File structure
+                  </h1>
+
+                </div>
+              </div>
+
+              <ul>
+                <li>
+                  src/ - source files
+                  <ul>
+                    <li>
+                      assets/
+                      <ul>
+                        <li>
+                          css/ - compiled CSS files
+                        </li>
+                        <li>
+                          fonts/ - font files
+                        </li>
+                        <li>
+                          img/ - image files
+                        </li>
+                        <li>
+                          js/ - JavaScript files
+                        </li>
+                        <li>
+                          libs/ - third-party lybraries
+                        </li>
+                        <li>
+                          scss/ - source SCSS files
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      partials/ - HTML partials
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  dist/ - production files
+                </li>
+                <li>
+                  gulpfile.js
+                </li>
+                <li>
+                  package.json
+                </li>
+                <li>
+                  .gitignore
+                </li>
+              </ul>
+
+              <!-- Header -->
+              <div class="header mt-md-5">
+                <div class="header-body">
+
+                  <!-- Title -->
+                  <h1 class="header-title">
+                    Compilation
+                  </h1>
+
+                </div>
+              </div>
+
+              <p>
+                Gulp is used to handle file compilation and other tasks. The following commands are available:
+              </p>
+
+              <ul>
+                <li>
+                  <code>npm install</code> - to download and install required dependencies
+                </li>
+                <li>
+                  <code>gulp</code> - to start a new server and start watching for changes in HTML, JS and SASS files
+                </li>
+                <li>
+                  <code>gulp build</code> - to compile SASS and HTML files, minify assets and prepare files for production
+                </li>
+              </ul>
+
+              <!-- Header -->
+              <div class="header mt-md-5">
+                <div class="header-body">
+
+                  <!-- Title -->
+                  <h1 class="header-title">
+                    File include
+                  </h1>
+
+                </div>
+              </div>
+
+              <p>
+                The <a href="https://www.npmjs.com/package/gulp-file-include" target="_blank">gulp-file-include</a> package is used to make global changes in HTML files easier. The following partials are available:
+              </p>
+
+              <ul>
+                <li>
+                  head.html - imports the head of the page. The following variables are available:
+                  <ul>
+                    <li>
+                      <code>@@title (string)</code> - page title
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  sidebar.html - imports the sidebar. The following variables are available:
+                  <ul>
+                    <li>
+                      <code>@@category (string)</code> - sidebar category the page belongs to. Required to keep the corresponding category open.
+                    </li>
+                    <li>
+                      <code>@@subcategory (string)</code> - sidebar subcategory the page belongs to. Required to keep the corresponding subcategory open.
+                    </li>
+                    <li>
+                      <code>@@page (string)</code> - the page name. Required to highlight an active link.
+                    </li>
+                    <li>
+                      <code>@@user (boolean)</code> - if the user component should be shown in the sidebar on this page.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <code>topbar.html</code> - imports the topbar. No variables are available.
+                </li>
+                <li>
+                  <code>topnav.html</code> - imports the topnav. The following options are available:
+                  <ul>
+                    <li>
+                      <code>@@page (string)</code> - the page name. Required to highlight an active link.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  script.html - import the scripts. No variables are available.
+                </li>
+              </ul>
+
+              <p>
+                Easily create new <code>.html</code> partials inside the <code>/partials</code> folder and point to them from any file by specifying the path to the partial file and using the <code>@@include</code> keyword.
+              </p>
+
+              <p>
+                Please read the <a href="https://www.npmjs.com/package/gulp-file-include" target="_blank">official package documentation</a> for more info.
+              </p>
 
           </div>
         </div> <!-- / .row -->

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     @@include("partials/head.html", {
-      "pageTitle": "Dashkit"
+      "title": "Dashkit"
     })
   </head>
   <body>
@@ -14,7 +14,8 @@
     <!-- SIDEBAR
     ================================================== -->
     @@include("partials/sidebar.html", {
-      "category": "team",
+      "category": "pages",
+      "subcategory": "team",
       "page": "team-overview.html",
       "user": true
     })
