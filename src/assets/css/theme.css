@@ -14553,7 +14553,7 @@ a.text-body:focus
     display: block;
     overflow-y: auto; 
 
-    min-width: 250px;
+    width: 100%;
     max-width: 250px;
     padding-right: 1.5rem;
     padding-left: 1.5rem;
@@ -14676,7 +14676,7 @@ a.text-body:focus
         display: block;
         overflow-y: auto; 
 
-        min-width: 250px;
+        width: 100%;
         max-width: 250px;
         padding-right: 1.5rem;
         padding-left: 1.5rem;
@@ -14804,7 +14804,7 @@ a.text-body:focus
         display: block;
         overflow-y: auto; 
 
-        min-width: 250px;
+        width: 100%;
         max-width: 250px;
         padding-right: 1.5rem;
         padding-left: 1.5rem;
@@ -14932,7 +14932,7 @@ a.text-body:focus
         display: block;
         overflow-y: auto; 
 
-        min-width: 250px;
+        width: 100%;
         max-width: 250px;
         padding-right: 1.5rem;
         padding-left: 1.5rem;
@@ -15060,7 +15060,7 @@ a.text-body:focus
         display: block;
         overflow-y: auto; 
 
-        min-width: 250px;
+        width: 100%;
         max-width: 250px;
         padding-right: 1.5rem;
         padding-left: 1.5rem;

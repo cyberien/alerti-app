@@ -331,8 +331,8 @@
           display: block;
           position: fixed;
           top: 0; bottom: 0;
-          min-width: $navbar-vertical-width; // IE 10 bug fix
-          max-width: $navbar-vertical-width; // IE 10 bug fix
+          width: 100%;
+          max-width: $navbar-vertical-width;
           padding-left: $navbar-vertical-padding-x;
           padding-right: $navbar-vertical-padding-x;
           overflow-y: auto;
