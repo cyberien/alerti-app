@@ -14645,7 +14645,7 @@ a.text-body:focus
 }
 .navbar-vertical.navbar-expand-xs .navbar-brand-img
 {
-    max-height: 3.5rem;
+    max-height: 2.5rem;
 }
 .navbar-vertical.navbar-expand-xs .navbar-user
 {
@@ -14772,7 +14772,7 @@ a.text-body:focus
     }
     .navbar-vertical.navbar-expand-sm .navbar-brand-img
     {
-        max-height: 3.5rem;
+        max-height: 2.5rem;
     }
     .navbar-vertical.navbar-expand-sm .navbar-user
     {
@@ -14900,7 +14900,7 @@ a.text-body:focus
     }
     .navbar-vertical.navbar-expand-md .navbar-brand-img
     {
-        max-height: 3.5rem;
+        max-height: 2.5rem;
     }
     .navbar-vertical.navbar-expand-md .navbar-user
     {
@@ -15028,7 +15028,7 @@ a.text-body:focus
     }
     .navbar-vertical.navbar-expand-lg .navbar-brand-img
     {
-        max-height: 3.5rem;
+        max-height: 2.5rem;
     }
     .navbar-vertical.navbar-expand-lg .navbar-user
     {
@@ -15156,7 +15156,7 @@ a.text-body:focus
     }
     .navbar-vertical.navbar-expand-xl .navbar-brand-img
     {
-        max-height: 3.5rem;
+        max-height: 2.5rem;
     }
     .navbar-vertical.navbar-expand-xl .navbar-user
     {
