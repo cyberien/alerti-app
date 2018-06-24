@@ -32,7 +32,7 @@
   }
   
   .custom-control-input:checked ~ .custom-control-label::after {
-    left: auto; right: 0;
+    left: $spacer; right: 0;
   }
   
 }

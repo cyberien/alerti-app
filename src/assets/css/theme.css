@@ -6283,7 +6283,7 @@ input[type='button'].btn-block
 
 .progress
 {
-    font-size: .70313rem;
+    font-size: .70312rem;
 
     display: flex;
     overflow: hidden;
@@ -16053,5 +16053,5 @@ button:focus
 .custom-checkbox-toggle .custom-control-input:checked ~ .custom-control-label::after
 {
     right: 0; 
-    left: auto;
+    left: 1.5rem;
 }
