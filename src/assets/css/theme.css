@@ -6283,7 +6283,7 @@ input[type='button'].btn-block
 
 .progress
 {
-    font-size: .70312rem;
+    font-size: .70313rem;
 
     display: flex;
     overflow: hidden;
@@ -13258,44 +13258,6 @@ a.text-body:focus
             mask-size: contain;
 }
 
-.breadcrumb-light .breadcrumb-item > a
-{
-    color: rgba(18, 38, 63, .9);
-}
-.breadcrumb-light .breadcrumb-item > a:hover,
-.breadcrumb-light .breadcrumb-item > a:focus
-{
-    color: #12263f;
-}
-.breadcrumb-light .breadcrumb-item > a.disabled
-{
-    color: rgba(18, 38, 63, .3);
-}
-
-.breadcrumb-light .breadcrumb-item.active
-{
-    color: #6e84a3;
-}
-
-.breadcrumb-dark .breadcrumb-item > a
-{
-    color: #fff;
-}
-.breadcrumb-dark .breadcrumb-item > a:hover,
-.breadcrumb-dark .breadcrumb-item > a:focus
-{
-    color: rgba(255, 255, 255, .75);
-}
-.breadcrumb-dark .breadcrumb-item > a.disabled
-{
-    color: rgba(255, 255, 255, .25);
-}
-
-.breadcrumb-dark .breadcrumb-item.active
-{
-    color: rgba(255, 255, 255, .5);
-}
-
 .breadcrumb-sm
 {
     font-size: .8125rem;
@@ -13469,19 +13431,17 @@ a.text-body:focus
     padding: 0;
 }
 
-.dropup > .dropdown-toggle:after,
-.dropright > .dropdown-toggle:after,
-.dropdown > .dropdown-toggle:after,
-.dropleft > .dropdown-toggle:after
+.dropdown-toggle:after
 {
     font-family: 'Feather'; 
 
     width: auto;
     height: auto;
 
+    content: '\e92e';
     vertical-align: middle;
 
-    border: none;
+    border: none !important;
 }
 
 .dropup > .dropdown-toggle:after
@@ -13494,14 +13454,9 @@ a.text-body:focus
     content: '\e930';
 }
 
-.dropdown > .dropdown-toggle:after
+.dropleft > .dropdown-toggle:after
 {
-    content: '\e92e';
-}
-
-.dropup > .dropdown-toggle:after
-{
-    content: '\e931';
+    content: '\e92f';
 }
 
 .dropdown-item.dropdown-toggle
@@ -15241,8 +15196,13 @@ body
     min-height: 100%;
 }
 
+.table
+{
+    vertical-align: middle;
+}
 .table thead th
 {
+    font-size: .8125rem;
     font-weight: 600;
 
     letter-spacing: .08em;
@@ -15253,19 +15213,13 @@ body
     background-color: #f9fbfd;
 }
 
-.table tbody td
+.table-sm
 {
-    vertical-align: middle;
+    font-size: .8125rem;
 }
-
 .table-sm thead th
 {
     font-size: .625rem;
-}
-
-.table-sm tbody td
-{
-    font-size: .8125rem;
 }
 
 .table-nowrap th,

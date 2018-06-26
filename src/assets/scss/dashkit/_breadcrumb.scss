@@ -25,54 +25,6 @@
 // Dashkit =====================================
 //
 
-// Light
-//
-// Makes the breadcrumb text color dark
-
-.breadcrumb-light {
-  // Use <a> instead of adding ".breadcrumb-link" so it stays the same as Bootstrap's API
-  .breadcrumb-item > a {  
-    color: $navbar-light-active-color;
-
-    @include hover-focus {
-      color: $navbar-light-hover-color;
-    }
-
-    &.disabled {
-      color: $navbar-light-disabled-color;
-    }
-  }
-
-  .breadcrumb-item.active {
-    color: $navbar-light-color;
-  }
-}
-
-
-// Light
-//
-// Makes the breadcrumb text color light
-
-.breadcrumb-dark {
-  // Use <a> instead of adding ".breadcrumb-link" so it stays the same as Bootstrap's API
-  .breadcrumb-item > a {  
-    color: $navbar-dark-active-color;
-
-    @include hover-focus {
-      color: $navbar-dark-hover-color;
-    }
-
-    &.disabled {
-      color: $navbar-dark-disabled-color;
-    }
-  }
-
-  .breadcrumb-item.active {
-    color: $navbar-dark-color;
-  }
-}
-
-
 // Small
 //
 // Reduces font size

@@ -8,29 +8,24 @@
 //
 
 .table {
+  vertical-align: middle;
 
   thead th {
     background-color: $table-head-bg;
     text-transform: uppercase;
+    font-size: $font-size-sm;
     font-weight: $font-weight-bold;
     letter-spacing: .08em;
     color: $table-head-color;
     border-bottom-width: $table-border-width;
   }
-
-  tbody td {
-    vertical-align: middle;
-  }
 }
 
 .table-sm {
+  font-size: $font-size-sm;
   
   thead th {
     font-size: $font-size-xs;
-  }
-
-  tbody td {
-    font-size: $font-size-sm;
   }
 }
 

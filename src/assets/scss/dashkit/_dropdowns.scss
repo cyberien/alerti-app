@@ -11,16 +11,14 @@
 //
 // Replace original arrows with Feather icons
 
-.dropup, .dropright, .dropdown, .dropleft {
+.dropdown-toggle {
 
-  > .dropdown-toggle {
-
-    &:after {
-      width: auto; height: auto;
-      border: none;
-      vertical-align: middle;
-      font-family: 'Feather';
-    }
+  &:after {
+    content: '\e92e';
+    width: auto; height: auto;
+    border: none !important;
+    vertical-align: middle;
+    font-family: 'Feather';
   }
 }
 
@@ -38,17 +36,10 @@
   }
 }
 
-.dropdown > .dropdown-toggle {
+.dropleft > .dropdown-toggle {
 
   &:after {
-    content: '\e92e';
-  }
-}
-
-.dropup > .dropdown-toggle {
-
-  &:after {
-    content: '\e931';
+    content: '\e92f';
   }
 }
 
