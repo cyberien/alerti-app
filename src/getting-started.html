@@ -22,7 +22,7 @@
 
     <!-- MAIN CONTENT
     ================================================== -->
-    <div class="main-content">
+    <div class="main-content pb-6">
       <div class="container-fluid">
         <div class="row justify-content-center">
           <div class="col-12 col-lg-10 col-xl-8">
@@ -249,11 +249,31 @@
 
                   <!-- Title -->
                   <h1 class="header-title">
-                    Customizing Dashkit SCSS
+                    Customizing SCSS
                   </h1>
 
                 </div>
               </div>
+
+              <p>
+                There are 2 basic ways to customize your theme...
+              </p>
+
+              <ol>
+                <li>
+                  <strong>Customizing SCSS.</strong> This is more versatile and sustainable way to customize Dashkit, but requires the <code>gulp</code> compilation steps outlined above. The 2 major benefits of this strategy are using variable overrides to easily customize theme styles, plus you never have to touch Bootstrap or Dashkit's source, meaning future updates will be much, much, simpler. There are 2 provided files that make this strategy simple to implement:
+                  <ul>
+                    <li>
+                      <code>user-variables.scss</code>: This file can be used override Bootstrap core and Dashkit variables for customizing elements that have been tied to variables. 
+                    </li>
+                    <li>
+                      <code>user.scss</code>: This file can be used for writing custom SCSS that will be compiled alongside Bootstrap and Dashkit's core files.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Compiled CSS.</strong> If you plan on using Dashkit "as is", or only need limited customization, feel free to simply attach the compiled <code>theme.css</code> or <code>theme.min.css</code> file in the <code>dist/assets/css</code> directory.</li>
+              </ol>
 
 
 
