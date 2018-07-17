@@ -15185,8 +15185,7 @@ a.text-body:focus
     height: .25rem;
 }
 
-html,
-body
+html
 {
     height: 100%;
 }

@@ -5,11 +5,11 @@
 // Bootstrap setup
 @import '../../../node_modules/bootstrap/scss/functions';
 
-// Dashkit setup
-@import 'dashkit/variables';
-
 // Custom setup
 @import 'user-variables';
+
+// Dashkit setup
+@import 'dashkit/variables';
 
 // Bootstrap core
 @import '../../../node_modules/bootstrap/scss/bootstrap';

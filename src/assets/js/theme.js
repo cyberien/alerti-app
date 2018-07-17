@@ -105,217 +105,224 @@ var ThemeCharts = (function() {
     transparent: 'transparent',
   };
 
-  // Options
-  var options = {
-    defaults: {
-      global: {
-        responsive: true,
-        maintainAspectRatio: false,
-        defaultColor: colors.primary[600],
-        defaultFontColor: colors.gray[600],
-        defaultFontFamily: fonts.base,
-        defaultFontSize: 13,
-        layout: {
-          padding: 0
-        },
-        legend: {
-          display: false,
-          position: 'bottom',
-          labels: {
-            usePointStyle: true,
-            padding: 16
-          }
-        },
-        elements: {
-          point: {
-            radius: 0,
-            backgroundColor: colors.primary[700]
-          },
-          line: {
-            tension: .4,
-            borderWidth: 3,
-            borderColor: colors.primary[700],
-            backgroundColor: colors.transparent,
-            borderCapStyle: 'rounded'
-          },
-          rectangle: {
-            backgroundColor: colors.primary[700]
-          },
-          arc: {
-            borderWidth: 4,
-            backgroundColor: colors.primary[700]
-          }
-        },
-        tooltips: {
-          enabled: false,
-          mode: 'index',
-          intersect: false,
-          custom: function(model) {
-
-            // Get tooltip
-            var $tooltip = $('#chart-tooltip');
-
-            // Create tooltip on first render
-            if (!$tooltip.length) {
-              $tooltip = $('<div id="chart-tooltip" class="popover bs-popover-top" role="tooltip"></div>');
-
-              // Append to body
-              $('body').append($tooltip);
-            }
-
-            // Hide if no tooltip
-            if (model.opacity === 0) {
-              $tooltip.css('display', 'none');
-              return;
-            }
-
-            function getBody(bodyItem) {
-              return bodyItem.lines;
-            }
-
-            // Fill with content
-            if (model.body) {
-              var titleLines = model.title || [];
-              var bodyLines = model.body.map(getBody);
-              var html = '';
-
-              // Add arrow
-              html += '<div class="arrow"></div>';
-
-              // Add header
-              titleLines.forEach(function(title) {
-                html += '<h3 class="popover-header text-center">' + title + '</h3>';
-              });
-
-              // Add body
-              bodyLines.forEach(function(body, i) {
-                var colors = model.labelColors[i];
-                var styles = 'background-color: ' + colors.backgroundColor;
-                var indicator = '<span class="popover-body-indicator" style="' + styles + '"></span>';
-                var align = (bodyLines.length > 1) ? 'justify-content-left' : 'justify-content-center';
-                html += '<div class="popover-body d-flex align-items-center ' + align + '">' + indicator + body + '</div>';
-              });
-
-              $tooltip.html(html);
-            }
-
-            // Get tooltip position
-            var $canvas = $(this._chart.canvas);
-
-            var canvasWidth = $canvas.outerWidth();
-            var canvasHeight = $canvas.outerHeight();
-
-            var canvasTop = $canvas.offset().top;
-            var canvasLeft = $canvas.offset().left;
-
-            var tooltipWidth = $tooltip.outerWidth();
-            var tooltipHeight = $tooltip.outerHeight();
-
-            var top = canvasTop + model.caretY - tooltipHeight - 16;
-            var left = canvasLeft + model.caretX - tooltipWidth / 2;
-
-            // Display tooltip
-            $tooltip.css({
-              'top': top + 'px',
-              'left':  left + 'px',
-              'display': 'block',
-            });
-
-          },
-          callbacks: {
-            label: function(item, data) {
-              var label = data.datasets[item.datasetIndex].label || '';
-              var yLabel = item.yLabel;
-              var content = '';
-
-              if (data.datasets.length > 1) {
-                content += '<span class="popover-body-label mr-auto">' + label + '</span>';
-              }
-
-              content += '<span class="popover-body-value">$' + yLabel + 'k</span>';
-              return content;
-            }
-          }
-        }
-      },
-      doughnut: {
-        cutoutPercentage: 83,
-        tooltips: {
-          callbacks: {
-            title: function(item, data) {
-              var title = data.labels[item[0].index];
-              return title;
-            },
-            label: function(item, data) {
-              var value = data.datasets[0].data[item.index];
-              var content = '';
-
-              content += '<span class="popover-body-value">' + value + '%</span>';
-              return content;
-            }
-          }
-        },
-        legendCallback: function(chart) {
-          var data = chart.data;
-          var content = '';
-
-          data.labels.forEach(function(label, index) {
-            var bgColor = data.datasets[0].backgroundColor[index];
-
-            content += '<span class="chart-legend-item">';
-            content += '<i class="chart-legend-indicator" style="background-color: ' + bgColor + '"></i>';
-            content += label;
-            content += '</span>';
-          });
-
-          return content;
-        }
-      }
-    }
-  }
-
-  // yAxes
-  Chart.scaleService.updateScaleDefaults('linear', {
-    gridLines: {
-      borderDash: [2],
-      borderDashOffset: [2],
-      color: colors.gray[300],
-      drawBorder: false,
-      drawTicks: false,
-      lineWidth: 0,
-      zeroLineWidth: 0,
-      zeroLineColor: colors.gray[300],
-      zeroLineBorderDash: [2],
-      zeroLineBorderDashOffset: [2]
-    },
-    ticks: {
-      beginAtZero: true,
-      padding: 10,
-      callback: function(value) {
-        if ( !(value % 10) ) {
-          return '$' + value + 'k'
-        }
-      }
-    }
-  });
-
-  // xAxes
-  Chart.scaleService.updateScaleDefaults('category', {
-    gridLines: {
-      drawBorder: false,
-      drawOnChartArea: false,
-      drawTicks: false
-    },
-    ticks: {
-      padding: 20
-    },
-    maxBarThickness: 10
-  });
-
 
   // Methods
   //
   // Theme chart functions
+
+  // Chart.js global options
+  function chartOptions() {
+
+    // Options
+    var options = {
+      defaults: {
+        global: {
+          responsive: true,
+          maintainAspectRatio: false,
+          defaultColor: colors.primary[600],
+          defaultFontColor: colors.gray[600],
+          defaultFontFamily: fonts.base,
+          defaultFontSize: 13,
+          layout: {
+            padding: 0
+          },
+          legend: {
+            display: false,
+            position: 'bottom',
+            labels: {
+              usePointStyle: true,
+              padding: 16
+            }
+          },
+          elements: {
+            point: {
+              radius: 0,
+              backgroundColor: colors.primary[700]
+            },
+            line: {
+              tension: .4,
+              borderWidth: 3,
+              borderColor: colors.primary[700],
+              backgroundColor: colors.transparent,
+              borderCapStyle: 'rounded'
+            },
+            rectangle: {
+              backgroundColor: colors.primary[700]
+            },
+            arc: {
+              borderWidth: 4,
+              backgroundColor: colors.primary[700]
+            }
+          },
+          tooltips: {
+            enabled: false,
+            mode: 'index',
+            intersect: false,
+            custom: function(model) {
+
+              // Get tooltip
+              var $tooltip = $('#chart-tooltip');
+
+              // Create tooltip on first render
+              if (!$tooltip.length) {
+                $tooltip = $('<div id="chart-tooltip" class="popover bs-popover-top" role="tooltip"></div>');
+
+                // Append to body
+                $('body').append($tooltip);
+              }
+
+              // Hide if no tooltip
+              if (model.opacity === 0) {
+                $tooltip.css('display', 'none');
+                return;
+              }
+
+              function getBody(bodyItem) {
+                return bodyItem.lines;
+              }
+
+              // Fill with content
+              if (model.body) {
+                var titleLines = model.title || [];
+                var bodyLines = model.body.map(getBody);
+                var html = '';
+
+                // Add arrow
+                html += '<div class="arrow"></div>';
+
+                // Add header
+                titleLines.forEach(function(title) {
+                  html += '<h3 class="popover-header text-center">' + title + '</h3>';
+                });
+
+                // Add body
+                bodyLines.forEach(function(body, i) {
+                  var colors = model.labelColors[i];
+                  var styles = 'background-color: ' + colors.backgroundColor;
+                  var indicator = '<span class="popover-body-indicator" style="' + styles + '"></span>';
+                  var align = (bodyLines.length > 1) ? 'justify-content-left' : 'justify-content-center';
+                  html += '<div class="popover-body d-flex align-items-center ' + align + '">' + indicator + body + '</div>';
+                });
+
+                $tooltip.html(html);
+              }
+
+              // Get tooltip position
+              var $canvas = $(this._chart.canvas);
+
+              var canvasWidth = $canvas.outerWidth();
+              var canvasHeight = $canvas.outerHeight();
+
+              var canvasTop = $canvas.offset().top;
+              var canvasLeft = $canvas.offset().left;
+
+              var tooltipWidth = $tooltip.outerWidth();
+              var tooltipHeight = $tooltip.outerHeight();
+
+              var top = canvasTop + model.caretY - tooltipHeight - 16;
+              var left = canvasLeft + model.caretX - tooltipWidth / 2;
+
+              // Display tooltip
+              $tooltip.css({
+                'top': top + 'px',
+                'left':  left + 'px',
+                'display': 'block',
+              });
+
+            },
+            callbacks: {
+              label: function(item, data) {
+                var label = data.datasets[item.datasetIndex].label || '';
+                var yLabel = item.yLabel;
+                var content = '';
+
+                if (data.datasets.length > 1) {
+                  content += '<span class="popover-body-label mr-auto">' + label + '</span>';
+                }
+
+                content += '<span class="popover-body-value">$' + yLabel + 'k</span>';
+                return content;
+              }
+            }
+          }
+        },
+        doughnut: {
+          cutoutPercentage: 83,
+          tooltips: {
+            callbacks: {
+              title: function(item, data) {
+                var title = data.labels[item[0].index];
+                return title;
+              },
+              label: function(item, data) {
+                var value = data.datasets[0].data[item.index];
+                var content = '';
+
+                content += '<span class="popover-body-value">' + value + '%</span>';
+                return content;
+              }
+            }
+          },
+          legendCallback: function(chart) {
+            var data = chart.data;
+            var content = '';
+
+            data.labels.forEach(function(label, index) {
+              var bgColor = data.datasets[0].backgroundColor[index];
+
+              content += '<span class="chart-legend-item">';
+              content += '<i class="chart-legend-indicator" style="background-color: ' + bgColor + '"></i>';
+              content += label;
+              content += '</span>';
+            });
+
+            return content;
+          }
+        }
+      }
+    }
+
+    // yAxes
+    Chart.scaleService.updateScaleDefaults('linear', {
+      gridLines: {
+        borderDash: [2],
+        borderDashOffset: [2],
+        color: colors.gray[300],
+        drawBorder: false,
+        drawTicks: false,
+        lineWidth: 0,
+        zeroLineWidth: 0,
+        zeroLineColor: colors.gray[300],
+        zeroLineBorderDash: [2],
+        zeroLineBorderDashOffset: [2]
+      },
+      ticks: {
+        beginAtZero: true,
+        padding: 10,
+        callback: function(value) {
+          if ( !(value % 10) ) {
+            return '$' + value + 'k'
+          }
+        }
+      }
+    });
+
+    // xAxes
+    Chart.scaleService.updateScaleDefaults('category', {
+      gridLines: {
+        drawBorder: false,
+        drawOnChartArea: false,
+        drawTicks: false
+      },
+      ticks: {
+        padding: 20
+      },
+      maxBarThickness: 10
+    });
+
+    return options;
+
+  }
 
   // Parse global options
   function parseOptions(parent, options) {
@@ -429,8 +436,12 @@ var ThemeCharts = (function() {
   //
   // Run functions on windows load or special events
 
-  // Parse global options
-  parseOptions(Chart, options);
+  // Check if Chart.js is included
+  if (window.Chart) {
+
+    // Parse global options
+    parseOptions(Chart, chartOptions());
+  }
 
   // Toggle options
   $toggle.on({
@@ -457,8 +468,7 @@ var ThemeCharts = (function() {
 
   return {
     fonts: fonts,
-    colors: colors,
-    options: options
+    colors: colors
   };
   
 })();
