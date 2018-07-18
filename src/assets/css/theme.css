@@ -1,5 +1,8 @@
 /**
- * Dashkit v1.0.1
+ * Dashkit v1.0.2
+ *
+ * Custom variables followed by Dashkit variables followed by Bootstrap variables
+ * to ensure cascade of styles.
  */
 /*!
  * Bootstrap v4.1.2 (https://getbootstrap.com/)

@@ -20,11 +20,14 @@ const wait = require('gulp-wait');
 
 const paths = {
   base:   {
-    base:   {
+    base:         {
       dir:    './'
     },
-    node:   {
+    node:         {
       dir:    'node_modules'
+    },
+    packageLock:  {
+      files:  'package-lock.json'
     }
   },
   dist:   {
@@ -120,6 +123,10 @@ gulp.task('clean:tmp', function() {
   del.sync(paths.src.tmp.dir);
 });
 
+gulp.task('clean:packageLock', function() {
+  del.sync(paths.base.packageLock.files);
+});
+
 gulp.task('clean:dist', function() {
   del.sync(paths.dist.base.dir);
 });
@@ -157,7 +164,7 @@ gulp.task('useref', function() {
 });
 
 gulp.task('build', function(callback) {
-  runsequence(['clean:tmp', 'clean:dist', 'copy:all', 'copy:libs'],
+  runsequence(['clean:tmp', 'clean:packageLock', 'clean:dist', 'copy:all', 'copy:libs'],
     ['sass', 'useref'], 
     callback);
 });
