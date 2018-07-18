@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "Dashkit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "gulpfile.js",
   "author": "Good Themes",
@@ -30,7 +30,7 @@
     "stream-combiner2": "^1.1.1"
   },
   "dependencies": {
-    "bootstrap": "^4.1.1",
+    "bootstrap": "^4.1.2",
     "chart.js": "^2.7.2",
     "flatpickr": "^4.5.0",
     "jquery": "^3.3.1",
