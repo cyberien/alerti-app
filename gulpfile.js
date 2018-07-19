@@ -4,7 +4,7 @@ const fs = require('fs');
 const git = require('gulp-git');
 const gulp = require('gulp');
 const runsequence = require('run-sequence');
-const subtree = require('gulp-subtree');
+const subtree = require('gulp-subtree-only');
 const zip = require('gulp-zip');
 
 const paths = {
