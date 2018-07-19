@@ -1,9 +1,6 @@
 const chug = require('gulp-chug');
-const clean = require('gulp-clean');
 const fs = require('fs');
 const gulp = require('gulp');
-const runsequence = require('run-sequence');
-const subtree = require('gulp-subtree-only');
 const zip = require('gulp-zip');
 
 const paths = {
@@ -53,32 +50,5 @@ gulp.task('zip', function () {
       tasks: ['build']
     }, function() {
       gulp.start('compress');
-    }))
-});
-
-gulp.task('copy:dist', function() {
-  gulp.src(paths.theme.dist.files)
-    .pipe(gulp.dest(paths.preview.dir))
-});
-
-gulp.task('subtree', function () {
-  return gulp.src(paths.preview.dir)
-    .pipe(subtree({
-      branch: 'test',
-      message: 'v' + packageVersion
-    }))
-});
-
-gulp.task('preview', function (callback) {
-  runsequence('copy:dist', 'subtree',
-    callback)
-});
-
-gulp.task('publish', function () {
-  gulp.src(paths.theme.gulpfile.file, {read: false})
-    .pipe(chug({
-      tasks: ['build']
-    }, function() {
-      gulp.start('preview');
     }))
 });
