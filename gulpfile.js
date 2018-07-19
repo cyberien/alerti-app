@@ -72,7 +72,6 @@ gulp.task('subtree', function () {
     .pipe(subtree({
       branch: 'test'
     }))
-    .pipe(clean());
 });
 
 gulp.task('publish', function (callback) {
