@@ -3,7 +3,7 @@ const clean = require('gulp-clean');
 const fs = require('fs');
 const gulp = require('gulp');
 const runsequence = require('run-sequence');
-const subtree = require('gulp-subtree');
+const subtree = require('gulp-subtree-only');
 const zip = require('gulp-zip');
 
 const paths = {
