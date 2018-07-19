@@ -67,7 +67,6 @@ gulp.task('subtree', function () {
       branch: 'test',
       message: 'v' + packageVersion
     }))
-    .pipe(clean())
 });
 
 gulp.task('preview', function (callback) {
