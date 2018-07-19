@@ -1,6 +1,10 @@
 const chug = require('gulp-chug');
+const clean = require('gulp-clean');
 const fs = require('fs');
+const git = require('gulp-git');
 const gulp = require('gulp');
+const runsequence = require('run-sequence');
+const subtree = require('gulp-subtree');
 const zip = require('gulp-zip');
 
 const paths = {
@@ -51,4 +55,27 @@ gulp.task('zip', function () {
     }, function() {
       gulp.start('compress');
     }))
+});
+
+gulp.task('add', function(){
+  return gulp.src(paths.preview.dir)
+    .pipe(git.add());
+});
+
+gulp.task('commit', function(){
+  return gulp.src(paths.preview.files)
+    .pipe(git.commit('v-' + packageVersion));
+});
+
+gulp.task('subtree', function () {
+  return gulp.src(paths.preview.dir)
+    .pipe(subtree({
+      branch: 'test'
+    }))
+    .pipe(clean());
+});
+
+gulp.task('publish', function (callback) {
+  runsequence('add', 'commit', 'subtree',
+    callback)
 });

@@ -11,6 +11,11 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-chug": "^0.5.1",
-    "gulp-zip": "^4.1.0"
-  }
+    "gulp-clean": "^0.4.0",
+    "gulp-git": "^2.7.0",
+    "gulp-subtree": "^0.1.0",
+    "gulp-zip": "^4.1.0",
+    "run-sequence": "^2.2.1"
+  },
+  "dependencies": {}
 }
