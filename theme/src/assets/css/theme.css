@@ -16863,10 +16863,7 @@ button:focus
 }
 
 .loader-sm,
-.btn.is-loading,
-.ql-tooltip .is-loading.ql-preview,
-.ql-tooltip .is-loading.ql-action::before,
-.ql-tooltip .is-loading.ql-remove::before,
+.is-loading-sm:after,
 .is-loading-sm:after
 {
     width: 1rem;
@@ -16876,6 +16873,7 @@ button:focus
 }
 
 .loader-lg,
+.is-loading-lg:after,
 .is-loading-lg:after
 {
     width: 2rem;
@@ -16899,22 +16897,22 @@ button:focus
 .is-loading:after
 {
     position: absolute;
-    top: calc(50% - .75rem);
-    left: calc(50% - .75rem); 
+    top: calc(50% - 1.5rem/2);
+    left: calc(50% - 1.5rem/2); 
 
     content: '';
 }
 
 .is-loading-sm:after
 {
-    top: calc(50% - .5rem);
-    left: calc(50% - .5rem);
+    top: calc(50% - 1rem/2);
+    left: calc(50% - 1rem/2);
 }
 
 .is-loading-lg:after
 {
-    top: calc(50% - 1rem);
-    left: calc(50% - 1rem);
+    top: calc(50% - 2rem/2);
+    left: calc(50% - 2rem/2);
 }
 
 .loader-primary,

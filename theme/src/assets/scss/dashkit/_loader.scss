@@ -9,8 +9,8 @@
 
 .loader {
   display: block;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: $loader-size-base;
+  height: $loader-size-base;
   border: 3px solid $black;
   background: transparent;
   border-bottom-color: transparent;
@@ -24,15 +24,15 @@
 
 .loader-sm,
 .is-loading-sm:after {
-  width: 1rem;
-  height: 1rem;
+  width: $loader-size-sm;
+  height: $loader-size-sm;
   border-width: 2px;
 }
 
 .loader-lg,
 .is-loading-lg:after {
-  width: 2rem;
-  height: 2rem;
+  width: $loader-size-lg;
+  height: $loader-size-lg;
   border-width: 5px;
 }
 
@@ -51,22 +51,19 @@
 .is-loading:after {
   content: '';
   position: absolute;
-  top: calc(50% - .75rem);
-  left: calc(50% - .75rem);
+  top: calc(50% - #{$loader-size-base}/2);
+  left: calc(50% - #{$loader-size-base}/2);
   @extend .loader;
 }
 .is-loading-sm:after {
-  top: calc(50% - .5rem);
-  left: calc(50% - .5rem);
+  top: calc(50% - #{$loader-size-sm}/2);
+  left: calc(50% - #{$loader-size-sm}/2);
+  @extend .loader-sm;
 }
 .is-loading-lg:after {
-  top: calc(50% - 1rem);
-  left: calc(50% - 1rem);
-}
-
-// Special small sizing for buttons since normal one feels too big
-.btn.is-loading {
-  @extend .loader-sm;
+  top: calc(50% - #{$loader-size-lg}/2);
+  left: calc(50% - #{$loader-size-lg}/2);
+  @extend .loader-lg;
 }
 
 // Color variants
