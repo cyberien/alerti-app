@@ -1,0 +1,102 @@
+//
+// loader.scss
+// Dashkit component
+//
+
+// Loader
+//
+// General styles
+
+.loader {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 3px solid $black;
+  background: transparent;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  animation: 1s spin linear infinite;
+}
+
+// Sizing
+//
+// Creating a few sizes of loader
+
+.loader-sm,
+.is-loading-sm:after {
+  width: 1rem;
+  height: 1rem;
+  border-width: 2px;
+}
+
+.loader-lg,
+.is-loading-lg:after {
+  width: 2rem;
+  height: 2rem;
+  border-width: 5px;
+}
+
+
+// Loader helper
+//
+// Creating a psuedo element for any element (and a special consideration for buttons) that makes it easy to apply a loading state
+
+.is-loading {
+  color: transparent !important;
+  position: relative;
+}
+.is-loading > * {
+  opacity: 0 !important;
+}
+.is-loading:after {
+  content: '';
+  position: absolute;
+  top: calc(50% - .75rem);
+  left: calc(50% - .75rem);
+  @extend .loader;
+}
+.is-loading-sm:after {
+  top: calc(50% - .5rem);
+  left: calc(50% - .5rem);
+}
+.is-loading-lg:after {
+  top: calc(50% - 1rem);
+  left: calc(50% - 1rem);
+}
+
+// Special small sizing for buttons since normal one feels too big
+.btn.is-loading {
+  @extend .loader-sm;
+}
+
+// Color variants
+//
+// Every color in the theme-color map
+
+@each $color, $value in $theme-colors {
+  .loader-#{$color},
+  .is-loading-#{$color}:after {
+    border-color: $value;
+    border-bottom-color: transparent;
+  }
+  .btn-#{$color}.is-loading:after {
+    border-color: color-yiq($value);
+    border-bottom-color: transparent;
+  }
+}
+
+
+// Animation
+//
+// Simple spinning animation
+
+@keyframes spin {
+  from {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  to {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+  }
+}

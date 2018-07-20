@@ -6916,7 +6916,7 @@ input[type='button'].btn-block
 
 .progress
 {
-    font-size: .70313rem;
+    font-size: .70312rem;
 
     display: flex;
     overflow: hidden;
@@ -16844,6 +16844,219 @@ button:focus
     line-height: inherit;
 
     padding-bottom: .125em;
+}
+
+.loader,
+.is-loading:after
+{
+    display: block;
+
+    width: 1.5rem;
+    height: 1.5rem;
+
+    animation: 1s spin linear infinite; 
+
+    border: 3px solid #12263f;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    background: transparent;
+}
+
+.loader-sm,
+.btn.is-loading,
+.ql-tooltip .is-loading.ql-preview,
+.ql-tooltip .is-loading.ql-action::before,
+.ql-tooltip .is-loading.ql-remove::before,
+.is-loading-sm:after
+{
+    width: 1rem;
+    height: 1rem;
+
+    border-width: 2px;
+}
+
+.loader-lg,
+.is-loading-lg:after
+{
+    width: 2rem;
+    height: 2rem;
+
+    border-width: 5px;
+}
+
+.is-loading
+{
+    position: relative; 
+
+    color: transparent !important;
+}
+
+.is-loading > *
+{
+    opacity: 0 !important;
+}
+
+.is-loading:after
+{
+    position: absolute;
+    top: calc(50% - .75rem);
+    left: calc(50% - .75rem); 
+
+    content: '';
+}
+
+.is-loading-sm:after
+{
+    top: calc(50% - .5rem);
+    left: calc(50% - .5rem);
+}
+
+.is-loading-lg:after
+{
+    top: calc(50% - 1rem);
+    left: calc(50% - 1rem);
+}
+
+.loader-primary,
+.is-loading-primary:after
+{
+    border-color: #2c7be5;
+    border-bottom-color: transparent;
+}
+
+.btn-primary.is-loading:after
+{
+    border-color: #fff;
+    border-bottom-color: transparent;
+}
+
+.loader-secondary,
+.is-loading-secondary:after
+{
+    border-color: #6e84a3;
+    border-bottom-color: transparent;
+}
+
+.btn-secondary.is-loading:after
+{
+    border-color: #fff;
+    border-bottom-color: transparent;
+}
+
+.loader-success,
+.is-loading-success:after
+{
+    border-color: #00d97e;
+    border-bottom-color: transparent;
+}
+
+.btn-success.is-loading:after
+{
+    border-color: #fff;
+    border-bottom-color: transparent;
+}
+
+.loader-info,
+.is-loading-info:after
+{
+    border-color: #39afd1;
+    border-bottom-color: transparent;
+}
+
+.btn-info.is-loading:after
+{
+    border-color: #fff;
+    border-bottom-color: transparent;
+}
+
+.loader-warning,
+.is-loading-warning:after
+{
+    border-color: #f6c343;
+    border-bottom-color: transparent;
+}
+
+.btn-warning.is-loading:after
+{
+    border-color: #283e59;
+    border-bottom-color: transparent;
+}
+
+.loader-danger,
+.is-loading-danger:after
+{
+    border-color: #e63757;
+    border-bottom-color: transparent;
+}
+
+.btn-danger.is-loading:after
+{
+    border-color: #fff;
+    border-bottom-color: transparent;
+}
+
+.loader-light,
+.is-loading-light:after
+{
+    border-color: #edf2f9;
+    border-bottom-color: transparent;
+}
+
+.btn-light.is-loading:after
+{
+    border-color: #283e59;
+    border-bottom-color: transparent;
+}
+
+.loader-dark,
+.is-loading-dark:after
+{
+    border-color: #12263f;
+    border-bottom-color: transparent;
+}
+
+.btn-dark.is-loading:after
+{
+    border-color: #fff;
+    border-bottom-color: transparent;
+}
+
+.loader-white,
+.is-loading-white:after
+{
+    border-color: #fff;
+    border-bottom-color: transparent;
+}
+
+.btn-white.is-loading:after
+{
+    border-color: #283e59;
+    border-bottom-color: transparent;
+}
+
+.loader-body,
+.is-loading-body:after
+{
+    border-color: #f9fbfd;
+    border-bottom-color: transparent;
+}
+
+.btn-body.is-loading:after
+{
+    border-color: #283e59;
+    border-bottom-color: transparent;
+}
+
+@keyframes spin
+{
+    from
+    {
+        transform: rotate(0deg);
+    }
+    to
+    {
+        transform: rotate(360deg);
+    }
 }
 
 @media (min-width: 768px)
