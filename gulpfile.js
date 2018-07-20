@@ -57,6 +57,11 @@ gulp.task('zip', function () {
     }))
 });
 
+gulp.task('copy:dist', function() {
+  gulp.src(paths.theme.dist.dir)
+    .pipe(gulp.dest(paths.preview.dir))
+});
+
 gulp.task('add', function(){
   return gulp.src(paths.preview.dir)
     .pipe(git.add());
@@ -64,7 +69,7 @@ gulp.task('add', function(){
 
 gulp.task('commit', function(){
   return gulp.src(paths.preview.files)
-    .pipe(git.commit('v-' + packageVersion));
+    .pipe(git.commit('Published v' + packageVersion + 'to test branch.'));
 });
 
 gulp.task('subtree', function () {
@@ -74,7 +79,20 @@ gulp.task('subtree', function () {
     }))
 });
 
-gulp.task('publish', function (callback) {
-  runsequence('add', 'commit', 'subtree',
+gulp.task('clean:preview', function() {
+  del.sync(paths.preview.dir);
+});
+
+gulp.task('push', function (callback) {
+  runsequence('copy:dist', 'add', 'commit', 'subtree', 'clean:preview'
     callback)
+});
+
+gulp.task('publish', function () {
+  gulp.src(paths.theme.gulpfile.file, {read: false})
+    .pipe(chug({
+      tasks: ['build']
+    }, function() {
+      gulp.start('push');
+    }))
 });
