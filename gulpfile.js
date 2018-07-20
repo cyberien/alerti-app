@@ -64,12 +64,12 @@ gulp.task('copy:dist', function() {
 });
 
 gulp.task('add', function(){
-  return gulp.src(paths.preview.files)
+  return gulp.src('./')
     .pipe(git.add());
 });
 
 gulp.task('commit', function(){
-  return gulp.src(paths.preview.files)
+  return gulp.src('./')
     .pipe(git.commit('Published v' + packageVersion + 'to test branch.'));
 });
 
@@ -85,7 +85,7 @@ gulp.task('clean:preview', function() {
 });
 
 gulp.task('push', function (callback) {
-  runsequence('add', 'commit',
+  runsequence('copy:dist', 'add', 'commit',
     callback)
 });
 
