@@ -85,7 +85,7 @@ gulp.task('clean:preview', function() {
 });
 
 gulp.task('push', function (callback) {
-  runsequence('copy:dist', 'add', 'commit',
+  runsequence('copy:dist', 'add', 'commit', 'subtree', 'clean:preview',
     callback)
 });
 
