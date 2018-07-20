@@ -268,14 +268,10 @@
 //
 // Quill plugin overrides
 
-.ql-snow.ql-toolbar {
+.ql-toolbar {
   @extend .form-control;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-}
-
-.ql-snow.ql-container {
-  border: none;
 }
 
 .ql-toolbar + .ql-container {
@@ -292,6 +288,11 @@
   @extend .form-control;
 }
 
+.ql-hidden {
+  position: absolute;
+  transform: scale(0);
+}
+
 
 // Placeholder
 
@@ -306,42 +307,61 @@
 }
 
 
-// Toolbar buttons
+// Toolbar
 
-.ql-snow.ql-toolbar button {
+.ql-formats {
+  padding-left: .25rem;
+  padding-right: .25rem;
+
+  &:first-child {
+    padding-left: 0;
+  }
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+.ql-toolbar button {
+  padding: 0 .25rem;
+  background: none; border: none;
   color: $body-color;
+  cursor: pointer;
+  transition: $transition-base;
+
+  &:hover {
+    color: $primary;
+  }
 }
 
-.ql-snow.ql-toolbar button:hover {
+.ql-toolbar .ql-active {
   color: $primary;
 }
 
-.ql-snow.ql-toolbar button.ql-active {
-  color: $primary;
+.ql-toolbar button svg {
+  height: 1.125rem; width: auto;
 }
 
-.ql-snow .ql-stroke {
-  stroke: currentColor !important;
+.ql-toolbar .ql-stroke {
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
 }
 
-.ql-snow .ql-fill {
-  fill: currentColor !important;
+.ql-toolbar .ql-thin {
+  stroke-width: 1;
+}
+
+.ql-toolbar .ql-fill {
+  fill: currentColor;
 }
 
 
 // Formatting
 
-.ql-snow .ql-editor blockquote {
-  padding-left: 0;
-  border-left: 0;
+.ql-editor blockquote {
   @extend .blockquote;
-}
-
-.ql-snow .ql-editor code {
-  padding: 0;
-  background: none;
-  font-size: $code-font-size;
-  color: $code-color;
 }
 
 
