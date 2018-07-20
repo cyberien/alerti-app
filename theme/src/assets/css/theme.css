@@ -2451,11 +2451,13 @@ select.ql-editor:focus::-ms-value
 .input-group-sm > .input-group-prepend > .form-control-plaintext.input-group-text,
 .input-group-sm > .input-group-append > .form-control-plaintext.input-group-text,
 .input-group-sm > .input-group-prepend > .form-control-plaintext.btn,
-.ql-tooltip .input-group-sm > .input-group-prepend > .form-control-plaintext.ql-action,
-.ql-tooltip .input-group-sm > .input-group-prepend > .form-control-plaintext.ql-remove,
+.ql-tooltip .input-group-sm > .input-group-prepend > .form-control-plaintext.ql-preview,
+.ql-tooltip .input-group-sm > .input-group-prepend > .form-control-plaintext.ql-action::before,
+.ql-tooltip .input-group-sm > .input-group-prepend > .form-control-plaintext.ql-remove::before,
 .input-group-sm > .input-group-append > .form-control-plaintext.btn,
-.ql-tooltip .input-group-sm > .input-group-append > .form-control-plaintext.ql-action,
-.ql-tooltip .input-group-sm > .input-group-append > .form-control-plaintext.ql-remove,
+.ql-tooltip .input-group-sm > .input-group-append > .form-control-plaintext.ql-preview,
+.ql-tooltip .input-group-sm > .input-group-append > .form-control-plaintext.ql-action::before,
+.ql-tooltip .input-group-sm > .input-group-append > .form-control-plaintext.ql-remove::before,
 .ql-tooltip input.form-control-plaintext,
 .form-control-plaintext.form-control-lg,
 .input-group-lg > .form-control-plaintext.form-control,
@@ -2465,11 +2467,13 @@ select.ql-editor:focus::-ms-value
 .input-group-lg > .input-group-prepend > .form-control-plaintext.input-group-text,
 .input-group-lg > .input-group-append > .form-control-plaintext.input-group-text,
 .input-group-lg > .input-group-prepend > .form-control-plaintext.btn,
-.ql-tooltip .input-group-lg > .input-group-prepend > .form-control-plaintext.ql-action,
-.ql-tooltip .input-group-lg > .input-group-prepend > .form-control-plaintext.ql-remove,
+.ql-tooltip .input-group-lg > .input-group-prepend > .form-control-plaintext.ql-preview,
+.ql-tooltip .input-group-lg > .input-group-prepend > .form-control-plaintext.ql-action::before,
+.ql-tooltip .input-group-lg > .input-group-prepend > .form-control-plaintext.ql-remove::before,
 .input-group-lg > .input-group-append > .form-control-plaintext.btn,
-.ql-tooltip .input-group-lg > .input-group-append > .form-control-plaintext.ql-action,
-.ql-tooltip .input-group-lg > .input-group-append > .form-control-plaintext.ql-remove
+.ql-tooltip .input-group-lg > .input-group-append > .form-control-plaintext.ql-preview,
+.ql-tooltip .input-group-lg > .input-group-append > .form-control-plaintext.ql-action::before,
+.ql-tooltip .input-group-lg > .input-group-append > .form-control-plaintext.ql-remove::before
 {
     padding-right: 0;
     padding-left: 0;
@@ -2483,11 +2487,13 @@ select.ql-editor:focus::-ms-value
 .input-group-sm > .input-group-prepend > .input-group-text,
 .input-group-sm > .input-group-append > .input-group-text,
 .input-group-sm > .input-group-prepend > .btn,
-.ql-tooltip .input-group-sm > .input-group-prepend > .ql-action,
-.ql-tooltip .input-group-sm > .input-group-prepend > .ql-remove,
+.ql-tooltip .input-group-sm > .input-group-prepend > .ql-preview,
+.ql-tooltip .input-group-sm > .input-group-prepend > .ql-action::before,
+.ql-tooltip .input-group-sm > .input-group-prepend > .ql-remove::before,
 .input-group-sm > .input-group-append > .btn,
-.ql-tooltip .input-group-sm > .input-group-append > .ql-action,
-.ql-tooltip .input-group-sm > .input-group-append > .ql-remove,
+.ql-tooltip .input-group-sm > .input-group-append > .ql-preview,
+.ql-tooltip .input-group-sm > .input-group-append > .ql-action::before,
+.ql-tooltip .input-group-sm > .input-group-append > .ql-remove::before,
 .ql-tooltip input
 {
     font-size: .8125rem;
@@ -2505,11 +2511,13 @@ select.form-control-sm:not([size]):not([multiple]),
 .input-group-sm > .input-group-prepend > select.input-group-text:not([size]):not([multiple]),
 .input-group-sm > .input-group-append > select.input-group-text:not([size]):not([multiple]),
 .input-group-sm > .input-group-prepend > select.btn:not([size]):not([multiple]),
-.ql-tooltip .input-group-sm > .input-group-prepend > select.ql-action:not([size]):not([multiple]),
-.ql-tooltip .input-group-sm > .input-group-prepend > select.ql-remove:not([size]):not([multiple]),
+.ql-tooltip .input-group-sm > .input-group-prepend > select.ql-preview:not([size]):not([multiple]),
+.ql-tooltip .input-group-sm > .input-group-prepend > select.ql-action:not([size]):not([multiple])::before,
+.ql-tooltip .input-group-sm > .input-group-prepend > select.ql-remove:not([size]):not([multiple])::before,
 .input-group-sm > .input-group-append > select.btn:not([size]):not([multiple]),
-.ql-tooltip .input-group-sm > .input-group-append > select.ql-action:not([size]):not([multiple]),
-.ql-tooltip .input-group-sm > .input-group-append > select.ql-remove:not([size]):not([multiple])
+.ql-tooltip .input-group-sm > .input-group-append > select.ql-preview:not([size]):not([multiple]),
+.ql-tooltip .input-group-sm > .input-group-append > select.ql-action:not([size]):not([multiple])::before,
+.ql-tooltip .input-group-sm > .input-group-append > select.ql-remove:not([size]):not([multiple])::before
 {
     height: calc(1.67188rem + 2px);
 }
@@ -2522,11 +2530,13 @@ select.form-control-sm:not([size]):not([multiple]),
 .input-group-lg > .input-group-prepend > .input-group-text,
 .input-group-lg > .input-group-append > .input-group-text,
 .input-group-lg > .input-group-prepend > .btn,
-.ql-tooltip .input-group-lg > .input-group-prepend > .ql-action,
-.ql-tooltip .input-group-lg > .input-group-prepend > .ql-remove,
+.ql-tooltip .input-group-lg > .input-group-prepend > .ql-preview,
+.ql-tooltip .input-group-lg > .input-group-prepend > .ql-action::before,
+.ql-tooltip .input-group-lg > .input-group-prepend > .ql-remove::before,
 .input-group-lg > .input-group-append > .btn,
-.ql-tooltip .input-group-lg > .input-group-append > .ql-action,
-.ql-tooltip .input-group-lg > .input-group-append > .ql-remove
+.ql-tooltip .input-group-lg > .input-group-append > .ql-preview,
+.ql-tooltip .input-group-lg > .input-group-append > .ql-action::before,
+.ql-tooltip .input-group-lg > .input-group-append > .ql-remove::before
 {
     font-size: 1.0625rem;
     line-height: 1.5;
@@ -2543,11 +2553,13 @@ select.form-control-lg:not([size]):not([multiple]),
 .input-group-lg > .input-group-prepend > select.input-group-text:not([size]):not([multiple]),
 .input-group-lg > .input-group-append > select.input-group-text:not([size]):not([multiple]),
 .input-group-lg > .input-group-prepend > select.btn:not([size]):not([multiple]),
-.ql-tooltip .input-group-lg > .input-group-prepend > select.ql-action:not([size]):not([multiple]),
-.ql-tooltip .input-group-lg > .input-group-prepend > select.ql-remove:not([size]):not([multiple]),
+.ql-tooltip .input-group-lg > .input-group-prepend > select.ql-preview:not([size]):not([multiple]),
+.ql-tooltip .input-group-lg > .input-group-prepend > select.ql-action:not([size]):not([multiple])::before,
+.ql-tooltip .input-group-lg > .input-group-prepend > select.ql-remove:not([size]):not([multiple])::before,
 .input-group-lg > .input-group-append > select.btn:not([size]):not([multiple]),
-.ql-tooltip .input-group-lg > .input-group-append > select.ql-action:not([size]):not([multiple]),
-.ql-tooltip .input-group-lg > .input-group-append > select.ql-remove:not([size]):not([multiple])
+.ql-tooltip .input-group-lg > .input-group-append > select.ql-preview:not([size]):not([multiple]),
+.ql-tooltip .input-group-lg > .input-group-append > select.ql-action:not([size]):not([multiple])::before,
+.ql-tooltip .input-group-lg > .input-group-append > select.ql-remove:not([size]):not([multiple])::before
 {
     height: calc(2.59375rem + 2px);
 }
@@ -3045,8 +3057,9 @@ select.form-control-lg:not([size]):not([multiple]),
 }
 
 .btn,
-.ql-tooltip .ql-action,
-.ql-tooltip .ql-remove
+.ql-tooltip .ql-preview,
+.ql-tooltip .ql-action::before,
+.ql-tooltip .ql-remove::before
 {
     font-size: .9375rem;
     font-weight: 400;
@@ -3071,103 +3084,128 @@ select.form-control-lg:not([size]):not([multiple]),
 @media screen and (prefers-reduced-motion: reduce)
 {
     .btn,
-    .ql-tooltip .ql-action,
-    .ql-tooltip .ql-remove
+    .ql-tooltip .ql-preview,
+    .ql-tooltip .ql-action::before,
+    .ql-tooltip .ql-remove::before
     {
         transition: none;
     }
 }
 .btn:hover,
-.ql-tooltip .ql-action:hover,
-.ql-tooltip .ql-remove:hover,
+.ql-tooltip .ql-preview:hover,
+.ql-tooltip .ql-action:hover::before,
+.ql-tooltip .ql-remove:hover::before,
 .btn:focus,
-.ql-tooltip .ql-action:focus,
-.ql-tooltip .ql-remove:focus
+.ql-tooltip .ql-preview:focus,
+.ql-tooltip .ql-action:focus::before,
+.ql-tooltip .ql-remove:focus::before
 {
     text-decoration: none;
 }
 .btn:focus,
-.ql-tooltip .ql-action:focus,
-.ql-tooltip .ql-remove:focus,
+.ql-tooltip .ql-preview:focus,
+.ql-tooltip .ql-action:focus::before,
+.ql-tooltip .ql-remove:focus::before,
 .btn.focus,
-.ql-tooltip .focus.ql-action,
-.ql-tooltip .focus.ql-remove
+.ql-tooltip .focus.ql-preview,
+.ql-tooltip .focus.ql-action::before,
+.ql-tooltip .focus.ql-remove::before
 {
     outline: 0;
     box-shadow: 0 0 0 .15rem rgba(44, 123, 229, .25);
 }
 .btn.disabled,
-.ql-tooltip .disabled.ql-action,
-.ql-tooltip .disabled.ql-remove,
+.ql-tooltip .disabled.ql-preview,
+.ql-tooltip .disabled.ql-action::before,
+.ql-tooltip .disabled.ql-remove::before,
 .btn:disabled,
-.ql-tooltip .ql-action:disabled,
-.ql-tooltip .ql-remove:disabled
+.ql-tooltip .ql-preview:disabled,
+.ql-tooltip .ql-action:disabled::before,
+.ql-tooltip .ql-remove:disabled::before
 {
     opacity: .65;
 }
 .btn:not(:disabled):not(.disabled),
-.ql-tooltip .ql-action:not(:disabled):not(.disabled),
-.ql-tooltip .ql-remove:not(:disabled):not(.disabled)
+.ql-tooltip .ql-preview:not(:disabled):not(.disabled),
+.ql-tooltip .ql-action:not(:disabled):not(.disabled)::before,
+.ql-tooltip .ql-remove:not(:disabled):not(.disabled)::before
 {
     cursor: pointer;
 }
 .btn:not(:disabled):not(.disabled):active,
-.ql-tooltip .ql-action:not(:disabled):not(.disabled):active,
-.ql-tooltip .ql-remove:not(:disabled):not(.disabled):active,
+.ql-tooltip .ql-preview:not(:disabled):not(.disabled):active,
+.ql-tooltip .ql-action:not(:disabled):not(.disabled):active::before,
+.ql-tooltip .ql-remove:not(:disabled):not(.disabled):active::before,
 .btn:not(:disabled):not(.disabled).active,
-.ql-tooltip .ql-action:not(:disabled):not(.disabled).active,
-.ql-tooltip .ql-remove:not(:disabled):not(.disabled).active
+.ql-tooltip .ql-preview:not(:disabled):not(.disabled).active,
+.ql-tooltip .ql-action:not(:disabled):not(.disabled).active::before,
+.ql-tooltip .ql-remove:not(:disabled):not(.disabled).active::before
 {
     background-image: none;
 }
 
 a.btn.disabled,
-.ql-tooltip a.disabled.ql-action,
-.ql-tooltip a.disabled.ql-remove,
+.ql-tooltip a.disabled.ql-preview,
+.ql-tooltip a.disabled.ql-action::before,
+.ql-tooltip a.disabled.ql-remove::before,
 fieldset:disabled a.btn,
-fieldset:disabled .ql-tooltip a.ql-action,
-.ql-tooltip fieldset:disabled a.ql-action,
-fieldset:disabled .ql-tooltip a.ql-remove,
-.ql-tooltip fieldset:disabled a.ql-remove
+fieldset:disabled .ql-tooltip a.ql-preview,
+.ql-tooltip fieldset:disabled a.ql-preview,
+fieldset:disabled .ql-tooltip a.ql-action::before,
+.ql-tooltip fieldset:disabled a.ql-action::before,
+fieldset:disabled .ql-tooltip a.ql-remove::before,
+.ql-tooltip fieldset:disabled a.ql-remove::before
 {
     pointer-events: none;
 }
 
-.btn-primary
+.btn-primary,
+.ql-tooltip .ql-action::before
 {
     color: #fff;
     border-color: #2c7be5; 
     background-color: #2c7be5;
 }
-.btn-primary:hover
+.btn-primary:hover,
+.ql-tooltip .ql-action:hover::before
 {
     color: #fff;
     border-color: #1862c6; 
     background-color: #1a68d1;
 }
 .btn-primary:focus,
-.btn-primary.focus
+.ql-tooltip .ql-action:focus::before,
+.btn-primary.focus,
+.ql-tooltip .focus.ql-action::before
 {
     box-shadow: 0 0 0 .15rem rgba(44, 123, 229, .5);
 }
 .btn-primary.disabled,
-.btn-primary:disabled
+.ql-tooltip .disabled.ql-action::before,
+.btn-primary:disabled,
+.ql-tooltip .ql-action:disabled::before
 {
     color: #fff;
     border-color: #2c7be5; 
     background-color: #2c7be5;
 }
 .btn-primary:not(:disabled):not(.disabled):active,
+.ql-tooltip .ql-action:not(:disabled):not(.disabled):active::before,
 .btn-primary:not(:disabled):not(.disabled).active,
-.show > .btn-primary.dropdown-toggle
+.ql-tooltip .ql-action:not(:disabled):not(.disabled).active::before,
+.show > .btn-primary.dropdown-toggle,
+.ql-tooltip .show > .dropdown-toggle.ql-action::before
 {
     color: #fff;
     border-color: #175dba; 
     background-color: #1862c6;
 }
 .btn-primary:not(:disabled):not(.disabled):active:focus,
+.ql-tooltip .ql-action:not(:disabled):not(.disabled):active:focus::before,
 .btn-primary:not(:disabled):not(.disabled).active:focus,
-.show > .btn-primary.dropdown-toggle:focus
+.ql-tooltip .ql-action:not(:disabled):not(.disabled).active:focus::before,
+.show > .btn-primary.dropdown-toggle:focus,
+.ql-tooltip .show > .dropdown-toggle.ql-action:focus::before
 {
     box-shadow: 0 0 0 .15rem rgba(44, 123, 229, .5);
 }
@@ -3446,64 +3484,52 @@ fieldset:disabled .ql-tooltip a.ql-remove,
 }
 
 .btn-white,
-.ql-tooltip .ql-action,
-.ql-tooltip .ql-remove
+.ql-tooltip .ql-remove::before
 {
     color: #283e59;
     border-color: #fff; 
     background-color: #fff;
 }
 .btn-white:hover,
-.ql-tooltip .ql-action:hover,
-.ql-tooltip .ql-remove:hover
+.ql-tooltip .ql-remove:hover::before
 {
     color: #283e59;
     border-color: #e6e6e6; 
     background-color: #ececec;
 }
 .btn-white:focus,
-.ql-tooltip .ql-action:focus,
-.ql-tooltip .ql-remove:focus,
+.ql-tooltip .ql-remove:focus::before,
 .btn-white.focus,
-.ql-tooltip .focus.ql-action,
-.ql-tooltip .focus.ql-remove
+.ql-tooltip .focus.ql-remove::before
 {
     box-shadow: 0 0 0 .15rem rgba(255, 255, 255, .5);
 }
 .btn-white.disabled,
-.ql-tooltip .disabled.ql-action,
-.ql-tooltip .disabled.ql-remove,
+.ql-tooltip .disabled.ql-remove::before,
 .btn-white:disabled,
-.ql-tooltip .ql-action:disabled,
-.ql-tooltip .ql-remove:disabled
+.ql-tooltip .ql-remove:disabled::before
 {
     color: #283e59;
     border-color: #fff; 
     background-color: #fff;
 }
 .btn-white:not(:disabled):not(.disabled):active,
-.ql-tooltip .ql-action:not(:disabled):not(.disabled):active,
-.ql-tooltip .ql-remove:not(:disabled):not(.disabled):active,
+.ql-tooltip .ql-remove:not(:disabled):not(.disabled):active::before,
 .btn-white:not(:disabled):not(.disabled).active,
-.ql-tooltip .ql-action:not(:disabled):not(.disabled).active,
-.ql-tooltip .ql-remove:not(:disabled):not(.disabled).active,
+.ql-tooltip .ql-remove:not(:disabled):not(.disabled).active::before,
 .show > .btn-white.dropdown-toggle,
-.ql-tooltip .show > .dropdown-toggle.ql-action,
-.ql-tooltip .show > .dropdown-toggle.ql-remove
+.ql-tooltip .show > .dropdown-toggle.ql-remove::before
 {
     color: #283e59;
     border-color: #dfdfdf; 
     background-color: #e6e6e6;
 }
 .btn-white:not(:disabled):not(.disabled):active:focus,
-.ql-tooltip .ql-action:not(:disabled):not(.disabled):active:focus,
-.ql-tooltip .ql-remove:not(:disabled):not(.disabled):active:focus,
+.ql-tooltip .ql-remove:not(:disabled):not(.disabled):active:focus::before,
 .btn-white:not(:disabled):not(.disabled).active:focus,
-.ql-tooltip .ql-action:not(:disabled):not(.disabled).active:focus,
-.ql-tooltip .ql-remove:not(:disabled):not(.disabled).active:focus,
+.ql-tooltip .ql-remove:not(:disabled):not(.disabled).active:focus::before,
 .show > .btn-white.dropdown-toggle:focus,
-.ql-tooltip .show > .dropdown-toggle.ql-action:focus,
-.ql-tooltip .show > .dropdown-toggle.ql-remove:focus
+.ql-tooltip .show > .dropdown-toggle.ql-remove:focus::before
 {
     box-shadow: 0 0 0 .15rem rgba(255, 255, 255, .5);
 }
@@ -3937,14 +3963,16 @@ fieldset:disabled .ql-tooltip a.ql-remove,
     box-shadow: 0 0 0 .15rem rgba(249, 251, 253, .5);
 }
 
-.btn-link
+.btn-link,
+.ql-tooltip .ql-preview
 {
     font-weight: 400;
 
     color: #2c7be5;
     background-color: transparent;
 }
-.btn-link:hover
+.btn-link:hover,
+.ql-tooltip .ql-preview:hover
 {
     text-decoration: none;
 
@@ -3953,7 +3981,9 @@ fieldset:disabled .ql-tooltip a.ql-remove,
     background-color: transparent;
 }
 .btn-link:focus,
-.btn-link.focus
+.ql-tooltip .ql-preview:focus,
+.btn-link.focus,
+.ql-tooltip .focus.ql-preview
 {
     text-decoration: none;
 
@@ -3961,7 +3991,9 @@ fieldset:disabled .ql-tooltip a.ql-remove,
     box-shadow: none;
 }
 .btn-link:disabled,
-.btn-link.disabled
+.ql-tooltip .ql-preview:disabled,
+.btn-link.disabled,
+.ql-tooltip .disabled.ql-preview
 {
     pointer-events: none; 
 
@@ -3970,8 +4002,9 @@ fieldset:disabled .ql-tooltip a.ql-remove,
 
 .btn-lg,
 .btn-group-lg > .btn,
-.ql-tooltip .btn-group-lg > .ql-action,
-.ql-tooltip .btn-group-lg > .ql-remove
+.ql-tooltip .btn-group-lg > .ql-preview,
+.ql-tooltip .btn-group-lg > .ql-action::before,
+.ql-tooltip .btn-group-lg > .ql-remove::before
 {
     font-size: 1.0625rem;
     line-height: 1.5;
@@ -3983,10 +4016,12 @@ fieldset:disabled .ql-tooltip a.ql-remove,
 
 .btn-sm,
 .btn-group-sm > .btn,
-.ql-tooltip .btn-group-sm > .ql-action,
-.ql-tooltip .btn-group-sm > .ql-remove,
-.ql-tooltip .ql-action,
-.ql-tooltip .ql-remove
+.ql-tooltip .btn-group-sm > .ql-preview,
+.ql-tooltip .btn-group-sm > .ql-action::before,
+.ql-tooltip .btn-group-sm > .ql-remove::before,
+.ql-tooltip .ql-preview,
+.ql-tooltip .ql-action::before,
+.ql-tooltip .ql-remove::before
 {
     font-size: .8125rem;
     line-height: 1.75;
@@ -4334,101 +4369,147 @@ input[type='button'].btn-block
     vertical-align: middle;
 }
 .btn-group > .btn,
-.ql-tooltip .btn-group > .ql-action,
-.ql-tooltip .btn-group > .ql-remove,
+.ql-tooltip .btn-group > .ql-preview,
+.ql-tooltip .btn-group > .ql-action::before,
+.ql-tooltip .btn-group > .ql-remove::before,
 .btn-group-vertical > .btn,
-.ql-tooltip .btn-group-vertical > .ql-action,
-.ql-tooltip .btn-group-vertical > .ql-remove
+.ql-tooltip .btn-group-vertical > .ql-preview,
+.ql-tooltip .btn-group-vertical > .ql-action::before,
+.ql-tooltip .btn-group-vertical > .ql-remove::before
 {
     position: relative;
 
     flex: 0 1 auto;
 }
 .btn-group > .btn:hover,
-.ql-tooltip .btn-group > .ql-action:hover,
-.ql-tooltip .btn-group > .ql-remove:hover,
+.ql-tooltip .btn-group > .ql-preview:hover,
+.ql-tooltip .btn-group > .ql-action:hover::before,
+.ql-tooltip .btn-group > .ql-remove:hover::before,
 .btn-group-vertical > .btn:hover,
-.ql-tooltip .btn-group-vertical > .ql-action:hover,
-.ql-tooltip .btn-group-vertical > .ql-remove:hover
+.ql-tooltip .btn-group-vertical > .ql-preview:hover,
+.ql-tooltip .btn-group-vertical > .ql-action:hover::before,
+.ql-tooltip .btn-group-vertical > .ql-remove:hover::before
 {
     z-index: 1;
 }
 .btn-group > .btn:focus,
-.ql-tooltip .btn-group > .ql-action:focus,
-.ql-tooltip .btn-group > .ql-remove:focus,
+.ql-tooltip .btn-group > .ql-preview:focus,
+.ql-tooltip .btn-group > .ql-action:focus::before,
+.ql-tooltip .btn-group > .ql-remove:focus::before,
 .btn-group > .btn:active,
-.ql-tooltip .btn-group > .ql-action:active,
-.ql-tooltip .btn-group > .ql-remove:active,
+.ql-tooltip .btn-group > .ql-preview:active,
+.ql-tooltip .btn-group > .ql-action:active::before,
+.ql-tooltip .btn-group > .ql-remove:active::before,
 .btn-group > .btn.active,
-.ql-tooltip .btn-group > .active.ql-action,
-.ql-tooltip .btn-group > .active.ql-remove,
+.ql-tooltip .btn-group > .active.ql-preview,
+.ql-tooltip .btn-group > .active.ql-action::before,
+.ql-tooltip .btn-group > .active.ql-remove::before,
 .btn-group-vertical > .btn:focus,
-.ql-tooltip .btn-group-vertical > .ql-action:focus,
-.ql-tooltip .btn-group-vertical > .ql-remove:focus,
+.ql-tooltip .btn-group-vertical > .ql-preview:focus,
+.ql-tooltip .btn-group-vertical > .ql-action:focus::before,
+.ql-tooltip .btn-group-vertical > .ql-remove:focus::before,
 .btn-group-vertical > .btn:active,
-.ql-tooltip .btn-group-vertical > .ql-action:active,
-.ql-tooltip .btn-group-vertical > .ql-remove:active,
+.ql-tooltip .btn-group-vertical > .ql-preview:active,
+.ql-tooltip .btn-group-vertical > .ql-action:active::before,
+.ql-tooltip .btn-group-vertical > .ql-remove:active::before,
 .btn-group-vertical > .btn.active,
-.ql-tooltip .btn-group-vertical > .active.ql-action,
-.ql-tooltip .btn-group-vertical > .active.ql-remove
+.ql-tooltip .btn-group-vertical > .active.ql-preview,
+.ql-tooltip .btn-group-vertical > .active.ql-action::before,
+.ql-tooltip .btn-group-vertical > .active.ql-remove::before
 {
     z-index: 1;
 }
 .btn-group .btn + .btn,
-.btn-group .ql-tooltip .ql-action + .btn,
-.ql-tooltip .btn-group .ql-action + .btn,
-.btn-group .ql-tooltip .ql-remove + .btn,
-.ql-tooltip .btn-group .ql-remove + .btn,
-.btn-group .ql-tooltip .btn + .ql-action,
-.ql-tooltip .btn-group .btn + .ql-action,
-.btn-group .ql-tooltip .ql-action + .ql-action,
-.ql-tooltip .btn-group .ql-action + .ql-action,
-.btn-group .ql-tooltip .ql-remove + .ql-action,
-.ql-tooltip .btn-group .ql-remove + .ql-action,
-.btn-group .ql-tooltip .btn + .ql-remove,
-.ql-tooltip .btn-group .btn + .ql-remove,
-.btn-group .ql-tooltip .ql-action + .ql-remove,
-.ql-tooltip .btn-group .ql-action + .ql-remove,
-.btn-group .ql-tooltip .ql-remove + .ql-remove,
-.ql-tooltip .btn-group .ql-remove + .ql-remove,
+.btn-group .ql-tooltip .ql-preview + .btn,
+.ql-tooltip .btn-group .ql-preview + .btn,
+.btn-group .ql-tooltip .ql-action::before + .btn,
+.ql-tooltip .btn-group .ql-action::before + .btn,
+.btn-group .ql-tooltip .ql-remove::before + .btn,
+.ql-tooltip .btn-group .ql-remove::before + .btn,
+.btn-group .ql-tooltip .btn + .ql-preview,
+.ql-tooltip .btn-group .btn + .ql-preview,
+.btn-group .ql-tooltip .ql-preview + .ql-preview,
+.ql-tooltip .btn-group .ql-preview + .ql-preview,
+.btn-group .ql-tooltip .ql-action::before + .ql-preview,
+.ql-tooltip .btn-group .ql-action::before + .ql-preview,
+.btn-group .ql-tooltip .ql-remove::before + .ql-preview,
+.ql-tooltip .btn-group .ql-remove::before + .ql-preview,
+.btn-group .ql-tooltip .btn + .ql-action::before,
+.ql-tooltip .btn-group .btn + .ql-action::before,
+.btn-group .ql-tooltip .ql-preview + .ql-action::before,
+.ql-tooltip .btn-group .ql-preview + .ql-action::before,
+.btn-group .ql-tooltip .ql-action::before + .ql-action::before,
+.ql-tooltip .btn-group .ql-action::before + .ql-action::before,
+.btn-group .ql-tooltip .ql-remove::before + .ql-action::before,
+.ql-tooltip .btn-group .ql-remove::before + .ql-action::before,
+.btn-group .ql-tooltip .btn + .ql-remove::before,
+.ql-tooltip .btn-group .btn + .ql-remove::before,
+.btn-group .ql-tooltip .ql-preview + .ql-remove::before,
+.ql-tooltip .btn-group .ql-preview + .ql-remove::before,
+.btn-group .ql-tooltip .ql-action::before + .ql-remove::before,
+.ql-tooltip .btn-group .ql-action::before + .ql-remove::before,
+.btn-group .ql-tooltip .ql-remove::before + .ql-remove::before,
+.ql-tooltip .btn-group .ql-remove::before + .ql-remove::before,
 .btn-group .btn + .btn-group,
-.btn-group .ql-tooltip .ql-action + .btn-group,
-.ql-tooltip .btn-group .ql-action + .btn-group,
-.btn-group .ql-tooltip .ql-remove + .btn-group,
-.ql-tooltip .btn-group .ql-remove + .btn-group,
+.btn-group .ql-tooltip .ql-preview + .btn-group,
+.ql-tooltip .btn-group .ql-preview + .btn-group,
+.btn-group .ql-tooltip .ql-action::before + .btn-group,
+.ql-tooltip .btn-group .ql-action::before + .btn-group,
+.btn-group .ql-tooltip .ql-remove::before + .btn-group,
+.ql-tooltip .btn-group .ql-remove::before + .btn-group,
 .btn-group .btn-group + .btn,
-.btn-group .ql-tooltip .btn-group + .ql-action,
-.ql-tooltip .btn-group .btn-group + .ql-action,
-.btn-group .ql-tooltip .btn-group + .ql-remove,
-.ql-tooltip .btn-group .btn-group + .ql-remove,
+.btn-group .ql-tooltip .btn-group + .ql-preview,
+.ql-tooltip .btn-group .btn-group + .ql-preview,
+.btn-group .ql-tooltip .btn-group + .ql-action::before,
+.ql-tooltip .btn-group .btn-group + .ql-action::before,
+.btn-group .ql-tooltip .btn-group + .ql-remove::before,
+.ql-tooltip .btn-group .btn-group + .ql-remove::before,
 .btn-group .btn-group + .btn-group,
 .btn-group-vertical .btn + .btn,
-.btn-group-vertical .ql-tooltip .ql-action + .btn,
-.ql-tooltip .btn-group-vertical .ql-action + .btn,
-.btn-group-vertical .ql-tooltip .ql-remove + .btn,
-.ql-tooltip .btn-group-vertical .ql-remove + .btn,
-.btn-group-vertical .ql-tooltip .btn + .ql-action,
-.ql-tooltip .btn-group-vertical .btn + .ql-action,
-.btn-group-vertical .ql-tooltip .ql-action + .ql-action,
-.ql-tooltip .btn-group-vertical .ql-action + .ql-action,
-.btn-group-vertical .ql-tooltip .ql-remove + .ql-action,
-.ql-tooltip .btn-group-vertical .ql-remove + .ql-action,
-.btn-group-vertical .ql-tooltip .btn + .ql-remove,
-.ql-tooltip .btn-group-vertical .btn + .ql-remove,
-.btn-group-vertical .ql-tooltip .ql-action + .ql-remove,
-.ql-tooltip .btn-group-vertical .ql-action + .ql-remove,
-.btn-group-vertical .ql-tooltip .ql-remove + .ql-remove,
-.ql-tooltip .btn-group-vertical .ql-remove + .ql-remove,
+.btn-group-vertical .ql-tooltip .ql-preview + .btn,
+.ql-tooltip .btn-group-vertical .ql-preview + .btn,
+.btn-group-vertical .ql-tooltip .ql-action::before + .btn,
+.ql-tooltip .btn-group-vertical .ql-action::before + .btn,
+.btn-group-vertical .ql-tooltip .ql-remove::before + .btn,
+.ql-tooltip .btn-group-vertical .ql-remove::before + .btn,
+.btn-group-vertical .ql-tooltip .btn + .ql-preview,
+.ql-tooltip .btn-group-vertical .btn + .ql-preview,
+.btn-group-vertical .ql-tooltip .ql-preview + .ql-preview,
+.ql-tooltip .btn-group-vertical .ql-preview + .ql-preview,
+.btn-group-vertical .ql-tooltip .ql-action::before + .ql-preview,
+.ql-tooltip .btn-group-vertical .ql-action::before + .ql-preview,
+.btn-group-vertical .ql-tooltip .ql-remove::before + .ql-preview,
+.ql-tooltip .btn-group-vertical .ql-remove::before + .ql-preview,
+.btn-group-vertical .ql-tooltip .btn + .ql-action::before,
+.ql-tooltip .btn-group-vertical .btn + .ql-action::before,
+.btn-group-vertical .ql-tooltip .ql-preview + .ql-action::before,
+.ql-tooltip .btn-group-vertical .ql-preview + .ql-action::before,
+.btn-group-vertical .ql-tooltip .ql-action::before + .ql-action::before,
+.ql-tooltip .btn-group-vertical .ql-action::before + .ql-action::before,
+.btn-group-vertical .ql-tooltip .ql-remove::before + .ql-action::before,
+.ql-tooltip .btn-group-vertical .ql-remove::before + .ql-action::before,
+.btn-group-vertical .ql-tooltip .btn + .ql-remove::before,
+.ql-tooltip .btn-group-vertical .btn + .ql-remove::before,
+.btn-group-vertical .ql-tooltip .ql-preview + .ql-remove::before,
+.ql-tooltip .btn-group-vertical .ql-preview + .ql-remove::before,
+.btn-group-vertical .ql-tooltip .ql-action::before + .ql-remove::before,
+.ql-tooltip .btn-group-vertical .ql-action::before + .ql-remove::before,
+.btn-group-vertical .ql-tooltip .ql-remove::before + .ql-remove::before,
+.ql-tooltip .btn-group-vertical .ql-remove::before + .ql-remove::before,
 .btn-group-vertical .btn + .btn-group,
-.btn-group-vertical .ql-tooltip .ql-action + .btn-group,
-.ql-tooltip .btn-group-vertical .ql-action + .btn-group,
-.btn-group-vertical .ql-tooltip .ql-remove + .btn-group,
-.ql-tooltip .btn-group-vertical .ql-remove + .btn-group,
+.btn-group-vertical .ql-tooltip .ql-preview + .btn-group,
+.ql-tooltip .btn-group-vertical .ql-preview + .btn-group,
+.btn-group-vertical .ql-tooltip .ql-action::before + .btn-group,
+.ql-tooltip .btn-group-vertical .ql-action::before + .btn-group,
+.btn-group-vertical .ql-tooltip .ql-remove::before + .btn-group,
+.ql-tooltip .btn-group-vertical .ql-remove::before + .btn-group,
 .btn-group-vertical .btn-group + .btn,
-.btn-group-vertical .ql-tooltip .btn-group + .ql-action,
-.ql-tooltip .btn-group-vertical .btn-group + .ql-action,
-.btn-group-vertical .ql-tooltip .btn-group + .ql-remove,
-.ql-tooltip .btn-group-vertical .btn-group + .ql-remove,
+.btn-group-vertical .ql-tooltip .btn-group + .ql-preview,
+.ql-tooltip .btn-group-vertical .btn-group + .ql-preview,
+.btn-group-vertical .ql-tooltip .btn-group + .ql-action::before,
+.ql-tooltip .btn-group-vertical .btn-group + .ql-action::before,
+.btn-group-vertical .ql-tooltip .btn-group + .ql-remove::before,
+.ql-tooltip .btn-group-vertical .btn-group + .ql-remove::before,
 .btn-group-vertical .btn-group + .btn-group
 {
     margin-left: -1px;
@@ -4447,29 +4528,34 @@ input[type='button'].btn-block
 }
 
 .btn-group > .btn:first-child,
-.ql-tooltip .btn-group > .ql-action:first-child,
-.ql-tooltip .btn-group > .ql-remove:first-child
+.ql-tooltip .btn-group > .ql-preview:first-child,
+.ql-tooltip .btn-group > .ql-action:first-child::before,
+.ql-tooltip .btn-group > .ql-remove:first-child::before
 {
     margin-left: 0;
 }
 
 .btn-group > .btn:not(:last-child):not(.dropdown-toggle),
-.ql-tooltip .btn-group > .ql-action:not(:last-child):not(.dropdown-toggle),
-.ql-tooltip .btn-group > .ql-remove:not(:last-child):not(.dropdown-toggle),
+.ql-tooltip .btn-group > .ql-preview:not(:last-child):not(.dropdown-toggle),
+.ql-tooltip .btn-group > .ql-action:not(:last-child):not(.dropdown-toggle)::before,
+.ql-tooltip .btn-group > .ql-remove:not(:last-child):not(.dropdown-toggle)::before,
 .btn-group > .btn-group:not(:last-child) > .btn,
-.ql-tooltip .btn-group > .btn-group:not(:last-child) > .ql-action,
-.ql-tooltip .btn-group > .btn-group:not(:last-child) > .ql-remove
+.ql-tooltip .btn-group > .btn-group:not(:last-child) > .ql-preview,
+.ql-tooltip .btn-group > .btn-group:not(:last-child) > .ql-action::before,
+.ql-tooltip .btn-group > .btn-group:not(:last-child) > .ql-remove::before
 {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
 
 .btn-group > .btn:not(:first-child),
-.ql-tooltip .btn-group > .ql-action:not(:first-child),
-.ql-tooltip .btn-group > .ql-remove:not(:first-child),
+.ql-tooltip .btn-group > .ql-preview:not(:first-child),
+.ql-tooltip .btn-group > .ql-action:not(:first-child)::before,
+.ql-tooltip .btn-group > .ql-remove:not(:first-child)::before,
 .btn-group > .btn-group:not(:first-child) > .btn,
-.ql-tooltip .btn-group > .btn-group:not(:first-child) > .ql-action,
-.ql-tooltip .btn-group > .btn-group:not(:first-child) > .ql-remove
+.ql-tooltip .btn-group > .btn-group:not(:first-child) > .ql-preview,
+.ql-tooltip .btn-group > .btn-group:not(:first-child) > .ql-action::before,
+.ql-tooltip .btn-group > .btn-group:not(:first-child) > .ql-remove::before
 {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
@@ -4493,10 +4579,12 @@ input[type='button'].btn-block
 
 .btn-sm + .dropdown-toggle-split,
 .btn-group-sm > .btn + .dropdown-toggle-split,
-.ql-tooltip .btn-group-sm > .ql-action + .dropdown-toggle-split,
-.ql-tooltip .btn-group-sm > .ql-remove + .dropdown-toggle-split,
-.ql-tooltip .ql-action + .dropdown-toggle-split,
-.ql-tooltip .ql-remove + .dropdown-toggle-split
+.ql-tooltip .btn-group-sm > .ql-preview + .dropdown-toggle-split,
+.ql-tooltip .btn-group-sm > .ql-action::before + .dropdown-toggle-split,
+.ql-tooltip .btn-group-sm > .ql-remove::before + .dropdown-toggle-split,
+.ql-tooltip .ql-preview + .dropdown-toggle-split,
+.ql-tooltip .ql-action::before + .dropdown-toggle-split,
+.ql-tooltip .ql-remove::before + .dropdown-toggle-split
 {
     padding-right: .375rem;
     padding-left: .375rem;
@@ -4504,8 +4592,9 @@ input[type='button'].btn-block
 
 .btn-lg + .dropdown-toggle-split,
 .btn-group-lg > .btn + .dropdown-toggle-split,
-.ql-tooltip .btn-group-lg > .ql-action + .dropdown-toggle-split,
-.ql-tooltip .btn-group-lg > .ql-remove + .dropdown-toggle-split
+.ql-tooltip .btn-group-lg > .ql-preview + .dropdown-toggle-split,
+.ql-tooltip .btn-group-lg > .ql-action::before + .dropdown-toggle-split,
+.ql-tooltip .btn-group-lg > .ql-remove::before + .dropdown-toggle-split
 {
     padding-right: .75rem;
     padding-left: .75rem;
@@ -4519,76 +4608,97 @@ input[type='button'].btn-block
     justify-content: center;
 }
 .btn-group-vertical .btn,
-.btn-group-vertical .ql-tooltip .ql-action,
-.ql-tooltip .btn-group-vertical .ql-action,
-.btn-group-vertical .ql-tooltip .ql-remove,
-.ql-tooltip .btn-group-vertical .ql-remove,
+.btn-group-vertical .ql-tooltip .ql-preview,
+.ql-tooltip .btn-group-vertical .ql-preview,
+.btn-group-vertical .ql-tooltip .ql-action::before,
+.ql-tooltip .btn-group-vertical .ql-action::before,
+.btn-group-vertical .ql-tooltip .ql-remove::before,
+.ql-tooltip .btn-group-vertical .ql-remove::before,
 .btn-group-vertical .btn-group
 {
     width: 100%;
 }
 .btn-group-vertical > .btn + .btn,
-.ql-tooltip .btn-group-vertical > .ql-action + .btn,
-.ql-tooltip .btn-group-vertical > .ql-remove + .btn,
-.ql-tooltip .btn-group-vertical > .btn + .ql-action,
-.ql-tooltip .btn-group-vertical > .ql-action + .ql-action,
-.ql-tooltip .btn-group-vertical > .ql-remove + .ql-action,
-.ql-tooltip .btn-group-vertical > .btn + .ql-remove,
-.ql-tooltip .btn-group-vertical > .ql-action + .ql-remove,
-.ql-tooltip .btn-group-vertical > .ql-remove + .ql-remove,
+.ql-tooltip .btn-group-vertical > .ql-preview + .btn,
+.ql-tooltip .btn-group-vertical > .ql-action::before + .btn,
+.ql-tooltip .btn-group-vertical > .ql-remove::before + .btn,
+.ql-tooltip .btn-group-vertical > .btn + .ql-preview,
+.ql-tooltip .btn-group-vertical > .ql-preview + .ql-preview,
+.ql-tooltip .btn-group-vertical > .ql-action::before + .ql-preview,
+.ql-tooltip .btn-group-vertical > .ql-remove::before + .ql-preview,
+.ql-tooltip .btn-group-vertical > .btn + .ql-action::before,
+.ql-tooltip .btn-group-vertical > .ql-preview + .ql-action::before,
+.ql-tooltip .btn-group-vertical > .ql-action::before + .ql-action::before,
+.ql-tooltip .btn-group-vertical > .ql-remove::before + .ql-action::before,
+.ql-tooltip .btn-group-vertical > .btn + .ql-remove::before,
+.ql-tooltip .btn-group-vertical > .ql-preview + .ql-remove::before,
+.ql-tooltip .btn-group-vertical > .ql-action::before + .ql-remove::before,
+.ql-tooltip .btn-group-vertical > .ql-remove::before + .ql-remove::before,
 .btn-group-vertical > .btn + .btn-group,
-.ql-tooltip .btn-group-vertical > .ql-action + .btn-group,
-.ql-tooltip .btn-group-vertical > .ql-remove + .btn-group,
+.ql-tooltip .btn-group-vertical > .ql-preview + .btn-group,
+.ql-tooltip .btn-group-vertical > .ql-action::before + .btn-group,
+.ql-tooltip .btn-group-vertical > .ql-remove::before + .btn-group,
 .btn-group-vertical > .btn-group + .btn,
-.ql-tooltip .btn-group-vertical > .btn-group + .ql-action,
-.ql-tooltip .btn-group-vertical > .btn-group + .ql-remove,
+.ql-tooltip .btn-group-vertical > .btn-group + .ql-preview,
+.ql-tooltip .btn-group-vertical > .btn-group + .ql-action::before,
+.ql-tooltip .btn-group-vertical > .btn-group + .ql-remove::before,
 .btn-group-vertical > .btn-group + .btn-group
 {
     margin-top: -1px;
     margin-left: 0;
 }
 .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),
-.ql-tooltip .btn-group-vertical > .ql-action:not(:last-child):not(.dropdown-toggle),
-.ql-tooltip .btn-group-vertical > .ql-remove:not(:last-child):not(.dropdown-toggle),
+.ql-tooltip .btn-group-vertical > .ql-preview:not(:last-child):not(.dropdown-toggle),
+.ql-tooltip .btn-group-vertical > .ql-action:not(:last-child):not(.dropdown-toggle)::before,
+.ql-tooltip .btn-group-vertical > .ql-remove:not(:last-child):not(.dropdown-toggle)::before,
 .btn-group-vertical > .btn-group:not(:last-child) > .btn,
-.ql-tooltip .btn-group-vertical > .btn-group:not(:last-child) > .ql-action,
-.ql-tooltip .btn-group-vertical > .btn-group:not(:last-child) > .ql-remove
+.ql-tooltip .btn-group-vertical > .btn-group:not(:last-child) > .ql-preview,
+.ql-tooltip .btn-group-vertical > .btn-group:not(:last-child) > .ql-action::before,
+.ql-tooltip .btn-group-vertical > .btn-group:not(:last-child) > .ql-remove::before
 {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
 }
 .btn-group-vertical > .btn:not(:first-child),
-.ql-tooltip .btn-group-vertical > .ql-action:not(:first-child),
-.ql-tooltip .btn-group-vertical > .ql-remove:not(:first-child),
+.ql-tooltip .btn-group-vertical > .ql-preview:not(:first-child),
+.ql-tooltip .btn-group-vertical > .ql-action:not(:first-child)::before,
+.ql-tooltip .btn-group-vertical > .ql-remove:not(:first-child)::before,
 .btn-group-vertical > .btn-group:not(:first-child) > .btn,
-.ql-tooltip .btn-group-vertical > .btn-group:not(:first-child) > .ql-action,
-.ql-tooltip .btn-group-vertical > .btn-group:not(:first-child) > .ql-remove
+.ql-tooltip .btn-group-vertical > .btn-group:not(:first-child) > .ql-preview,
+.ql-tooltip .btn-group-vertical > .btn-group:not(:first-child) > .ql-action::before,
+.ql-tooltip .btn-group-vertical > .btn-group:not(:first-child) > .ql-remove::before
 {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
 
 .btn-group-toggle > .btn,
-.ql-tooltip .btn-group-toggle > .ql-action,
-.ql-tooltip .btn-group-toggle > .ql-remove,
+.ql-tooltip .btn-group-toggle > .ql-preview,
+.ql-tooltip .btn-group-toggle > .ql-action::before,
+.ql-tooltip .btn-group-toggle > .ql-remove::before,
 .btn-group-toggle > .btn-group > .btn,
-.ql-tooltip .btn-group-toggle > .btn-group > .ql-action,
-.ql-tooltip .btn-group-toggle > .btn-group > .ql-remove
+.ql-tooltip .btn-group-toggle > .btn-group > .ql-preview,
+.ql-tooltip .btn-group-toggle > .btn-group > .ql-action::before,
+.ql-tooltip .btn-group-toggle > .btn-group > .ql-remove::before
 {
     margin-bottom: 0;
 }
 .btn-group-toggle > .btn input[type='radio'],
-.ql-tooltip .btn-group-toggle > .ql-action input[type='radio'],
-.ql-tooltip .btn-group-toggle > .ql-remove input[type='radio'],
+.ql-tooltip .btn-group-toggle > .ql-preview input[type='radio'],
+.ql-tooltip .btn-group-toggle > .ql-action::before input[type='radio'],
+.ql-tooltip .btn-group-toggle > .ql-remove::before input[type='radio'],
 .btn-group-toggle > .btn input[type='checkbox'],
-.ql-tooltip .btn-group-toggle > .ql-action input[type='checkbox'],
-.ql-tooltip .btn-group-toggle > .ql-remove input[type='checkbox'],
+.ql-tooltip .btn-group-toggle > .ql-preview input[type='checkbox'],
+.ql-tooltip .btn-group-toggle > .ql-action::before input[type='checkbox'],
+.ql-tooltip .btn-group-toggle > .ql-remove::before input[type='checkbox'],
 .btn-group-toggle > .btn-group > .btn input[type='radio'],
-.ql-tooltip .btn-group-toggle > .btn-group > .ql-action input[type='radio'],
-.ql-tooltip .btn-group-toggle > .btn-group > .ql-remove input[type='radio'],
+.ql-tooltip .btn-group-toggle > .btn-group > .ql-preview input[type='radio'],
+.ql-tooltip .btn-group-toggle > .btn-group > .ql-action::before input[type='radio'],
+.ql-tooltip .btn-group-toggle > .btn-group > .ql-remove::before input[type='radio'],
 .btn-group-toggle > .btn-group > .btn input[type='checkbox'],
-.ql-tooltip .btn-group-toggle > .btn-group > .ql-action input[type='checkbox'],
-.ql-tooltip .btn-group-toggle > .btn-group > .ql-remove input[type='checkbox']
+.ql-tooltip .btn-group-toggle > .btn-group > .ql-preview input[type='checkbox'],
+.ql-tooltip .btn-group-toggle > .btn-group > .ql-action::before input[type='checkbox'],
+.ql-tooltip .btn-group-toggle > .btn-group > .ql-remove::before input[type='checkbox']
 {
     position: absolute;
 
@@ -4712,75 +4822,115 @@ input[type='button'].btn-block
     display: flex;
 }
 .input-group-prepend .btn,
-.input-group-prepend .ql-tooltip .ql-action,
-.ql-tooltip .input-group-prepend .ql-action,
-.input-group-prepend .ql-tooltip .ql-remove,
-.ql-tooltip .input-group-prepend .ql-remove,
+.input-group-prepend .ql-tooltip .ql-preview,
+.ql-tooltip .input-group-prepend .ql-preview,
+.input-group-prepend .ql-tooltip .ql-action::before,
+.ql-tooltip .input-group-prepend .ql-action::before,
+.input-group-prepend .ql-tooltip .ql-remove::before,
+.ql-tooltip .input-group-prepend .ql-remove::before,
 .input-group-append .btn,
-.input-group-append .ql-tooltip .ql-action,
-.ql-tooltip .input-group-append .ql-action,
-.input-group-append .ql-tooltip .ql-remove,
-.ql-tooltip .input-group-append .ql-remove
+.input-group-append .ql-tooltip .ql-preview,
+.ql-tooltip .input-group-append .ql-preview,
+.input-group-append .ql-tooltip .ql-action::before,
+.ql-tooltip .input-group-append .ql-action::before,
+.input-group-append .ql-tooltip .ql-remove::before,
+.ql-tooltip .input-group-append .ql-remove::before
 {
     position: relative;
     z-index: 2;
 }
 .input-group-prepend .btn + .btn,
-.input-group-prepend .ql-tooltip .ql-action + .btn,
-.ql-tooltip .input-group-prepend .ql-action + .btn,
-.input-group-prepend .ql-tooltip .ql-remove + .btn,
-.ql-tooltip .input-group-prepend .ql-remove + .btn,
-.input-group-prepend .ql-tooltip .btn + .ql-action,
-.ql-tooltip .input-group-prepend .btn + .ql-action,
-.input-group-prepend .ql-tooltip .ql-action + .ql-action,
-.ql-tooltip .input-group-prepend .ql-action + .ql-action,
-.input-group-prepend .ql-tooltip .ql-remove + .ql-action,
-.ql-tooltip .input-group-prepend .ql-remove + .ql-action,
-.input-group-prepend .ql-tooltip .btn + .ql-remove,
-.ql-tooltip .input-group-prepend .btn + .ql-remove,
-.input-group-prepend .ql-tooltip .ql-action + .ql-remove,
-.ql-tooltip .input-group-prepend .ql-action + .ql-remove,
-.input-group-prepend .ql-tooltip .ql-remove + .ql-remove,
-.ql-tooltip .input-group-prepend .ql-remove + .ql-remove,
+.input-group-prepend .ql-tooltip .ql-preview + .btn,
+.ql-tooltip .input-group-prepend .ql-preview + .btn,
+.input-group-prepend .ql-tooltip .ql-action::before + .btn,
+.ql-tooltip .input-group-prepend .ql-action::before + .btn,
+.input-group-prepend .ql-tooltip .ql-remove::before + .btn,
+.ql-tooltip .input-group-prepend .ql-remove::before + .btn,
+.input-group-prepend .ql-tooltip .btn + .ql-preview,
+.ql-tooltip .input-group-prepend .btn + .ql-preview,
+.input-group-prepend .ql-tooltip .ql-preview + .ql-preview,
+.ql-tooltip .input-group-prepend .ql-preview + .ql-preview,
+.input-group-prepend .ql-tooltip .ql-action::before + .ql-preview,
+.ql-tooltip .input-group-prepend .ql-action::before + .ql-preview,
+.input-group-prepend .ql-tooltip .ql-remove::before + .ql-preview,
+.ql-tooltip .input-group-prepend .ql-remove::before + .ql-preview,
+.input-group-prepend .ql-tooltip .btn + .ql-action::before,
+.ql-tooltip .input-group-prepend .btn + .ql-action::before,
+.input-group-prepend .ql-tooltip .ql-preview + .ql-action::before,
+.ql-tooltip .input-group-prepend .ql-preview + .ql-action::before,
+.input-group-prepend .ql-tooltip .ql-action::before + .ql-action::before,
+.ql-tooltip .input-group-prepend .ql-action::before + .ql-action::before,
+.input-group-prepend .ql-tooltip .ql-remove::before + .ql-action::before,
+.ql-tooltip .input-group-prepend .ql-remove::before + .ql-action::before,
+.input-group-prepend .ql-tooltip .btn + .ql-remove::before,
+.ql-tooltip .input-group-prepend .btn + .ql-remove::before,
+.input-group-prepend .ql-tooltip .ql-preview + .ql-remove::before,
+.ql-tooltip .input-group-prepend .ql-preview + .ql-remove::before,
+.input-group-prepend .ql-tooltip .ql-action::before + .ql-remove::before,
+.ql-tooltip .input-group-prepend .ql-action::before + .ql-remove::before,
+.input-group-prepend .ql-tooltip .ql-remove::before + .ql-remove::before,
+.ql-tooltip .input-group-prepend .ql-remove::before + .ql-remove::before,
 .input-group-prepend .btn + .input-group-text,
-.input-group-prepend .ql-tooltip .ql-action + .input-group-text,
-.ql-tooltip .input-group-prepend .ql-action + .input-group-text,
-.input-group-prepend .ql-tooltip .ql-remove + .input-group-text,
-.ql-tooltip .input-group-prepend .ql-remove + .input-group-text,
+.input-group-prepend .ql-tooltip .ql-preview + .input-group-text,
+.ql-tooltip .input-group-prepend .ql-preview + .input-group-text,
+.input-group-prepend .ql-tooltip .ql-action::before + .input-group-text,
+.ql-tooltip .input-group-prepend .ql-action::before + .input-group-text,
+.input-group-prepend .ql-tooltip .ql-remove::before + .input-group-text,
+.ql-tooltip .input-group-prepend .ql-remove::before + .input-group-text,
 .input-group-prepend .input-group-text + .input-group-text,
 .input-group-prepend .input-group-text + .btn,
-.input-group-prepend .ql-tooltip .input-group-text + .ql-action,
-.ql-tooltip .input-group-prepend .input-group-text + .ql-action,
-.input-group-prepend .ql-tooltip .input-group-text + .ql-remove,
-.ql-tooltip .input-group-prepend .input-group-text + .ql-remove,
+.input-group-prepend .ql-tooltip .input-group-text + .ql-preview,
+.ql-tooltip .input-group-prepend .input-group-text + .ql-preview,
+.input-group-prepend .ql-tooltip .input-group-text + .ql-action::before,
+.ql-tooltip .input-group-prepend .input-group-text + .ql-action::before,
+.input-group-prepend .ql-tooltip .input-group-text + .ql-remove::before,
+.ql-tooltip .input-group-prepend .input-group-text + .ql-remove::before,
 .input-group-append .btn + .btn,
-.input-group-append .ql-tooltip .ql-action + .btn,
-.ql-tooltip .input-group-append .ql-action + .btn,
-.input-group-append .ql-tooltip .ql-remove + .btn,
-.ql-tooltip .input-group-append .ql-remove + .btn,
-.input-group-append .ql-tooltip .btn + .ql-action,
-.ql-tooltip .input-group-append .btn + .ql-action,
-.input-group-append .ql-tooltip .ql-action + .ql-action,
-.ql-tooltip .input-group-append .ql-action + .ql-action,
-.input-group-append .ql-tooltip .ql-remove + .ql-action,
-.ql-tooltip .input-group-append .ql-remove + .ql-action,
-.input-group-append .ql-tooltip .btn + .ql-remove,
-.ql-tooltip .input-group-append .btn + .ql-remove,
-.input-group-append .ql-tooltip .ql-action + .ql-remove,
-.ql-tooltip .input-group-append .ql-action + .ql-remove,
-.input-group-append .ql-tooltip .ql-remove + .ql-remove,
-.ql-tooltip .input-group-append .ql-remove + .ql-remove,
+.input-group-append .ql-tooltip .ql-preview + .btn,
+.ql-tooltip .input-group-append .ql-preview + .btn,
+.input-group-append .ql-tooltip .ql-action::before + .btn,
+.ql-tooltip .input-group-append .ql-action::before + .btn,
+.input-group-append .ql-tooltip .ql-remove::before + .btn,
+.ql-tooltip .input-group-append .ql-remove::before + .btn,
+.input-group-append .ql-tooltip .btn + .ql-preview,
+.ql-tooltip .input-group-append .btn + .ql-preview,
+.input-group-append .ql-tooltip .ql-preview + .ql-preview,
+.ql-tooltip .input-group-append .ql-preview + .ql-preview,
+.input-group-append .ql-tooltip .ql-action::before + .ql-preview,
+.ql-tooltip .input-group-append .ql-action::before + .ql-preview,
+.input-group-append .ql-tooltip .ql-remove::before + .ql-preview,
+.ql-tooltip .input-group-append .ql-remove::before + .ql-preview,
+.input-group-append .ql-tooltip .btn + .ql-action::before,
+.ql-tooltip .input-group-append .btn + .ql-action::before,
+.input-group-append .ql-tooltip .ql-preview + .ql-action::before,
+.ql-tooltip .input-group-append .ql-preview + .ql-action::before,
+.input-group-append .ql-tooltip .ql-action::before + .ql-action::before,
+.ql-tooltip .input-group-append .ql-action::before + .ql-action::before,
+.input-group-append .ql-tooltip .ql-remove::before + .ql-action::before,
+.ql-tooltip .input-group-append .ql-remove::before + .ql-action::before,
+.input-group-append .ql-tooltip .btn + .ql-remove::before,
+.ql-tooltip .input-group-append .btn + .ql-remove::before,
+.input-group-append .ql-tooltip .ql-preview + .ql-remove::before,
+.ql-tooltip .input-group-append .ql-preview + .ql-remove::before,
+.input-group-append .ql-tooltip .ql-action::before + .ql-remove::before,
+.ql-tooltip .input-group-append .ql-action::before + .ql-remove::before,
+.input-group-append .ql-tooltip .ql-remove::before + .ql-remove::before,
+.ql-tooltip .input-group-append .ql-remove::before + .ql-remove::before,
 .input-group-append .btn + .input-group-text,
-.input-group-append .ql-tooltip .ql-action + .input-group-text,
-.ql-tooltip .input-group-append .ql-action + .input-group-text,
-.input-group-append .ql-tooltip .ql-remove + .input-group-text,
-.ql-tooltip .input-group-append .ql-remove + .input-group-text,
+.input-group-append .ql-tooltip .ql-preview + .input-group-text,
+.ql-tooltip .input-group-append .ql-preview + .input-group-text,
+.input-group-append .ql-tooltip .ql-action::before + .input-group-text,
+.ql-tooltip .input-group-append .ql-action::before + .input-group-text,
+.input-group-append .ql-tooltip .ql-remove::before + .input-group-text,
+.ql-tooltip .input-group-append .ql-remove::before + .input-group-text,
 .input-group-append .input-group-text + .input-group-text,
 .input-group-append .input-group-text + .btn,
-.input-group-append .ql-tooltip .input-group-text + .ql-action,
-.ql-tooltip .input-group-append .input-group-text + .ql-action,
-.input-group-append .ql-tooltip .input-group-text + .ql-remove,
-.ql-tooltip .input-group-append .input-group-text + .ql-remove
+.input-group-append .ql-tooltip .input-group-text + .ql-preview,
+.ql-tooltip .input-group-append .input-group-text + .ql-preview,
+.input-group-append .ql-tooltip .input-group-text + .ql-action::before,
+.ql-tooltip .input-group-append .input-group-text + .ql-action::before,
+.input-group-append .ql-tooltip .input-group-text + .ql-remove::before,
+.ql-tooltip .input-group-append .input-group-text + .ql-remove::before
 {
     margin-left: -1px;
 }
@@ -4823,16 +4973,19 @@ input[type='button'].btn-block
 }
 
 .input-group > .input-group-prepend > .btn,
-.ql-tooltip .input-group > .input-group-prepend > .ql-action,
-.ql-tooltip .input-group > .input-group-prepend > .ql-remove,
+.ql-tooltip .input-group > .input-group-prepend > .ql-preview,
+.ql-tooltip .input-group > .input-group-prepend > .ql-action::before,
+.ql-tooltip .input-group > .input-group-prepend > .ql-remove::before,
 .input-group > .input-group-prepend > .input-group-text,
 .input-group > .input-group-append:not(:last-child) > .btn,
-.ql-tooltip .input-group > .input-group-append:not(:last-child) > .ql-action,
-.ql-tooltip .input-group > .input-group-append:not(:last-child) > .ql-remove,
+.ql-tooltip .input-group > .input-group-append:not(:last-child) > .ql-preview,
+.ql-tooltip .input-group > .input-group-append:not(:last-child) > .ql-action::before,
+.ql-tooltip .input-group > .input-group-append:not(:last-child) > .ql-remove::before,
 .input-group > .input-group-append:not(:last-child) > .input-group-text,
 .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
-.ql-tooltip .input-group > .input-group-append:last-child > .ql-action:not(:last-child):not(.dropdown-toggle),
-.ql-tooltip .input-group > .input-group-append:last-child > .ql-remove:not(:last-child):not(.dropdown-toggle),
+.ql-tooltip .input-group > .input-group-append:last-child > .ql-preview:not(:last-child):not(.dropdown-toggle),
+.ql-tooltip .input-group > .input-group-append:last-child > .ql-action:not(:last-child):not(.dropdown-toggle)::before,
+.ql-tooltip .input-group > .input-group-append:last-child > .ql-remove:not(:last-child):not(.dropdown-toggle)::before,
 .input-group > .input-group-append:last-child > .input-group-text:not(:last-child)
 {
     border-top-right-radius: 0;
@@ -4840,16 +4993,19 @@ input[type='button'].btn-block
 }
 
 .input-group > .input-group-append > .btn,
-.ql-tooltip .input-group > .input-group-append > .ql-action,
-.ql-tooltip .input-group > .input-group-append > .ql-remove,
+.ql-tooltip .input-group > .input-group-append > .ql-preview,
+.ql-tooltip .input-group > .input-group-append > .ql-action::before,
+.ql-tooltip .input-group > .input-group-append > .ql-remove::before,
 .input-group > .input-group-append > .input-group-text,
 .input-group > .input-group-prepend:not(:first-child) > .btn,
-.ql-tooltip .input-group > .input-group-prepend:not(:first-child) > .ql-action,
-.ql-tooltip .input-group > .input-group-prepend:not(:first-child) > .ql-remove,
+.ql-tooltip .input-group > .input-group-prepend:not(:first-child) > .ql-preview,
+.ql-tooltip .input-group > .input-group-prepend:not(:first-child) > .ql-action::before,
+.ql-tooltip .input-group > .input-group-prepend:not(:first-child) > .ql-remove::before,
 .input-group > .input-group-prepend:not(:first-child) > .input-group-text,
 .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
-.ql-tooltip .input-group > .input-group-prepend:first-child > .ql-action:not(:first-child),
-.ql-tooltip .input-group > .input-group-prepend:first-child > .ql-remove:not(:first-child),
+.ql-tooltip .input-group > .input-group-prepend:first-child > .ql-preview:not(:first-child),
+.ql-tooltip .input-group > .input-group-prepend:first-child > .ql-action:not(:first-child)::before,
+.ql-tooltip .input-group > .input-group-prepend:first-child > .ql-remove:not(:first-child)::before,
 .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child)
 {
     border-top-left-radius: 0;
@@ -6380,8 +6536,9 @@ input[type='button'].btn-block
 }
 
 .btn .badge,
-.ql-tooltip .ql-action .badge,
-.ql-tooltip .ql-remove .badge
+.ql-tooltip .ql-preview .badge,
+.ql-tooltip .ql-action::before .badge,
+.ql-tooltip .ql-remove::before .badge
 {
     position: relative;
     top: -1px;
@@ -7460,8 +7617,7 @@ button.close
     background-color: #e3ebf6;
 }
 
-.popover,
-.ql-tooltip
+.popover
 {
     font-family: 'Cerebri Sans', sans-serif;
     font-size: .8125rem;
@@ -7496,8 +7652,7 @@ button.close
 
     line-break: auto;
 }
-.popover .arrow,
-.ql-tooltip .arrow
+.popover .arrow
 {
     position: absolute;
 
@@ -7508,9 +7663,7 @@ button.close
     margin: 0 .5rem;
 }
 .popover .arrow::before,
-.ql-tooltip .arrow::before,
-.popover .arrow::after,
-.ql-tooltip .arrow::after
+.popover .arrow::after
 {
     position: absolute;
 
@@ -13583,8 +13736,9 @@ a.text-body:focus
 }
 
 .btn .badge,
-.ql-tooltip .ql-action .badge,
-.ql-tooltip .ql-remove .badge
+.ql-tooltip .ql-preview .badge,
+.ql-tooltip .ql-action::before .badge,
+.ql-tooltip .ql-remove::before .badge
 {
     top: -2px;
 }
@@ -13749,17 +13903,14 @@ a.text-body:focus
 }
 
 .btn-white,
-.ql-tooltip .ql-action,
-.ql-tooltip .ql-remove
+.ql-tooltip .ql-remove::before
 {
     border-color: #e3ebf6;
 }
 .btn-white:hover,
-.ql-tooltip .ql-action:hover,
-.ql-tooltip .ql-remove:hover,
+.ql-tooltip .ql-remove:hover::before,
 .btn-white:focus,
-.ql-tooltip .ql-action:focus,
-.ql-tooltip .ql-remove:focus
+.ql-tooltip .ql-remove:focus::before
 {
     border-color: #d2ddec; 
     background-color: #f9fbfd;
@@ -13781,37 +13932,53 @@ a.text-body:focus
 
 .btn-rounded-circle.btn-lg,
 .btn-group-lg > .btn-rounded-circle.btn,
-.ql-tooltip .btn-group-lg > .btn-rounded-circle.ql-action,
-.ql-tooltip .btn-group-lg > .btn-rounded-circle.ql-remove
+.ql-tooltip .btn-group-lg > .btn-rounded-circle.ql-preview,
+.ql-tooltip .btn-group-lg > .btn-rounded-circle.ql-action::before,
+.ql-tooltip .btn-group-lg > .btn-rounded-circle.ql-remove::before
 {
     width: calc(1em * 1.5 + 1rem + 1px * 2);
 }
 
 .btn-rounded-circle.btn-sm,
 .btn-group-sm > .btn-rounded-circle.btn,
-.ql-tooltip .btn-rounded-circle.ql-action,
-.ql-tooltip .btn-rounded-circle.ql-remove
+.ql-tooltip .btn-rounded-circle.ql-preview,
+.ql-tooltip .btn-rounded-circle.ql-action::before,
+.ql-tooltip .btn-rounded-circle.ql-remove::before
 {
     width: calc(1em * 1.75 + .25rem + 1px * 2);
 }
 
 .btn-group .btn + .btn,
-.btn-group .ql-tooltip .ql-action + .btn,
-.ql-tooltip .btn-group .ql-action + .btn,
-.btn-group .ql-tooltip .ql-remove + .btn,
-.ql-tooltip .btn-group .ql-remove + .btn,
-.btn-group .ql-tooltip .btn + .ql-action,
-.ql-tooltip .btn-group .btn + .ql-action,
-.btn-group .ql-tooltip .ql-action + .ql-action,
-.ql-tooltip .btn-group .ql-action + .ql-action,
-.btn-group .ql-tooltip .ql-remove + .ql-action,
-.ql-tooltip .btn-group .ql-remove + .ql-action,
-.btn-group .ql-tooltip .btn + .ql-remove,
-.ql-tooltip .btn-group .btn + .ql-remove,
-.btn-group .ql-tooltip .ql-action + .ql-remove,
-.ql-tooltip .btn-group .ql-action + .ql-remove,
-.btn-group .ql-tooltip .ql-remove + .ql-remove,
-.ql-tooltip .btn-group .ql-remove + .ql-remove
+.btn-group .ql-tooltip .ql-preview + .btn,
+.ql-tooltip .btn-group .ql-preview + .btn,
+.btn-group .ql-tooltip .ql-action::before + .btn,
+.ql-tooltip .btn-group .ql-action::before + .btn,
+.btn-group .ql-tooltip .ql-remove::before + .btn,
+.ql-tooltip .btn-group .ql-remove::before + .btn,
+.btn-group .ql-tooltip .btn + .ql-preview,
+.ql-tooltip .btn-group .btn + .ql-preview,
+.btn-group .ql-tooltip .ql-preview + .ql-preview,
+.ql-tooltip .btn-group .ql-preview + .ql-preview,
+.btn-group .ql-tooltip .ql-action::before + .ql-preview,
+.ql-tooltip .btn-group .ql-action::before + .ql-preview,
+.btn-group .ql-tooltip .ql-remove::before + .ql-preview,
+.ql-tooltip .btn-group .ql-remove::before + .ql-preview,
+.btn-group .ql-tooltip .btn + .ql-action::before,
+.ql-tooltip .btn-group .btn + .ql-action::before,
+.btn-group .ql-tooltip .ql-preview + .ql-action::before,
+.ql-tooltip .btn-group .ql-preview + .ql-action::before,
+.btn-group .ql-tooltip .ql-action::before + .ql-action::before,
+.ql-tooltip .btn-group .ql-action::before + .ql-action::before,
+.btn-group .ql-tooltip .ql-remove::before + .ql-action::before,
+.ql-tooltip .btn-group .ql-remove::before + .ql-action::before,
+.btn-group .ql-tooltip .btn + .ql-remove::before,
+.ql-tooltip .btn-group .btn + .ql-remove::before,
+.btn-group .ql-tooltip .ql-preview + .ql-remove::before,
+.ql-tooltip .btn-group .ql-preview + .ql-remove::before,
+.btn-group .ql-tooltip .ql-action::before + .ql-remove::before,
+.ql-tooltip .btn-group .ql-action::before + .ql-remove::before,
+.btn-group .ql-tooltip .ql-remove::before + .ql-remove::before,
+.ql-tooltip .btn-group .ql-remove::before + .ql-remove::before
 {
     margin-left: 0;
 }
@@ -14037,7 +14204,8 @@ a.text-body:focus
     background-color: #fff;
 }
 
-.form-control-flush
+.form-control-flush,
+.ql-tooltip input
 {
     padding: 0;
 
@@ -14261,6 +14429,11 @@ a.text-body:focus
     background-color: #2c7be5;
 }
 
+.ql-container
+{
+    font-family: 'Cerebri Sans', sans-serif;
+}
+
 .ql-toolbar
 {
     border-bottom-right-radius: 0; 
@@ -14378,18 +14551,42 @@ a.text-body:focus
 
 .ql-tooltip
 {
+    position: absolute;
+
     display: flex;
 
-    max-width: none;
+    width: 18.5rem;
+    margin-top: .6rem;
+    padding: .5rem .75rem;
 
-    white-space: nowrap; 
+    border: 1px solid rgba(18, 38, 63, .2);
+    border-radius: .5rem;
+    background-color: #fff;
+    box-shadow: 0 0 1rem rgba(18, 38, 63, .03); 
 
     flex-wrap: nowrap;
-    align-items: center;
 }
-.ql-tooltip > *
+.ql-tooltip:before,
+.ql-tooltip:after
 {
-    margin-left: .25rem;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+
+    content: '';
+    transform: translateX(-50%);
+}
+.ql-tooltip:before
+{
+    border-right: .6rem solid transparent; 
+    border-bottom: .6rem solid rgba(18, 38, 63, .2);
+    border-left: .6rem solid transparent;
+}
+.ql-tooltip:after
+{
+    border-right: .5rem solid transparent; 
+    border-bottom: .5rem solid #fff;
+    border-left: .5rem solid transparent;
 }
 
 .ql-container .ql-tooltip:hover
@@ -14397,14 +14594,11 @@ a.text-body:focus
     display: flex !important;
 }
 
-.ql-tooltip::before
-{
-    content: 'Enter link:';
-}
-
 .ql-tooltip .ql-preview
 {
-    max-width: 12.5rem;
+    width: 100%; 
+
+    text-align: left;
 }
 
 .ql-tooltip.ql-editing .ql-preview
@@ -14415,11 +14609,19 @@ a.text-body:focus
 .ql-tooltip input
 {
     display: none;
+
+    width: 100%;
 }
 
 .ql-tooltip.ql-editing input
 {
     display: block;
+}
+
+.ql-tooltip .ql-action,
+.ql-tooltip .ql-remove
+{
+    margin-left: .25rem;
 }
 
 .ql-tooltip .ql-action::before
@@ -14435,6 +14637,11 @@ a.text-body:focus
 .ql-tooltip .ql-remove::before
 {
     content: 'Remove';
+}
+
+.ql-tooltip.ql-editing .ql-remove::before
+{
+    display: none;
 }
 
 .dropzone
@@ -14779,10 +14986,8 @@ a.text-body:focus
 }
 
 .nav.btn-group .btn-white.active,
-.nav.btn-group .ql-tooltip .active.ql-action,
-.ql-tooltip .nav.btn-group .active.ql-action,
-.nav.btn-group .ql-tooltip .active.ql-remove,
-.ql-tooltip .nav.btn-group .active.ql-remove
+.nav.btn-group .ql-tooltip .active.ql-remove::before,
+.ql-tooltip .nav.btn-group .active.ql-remove::before
 {
     color: #fff; 
     border-color: #2c7be5;
@@ -15876,13 +16081,11 @@ a.text-body:focus
     }
 }
 
-.popover,
-.ql-tooltip
+.popover
 {
     padding: .8rem .95rem;
 }
-.popover:hover,
-.ql-tooltip:hover
+.popover:hover
 {
     display: block !important;
 }

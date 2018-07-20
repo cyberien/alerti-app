@@ -268,6 +268,10 @@
 //
 // Quill plugin overrides
 
+.ql-container {
+  font-family: $font-family-base;
+}
+
 .ql-toolbar {
   @extend .form-control;
   border-bottom-left-radius: 0;
@@ -284,8 +288,8 @@
 }
 
 .ql-editor {
-  min-height: $line-height-base * $font-size-base * 4;
   @extend .form-control;
+  min-height: $line-height-base * $font-size-base * 4;
 }
 
 .ql-hidden {
@@ -370,15 +374,34 @@
 // Tooltip
 
 .ql-tooltip {
-  @extend .popover;
+  position: absolute;
   display: flex;
   flex-wrap: nowrap;
-  align-items: center;
-  max-width: none;
-  white-space: nowrap;
+  width: 18.5rem;
+  background-color: $popover-bg;
+  border: $popover-border-width solid $popover-border-color;
+  border-radius: $popover-border-radius;
+  padding: $input-padding-y $input-padding-x;
+  margin-top: .6rem; // arrow width
+  box-shadow: $popover-box-shadow;
 
-  > * {
-    margin-left: .25rem;
+  // Arrow
+  
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    left: 50%; bottom: 100%;
+    transform: translateX(-50%);
+  }
+  &:before {
+    border-bottom: .6rem solid $popover-border-color;
+    border-left: .6rem solid transparent;
+    border-right: .6rem solid transparent;
+  }
+  &:after {
+    border-bottom: .5rem solid $popover-bg;
+    border-left: .5rem solid transparent;
+    border-right: .5rem solid transparent;
   }
 }
 
@@ -386,13 +409,13 @@
   display: flex !important;
 }
 
-.ql-tooltip::before {
-  content: 'Enter link:';
-}
-
 .ql-tooltip .ql-preview {
+  @extend .btn;
+  @extend .btn-sm;
+  @extend .btn-link;
   @extend .text-truncate;
-  max-width: 12.5rem;
+  text-align: left;
+  width: 100%;
 }
 
 .ql-tooltip.ql-editing .ql-preview {
@@ -402,21 +425,25 @@
 .ql-tooltip input {
   @extend .form-control;
   @extend .form-control-sm;
+  @extend .form-control-flush;
   display: none;
+  width: 100%;
 }
 
 .ql-tooltip.ql-editing input {
   display: block;
 }
 
+
 .ql-tooltip .ql-action,
 .ql-tooltip .ql-remove {
-  @extend .btn;
-  @extend .btn-sm;
-  @extend .btn-white;
+  margin-left: .25rem;
 }
 
 .ql-tooltip .ql-action::before {
+  @extend .btn;
+  @extend .btn-sm;
+  @extend .btn-primary;
   content: 'Edit';
 }
 
@@ -425,7 +452,14 @@
 }
 
 .ql-tooltip .ql-remove::before {
+  @extend .btn;
+  @extend .btn-sm;
+  @extend .btn-white;
   content: 'Remove';
+}
+
+.ql-tooltip.ql-editing .ql-remove::before {
+  display: none;
 }
 
 
@@ -463,3 +497,8 @@
   padding: 5rem 1rem;
   text-align: center;
 }
+
+
+// Select 2
+//
+// Select 2 plugin overrides
