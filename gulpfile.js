@@ -1,5 +1,6 @@
 const chug = require('gulp-chug');
 const clean = require('gulp-clean');
+const del = require('del');
 const fs = require('fs');
 const git = require('gulp-git');
 const gulp = require('gulp');
@@ -58,12 +59,12 @@ gulp.task('zip', function () {
 });
 
 gulp.task('copy:dist', function() {
-  gulp.src(paths.theme.dist.dir)
+  gulp.src(paths.theme.dist.files)
     .pipe(gulp.dest(paths.preview.dir))
 });
 
 gulp.task('add', function(){
-  return gulp.src(paths.preview.dir)
+  return gulp.src(paths.preview.files)
     .pipe(git.add());
 });
 
@@ -84,7 +85,7 @@ gulp.task('clean:preview', function() {
 });
 
 gulp.task('push', function (callback) {
-  runsequence('copy:dist', 'add', 'commit', 'subtree', 'clean:preview'
+  runsequence('add', 'commit',
     callback)
 });
 
