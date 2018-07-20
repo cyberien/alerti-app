@@ -1,18 +1,9 @@
 const chug = require('gulp-chug');
-const clean = require('gulp-clean');
-const del = require('del');
 const fs = require('fs');
-const git = require('gulp-git');
 const gulp = require('gulp');
-const runsequence = require('run-sequence');
-const subtree = require('gulp-subtree-only');
 const zip = require('gulp-zip');
 
 const paths = {
-  preview: {
-    dir: 'preview',
-    files: 'preview/**/*'
-  },
   theme: {
     base: {
       dir: 'theme',
@@ -55,45 +46,5 @@ gulp.task('zip', function () {
       tasks: ['build']
     }, function() {
       gulp.start('compress');
-    }))
-});
-
-gulp.task('copy:dist', function() {
-  gulp.src(paths.theme.dist.files)
-    .pipe(gulp.dest(paths.preview.dir))
-});
-
-gulp.task('add', function(){
-  return gulp.src('./')
-    .pipe(git.add());
-});
-
-gulp.task('commit', function(){
-  return gulp.src('./')
-    .pipe(git.commit('Published v' + packageVersion + 'to test branch.'));
-});
-
-gulp.task('subtree', function () {
-  return gulp.src(paths.preview.dir)
-    .pipe(subtree({
-      branch: 'test'
-    }))
-});
-
-gulp.task('clean:preview', function() {
-  del.sync(paths.preview.dir);
-});
-
-gulp.task('push', function (callback) {
-  runsequence('copy:dist', 'add', 'commit', 'subtree', 'clean:preview',
-    callback)
-});
-
-gulp.task('publish', function () {
-  gulp.src(paths.theme.gulpfile.file, {read: false})
-    .pipe(chug({
-      tasks: ['build']
-    }, function() {
-      gulp.start('push');
     }))
 });
