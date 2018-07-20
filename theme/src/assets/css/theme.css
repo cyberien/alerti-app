@@ -617,7 +617,8 @@ mark,
     text-transform: uppercase;
 }
 
-.blockquote
+.blockquote,
+.ql-snow .ql-editor blockquote
 {
     font-size: 1.17188rem; 
 
@@ -2280,7 +2281,9 @@ pre code
     border: 0;
 }
 
-.form-control
+.form-control,
+.ql-snow.ql-toolbar,
+.ql-editor
 {
     font-size: .9375rem;
     line-height: 1.5;
@@ -2300,17 +2303,23 @@ pre code
 }
 @media screen and (prefers-reduced-motion: reduce)
 {
-    .form-control
+    .form-control,
+    .ql-snow.ql-toolbar,
+    .ql-editor
     {
         transition: none;
     }
 }
-.form-control::-ms-expand
+.form-control::-ms-expand,
+.ql-snow.ql-toolbar::-ms-expand,
+.ql-editor::-ms-expand
 {
     border: 0; 
     background-color: transparent;
 }
-.form-control:focus
+.form-control:focus,
+.ql-snow.ql-toolbar:focus,
+.ql-editor:focus
 {
     color: #12263f;
     border-color: #2c7be5;
@@ -2318,39 +2327,55 @@ pre code
     background-color: #fff;
     box-shadow: transparent;
 }
-.form-control::-webkit-input-placeholder
+.form-control::-webkit-input-placeholder,
+.ql-snow.ql-toolbar::-webkit-input-placeholder,
+.ql-editor::-webkit-input-placeholder
 {
     opacity: 1; 
     color: #b1c2d9;
 }
-.form-control:-ms-input-placeholder
+.form-control:-ms-input-placeholder,
+.ql-snow.ql-toolbar:-ms-input-placeholder,
+.ql-editor:-ms-input-placeholder
 {
     opacity: 1; 
     color: #b1c2d9;
 }
-.form-control::-ms-input-placeholder
+.form-control::-ms-input-placeholder,
+.ql-snow.ql-toolbar::-ms-input-placeholder,
+.ql-editor::-ms-input-placeholder
 {
     opacity: 1; 
     color: #b1c2d9;
 }
-.form-control::placeholder
+.form-control::placeholder,
+.ql-snow.ql-toolbar::placeholder,
+.ql-editor::placeholder
 {
     opacity: 1; 
     color: #b1c2d9;
 }
 .form-control:disabled,
-.form-control[readonly]
+.ql-snow.ql-toolbar:disabled,
+.ql-editor:disabled,
+.form-control[readonly],
+.ql-snow.ql-toolbar[readonly],
+.ql-editor[readonly]
 {
     opacity: 1; 
     background-color: #edf2f9;
 }
 
-select.form-control:not([size]):not([multiple])
+select.form-control:not([size]):not([multiple]),
+select.ql-snow.ql-toolbar:not([size]):not([multiple]),
+select.ql-editor:not([size]):not([multiple])
 {
     height: calc(2.40625rem + 2px);
 }
 
-select.form-control:focus::-ms-value
+select.form-control:focus::-ms-value,
+select.ql-snow.ql-toolbar:focus::-ms-value,
+select.ql-editor:focus::-ms-value
 {
     color: #12263f;
     background-color: #fff;
@@ -2410,12 +2435,16 @@ select.form-control:focus::-ms-value
 }
 .form-control-plaintext.form-control-sm,
 .input-group-sm > .form-control-plaintext.form-control,
+.input-group-sm > .form-control-plaintext.ql-snow.ql-toolbar,
+.input-group-sm > .form-control-plaintext.ql-editor,
 .input-group-sm > .input-group-prepend > .form-control-plaintext.input-group-text,
 .input-group-sm > .input-group-append > .form-control-plaintext.input-group-text,
 .input-group-sm > .input-group-prepend > .form-control-plaintext.btn,
 .input-group-sm > .input-group-append > .form-control-plaintext.btn,
 .form-control-plaintext.form-control-lg,
 .input-group-lg > .form-control-plaintext.form-control,
+.input-group-lg > .form-control-plaintext.ql-snow.ql-toolbar,
+.input-group-lg > .form-control-plaintext.ql-editor,
 .input-group-lg > .input-group-prepend > .form-control-plaintext.input-group-text,
 .input-group-lg > .input-group-append > .form-control-plaintext.input-group-text,
 .input-group-lg > .input-group-prepend > .form-control-plaintext.btn,
@@ -2427,6 +2456,8 @@ select.form-control:focus::-ms-value
 
 .form-control-sm,
 .input-group-sm > .form-control,
+.input-group-sm > .ql-snow.ql-toolbar,
+.input-group-sm > .ql-editor,
 .input-group-sm > .input-group-prepend > .input-group-text,
 .input-group-sm > .input-group-append > .input-group-text,
 .input-group-sm > .input-group-prepend > .btn,
@@ -2442,6 +2473,8 @@ select.form-control:focus::-ms-value
 
 select.form-control-sm:not([size]):not([multiple]),
 .input-group-sm > select.form-control:not([size]):not([multiple]),
+.input-group-sm > select.ql-snow.ql-toolbar:not([size]):not([multiple]),
+.input-group-sm > select.ql-editor:not([size]):not([multiple]),
 .input-group-sm > .input-group-prepend > select.input-group-text:not([size]):not([multiple]),
 .input-group-sm > .input-group-append > select.input-group-text:not([size]):not([multiple]),
 .input-group-sm > .input-group-prepend > select.btn:not([size]):not([multiple]),
@@ -2452,6 +2485,8 @@ select.form-control-sm:not([size]):not([multiple]),
 
 .form-control-lg,
 .input-group-lg > .form-control,
+.input-group-lg > .ql-snow.ql-toolbar,
+.input-group-lg > .ql-editor,
 .input-group-lg > .input-group-prepend > .input-group-text,
 .input-group-lg > .input-group-append > .input-group-text,
 .input-group-lg > .input-group-prepend > .btn,
@@ -2467,6 +2502,8 @@ select.form-control-sm:not([size]):not([multiple]),
 
 select.form-control-lg:not([size]):not([multiple]),
 .input-group-lg > select.form-control:not([size]):not([multiple]),
+.input-group-lg > select.ql-snow.ql-toolbar:not([size]):not([multiple]),
+.input-group-lg > select.ql-editor:not([size]):not([multiple]),
 .input-group-lg > .input-group-prepend > select.input-group-text:not([size]):not([multiple]),
 .input-group-lg > .input-group-append > select.input-group-text:not([size]):not([multiple]),
 .input-group-lg > .input-group-prepend > select.btn:not([size]):not([multiple]),
@@ -2580,7 +2617,11 @@ select.form-control-lg:not([size]):not([multiple]),
 }
 
 .was-validated .form-control:valid,
+.was-validated .ql-snow.ql-toolbar:valid,
+.was-validated .ql-editor:valid,
 .form-control.is-valid,
+.is-valid.ql-snow.ql-toolbar,
+.is-valid.ql-editor,
 .was-validated
 .custom-select:valid,
 .custom-select.is-valid
@@ -2588,7 +2629,11 @@ select.form-control-lg:not([size]):not([multiple]),
     border-color: #00d97e;
 }
 .was-validated .form-control:valid:focus,
+.was-validated .ql-snow.ql-toolbar:valid:focus,
+.was-validated .ql-editor:valid:focus,
 .form-control.is-valid:focus,
+.is-valid.ql-snow.ql-toolbar:focus,
+.is-valid.ql-editor:focus,
 .was-validated
   .custom-select:valid:focus,
 .custom-select.is-valid:focus
@@ -2597,9 +2642,17 @@ select.form-control-lg:not([size]):not([multiple]),
     box-shadow: 0 0 0 .15rem rgba(0, 217, 126, .25);
 }
 .was-validated .form-control:valid ~ .valid-feedback,
+.was-validated .ql-snow.ql-toolbar:valid ~ .valid-feedback,
+.was-validated .ql-editor:valid ~ .valid-feedback,
 .was-validated .form-control:valid ~ .valid-tooltip,
+.was-validated .ql-snow.ql-toolbar:valid ~ .valid-tooltip,
+.was-validated .ql-editor:valid ~ .valid-tooltip,
 .form-control.is-valid ~ .valid-feedback,
+.is-valid.ql-snow.ql-toolbar ~ .valid-feedback,
+.is-valid.ql-editor ~ .valid-feedback,
 .form-control.is-valid ~ .valid-tooltip,
+.is-valid.ql-snow.ql-toolbar ~ .valid-tooltip,
+.is-valid.ql-editor ~ .valid-tooltip,
 .was-validated
   .custom-select:valid ~ .valid-feedback,
 .was-validated
@@ -2721,7 +2774,11 @@ select.form-control-lg:not([size]):not([multiple]),
 }
 
 .was-validated .form-control:invalid,
+.was-validated .ql-snow.ql-toolbar:invalid,
+.was-validated .ql-editor:invalid,
 .form-control.is-invalid,
+.is-invalid.ql-snow.ql-toolbar,
+.is-invalid.ql-editor,
 .was-validated
 .custom-select:invalid,
 .custom-select.is-invalid
@@ -2729,7 +2786,11 @@ select.form-control-lg:not([size]):not([multiple]),
     border-color: #e63757;
 }
 .was-validated .form-control:invalid:focus,
+.was-validated .ql-snow.ql-toolbar:invalid:focus,
+.was-validated .ql-editor:invalid:focus,
 .form-control.is-invalid:focus,
+.is-invalid.ql-snow.ql-toolbar:focus,
+.is-invalid.ql-editor:focus,
 .was-validated
   .custom-select:invalid:focus,
 .custom-select.is-invalid:focus
@@ -2738,9 +2799,17 @@ select.form-control-lg:not([size]):not([multiple]),
     box-shadow: 0 0 0 .15rem rgba(230, 55, 87, .25);
 }
 .was-validated .form-control:invalid ~ .invalid-feedback,
+.was-validated .ql-snow.ql-toolbar:invalid ~ .invalid-feedback,
+.was-validated .ql-editor:invalid ~ .invalid-feedback,
 .was-validated .form-control:invalid ~ .invalid-tooltip,
+.was-validated .ql-snow.ql-toolbar:invalid ~ .invalid-tooltip,
+.was-validated .ql-editor:invalid ~ .invalid-tooltip,
 .form-control.is-invalid ~ .invalid-feedback,
+.is-invalid.ql-snow.ql-toolbar ~ .invalid-feedback,
+.is-invalid.ql-editor ~ .invalid-feedback,
 .form-control.is-invalid ~ .invalid-tooltip,
+.is-invalid.ql-snow.ql-toolbar ~ .invalid-tooltip,
+.is-invalid.ql-editor ~ .invalid-tooltip,
 .was-validated
   .custom-select:invalid ~ .invalid-feedback,
 .was-validated
@@ -2861,7 +2930,9 @@ select.form-control-lg:not([size]):not([multiple]),
         flex-flow: row wrap;
         align-items: center;
     }
-    .form-inline .form-control
+    .form-inline .form-control,
+    .form-inline .ql-snow.ql-toolbar,
+    .form-inline .ql-editor
     {
         display: inline-block;
 
@@ -4294,6 +4365,8 @@ input[type='button'].btn-block
     align-items: stretch;
 }
 .input-group > .form-control,
+.input-group > .ql-snow.ql-toolbar,
+.input-group > .ql-editor,
 .input-group > .custom-select,
 .input-group > .custom-file
 {
@@ -4305,30 +4378,52 @@ input[type='button'].btn-block
     flex: 1 1 auto;
 }
 .input-group > .form-control + .form-control,
+.input-group > .ql-snow.ql-toolbar + .form-control,
+.input-group > .ql-editor + .form-control,
+.input-group > .form-control + .ql-snow.ql-toolbar,
+.input-group > .ql-snow.ql-toolbar + .ql-snow.ql-toolbar,
+.input-group > .ql-editor + .ql-snow.ql-toolbar,
+.input-group > .form-control + .ql-editor,
+.input-group > .ql-snow.ql-toolbar + .ql-editor,
+.input-group > .ql-editor + .ql-editor,
 .input-group > .form-control + .custom-select,
+.input-group > .ql-snow.ql-toolbar + .custom-select,
+.input-group > .ql-editor + .custom-select,
 .input-group > .form-control + .custom-file,
+.input-group > .ql-snow.ql-toolbar + .custom-file,
+.input-group > .ql-editor + .custom-file,
 .input-group > .custom-select + .form-control,
+.input-group > .custom-select + .ql-snow.ql-toolbar,
+.input-group > .custom-select + .ql-editor,
 .input-group > .custom-select + .custom-select,
 .input-group > .custom-select + .custom-file,
 .input-group > .custom-file + .form-control,
+.input-group > .custom-file + .ql-snow.ql-toolbar,
+.input-group > .custom-file + .ql-editor,
 .input-group > .custom-file + .custom-select,
 .input-group > .custom-file + .custom-file
 {
     margin-left: -1px;
 }
 .input-group > .form-control:focus,
+.input-group > .ql-snow.ql-toolbar:focus,
+.input-group > .ql-editor:focus,
 .input-group > .custom-select:focus,
 .input-group > .custom-file .custom-file-input:focus ~ .custom-file-label
 {
     z-index: 3;
 }
 .input-group > .form-control:not(:last-child),
+.input-group > .ql-snow.ql-toolbar:not(:last-child),
+.input-group > .ql-editor:not(:last-child),
 .input-group > .custom-select:not(:last-child)
 {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
 .input-group > .form-control:not(:first-child),
+.input-group > .ql-snow.ql-toolbar:not(:first-child),
+.input-group > .ql-editor:not(:first-child),
 .input-group > .custom-select:not(:first-child)
 {
     border-top-left-radius: 0;
@@ -13572,7 +13667,9 @@ a.text-body:focus
     margin-bottom: .5rem;
 }
 
-.form-control[readonly='readonly']
+.form-control[readonly='readonly'],
+.ql-snow.ql-toolbar[readonly='readonly'],
+.ql-editor[readonly='readonly']
 {
     background-color: #fff;
 }
@@ -13589,11 +13686,15 @@ a.text-body:focus
     border-radius: 20rem;
 }
 
-.input-group.input-group-merge > .form-control
+.input-group.input-group-merge > .form-control,
+.input-group.input-group-merge > .ql-snow.ql-toolbar,
+.input-group.input-group-merge > .ql-editor
 {
     border-radius: .375rem;
 }
-.input-group.input-group-merge > .form-control:focus ~ [class*='input-group'] > .input-group-text
+.input-group.input-group-merge > .form-control:focus ~ [class*='input-group'] > .input-group-text,
+.input-group.input-group-merge > .ql-snow.ql-toolbar:focus ~ [class*='input-group'] > .input-group-text,
+.input-group.input-group-merge > .ql-editor:focus ~ [class*='input-group'] > .input-group-text
 {
     border-color: #2c7be5;
 }
@@ -13642,7 +13743,9 @@ a.text-body:focus
     border-bottom-right-radius: .375rem;
 }
 
-.input-group-lg.input-group-merge > .form-control
+.input-group-lg.input-group-merge > .form-control,
+.input-group-lg.input-group-merge > .ql-snow.ql-toolbar,
+.input-group-lg.input-group-merge > .ql-editor
 {
     border-radius: .5rem;
 }
@@ -13673,7 +13776,9 @@ a.text-body:focus
     border-bottom-right-radius: .5rem;
 }
 
-.input-group-sm.input-group-merge > .form-control
+.input-group-sm.input-group-merge > .form-control,
+.input-group-sm.input-group-merge > .ql-snow.ql-toolbar,
+.input-group-sm.input-group-merge > .ql-editor
 {
     border-radius: .25rem;
 }
@@ -13704,7 +13809,9 @@ a.text-body:focus
     border-bottom-right-radius: .25rem;
 }
 
-.input-group-rounded.input-group-merge > .form-control
+.input-group-rounded.input-group-merge > .form-control,
+.input-group-rounded.input-group-merge > .ql-snow.ql-toolbar,
+.input-group-rounded.input-group-merge > .ql-editor
 {
     border-radius: 20rem;
 }
@@ -13721,7 +13828,9 @@ a.text-body:focus
     border-bottom-right-radius: 20rem;
 }
 
-.input-group-flush > .form-control
+.input-group-flush > .form-control,
+.input-group-flush > .ql-snow.ql-toolbar,
+.input-group-flush > .ql-editor
 {
     padding: 0;
 
@@ -13781,6 +13890,115 @@ a.text-body:focus
     color: white !important; 
     border-color: #2c7be5;
     background-color: #2c7be5;
+}
+
+.ql-snow.ql-toolbar
+{
+    border-bottom-right-radius: 0; 
+    border-bottom-left-radius: 0;
+}
+
+.ql-snow.ql-container
+{
+    border: none;
+}
+
+.ql-toolbar + .ql-container
+{
+    margin-top: -1px;
+}
+
+.ql-toolbar + .ql-container .ql-editor
+{
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.ql-editor
+{
+    min-height: 5.625rem;
+}
+
+.ql-editor.ql-blank::before
+{
+    font-style: normal;
+
+    top: .5rem;
+    left: .75rem;
+
+    color: #b1c2d9;
+}
+
+.ql-editor:focus::before
+{
+    display: none;
+}
+
+.ql-snow.ql-toolbar button
+{
+    color: #12263f;
+}
+
+.ql-snow.ql-toolbar button:hover
+{
+    color: #2c7be5;
+}
+
+.ql-snow.ql-toolbar button.ql-active
+{
+    color: #2c7be5;
+}
+
+.ql-snow .ql-stroke
+{
+    stroke: currentColor !important;
+}
+
+.ql-snow .ql-fill
+{
+    fill: currentColor !important;
+}
+
+.ql-snow .ql-editor blockquote
+{
+    padding-left: 0;
+
+    border-left: 0;
+}
+
+.ql-snow .ql-editor code
+{
+    font-size: 87.5%;
+
+    padding: 0;
+
+    color: #2c7be5; 
+    background: none;
+}
+
+.dropzone
+{
+    padding: 0;
+
+    transition: all .2s ease-in-out; 
+
+    color: #95aac9;
+    border: 1px dashed #e3ebf6;
+    border-radius: .375rem;
+    background: none;
+}
+.dropzone:hover
+{
+    color: #12263f; 
+    border-color: #95aac9;
+}
+
+.dropzone .dz-default
+{
+    margin: 0;
+    padding: 5rem 1rem;
+
+    text-align: center;
 }
 
 .jumbotron

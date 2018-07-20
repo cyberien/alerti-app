@@ -12,9 +12,9 @@
 
 var Dropdowns = (function() {
 
+  //
   // Variables
   //
-  // Dropdown variales
 
   var $dropdown = $('.dropup, .dropright, .dropdown, .dropleft');
   var $dropdownMenu = $('.dropdown-menu');
@@ -22,9 +22,9 @@ var Dropdowns = (function() {
   var $dropdownSubmenuToggle = $('.dropdown-menu .dropdown-toggle');
 
 
+  //
   // Methods
   //
-  // Droddown functions
 
   // Toggle submenu
   function toggleSubmenu(toggle) {
@@ -49,9 +49,9 @@ var Dropdowns = (function() {
   }
 
 
+  //
   // Events
   //
-  // Dropdown events
 
   // Toggle submenu
   $dropdownSubmenuToggle.on('click', function() {
@@ -74,9 +74,9 @@ var Dropdowns = (function() {
 
 var ThemeCharts = (function() {
 
+  //
   // Variables
-  // 
-  // Theme chart variables
+  //
 
   // Toggle
   var $toggle = $('[data-toggle="chart"]');
@@ -106,9 +106,9 @@ var ThemeCharts = (function() {
   };
 
 
+  //
   // Methods
   //
-  // Theme chart functions
 
   // Chart.js global options
   function chartOptions() {
@@ -432,9 +432,9 @@ var ThemeCharts = (function() {
   }
 
 
+  //
   // Events
   //
-  // Run functions on windows load or special events
 
   // Check if Chart.js is included
   if (window.Chart) {
@@ -462,9 +462,9 @@ var ThemeCharts = (function() {
   });
 
 
+  //
   // Return
   //
-  // Make variables global
 
   return {
     fonts: fonts,
@@ -481,13 +481,16 @@ var ThemeCharts = (function() {
 
 var Header = (function() {
 
+  //
   // Variables
+  //
 
   var $headerChart = $('#headerChart');
 
-  // Init
+
   //
-  // Init chart
+  // Methods
+  //
 
   function init($chart) {
 
@@ -518,9 +521,10 @@ var Header = (function() {
 
   };
 
+
+  //
   // Events
   //
-  // Header chart events
 
   if ($headerChart.length) {
     init($headerChart);
@@ -536,13 +540,16 @@ var Header = (function() {
 
 var Performance = (function() {
 
+  //
   // Variables
+  //
 
   var $performanceChart = $('#performanceChart');
 
-  // Init
+
   //
-  // Init chart
+  // Methods
+  //
 
   function init($chart) {
 
@@ -562,9 +569,10 @@ var Performance = (function() {
     $chart.data('chart', performanceChart);
   }
 
+
+  //
   // Events
   //
-  // Performance chart events
 
   if ($performanceChart.length) {
     init($performanceChart);
@@ -580,13 +588,16 @@ var Performance = (function() {
 
 var PerformanceAlias = (function() {
 
+  //
   // Variables
+  //
 
   var $performanceChartAlias = $('#performanceChartAlias');
 
-  // Init
+
   //
-  // Init chart
+  // Methods
+  //
 
   function init($chart) {
 
@@ -606,9 +617,10 @@ var PerformanceAlias = (function() {
     $chart.data('chart', performanceChartAlias);
   }
 
+
+  //
   // Events
   //
-  // Performance chart events
 
   if ($performanceChartAlias.length) {
     init($performanceChartAlias);
@@ -624,13 +636,16 @@ var PerformanceAlias = (function() {
 
 var Orders = (function() {
 
+  //
   // Variables
+  //
 
   var $ordersChart = $('#ordersChart');
 
-  // Init
+
   //
-  // Init chart
+  // Methods
+  //
 
   // Init chart
   function init($chart) {
@@ -651,9 +666,10 @@ var Orders = (function() {
     $chart.data('chart', ordersChart);
   }
 
+
+  //
   // Events
   //
-  // Orders chart events
 
   // Init chart
   if ($ordersChart.length) {
@@ -670,13 +686,16 @@ var Orders = (function() {
 
 var OrdersAlias = (function() {
 
+  //
   // Variables
+  //
 
   var $ordersChartAlias = $('#ordersChartAlias');
 
-  // Init
+
   //
-  // Init chart
+  // Methods
+  //
 
   // Init chart
   function init($chart) {
@@ -697,9 +716,10 @@ var OrdersAlias = (function() {
     $chart.data('chart', ordersChartAlias);
   }
 
+
+  //
   // Events
   //
-  // Orders chart events
 
   // Init chart
   if ($ordersChartAlias.length) {
@@ -716,13 +736,16 @@ var OrdersAlias = (function() {
 
 var Devices = (function() {
 
+  //
   // Variables
+  //
 
   var $devicesChart = $('#devicesChart');
 
+
+  //
   // Methods
   //
-  // Chart functions
 
   // Init chart
   function init($chart) {
@@ -757,9 +780,10 @@ var Devices = (function() {
     $legend.html(content);
   }
 
+
+  //
   // Events
   //
-  // Chart events
 
   if ($devicesChart.length) {
 
@@ -780,13 +804,16 @@ var Devices = (function() {
 
 var WeeklyHours = (function() {
 
+  //
   // Variables
+  //
 
   var $weeklyHoursChart = $('#weeklyHoursChart');
 
-  // Init
+
   //
-  // Init chart
+  // Methods
+  //
 
   function init($chart) {
 
@@ -834,9 +861,10 @@ var WeeklyHours = (function() {
     $chart.data('chart', weeklyHoursChart);
   }
 
+
+  //
   // Events
   //
-  // Weekly hours chart events
 
   if ($weeklyHoursChart.length) {
     init($weeklyHoursChart);
@@ -851,22 +879,26 @@ var WeeklyHours = (function() {
 
 var Navbar = (function() {
 
+  //
   // Variables
+  //
 
   var $nav = $('.navbar-nav, .navbar-nav .nav');
   var $navCollapse = $('.navbar-nav .collapse');
 
+
+  //
   // Methods
   //
-  // Navbar methods
 
   function accordion($this) {
     $this.closest($nav).find($navCollapse).not($this).collapse('hide');
   }
 
+
+  //
   // Events
   //
-  // Navbar events
 
   $navCollapse.on({
     'show.bs.collapse': function() {
@@ -883,21 +915,25 @@ var Navbar = (function() {
 
 var Tooltip = (function() {
 
+  //
   // Variables
+  //
 
   var $tooltip = $('[data-toggle="tooltip"]');
 
+
+  //
   // Methods
   //
-  // Tooltips methods
 
   function init() {
     $tooltip.tooltip();
   }
 
+
+  //
   // Events
   //
-  // Tooltip events
 
   if( $tooltip.length ) {
     init();
@@ -912,21 +948,25 @@ var Tooltip = (function() {
 
 var Popover = (function() {
 
+  //
   // Variables
+  //
 
   var $popover = $('[data-toggle="popover"]');
 
+
+  //
   // Methods
   //
-  // Tooltips methods
 
   function init() {
     $popover.popover();
   }
 
+
+  //
   // Events
   //
-  // Tooltip events
 
   if( $popover.length ) {
     init();
@@ -940,18 +980,26 @@ var Popover = (function() {
 //
 
 var Highlight = (function() {
-  
+
+  //
   // Variables
+  //
 
   var $highlight = $('.highlight');
 
+
+  //
   // Methods
+  //
 
   function init(i, block) {
     hljs.highlightBlock(block);
   }
 
+
+  //
   // Events
+  //
 
   $highlight.each(function(i, block) {
     init(i, block);
@@ -966,21 +1014,25 @@ var Highlight = (function() {
 
 var Flatpickr = (function() {
 
+  //
   // Variables
+  //
 
   var $formControl = $('#formControlFlatpickr');
 
+
+  //
   // Methods
   //
-  // Flatpicks methods
 
   function init($input) {
     $input.flatpickr();
   }
 
+
+  //
   // Events
   //
-  // Flatpickr events
 
   if ($formControl.length) {
     init($formControl);
@@ -995,12 +1047,17 @@ var Flatpickr = (function() {
 
 var Lists = (function() {
 
+  //  //
   // Variables
+  //  //
 
   var $lists = $('[data-toggle="lists"]');
   var $listsSort = $('[data-sort]');
 
+
+  //
   // Methods
+  //
 
   // Init
   function init($list) {
@@ -1017,7 +1074,10 @@ var Lists = (function() {
     return options;
   }
 
+
+  //
   // Events
+  //
 
   // Init
   if ($lists.length) {
@@ -1030,5 +1090,52 @@ var Lists = (function() {
   $listsSort.on('click', function() {
     return false;
   });
+
+})();
+
+
+//
+// Quill.js ==================================
+//
+
+var Quill = (function() {
+
+  //
+  // Variables
+  //
+
+  var $quill = $('[data-toggle="quill"]');
+
+
+  //
+  // Methods
+  //
+
+  function init($this) {
+
+    // Get placeholder
+    var placeholder = $this.data('quill-placeholder');
+
+    // Init editor
+    var quill = new Quill($this.get(0), {
+      modules: {
+        toolbar: [['bold', 'italic'], ['link', 'blockquote', 'code', 'image'], [{'list': 'ordered'}, {'list': 'bullet'}]]
+      },
+      placeholder: placeholder,
+      theme: 'snow'
+    });
+
+  }
+
+
+  //
+  // Events
+  //
+
+  if ( $quill.length ) {
+    $quill.each(function() {
+      init( $(this) );
+    });
+  }
 
 })();
