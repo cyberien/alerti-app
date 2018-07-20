@@ -310,8 +310,8 @@
 // Toolbar
 
 .ql-formats {
-  padding-left: .25rem;
-  padding-right: .25rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
 
   &:first-child {
     padding-left: 0;
@@ -330,6 +330,10 @@
 
   &:hover {
     color: $primary;
+  }
+
+  &:first-child {
+    margin-left: -.25rem;
   }
 }
 
@@ -357,11 +361,82 @@
   fill: currentColor;
 }
 
+.ql-toolbar input.ql-image {
+  position: absolute;
+  transform: scale(0);
+} 
+
+
+// Tooltip
+
+.ql-tooltip {
+  @extend .popover;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  max-width: none;
+  white-space: nowrap;
+
+  > * {
+    margin-left: .25rem;
+  }
+}
+
+.ql-container .ql-tooltip:hover {
+  display: flex !important;
+}
+
+.ql-tooltip::before {
+  content: 'Enter link:';
+}
+
+.ql-tooltip .ql-preview {
+  @extend .text-truncate;
+  max-width: 12.5rem;
+}
+
+.ql-tooltip.ql-editing .ql-preview {
+  display: none;
+}
+
+.ql-tooltip input {
+  @extend .form-control;
+  @extend .form-control-sm;
+  display: none;
+}
+
+.ql-tooltip.ql-editing input {
+  display: block;
+}
+
+.ql-tooltip .ql-action,
+.ql-tooltip .ql-remove {
+  @extend .btn;
+  @extend .btn-sm;
+  @extend .btn-white;
+}
+
+.ql-tooltip .ql-action::before {
+  content: 'Edit';
+}
+
+.ql-tooltip.ql-editing .ql-action::before {
+  content: 'Save';
+}
+
+.ql-tooltip .ql-remove::before {
+  content: 'Remove';
+}
+
 
 // Formatting
 
 .ql-editor blockquote {
   @extend .blockquote;
+}
+
+.ql-editor img {
+  @extend .img-fluid;
 }
 
 
