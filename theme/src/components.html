@@ -2470,7 +2470,9 @@
               <div class="card">
                 <div class="card-body">
                   
-                  <div data-toggle="quill" data-quill-placeholder="Quill WYSIWYG"></div>
+                  <form>
+                    <div data-toggle="quill" data-quill-placeholder="Quill WYSIWYG"></div>
+                  </form>
 
                 </div>
                 <div class="card-footer bg-dark">
@@ -2497,7 +2499,7 @@
               <div class="card">
                 <div class="card-body">
 
-                  <form action="/file-upload" class="dropzone">
+                  <form action="http://" class="dropzone" data-toggle="dropzone">
                     <div class="fallback">
                       <div class="custom-file">
                         <input type="file" class="custom-file-input" id="customFileUpload">
@@ -2521,6 +2523,52 @@
               <p class="text-muted mb-4">
                 Customizable select box with support for searching, tagging, remote data sets, infinite scrolling, and many other highly used options powered by Select2. Please read the <a target="_blank" href="https://select2.org/">official plugin documentation</a> for a full list of options.
               </p>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  
+                  <div class="mb-3">
+                    <select class="form-control" data-toggle="select">
+                      <option>Action</option>
+                      <option>Another action</option>
+                      <option>Something else here</option>
+                    </select>
+                  </div>
+                  
+                  <div class="mb-3">
+                    <select class="form-control" data-toggle="select">
+                      <option data-avatar-src="assets/img/avatars/profiles/avatar-1.jpg">
+                        Dianna Smiley
+                      </option>
+                      <option data-avatar-src="assets/img/avatars/profiles/avatar-2.jpg">
+                        Ab Hadley
+                      </option>
+                      <option data-avatar-src="assets/img/avatars/profiles/avatar-3.jpg">
+                        Adolfo Hess
+                      </option>
+                      <option data-avatar-src="assets/img/avatars/profiles/avatar-4.jpg">
+                        Daniela Dewitt
+                      </option>
+                    </select>
+                  </div>
+
+                  <div class="mb-0">
+                    <select class="form-control" data-toggle="select" multiple>
+                      <option>CSS</option>
+                      <option>HTML</option>
+                      <option>JavaScript</option>
+                      <option>Bootstrap</option>
+                    </select>
+                  </div>
+
+                </div>
+                <div class="card-footer bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;select&nbsp;class=&quot;form-control&quot;&nbsp;data-toggle=&quot;select&quot;&gt;<br/>&nbsp;&nbsp;&lt;option&gt;...&lt;/option&gt;<br/>&lt;/select&gt;<br/><br/>&lt;select&nbsp;class=&quot;form-control&quot;&nbsp;data-toggle=&quot;select&quot;&gt;<br/>&nbsp;&nbsp;&lt;option&nbsp;data-avatar-src=&quot;path-to-your-image&quot;&gt;...&lt;/option&gt;<br/>&lt;/select&gt;<br/><br/>&lt;select&nbsp;class=&quot;form-control&quot;&nbsp;data-toggle=&quot;select&quot;&nbsp;multiple&gt;<br/>&nbsp;&nbsp;&lt;option&gt;...&lt;/option&gt;<br/>&lt;/select&gt;
+                  </code>
+                </div>
+              </div>
 
             </div>
 

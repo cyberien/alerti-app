@@ -1139,3 +1139,116 @@ var Quill = (function() {
   }
 
 })();
+
+
+//
+// Select2.js ==================================
+//
+
+var Select2 = (function() {
+
+  //
+  // Variables
+  //
+
+  var $select = $('[data-toggle="select"]');
+
+
+  //
+  // Methods
+  //
+
+  function init($this) {
+    $this.select2({
+      templateResult: formatAvatar
+    });
+  }
+
+  function globalOptions() {
+    $.fn.select2.defaults.set('minimumResultsForSearch', 'Infinity');
+  }
+
+  function formatAvatar(avatar) {
+    if ( !avatar.id ) {
+      return avatar.text;
+    }
+
+    var $option = $(avatar.element);
+    var optionAvatar = $option.data('avatar-src');
+    var output;
+
+    if ( optionAvatar ) {
+      output = $('<span class="avatar avatar-xs mr-3"><img class="avatar-img rounded-circle" src="' + optionAvatar + '" alt="' + avatar.text + '"></span><span>' + avatar.text + '</span>');
+    } else {
+      output = avatar.text;
+    }
+
+    return output;
+  }
+
+
+  //
+  // Events
+  //
+
+  if ( $select.length ) {
+
+    // Set global options
+    globalOptions();
+
+    // Init selects
+    $select.each(function() {
+      init( $(this) );
+    });
+  }
+
+})();
+
+
+//
+// Dropzone.js  ==================================
+//
+
+var Dropzones = (function() {
+
+  //
+  // Variables
+  //
+
+  var $dropzone = $('[data-toggle="dropzone"]');
+
+
+  //
+  // Methods
+  //
+
+  function init($this) {
+    $this.dropzone({
+      thumbnailWidth  : null,
+      thumbnailHeight : null,
+      previewTemplate: '<div class="dropzone-preview"><img class="dropzone-preview-img" data-dz-thumbnail /></div>'
+    });
+  }
+
+  function globalOptions() {
+    Dropzone.autoDiscover = false;
+  }
+
+
+  //
+  // Events
+  //
+
+  if( $dropzone.length ) {
+
+    // Set global options
+    globalOptions();
+
+    // Init dropzones
+    $dropzone.each(function() {
+      init( $(this) );
+    });
+  }
+
+
+})();
