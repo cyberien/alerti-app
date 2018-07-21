@@ -16863,7 +16863,6 @@ button:focus
 }
 
 .loader-sm,
-.is-loading-sm:after,
 .is-loading-sm:after
 {
     width: 1rem;
@@ -16873,7 +16872,6 @@ button:focus
 }
 
 .loader-lg,
-.is-loading-lg:after,
 .is-loading-lg:after
 {
     width: 2rem;

@@ -58,12 +58,10 @@
 .is-loading-sm:after {
   top: calc(50% - #{$loader-size-sm}/2);
   left: calc(50% - #{$loader-size-sm}/2);
-  @extend .loader-sm;
 }
 .is-loading-lg:after {
   top: calc(50% - #{$loader-size-lg}/2);
   left: calc(50% - #{$loader-size-lg}/2);
-  @extend .loader-lg;
 }
 
 // Color variants
