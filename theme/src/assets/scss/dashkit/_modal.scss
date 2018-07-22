@@ -7,6 +7,15 @@
 // Bootstrap Overrides =======================
 //
 
+.modal-dialog {
+  // When fading in the modal, animate it to slide down
+  .modal.fade & {
+    transform: translate(0, -150px);
+  }
+  .modal.show & {
+    transform: translate(0, 0);
+  }
+}
 
 //
 // Dashkit ===================================
