@@ -1225,6 +1225,7 @@ var Dropzones = (function() {
   function init($this) {
     var multiple = ( $this.data('dropzone-multiple') !== undefined ) ? true : false;
     var preview = $this.find($dropzonePreview);
+    var currentFile = undefined;
 
     // Init options
     var options = {
@@ -1233,14 +1234,23 @@ var Dropzones = (function() {
       previewsContainer: preview.get(0),
       previewTemplate: preview.html(),
       maxFiles: ( !multiple ) ? 1: null,
-      acceptedFiles: ( !multiple ) ? 'image/*' : null
+      acceptedFiles: ( !multiple ) ? 'image/*' : null,
+      init: function() {
+        this.on("addedfile", function(file) {
+          if ( !multiple && currentFile) {
+            this.removeFile(currentFile);
+            console.log('File removed');
+          }
+          currentFile = file;
+        })
+      }
     }
 
     // Clear preview html
     preview.html('');
 
     // Init dropzone
-    $this.dropzone(options);
+    $this.dropzone(options)
   }
 
   function globalOptions() {

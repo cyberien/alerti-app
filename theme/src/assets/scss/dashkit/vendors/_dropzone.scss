@@ -25,6 +25,11 @@
   }
 }
 
+.dz-drag-hover .dz-message {
+  border-color: $primary;
+  color: $primary;
+}
+
 .dropzone-multiple .dz-message {
   padding-top: 2rem;
   padding-bottom: 2rem;

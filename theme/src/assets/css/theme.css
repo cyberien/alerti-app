@@ -17000,6 +17000,12 @@ button:focus
     border-color: #95aac9;
 }
 
+.dz-drag-hover .dz-message
+{
+    color: #2c7be5; 
+    border-color: #2c7be5;
+}
+
 .dropzone-multiple .dz-message
 {
     padding-top: 2rem;

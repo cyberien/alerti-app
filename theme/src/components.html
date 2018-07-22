@@ -2531,7 +2531,7 @@
                     <!-- Preview -->
                     <ul class="dz-preview dz-preview-multiple list-group list-group-lg list-group-flush">
                       <li class="list-group-item px-0">
-                        <div class="row">
+                        <div class="row align-items-center">
                           <div class="col-auto">
                             <div class="avatar">
                               <img class="avatar-img rounded" data-dz-thumbnail>
@@ -2541,12 +2541,31 @@
                             <h4 class="mb-1" data-dz-name></h4>
                             <p class="small text-muted mb-0" data-dz-size></p>
                           </div>
+                          <div class="col-auto">
+                            
+                            <div class="dropdown">
+                              <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fe fe-more-vertical"></i>
+                              </a>
+                              <div class="dropdown-menu dropdown-menu-right">
+                                <a href="#" class="dropdown-item" data-dz-remove>
+                                  Remove
+                                </a>
+                              </div>
+                            </div>
+
+                          </div>
                         </div>
                       </li>
                     </ul>
 
                   </form>
                   
+                </div>
+                <div class="card-footer bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;!--&nbsp;Single&nbsp;--&gt;<br/>&lt;form&nbsp;action=&quot;http://&quot;&nbsp;class=&quot;dropzone&nbsp;dropzone-single&nbsp;mb-3&quot;&nbsp;data-toggle=&quot;dropzone&quot;&gt;<br/><br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;fallback&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;custom-file&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;file&quot;&nbsp;class=&quot;custom-file-input&quot;&nbsp;id=&quot;customFileUpload&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;custom-file-label&quot;&nbsp;for=&quot;customFileUpload&quot;&gt;Choose&nbsp;file&lt;/label&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dz-preview&nbsp;dz-preview-single&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dz-preview-cover&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;class=&quot;dz-preview-img&quot;&nbsp;data-dz-thumbnail&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&nbsp;class=&quot;dz-preview-cover&quot;&gt;<br/>&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&lt;/form&gt;<br/><br/>&lt;!--&nbsp;Multiple&nbsp;--&gt;<br/>&lt;form&nbsp;action=&quot;http://&quot;&nbsp;class=&quot;dropzone&nbsp;dropzone-multiple&quot;&nbsp;data-toggle=&quot;dropzone&quot;&nbsp;data-dropzone-multiple&gt;<br/><br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;fallback&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;custom-file&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;file&quot;&nbsp;class=&quot;custom-file-input&quot;&nbsp;id=&quot;customFileUpload&quot;&nbsp;multiple&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;custom-file-label&quot;&nbsp;for=&quot;customFileUpload&quot;&gt;Choose&nbsp;file&lt;/label&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;dz-preview&nbsp;dz-preview-multiple&nbsp;list-group&nbsp;list-group-lg&nbsp;list-group-flush&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;list-group-item&nbsp;px-0&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;row&nbsp;align-items-center&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;avatar&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;class=&quot;avatar-img&nbsp;rounded&quot;&nbsp;data-dz-thumbnail&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col&nbsp;ml--3&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&nbsp;class=&quot;mb-1&quot;&nbsp;data-dz-name&gt;&lt;/h4&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&nbsp;class=&quot;small&nbsp;text-muted&nbsp;mb-0&quot;&nbsp;data-dz-size&gt;&lt;/p&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dropdown&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-ellipses&nbsp;dropdown-toggle&quot;&nbsp;role=&quot;button&quot;&nbsp;data-toggle=&quot;dropdown&quot;&nbsp;aria-haspopup=&quot;true&quot;&nbsp;aria-expanded=&quot;false&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i&nbsp;class=&quot;fe&nbsp;fe-more-vertical&quot;&gt;&lt;/i&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dropdown-menu&nbsp;dropdown-menu-right&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-item&quot;&nbsp;data-dz-remove&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remove<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br/>&nbsp;&nbsp;&lt;/ul&gt;<br/><br/>&lt;/form&gt;
+                  </code>
                 </div>
               </div>
 
