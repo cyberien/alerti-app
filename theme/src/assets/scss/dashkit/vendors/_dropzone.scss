@@ -4,9 +4,11 @@
 
 .dropzone {
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
-.dropzone .dz-message {
+.dz-message {
   position: relative;
   padding: 5rem 1rem;
   border: $border-width dashed $border-color;
@@ -14,6 +16,7 @@
   text-align: center;
   color: $text-muted;
   transition: $transition-base;
+  order: -1;
   z-index: 999;
 
   &:hover {
@@ -22,7 +25,12 @@
   }
 }
 
-.dropzone.dz-started .dz-message {
+.dropzone-multiple .dz-message {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.dropzone-single.dz-max-files-reached .dz-message {
   background-color: fade-out($black, .1);
   color: white;
   opacity: 0;
@@ -32,14 +40,28 @@
   }
 }
 
-.dropzone-preview {
+.dz-preview-single {
   position: absolute;
   top: 0; right: 0; bottom: 0; left: 0;
   border-radius: $border-radius;
-  overflow: hidden;
 }
 
-.dropzone-preview-img {
+.dz-max-files-reached .dz-preview-single .dz-error {
+  display: none;
+}
+
+.dz-preview-cover {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  border-radius: $border-radius;
+}
+
+.dz-preview-img {
   object-fit: cover;
   width: 100%; height: 100%;
+  border-radius: $border-radius;
+}
+
+.dz-preview-multiple .list-group-item:last-child {
+  border-bottom: 0;
 }

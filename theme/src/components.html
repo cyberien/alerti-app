@@ -2499,13 +2499,52 @@
               <div class="card">
                 <div class="card-body">
 
-                  <form action="http://" class="dropzone" data-toggle="dropzone">
+                  <form action="http://" class="dropzone dropzone-single mb-3" data-toggle="dropzone">
+
+                    <!-- Fallback -->
                     <div class="fallback">
                       <div class="custom-file">
                         <input type="file" class="custom-file-input" id="customFileUpload">
                         <label class="custom-file-label" for="customFileUpload">Choose file</label>
                       </div>
                     </div>
+
+                    <!-- Preview -->
+                    <div class="dz-preview dz-preview-single">
+                      <div class="dz-preview-cover">
+                        <img class="dz-preview-img" data-dz-thumbnail>
+                      </div class="dz-preview-cover">
+                    </div>
+
+                  </form>
+
+                  <form action="http://" class="dropzone dropzone-multiple" data-toggle="dropzone" data-dropzone-multiple>
+
+                    <!-- Fallback -->
+                    <div class="fallback">
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="customFileUpload" multiple>
+                        <label class="custom-file-label" for="customFileUpload">Choose file</label>
+                      </div>
+                    </div>
+
+                    <!-- Preview -->
+                    <ul class="dz-preview dz-preview-multiple list-group list-group-lg list-group-flush">
+                      <li class="list-group-item px-0">
+                        <div class="row">
+                          <div class="col-auto">
+                            <div class="avatar">
+                              <img class="avatar-img rounded" data-dz-thumbnail>
+                            </div>
+                          </div>
+                          <div class="col ml--3">
+                            <h4 class="mb-1" data-dz-name></h4>
+                            <p class="small text-muted mb-0" data-dz-size></p>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+
                   </form>
                   
                 </div>

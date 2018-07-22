@@ -1216,18 +1216,31 @@ var Dropzones = (function() {
   //
 
   var $dropzone = $('[data-toggle="dropzone"]');
-
+  var $dropzonePreview = $('.dz-preview');
 
   //
   // Methods
   //
 
   function init($this) {
-    $this.dropzone({
-      thumbnailWidth  : null,
-      thumbnailHeight : null,
-      previewTemplate: '<div class="dropzone-preview"><img class="dropzone-preview-img" data-dz-thumbnail /></div>'
-    });
+    var multiple = ( $this.data('dropzone-multiple') !== undefined ) ? true : false;
+    var preview = $this.find($dropzonePreview);
+
+    // Init options
+    var options = {
+      thumbnailWidth: null,
+      thumbnailHeight: null,
+      previewsContainer: preview.get(0),
+      previewTemplate: preview.html(),
+      maxFiles: ( !multiple ) ? 1: null,
+      acceptedFiles: ( !multiple ) ? 'image/*' : null
+    }
+
+    // Clear preview html
+    preview.html('');
+
+    // Init dropzone
+    $this.dropzone(options);
   }
 
   function globalOptions() {
