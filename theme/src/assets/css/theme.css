@@ -16995,6 +16995,7 @@ button:focus
 
     padding: 5rem 1rem;
 
+    cursor: pointer;
     transition: all .2s ease-in-out;
     text-align: center;
 
@@ -17074,6 +17075,11 @@ button:focus
 .dz-preview-multiple .list-group-item:last-child
 {
     border-bottom: 0;
+}
+
+[data-dz-size] strong
+{
+    font-weight: 400;
 }
 
 .flatpickr-calendar
@@ -17347,6 +17353,11 @@ button:focus
 .select2-selection__arrow
 {
     display: none;
+}
+
+.select2-container
+{
+    width: 100% !important;
 }
 
 .select2-container .select2-selection--single

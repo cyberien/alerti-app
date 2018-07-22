@@ -17,6 +17,7 @@
   color: $text-muted;
   transition: $transition-base;
   order: -1;
+  cursor: pointer;
   z-index: 999;
 
   &:hover {
@@ -69,4 +70,8 @@
 
 .dz-preview-multiple .list-group-item:last-child {
   border-bottom: 0;
+}
+
+[data-dz-size] strong {
+  font-weight: $font-weight-normal;
 }
