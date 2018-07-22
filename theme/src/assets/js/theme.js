@@ -1018,15 +1018,15 @@ var Flatpickr = (function() {
   // Variables
   //
 
-  var $formControl = $('#formControlFlatpickr');
+  var $flatpickr = $('[data-toggle="flatpickr"]');
 
 
   //
   // Methods
   //
 
-  function init($input) {
-    $input.flatpickr();
+  function init($this) {
+    $this.flatpickr();
   }
 
 
@@ -1034,8 +1034,10 @@ var Flatpickr = (function() {
   // Events
   //
 
-  if ($formControl.length) {
-    init($formControl);
+  if ($flatpickr.length) {
+    $flatpickr.each(function() {
+      init( $(this) );
+    });
   }
 
 })();
@@ -1229,6 +1231,7 @@ var Dropzones = (function() {
 
     // Init options
     var options = {
+      url: $this.data('dropzone-url'),
       thumbnailWidth: null,
       thumbnailHeight: null,
       previewsContainer: preview.get(0),
