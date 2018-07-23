@@ -9,7 +9,6 @@
 }
 
 .dz-message {
-  position: relative;
   padding: 5rem 1rem;
   border: $border-width dashed $border-color;
   border-radius: $border-radius;
@@ -52,10 +51,6 @@
   border-radius: $border-radius;
 }
 
-.dz-max-files-reached .dz-preview-single .dz-error {
-  display: none;
-}
-
 .dz-preview-cover {
   position: absolute;
   top: 0; right: 0; bottom: 0; left: 0;
@@ -69,6 +64,7 @@
 }
 
 .dz-preview-multiple .list-group-item:last-child {
+  padding-bottom: 0;
   border-bottom: 0;
 }
 

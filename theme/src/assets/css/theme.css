@@ -6999,7 +6999,7 @@ input[type='button'].btn-block
 
 .progress
 {
-    font-size: .70312rem;
+    font-size: .70313rem;
 
     display: flex;
     overflow: hidden;
@@ -16990,7 +16990,6 @@ button:focus
 
 .dz-message
 {
-    position: relative;
     z-index: 999; 
 
     padding: 5rem 1rem;
@@ -17045,11 +17044,6 @@ button:focus
     border-radius: .375rem;
 }
 
-.dz-max-files-reached .dz-preview-single .dz-error
-{
-    display: none;
-}
-
 .dz-preview-cover
 {
     position: absolute;
@@ -17074,6 +17068,8 @@ button:focus
 
 .dz-preview-multiple .list-group-item:last-child
 {
+    padding-bottom: 0;
+
     border-bottom: 0;
 }
 
@@ -17355,7 +17351,7 @@ button:focus
     display: none;
 }
 
-.select2-container
+.select2.select2-container
 {
     width: 100% !important;
 }

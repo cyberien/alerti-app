@@ -2052,10 +2052,10 @@
                   </div>
 
                   <div class="dropdown mr-3">
-                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButtonTwo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Dropdown button
                     </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButtonTwo">
                       <a class="dropdown-item" href="#!">Action</a>
                       <a class="dropdown-item" href="#!">Another action</a>
                       <a class="dropdown-item" href="#!">Something else here</a>
@@ -2499,32 +2499,32 @@
               <div class="card">
                 <div class="card-body">
 
-                  <form action="http://" class="dropzone dropzone-single mb-3" data-toggle="dropzone">
+                  <div class="dropzone dropzone-single mb-3" data-toggle="dropzone" data-dropzone-url="http://">
 
                     <!-- Fallback -->
                     <div class="fallback">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="customFileUpload">
-                        <label class="custom-file-label" for="customFileUpload">Choose file</label>
+                        <input type="file" class="custom-file-input" id="projectCoverUploads">
+                        <label class="custom-file-label" for="projectCoverUploads">Choose file</label>
                       </div>
                     </div>
 
                     <!-- Preview -->
                     <div class="dz-preview dz-preview-single">
                       <div class="dz-preview-cover">
-                        <img class="dz-preview-img" data-dz-thumbnail>
-                      </div class="dz-preview-cover">
+                        <img class="dz-preview-img" src="..." alt="..." data-dz-thumbnail>
+                      </div>
                     </div>
 
-                  </form>
+                  </div>
 
-                  <form action="http://" class="dropzone dropzone-multiple" data-toggle="dropzone" data-dropzone-multiple>
+                  <div class="dropzone dropzone-multiple" data-toggle="dropzone" data-dropzone-multiple data-dropzone-url="http://">
 
                     <!-- Fallback -->
                     <div class="fallback">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="customFileUpload" multiple>
-                        <label class="custom-file-label" for="customFileUpload">Choose file</label>
+                        <input type="file" class="custom-file-input" id="customFileUploadMultiple" multiple>
+                        <label class="custom-file-label" for="customFileUploadMultiple">Choose file</label>
                       </div>
                     </div>
 
@@ -2534,12 +2534,12 @@
                         <div class="row align-items-center">
                           <div class="col-auto">
                             <div class="avatar">
-                              <img class="avatar-img rounded" data-dz-thumbnail>
+                              <img class="avatar-img rounded" src="..." alt="..." data-dz-thumbnail>
                             </div>
                           </div>
                           <div class="col ml--3">
-                            <h4 class="mb-1" data-dz-name></h4>
-                            <p class="small text-muted mb-0" data-dz-size></p>
+                            <h4 class="mb-1" data-dz-name>...</h4>
+                            <p class="small text-muted mb-0" data-dz-size>...</p>
                           </div>
                           <div class="col-auto">
                             
@@ -2559,12 +2559,12 @@
                       </li>
                     </ul>
 
-                  </form>
+                  </div>
                   
                 </div>
                 <div class="card-footer bg-dark">
                   <code class="highlight html bg-dark">
-                    &lt;!--&nbsp;Single&nbsp;--&gt;<br/>&lt;form&nbsp;action=&quot;http://&quot;&nbsp;class=&quot;dropzone&nbsp;dropzone-single&nbsp;mb-3&quot;&nbsp;data-toggle=&quot;dropzone&quot;&gt;<br/><br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;fallback&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;custom-file&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;file&quot;&nbsp;class=&quot;custom-file-input&quot;&nbsp;id=&quot;customFileUpload&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;custom-file-label&quot;&nbsp;for=&quot;customFileUpload&quot;&gt;Choose&nbsp;file&lt;/label&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dz-preview&nbsp;dz-preview-single&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dz-preview-cover&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;class=&quot;dz-preview-img&quot;&nbsp;data-dz-thumbnail&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&nbsp;class=&quot;dz-preview-cover&quot;&gt;<br/>&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&lt;/form&gt;<br/><br/>&lt;!--&nbsp;Multiple&nbsp;--&gt;<br/>&lt;form&nbsp;action=&quot;http://&quot;&nbsp;class=&quot;dropzone&nbsp;dropzone-multiple&quot;&nbsp;data-toggle=&quot;dropzone&quot;&nbsp;data-dropzone-multiple&gt;<br/><br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;fallback&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;custom-file&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;file&quot;&nbsp;class=&quot;custom-file-input&quot;&nbsp;id=&quot;customFileUpload&quot;&nbsp;multiple&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;custom-file-label&quot;&nbsp;for=&quot;customFileUpload&quot;&gt;Choose&nbsp;file&lt;/label&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;dz-preview&nbsp;dz-preview-multiple&nbsp;list-group&nbsp;list-group-lg&nbsp;list-group-flush&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;list-group-item&nbsp;px-0&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;row&nbsp;align-items-center&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;avatar&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;class=&quot;avatar-img&nbsp;rounded&quot;&nbsp;data-dz-thumbnail&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col&nbsp;ml--3&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&nbsp;class=&quot;mb-1&quot;&nbsp;data-dz-name&gt;&lt;/h4&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&nbsp;class=&quot;small&nbsp;text-muted&nbsp;mb-0&quot;&nbsp;data-dz-size&gt;&lt;/p&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dropdown&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-ellipses&nbsp;dropdown-toggle&quot;&nbsp;role=&quot;button&quot;&nbsp;data-toggle=&quot;dropdown&quot;&nbsp;aria-haspopup=&quot;true&quot;&nbsp;aria-expanded=&quot;false&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i&nbsp;class=&quot;fe&nbsp;fe-more-vertical&quot;&gt;&lt;/i&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dropdown-menu&nbsp;dropdown-menu-right&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-item&quot;&nbsp;data-dz-remove&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remove<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br/>&nbsp;&nbsp;&lt;/ul&gt;<br/><br/>&lt;/form&gt;
+                    &lt;!--&nbsp;Single&nbsp;--&gt;<br/>&lt;div&nbsp;class=&quot;dropzone&nbsp;dropzone-single&nbsp;mb-3&quot;&nbsp;data-toggle=&quot;dropzone&quot;&nbsp;data-dropzone-url=&quot;http://&quot;&gt;<br/><br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;fallback&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;custom-file&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;file&quot;&nbsp;class=&quot;custom-file-input&quot;&nbsp;id=&quot;projectCoverUploads&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;custom-file-label&quot;&nbsp;for=&quot;projectCoverUploads&quot;&gt;Choose&nbsp;file&lt;/label&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dz-preview&nbsp;dz-preview-single&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dz-preview-cover&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;class=&quot;dz-preview-img&quot;&nbsp;src=&quot;...&quot;&nbsp;alt=&quot;...&quot;&nbsp;data-dz-thumbnail&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&lt;/div&gt;<br/><br/><br/>&lt;!--&nbsp;Multiple&nbsp;--&gt;<br/>&lt;div&nbsp;class=&quot;dropzone&nbsp;dropzone-multiple&quot;&nbsp;data-toggle=&quot;dropzone&quot;&nbsp;data-dropzone-multiple&nbsp;data-dropzone-url=&quot;http://&quot;&gt;<br/><br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;fallback&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;custom-file&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;file&quot;&nbsp;class=&quot;custom-file-input&quot;&nbsp;id=&quot;customFileUploadMultiple&quot;&nbsp;multiple&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;custom-file-label&quot;&nbsp;for=&quot;customFileUploadMultiple&quot;&gt;Choose&nbsp;file&lt;/label&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;dz-preview&nbsp;dz-preview-multiple&nbsp;list-group&nbsp;list-group-lg&nbsp;list-group-flush&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;list-group-item&nbsp;px-0&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;row&nbsp;align-items-center&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;avatar&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;class=&quot;avatar-img&nbsp;rounded&quot;&nbsp;src=&quot;...&quot;&nbsp;alt=&quot;...&quot;&nbsp;data-dz-thumbnail&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col&nbsp;ml--3&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&nbsp;class=&quot;mb-1&quot;&nbsp;data-dz-name&gt;...&lt;/h4&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&nbsp;class=&quot;small&nbsp;text-muted&nbsp;mb-0&quot;&nbsp;data-dz-size&gt;...&lt;/p&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dropdown&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-ellipses&nbsp;dropdown-toggle&quot;&nbsp;role=&quot;button&quot;&nbsp;data-toggle=&quot;dropdown&quot;&nbsp;aria-haspopup=&quot;true&quot;&nbsp;aria-expanded=&quot;false&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i&nbsp;class=&quot;fe&nbsp;fe-more-vertical&quot;&gt;&lt;/i&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dropdown-menu&nbsp;dropdown-menu-right&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-item&quot;&nbsp;data-dz-remove&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remove<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br/>&nbsp;&nbsp;&lt;/ul&gt;<br/><br/>&lt;/div&gt;
                   </code>
                 </div>
               </div>

@@ -1242,7 +1242,6 @@ var Dropzones = (function() {
         this.on("addedfile", function(file) {
           if ( !multiple && currentFile) {
             this.removeFile(currentFile);
-            console.log('File removed');
           }
           currentFile = file;
         })
