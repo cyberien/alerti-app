@@ -17226,27 +17226,27 @@ button:focus
 
 .border-2
 {
-    border: 2px solid #e3ebf6;
+    border: 2px solid #e3ebf6 !important;
 }
 
 .border-top-2
 {
-    border-top: 2px solid #e3ebf6;
+    border-top: 2px solid #e3ebf6 !important;
 }
 
 .border-right-2
 {
-    border-right: 2px solid #e3ebf6;
+    border-right: 2px solid #e3ebf6 !important;
 }
 
 .border-bottom-2
 {
-    border-bottom: 2px solid #e3ebf6;
+    border-bottom: 2px solid #e3ebf6 !important;
 }
 
 .border-left-2
 {
-    border-left: 2px solid #e3ebf6;
+    border-left: 2px solid #e3ebf6 !important;
 }
 
 .vw-100
