@@ -641,6 +641,7 @@ var Orders = (function() {
   //
 
   var $ordersChart = $('#ordersChart');
+  var $ordersSelect = $('[name="ordersSelect"]');
 
 
   //
@@ -648,7 +649,7 @@ var Orders = (function() {
   //
 
   // Init chart
-  function init($chart) {
+  function initChart($chart) {
 
     // Create chart
     var ordersChart = new Chart($chart, {
@@ -666,6 +667,19 @@ var Orders = (function() {
     $chart.data('chart', ordersChart);
   }
 
+  // Toggle select
+  function toggleSelect($this) {
+
+    if ( $this.attr('id') == 'ordersSelectAll' ) {
+
+      if ( $this.is(':checked') ) {
+         $ordersSelect.prop('checked', true);
+       } else {
+         $ordersSelect.prop('checked', false)
+       }
+    }
+  }
+
 
   //
   // Events
@@ -673,8 +687,12 @@ var Orders = (function() {
 
   // Init chart
   if ($ordersChart.length) {
-    init($ordersChart);
+    initChart($ordersChart);
   }
+
+  $ordersSelect.on('change', function() {
+    toggleSelect($(this));
+  });
   
 })();
 

@@ -57,3 +57,16 @@
     margin-left: .25rem;
   }
 }
+
+
+// Table checkbox
+
+.table-checkbox {
+  min-height: 1em;
+}
+
+.table-checkbox .custom-control-label::before,
+.table-checkbox .custom-control-label::after {
+  top: 50%;
+  transform: translateY(-50%);
+}

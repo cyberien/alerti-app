@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include("partials/head.html", {
+      "title": "Dashkit"
+    })
+  </head>
+  <body>
+
+    <!-- MODALS
+    ================================================== -->
+    @@include("partials/modals.html")
+
+    <!-- SIDEBAR
+    ================================================== -->
+    @@include("partials/sidebar.html", {
+      "category": "pages",
+      "subcategory": "",
+      "page": "orders.html",
+      "user": true
+    })
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10 col-xl-8">
+            
+            <!-- Header -->
+            <div class="header mt-md-5">
+              <div class="header-body">
+                <div class="row align-items-center">
+                  <div class="col">
+                    
+                    <!-- Pretitle -->
+                    <h6 class="header-pretitle">
+                      Overview
+                    </h6>
+
+                    <!-- Title -->
+                    <h1 class="header-title">
+                      Orders
+                    </h1>
+
+                  </div>
+                  <div class="col-auto">
+                    
+                    <!-- Button -->
+                    <a href="#" class="btn btn-primary">
+                      New order
+                    </a>
+                    
+                  </div>
+                </div> <!-- / .row -->
+                <div class="row align-items-center">
+                  <div class="col">
+                    
+                    <!-- Nav -->
+                    <ul class="nav nav-tabs nav-overflow header-tabs">
+                      <li class="nav-item">
+                        <a href="#!" class="nav-link active">
+                          All <span class="badge badge-pill badge-soft-secondary">823</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#!" class="nav-link">
+                          Pending <span class="badge badge-pill badge-soft-secondary">24</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#!" class="nav-link">
+                          Processing <span class="badge badge-pill badge-soft-secondary">3</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#!" class="nav-link">
+                          Refunded <span class="badge badge-pill badge-soft-secondary">71</span>
+                        </a>
+                      </li>
+                    </ul>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="card" data-toggle="lists" data-lists-values='["orders-order", "orders-product", "orders-date", "orders-total", "orders-status", "orders-method"]'>
+              <div class="card-header">
+                <div class="row align-items-center">
+                  <div class="col">
+
+                    <!-- Search -->
+                    <form>
+                      <input type="search" class="form-control form-control-flush search" placeholder="Search">
+                    </form>
+                    
+                  </div>
+                  <div class="col-auto">
+                    
+                    <!-- Button -->
+                    <a href="#!" class="btn btn-sm btn-white">
+                      Bulk action
+                    </a>
+
+                  </div>
+                </div> <!-- / .row -->
+              </div>
+              <div class="table-responsive">
+                <table class="table table-sm table-nowrap card-table">
+                  <thead>
+                    <tr>
+                      <th>
+                        <div class="custom-control custom-checkbox table-checkbox">
+                          <input type="checkbox" class="custom-control-input" name="ordersSelect" id="ordersSelectAll">
+                          <label class="custom-control-label" for="ordersSelectAll">
+                            &nbsp;
+                          </label>
+                        </div>
+                      </th>
+                      <th>
+                        <a href="#" class="text-muted sort" data-sort="orders-order">
+                          Order
+                        </a>
+                      </th>
+                      <th>
+                        <a href="#" class="text-muted sort" data-sort="orders-product">
+                          Product
+                        </a>
+                      </th>
+                      <th>
+                        <a href="#" class="text-muted sort" data-sort="orders-date">
+                          Date
+                        </a>
+                      </th>
+                      <th>
+                        <a href="#" class="text-muted sort" data-sort="orders-total">
+                          Total
+                        </a>
+                      </th>
+                      <th>
+                        <a href="#" class="text-muted sort" data-sort="orders-status">
+                          Status
+                        </a>
+                      </th>
+                      <th colspan="2">
+                        <a href="#" class="text-muted sort" data-sort="orders-method">
+                          Payment method
+                        </a>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="list">
+                    <tr>
+                      <td>
+                        <div class="custom-control custom-checkbox table-checkbox">
+                          <input type="checkbox" class="custom-control-input" name="ordersSelect" id="ordersSelectOne">
+                          <label class="custom-control-label" for="ordersSelectOne">
+                            &nbsp;
+                          </label>
+                        </div>
+                      </td>
+                      <td class="orders-order">
+                        #6520
+                      </td>
+                      <td class="orders-product">
+                        Cool Kid Poster
+                      </td>
+                      <td class="orders-date">
+                        <time datetime="2018-07-30">07/30/18</time>
+                      </td>
+                      <td class="orders-total">
+                        $55.25
+                      </td>
+                      <td class="orders-status">
+                        <div class="badge badge-soft-success">
+                          Shipped
+                        </div>
+                      </td>
+                      <td class="orders-method">
+                        Mastercard
+                      </td>
+                      <td class="text-right">
+                        <div class="dropdown">
+                          <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#!" class="dropdown-item">
+                              Action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Another action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Something else here
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="custom-control custom-checkbox table-checkbox">
+                          <input type="checkbox" class="custom-control-input" name="ordersSelect" id="ordersSelectTwo">
+                          <label class="custom-control-label" for="ordersSelectTwo">
+                            &nbsp;
+                          </label>
+                        </div>
+                      </td>
+                      <td class="orders-order">
+                        #6521
+                      </td>
+                      <td class="orders-product">
+                        Cool Kid Poster
+                      </td>
+                      <td class="orders-date">
+                        <time datetime="2018-07-30">07/30/18</time>
+                      </td>
+                      <td class="orders-total">
+                        $55.25
+                      </td>
+                      <td class="orders-status">
+                        <div class="badge badge-soft-success">
+                          Shipped
+                        </div>
+                      </td>
+                      <td class="orders-method">
+                        Mastercard
+                      </td>
+                      <td class="text-right">
+                        <div class="dropdown">
+                          <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#!" class="dropdown-item">
+                              Action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Another action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Something else here
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="custom-control custom-checkbox table-checkbox">
+                          <input type="checkbox" class="custom-control-input" name="ordersSelect" id="ordersSelectThree">
+                          <label class="custom-control-label" for="ordersSelectThree">
+                            &nbsp;
+                          </label>
+                        </div>
+                      </td>
+                      <td class="orders-order">
+                        #6523
+                      </td>
+                      <td class="orders-product">
+                        Cool Kid Poster
+                      </td>
+                      <td class="orders-date">
+                        <time datetime="2018-07-30">07/30/18</time>
+                      </td>
+                      <td class="orders-total">
+                        $55.25
+                      </td>
+                      <td class="orders-sratus">
+                        <div class="badge badge-soft-success">
+                          Shipped
+                        </div>
+                      </td>
+                      <td class="orders-method">
+                        Mastercard
+                      </td>
+                      <td class="text-right">
+                        <div class="dropdown">
+                          <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#!" class="dropdown-item">
+                              Action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Another action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Something else here
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="custom-control custom-checkbox table-checkbox">
+                          <input type="checkbox" class="custom-control-input" name="ordersSelect" id="ordersSelectFour">
+                          <label class="custom-control-label" for="ordersSelectFour">
+                            &nbsp;
+                          </label>
+                        </div>
+                      </td>
+                      <td class="orders-order">
+                        #6524
+                      </td>
+                      <td class="orders-product">
+                        Cool Kid Poster
+                      </td>
+                      <td class="orders-date">
+                        <time datetime="2018-07-30">07/30/18</time>
+                      </td>
+                      <td class="orders-total">
+                        $55.25
+                      </td>
+                      <td class="orders-status">
+                        <div class="badge badge-soft-success">
+                          Shipped
+                        </div>
+                      </td>
+                      <td class="orders-method">
+                        Mastercard
+                      </td>
+                      <td class="text-right">
+                        <div class="dropdown">
+                          <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#!" class="dropdown-item">
+                              Action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Another action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Something else here
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="custom-control custom-checkbox table-checkbox">
+                          <input type="checkbox" class="custom-control-input" name="ordersSelect" id="ordersSelectFive">
+                          <label class="custom-control-label" for="ordersSelectFive">
+                            &nbsp;
+                          </label>
+                        </div>
+                      </td>
+                      <td class="orders-order">
+                        #6525
+                      </td>
+                      <td class="orders-product">
+                        Cool Kid Poster
+                      </td>
+                      <td class="orders-date">
+                        <time datetime="2018-07-30">07/30/18</time>
+                      </td>
+                      <td class="orders-total">
+                        $55.25
+                      </td>
+                      <td class="orders-status">
+                        <div class="badge badge-soft-success">
+                          Shipped
+                        </div>
+                      </td>
+                      <td class="orders-method">
+                        Mastercard
+                      </td>
+                      <td class="text-right">
+                        <div class="dropdown">
+                          <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#!" class="dropdown-item">
+                              Action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Another action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Something else here
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container-fluid -->
+    </div> <!-- / .main-content -->
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("partials/scripts.html")
+
+  </body>
+</html>
