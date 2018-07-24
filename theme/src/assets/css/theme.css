@@ -1,5 +1,5 @@
 /**
- * Dashkit v1.0.2
+ * Dashkit v1.1.0
  *
  * Custom variables followed by Dashkit variables followed by Bootstrap variables
  * to ensure cascade of styles.
@@ -6999,7 +6999,7 @@ input[type='button'].btn-block
 
 .progress
 {
-    font-size: .70312rem;
+    font-size: .70313rem;
 
     display: flex;
     overflow: hidden;
