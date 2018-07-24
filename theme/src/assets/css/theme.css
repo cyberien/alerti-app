@@ -6999,7 +6999,7 @@ input[type='button'].btn-block
 
 .progress
 {
-    font-size: .70313rem;
+    font-size: .70312rem;
 
     display: flex;
     overflow: hidden;
@@ -18066,6 +18066,8 @@ button:focus
 
     display: flex;
     flex-direction: column;
+
+    background-color: #fff;
 }
 
 .dz-message
