@@ -47,4 +47,11 @@
     color: white !important;
   }
 
+  .flatpickr-day.inRange {
+    background-color: $light;
+    border: none;
+    border-radius: 0;
+    box-shadow: -5px 0 0 $light, 5px 0 0 $light;
+  }
+
 }

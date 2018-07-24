@@ -1044,7 +1044,12 @@ var Flatpickr = (function() {
   //
 
   function init($this) {
-    $this.flatpickr();
+    var options = {
+      mode: ( $this.data('flatpickr-mode') !== undefined ) ? $this.data('flatpickr-mode') : 'single'
+    };
+
+    // Init Flatpickr
+    $this.flatpickr(options);
   }
 
 

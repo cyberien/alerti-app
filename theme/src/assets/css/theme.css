@@ -16998,7 +16998,7 @@ body
 
 .table-checkbox
 {
-    min-height: 1em;
+    min-height: 0;
 }
 
 .table-checkbox .custom-control-label::before,
@@ -18228,6 +18228,13 @@ button:focus
     color: white !important; 
     border-color: #2c7be5;
     background-color: #2c7be5;
+}
+.flatpickr-calendar .flatpickr-day.inRange
+{
+    border: none;
+    border-radius: 0;
+    background-color: #edf2f9;
+    box-shadow: -5px 0 0 #edf2f9, 5px 0 0 #edf2f9;
 }
 
 .ql-container
