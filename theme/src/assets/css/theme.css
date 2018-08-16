@@ -17962,7 +17962,8 @@ button:focus
 
 .select2-container .select2-selection--single,
 .select2-container--default.select2-container--focus .select2-selection--multiple,
-.select2-container--default .select2-selection--multiple
+.select2-container--default .select2-selection--multiple,
+.select2-container--default .select2-search--dropdown .select2-search__field
 {
     font-size: .9375rem;
     line-height: 1.5;
@@ -17985,21 +17986,24 @@ button:focus
 {
     .select2-container .select2-selection--single,
     .select2-container--default.select2-container--focus .select2-selection--multiple,
-    .select2-container--default .select2-selection--multiple
+    .select2-container--default .select2-selection--multiple,
+    .select2-container--default .select2-search--dropdown .select2-search__field
     {
         transition: none;
     }
 }
 .select2-container .select2-selection--single::-ms-expand,
 .select2-container--default.select2-container--focus .select2-selection--multiple::-ms-expand,
-.select2-container--default .select2-selection--multiple::-ms-expand
+.select2-container--default .select2-selection--multiple::-ms-expand,
+.select2-container--default .select2-search--dropdown .select2-search__field::-ms-expand
 {
     border: 0; 
     background-color: transparent;
 }
 .select2-container .select2-selection--single:focus,
 .select2-container--default.select2-container--focus .select2-selection--multiple:focus,
-.select2-container--default .select2-selection--multiple:focus
+.select2-container--default .select2-selection--multiple:focus,
+.select2-container--default .select2-search--dropdown .select2-search__field:focus
 {
     color: #12263f;
     border-color: #2c7be5;
@@ -18009,28 +18013,32 @@ button:focus
 }
 .select2-container .select2-selection--single::-webkit-input-placeholder,
 .select2-container--default.select2-container--focus .select2-selection--multiple::-webkit-input-placeholder,
-.select2-container--default .select2-selection--multiple::-webkit-input-placeholder
+.select2-container--default .select2-selection--multiple::-webkit-input-placeholder,
+.select2-container--default .select2-search--dropdown .select2-search__field::-webkit-input-placeholder
 {
     opacity: 1; 
     color: #b1c2d9;
 }
 .select2-container .select2-selection--single:-ms-input-placeholder,
 .select2-container--default.select2-container--focus .select2-selection--multiple:-ms-input-placeholder,
-.select2-container--default .select2-selection--multiple:-ms-input-placeholder
+.select2-container--default .select2-selection--multiple:-ms-input-placeholder,
+.select2-container--default .select2-search--dropdown .select2-search__field:-ms-input-placeholder
 {
     opacity: 1; 
     color: #b1c2d9;
 }
 .select2-container .select2-selection--single::-ms-input-placeholder,
 .select2-container--default.select2-container--focus .select2-selection--multiple::-ms-input-placeholder,
-.select2-container--default .select2-selection--multiple::-ms-input-placeholder
+.select2-container--default .select2-selection--multiple::-ms-input-placeholder,
+.select2-container--default .select2-search--dropdown .select2-search__field::-ms-input-placeholder
 {
     opacity: 1; 
     color: #b1c2d9;
 }
 .select2-container .select2-selection--single::placeholder,
 .select2-container--default.select2-container--focus .select2-selection--multiple::placeholder,
-.select2-container--default .select2-selection--multiple::placeholder
+.select2-container--default .select2-selection--multiple::placeholder,
+.select2-container--default .select2-search--dropdown .select2-search__field::placeholder
 {
     opacity: 1; 
     color: #b1c2d9;
@@ -18040,7 +18048,9 @@ button:focus
 .select2-container--default.select2-container--focus .select2-selection--multiple:disabled,
 .select2-container--default.select2-container--focus .select2-selection--multiple[readonly],
 .select2-container--default .select2-selection--multiple:disabled,
-.select2-container--default .select2-selection--multiple[readonly]
+.select2-container--default .select2-selection--multiple[readonly],
+.select2-container--default .select2-search--dropdown .select2-search__field:disabled,
+.select2-container--default .select2-search--dropdown .select2-search__field[readonly]
 {
     opacity: 1; 
     background-color: #edf2f9;
@@ -18149,6 +18159,22 @@ button:focus
 {
     border-bottom-right-radius: 0 !important; 
     border-bottom-left-radius: 0 !important;
+}
+
+.select2-search--dropdown
+{
+    padding: .375rem .75rem;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field
+{
+    font-size: .8125rem;
+    line-height: 1.75;
+
+    height: calc(1.67188rem + 2px);
+    padding: .125rem .5rem;
+
+    border-radius: .25rem;
 }
 
 .form-control-sm + .select2-container .select2-selection--single,

@@ -13,7 +13,8 @@
 
 .select2-container .select2-selection--single,
 .select2-container--default.select2-container--focus .select2-selection--multiple,
-.select2-container--default .select2-selection--multiple {
+.select2-container--default .select2-selection--multiple,
+.select2-container--default .select2-search--dropdown .select2-search__field {
   display: block;
   width: 100%;
   height: $input-height;
@@ -146,6 +147,20 @@
 .select2-selection[aria-expanded="true"] {
   border-bottom-left-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
+}
+
+// Search bar
+
+.select2-search--dropdown {
+  padding: $dropdown-item-padding-y $input-padding-x;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field {
+  height: $input-height-sm;
+  padding: $input-padding-y-sm $input-padding-x-sm;
+  font-size: $font-size-sm;
+  line-height: $input-line-height-sm;
+  @include border-radius($input-border-radius-sm);
 }
 
 

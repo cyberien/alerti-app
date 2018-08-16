@@ -1189,10 +1189,6 @@ var Select2 = (function() {
     });
   }
 
-  function globalOptions() {
-    $.fn.select2.defaults.set('minimumResultsForSearch', 'Infinity');
-  }
-
   function formatAvatar(avatar) {
     if ( !avatar.id ) {
       return avatar.text;
@@ -1217,9 +1213,6 @@ var Select2 = (function() {
   //
 
   if ( $select.length ) {
-
-    // Set global options
-    globalOptions();
 
     // Init selects
     $select.each(function() {
