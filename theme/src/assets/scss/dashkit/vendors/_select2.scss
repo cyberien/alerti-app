@@ -14,9 +14,9 @@
 .select2-container .select2-selection--single,
 .select2-container--default.select2-container--focus .select2-selection--multiple,
 .select2-container--default .select2-selection--multiple {
-  height: auto;
   display: block;
   width: 100%;
+  height: $input-height;
   padding: $input-padding-y $input-padding-x;
   font-size: $font-size-base;
   line-height: $input-line-height;
@@ -107,13 +107,13 @@
 
 .select2-container--default.select2-container--focus .select2-selection--multiple,
 .select2-container--default .select2-selection--multiple {
+  height: auto;
   min-height: $input-height;
-  padding-bottom: $input-padding-y - .25rem; // pill margin
-  padding-left: $input-padding-x - .25rem; // pill margin
 }
 
 .select2-container--default .select2-selection--multiple .select2-selection__rendered {
   display: block;
+  margin: 0 0 -.25rem -.25rem;
   padding: 0;
 }
 
@@ -122,9 +122,9 @@
   padding: 0 .5rem;
   margin: 0 0 .25rem .25rem;
   background-color: $light;
-  border-width: 0;
+  border: none;
   border-radius: $border-radius-sm;
-  line-height: ($line-height-base * $font-size-base);
+  line-height: ($input-line-height * $font-size-base);
   font-size: $font-size-sm;
   color: $input-color;
 }
@@ -141,4 +141,52 @@
 
 .select2-container .select2-search--inline {
   display: none;
+}
+
+.select2-selection[aria-expanded="true"] {
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+
+// Sizing
+//
+// Makes the select2 containers respect the .form-control-sm and .form-control-lg classes
+
+.form-control-sm + .select2-container .select2-selection--single,
+.form-control-sm + .select2-container--default.select2-container--focus .select2-selection--multiple,
+.form-control-sm + .select2-container--default .select2-selection--multiple {
+  height: $input-height-sm;
+  padding: $input-padding-y-sm $input-padding-x-sm;
+  font-size: $font-size-sm;
+  line-height: $input-line-height-sm;
+  @include border-radius($input-border-radius-sm);
+}
+
+.form-control-sm + .select2-container--default.select2-container--focus .select2-selection--multiple,
+.form-control-sm + .select2-container--default .select2-selection--multiple {
+  min-height: $input-height-sm;
+}
+
+.form-control-sm + .select2-container--default .select2-selection--multiple .select2-selection__choice {
+  line-height: ($input-line-height-sm * $font-size-sm);
+}
+
+.form-control-lg + .select2-container .select2-selection--single,
+.form-control-lg + .select2-container--default.select2-container--focus .select2-selection--multiple,
+.form-control-lg + .select2-container--default .select2-selection--multiple {
+  height: $input-height-lg;
+  padding: $input-padding-y-lg $input-padding-x-lg;
+  font-size: $font-size-lg;
+  line-height: $input-line-height-lg;
+  @include border-radius($input-border-radius-lg);
+}
+
+.form-control-lg + .select2-container--default.select2-container--focus .select2-selection--multiple,
+.form-control-lg + .select2-container--default .select2-selection--multiple {
+  min-height: $input-height-lg;
+}
+
+.form-control-lg + .select2-container--default .select2-selection--multiple .select2-selection__choice {
+  line-height: ($input-line-height-lg * $font-size-lg);
 }
