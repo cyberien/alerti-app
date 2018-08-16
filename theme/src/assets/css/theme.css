@@ -617,8 +617,7 @@ mark,
     text-transform: uppercase;
 }
 
-.blockquote,
-.ql-editor blockquote
+.blockquote
 {
     font-size: 1.17188rem; 
 
@@ -638,8 +637,7 @@ mark,
     content: '\2014 \00A0';
 }
 
-.img-fluid,
-.ql-editor img
+.img-fluid
 {
     max-width: 100%;
     height: auto;
@@ -2282,12 +2280,7 @@ pre code
     border: 0;
 }
 
-.form-control,
-.ql-editor,
-.ql-tooltip input,
-.select2-container .select2-selection--single,
-.select2-container--default.select2-container--focus .select2-selection--multiple,
-.select2-container--default .select2-selection--multiple
+.form-control
 {
     font-size: .9375rem;
     line-height: 1.5;
@@ -2307,31 +2300,17 @@ pre code
 }
 @media screen and (prefers-reduced-motion: reduce)
 {
-    .form-control,
-    .ql-editor,
-    .ql-tooltip input,
-    .select2-container .select2-selection--single,
-    .select2-container--default.select2-container--focus .select2-selection--multiple,
-    .select2-container--default .select2-selection--multiple
+    .form-control
     {
         transition: none;
     }
 }
-.form-control::-ms-expand,
-.ql-editor::-ms-expand,
-.ql-tooltip input::-ms-expand,
-.select2-container .select2-selection--single::-ms-expand,
-.select2-container--default.select2-container--focus .select2-selection--multiple::-ms-expand,
-.select2-container--default .select2-selection--multiple::-ms-expand
+.form-control::-ms-expand
 {
     border: 0; 
     background-color: transparent;
 }
-.form-control:focus,
-.ql-editor:focus,
-.ql-tooltip input:focus,
-.select2-container .select2-selection--single:focus,
-.select2-container--default .select2-selection--multiple:focus
+.form-control:focus
 {
     color: #12263f;
     border-color: #2c7be5;
@@ -2339,73 +2318,39 @@ pre code
     background-color: #fff;
     box-shadow: transparent;
 }
-.form-control::-webkit-input-placeholder,
-.ql-editor::-webkit-input-placeholder,
-.ql-tooltip input::-webkit-input-placeholder,
-.select2-container .select2-selection--single::-webkit-input-placeholder,
-.select2-container--default.select2-container--focus .select2-selection--multiple::-webkit-input-placeholder,
-.select2-container--default .select2-selection--multiple::-webkit-input-placeholder
+.form-control::-webkit-input-placeholder
 {
     opacity: 1; 
     color: #b1c2d9;
 }
-.form-control:-ms-input-placeholder,
-.ql-editor:-ms-input-placeholder,
-.ql-tooltip input:-ms-input-placeholder,
-.select2-container .select2-selection--single:-ms-input-placeholder,
-.select2-container--default.select2-container--focus .select2-selection--multiple:-ms-input-placeholder,
-.select2-container--default .select2-selection--multiple:-ms-input-placeholder
+.form-control:-ms-input-placeholder
 {
     opacity: 1; 
     color: #b1c2d9;
 }
-.form-control::-ms-input-placeholder,
-.ql-editor::-ms-input-placeholder,
-.ql-tooltip input::-ms-input-placeholder,
-.select2-container .select2-selection--single::-ms-input-placeholder,
-.select2-container--default.select2-container--focus .select2-selection--multiple::-ms-input-placeholder,
-.select2-container--default .select2-selection--multiple::-ms-input-placeholder
+.form-control::-ms-input-placeholder
 {
     opacity: 1; 
     color: #b1c2d9;
 }
-.form-control::placeholder,
-.ql-editor::placeholder,
-.ql-tooltip input::placeholder,
-.select2-container .select2-selection--single::placeholder,
-.select2-container--default.select2-container--focus .select2-selection--multiple::placeholder,
-.select2-container--default .select2-selection--multiple::placeholder
+.form-control::placeholder
 {
     opacity: 1; 
     color: #b1c2d9;
 }
 .form-control:disabled,
-.ql-editor:disabled,
-.ql-tooltip input:disabled,
-.select2-container .select2-selection--single:disabled,
-.select2-container--default .select2-selection--multiple:disabled,
-.form-control[readonly],
-.ql-editor[readonly],
-.ql-tooltip input[readonly],
-.select2-container .select2-selection--single[readonly],
-.select2-container--default .select2-selection--multiple[readonly]
+.form-control[readonly]
 {
     opacity: 1; 
     background-color: #edf2f9;
 }
 
-select.form-control:not([size]):not([multiple]),
-select.ql-editor:not([size]):not([multiple]),
-.select2-container select.select2-selection--single:not([size]):not([multiple]),
-.select2-container--default select.select2-selection--multiple:not([size]):not([multiple])
+select.form-control:not([size]):not([multiple])
 {
     height: calc(2.40625rem + 2px);
 }
 
-select.form-control:focus::-ms-value,
-select.ql-editor:focus::-ms-value,
-.select2-container select.select2-selection--single:focus::-ms-value,
-.select2-container--default select.select2-selection--multiple:focus::-ms-value
+select.form-control:focus::-ms-value
 {
     color: #12263f;
     background-color: #fff;
@@ -2465,36 +2410,16 @@ select.ql-editor:focus::-ms-value,
 }
 .form-control-plaintext.form-control-sm,
 .input-group-sm > .form-control-plaintext.form-control,
-.input-group-sm > .form-control-plaintext.ql-editor,
-.select2-container .input-group-sm > .form-control-plaintext.select2-selection--single,
-.select2-container--default .input-group-sm > .form-control-plaintext.select2-selection--multiple,
 .input-group-sm > .input-group-prepend > .form-control-plaintext.input-group-text,
 .input-group-sm > .input-group-append > .form-control-plaintext.input-group-text,
 .input-group-sm > .input-group-prepend > .form-control-plaintext.btn,
-.ql-tooltip .input-group-sm > .input-group-prepend > .form-control-plaintext.ql-preview,
-.ql-tooltip .input-group-sm > .input-group-prepend > .form-control-plaintext.ql-action::before,
-.ql-tooltip .input-group-sm > .input-group-prepend > .form-control-plaintext.ql-remove::before,
 .input-group-sm > .input-group-append > .form-control-plaintext.btn,
-.ql-tooltip .input-group-sm > .input-group-append > .form-control-plaintext.ql-preview,
-.ql-tooltip .input-group-sm > .input-group-append > .form-control-plaintext.ql-action::before,
-.ql-tooltip .input-group-sm > .input-group-append > .form-control-plaintext.ql-remove::before,
-.ql-tooltip input.form-control-plaintext,
 .form-control-plaintext.form-control-lg,
 .input-group-lg > .form-control-plaintext.form-control,
-.input-group-lg > .form-control-plaintext.ql-editor,
-.ql-tooltip .input-group-lg > input.form-control-plaintext,
-.select2-container .input-group-lg > .form-control-plaintext.select2-selection--single,
-.select2-container--default .input-group-lg > .form-control-plaintext.select2-selection--multiple,
 .input-group-lg > .input-group-prepend > .form-control-plaintext.input-group-text,
 .input-group-lg > .input-group-append > .form-control-plaintext.input-group-text,
 .input-group-lg > .input-group-prepend > .form-control-plaintext.btn,
-.ql-tooltip .input-group-lg > .input-group-prepend > .form-control-plaintext.ql-preview,
-.ql-tooltip .input-group-lg > .input-group-prepend > .form-control-plaintext.ql-action::before,
-.ql-tooltip .input-group-lg > .input-group-prepend > .form-control-plaintext.ql-remove::before,
-.input-group-lg > .input-group-append > .form-control-plaintext.btn,
-.ql-tooltip .input-group-lg > .input-group-append > .form-control-plaintext.ql-preview,
-.ql-tooltip .input-group-lg > .input-group-append > .form-control-plaintext.ql-action::before,
-.ql-tooltip .input-group-lg > .input-group-append > .form-control-plaintext.ql-remove::before
+.input-group-lg > .input-group-append > .form-control-plaintext.btn
 {
     padding-right: 0;
     padding-left: 0;
@@ -2502,21 +2427,10 @@ select.ql-editor:focus::-ms-value,
 
 .form-control-sm,
 .input-group-sm > .form-control,
-.input-group-sm > .ql-editor,
-.ql-tooltip .input-group-sm > input,
-.select2-container .input-group-sm > .select2-selection--single,
-.select2-container--default .input-group-sm > .select2-selection--multiple,
 .input-group-sm > .input-group-prepend > .input-group-text,
 .input-group-sm > .input-group-append > .input-group-text,
 .input-group-sm > .input-group-prepend > .btn,
-.ql-tooltip .input-group-sm > .input-group-prepend > .ql-preview,
-.ql-tooltip .input-group-sm > .input-group-prepend > .ql-action::before,
-.ql-tooltip .input-group-sm > .input-group-prepend > .ql-remove::before,
-.input-group-sm > .input-group-append > .btn,
-.ql-tooltip .input-group-sm > .input-group-append > .ql-preview,
-.ql-tooltip .input-group-sm > .input-group-append > .ql-action::before,
-.ql-tooltip .input-group-sm > .input-group-append > .ql-remove::before,
-.ql-tooltip input
+.input-group-sm > .input-group-append > .btn
 {
     font-size: .8125rem;
     line-height: 1.75;
@@ -2528,39 +2442,20 @@ select.ql-editor:focus::-ms-value,
 
 select.form-control-sm:not([size]):not([multiple]),
 .input-group-sm > select.form-control:not([size]):not([multiple]),
-.input-group-sm > select.ql-editor:not([size]):not([multiple]),
-.select2-container .input-group-sm > select.select2-selection--single:not([size]):not([multiple]),
-.select2-container--default .input-group-sm > select.select2-selection--multiple:not([size]):not([multiple]),
 .input-group-sm > .input-group-prepend > select.input-group-text:not([size]):not([multiple]),
 .input-group-sm > .input-group-append > select.input-group-text:not([size]):not([multiple]),
 .input-group-sm > .input-group-prepend > select.btn:not([size]):not([multiple]),
-.ql-tooltip .input-group-sm > .input-group-prepend > select.ql-preview:not([size]):not([multiple]),
-.ql-tooltip .input-group-sm > .input-group-prepend > select.ql-action:not([size]):not([multiple])::before,
-.ql-tooltip .input-group-sm > .input-group-prepend > select.ql-remove:not([size]):not([multiple])::before,
-.input-group-sm > .input-group-append > select.btn:not([size]):not([multiple]),
-.ql-tooltip .input-group-sm > .input-group-append > select.ql-preview:not([size]):not([multiple]),
-.ql-tooltip .input-group-sm > .input-group-append > select.ql-action:not([size]):not([multiple])::before,
-.ql-tooltip .input-group-sm > .input-group-append > select.ql-remove:not([size]):not([multiple])::before
+.input-group-sm > .input-group-append > select.btn:not([size]):not([multiple])
 {
     height: calc(1.67188rem + 2px);
 }
 
 .form-control-lg,
 .input-group-lg > .form-control,
-.input-group-lg > .ql-editor,
-.ql-tooltip .input-group-lg > input,
-.select2-container .input-group-lg > .select2-selection--single,
-.select2-container--default .input-group-lg > .select2-selection--multiple,
 .input-group-lg > .input-group-prepend > .input-group-text,
 .input-group-lg > .input-group-append > .input-group-text,
 .input-group-lg > .input-group-prepend > .btn,
-.ql-tooltip .input-group-lg > .input-group-prepend > .ql-preview,
-.ql-tooltip .input-group-lg > .input-group-prepend > .ql-action::before,
-.ql-tooltip .input-group-lg > .input-group-prepend > .ql-remove::before,
-.input-group-lg > .input-group-append > .btn,
-.ql-tooltip .input-group-lg > .input-group-append > .ql-preview,
-.ql-tooltip .input-group-lg > .input-group-append > .ql-action::before,
-.ql-tooltip .input-group-lg > .input-group-append > .ql-remove::before
+.input-group-lg > .input-group-append > .btn
 {
     font-size: 1.0625rem;
     line-height: 1.5;
@@ -2572,19 +2467,10 @@ select.form-control-sm:not([size]):not([multiple]),
 
 select.form-control-lg:not([size]):not([multiple]),
 .input-group-lg > select.form-control:not([size]):not([multiple]),
-.input-group-lg > select.ql-editor:not([size]):not([multiple]),
-.select2-container .input-group-lg > select.select2-selection--single:not([size]):not([multiple]),
-.select2-container--default .input-group-lg > select.select2-selection--multiple:not([size]):not([multiple]),
 .input-group-lg > .input-group-prepend > select.input-group-text:not([size]):not([multiple]),
 .input-group-lg > .input-group-append > select.input-group-text:not([size]):not([multiple]),
 .input-group-lg > .input-group-prepend > select.btn:not([size]):not([multiple]),
-.ql-tooltip .input-group-lg > .input-group-prepend > select.ql-preview:not([size]):not([multiple]),
-.ql-tooltip .input-group-lg > .input-group-prepend > select.ql-action:not([size]):not([multiple])::before,
-.ql-tooltip .input-group-lg > .input-group-prepend > select.ql-remove:not([size]):not([multiple])::before,
-.input-group-lg > .input-group-append > select.btn:not([size]):not([multiple]),
-.ql-tooltip .input-group-lg > .input-group-append > select.ql-preview:not([size]):not([multiple]),
-.ql-tooltip .input-group-lg > .input-group-append > select.ql-action:not([size]):not([multiple])::before,
-.ql-tooltip .input-group-lg > .input-group-append > select.ql-remove:not([size]):not([multiple])::before
+.input-group-lg > .input-group-append > select.btn:not([size]):not([multiple])
 {
     height: calc(2.59375rem + 2px);
 }
@@ -2694,18 +2580,7 @@ select.form-control-lg:not([size]):not([multiple]),
 }
 
 .was-validated .form-control:valid,
-.was-validated .ql-editor:valid,
-.was-validated .ql-tooltip input:valid,
-.ql-tooltip .was-validated input:valid,
-.was-validated .select2-container .select2-selection--single:valid,
-.select2-container .was-validated .select2-selection--single:valid,
-.was-validated .select2-container--default .select2-selection--multiple:valid,
-.select2-container--default .was-validated .select2-selection--multiple:valid,
 .form-control.is-valid,
-.is-valid.ql-editor,
-.ql-tooltip input.is-valid,
-.select2-container .is-valid.select2-selection--single,
-.select2-container--default .is-valid.select2-selection--multiple,
 .was-validated
 .custom-select:valid,
 .custom-select.is-valid
@@ -2713,18 +2588,7 @@ select.form-control-lg:not([size]):not([multiple]),
     border-color: #00d97e;
 }
 .was-validated .form-control:valid:focus,
-.was-validated .ql-editor:valid:focus,
-.was-validated .ql-tooltip input:valid:focus,
-.ql-tooltip .was-validated input:valid:focus,
-.was-validated .select2-container .select2-selection--single:valid:focus,
-.select2-container .was-validated .select2-selection--single:valid:focus,
-.was-validated .select2-container--default .select2-selection--multiple:valid:focus,
-.select2-container--default .was-validated .select2-selection--multiple:valid:focus,
 .form-control.is-valid:focus,
-.is-valid.ql-editor:focus,
-.ql-tooltip input.is-valid:focus,
-.select2-container .is-valid.select2-selection--single:focus,
-.select2-container--default .is-valid.select2-selection--multiple:focus,
 .was-validated
   .custom-select:valid:focus,
 .custom-select.is-valid:focus
@@ -2733,31 +2597,9 @@ select.form-control-lg:not([size]):not([multiple]),
     box-shadow: 0 0 0 .15rem rgba(0, 217, 126, .25);
 }
 .was-validated .form-control:valid ~ .valid-feedback,
-.was-validated .ql-editor:valid ~ .valid-feedback,
-.was-validated .ql-tooltip input:valid ~ .valid-feedback,
-.ql-tooltip .was-validated input:valid ~ .valid-feedback,
-.was-validated .select2-container .select2-selection--single:valid ~ .valid-feedback,
-.select2-container .was-validated .select2-selection--single:valid ~ .valid-feedback,
-.was-validated .select2-container--default .select2-selection--multiple:valid ~ .valid-feedback,
-.select2-container--default .was-validated .select2-selection--multiple:valid ~ .valid-feedback,
 .was-validated .form-control:valid ~ .valid-tooltip,
-.was-validated .ql-editor:valid ~ .valid-tooltip,
-.was-validated .ql-tooltip input:valid ~ .valid-tooltip,
-.ql-tooltip .was-validated input:valid ~ .valid-tooltip,
-.was-validated .select2-container .select2-selection--single:valid ~ .valid-tooltip,
-.select2-container .was-validated .select2-selection--single:valid ~ .valid-tooltip,
-.was-validated .select2-container--default .select2-selection--multiple:valid ~ .valid-tooltip,
-.select2-container--default .was-validated .select2-selection--multiple:valid ~ .valid-tooltip,
 .form-control.is-valid ~ .valid-feedback,
-.is-valid.ql-editor ~ .valid-feedback,
-.ql-tooltip input.is-valid ~ .valid-feedback,
-.select2-container .is-valid.select2-selection--single ~ .valid-feedback,
-.select2-container--default .is-valid.select2-selection--multiple ~ .valid-feedback,
 .form-control.is-valid ~ .valid-tooltip,
-.is-valid.ql-editor ~ .valid-tooltip,
-.ql-tooltip input.is-valid ~ .valid-tooltip,
-.select2-container .is-valid.select2-selection--single ~ .valid-tooltip,
-.select2-container--default .is-valid.select2-selection--multiple ~ .valid-tooltip,
 .was-validated
   .custom-select:valid ~ .valid-feedback,
 .was-validated
@@ -2879,18 +2721,7 @@ select.form-control-lg:not([size]):not([multiple]),
 }
 
 .was-validated .form-control:invalid,
-.was-validated .ql-editor:invalid,
-.was-validated .ql-tooltip input:invalid,
-.ql-tooltip .was-validated input:invalid,
-.was-validated .select2-container .select2-selection--single:invalid,
-.select2-container .was-validated .select2-selection--single:invalid,
-.was-validated .select2-container--default .select2-selection--multiple:invalid,
-.select2-container--default .was-validated .select2-selection--multiple:invalid,
 .form-control.is-invalid,
-.is-invalid.ql-editor,
-.ql-tooltip input.is-invalid,
-.select2-container .is-invalid.select2-selection--single,
-.select2-container--default .is-invalid.select2-selection--multiple,
 .was-validated
 .custom-select:invalid,
 .custom-select.is-invalid
@@ -2898,18 +2729,7 @@ select.form-control-lg:not([size]):not([multiple]),
     border-color: #e63757;
 }
 .was-validated .form-control:invalid:focus,
-.was-validated .ql-editor:invalid:focus,
-.was-validated .ql-tooltip input:invalid:focus,
-.ql-tooltip .was-validated input:invalid:focus,
-.was-validated .select2-container .select2-selection--single:invalid:focus,
-.select2-container .was-validated .select2-selection--single:invalid:focus,
-.was-validated .select2-container--default .select2-selection--multiple:invalid:focus,
-.select2-container--default .was-validated .select2-selection--multiple:invalid:focus,
 .form-control.is-invalid:focus,
-.is-invalid.ql-editor:focus,
-.ql-tooltip input.is-invalid:focus,
-.select2-container .is-invalid.select2-selection--single:focus,
-.select2-container--default .is-invalid.select2-selection--multiple:focus,
 .was-validated
   .custom-select:invalid:focus,
 .custom-select.is-invalid:focus
@@ -2918,31 +2738,9 @@ select.form-control-lg:not([size]):not([multiple]),
     box-shadow: 0 0 0 .15rem rgba(230, 55, 87, .25);
 }
 .was-validated .form-control:invalid ~ .invalid-feedback,
-.was-validated .ql-editor:invalid ~ .invalid-feedback,
-.was-validated .ql-tooltip input:invalid ~ .invalid-feedback,
-.ql-tooltip .was-validated input:invalid ~ .invalid-feedback,
-.was-validated .select2-container .select2-selection--single:invalid ~ .invalid-feedback,
-.select2-container .was-validated .select2-selection--single:invalid ~ .invalid-feedback,
-.was-validated .select2-container--default .select2-selection--multiple:invalid ~ .invalid-feedback,
-.select2-container--default .was-validated .select2-selection--multiple:invalid ~ .invalid-feedback,
 .was-validated .form-control:invalid ~ .invalid-tooltip,
-.was-validated .ql-editor:invalid ~ .invalid-tooltip,
-.was-validated .ql-tooltip input:invalid ~ .invalid-tooltip,
-.ql-tooltip .was-validated input:invalid ~ .invalid-tooltip,
-.was-validated .select2-container .select2-selection--single:invalid ~ .invalid-tooltip,
-.select2-container .was-validated .select2-selection--single:invalid ~ .invalid-tooltip,
-.was-validated .select2-container--default .select2-selection--multiple:invalid ~ .invalid-tooltip,
-.select2-container--default .was-validated .select2-selection--multiple:invalid ~ .invalid-tooltip,
 .form-control.is-invalid ~ .invalid-feedback,
-.is-invalid.ql-editor ~ .invalid-feedback,
-.ql-tooltip input.is-invalid ~ .invalid-feedback,
-.select2-container .is-invalid.select2-selection--single ~ .invalid-feedback,
-.select2-container--default .is-invalid.select2-selection--multiple ~ .invalid-feedback,
 .form-control.is-invalid ~ .invalid-tooltip,
-.is-invalid.ql-editor ~ .invalid-tooltip,
-.ql-tooltip input.is-invalid ~ .invalid-tooltip,
-.select2-container .is-invalid.select2-selection--single ~ .invalid-tooltip,
-.select2-container--default .is-invalid.select2-selection--multiple ~ .invalid-tooltip,
 .was-validated
   .custom-select:invalid ~ .invalid-feedback,
 .was-validated
@@ -3063,14 +2861,7 @@ select.form-control-lg:not([size]):not([multiple]),
         flex-flow: row wrap;
         align-items: center;
     }
-    .form-inline .form-control,
-    .form-inline .ql-editor,
-    .form-inline .ql-tooltip input,
-    .ql-tooltip .form-inline input,
-    .form-inline .select2-container .select2-selection--single,
-    .select2-container .form-inline .select2-selection--single,
-    .form-inline .select2-container--default .select2-selection--multiple,
-    .select2-container--default .form-inline .select2-selection--multiple
+    .form-inline .form-control
     {
         display: inline-block;
 
@@ -3116,10 +2907,7 @@ select.form-control-lg:not([size]):not([multiple]),
     }
 }
 
-.btn,
-.ql-tooltip .ql-preview,
-.ql-tooltip .ql-action::before,
-.ql-tooltip .ql-remove::before
+.btn
 {
     font-size: .9375rem;
     font-weight: 400;
@@ -3143,129 +2931,78 @@ select.form-control-lg:not([size]):not([multiple]),
 }
 @media screen and (prefers-reduced-motion: reduce)
 {
-    .btn,
-    .ql-tooltip .ql-preview,
-    .ql-tooltip .ql-action::before,
-    .ql-tooltip .ql-remove::before
+    .btn
     {
         transition: none;
     }
 }
 .btn:hover,
-.ql-tooltip .ql-preview:hover,
-.ql-tooltip .ql-action:hover::before,
-.ql-tooltip .ql-remove:hover::before,
-.btn:focus,
-.ql-tooltip .ql-preview:focus,
-.ql-tooltip .ql-action:focus::before,
-.ql-tooltip .ql-remove:focus::before
+.btn:focus
 {
     text-decoration: none;
 }
 .btn:focus,
-.ql-tooltip .ql-preview:focus,
-.ql-tooltip .ql-action:focus::before,
-.ql-tooltip .ql-remove:focus::before,
-.btn.focus,
-.ql-tooltip .focus.ql-preview,
-.ql-tooltip .focus.ql-action::before,
-.ql-tooltip .focus.ql-remove::before
+.btn.focus
 {
     outline: 0;
     box-shadow: 0 0 0 .15rem rgba(44, 123, 229, .25);
 }
 .btn.disabled,
-.ql-tooltip .disabled.ql-preview,
-.ql-tooltip .disabled.ql-action::before,
-.ql-tooltip .disabled.ql-remove::before,
-.btn:disabled,
-.ql-tooltip .ql-preview:disabled,
-.ql-tooltip .ql-action:disabled::before,
-.ql-tooltip .ql-remove:disabled::before
+.btn:disabled
 {
     opacity: .65;
 }
-.btn:not(:disabled):not(.disabled),
-.ql-tooltip .ql-preview:not(:disabled):not(.disabled),
-.ql-tooltip .ql-action:not(:disabled):not(.disabled)::before,
-.ql-tooltip .ql-remove:not(:disabled):not(.disabled)::before
+.btn:not(:disabled):not(.disabled)
 {
     cursor: pointer;
 }
 .btn:not(:disabled):not(.disabled):active,
-.ql-tooltip .ql-preview:not(:disabled):not(.disabled):active,
-.ql-tooltip .ql-action:not(:disabled):not(.disabled):active::before,
-.ql-tooltip .ql-remove:not(:disabled):not(.disabled):active::before,
-.btn:not(:disabled):not(.disabled).active,
-.ql-tooltip .ql-preview:not(:disabled):not(.disabled).active,
-.ql-tooltip .ql-action:not(:disabled):not(.disabled).active::before,
-.ql-tooltip .ql-remove:not(:disabled):not(.disabled).active::before
+.btn:not(:disabled):not(.disabled).active
 {
     background-image: none;
 }
 
 a.btn.disabled,
-.ql-tooltip a.disabled.ql-preview,
-.ql-tooltip a.disabled.ql-action::before,
-.ql-tooltip a.disabled.ql-remove::before,
-fieldset:disabled a.btn,
-fieldset:disabled .ql-tooltip a.ql-preview,
-.ql-tooltip fieldset:disabled a.ql-preview,
-fieldset:disabled .ql-tooltip a.ql-action::before,
-.ql-tooltip fieldset:disabled a.ql-action::before,
-fieldset:disabled .ql-tooltip a.ql-remove::before,
-.ql-tooltip fieldset:disabled a.ql-remove::before
+fieldset:disabled a.btn
 {
     pointer-events: none;
 }
 
-.btn-primary,
-.ql-tooltip .ql-action::before
+.btn-primary
 {
     color: #fff;
     border-color: #2c7be5; 
     background-color: #2c7be5;
 }
-.btn-primary:hover,
-.ql-tooltip .ql-action:hover::before
+.btn-primary:hover
 {
     color: #fff;
     border-color: #1862c6; 
     background-color: #1a68d1;
 }
 .btn-primary:focus,
-.ql-tooltip .ql-action:focus::before,
-.btn-primary.focus,
-.ql-tooltip .focus.ql-action::before
+.btn-primary.focus
 {
     box-shadow: 0 0 0 .15rem rgba(44, 123, 229, .5);
 }
 .btn-primary.disabled,
-.ql-tooltip .disabled.ql-action::before,
-.btn-primary:disabled,
-.ql-tooltip .ql-action:disabled::before
+.btn-primary:disabled
 {
     color: #fff;
     border-color: #2c7be5; 
     background-color: #2c7be5;
 }
 .btn-primary:not(:disabled):not(.disabled):active,
-.ql-tooltip .ql-action:not(:disabled):not(.disabled):active::before,
 .btn-primary:not(:disabled):not(.disabled).active,
-.ql-tooltip .ql-action:not(:disabled):not(.disabled).active::before,
-.show > .btn-primary.dropdown-toggle,
-.ql-tooltip .show > .dropdown-toggle.ql-action::before
+.show > .btn-primary.dropdown-toggle
 {
     color: #fff;
     border-color: #175dba; 
     background-color: #1862c6;
 }
 .btn-primary:not(:disabled):not(.disabled):active:focus,
-.ql-tooltip .ql-action:not(:disabled):not(.disabled):active:focus::before,
 .btn-primary:not(:disabled):not(.disabled).active:focus,
-.ql-tooltip .ql-action:not(:disabled):not(.disabled).active:focus::before,
-.show > .btn-primary.dropdown-toggle:focus,
-.ql-tooltip .show > .dropdown-toggle.ql-action:focus::before
+.show > .btn-primary.dropdown-toggle:focus
 {
     box-shadow: 0 0 0 .15rem rgba(44, 123, 229, .5);
 }
@@ -3543,53 +3280,41 @@ fieldset:disabled .ql-tooltip a.ql-remove::before,
     box-shadow: 0 0 0 .15rem rgba(18, 38, 63, .5);
 }
 
-.btn-white,
-.ql-tooltip .ql-remove::before
+.btn-white
 {
     color: #283e59;
     border-color: #fff; 
     background-color: #fff;
 }
-.btn-white:hover,
-.ql-tooltip .ql-remove:hover::before
+.btn-white:hover
 {
     color: #283e59;
     border-color: #e6e6e6; 
     background-color: #ececec;
 }
 .btn-white:focus,
-.ql-tooltip .ql-remove:focus::before,
-.btn-white.focus,
-.ql-tooltip .focus.ql-remove::before
+.btn-white.focus
 {
     box-shadow: 0 0 0 .15rem rgba(255, 255, 255, .5);
 }
 .btn-white.disabled,
-.ql-tooltip .disabled.ql-remove::before,
-.btn-white:disabled,
-.ql-tooltip .ql-remove:disabled::before
+.btn-white:disabled
 {
     color: #283e59;
     border-color: #fff; 
     background-color: #fff;
 }
 .btn-white:not(:disabled):not(.disabled):active,
-.ql-tooltip .ql-remove:not(:disabled):not(.disabled):active::before,
 .btn-white:not(:disabled):not(.disabled).active,
-.ql-tooltip .ql-remove:not(:disabled):not(.disabled).active::before,
-.show > .btn-white.dropdown-toggle,
-.ql-tooltip .show > .dropdown-toggle.ql-remove::before
+.show > .btn-white.dropdown-toggle
 {
     color: #283e59;
     border-color: #dfdfdf; 
     background-color: #e6e6e6;
 }
 .btn-white:not(:disabled):not(.disabled):active:focus,
-.ql-tooltip .ql-remove:not(:disabled):not(.disabled):active:focus::before,
 .btn-white:not(:disabled):not(.disabled).active:focus,
-.ql-tooltip .ql-remove:not(:disabled):not(.disabled).active:focus::before,
-.show > .btn-white.dropdown-toggle:focus,
-.ql-tooltip .show > .dropdown-toggle.ql-remove:focus::before
+.show > .btn-white.dropdown-toggle:focus
 {
     box-shadow: 0 0 0 .15rem rgba(255, 255, 255, .5);
 }
@@ -4023,16 +3748,14 @@ fieldset:disabled .ql-tooltip a.ql-remove::before,
     box-shadow: 0 0 0 .15rem rgba(249, 251, 253, .5);
 }
 
-.btn-link,
-.ql-tooltip .ql-preview
+.btn-link
 {
     font-weight: 400;
 
     color: #2c7be5;
     background-color: transparent;
 }
-.btn-link:hover,
-.ql-tooltip .ql-preview:hover
+.btn-link:hover
 {
     text-decoration: none;
 
@@ -4041,9 +3764,7 @@ fieldset:disabled .ql-tooltip a.ql-remove::before,
     background-color: transparent;
 }
 .btn-link:focus,
-.ql-tooltip .ql-preview:focus,
-.btn-link.focus,
-.ql-tooltip .focus.ql-preview
+.btn-link.focus
 {
     text-decoration: none;
 
@@ -4051,9 +3772,7 @@ fieldset:disabled .ql-tooltip a.ql-remove::before,
     box-shadow: none;
 }
 .btn-link:disabled,
-.ql-tooltip .ql-preview:disabled,
-.btn-link.disabled,
-.ql-tooltip .disabled.ql-preview
+.btn-link.disabled
 {
     pointer-events: none; 
 
@@ -4061,10 +3780,7 @@ fieldset:disabled .ql-tooltip a.ql-remove::before,
 }
 
 .btn-lg,
-.btn-group-lg > .btn,
-.ql-tooltip .btn-group-lg > .ql-preview,
-.ql-tooltip .btn-group-lg > .ql-action::before,
-.ql-tooltip .btn-group-lg > .ql-remove::before
+.btn-group-lg > .btn
 {
     font-size: 1.0625rem;
     line-height: 1.5;
@@ -4075,13 +3791,7 @@ fieldset:disabled .ql-tooltip a.ql-remove::before,
 }
 
 .btn-sm,
-.btn-group-sm > .btn,
-.ql-tooltip .btn-group-sm > .ql-preview,
-.ql-tooltip .btn-group-sm > .ql-action::before,
-.ql-tooltip .btn-group-sm > .ql-remove::before,
-.ql-tooltip .ql-preview,
-.ql-tooltip .ql-action::before,
-.ql-tooltip .ql-remove::before
+.btn-group-sm > .btn
 {
     font-size: .8125rem;
     line-height: 1.75;
@@ -4429,147 +4139,33 @@ input[type='button'].btn-block
     vertical-align: middle;
 }
 .btn-group > .btn,
-.ql-tooltip .btn-group > .ql-preview,
-.ql-tooltip .btn-group > .ql-action::before,
-.ql-tooltip .btn-group > .ql-remove::before,
-.btn-group-vertical > .btn,
-.ql-tooltip .btn-group-vertical > .ql-preview,
-.ql-tooltip .btn-group-vertical > .ql-action::before,
-.ql-tooltip .btn-group-vertical > .ql-remove::before
+.btn-group-vertical > .btn
 {
     position: relative;
 
     flex: 0 1 auto;
 }
 .btn-group > .btn:hover,
-.ql-tooltip .btn-group > .ql-preview:hover,
-.ql-tooltip .btn-group > .ql-action:hover::before,
-.ql-tooltip .btn-group > .ql-remove:hover::before,
-.btn-group-vertical > .btn:hover,
-.ql-tooltip .btn-group-vertical > .ql-preview:hover,
-.ql-tooltip .btn-group-vertical > .ql-action:hover::before,
-.ql-tooltip .btn-group-vertical > .ql-remove:hover::before
+.btn-group-vertical > .btn:hover
 {
     z-index: 1;
 }
 .btn-group > .btn:focus,
-.ql-tooltip .btn-group > .ql-preview:focus,
-.ql-tooltip .btn-group > .ql-action:focus::before,
-.ql-tooltip .btn-group > .ql-remove:focus::before,
 .btn-group > .btn:active,
-.ql-tooltip .btn-group > .ql-preview:active,
-.ql-tooltip .btn-group > .ql-action:active::before,
-.ql-tooltip .btn-group > .ql-remove:active::before,
 .btn-group > .btn.active,
-.ql-tooltip .btn-group > .active.ql-preview,
-.ql-tooltip .btn-group > .active.ql-action::before,
-.ql-tooltip .btn-group > .active.ql-remove::before,
 .btn-group-vertical > .btn:focus,
-.ql-tooltip .btn-group-vertical > .ql-preview:focus,
-.ql-tooltip .btn-group-vertical > .ql-action:focus::before,
-.ql-tooltip .btn-group-vertical > .ql-remove:focus::before,
 .btn-group-vertical > .btn:active,
-.ql-tooltip .btn-group-vertical > .ql-preview:active,
-.ql-tooltip .btn-group-vertical > .ql-action:active::before,
-.ql-tooltip .btn-group-vertical > .ql-remove:active::before,
-.btn-group-vertical > .btn.active,
-.ql-tooltip .btn-group-vertical > .active.ql-preview,
-.ql-tooltip .btn-group-vertical > .active.ql-action::before,
-.ql-tooltip .btn-group-vertical > .active.ql-remove::before
+.btn-group-vertical > .btn.active
 {
     z-index: 1;
 }
 .btn-group .btn + .btn,
-.btn-group .ql-tooltip .ql-preview + .btn,
-.ql-tooltip .btn-group .ql-preview + .btn,
-.btn-group .ql-tooltip .ql-action::before + .btn,
-.ql-tooltip .btn-group .ql-action::before + .btn,
-.btn-group .ql-tooltip .ql-remove::before + .btn,
-.ql-tooltip .btn-group .ql-remove::before + .btn,
-.btn-group .ql-tooltip .btn + .ql-preview,
-.ql-tooltip .btn-group .btn + .ql-preview,
-.btn-group .ql-tooltip .ql-preview + .ql-preview,
-.ql-tooltip .btn-group .ql-preview + .ql-preview,
-.btn-group .ql-tooltip .ql-action::before + .ql-preview,
-.ql-tooltip .btn-group .ql-action::before + .ql-preview,
-.btn-group .ql-tooltip .ql-remove::before + .ql-preview,
-.ql-tooltip .btn-group .ql-remove::before + .ql-preview,
-.btn-group .ql-tooltip .btn + .ql-action::before,
-.ql-tooltip .btn-group .btn + .ql-action::before,
-.btn-group .ql-tooltip .ql-preview + .ql-action::before,
-.ql-tooltip .btn-group .ql-preview + .ql-action::before,
-.btn-group .ql-tooltip .ql-action::before + .ql-action::before,
-.ql-tooltip .btn-group .ql-action::before + .ql-action::before,
-.btn-group .ql-tooltip .ql-remove::before + .ql-action::before,
-.ql-tooltip .btn-group .ql-remove::before + .ql-action::before,
-.btn-group .ql-tooltip .btn + .ql-remove::before,
-.ql-tooltip .btn-group .btn + .ql-remove::before,
-.btn-group .ql-tooltip .ql-preview + .ql-remove::before,
-.ql-tooltip .btn-group .ql-preview + .ql-remove::before,
-.btn-group .ql-tooltip .ql-action::before + .ql-remove::before,
-.ql-tooltip .btn-group .ql-action::before + .ql-remove::before,
-.btn-group .ql-tooltip .ql-remove::before + .ql-remove::before,
-.ql-tooltip .btn-group .ql-remove::before + .ql-remove::before,
 .btn-group .btn + .btn-group,
-.btn-group .ql-tooltip .ql-preview + .btn-group,
-.ql-tooltip .btn-group .ql-preview + .btn-group,
-.btn-group .ql-tooltip .ql-action::before + .btn-group,
-.ql-tooltip .btn-group .ql-action::before + .btn-group,
-.btn-group .ql-tooltip .ql-remove::before + .btn-group,
-.ql-tooltip .btn-group .ql-remove::before + .btn-group,
 .btn-group .btn-group + .btn,
-.btn-group .ql-tooltip .btn-group + .ql-preview,
-.ql-tooltip .btn-group .btn-group + .ql-preview,
-.btn-group .ql-tooltip .btn-group + .ql-action::before,
-.ql-tooltip .btn-group .btn-group + .ql-action::before,
-.btn-group .ql-tooltip .btn-group + .ql-remove::before,
-.ql-tooltip .btn-group .btn-group + .ql-remove::before,
 .btn-group .btn-group + .btn-group,
 .btn-group-vertical .btn + .btn,
-.btn-group-vertical .ql-tooltip .ql-preview + .btn,
-.ql-tooltip .btn-group-vertical .ql-preview + .btn,
-.btn-group-vertical .ql-tooltip .ql-action::before + .btn,
-.ql-tooltip .btn-group-vertical .ql-action::before + .btn,
-.btn-group-vertical .ql-tooltip .ql-remove::before + .btn,
-.ql-tooltip .btn-group-vertical .ql-remove::before + .btn,
-.btn-group-vertical .ql-tooltip .btn + .ql-preview,
-.ql-tooltip .btn-group-vertical .btn + .ql-preview,
-.btn-group-vertical .ql-tooltip .ql-preview + .ql-preview,
-.ql-tooltip .btn-group-vertical .ql-preview + .ql-preview,
-.btn-group-vertical .ql-tooltip .ql-action::before + .ql-preview,
-.ql-tooltip .btn-group-vertical .ql-action::before + .ql-preview,
-.btn-group-vertical .ql-tooltip .ql-remove::before + .ql-preview,
-.ql-tooltip .btn-group-vertical .ql-remove::before + .ql-preview,
-.btn-group-vertical .ql-tooltip .btn + .ql-action::before,
-.ql-tooltip .btn-group-vertical .btn + .ql-action::before,
-.btn-group-vertical .ql-tooltip .ql-preview + .ql-action::before,
-.ql-tooltip .btn-group-vertical .ql-preview + .ql-action::before,
-.btn-group-vertical .ql-tooltip .ql-action::before + .ql-action::before,
-.ql-tooltip .btn-group-vertical .ql-action::before + .ql-action::before,
-.btn-group-vertical .ql-tooltip .ql-remove::before + .ql-action::before,
-.ql-tooltip .btn-group-vertical .ql-remove::before + .ql-action::before,
-.btn-group-vertical .ql-tooltip .btn + .ql-remove::before,
-.ql-tooltip .btn-group-vertical .btn + .ql-remove::before,
-.btn-group-vertical .ql-tooltip .ql-preview + .ql-remove::before,
-.ql-tooltip .btn-group-vertical .ql-preview + .ql-remove::before,
-.btn-group-vertical .ql-tooltip .ql-action::before + .ql-remove::before,
-.ql-tooltip .btn-group-vertical .ql-action::before + .ql-remove::before,
-.btn-group-vertical .ql-tooltip .ql-remove::before + .ql-remove::before,
-.ql-tooltip .btn-group-vertical .ql-remove::before + .ql-remove::before,
 .btn-group-vertical .btn + .btn-group,
-.btn-group-vertical .ql-tooltip .ql-preview + .btn-group,
-.ql-tooltip .btn-group-vertical .ql-preview + .btn-group,
-.btn-group-vertical .ql-tooltip .ql-action::before + .btn-group,
-.ql-tooltip .btn-group-vertical .ql-action::before + .btn-group,
-.btn-group-vertical .ql-tooltip .ql-remove::before + .btn-group,
-.ql-tooltip .btn-group-vertical .ql-remove::before + .btn-group,
 .btn-group-vertical .btn-group + .btn,
-.btn-group-vertical .ql-tooltip .btn-group + .ql-preview,
-.ql-tooltip .btn-group-vertical .btn-group + .ql-preview,
-.btn-group-vertical .ql-tooltip .btn-group + .ql-action::before,
-.ql-tooltip .btn-group-vertical .btn-group + .ql-action::before,
-.btn-group-vertical .ql-tooltip .btn-group + .ql-remove::before,
-.ql-tooltip .btn-group-vertical .btn-group + .ql-remove::before,
 .btn-group-vertical .btn-group + .btn-group
 {
     margin-left: -1px;
@@ -4587,35 +4183,20 @@ input[type='button'].btn-block
     width: auto;
 }
 
-.btn-group > .btn:first-child,
-.ql-tooltip .btn-group > .ql-preview:first-child,
-.ql-tooltip .btn-group > .ql-action:first-child::before,
-.ql-tooltip .btn-group > .ql-remove:first-child::before
+.btn-group > .btn:first-child
 {
     margin-left: 0;
 }
 
 .btn-group > .btn:not(:last-child):not(.dropdown-toggle),
-.ql-tooltip .btn-group > .ql-preview:not(:last-child):not(.dropdown-toggle),
-.ql-tooltip .btn-group > .ql-action:not(:last-child):not(.dropdown-toggle)::before,
-.ql-tooltip .btn-group > .ql-remove:not(:last-child):not(.dropdown-toggle)::before,
-.btn-group > .btn-group:not(:last-child) > .btn,
-.ql-tooltip .btn-group > .btn-group:not(:last-child) > .ql-preview,
-.ql-tooltip .btn-group > .btn-group:not(:last-child) > .ql-action::before,
-.ql-tooltip .btn-group > .btn-group:not(:last-child) > .ql-remove::before
+.btn-group > .btn-group:not(:last-child) > .btn
 {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
 
 .btn-group > .btn:not(:first-child),
-.ql-tooltip .btn-group > .ql-preview:not(:first-child),
-.ql-tooltip .btn-group > .ql-action:not(:first-child)::before,
-.ql-tooltip .btn-group > .ql-remove:not(:first-child)::before,
-.btn-group > .btn-group:not(:first-child) > .btn,
-.ql-tooltip .btn-group > .btn-group:not(:first-child) > .ql-preview,
-.ql-tooltip .btn-group > .btn-group:not(:first-child) > .ql-action::before,
-.ql-tooltip .btn-group > .btn-group:not(:first-child) > .ql-remove::before
+.btn-group > .btn-group:not(:first-child) > .btn
 {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
@@ -4638,23 +4219,14 @@ input[type='button'].btn-block
 }
 
 .btn-sm + .dropdown-toggle-split,
-.btn-group-sm > .btn + .dropdown-toggle-split,
-.ql-tooltip .btn-group-sm > .ql-preview + .dropdown-toggle-split,
-.ql-tooltip .btn-group-sm > .ql-action::before + .dropdown-toggle-split,
-.ql-tooltip .btn-group-sm > .ql-remove::before + .dropdown-toggle-split,
-.ql-tooltip .ql-preview + .dropdown-toggle-split,
-.ql-tooltip .ql-action::before + .dropdown-toggle-split,
-.ql-tooltip .ql-remove::before + .dropdown-toggle-split
+.btn-group-sm > .btn + .dropdown-toggle-split
 {
     padding-right: .375rem;
     padding-left: .375rem;
 }
 
 .btn-lg + .dropdown-toggle-split,
-.btn-group-lg > .btn + .dropdown-toggle-split,
-.ql-tooltip .btn-group-lg > .ql-preview + .dropdown-toggle-split,
-.ql-tooltip .btn-group-lg > .ql-action::before + .dropdown-toggle-split,
-.ql-tooltip .btn-group-lg > .ql-remove::before + .dropdown-toggle-split
+.btn-group-lg > .btn + .dropdown-toggle-split
 {
     padding-right: .75rem;
     padding-left: .75rem;
@@ -4668,97 +4240,40 @@ input[type='button'].btn-block
     justify-content: center;
 }
 .btn-group-vertical .btn,
-.btn-group-vertical .ql-tooltip .ql-preview,
-.ql-tooltip .btn-group-vertical .ql-preview,
-.btn-group-vertical .ql-tooltip .ql-action::before,
-.ql-tooltip .btn-group-vertical .ql-action::before,
-.btn-group-vertical .ql-tooltip .ql-remove::before,
-.ql-tooltip .btn-group-vertical .ql-remove::before,
 .btn-group-vertical .btn-group
 {
     width: 100%;
 }
 .btn-group-vertical > .btn + .btn,
-.ql-tooltip .btn-group-vertical > .ql-preview + .btn,
-.ql-tooltip .btn-group-vertical > .ql-action::before + .btn,
-.ql-tooltip .btn-group-vertical > .ql-remove::before + .btn,
-.ql-tooltip .btn-group-vertical > .btn + .ql-preview,
-.ql-tooltip .btn-group-vertical > .ql-preview + .ql-preview,
-.ql-tooltip .btn-group-vertical > .ql-action::before + .ql-preview,
-.ql-tooltip .btn-group-vertical > .ql-remove::before + .ql-preview,
-.ql-tooltip .btn-group-vertical > .btn + .ql-action::before,
-.ql-tooltip .btn-group-vertical > .ql-preview + .ql-action::before,
-.ql-tooltip .btn-group-vertical > .ql-action::before + .ql-action::before,
-.ql-tooltip .btn-group-vertical > .ql-remove::before + .ql-action::before,
-.ql-tooltip .btn-group-vertical > .btn + .ql-remove::before,
-.ql-tooltip .btn-group-vertical > .ql-preview + .ql-remove::before,
-.ql-tooltip .btn-group-vertical > .ql-action::before + .ql-remove::before,
-.ql-tooltip .btn-group-vertical > .ql-remove::before + .ql-remove::before,
 .btn-group-vertical > .btn + .btn-group,
-.ql-tooltip .btn-group-vertical > .ql-preview + .btn-group,
-.ql-tooltip .btn-group-vertical > .ql-action::before + .btn-group,
-.ql-tooltip .btn-group-vertical > .ql-remove::before + .btn-group,
 .btn-group-vertical > .btn-group + .btn,
-.ql-tooltip .btn-group-vertical > .btn-group + .ql-preview,
-.ql-tooltip .btn-group-vertical > .btn-group + .ql-action::before,
-.ql-tooltip .btn-group-vertical > .btn-group + .ql-remove::before,
 .btn-group-vertical > .btn-group + .btn-group
 {
     margin-top: -1px;
     margin-left: 0;
 }
 .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),
-.ql-tooltip .btn-group-vertical > .ql-preview:not(:last-child):not(.dropdown-toggle),
-.ql-tooltip .btn-group-vertical > .ql-action:not(:last-child):not(.dropdown-toggle)::before,
-.ql-tooltip .btn-group-vertical > .ql-remove:not(:last-child):not(.dropdown-toggle)::before,
-.btn-group-vertical > .btn-group:not(:last-child) > .btn,
-.ql-tooltip .btn-group-vertical > .btn-group:not(:last-child) > .ql-preview,
-.ql-tooltip .btn-group-vertical > .btn-group:not(:last-child) > .ql-action::before,
-.ql-tooltip .btn-group-vertical > .btn-group:not(:last-child) > .ql-remove::before
+.btn-group-vertical > .btn-group:not(:last-child) > .btn
 {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
 }
 .btn-group-vertical > .btn:not(:first-child),
-.ql-tooltip .btn-group-vertical > .ql-preview:not(:first-child),
-.ql-tooltip .btn-group-vertical > .ql-action:not(:first-child)::before,
-.ql-tooltip .btn-group-vertical > .ql-remove:not(:first-child)::before,
-.btn-group-vertical > .btn-group:not(:first-child) > .btn,
-.ql-tooltip .btn-group-vertical > .btn-group:not(:first-child) > .ql-preview,
-.ql-tooltip .btn-group-vertical > .btn-group:not(:first-child) > .ql-action::before,
-.ql-tooltip .btn-group-vertical > .btn-group:not(:first-child) > .ql-remove::before
+.btn-group-vertical > .btn-group:not(:first-child) > .btn
 {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
 
 .btn-group-toggle > .btn,
-.ql-tooltip .btn-group-toggle > .ql-preview,
-.ql-tooltip .btn-group-toggle > .ql-action::before,
-.ql-tooltip .btn-group-toggle > .ql-remove::before,
-.btn-group-toggle > .btn-group > .btn,
-.ql-tooltip .btn-group-toggle > .btn-group > .ql-preview,
-.ql-tooltip .btn-group-toggle > .btn-group > .ql-action::before,
-.ql-tooltip .btn-group-toggle > .btn-group > .ql-remove::before
+.btn-group-toggle > .btn-group > .btn
 {
     margin-bottom: 0;
 }
 .btn-group-toggle > .btn input[type='radio'],
-.ql-tooltip .btn-group-toggle > .ql-preview input[type='radio'],
-.ql-tooltip .btn-group-toggle > .ql-action::before input[type='radio'],
-.ql-tooltip .btn-group-toggle > .ql-remove::before input[type='radio'],
 .btn-group-toggle > .btn input[type='checkbox'],
-.ql-tooltip .btn-group-toggle > .ql-preview input[type='checkbox'],
-.ql-tooltip .btn-group-toggle > .ql-action::before input[type='checkbox'],
-.ql-tooltip .btn-group-toggle > .ql-remove::before input[type='checkbox'],
 .btn-group-toggle > .btn-group > .btn input[type='radio'],
-.ql-tooltip .btn-group-toggle > .btn-group > .ql-preview input[type='radio'],
-.ql-tooltip .btn-group-toggle > .btn-group > .ql-action::before input[type='radio'],
-.ql-tooltip .btn-group-toggle > .btn-group > .ql-remove::before input[type='radio'],
-.btn-group-toggle > .btn-group > .btn input[type='checkbox'],
-.ql-tooltip .btn-group-toggle > .btn-group > .ql-preview input[type='checkbox'],
-.ql-tooltip .btn-group-toggle > .btn-group > .ql-action::before input[type='checkbox'],
-.ql-tooltip .btn-group-toggle > .btn-group > .ql-remove::before input[type='checkbox']
+.btn-group-toggle > .btn-group > .btn input[type='checkbox']
 {
     position: absolute;
 
@@ -4779,10 +4294,6 @@ input[type='button'].btn-block
     align-items: stretch;
 }
 .input-group > .form-control,
-.input-group > .ql-editor,
-.ql-tooltip .input-group > input,
-.select2-container .input-group > .select2-selection--single,
-.select2-container--default .input-group > .select2-selection--multiple,
 .input-group > .custom-select,
 .input-group > .custom-file
 {
@@ -4794,88 +4305,30 @@ input[type='button'].btn-block
     flex: 1 1 auto;
 }
 .input-group > .form-control + .form-control,
-.input-group > .ql-editor + .form-control,
-.ql-tooltip .input-group > input + .form-control,
-.select2-container .input-group > .select2-selection--single + .form-control,
-.select2-container--default .input-group > .select2-selection--multiple + .form-control,
-.input-group > .form-control + .ql-editor,
-.input-group > .ql-editor + .ql-editor,
-.ql-tooltip .input-group > input + .ql-editor,
-.select2-container .input-group > .select2-selection--single + .ql-editor,
-.select2-container--default .input-group > .select2-selection--multiple + .ql-editor,
-.ql-tooltip .input-group > .form-control + input,
-.ql-tooltip .input-group > .ql-editor + input,
-.ql-tooltip .input-group > input + input,
-.select2-container .ql-tooltip .input-group > .select2-selection--single + input,
-.ql-tooltip .select2-container .input-group > .select2-selection--single + input,
-.select2-container--default .ql-tooltip .input-group > .select2-selection--multiple + input,
-.ql-tooltip .select2-container--default .input-group > .select2-selection--multiple + input,
-.select2-container .input-group > .form-control + .select2-selection--single,
-.select2-container .input-group > .ql-editor + .select2-selection--single,
-.ql-tooltip .select2-container .input-group > input + .select2-selection--single,
-.select2-container .ql-tooltip .input-group > input + .select2-selection--single,
-.select2-container .input-group > .select2-selection--single + .select2-selection--single,
-.select2-container--default .select2-container .input-group > .select2-selection--multiple + .select2-selection--single,
-.select2-container .select2-container--default .input-group > .select2-selection--multiple + .select2-selection--single,
-.select2-container--default .input-group > .form-control + .select2-selection--multiple,
-.select2-container--default .input-group > .ql-editor + .select2-selection--multiple,
-.ql-tooltip .select2-container--default .input-group > input + .select2-selection--multiple,
-.select2-container--default .ql-tooltip .input-group > input + .select2-selection--multiple,
-.select2-container .select2-container--default .input-group > .select2-selection--single + .select2-selection--multiple,
-.select2-container--default .select2-container .input-group > .select2-selection--single + .select2-selection--multiple,
-.select2-container--default .input-group > .select2-selection--multiple + .select2-selection--multiple,
 .input-group > .form-control + .custom-select,
-.input-group > .ql-editor + .custom-select,
-.ql-tooltip .input-group > input + .custom-select,
-.select2-container .input-group > .select2-selection--single + .custom-select,
-.select2-container--default .input-group > .select2-selection--multiple + .custom-select,
 .input-group > .form-control + .custom-file,
-.input-group > .ql-editor + .custom-file,
-.ql-tooltip .input-group > input + .custom-file,
-.select2-container .input-group > .select2-selection--single + .custom-file,
-.select2-container--default .input-group > .select2-selection--multiple + .custom-file,
 .input-group > .custom-select + .form-control,
-.input-group > .custom-select + .ql-editor,
-.ql-tooltip .input-group > .custom-select + input,
-.select2-container .input-group > .custom-select + .select2-selection--single,
-.select2-container--default .input-group > .custom-select + .select2-selection--multiple,
 .input-group > .custom-select + .custom-select,
 .input-group > .custom-select + .custom-file,
 .input-group > .custom-file + .form-control,
-.input-group > .custom-file + .ql-editor,
-.ql-tooltip .input-group > .custom-file + input,
-.select2-container .input-group > .custom-file + .select2-selection--single,
-.select2-container--default .input-group > .custom-file + .select2-selection--multiple,
 .input-group > .custom-file + .custom-select,
 .input-group > .custom-file + .custom-file
 {
     margin-left: -1px;
 }
 .input-group > .form-control:focus,
-.input-group > .ql-editor:focus,
-.ql-tooltip .input-group > input:focus,
-.select2-container .input-group > .select2-selection--single:focus,
-.select2-container--default .input-group > .select2-selection--multiple:focus,
 .input-group > .custom-select:focus,
 .input-group > .custom-file .custom-file-input:focus ~ .custom-file-label
 {
     z-index: 3;
 }
 .input-group > .form-control:not(:last-child),
-.input-group > .ql-editor:not(:last-child),
-.ql-tooltip .input-group > input:not(:last-child),
-.select2-container .input-group > .select2-selection--single:not(:last-child),
-.select2-container--default .input-group > .select2-selection--multiple:not(:last-child),
 .input-group > .custom-select:not(:last-child)
 {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
 .input-group > .form-control:not(:first-child),
-.input-group > .ql-editor:not(:first-child),
-.ql-tooltip .input-group > input:not(:first-child),
-.select2-container .input-group > .select2-selection--single:not(:first-child),
-.select2-container--default .input-group > .select2-selection--multiple:not(:first-child),
 .input-group > .custom-select:not(:first-child)
 {
     border-top-left-radius: 0;
@@ -4905,115 +4358,19 @@ input[type='button'].btn-block
     display: flex;
 }
 .input-group-prepend .btn,
-.input-group-prepend .ql-tooltip .ql-preview,
-.ql-tooltip .input-group-prepend .ql-preview,
-.input-group-prepend .ql-tooltip .ql-action::before,
-.ql-tooltip .input-group-prepend .ql-action::before,
-.input-group-prepend .ql-tooltip .ql-remove::before,
-.ql-tooltip .input-group-prepend .ql-remove::before,
-.input-group-append .btn,
-.input-group-append .ql-tooltip .ql-preview,
-.ql-tooltip .input-group-append .ql-preview,
-.input-group-append .ql-tooltip .ql-action::before,
-.ql-tooltip .input-group-append .ql-action::before,
-.input-group-append .ql-tooltip .ql-remove::before,
-.ql-tooltip .input-group-append .ql-remove::before
+.input-group-append .btn
 {
     position: relative;
     z-index: 2;
 }
 .input-group-prepend .btn + .btn,
-.input-group-prepend .ql-tooltip .ql-preview + .btn,
-.ql-tooltip .input-group-prepend .ql-preview + .btn,
-.input-group-prepend .ql-tooltip .ql-action::before + .btn,
-.ql-tooltip .input-group-prepend .ql-action::before + .btn,
-.input-group-prepend .ql-tooltip .ql-remove::before + .btn,
-.ql-tooltip .input-group-prepend .ql-remove::before + .btn,
-.input-group-prepend .ql-tooltip .btn + .ql-preview,
-.ql-tooltip .input-group-prepend .btn + .ql-preview,
-.input-group-prepend .ql-tooltip .ql-preview + .ql-preview,
-.ql-tooltip .input-group-prepend .ql-preview + .ql-preview,
-.input-group-prepend .ql-tooltip .ql-action::before + .ql-preview,
-.ql-tooltip .input-group-prepend .ql-action::before + .ql-preview,
-.input-group-prepend .ql-tooltip .ql-remove::before + .ql-preview,
-.ql-tooltip .input-group-prepend .ql-remove::before + .ql-preview,
-.input-group-prepend .ql-tooltip .btn + .ql-action::before,
-.ql-tooltip .input-group-prepend .btn + .ql-action::before,
-.input-group-prepend .ql-tooltip .ql-preview + .ql-action::before,
-.ql-tooltip .input-group-prepend .ql-preview + .ql-action::before,
-.input-group-prepend .ql-tooltip .ql-action::before + .ql-action::before,
-.ql-tooltip .input-group-prepend .ql-action::before + .ql-action::before,
-.input-group-prepend .ql-tooltip .ql-remove::before + .ql-action::before,
-.ql-tooltip .input-group-prepend .ql-remove::before + .ql-action::before,
-.input-group-prepend .ql-tooltip .btn + .ql-remove::before,
-.ql-tooltip .input-group-prepend .btn + .ql-remove::before,
-.input-group-prepend .ql-tooltip .ql-preview + .ql-remove::before,
-.ql-tooltip .input-group-prepend .ql-preview + .ql-remove::before,
-.input-group-prepend .ql-tooltip .ql-action::before + .ql-remove::before,
-.ql-tooltip .input-group-prepend .ql-action::before + .ql-remove::before,
-.input-group-prepend .ql-tooltip .ql-remove::before + .ql-remove::before,
-.ql-tooltip .input-group-prepend .ql-remove::before + .ql-remove::before,
 .input-group-prepend .btn + .input-group-text,
-.input-group-prepend .ql-tooltip .ql-preview + .input-group-text,
-.ql-tooltip .input-group-prepend .ql-preview + .input-group-text,
-.input-group-prepend .ql-tooltip .ql-action::before + .input-group-text,
-.ql-tooltip .input-group-prepend .ql-action::before + .input-group-text,
-.input-group-prepend .ql-tooltip .ql-remove::before + .input-group-text,
-.ql-tooltip .input-group-prepend .ql-remove::before + .input-group-text,
 .input-group-prepend .input-group-text + .input-group-text,
 .input-group-prepend .input-group-text + .btn,
-.input-group-prepend .ql-tooltip .input-group-text + .ql-preview,
-.ql-tooltip .input-group-prepend .input-group-text + .ql-preview,
-.input-group-prepend .ql-tooltip .input-group-text + .ql-action::before,
-.ql-tooltip .input-group-prepend .input-group-text + .ql-action::before,
-.input-group-prepend .ql-tooltip .input-group-text + .ql-remove::before,
-.ql-tooltip .input-group-prepend .input-group-text + .ql-remove::before,
 .input-group-append .btn + .btn,
-.input-group-append .ql-tooltip .ql-preview + .btn,
-.ql-tooltip .input-group-append .ql-preview + .btn,
-.input-group-append .ql-tooltip .ql-action::before + .btn,
-.ql-tooltip .input-group-append .ql-action::before + .btn,
-.input-group-append .ql-tooltip .ql-remove::before + .btn,
-.ql-tooltip .input-group-append .ql-remove::before + .btn,
-.input-group-append .ql-tooltip .btn + .ql-preview,
-.ql-tooltip .input-group-append .btn + .ql-preview,
-.input-group-append .ql-tooltip .ql-preview + .ql-preview,
-.ql-tooltip .input-group-append .ql-preview + .ql-preview,
-.input-group-append .ql-tooltip .ql-action::before + .ql-preview,
-.ql-tooltip .input-group-append .ql-action::before + .ql-preview,
-.input-group-append .ql-tooltip .ql-remove::before + .ql-preview,
-.ql-tooltip .input-group-append .ql-remove::before + .ql-preview,
-.input-group-append .ql-tooltip .btn + .ql-action::before,
-.ql-tooltip .input-group-append .btn + .ql-action::before,
-.input-group-append .ql-tooltip .ql-preview + .ql-action::before,
-.ql-tooltip .input-group-append .ql-preview + .ql-action::before,
-.input-group-append .ql-tooltip .ql-action::before + .ql-action::before,
-.ql-tooltip .input-group-append .ql-action::before + .ql-action::before,
-.input-group-append .ql-tooltip .ql-remove::before + .ql-action::before,
-.ql-tooltip .input-group-append .ql-remove::before + .ql-action::before,
-.input-group-append .ql-tooltip .btn + .ql-remove::before,
-.ql-tooltip .input-group-append .btn + .ql-remove::before,
-.input-group-append .ql-tooltip .ql-preview + .ql-remove::before,
-.ql-tooltip .input-group-append .ql-preview + .ql-remove::before,
-.input-group-append .ql-tooltip .ql-action::before + .ql-remove::before,
-.ql-tooltip .input-group-append .ql-action::before + .ql-remove::before,
-.input-group-append .ql-tooltip .ql-remove::before + .ql-remove::before,
-.ql-tooltip .input-group-append .ql-remove::before + .ql-remove::before,
 .input-group-append .btn + .input-group-text,
-.input-group-append .ql-tooltip .ql-preview + .input-group-text,
-.ql-tooltip .input-group-append .ql-preview + .input-group-text,
-.input-group-append .ql-tooltip .ql-action::before + .input-group-text,
-.ql-tooltip .input-group-append .ql-action::before + .input-group-text,
-.input-group-append .ql-tooltip .ql-remove::before + .input-group-text,
-.ql-tooltip .input-group-append .ql-remove::before + .input-group-text,
 .input-group-append .input-group-text + .input-group-text,
-.input-group-append .input-group-text + .btn,
-.input-group-append .ql-tooltip .input-group-text + .ql-preview,
-.ql-tooltip .input-group-append .input-group-text + .ql-preview,
-.input-group-append .ql-tooltip .input-group-text + .ql-action::before,
-.ql-tooltip .input-group-append .input-group-text + .ql-action::before,
-.input-group-append .ql-tooltip .input-group-text + .ql-remove::before,
-.ql-tooltip .input-group-append .input-group-text + .ql-remove::before
+.input-group-append .input-group-text + .btn
 {
     margin-left: -1px;
 }
@@ -5056,19 +4413,10 @@ input[type='button'].btn-block
 }
 
 .input-group > .input-group-prepend > .btn,
-.ql-tooltip .input-group > .input-group-prepend > .ql-preview,
-.ql-tooltip .input-group > .input-group-prepend > .ql-action::before,
-.ql-tooltip .input-group > .input-group-prepend > .ql-remove::before,
 .input-group > .input-group-prepend > .input-group-text,
 .input-group > .input-group-append:not(:last-child) > .btn,
-.ql-tooltip .input-group > .input-group-append:not(:last-child) > .ql-preview,
-.ql-tooltip .input-group > .input-group-append:not(:last-child) > .ql-action::before,
-.ql-tooltip .input-group > .input-group-append:not(:last-child) > .ql-remove::before,
 .input-group > .input-group-append:not(:last-child) > .input-group-text,
 .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
-.ql-tooltip .input-group > .input-group-append:last-child > .ql-preview:not(:last-child):not(.dropdown-toggle),
-.ql-tooltip .input-group > .input-group-append:last-child > .ql-action:not(:last-child):not(.dropdown-toggle)::before,
-.ql-tooltip .input-group > .input-group-append:last-child > .ql-remove:not(:last-child):not(.dropdown-toggle)::before,
 .input-group > .input-group-append:last-child > .input-group-text:not(:last-child)
 {
     border-top-right-radius: 0;
@@ -5076,19 +4424,10 @@ input[type='button'].btn-block
 }
 
 .input-group > .input-group-append > .btn,
-.ql-tooltip .input-group > .input-group-append > .ql-preview,
-.ql-tooltip .input-group > .input-group-append > .ql-action::before,
-.ql-tooltip .input-group > .input-group-append > .ql-remove::before,
 .input-group > .input-group-append > .input-group-text,
 .input-group > .input-group-prepend:not(:first-child) > .btn,
-.ql-tooltip .input-group > .input-group-prepend:not(:first-child) > .ql-preview,
-.ql-tooltip .input-group > .input-group-prepend:not(:first-child) > .ql-action::before,
-.ql-tooltip .input-group > .input-group-prepend:not(:first-child) > .ql-remove::before,
 .input-group > .input-group-prepend:not(:first-child) > .input-group-text,
 .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
-.ql-tooltip .input-group > .input-group-prepend:first-child > .ql-preview:not(:first-child),
-.ql-tooltip .input-group > .input-group-prepend:first-child > .ql-action:not(:first-child)::before,
-.ql-tooltip .input-group > .input-group-prepend:first-child > .ql-remove:not(:first-child)::before,
 .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child)
 {
     border-top-left-radius: 0;
@@ -6618,10 +5957,7 @@ input[type='button'].btn-block
     display: none;
 }
 
-.btn .badge,
-.ql-tooltip .ql-preview .badge,
-.ql-tooltip .ql-action::before .badge,
-.ql-tooltip .ql-remove::before .badge
+.btn .badge
 {
     position: relative;
     top: -1px;
@@ -6999,7 +6335,7 @@ input[type='button'].btn-block
 
 .progress
 {
-    font-size: .70312rem;
+    font-size: .70313rem;
 
     display: flex;
     overflow: hidden;
@@ -14229,8 +13565,7 @@ button.bg-body:focus
     white-space: nowrap !important;
 }
 
-.text-truncate,
-.ql-tooltip .ql-preview
+.text-truncate
 {
     overflow: hidden;
 
@@ -14818,10 +14153,7 @@ a.text-body:focus
     vertical-align: middle;
 }
 
-.btn .badge,
-.ql-tooltip .ql-preview .badge,
-.ql-tooltip .ql-action::before .badge,
-.ql-tooltip .ql-remove::before .badge
+.btn .badge
 {
     top: -2px;
 }
@@ -14985,15 +14317,12 @@ a.text-body:focus
     font-size: .8125rem;
 }
 
-.btn-white,
-.ql-tooltip .ql-remove::before
+.btn-white
 {
     border-color: #e3ebf6;
 }
 .btn-white:hover,
-.ql-tooltip .ql-remove:hover::before,
-.btn-white:focus,
-.ql-tooltip .ql-remove:focus::before
+.btn-white:focus
 {
     border-color: #d2ddec; 
     background-color: #f9fbfd;
@@ -15014,54 +14343,18 @@ a.text-body:focus
 }
 
 .btn-rounded-circle.btn-lg,
-.btn-group-lg > .btn-rounded-circle.btn,
-.ql-tooltip .btn-group-lg > .btn-rounded-circle.ql-preview,
-.ql-tooltip .btn-group-lg > .btn-rounded-circle.ql-action::before,
-.ql-tooltip .btn-group-lg > .btn-rounded-circle.ql-remove::before
+.btn-group-lg > .btn-rounded-circle.btn
 {
     width: calc(1em * 1.5 + 1rem + 1px * 2);
 }
 
 .btn-rounded-circle.btn-sm,
-.btn-group-sm > .btn-rounded-circle.btn,
-.ql-tooltip .btn-rounded-circle.ql-preview,
-.ql-tooltip .btn-rounded-circle.ql-action::before,
-.ql-tooltip .btn-rounded-circle.ql-remove::before
+.btn-group-sm > .btn-rounded-circle.btn
 {
     width: calc(1em * 1.75 + .25rem + 1px * 2);
 }
 
-.btn-group .btn + .btn,
-.btn-group .ql-tooltip .ql-preview + .btn,
-.ql-tooltip .btn-group .ql-preview + .btn,
-.btn-group .ql-tooltip .ql-action::before + .btn,
-.ql-tooltip .btn-group .ql-action::before + .btn,
-.btn-group .ql-tooltip .ql-remove::before + .btn,
-.ql-tooltip .btn-group .ql-remove::before + .btn,
-.btn-group .ql-tooltip .btn + .ql-preview,
-.ql-tooltip .btn-group .btn + .ql-preview,
-.btn-group .ql-tooltip .ql-preview + .ql-preview,
-.ql-tooltip .btn-group .ql-preview + .ql-preview,
-.btn-group .ql-tooltip .ql-action::before + .ql-preview,
-.ql-tooltip .btn-group .ql-action::before + .ql-preview,
-.btn-group .ql-tooltip .ql-remove::before + .ql-preview,
-.ql-tooltip .btn-group .ql-remove::before + .ql-preview,
-.btn-group .ql-tooltip .btn + .ql-action::before,
-.ql-tooltip .btn-group .btn + .ql-action::before,
-.btn-group .ql-tooltip .ql-preview + .ql-action::before,
-.ql-tooltip .btn-group .ql-preview + .ql-action::before,
-.btn-group .ql-tooltip .ql-action::before + .ql-action::before,
-.ql-tooltip .btn-group .ql-action::before + .ql-action::before,
-.btn-group .ql-tooltip .ql-remove::before + .ql-action::before,
-.ql-tooltip .btn-group .ql-remove::before + .ql-action::before,
-.btn-group .ql-tooltip .btn + .ql-remove::before,
-.ql-tooltip .btn-group .btn + .ql-remove::before,
-.btn-group .ql-tooltip .ql-preview + .ql-remove::before,
-.ql-tooltip .btn-group .ql-preview + .ql-remove::before,
-.btn-group .ql-tooltip .ql-action::before + .ql-remove::before,
-.ql-tooltip .btn-group .ql-action::before + .ql-remove::before,
-.btn-group .ql-tooltip .ql-remove::before + .ql-remove::before,
-.ql-tooltip .btn-group .ql-remove::before + .ql-remove::before
+.btn-group .btn + .btn
 {
     margin-left: 0;
 }
@@ -15279,17 +14572,12 @@ a.text-body:focus
     margin-bottom: .5rem;
 }
 
-.form-control[readonly='readonly'],
-.ql-editor[readonly='readonly'],
-.ql-tooltip input[readonly='readonly'],
-.select2-container .select2-selection--single[readonly='readonly'],
-.select2-container--default .select2-selection--multiple[readonly='readonly']
+.form-control[readonly='readonly']
 {
     background-color: #fff;
 }
 
-.form-control-flush,
-.ql-tooltip input
+.form-control-flush
 {
     padding: 0;
 
@@ -15301,19 +14589,11 @@ a.text-body:focus
     border-radius: 20rem;
 }
 
-.input-group.input-group-merge > .form-control,
-.input-group.input-group-merge > .ql-editor,
-.ql-tooltip .input-group.input-group-merge > input,
-.select2-container .input-group.input-group-merge > .select2-selection--single,
-.select2-container--default .input-group.input-group-merge > .select2-selection--multiple
+.input-group.input-group-merge > .form-control
 {
     border-radius: .375rem;
 }
-.input-group.input-group-merge > .form-control:focus ~ [class*='input-group'] > .input-group-text,
-.input-group.input-group-merge > .ql-editor:focus ~ [class*='input-group'] > .input-group-text,
-.ql-tooltip .input-group.input-group-merge > input:focus ~ [class*='input-group'] > .input-group-text,
-.select2-container .input-group.input-group-merge > .select2-selection--single:focus ~ [class*='input-group'] > .input-group-text,
-.select2-container--default .input-group.input-group-merge > .select2-selection--multiple:focus ~ [class*='input-group'] > .input-group-text
+.input-group.input-group-merge > .form-control:focus ~ [class*='input-group'] > .input-group-text
 {
     border-color: #2c7be5;
 }
@@ -15362,11 +14642,7 @@ a.text-body:focus
     border-bottom-right-radius: .375rem;
 }
 
-.input-group-lg.input-group-merge > .form-control,
-.input-group-lg.input-group-merge > .ql-editor,
-.ql-tooltip .input-group-lg.input-group-merge > input,
-.select2-container .input-group-lg.input-group-merge > .select2-selection--single,
-.select2-container--default .input-group-lg.input-group-merge > .select2-selection--multiple
+.input-group-lg.input-group-merge > .form-control
 {
     border-radius: .5rem;
 }
@@ -15397,11 +14673,7 @@ a.text-body:focus
     border-bottom-right-radius: .5rem;
 }
 
-.input-group-sm.input-group-merge > .form-control,
-.input-group-sm.input-group-merge > .ql-editor,
-.ql-tooltip .input-group-sm.input-group-merge > input,
-.select2-container .input-group-sm.input-group-merge > .select2-selection--single,
-.select2-container--default .input-group-sm.input-group-merge > .select2-selection--multiple
+.input-group-sm.input-group-merge > .form-control
 {
     border-radius: .25rem;
 }
@@ -15432,11 +14704,7 @@ a.text-body:focus
     border-bottom-right-radius: .25rem;
 }
 
-.input-group-rounded.input-group-merge > .form-control,
-.input-group-rounded.input-group-merge > .ql-editor,
-.ql-tooltip .input-group-rounded.input-group-merge > input,
-.select2-container .input-group-rounded.input-group-merge > .select2-selection--single,
-.select2-container--default .input-group-rounded.input-group-merge > .select2-selection--multiple
+.input-group-rounded.input-group-merge > .form-control
 {
     border-radius: 20rem;
 }
@@ -15453,11 +14721,7 @@ a.text-body:focus
     border-bottom-right-radius: 20rem;
 }
 
-.input-group-flush > .form-control,
-.input-group-flush > .ql-editor,
-.ql-tooltip .input-group-flush > input,
-.select2-container .input-group-flush > .select2-selection--single,
-.select2-container--default .input-group-flush > .select2-selection--multiple
+.input-group-flush > .form-control
 {
     padding: 0;
 
@@ -15798,9 +15062,7 @@ a.text-body:focus
     font-size: .8125rem;
 }
 
-.nav.btn-group .btn-white.active,
-.nav.btn-group .ql-tooltip .active.ql-remove::before,
-.ql-tooltip .nav.btn-group .active.ql-remove::before
+.nav.btn-group .btn-white.active
 {
     color: #fff; 
     border-color: #2c7be5;
@@ -18267,7 +17529,42 @@ button:focus
 
 .ql-editor
 {
+    font-size: .9375rem;
+    line-height: 1.5;
+
+    display: block;
+
+    width: 100%;
     min-height: 5.625rem;
+    padding: .5rem .75rem;
+
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out; 
+
+    color: #12263f;
+    border: 1px solid #d2ddec;
+    border-radius: .375rem;
+    background-color: #fff;
+    background-clip: padding-box;
+}
+@media screen and (prefers-reduced-motion: reduce)
+{
+    .ql-editor
+    {
+        transition: none;
+    }
+}
+.ql-editor::-ms-expand
+{
+    border: 0; 
+    background-color: transparent;
+}
+.ql-editor:focus
+{
+    color: #12263f;
+    border-color: #2c7be5;
+    outline: 0;
+    background-color: #fff;
+    box-shadow: transparent;
 }
 
 .ql-hidden
@@ -18410,9 +17707,22 @@ button:focus
 
 .ql-tooltip .ql-preview
 {
-    width: 100%; 
+    font-size: .8125rem;
+    line-height: 1.75;
 
-    text-align: left;
+    width: 100%;
+    padding: .125rem .5rem;
+
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out; 
+
+    border-radius: .25rem;
+}
+@media screen and (prefers-reduced-motion: reduce)
+{
+    .ql-tooltip .ql-preview
+    {
+        transition: none;
+    }
 }
 
 .ql-tooltip.ql-editing .ql-preview
@@ -18422,9 +17732,20 @@ button:focus
 
 .ql-tooltip input
 {
+    font-size: .8125rem;
+    line-height: 1.75;
+
     display: none;
 
     width: 100%;
+    padding-top: calc(.125rem + 1px);
+    padding-bottom: calc(.125rem + 1px);
+
+    border: none;
+}
+.ql-tooltip input:focus
+{
+    outline: none;
 }
 
 .ql-tooltip.ql-editing input
@@ -18436,6 +17757,105 @@ button:focus
 .ql-tooltip .ql-remove
 {
     margin-left: .25rem;
+}
+
+.ql-tooltip .ql-action::before,
+.ql-tooltip .ql-remove::before
+{
+    font-size: .8125rem;
+    font-weight: 400;
+    line-height: 1.75;
+
+    display: inline-block;
+
+    padding: .125rem .5rem;
+
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out; 
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+@media screen and (prefers-reduced-motion: reduce)
+{
+    .ql-tooltip .ql-action::before,
+    .ql-tooltip .ql-remove::before
+    {
+        transition: none;
+    }
+}
+.ql-tooltip .ql-action::before:hover,
+.ql-tooltip .ql-action::before:focus,
+.ql-tooltip .ql-remove::before:hover,
+.ql-tooltip .ql-remove::before:focus
+{
+    text-decoration: none;
+}
+.ql-tooltip .ql-action::before:focus,
+.ql-tooltip .ql-action::before.focus,
+.ql-tooltip .ql-remove::before:focus,
+.ql-tooltip .ql-remove::before.focus
+{
+    outline: 0;
+    box-shadow: 0 0 0 .15rem rgba(44, 123, 229, .25);
+}
+
+.ql-tooltip .ql-action::before,
+.ql-tooltip.ql-editing .ql-action::before
+{
+    color: #fff;
+    border-color: #2c7be5; 
+    background-color: #2c7be5;
+}
+.ql-tooltip .ql-action::before:hover,
+.ql-tooltip.ql-editing .ql-action::before:hover
+{
+    color: #fff;
+    border-color: #1862c6; 
+    background-color: #1a68d1;
+}
+.ql-tooltip .ql-action::before:focus,
+.ql-tooltip .ql-action::before.focus,
+.ql-tooltip.ql-editing .ql-action::before:focus,
+.ql-tooltip.ql-editing .ql-action::before.focus
+{
+    box-shadow: 0 0 0 .15rem rgba(44, 123, 229, .5);
+}
+.ql-tooltip .ql-action::before.disabled,
+.ql-tooltip .ql-action::before:disabled,
+.ql-tooltip.ql-editing .ql-action::before.disabled,
+.ql-tooltip.ql-editing .ql-action::before:disabled
+{
+    color: #fff;
+    border-color: #2c7be5; 
+    background-color: #2c7be5;
+}
+.ql-tooltip .ql-action::before:not(:disabled):not(.disabled):active,
+.ql-tooltip .ql-action::before:not(:disabled):not(.disabled).active,
+.show > .ql-tooltip .ql-action::before.dropdown-toggle,
+.ql-tooltip.ql-editing .ql-action::before:not(:disabled):not(.disabled):active,
+.ql-tooltip.ql-editing .ql-action::before:not(:disabled):not(.disabled).active,
+.show > .ql-tooltip.ql-editing .ql-action::before.dropdown-toggle
+{
+    color: #fff;
+    border-color: #175dba; 
+    background-color: #1862c6;
+}
+.ql-tooltip .ql-action::before:not(:disabled):not(.disabled):active:focus,
+.ql-tooltip .ql-action::before:not(:disabled):not(.disabled).active:focus,
+.show > .ql-tooltip .ql-action::before.dropdown-toggle:focus,
+.ql-tooltip.ql-editing .ql-action::before:not(:disabled):not(.disabled):active:focus,
+.ql-tooltip.ql-editing .ql-action::before:not(:disabled):not(.disabled).active:focus,
+.show > .ql-tooltip.ql-editing .ql-action::before.dropdown-toggle:focus
+{
+    box-shadow: 0 0 0 .15rem rgba(44, 123, 229, .5);
 }
 
 .ql-tooltip .ql-action::before
@@ -18451,11 +17871,61 @@ button:focus
 .ql-tooltip .ql-remove::before
 {
     content: 'Remove';
+
+    color: #283e59;
+    border-color: #fff;
+    border-color: #e3ebf6; 
+    background-color: #fff;
+}
+.ql-tooltip .ql-remove::before:hover
+{
+    color: #283e59;
+    border-color: #e6e6e6; 
+    background-color: #ececec;
+}
+.ql-tooltip .ql-remove::before:focus,
+.ql-tooltip .ql-remove::before.focus
+{
+    box-shadow: 0 0 0 .15rem rgba(255, 255, 255, .5);
+}
+.ql-tooltip .ql-remove::before.disabled,
+.ql-tooltip .ql-remove::before:disabled
+{
+    color: #283e59;
+    border-color: #fff; 
+    background-color: #fff;
+}
+.ql-tooltip .ql-remove::before:not(:disabled):not(.disabled):active,
+.ql-tooltip .ql-remove::before:not(:disabled):not(.disabled).active,
+.show > .ql-tooltip .ql-remove::before.dropdown-toggle
+{
+    color: #283e59;
+    border-color: #dfdfdf; 
+    background-color: #e6e6e6;
+}
+.ql-tooltip .ql-remove::before:not(:disabled):not(.disabled):active:focus,
+.ql-tooltip .ql-remove::before:not(:disabled):not(.disabled).active:focus,
+.show > .ql-tooltip .ql-remove::before.dropdown-toggle:focus
+{
+    box-shadow: 0 0 0 .15rem rgba(255, 255, 255, .5);
 }
 
 .ql-tooltip.ql-editing .ql-remove::before
 {
     display: none;
+}
+
+.ql-editor blockquote
+{
+    font-size: 1.17188rem; 
+
+    margin-bottom: 1.5rem;
+}
+
+.ql-editor img
+{
+    max-width: 100%;
+    height: auto;
 }
 
 .select2-selection__arrow
@@ -18468,9 +17938,90 @@ button:focus
     width: 100% !important;
 }
 
-.select2-container .select2-selection--single
+.select2-container .select2-selection--single,
+.select2-container--default.select2-container--focus .select2-selection--multiple,
+.select2-container--default .select2-selection--multiple
 {
+    font-size: .9375rem;
+    line-height: 1.5;
+
+    display: block;
+
+    width: 100%;
     height: auto;
+    padding: .5rem .75rem;
+
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out; 
+
+    color: #12263f;
+    border: 1px solid #d2ddec;
+    border-radius: .375rem;
+    background-color: #fff;
+    background-clip: padding-box;
+}
+@media screen and (prefers-reduced-motion: reduce)
+{
+    .select2-container .select2-selection--single,
+    .select2-container--default.select2-container--focus .select2-selection--multiple,
+    .select2-container--default .select2-selection--multiple
+    {
+        transition: none;
+    }
+}
+.select2-container .select2-selection--single::-ms-expand,
+.select2-container--default.select2-container--focus .select2-selection--multiple::-ms-expand,
+.select2-container--default .select2-selection--multiple::-ms-expand
+{
+    border: 0; 
+    background-color: transparent;
+}
+.select2-container .select2-selection--single:focus,
+.select2-container--default.select2-container--focus .select2-selection--multiple:focus,
+.select2-container--default .select2-selection--multiple:focus
+{
+    color: #12263f;
+    border-color: #2c7be5;
+    outline: 0;
+    background-color: #fff;
+    box-shadow: transparent;
+}
+.select2-container .select2-selection--single::-webkit-input-placeholder,
+.select2-container--default.select2-container--focus .select2-selection--multiple::-webkit-input-placeholder,
+.select2-container--default .select2-selection--multiple::-webkit-input-placeholder
+{
+    opacity: 1; 
+    color: #b1c2d9;
+}
+.select2-container .select2-selection--single:-ms-input-placeholder,
+.select2-container--default.select2-container--focus .select2-selection--multiple:-ms-input-placeholder,
+.select2-container--default .select2-selection--multiple:-ms-input-placeholder
+{
+    opacity: 1; 
+    color: #b1c2d9;
+}
+.select2-container .select2-selection--single::-ms-input-placeholder,
+.select2-container--default.select2-container--focus .select2-selection--multiple::-ms-input-placeholder,
+.select2-container--default .select2-selection--multiple::-ms-input-placeholder
+{
+    opacity: 1; 
+    color: #b1c2d9;
+}
+.select2-container .select2-selection--single::placeholder,
+.select2-container--default.select2-container--focus .select2-selection--multiple::placeholder,
+.select2-container--default .select2-selection--multiple::placeholder
+{
+    opacity: 1; 
+    color: #b1c2d9;
+}
+.select2-container .select2-selection--single:disabled,
+.select2-container .select2-selection--single[readonly],
+.select2-container--default.select2-container--focus .select2-selection--multiple:disabled,
+.select2-container--default.select2-container--focus .select2-selection--multiple[readonly],
+.select2-container--default .select2-selection--multiple:disabled,
+.select2-container--default .select2-selection--multiple[readonly]
+{
+    opacity: 1; 
+    background-color: #edf2f9;
 }
 
 .select2-container .select2-selection--single .select2-selection__rendered
