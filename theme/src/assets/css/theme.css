@@ -14435,6 +14435,38 @@ a.text-body:focus
     padding-right: 1.5rem !important;
 }
 
+.card > .table-responsive > .card-table > thead:first-child > tr:first-child > th:first-child,
+.card > .table-responsive > .card-table > thead:first-child > tr:first-child > td:first-child,
+.card > .table-responsive > .card-table > tbody:first-child > tr:first-child > th:first-child,
+.card > .table-responsive > .card-table > tbody:first-child > tr:first-child > td:first-child,
+.card > .table-responsive > .card-table > tfoot:first-child > tr:first-child > th:first-child,
+.card > .table-responsive > .card-table > tfoot:first-child > tr:first-child > td:first-child,
+.card > .card-table > thead:first-child > tr:first-child > th:first-child,
+.card > .card-table > thead:first-child > tr:first-child > td:first-child,
+.card > .card-table > tbody:first-child > tr:first-child > th:first-child,
+.card > .card-table > tbody:first-child > tr:first-child > td:first-child,
+.card > .card-table > tfoot:first-child > tr:first-child > th:first-child,
+.card > .card-table > tfoot:first-child > tr:first-child > td:first-child
+{
+    border-top-left-radius: .5rem;
+}
+
+.card > .table-responsive > .card-table > thead:first-child > tr:first-child > th:last-child,
+.card > .table-responsive > .card-table > thead:first-child > tr:first-child > td:last-child,
+.card > .table-responsive > .card-table > tbody:first-child > tr:first-child > th:last-child,
+.card > .table-responsive > .card-table > tbody:first-child > tr:first-child > td:last-child,
+.card > .table-responsive > .card-table > tfoot:first-child > tr:first-child > th:last-child,
+.card > .table-responsive > .card-table > tfoot:first-child > tr:first-child > td:last-child,
+.card > .card-table > thead:first-child > tr:first-child > th:last-child,
+.card > .card-table > thead:first-child > tr:first-child > td:last-child,
+.card > .card-table > tbody:first-child > tr:first-child > th:last-child,
+.card > .card-table > tbody:first-child > tr:first-child > td:last-child,
+.card > .card-table > tfoot:first-child > tr:first-child > th:last-child,
+.card > .card-table > tfoot:first-child > tr:first-child > td:last-child
+{
+    border-top-right-radius: .5rem;
+}
+
 .card-avatar
 {
     display: block !important;
