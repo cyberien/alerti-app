@@ -80,6 +80,29 @@
   }
 }
 
+.card > .table-responsive > .card-table,
+.card > .card-table {
+
+  > thead, > tbody, > tfoot {
+
+    &:first-child {
+
+      > tr:first-child {
+
+        > th, > td {
+
+          &:first-child {
+            border-top-left-radius: $card-border-radius;
+          }
+          &:last-child {
+            border-top-right-radius: $card-border-radius;
+          }
+        }
+      }
+    }
+  }
+}
+
 
 // Card avatar
 //
