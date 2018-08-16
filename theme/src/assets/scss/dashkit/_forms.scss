@@ -55,6 +55,7 @@
     border-radius: $input-border-radius;
 
     &:focus {
+      box-shadow: none;
       
       ~ [class*="input-group"] {
         
@@ -63,6 +64,14 @@
         }
       }
     }
+  }
+
+  > .form-control.is-valid ~ [class*="input-group"] > .input-group-text {
+    border-color: $success;
+  }
+
+  > .form-control.is-invalid ~ [class*="input-group"] > .input-group-text {
+    border-color: $danger;
   }
 
   > .form-control-prepended {

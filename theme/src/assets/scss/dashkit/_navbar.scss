@@ -76,6 +76,7 @@
 
 .navbar-nav .nav-link > .fe {
   min-width: $navbar-icon-min-width; // Note: Test if we actually need this?
+  padding-bottom: .125em;
   font-size: $font-size-lg;
   line-height: ($font-size-base * $line-height-base);
 }
