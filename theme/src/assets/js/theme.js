@@ -240,7 +240,7 @@ var ThemeCharts = (function() {
                   content += '<span class="popover-body-label mr-auto">' + label + '</span>';
                 }
 
-                content += '<span class="popover-body-value">$' + yLabel + 'k</span>';
+                content += '<span class="popover-body-value">' + yLabel + '</span>';
                 return content;
               }
             }
@@ -258,7 +258,7 @@ var ThemeCharts = (function() {
                 var value = data.datasets[0].data[item.index];
                 var content = '';
 
-                content += '<span class="popover-body-value">' + value + '%</span>';
+                content += '<span class="popover-body-value">' + value + '</span>';
                 return content;
               }
             }
@@ -301,7 +301,7 @@ var ThemeCharts = (function() {
         padding: 10,
         callback: function(value) {
           if ( !(value % 10) ) {
-            return '$' + value + 'k'
+            return value
           }
         }
       }
@@ -503,8 +503,31 @@ var Header = (function() {
             gridLines: {
               color: ThemeCharts.colors.gray[900],
               zeroLineColor: ThemeCharts.colors.gray[900]
+            },
+            ticks: {
+              callback: function(value) {
+                if ( !(value % 10) ) {
+                  return '$' + value + 'k';
+                }
+              }
             }
           }]
+        },
+        tooltips: {
+          callbacks: {
+            label: function(item, data) {
+              var label = data.datasets[item.datasetIndex].label || '';
+              var yLabel = item.yLabel;
+              var content = '';
+
+              if (data.datasets.length > 1) {
+                content += '<span class="popover-body-label mr-auto">' + label + '</span>';
+              }
+
+              content += '<span class="popover-body-value">$' + yLabel + 'k</span>';
+              return content;
+            }
+          }
         }
       },
       data: {
@@ -556,6 +579,35 @@ var Performance = (function() {
     // Create chart
     var performanceChart = new Chart($chart, {
       type: 'line',
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              callback: function(value) {
+                if ( !(value % 10) ) {
+                  return '$' + value + 'k'
+                }
+              }
+            }
+          }]
+        },
+        tooltips: {
+          callbacks: {
+            label: function(item, data) {
+              var label = data.datasets[item.datasetIndex].label || '';
+              var yLabel = item.yLabel;
+              var content = '';
+
+              if (data.datasets.length > 1) {
+                content += '<span class="popover-body-label mr-auto">' + label + '</span>';
+              }
+
+              content += '<span class="popover-body-value">$' + yLabel + 'k</span>';
+              return content;
+            }
+          }
+        }
+      },
       data: {
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         datasets: [{
@@ -604,6 +656,35 @@ var PerformanceAlias = (function() {
     // Create chart
     var performanceChartAlias = new Chart($chart, {
       type: 'line',
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              callback: function(value) {
+                if ( !(value % 10) ) {
+                  return '$' + value + 'k'
+                }
+              }
+            }
+          }]
+        },
+        tooltips: {
+          callbacks: {
+            label: function(item, data) {
+              var label = data.datasets[item.datasetIndex].label || '';
+              var yLabel = item.yLabel;
+              var content = '';
+
+              if (data.datasets.length > 1) {
+                content += '<span class="popover-body-label mr-auto">' + label + '</span>';
+              }
+
+              content += '<span class="popover-body-value">$' + yLabel + 'k</span>';
+              return content;
+            }
+          }
+        }
+      },
       data: {
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         datasets: [{
@@ -654,6 +735,35 @@ var Orders = (function() {
     // Create chart
     var ordersChart = new Chart($chart, {
       type: 'bar',
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              callback: function(value) {
+                if ( !(value % 10) ) {
+                  return '$' + value + 'k'
+                }
+              }
+            }
+          }]
+        },
+        tooltips: {
+          callbacks: {
+            label: function(item, data) {
+              var label = data.datasets[item.datasetIndex].label || '';
+              var yLabel = item.yLabel;
+              var content = '';
+
+              if (data.datasets.length > 1) {
+                content += '<span class="popover-body-label mr-auto">' + label + '</span>';
+              }
+
+              content += '<span class="popover-body-value">$' + yLabel + 'k</span>';
+              return content;
+            }
+          }
+        }
+      },
       data: {
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         datasets: [{
@@ -721,6 +831,35 @@ var OrdersAlias = (function() {
     // Create chart
     var ordersChartAlias = new Chart($chart, {
       type: 'bar',
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              callback: function(value) {
+                if ( !(value % 10) ) {
+                  return '$' + value + 'k'
+                }
+              }
+            }
+          }]
+        },
+        tooltips: {
+          callbacks: {
+            label: function(item, data) {
+              var label = data.datasets[item.datasetIndex].label || '';
+              var yLabel = item.yLabel;
+              var content = '';
+
+              if (data.datasets.length > 1) {
+                content += '<span class="popover-body-label mr-auto">' + label + '</span>';
+              }
+
+              content += '<span class="popover-body-value">$' + yLabel + 'k</span>';
+              return content;
+            }
+          }
+        }
+      },
       data: {
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         datasets: [{
@@ -771,6 +910,23 @@ var Devices = (function() {
     // Create chart
     var devicesChart = new Chart($chart, {
       type: 'doughnut',
+      options: {
+        tooltips: {
+          callbacks: {
+            title: function(item, data) {
+              var title = data.labels[item[0].index];
+              return title;
+            },
+            label: function(item, data) {
+              var value = data.datasets[0].data[item.index];
+              var content = '';
+
+              content += '<span class="popover-body-value">' + value + '%</span>';
+              return content;
+            }
+          }
+        }
+      },
       data: {
         labels: ['Desktop', 'Tablet', 'Mobile'],
         datasets: [{
@@ -1184,9 +1340,12 @@ var Select2 = (function() {
   //
 
   function init($this) {
-    $this.select2({
+    var options = {
+      minimumResultsForSearch: $this.data('minimum-results-for-search'),
       templateResult: formatAvatar
-    });
+    };
+
+    $this.select2(options);
   }
 
   function formatAvatar(avatar) {
