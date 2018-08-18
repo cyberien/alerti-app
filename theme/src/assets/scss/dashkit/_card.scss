@@ -80,8 +80,8 @@
   }
 }
 
-.card > .table-responsive > .card-table,
-.card > .card-table {
+.card > .table-responsive:first-child > .card-table,
+.card > .card-table:first-child {
 
   > thead, > tbody, > tfoot {
 
