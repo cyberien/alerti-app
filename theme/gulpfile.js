@@ -137,6 +137,8 @@ gulp.task('copy:all', function() {
     '!' + paths.src.partials.dir, '!' + paths.src.partials.files,
     '!' + paths.src.scss.dir, '!' + paths.src.scss.files,
     '!' + paths.src.tmp.dir, '!' + paths.src.tmp.files,
+    '!' + paths.src.js.dir, '!' + paths.src.js.files,
+    '!' + paths.src.css.dir, '!' + paths.src.css.files,
     '!' + paths.src.html.files,
     ])
     .pipe(gulp.dest(paths.dist.base.dir))
