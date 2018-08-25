@@ -3,7 +3,7 @@ const enablePartials = true;
 const autoprefixer = require('gulp-autoprefixer');
 const browsersync = require('browser-sync').create();
 const csscomb = require('gulp-csscomb');
-const cache = require('gulp-cache');
+const cached = require('gulp-cached');
 const cssnano = require('gulp-cssnano');
 const del = require('del');
 const fileinclude = require('gulp-file-include');
@@ -149,7 +149,7 @@ gulp.task('copy:libs', function() {
     .pipe(gulp.dest(paths.dist.libs.dir));
 });
 
-gulp.task('useref', function() {
+gulp.task('html', function() {
   gulp.src(paths.src.html.files)
     .pipe(fileinclude({
       prefix: '@@',
@@ -160,14 +160,14 @@ gulp.task('useref', function() {
     .pipe(replace('<link href="node_modules/', '<link href="assets/libs/'))
     .pipe(replace('<script src="node_modules/', '<script src="assets/libs/'))
     .pipe(useref())
+    .pipe(cached('assets'))
     .pipe(gulpif('*.js', uglify()))
     .pipe(gulpif('*.css', cssnano()))
     .pipe(gulp.dest(paths.dist.base.dir))
 });
 
 gulp.task('build', function(callback) {
-  runsequence(['clean:tmp', 'clean:packageLock', 'clean:dist', 'copy:all', 'copy:libs'],
-    ['sass', 'useref'], 
+  runsequence(['clean:tmp', 'clean:packageLock', 'clean:dist', 'copy:all', 'copy:libs'], ['sass', 'html'], 
     callback);
 });
 
