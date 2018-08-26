@@ -22,7 +22,7 @@
 }
 
 .header.bg-dark .header-body {
-  border-bottom-color: fade-out($header-body-border-color, .9);
+  border-bottom-color: $header-body-border-color-dark;
 }
 
 .header-footer {

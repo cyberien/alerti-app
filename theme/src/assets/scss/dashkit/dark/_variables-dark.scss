@@ -1,0 +1,132 @@
+// 
+// variables-dark.scss
+// Dashkit dark version
+//
+
+// 
+// Bootstrap Overrides ===================================
+//
+
+
+//
+// Color system
+//
+
+// stylelint-disable
+$white:    #FFFFFF !default;
+$gray-100: #F9FBFD !default;
+$gray-200: #EDF2F9 !default;
+$gray-300: #E3EBF6 !default;
+$gray-400: #D2DDEC !default;
+$gray-500: #B1C2D9 !default;
+$gray-600: #95AAC9 !default;
+$gray-700: #6E84A3 !default;
+$gray-800: #3B506C !default;
+$gray-900: #283E59 !default;
+$black:    #12263F !default;
+
+$gray-600-dark: #244166 !default;
+$gray-700-dark: #1E3A5C !default;
+$gray-800-dark: #152E4D !default;
+$gray-900-dark: #132A46 !default;
+$black-dark: #12263F !default;
+
+$light: $gray-800-dark;
+
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg: $black-dark !default;
+$body-color: $white !default;
+
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+$border-color: $gray-700-dark !default;
+
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+
+$text-muted: $gray-700 !default;
+
+
+// Tables
+//
+// Customizes the `.table` component with basic values, each used across all table variations.
+
+$table-border-color: $border-color !default;
+
+$table-head-bg: $black-dark !default;
+
+
+// Forms
+
+$input-bg: $gray-700-dark !default;
+
+$input-color: $white !default;
+$input-border-color: $gray-700-dark !default;
+
+$input-placeholder-color: $gray-600 !default;
+
+$custom-control-indicator-bg: $gray-600-dark;
+
+
+// Navbar
+
+$navbar-light-color: $gray-700;
+$navbar-light-hover-color: $white;
+$navbar-light-active-color: $white;
+
+
+// Cards
+
+$card-bg: $gray-800-dark !default;
+$card-border-color: $border-color !default;
+
+
+// Popovers
+
+$popover-header-color: $black;
+
+
+// Modals
+
+$modal-content-bg: $black !default;
+
+
+// 
+// Dashkit =====================================
+//
+
+
+// Cards
+
+$card-outline-color: transparent !default;
+
+
+// Comment
+
+$comment-body-bg: $gray-900-dark;
+
+
+// Header
+
+$header-body-border-color-dark: $border-color !default;
+
+
+// Navbar
+
+$navbar-light-bg: $gray-800-dark !default;
+$navbar-light-border-color: transparent !default;
+
+
+// Toggle
+
+$toggle-handle-bg: $gray-800-dark !default;
+$toggle-handle-active-bg: $white !default;

@@ -9,6 +9,7 @@
 
 .card {
   margin-bottom: $spacer;
+  border-color: $card-outline-color;
   box-shadow: $card-box-shadow;
 }
 

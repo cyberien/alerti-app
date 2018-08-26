@@ -33,6 +33,11 @@
 .form-control-flush {
   padding: 0;
   border-width: 0;
+  background-color: transparent;
+
+  &:focus {
+    background-color: transparent;
+  }
 }
 
 
@@ -209,6 +214,7 @@
   > .form-control {
     padding: 0;
     border-width: 0;
+    background-color: transparent;
   }
 
   > .input-group-prepend,
@@ -217,6 +223,7 @@
     > .input-group-text {
       padding: 0;
       border-width: 0;
+      background-color: transparent;
     }
   }
 }

@@ -13,6 +13,9 @@ var ThemeCharts = (function() {
   // Toggle
   var $toggle = $('[data-toggle="chart"]');
 
+  // Theme mode
+  var themeMode = $(document.body).css('--theme-mode') ? $(document.body).css('--theme-mode').trim() : '';
+
   // Fonts
   var fonts = {
     base: 'Cerebri Sans'
@@ -21,10 +24,10 @@ var ThemeCharts = (function() {
   // Colors
   var colors = {
     gray: {
-      100: '#95AAC9',
       300: '#E3EBF6',
       600: '#95AAC9',
       700: '#6E84A3',
+      800: '#152E4D',
       900: '#283E59'
     },
     primary: {
@@ -51,8 +54,8 @@ var ThemeCharts = (function() {
         global: {
           responsive: true,
           maintainAspectRatio: false,
-          defaultColor: colors.primary[600],
-          defaultFontColor: colors.gray[600],
+          defaultColor: ( themeMode == 'dark' ) ? colors.gray[700] : colors.primary[600],
+          defaultFontColor: ( themeMode == 'dark' ) ? colors.gray[700] : colorsgray[.600],
           defaultFontFamily: fonts.base,
           defaultFontSize: 13,
           layout: {
@@ -82,8 +85,9 @@ var ThemeCharts = (function() {
               backgroundColor: colors.primary[700]
             },
             arc: {
-              borderWidth: 4,
-              backgroundColor: colors.primary[700]
+              backgroundColor: colors.primary[700],
+              borderColor: ( themeMode == 'dark' ) ? colors.gray[800] : colors.white,
+              borderWidth: 4
             }
           },
           tooltips: {
@@ -219,12 +223,12 @@ var ThemeCharts = (function() {
       gridLines: {
         borderDash: [2],
         borderDashOffset: [2],
-        color: colors.gray[300],
+        color: (themeMode == 'dark') ? colors.gray[900] : colors.gray[300],
         drawBorder: false,
         drawTicks: false,
         lineWidth: 0,
         zeroLineWidth: 0,
-        zeroLineColor: colors.gray[300],
+        zeroLineColor: (themeMode == 'dark') ? colors.gray[900] : colors.gray[300],
         zeroLineBorderDash: [2],
         zeroLineBorderDashOffset: [2]
       },
@@ -399,8 +403,9 @@ var ThemeCharts = (function() {
   //
 
   return {
+    colors: colors,
     fonts: fonts,
-    colors: colors
+    themeMode: themeMode
   };
   
 })();

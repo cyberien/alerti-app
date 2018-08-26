@@ -27,12 +27,13 @@
 
   .custom-control-label::after {
     width: $spacer; height: 100%;
-    background: $white;
+    background-color: $toggle-handle-bg;
     transform: scale(.8);
   }
   
   .custom-control-input:checked ~ .custom-control-label::after {
     left: $spacer; right: 0;
+    background-color: $toggle-handle-active-bg;
   }
   
 }

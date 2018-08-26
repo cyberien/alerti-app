@@ -7,12 +7,12 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  background-color: $white;
 }
 
 .dz-message {
   padding: 5rem 1rem;
-  border: $border-width dashed $border-color;
+  background-color: $input-bg;
+  border: $input-border-width dashed $input-border-color;
   border-radius: $border-radius;
   text-align: center;
   color: $text-muted;

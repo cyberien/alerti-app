@@ -62,7 +62,7 @@ const paths = {
     scss:   {
       dir:    'src/assets/scss',
       files:  'src/assets/scss/**/*',
-      main:   'src/assets/scss/theme.scss'
+      main:   'src/assets/scss/*.scss'
     },
     tmp:    {
       dir:    'src/.tmp',
