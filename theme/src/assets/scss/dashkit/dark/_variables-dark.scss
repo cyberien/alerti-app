@@ -31,7 +31,7 @@ $gray-800-dark: #152E4D !default;
 $gray-900-dark: #132A46 !default;
 $black-dark: #12263F !default;
 
-$light: $gray-800-dark;
+$light: $gray-700-dark !default;
 
 
 // Body
@@ -70,7 +70,7 @@ $table-head-bg: $black-dark !default;
 $input-bg: $gray-700-dark !default;
 
 $input-color: $white !default;
-$input-border-color: $gray-700-dark !default;
+$input-border-color: $black-dark !default;
 
 $input-placeholder-color: $gray-600 !default;
 
@@ -105,14 +105,14 @@ $modal-content-bg: $black !default;
 //
 
 
+// Badges
+
+$badge-soft-bg-level: 10 !default;
+
+
 // Cards
 
 $card-outline-color: transparent !default;
-
-
-// Comment
-
-$comment-body-bg: $gray-900-dark;
 
 
 // Header
@@ -123,7 +123,7 @@ $header-body-border-color-dark: $border-color !default;
 // Navbar
 
 $navbar-light-bg: $gray-800-dark !default;
-$navbar-light-border-color: transparent !default;
+$navbar-light-border-color: $black-dark !default;
 
 
 // Toggle

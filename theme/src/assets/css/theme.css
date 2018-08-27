@@ -16577,27 +16577,27 @@ button:focus
 
 .border-2
 {
-    border: 2px solid #e3ebf6 !important;
+    border-width: 2px !important;
 }
 
 .border-top-2
 {
-    border-top: 2px solid #e3ebf6 !important;
+    border-top-width: 2px !important;
 }
 
 .border-right-2
 {
-    border-right: 2px solid #e3ebf6 !important;
+    border-right-width: 2px !important;
 }
 
 .border-bottom-2
 {
-    border-bottom: 2px solid #e3ebf6 !important;
+    border-bottom-width: 2px !important;
 }
 
 .border-left-2
 {
-    border-left: 2px solid #e3ebf6 !important;
+    border-left-width: 2px !important;
 }
 
 .vw-100
@@ -17513,12 +17513,23 @@ button:focus
 .flatpickr-calendar
 {
     color: #12263f;
+    border: 1px solid #d2ddec;
+    background-color: #fff;
+    box-shadow: none;
 }
 .flatpickr-calendar *
 {
     color: inherit !important;
 
     fill: currentColor !important;
+}
+.flatpickr-calendar.arrowTop:before
+{
+    border-bottom-color: #d2ddec;
+}
+.flatpickr-calendar.arrowTop:after
+{
+    border-bottom-color: #fff;
 }
 .flatpickr-calendar .flatpickr-months
 {
@@ -17540,6 +17551,7 @@ button:focus
 }
 .flatpickr-calendar .flatpickr-day:hover
 {
+    border-color: #d2ddec; 
     background-color: #edf2f9;
 }
 .flatpickr-calendar .flatpickr-day.prevMonthDay
@@ -17552,7 +17564,7 @@ button:focus
 }
 .flatpickr-calendar .flatpickr-day.selected
 {
-    color: white !important; 
+    color: #fff !important; 
     border-color: #2c7be5;
     background-color: #2c7be5;
 }

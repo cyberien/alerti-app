@@ -55,7 +55,7 @@ var ThemeCharts = (function() {
           responsive: true,
           maintainAspectRatio: false,
           defaultColor: ( themeMode == 'dark' ) ? colors.gray[700] : colors.primary[600],
-          defaultFontColor: ( themeMode == 'dark' ) ? colors.gray[700] : colorsgray[.600],
+          defaultFontColor: ( themeMode == 'dark' ) ? colors.gray[700] : colors.gray[.600],
           defaultFontFamily: fonts.base,
           defaultFontSize: 13,
           layout: {

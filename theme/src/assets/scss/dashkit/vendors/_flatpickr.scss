@@ -4,11 +4,22 @@
 //
 
 .flatpickr-calendar {
-  color: $body-color;
+  background-color: $input-bg;
+  border: $input-border-width solid $input-border-color;
+  color: $input-color;
+  box-shadow: none;
 
   * {
     color: inherit !important;
     fill: currentColor !important;
+  }
+
+  &.arrowTop:before {
+    border-bottom-color: $input-border-color;
+  }
+
+  &.arrowTop:after {
+    border-bottom-color: $input-bg;
   }
 
   .flatpickr-months {
@@ -30,6 +41,7 @@
 
     &:hover {
       background-color: $light;
+      border-color: $input-border-color;
     }
   }
 
@@ -44,7 +56,7 @@
   .flatpickr-day.selected {
     background-color: $primary;
     border-color: $primary;
-    color: white !important;
+    color: $white !important;
   }
 
   .flatpickr-day.inRange {
