@@ -6666,7 +6666,7 @@ input[type='button'].btn-block
     float: right;
 
     opacity: .5; 
-    color: #12263f;
+    color: #95aac9;
     text-shadow: none;
 }
 .close:not(:disabled):not(.disabled)
@@ -6679,7 +6679,7 @@ input[type='button'].btn-block
     text-decoration: none;
 
     opacity: .75; 
-    color: #12263f;
+    color: #95aac9;
 }
 
 button.close
@@ -14591,6 +14591,9 @@ a.text-body:focus
     min-width: 350px;
     padding-top: 0;
     padding-bottom: 0;
+
+    border: 1px solid #12263f; 
+    background-color: #fff;
 }
 .dropdown-menu-card .card-header
 {
@@ -15012,7 +15015,7 @@ a.text-body:focus
 {
     height: inherit;
 
-    border-width: 0;
+    border-width: 0 1px 0 0;
     border-radius: 0;
 }
 .modal-dialog-vertical .modal-header
@@ -16483,6 +16486,11 @@ button:focus
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+}
+
+.bg-auth
+{
+    background-color: #fff;
 }
 
 .bg-ellipses.bg-primary

@@ -100,6 +100,8 @@
   min-width: $dropdown-card-min-width;
   padding-top: 0;
   padding-bottom: 0;
+  background-color: $card-bg;
+  border: $card-border-width solid $black;
 
   .card-header {
     min-height: $dropdown-card-header-min-height;

@@ -17,6 +17,7 @@
   }
 }
 
+
 //
 // Dashkit ===================================
 //
@@ -32,7 +33,7 @@
 
   .modal-content {
     height: inherit;
-    border-width: 0;
+    border-width: 0 $modal-content-border-width 0 0;
     border-radius: 0;
   }
 

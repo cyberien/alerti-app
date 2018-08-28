@@ -324,6 +324,7 @@ $dropdown-header-color: inherit !default;
 
 // Navs
 
+$nav-tabs-border-color: $border-color !default;
 $nav-tabs-border-radius: 0 !default;
 $nav-tabs-link-hover-border-color: transparent transparent transparent !default;
 $nav-tabs-link-active-color: $body-color !default;
@@ -463,6 +464,7 @@ $breadcrumb-divider: "" !default;
 
 // Close
 
+$close-color: $text-muted;
 $close-text-shadow: none !default;
 
 
@@ -474,6 +476,7 @@ $code-color: $blue !default;
 // 
 // Dashkit =====================================
 //
+
 
 // Type
 
@@ -491,11 +494,114 @@ $display-letter-spacing: -.02em !default;
 $alert-link-text-decoration: underline !default;
 
 
+// Auth
+
+$auth-bg: $white !default;
+
+
+// Avatar
+
+$avatar-size-base: 3rem !default;
+$avatar-size-xs: 1.625rem !default;
+$avatar-size-sm: 2.5rem !default;
+$avatar-size-lg: 4rem !default;
+$avatar-size-xl: 5.125rem !default;
+$avatar-size-xxl: 8rem !default;
+
+
 // Badges
 
 $badge-soft-bg-level: -10 !default;
 
 $badge-padding-x: .5em !default;
+
+
+// Breadcrumb
+
+$breadcrumb-padding-y-sm: .5rem !default;
+$breadcrumb-padding-x-sm: .5rem !default;
+$breadcrumb-item-padding-sm: .25rem !default;
+
+$breadcrumb-margin-bottom-sm: .25rem !default;
+$breadcrumb-font-size-sm: $font-size-sm !default;
+
+
+// Cards
+
+$card-outline-color: $card-border-color !default;
+$card-box-shadow: 0 .75rem 1.5rem transparentize($black, .97) !default;
+
+$card-header-min-height: 3.75rem !default;
+
+
+// Charts
+
+$chart-height: 300px !default;
+$chart-height-sm: 225px !default;
+
+$chart-legend-margin-top: 2.5rem !default;
+$chart-legend-font-size: $font-size-sm !default;
+$chart-legend-color: $text-muted !default;
+$chart-legend-height: $chart-legend-margin-top + $chart-legend-font-size * $line-height-base !default;
+
+
+// Comment
+
+$comment-margin-bottom: 1rem !default;
+
+$comment-body-padding-y: 1rem !default;
+$comment-body-padding-x: 1.25rem !default;
+$comment-body-bg: $body-bg !default;
+$comment-body-border-radius: $border-radius !default;
+$comment-body-font-size: $font-size-sm !default;
+
+$comment-time-margin-bottom: .5625rem !default;
+$comment-time-font-size: $font-size-xs !default;
+$comment-time-color: $text-muted !default;
+
+
+// Dropdowns
+
+$dropdown-card-min-width: 350px !default;
+$dropdown-card-header-min-height: 3.125rem !default;
+$dropdown-card-body-max-height: 350px !default;
+
+
+// Header
+
+$header-margin-bottom: 2rem !default;
+
+$header-spacing-y: 1.5rem !default;
+
+$header-body-border-width: 1px !default;
+$header-body-border-color: $border-color !default;
+
+$header-body-border-color-dark: fade-out($header-body-border-color, .9) !default;
+
+
+// List groups
+
+$list-group-item-padding-y-lg: $spacer !default;
+
+
+// Loaders
+
+$loader-size-base: 1.5rem !default;
+$loader-size-sm: 1rem !default;
+$loader-size-lg: 2rem !default;
+
+
+// Main content
+
+$main-content-padding-y: 40px !default;
+$main-content-padding-x: 24px !default; // in px to combine with $grid-gutter-width
+
+
+// Modal
+
+$modal-dialog-vertical-width: 350px !default;
+
+$modal-card-body-max-height: 350px !default;
 
 
 // Navs
@@ -525,107 +631,9 @@ $navbar-light-bg: $white !default;
 $navbar-light-border-color: $border-color !default;
 
 
-// Breadcrumb
-
-$breadcrumb-padding-y-sm: .5rem !default;
-$breadcrumb-padding-x-sm: .5rem !default;
-$breadcrumb-item-padding-sm: .25rem !default;
-
-$breadcrumb-margin-bottom-sm: .25rem !default;
-$breadcrumb-font-size-sm: $font-size-sm !default;
-
-
-// Main content
-
-$main-content-padding-y: 40px !default;
-$main-content-padding-x: 24px !default; // in px to combine with $grid-gutter-width
-
-
-// Header
-
-$header-margin-bottom: 2rem !default;
-
-$header-spacing-y: 1.5rem !default;
-
-$header-body-border-width: 1px !default;
-$header-body-border-color: $border-color !default;
-
-$header-body-border-color-dark: fade-out($header-body-border-color, .9) !default;
-
-
-// Cards
-
-$card-outline-color: $card-border-color !default;
-$card-box-shadow: 0 .75rem 1.5rem transparentize($black, .97) !default;
-
-$card-header-min-height: 3.75rem !default;
-
-
-// Avatar
-
-$avatar-size-base: 3rem !default;
-$avatar-size-xs: 1.625rem !default;
-$avatar-size-sm: 2.5rem !default;
-$avatar-size-lg: 4rem !default;
-$avatar-size-xl: 5.125rem !default;
-$avatar-size-xxl: 8rem !default;
-
-
 // Progress bars
 
 $progress-height-sm: 0.25rem !default;
-
-
-// Comment
-
-$comment-margin-bottom: 1rem !default;
-
-$comment-body-padding-y: 1rem !default;
-$comment-body-padding-x: 1.25rem !default;
-$comment-body-bg: $body-bg !default;
-$comment-body-border-radius: $border-radius !default;
-$comment-body-font-size: $font-size-sm !default;
-
-$comment-time-margin-bottom: .5625rem !default;
-$comment-time-font-size: $font-size-xs !default;
-$comment-time-color: $text-muted !default;
-
-
-// Modal
-
-$modal-dialog-vertical-width: 350px !default;
-
-$modal-card-body-max-height: 350px !default;
-
-
-// Charts
-
-$chart-height: 300px !default;
-$chart-height-sm: 225px !default;
-
-$chart-legend-margin-top: 2.5rem !default;
-$chart-legend-font-size: $font-size-sm !default;
-$chart-legend-color: $text-muted !default;
-$chart-legend-height: $chart-legend-margin-top + $chart-legend-font-size * $line-height-base !default;
-
-
-// Dropdowns
-
-$dropdown-card-min-width: 350px !default;
-$dropdown-card-header-min-height: 3.125rem !default;
-$dropdown-card-body-max-height: 350px !default;
-
-
-// List groups
-
-$list-group-item-padding-y-lg: $spacer !default;
-
-
-// Loaders
-
-$loader-size-base: 1.5rem !default;
-$loader-size-sm: 1rem !default;
-$loader-size-lg: 2rem !default;
 
 
 // Toggle

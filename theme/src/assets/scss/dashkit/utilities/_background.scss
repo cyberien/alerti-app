@@ -33,6 +33,13 @@
 }
 
 
+// Auth
+
+.bg-auth {
+  background-color: $auth-bg;
+}
+
+
 // Ellipses
 
 @each $color, $value in $theme-colors {
@@ -44,5 +51,4 @@
     background-size: 200% 150%;
     background-position: center bottom;
   }
-
 }

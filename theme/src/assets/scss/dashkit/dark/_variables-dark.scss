@@ -31,7 +31,7 @@ $gray-800-dark: #152E4D !default;
 $gray-900-dark: #132A46 !default;
 $black-dark: #12263F !default;
 
-$light: $gray-700-dark !default;
+$light: $gray-800-dark !default;
 
 
 // Body
@@ -84,6 +84,17 @@ $navbar-light-hover-color: $white;
 $navbar-light-active-color: $white;
 
 
+// Pagination
+
+$pagination-color: $white;
+$pagination-bg: $gray-800-dark;
+$pagination-border-color: $gray-600-dark;
+
+$pagination-hover-color: $white;
+$pagination-hover-bg: $gray-900-dark;
+$pagination-hover-border-color: $gray-700-dark;
+
+
 // Cards
 
 $card-bg: $gray-800-dark !default;
@@ -97,12 +108,20 @@ $popover-header-color: $black;
 
 // Modals
 
-$modal-content-bg: $black !default;
+$modal-content-bg: $gray-800-dark !default;
+$modal-content-border-color: $black !default;
+
+$modal-header-border-color: $border-color !default;
+$modal-footer-border-color: $border-color !default;
 
 
 // 
 // Dashkit =====================================
 //
+
+// Auth
+
+$auth-bg: $body-bg !default;
 
 
 // Badges
