@@ -61,8 +61,7 @@ $theme-colors: map-merge((
   "danger":     $danger,
   "light":      $light,
   "dark":       $dark,
-  "white":      $white,
-  "body":       $gray-100 // body background
+  "white":      $white
 ), $theme-colors);
 // stylelint-enable
 
@@ -507,6 +506,9 @@ $avatar-size-sm: 2.5rem !default;
 $avatar-size-lg: 4rem !default;
 $avatar-size-xl: 5.125rem !default;
 $avatar-size-xxl: 8rem !default;
+
+$avatar-title-bg: $gray-500 !default;
+$avatar-title-color: $white !default;
 
 
 // Badges

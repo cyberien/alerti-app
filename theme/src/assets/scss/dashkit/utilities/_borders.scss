@@ -2,22 +2,47 @@
 // borders.scss
 //
 
-.border-2 {
-  border-width: $border-width * 2 !important;
+
+// Sizing
+
+$border-sizing: () !default;
+$border-sizing: map-merge((
+  "2": 2,
+  "3": 3,
+  "4": 4,
+  "5": 5
+), $border-sizing);
+
+@each $size, $value in $border-sizing {
+
+  .border-#{$size} {
+    border-width: $border-width * $value !important;
+  }
+
+  .border-top-#{$size} {
+    border-top-width: $border-width * $value !important;
+  }
+
+  .border-right-#{$size} {
+    border-right-width: $border-width * $value !important;
+  }
+
+  .border-bottom-#{$size} {
+    border-bottom-width: $border-width * $value !important;
+  }
+
+  .border-left-#{$size} {
+    border-left-width: $border-width * $value !important;
+  } 
 }
 
-.border-top-2 {
-  border-top-width: $border-width * 2 !important;
+
+// Contextual classes
+
+.border-body {
+  border-color: $body-bg !important;
 }
 
-.border-right-2 {
-  border-right-width: $border-width * 2 !important;
-}
-
-.border-bottom-2 {
-  border-bottom-width: $border-width * 2 !important;
-}
-
-.border-left-2 {
-  border-left-width: $border-width * 2 !important;
+.border-card {
+  border-color: $card-bg !important;
 }

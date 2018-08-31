@@ -3,6 +3,18 @@
 // Dark mode overrides
 //
 
+//
+// Table of contents
+//
+// 1. Root
+// 2. Buttons
+// 3. Forms
+// 4. Input groups
+// 5. Quill
+// 6. Select2
+//
+
+
 // Root
 
 :root {
@@ -29,15 +41,38 @@
 }
 
 
+// Forms
+
+.form-control {
+  border-color: $input-bg;
+}
+
+
+// Input groups
+
+.input-group .input-group-text {
+  border-color: $input-bg;
+}
+
+
+// Quill
+
+.ql-toolbar {
+  border-color: $input-bg;
+}
+
+.ql-editor {
+  border-left-color: $input-bg;
+  border-right-color: $input-bg;
+  border-bottom-color: $input-bg;
+}
+
+
 // Select2
 
+.select2-container .select2-selection--single,
+.select2-container--default.select2-container--focus .select2-selection--multiple,
+.select2-container--default .select2-selection--multiple,
 .select2-container--default .select2-search--dropdown .select2-search__field {
-  background-color: $white;
-  border-color: $gray-400;
-  color: $black;
-
-  &:focus {
-    background-color: $white;
-    color: $black;
-  }
+  border-color: $input-bg;
 }

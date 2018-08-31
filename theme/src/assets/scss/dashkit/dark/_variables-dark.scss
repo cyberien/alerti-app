@@ -25,13 +25,49 @@ $gray-800: #3B506C !default;
 $gray-900: #283E59 !default;
 $black:    #12263F !default;
 
+$blue:       #2C7BE5 !default;
+$indigo:     #727cf5 !default; // NOT USED
+$purple:     #6b5eae !default;
+$pink:       #ff679b !default; // NOT USED
+$red:        #E63757 !default;
+$orange:     #fd7e14 !default; // NOT USED
+$yellow:     #F6C343 !default;
+$green:      #00D97E !default;
+$teal:       #02a8b5 !default; // NOT USED
+$cyan:       #39afd1 !default; // NOT USED
+
 $gray-600-dark: #244166 !default;
 $gray-700-dark: #1E3A5C !default;
 $gray-800-dark: #152E4D !default;
 $gray-900-dark: #132A46 !default;
 $black-dark: #12263F !default;
 
-$light: $gray-800-dark !default;
+$primary:       $blue !default;
+$secondary:     $gray-700 !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-800-dark !default;
+$dark:          $black !default;
+
+$theme-colors: () !default;
+$theme-colors: map-merge((
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark,
+  "white":      $white
+), $theme-colors);
+// stylelint-enable
+
+// Customize the light and dark text colors for use in our YIQ color contrast function.
+$yiq-text-dark: $gray-900 !default;
+$yiq-text-light: $white !default;
 
 
 // Body
@@ -77,6 +113,18 @@ $input-placeholder-color: $gray-600 !default;
 $custom-control-indicator-bg: $gray-600-dark;
 
 
+// Dropdowns
+//
+// Dropdown menu container and contents.
+
+$dropdown-bg: $gray-800-dark !default;
+$dropdown-border-color: $black !default;
+$dropdown-divider-bg: $black !default;
+
+$dropdown-link-color: $text-muted !default;
+$dropdown-link-hover-color: $white !default;
+
+
 // Navbar
 
 $navbar-light-color: $gray-700;
@@ -101,9 +149,16 @@ $card-bg: $gray-800-dark !default;
 $card-border-color: $border-color !default;
 
 
+// Tooltips
+
+$tooltip-bg: $black !default;
+$tooltip-color: $white !default;
+
+
 // Popovers
 
-$popover-header-color: $black;
+$popover-bg: $gray-800-dark !default;
+$popover-border-color: $black !default;
 
 
 // Modals
@@ -115,6 +170,11 @@ $modal-header-border-color: $border-color !default;
 $modal-footer-border-color: $border-color !default;
 
 
+// Progress bars
+
+$progress-bg: $gray-600-dark !default;
+
+
 // 
 // Dashkit =====================================
 //
@@ -122,6 +182,11 @@ $modal-footer-border-color: $border-color !default;
 // Auth
 
 $auth-bg: $body-bg !default;
+
+
+// Avatar
+
+$avatar-title-bg: $gray-600-dark !default;
 
 
 // Badges
@@ -132,6 +197,11 @@ $badge-soft-bg-level: 10 !default;
 // Cards
 
 $card-outline-color: transparent !default;
+
+
+// Comment
+
+$comment-body-bg: $gray-700-dark;
 
 
 // Header

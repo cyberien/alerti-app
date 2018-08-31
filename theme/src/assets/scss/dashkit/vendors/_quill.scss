@@ -191,9 +191,11 @@
   width: 100%;
   padding-top: calc(#{$input-padding-y-sm} + #{$input-border-width});
   padding-bottom: calc(#{$input-padding-y-sm} + #{$input-border-width});
+  background-color: transparent;
   font-size: $font-size-sm;
   line-height: $input-line-height-sm;
   border: none;
+  color: $input-color;
 
   &:focus {
     outline: none;
