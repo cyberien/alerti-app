@@ -326,6 +326,7 @@ var Orders = (function() {
     initChart($ordersChart);
   }
 
+  // Toggle select
   $ordersSelect.on('change', function() {
     toggleSelect($(this));
   });
@@ -403,7 +404,6 @@ var OrdersAlias = (function() {
   // Events
   //
 
-  // Init chart
   if ($ordersChartAlias.length) {
     init($ordersChartAlias);
   }
@@ -460,7 +460,7 @@ var Devices = (function() {
             ThemeCharts.colors.primary[300],
             ThemeCharts.colors.primary[100]
           ],
-          hoverBorderColor: ( ThemeCharts.themeMode == 'dark' ) ? ThemeCharts.colors.gray[800] : ThemeCharts.colors.white
+          hoverBorderColor: ( ThemeCharts.mode == 'dark' ) ? ThemeCharts.colors.gray[800] : ThemeCharts.colors.white
         }]
       }
     });

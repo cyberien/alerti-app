@@ -1,5 +1,5 @@
 /**
- * Dashkit v1.1.2
+ * Dashkit v1.2.0
  *
  * Custom variables followed by Dashkit variables followed by Bootstrap variables
  * to ensure cascade of styles.
@@ -18069,11 +18069,6 @@ button:focus
 .form-control-lg + .select2-container--default .select2-selection--multiple .select2-selection__choice
 {
     line-height: 1.59375rem;
-}
-
-:root
-{
-    --theme-mode: dark;
 }
 
 .btn-white,

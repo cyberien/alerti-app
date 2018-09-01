@@ -13,8 +13,8 @@ var ThemeCharts = (function() {
   // Toggle
   var $toggle = $('[data-toggle="chart"]');
 
-  // Theme mode
-  var themeMode = $(document.body).css('--theme-mode') ? $(document.body).css('--theme-mode').trim() : '';
+  // Mode
+  var mode = ( themeMode ) ? themeMode : 'light';
 
   // Fonts
   var fonts = {
@@ -54,8 +54,8 @@ var ThemeCharts = (function() {
         global: {
           responsive: true,
           maintainAspectRatio: false,
-          defaultColor: ( themeMode == 'dark' ) ? colors.gray[700] : colors.gray[600],
-          defaultFontColor: ( themeMode == 'dark' ) ? colors.gray[700] : colors.gray[600],
+          defaultColor: ( mode == 'dark' ) ? colors.gray[700] : colors.gray[600],
+          defaultFontColor: ( mode == 'dark' ) ? colors.gray[700] : colors.gray[600],
           defaultFontFamily: fonts.base,
           defaultFontSize: 13,
           layout: {
@@ -86,7 +86,7 @@ var ThemeCharts = (function() {
             },
             arc: {
               backgroundColor: colors.primary[700],
-              borderColor: ( themeMode == 'dark' ) ? colors.gray[800] : colors.white,
+              borderColor: ( mode == 'dark' ) ? colors.gray[800] : colors.white,
               borderWidth: 4
             }
           },
@@ -223,12 +223,12 @@ var ThemeCharts = (function() {
       gridLines: {
         borderDash: [2],
         borderDashOffset: [2],
-        color: (themeMode == 'dark') ? colors.gray[900] : colors.gray[300],
+        color: (mode == 'dark') ? colors.gray[900] : colors.gray[300],
         drawBorder: false,
         drawTicks: false,
         lineWidth: 0,
         zeroLineWidth: 0,
-        zeroLineColor: (themeMode == 'dark') ? colors.gray[900] : colors.gray[300],
+        zeroLineColor: (mode == 'dark') ? colors.gray[900] : colors.gray[300],
         zeroLineBorderDash: [2],
         zeroLineBorderDashOffset: [2]
       },
@@ -372,10 +372,8 @@ var ThemeCharts = (function() {
   // Events
   //
 
-  // Check if Chart.js is included
+  // Parse global options
   if (window.Chart) {
-
-    // Parse global options
     parseOptions(Chart, chartOptions());
   }
 
@@ -405,7 +403,7 @@ var ThemeCharts = (function() {
   return {
     colors: colors,
     fonts: fonts,
-    themeMode: themeMode
+    mode: mode
   };
   
 })();
