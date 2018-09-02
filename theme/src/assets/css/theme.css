@@ -6628,7 +6628,7 @@ button.close
 
     pointer-events: auto;
 
-    border: 1px solid #e3ebf6;
+    border: 1px solid transparent;
     border-radius: .5rem;
     outline: 0; 
     background-color: #fff;
@@ -14404,11 +14404,6 @@ a.text-white:focus
 {
     margin-top: 0;
     margin-bottom: .5rem;
-}
-
-.form-control[readonly='readonly']
-{
-    background-color: #fff;
 }
 
 .form-control-flush

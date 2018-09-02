@@ -415,10 +415,11 @@ $badge-padding-y: .33em !default;
 // Padding applied to the modal body
 $modal-inner-padding: 1.5rem !default;
 
-$modal-content-border-color: $border-color !default;
+$modal-content-border-color: transparent !default;
 
 $modal-header-padding: 1.5rem !default;
-$modal-header-border-color: $modal-content-border-color !default;
+$modal-header-border-color: $border-color !default;
+$modal-footer-border-color: $border-color !default;
 
 
 // Alerts
