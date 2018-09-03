@@ -283,6 +283,7 @@ $input-padding-x-lg: $input-btn-padding-x-lg !default;
 $input-line-height-lg: $input-btn-line-height-lg !default;
 
 $input-bg: $white !default;
+$input-disabled-bg: $input-bg !default;
 
 $input-color: $body-color !default;
 $input-border-color: $gray-400 !default;
@@ -415,10 +416,11 @@ $badge-padding-y: .33em !default;
 // Padding applied to the modal body
 $modal-inner-padding: 1.5rem !default;
 
-$modal-content-border-color: $border-color !default;
+$modal-content-border-color: transparent !default;
 
 $modal-header-padding: 1.5rem !default;
-$modal-header-border-color: $modal-content-border-color !default;
+$modal-header-border-color: $border-color !default;
+$modal-footer-border-color: $border-color !default;
 
 
 // Alerts
