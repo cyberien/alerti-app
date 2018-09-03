@@ -1,5 +1,6 @@
 //
 // Layout ==================================
+// Demo code to toggle between light/dark modes
 //
 
 'use strict';
