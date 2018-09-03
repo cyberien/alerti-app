@@ -301,37 +301,29 @@
               <li>
 
                 <p>
-                  Open <code>/partials/head.html</code> and replace the code below:
+                  Open <code>/partials/head.html</code> and choose one of the three available modes:
                 </p>
-
-                <div class="card">
-                  <div class="card-body bg-dark">
-                    <code class="highlight html bg-dark">
-                      &lt;!-- Theme CSS --&gt;<br/>&lt;!-- build:css assets/css/theme-dark.min.css rel=&quot;&quot; data-toggle=&quot;theme&quot; data-theme-mode=&quot;dark&quot; --&gt;<br/>&lt;link rel=&quot;&quot; href=&quot;assets/css/theme-dark.css&quot; data-toggle=&quot;theme&quot; data-theme-mode=&quot;dark&quot;&gt;<br/>&lt;!-- endbuild --&gt;<br/>&lt;!-- build:css assets/css/theme.min.css rel=&quot;&quot; data-toggle=&quot;theme&quot; data-theme-mode=&quot;light&quot; --&gt;<br/>&lt;link rel=&quot;&quot; href=&quot;assets/css/theme.css&quot; data-toggle=&quot;theme&quot; data-theme-mode=&quot;light&quot;&gt;<br/>&lt;!-- endbuild --&gt;<br/><br/>&lt;style&gt;<br/>  body { display: none; }<br/>&lt;/style&gt;<br/><br/>&lt;script&gt;<br/>  var themeMode = (localStorage.getItem('dashkitThemeMode')) ? localStorage.getItem('dashkitThemeMode') : 'light';<br/>  var themeFile = document.querySelector('[data-toggle=&quot;theme&quot;][data-theme-mode=&quot;' + themeMode + '&quot;]');<br/><br/>  // Enable stylesheet<br/>  themeFile.rel = 'stylesheet';<br/><br/>  // Enable body content<br/>  themeFile.addEventListener('load', function() {<br/>    document.body.style.display = 'block';<br/>  });<br/>&lt;/script&gt;
-                    </code>
-                  </div>
-                </div>
+                
+                <ul class="mb-4">
+                  <li>
+                    <code>light</code> - to load the light mode by default.
+                  </li>
+                  <li>
+                    <code>dark</code> - to load the dark mode by default.
+                  </li>
+                  <li>
+                    <code>toggle</code> - to let users toggle between theme modes.
+                  </li>
+                </ul>
 
                 <p>
-                 ... with the following code if you want to enable the light mode by default:
+                  ... at this line:
                 </p>
 
                 <div class="card">
                   <div class="card-body bg-dark">
                     <code class="highlight html bg-dark">
-                      &lt;!-- Theme CSS --&gt;<br/>&lt;!-- build:css assets/css/theme.min.css  --&gt;<br/>&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/css/theme.css&quot;&gt;<br/>&lt;!-- endbuild --&gt;<br/><br/>&lt;script&gt;<br/>  var themeMode = 'light';<br/>&lt;/script&gt;
-                    </code>
-                  </div>
-                </div>
-
-                <p>
-                  ... or the following code if you want to enable the dark mode by default:
-                </p>
-
-                <div class="card">
-                  <div class="card-body bg-dark">
-                    <code class="highlight html bg-dark">
-                      &lt;!-- Theme CSS --&gt;<br/>&lt;!-- build:css assets/css/theme-dark.min.css  --&gt;<br/>&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/css/theme-dark.css&quot;&gt;<br/>&lt;!-- endbuild --&gt;<br/><br/>&lt;script&gt;<br/>  var themeMode = 'dark';<br/>&lt;/script&gt;
+                      @@include(&quot;styles.html&quot;,&nbsp;{<br/>&nbsp;&nbsp;&quot;mode&quot;:&nbsp;&quot;toggle&quot;<br/>})
                     </code>
                   </div>
                 </div>
