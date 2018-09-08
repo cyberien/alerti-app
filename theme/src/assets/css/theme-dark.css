@@ -14386,7 +14386,7 @@ a.text-white:focus
     padding-top: 0;
     padding-bottom: 0;
 
-    border: #12263f solid #12263f; 
+    border-color: #12263f; 
     background-color: #152e4d;
 }
 .dropdown-menu-card .card-header

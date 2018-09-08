@@ -14386,7 +14386,7 @@ a.text-white:focus
     padding-top: 0;
     padding-bottom: 0;
 
-    border: rgba(18, 38, 63, .1) solid #12263f; 
+    border-color: rgba(18, 38, 63, .1); 
     background-color: #fff;
 }
 .dropdown-menu-card .card-header

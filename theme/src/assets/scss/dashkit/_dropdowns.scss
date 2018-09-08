@@ -101,7 +101,7 @@
   padding-top: 0;
   padding-bottom: 0;
   background-color: $card-bg;
-  border: $dropdown-card-border-color solid $black;
+  border-color: $dropdown-card-border-color;
 
   .card-header {
     min-height: $dropdown-card-header-min-height;
