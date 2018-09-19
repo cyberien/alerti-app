@@ -14,11 +14,75 @@
 }
 
 
+// Navbar dark
+
+.navbar-dark {
+  background-color: $navbar-dark-bg;
+  border-color: $navbar-dark-border-color;
+  border: none;
+}
+
+.navbar-dark .navbar-heading {
+  color: $navbar-dark-heading-color;
+}
+
+.navbar-dark .navbar-divider {
+  border-color: $navbar-dark-divider-color;
+}
+
+.navbar-dark .navbar-user {
+  border-top-color: $navbar-dark-divider-color;
+}
+
+.navbar-dark .navbar-user-link {
+  color: $navbar-dark-color;
+
+  @include hover-focus {
+    color: $navbar-dark-hover-color;
+  }
+}
+
+.navbar-dark .navbar-brand {
+  filter: $navbar-dark-brand-filter;
+}
+
+.navbar-dark .navbar-collapse::before {
+  border-top-color: $navbar-dark-divider-color;
+}
+
 // Navbar light
 
 .navbar-light {
   background-color: $navbar-light-bg;
   border-color: $navbar-light-border-color;
+}
+
+.navbar-light .navbar-heading {
+  color: $navbar-light-heading-color;
+}
+
+.navbar-light .navbar-divider {
+  border-color: $navbar-light-divider-color;
+}
+
+.navbar-light .navbar-user {
+  border-top-color: $navbar-light-divider-color;
+}
+
+.navbar-light .navbar-user-link {
+  color: $navbar-light-color;
+
+  @include hover-focus {
+    color: $navbar-light-hover-color;
+  }
+}
+
+.navbar-light .navbar-brand {
+  filter: $navbar-light-brand-filter;
+}
+
+.navbar-light .navbar-collapse::before {
+  border-top-color: $navbar-light-divider-color;
 }
 
 
@@ -49,7 +113,8 @@
   &:before {
     content: '';
     display: block;
-    border-top: 1px solid $border-color;
+    border-top-width: $border-width;
+    border-top-style: solid;
     margin: $navbar-padding-y (-$navbar-padding-x);
   }
 }
@@ -291,8 +356,7 @@
       content: '\e92e';
       font-family: 'Feather';
       margin-left: auto;
-      color: $text-muted;
-      transition: $transition-base;
+      transition: transform .2s;
     }
 
     // Expanded
@@ -456,7 +520,8 @@
             padding-bottom: $spacer - $navbar-padding-y;
             padding-left: $navbar-vertical-padding-x;
             padding-right: $navbar-vertical-padding-x;
-            border-top: 1px solid $border-color;
+            border-top-width: 1px;
+            border-top-style: solid;
 
             // Dropup menu
 

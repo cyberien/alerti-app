@@ -343,10 +343,14 @@ $navbar-brand-padding-y: 0 !default;
 
 $navbar-toggler-padding-x: 0 !default;
 
+$navbar-dark-color: fade-out($white, .3) !default;
+$navbar-dark-hover-color: $white !default;
+$navbar-dark-active-color: $white !default;
 $navbar-dark-toggler-border-color: transparent !default;
 
 $navbar-light-color: $gray-700 !default;
 $navbar-light-hover-color: $black !default;
+$navbar-light-active-color: $black !default;
 $navbar-light-toggler-border-color: transparent !default;
 
 
@@ -632,8 +636,17 @@ $navbar-icon-min-width: 1.75rem !default;
 $navbar-breadcrumb-padding-y: $nav-link-padding-y !default;
 $navbar-breadcrumb-padding-x: 0 !default;
 
+$navbar-dark-bg: $dark !default;
+$navbar-dark-border-color: fade-out($white, .8) !default;
+$navbar-dark-heading-color: fade-out($white, .6) !default;
+$navbar-dark-divider-color: fade-out($white, .8) !default;
+$navbar-dark-brand-filter: brightness(0) invert(1);
+
 $navbar-light-bg: $white !default;
 $navbar-light-border-color: $border-color !default;
+$navbar-light-heading-color: $text-muted !default;
+$navbar-light-divider-color: $border-color !default;
+$navbar-light-brand-filter: none;
 
 
 // Progress bars
