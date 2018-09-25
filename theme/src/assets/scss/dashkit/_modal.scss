@@ -57,6 +57,25 @@
 }
 
 
+// Positioning
+
+.modal.fixed-right {
+  padding-right: 0 !important;
+}
+
+.modal.fixed-right .modal-dialog-vertical {
+  margin-left: auto;
+}
+
+.modal.fixed-right.fade .modal-dialog-vertical {
+  transform: translateX(100%);
+}
+
+.modal.fixed-right.show .modal-dialog-vertical {
+  transform: translateX(0);
+}
+
+
 // Modal card
 
 .modal-card {

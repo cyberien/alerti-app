@@ -3,9 +3,12 @@
 // Extended from Bootstrap
 //
 
-// 
-// Bootstrap Overrides =====================================
+
 //
+// Dashkit ===================================
+//
+
+// Button white
 
 .btn-white {
   border-color: $gray-300;
@@ -16,6 +19,16 @@
   }
 }
 
+.btn-group-toggle .btn-white:not(:disabled):not(.disabled):active, 
+.btn-group-toggle .btn-white:not(:disabled):not(.disabled).active {
+  background-color: $white;
+  border-color: $primary;
+  color: $primary;
+}
+
+
+// Button outline secondary
+
 .btn-outline-secondary {
   &:not(:hover):not([aria-expanded="true"]):not([aria-pressed="true"]){
     border-color: $gray-400;
@@ -23,9 +36,9 @@
 }
 
 
+// Button rounded
 //
-// Dashkit ===================================
-//
+// Creates circle button variations
 
 .btn-rounded-circle {
   width: calc(1em * #{$btn-line-height} + #{$input-btn-padding-y * 2 } + #{$btn-border-width} * 2);

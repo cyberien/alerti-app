@@ -14126,6 +14126,14 @@ a.text-white:focus
     background-color: #f9fbfd;
 }
 
+.btn-group-toggle .btn-white:not(:disabled):not(.disabled):active,
+.btn-group-toggle .btn-white:not(:disabled):not(.disabled).active
+{
+    color: #2c7be5; 
+    border-color: #2c7be5;
+    background-color: #fff;
+}
+
 .btn-outline-secondary:not(:hover):not([aria-expanded='true']):not([aria-pressed='true'])
 {
     border-color: #d2ddec;
@@ -14806,6 +14814,26 @@ a.text-white:focus
 }
 
 .modal.show .modal-dialog-vertical
+{
+    transform: translateX(0);
+}
+
+.modal.fixed-right
+{
+    padding-right: 0 !important;
+}
+
+.modal.fixed-right .modal-dialog-vertical
+{
+    margin-left: auto;
+}
+
+.modal.fixed-right.fade .modal-dialog-vertical
+{
+    transform: translateX(100%);
+}
+
+.modal.fixed-right.show .modal-dialog-vertical
 {
     transform: translateX(0);
 }
