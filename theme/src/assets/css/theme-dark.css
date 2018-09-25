@@ -16469,6 +16469,14 @@ button:focus
     }
 }
 
+.bg-hero
+{
+    background-image: linear-gradient(to bottom, rgba(18, 38, 63, .85), rgba(18, 38, 63, .85)), url(../img/covers/header-cover.jpg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: center center, center center;
+    background-size: cover, cover;
+}
+
 .border-2
 {
     border-width: 2px !important;
@@ -16931,7 +16939,8 @@ button:focus
     border-bottom: 1px solid #1e3a5c;
 }
 
-.header.bg-dark .header-body
+.header.bg-dark .header-body,
+.header.bg-hero .header-body
 {
     border-bottom-color: #1e3a5c;
 }
