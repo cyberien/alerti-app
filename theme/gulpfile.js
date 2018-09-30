@@ -1,3 +1,5 @@
+const config = require('./config');
+
 const enablePartials = true;
 
 const autoprefixer = require('gulp-autoprefixer');
@@ -93,7 +95,8 @@ gulp.task('fileinclude', function() {
       .pipe(fileinclude({
         prefix: '@@',
         basepath: '@file',
-        indent: true
+        indent: true,
+        context: config
       }))
       .pipe(gulp.dest(paths.src.tmp.dir))
       .pipe(browsersync.reload({
@@ -154,7 +157,8 @@ gulp.task('html', function() {
     .pipe(fileinclude({
       prefix: '@@',
       basepath: '@file',
-      indent: true
+      indent: true,
+      context: config
     }))
     .pipe(replace('<link rel="stylesheet" href="node_modules/', '<link rel="stylesheet" href="assets/libs/'))
     .pipe(replace('<link href="node_modules/', '<link href="assets/libs/'))

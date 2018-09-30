@@ -11,18 +11,28 @@
     ================================================== -->
     @@include("partials/modals.html")
 
-    <!-- SIDEBAR
+    <!-- NAVIGATION
     ================================================== -->
-    @@include("partials/sidebar.html", {
-      "category": "",
-      "subcategory": "",
-      "page": "index.html",
-      "user": true
-    })
+    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode ) {
+      @@include("partials/sidebar.html", {
+        "category": "",
+        "subcategory": "",
+        "page": "dummy.html"
+      })
+    }
+    @@if (navPosition == 'topnav' || demoMode) {
+      @@include("partials/topnav.html", {
+        "page": "dashboard-topnav.html"
+      })
+    }
 
     <!-- MAIN CONTENT
     ================================================== -->
     <div class="main-content">
+
+      @@if (navPosition == 'combo' || demoMode) {
+        @@include("partials/topbar.html")
+      }
       
     </div> <!-- / .main-content -->
 

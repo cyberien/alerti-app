@@ -11,18 +11,28 @@
     ================================================== -->
     @@include("partials/modals.html")
 
-    <!-- SIDEBAR
+    <!-- NAVIGATION
     ================================================== -->
-    @@include("partials/sidebar.html", {
-      "category": "pages",
-      "subcategory": "team",
-      "page": "team-members.html",
-      "user": true
-    })
+    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode ) {
+      @@include("partials/sidebar.html", {
+        "category": "pages",
+        "subcategory": "team",
+        "page": "team-members.html"
+      })
+    }
+    @@if (navPosition == 'topnav' || demoMode) {
+      @@include("partials/topnav.html", {
+        "page": "dashboard-topnav.html"
+      })
+    }
 
     <!-- MAIN CONTENT
     ================================================== -->
     <div class="main-content">
+
+      @@if (navPosition == 'combo' || demoMode) {
+        @@include("partials/topbar.html")
+      }
       
       <!-- HEADER -->
       <div class="header">
@@ -30,7 +40,7 @@
         <!-- Image -->
         <img src="assets/img/covers/team-cover.jpg" class="header-img-top" alt="...">
         
-        <div class="container-fluid">
+        <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
 
           <!-- Body -->
           <div class="header-body mt--5 mt-md--6">
@@ -96,12 +106,12 @@
             </div>
           </div> <!-- / .header-body -->
 
-        </div> <!-- / .container-fluid -->
+        </div>
 
       </div> <!-- / .header -->
       
       <!-- CONTENT -->
-      <div class="container-fluid">
+      <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
         <div class="row">
           <div class="col-12 col-xl-8">
             
@@ -534,7 +544,7 @@
 
           </div>
         </div> <!-- / .row -->
-      </div> <!-- / .container-fluid -->
+      </div>
 
     </div> <!-- / .main-content -->
 

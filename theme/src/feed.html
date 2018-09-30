@@ -11,19 +11,30 @@
     ================================================== -->
     @@include("partials/modals.html")
 
-    <!-- SIDEBAR
+    <!-- NAVIGATION
     ================================================== -->
-    @@include("partials/sidebar.html", {
-      "category": "pages",
-      "subcategory": "",
-      "page": "feed.html",
-      "user": true
-    })
+    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode ) {
+      @@include("partials/sidebar.html", {
+        "category": "pages",
+        "subcategory": "",
+        "page": "feed.html"
+      })
+    }
+    @@if (navPosition == 'topnav' || demoMode) {
+      @@include("partials/topnav.html", {
+        "page": "dashboard-topnav.html"
+      })
+    }
 
     <!-- MAIN CONTENT
     ================================================== -->
     <div class="main-content bg-fixed-bottom" style="background-image: url(assets/img/illustrations/sticky.svg);">
-      <div class="container-fluid">
+
+      @@if (navPosition == 'combo' || demoMode) {
+        @@include("partials/topbar.html")
+      }
+
+      <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
         <div class="row justify-content-center">
           <div class="col-12 col-lg-10 col-xl-8">
             
@@ -699,7 +710,8 @@
 
           </div>
         </div> <!-- / .row -->
-      </div> <!-- / .container-fluid -->
+      </div>
+      
     </div> <!-- / .main-content -->
 
     <!-- JAVASCRIPT

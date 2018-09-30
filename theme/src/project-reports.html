@@ -11,22 +11,32 @@
     ================================================== -->
     @@include("partials/modals.html")
 
-    <!-- SIDEBAR
+    <!-- NAVIGATION
     ================================================== -->
-    @@include("partials/sidebar.html", {
-      "category": "pages",
-      "subcategory": "project",
-      "page": "project-reports.html",
-      "user": true
-    })
+    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode ) {
+      @@include("partials/sidebar.html", {
+        "category": "pages",
+        "subcategory": "project",
+        "page": "project-reports.html"
+      })
+    }
+    @@if (navPosition == 'topnav' || demoMode) {
+      @@include("partials/topnav.html", {
+        "page": "dashboard-topnav.html"
+      })
+    }
 
     <!-- MAIN CONTENT
     ================================================== -->
     <div class="main-content">
 
+      @@if (navPosition == 'combo' || demoMode) {
+        @@include("partials/topbar.html")
+      }
+
       <!-- HEADER -->
       <div class="header">
-        <div class="container-fluid">
+        <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
           
           <!-- Body -->
           <div class="header-body">
@@ -103,11 +113,11 @@
             </div>
           </div>
 
-        </div> <!-- / .container-fluid -->
+        </div>
       </div> <!-- / .header -->
 
       <!-- CONTENT -->
-      <div class="container-fluid">
+      <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
         <div class="row">
           <div class="col-12">
             
@@ -138,7 +148,7 @@
 
           </div>
         </div> <!-- / .row -->
-      </div> <!-- / .container-fluid -->
+      </div>
       
     </div> <!-- / .main-content -->
 

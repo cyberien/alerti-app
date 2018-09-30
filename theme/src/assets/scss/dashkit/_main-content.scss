@@ -33,13 +33,13 @@
 
         // Left
 
-        &.fixed-left + .main-content {
+        &.fixed-left:not([style*="display: none"]) ~ .main-content {
           margin-left: $navbar-vertical-width;
         }
 
         // Right
 
-        &.fixed-right + .main-content {
+        &.fixed-right:not([style*="display: none"]) ~ .main-content {
           margin-right: $navbar-vertical-width;
         }
       }

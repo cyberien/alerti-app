@@ -14131,7 +14131,7 @@ a.text-white:focus
 {
     color: #2c7be5; 
     border-color: #2c7be5;
-    background-color: #fff;
+    background-color: #1e3a5c;
 }
 
 .btn-outline-secondary:not(:hover):not([aria-expanded='true']):not([aria-pressed='true'])
@@ -17231,23 +17231,23 @@ button:focus
     }
 }
 
-.navbar-vertical.navbar-expand-xs.fixed-left + .main-content
+.navbar-vertical.navbar-expand-xs.fixed-left:not([style*='display: none']) ~ .main-content
 {
     margin-left: 250px;
 }
 
-.navbar-vertical.navbar-expand-xs.fixed-right + .main-content
+.navbar-vertical.navbar-expand-xs.fixed-right:not([style*='display: none']) ~ .main-content
 {
     margin-right: 250px;
 }
 
 @media (min-width: 576px)
 {
-    .navbar-vertical.navbar-expand-sm.fixed-left + .main-content
+    .navbar-vertical.navbar-expand-sm.fixed-left:not([style*='display: none']) ~ .main-content
     {
         margin-left: 250px;
     }
-    .navbar-vertical.navbar-expand-sm.fixed-right + .main-content
+    .navbar-vertical.navbar-expand-sm.fixed-right:not([style*='display: none']) ~ .main-content
     {
         margin-right: 250px;
     }
@@ -17255,11 +17255,11 @@ button:focus
 
 @media (min-width: 768px)
 {
-    .navbar-vertical.navbar-expand-md.fixed-left + .main-content
+    .navbar-vertical.navbar-expand-md.fixed-left:not([style*='display: none']) ~ .main-content
     {
         margin-left: 250px;
     }
-    .navbar-vertical.navbar-expand-md.fixed-right + .main-content
+    .navbar-vertical.navbar-expand-md.fixed-right:not([style*='display: none']) ~ .main-content
     {
         margin-right: 250px;
     }
@@ -17267,11 +17267,11 @@ button:focus
 
 @media (min-width: 992px)
 {
-    .navbar-vertical.navbar-expand-lg.fixed-left + .main-content
+    .navbar-vertical.navbar-expand-lg.fixed-left:not([style*='display: none']) ~ .main-content
     {
         margin-left: 250px;
     }
-    .navbar-vertical.navbar-expand-lg.fixed-right + .main-content
+    .navbar-vertical.navbar-expand-lg.fixed-right:not([style*='display: none']) ~ .main-content
     {
         margin-right: 250px;
     }
@@ -17279,11 +17279,11 @@ button:focus
 
 @media (min-width: 1200px)
 {
-    .navbar-vertical.navbar-expand-xl.fixed-left + .main-content
+    .navbar-vertical.navbar-expand-xl.fixed-left:not([style*='display: none']) ~ .main-content
     {
         margin-left: 250px;
     }
-    .navbar-vertical.navbar-expand-xl.fixed-right + .main-content
+    .navbar-vertical.navbar-expand-xl.fixed-right:not([style*='display: none']) ~ .main-content
     {
         margin-right: 250px;
     }

@@ -460,7 +460,7 @@ var Devices = (function() {
             ThemeCharts.colors.primary[300],
             ThemeCharts.colors.primary[100]
           ],
-          hoverBorderColor: ( ThemeCharts.mode == 'dark' ) ? ThemeCharts.colors.gray[800] : ThemeCharts.colors.white
+          hoverBorderColor: ( ThemeCharts.colorScheme == 'dark' ) ? ThemeCharts.colors.gray[800] : ThemeCharts.colors.white
         }]
       }
     });

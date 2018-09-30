@@ -11,22 +11,32 @@
     ================================================== -->
     @@include("partials/modals.html")
 
-    <!-- SIDEBAR
+    <!-- NAVIGATION
     ================================================== -->
-    @@include("partials/sidebar.html", {
-      "category": "layouts",
-      "subcategory": "dashboards",
-      "page": "dashboard-no-hero.html",
-      "user": true
-    })
+    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode ) {
+      @@include("partials/sidebar.html", {
+        "category": "dashboards",
+        "subcategory": "",
+        "page": "dashboard-alt.html"
+      })
+    }
+    @@if (navPosition == 'topnav' || demoMode) {
+      @@include("partials/topnav.html", {
+        "page": "dashboard-topnav.html"
+      })
+    }
 
     <!-- MAIN CONTENT
     ================================================== -->
     <div class="main-content">
 
+      @@if (navPosition == 'combo' || demoMode) {
+        @@include("partials/topbar.html")
+      }
+
       <!-- HEADER -->
       <div class="header">
-        <div class="container-fluid">
+        <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
 
           <!-- Body -->
           <div class="header-body">
@@ -59,7 +69,7 @@
       </div> <!-- / .header -->
       
       <!-- CARDS -->
-      <div class="container-fluid">
+      <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
         <div class="row">
           <div class="col-12 col-lg-6 col-xl">
             
@@ -351,7 +361,7 @@
                     
                     <!-- Dropdown -->
                     <div class="dropdown">
-                      <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-boundary="window">
                         <i class="fe fe-more-vertical"></i>
                       </a>
                       <div class="dropdown-menu dropdown-menu-right">
@@ -399,7 +409,7 @@
                     
                     <!-- Dropdown -->
                     <div class="dropdown">
-                      <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-boundary="window">
                         <i class="fe fe-more-vertical"></i>
                       </a>
                       <div class="dropdown-menu dropdown-menu-right">
@@ -447,7 +457,7 @@
                     
                     <!-- Dropdown -->
                     <div class="dropdown">
-                      <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-boundary="window">
                         <i class="fe fe-more-vertical"></i>
                       </a>
                       <div class="dropdown-menu dropdown-menu-right">
@@ -495,7 +505,7 @@
                     
                     <!-- Dropdown -->
                     <div class="dropdown">
-                      <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-boundary="window">
                         <i class="fe fe-more-vertical"></i>
                       </a>
                       <div class="dropdown-menu dropdown-menu-right">
@@ -656,7 +666,7 @@
                       </td>
                       <td class="text-right">
                         <div class="dropdown">
-                          <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-boundary="window">
                             <i class="fe fe-more-vertical"></i>
                           </a>
                           <div class="dropdown-menu dropdown-menu-right">
@@ -701,7 +711,7 @@
                       </td>
                       <td class="text-right">
                         <div class="dropdown">
-                          <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-boundary="window">
                             <i class="fe fe-more-vertical"></i>
                           </a>
                           <div class="dropdown-menu dropdown-menu-right">
@@ -746,7 +756,7 @@
                       </td>
                       <td class="text-right">
                         <div class="dropdown">
-                          <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-boundary="window">
                             <i class="fe fe-more-vertical"></i>
                           </a>
                           <div class="dropdown-menu dropdown-menu-right">
@@ -788,7 +798,7 @@
                       </td>
                       <td class="text-right">
                         <div class="dropdown">
-                          <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-boundary="window">
                             <span class="fe fe-more-vertical"></span>
                           </a>
                           <div class="dropdown-menu dropdown-menu-right">
@@ -836,7 +846,7 @@
                       </td>
                       <td class="text-right">
                         <div class="dropdown">
-                          <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-boundary="window">
                             <i class="fe fe-more-vertical"></i>
                           </a>
                           <div class="dropdown-menu dropdown-menu-right">
@@ -892,7 +902,7 @@
 
           </div>
         </div> <!-- / .row -->
-      </div> <!-- / .container-fluid -->
+      </div>
 
     </div> <!-- / .main-content -->
 

@@ -11,18 +11,28 @@
     ================================================== -->
     @@include("partials/modals.html")
 
-    <!-- SIDEBAR
+    <!-- NAVIGATION
     ================================================== -->
-    @@include("partials/sidebar.html", {
-      "category": "pages",
-      "subcategory": "profile",
-      "page": "profile-projects.html",
-      "user": true
-    })
+    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode ) {
+      @@include("partials/sidebar.html", {
+        "category": "pages",
+        "subcategory": "profile",
+        "page": "profile-projects.html"
+      })
+    }
+    @@if (navPosition == 'topnav' || demoMode) {
+      @@include("partials/topnav.html", {
+        "page": "dashboard-topnav.html"
+      })
+    }
 
     <!-- MAIN CONTENT
     ================================================== -->
     <div class="main-content">
+
+      @@if (navPosition == 'combo' || demoMode) {
+        @@include("partials/topbar.html")
+      }
 
       <!-- HEADER -->
       <div class="header">
@@ -30,7 +40,7 @@
         <!-- Image -->
         <img src="assets/img/covers/profile-cover-1.jpg" class="header-img-top" alt="...">
         
-        <div class="container-fluid">
+        <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
 
           <!-- Body -->
           <div class="header-body mt--5 mt-md--6">
@@ -106,7 +116,7 @@
 
       <!-- CONTENT -->
       <div data-toggle="lists" data-lists-values='["name"]'>
-        <div class="container-fluid" data-toggle="lists" data-lists-class="listAlias" data-lists-values='["name"]'>
+        <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}" data-toggle="lists" data-lists-class="listAlias" data-lists-values='["name"]'>
           <div class="row mb-4">
             <div class="col">
               
@@ -1225,7 +1235,7 @@
             </div>
           </div> <!-- / .tab-content -->
 
-        </div> <!-- / .container-fluid -->
+        </div>
       </div>
 
     </div> <!-- / .main-content -->

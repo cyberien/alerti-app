@@ -4,8 +4,8 @@ Dashkit Theme by Good Themes.
 
 ### Documentation ###
 
-* Development documentation is available at pages/documentation/ (or dist/documentation/ once you've compiled), or visit http://dashkit.goodthemes.co/getting-started.html.
-* A full list components is available at pages/components.html (or dist/components.html once you've compiled), or visit http://dashkit.goodthemes.co/components.html.
+* Development documentation is available at `src/getting-started.html` (or `dist/getting-started.html` once you've compiled), or visit http://dashkit.goodthemes.co/getting-started.html.
+* A full list components is available at `src/components.html` (or `dist/components.html` once you've compiled), or visit http://dashkit.goodthemes.co/components.html.
 
 ### Getting Started ###
 

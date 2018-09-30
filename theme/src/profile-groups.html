@@ -11,18 +11,28 @@
     ================================================== -->
     @@include("partials/modals.html")
 
-    <!-- SIDEBAR
+    <!-- NAVIGATION
     ================================================== -->
-    @@include("partials/sidebar.html", {
-      "category": "pages",
-      "subcategory": "profile",
-      "page": "profile-groups.html",
-      "user": true
-    })
+    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode ) {
+      @@include("partials/sidebar.html", {
+        "category": "pages",
+        "subcategory": "profile",
+        "page": "profile-groups.html"
+      })
+    }
+    @@if (navPosition == 'topnav' || demoMode) {
+      @@include("partials/topnav.html", {
+        "page": "dashboard-topnav.html"
+      })
+    }
 
     <!-- MAIN CONTENT
     ================================================== -->
     <div class="main-content">
+
+      @@if (navPosition == 'combo' || demoMode) {
+        @@include("partials/topbar.html")
+      }
 
       <!-- HEADER -->
       <div class="header">
@@ -30,7 +40,7 @@
         <!-- Image -->
         <img src="assets/img/covers/profile-cover-1.jpg" class="header-img-top" alt="...">
         
-        <div class="container-fluid">
+        <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
 
           <!-- Body -->
           <div class="header-body mt--5 mt-md--6">
@@ -105,7 +115,7 @@
       </div>
 
       <!-- CONTENT -->
-      <div class="container-fluid">
+      <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
         <div class="row">
           <div class="col-12 col-lg-6">
             
@@ -756,7 +766,7 @@
 
           </div>
         </div> <!-- / .row -->
-      </div> <!-- / .container-fluid -->
+      </div>
     </div> <!-- / .main-content -->
 
     <!-- JAVASCRIPT

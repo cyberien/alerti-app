@@ -1,7 +1,8 @@
-<!-- Modal: Config -->
-<div class="modal fade fixed-right" id="modalConfig" tabindex="-1" role="dialog" aria-hidden="true">
+@@if (demoMode) {
+<!-- Modal: Demo -->
+<div class="modal fade fixed-right" id="modalDemo" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-dialog-vertical" role="document">
-    <div class="modal-content">
+    <form class="modal-content" id="demoForm">
       <div class="modal-body">
         
         <!-- Close -->
@@ -33,10 +34,10 @@
 
         <div class="btn-group-toggle d-flex mb-4" data-toggle="buttons">
           <label class="btn btn-white active col">
-            <input type="radio" name="options" id="option1" autocomplete="off" checked> <i class="fe fe-sun mr-2"></i> Light Mode
+            <input type="radio" name="colorScheme" id="colorSchemeLight" value="light" checked> <i class="fe fe-sun mr-2"></i> Light Mode
           </label>
           <label class="btn btn-white col ml-2">
-            <input type="radio" name="options" id="option2" autocomplete="off"> <i class="fe fe-moon mr-2"></i> Dark Mode
+            <input type="radio" name="colorScheme" id="colorSchemeDark" value="dark"> <i class="fe fe-moon mr-2"></i> Dark Mode
           </label>
         </div>
 
@@ -50,13 +51,13 @@
 
         <div class="btn-group-toggle d-flex mb-4" data-toggle="buttons">
           <label class="btn btn-white active col">
-            <input type="radio" name="options" id="option1" autocomplete="off" checked> Sidenav
+            <input type="radio" name="navPosition" id="navPositionSidenav" value="sidenav" checked> Sidenav
           </label>
           <label class="btn btn-white col ml-2">
-            <input type="radio" name="options" id="option2" autocomplete="off"> Topnav
+            <input type="radio" name="navPosition" id="navPositionTopnav" value="topnav"> Topnav
           </label>
           <label class="btn btn-white col ml-2">
-            <input type="radio" name="options" id="option2" autocomplete="off"> Combo
+            <input type="radio" name="navPosition" id="navPositionCombo" value="combo"> Combo
           </label>
         </div>
 
@@ -70,41 +71,25 @@
 
         <div class="btn-group-toggle d-flex mb-4" data-toggle="buttons">
           <label class="btn btn-white active col">
-            <input type="radio" name="options" id="option1" autocomplete="off" checked> Default
+            <input type="radio" name="sidebarColor" id="sidebarColorDefault" value="default" checked> Default
           </label>
           <label class="btn btn-white col ml-2">
-            <input type="radio" name="options" id="option2" autocomplete="off"> Vibrant
-          </label>
-        </div>
-
-         <h4 class="mb-1">
-           Dashboard Hero
-         </h4>
-
-        <p class="small text-muted mb-3">
-          Decide if you want a large hero chart in the dashboard header.
-        </p>
-
-        <div class="btn-group-toggle d-flex mb-4" data-toggle="buttons">
-          <label class="btn btn-white active col">
-            <input type="radio" name="options" id="option1" autocomplete="off" checked> Yup!
-          </label>
-          <label class="btn btn-white col ml-2">
-            <input type="radio" name="options" id="option2" autocomplete="off"> Nah.
+            <input type="radio" name="sidebarColor" id="sidebarColorVibrant" value="vibrant"> Vibrant
           </label>
         </div>
       
       </div>
       <div class="modal-footer border-0">
         
-        <a href="#" class="btn btn-block btn-primary mt-auto">
+        <button type="submit" class="btn btn-block btn-primary mt-auto">
           Preview
-        </a>
+        </button>
 
       </div>
-    </div>
+    </form>
   </div>
 </div>
+}
 
 <!-- Modal: Members -->
 <div class="modal fade" id="modalMembers" tabindex="-1" role="dialog" aria-hidden="true">

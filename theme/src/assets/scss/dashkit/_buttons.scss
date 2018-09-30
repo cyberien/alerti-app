@@ -21,8 +21,8 @@
 
 .btn-group-toggle .btn-white:not(:disabled):not(.disabled):active, 
 .btn-group-toggle .btn-white:not(:disabled):not(.disabled).active {
-  background-color: $white;
-  border-color: $primary;
+  background-color: $input-bg;
+  border-color: $input-focus-border-color;
   color: $primary;
 }
 

@@ -13,9 +13,6 @@ var ThemeCharts = (function() {
   // Toggle
   var $toggle = $('[data-toggle="chart"]');
 
-  // Mode
-  var mode = ( themeMode ) ? themeMode : 'light';
-
   // Fonts
   var fonts = {
     base: 'Cerebri Sans'
@@ -54,8 +51,8 @@ var ThemeCharts = (function() {
         global: {
           responsive: true,
           maintainAspectRatio: false,
-          defaultColor: ( mode == 'dark' ) ? colors.gray[700] : colors.gray[600],
-          defaultFontColor: ( mode == 'dark' ) ? colors.gray[700] : colors.gray[600],
+          defaultColor: ( colorScheme == 'dark' ) ? colors.gray[700] : colors.gray[600],
+          defaultFontColor: ( colorScheme == 'dark' ) ? colors.gray[700] : colors.gray[600],
           defaultFontFamily: fonts.base,
           defaultFontSize: 13,
           layout: {
@@ -86,7 +83,7 @@ var ThemeCharts = (function() {
             },
             arc: {
               backgroundColor: colors.primary[700],
-              borderColor: ( mode == 'dark' ) ? colors.gray[800] : colors.white,
+              borderColor: ( colorScheme == 'dark' ) ? colors.gray[800] : colors.white,
               borderWidth: 4
             }
           },
@@ -223,12 +220,12 @@ var ThemeCharts = (function() {
       gridLines: {
         borderDash: [2],
         borderDashOffset: [2],
-        color: (mode == 'dark') ? colors.gray[900] : colors.gray[300],
+        color: (colorScheme == 'dark') ? colors.gray[900] : colors.gray[300],
         drawBorder: false,
         drawTicks: false,
         lineWidth: 0,
         zeroLineWidth: 0,
-        zeroLineColor: (mode == 'dark') ? colors.gray[900] : colors.gray[300],
+        zeroLineColor: (colorScheme == 'dark') ? colors.gray[900] : colors.gray[300],
         zeroLineBorderDash: [2],
         zeroLineBorderDashOffset: [2]
       },
@@ -403,7 +400,7 @@ var ThemeCharts = (function() {
   return {
     colors: colors,
     fonts: fonts,
-    mode: mode
+    colorScheme: colorScheme
   };
   
 })();
