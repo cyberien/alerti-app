@@ -51,7 +51,7 @@ var Demo = (function() {
       } else if ( navPosition == 'combo' ) {
         topnav.setAttribute('style', 'display: none !important');
         topbar.setAttribute('style', 'display: flex !important');
-        sidebar.setAttribute('style', 'display: flex !important');
+        sidebar.setAttribute('style', 'display: block !important');
         sidebarUser.setAttribute('style', 'display: none !important');
         for (var i = 0; i < containers.length; i++) {
           containers[i].classList.remove('container');
@@ -60,7 +60,7 @@ var Demo = (function() {
       } else if ( navPosition == 'sidenav') {
         topnav.setAttribute('style', 'display: none !important');
         topbar.setAttribute('style', 'display: none !important');
-        sidebar.setAttribute('style', 'display: flex !important');
+        sidebar.setAttribute('style', 'display: block !important');
         sidebarUser.setAttribute('style', 'display: flex !important');
         for (var i = 0; i < containers.length; i++) {
           containers[i].classList.remove('container');

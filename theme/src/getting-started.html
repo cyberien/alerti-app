@@ -298,67 +298,11 @@
 
                 <!-- Title -->
                 <h1 class="header-title">
-                  Dark mode
+                  Configuration
                 </h1>
 
               </div>
             </div>
-
-            <p>
-              From v1.2.0 users are allowed to switch between light and dark theme modes by using a special toggle in the sidebar. Please follow the steps below to disable this behaviour and indicate a specific stylesheet to be loaded by default:
-            </p>
-
-            <ol>
-              <li>
-
-                <p>
-                  Open <code>/partials/head.html</code> and choose one of the three available modes:
-                </p>
-                
-                <ul class="mb-4">
-                  <li>
-                    <code>light</code> - to load the light mode by default.
-                  </li>
-                  <li>
-                    <code>dark</code> - to load the dark mode by default.
-                  </li>
-                  <li>
-                    <code>toggle</code> - to let users toggle between theme modes.
-                  </li>
-                </ul>
-
-                <p>
-                  ... at this line:
-                </p>
-
-                <div class="card">
-                  <div class="card-body bg-dark">
-                    <code class="highlight html bg-dark">
-                      @@include(&quot;styles.html&quot;,&nbsp;{<br/>&nbsp;&nbsp;&quot;mode&quot;:&nbsp;&quot;toggle&quot;<br/>})
-                    </code>
-                  </div>
-                </div>
-
-              </li>
-              <li>
-
-                <p>
-                  Open <code>/partials/scripts.html</code> and remove the following line:
-                </p>
-
-                <div class="card">
-                  <div class="card-body bg-dark">
-                    <code class="highlight html bg-dark">
-                      &lt;script src=&quot;assets/js/layout.js&quot;&gt;&lt;/script&gt;
-                    </code>
-                  </div>
-                </div>
-
-              </li>
-              <li>
-                Recompile the files with <strong class="badge badge-soft-primary"><code>gulp build</code></strong>.
-              </li>
-            </ol>
 
           </div>
         </div> <!-- / .row -->
