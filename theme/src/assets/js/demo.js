@@ -41,32 +41,34 @@ var Demo = (function() {
   function toggleNavPosition(navPosition) {
     if ( topnav && topbar && sidebar && sidebarUser) {
       if ( navPosition == 'topnav' ) {
-        topnav.setAttribute('style', 'display: flex !important');
-        topbar.setAttribute('style', 'display: none !important');
-        sidebar.setAttribute('style', 'display: none !important');
+        hideNode(topbar);
+        hideNode(sidebar);
+
         for (var i = 0; i < containers.length; i++) {
           containers[i].classList.remove('container-fluid');
           containers[i].classList.add('container');
         }
       } else if ( navPosition == 'combo' ) {
-        topnav.setAttribute('style', 'display: none !important');
-        topbar.setAttribute('style', 'display: flex !important');
-        sidebar.setAttribute('style', 'display: block !important');
-        sidebarUser.setAttribute('style', 'display: none !important');
+        hideNode(topnav);
+        hideNode(sidebarUser);
+
         for (var i = 0; i < containers.length; i++) {
           containers[i].classList.remove('container');
           containers[i].classList.add('container-fluid');
         }
       } else if ( navPosition == 'sidenav') {
-        topnav.setAttribute('style', 'display: none !important');
-        topbar.setAttribute('style', 'display: none !important');
-        sidebar.setAttribute('style', 'display: block !important');
-        sidebarUser.setAttribute('style', 'display: flex !important');
+        hideNode(topnav);
+        hideNode(topbar);
+
         for (var i = 0; i < containers.length; i++) {
           containers[i].classList.remove('container');
           containers[i].classList.add('container-fluid');
         }
       }
+    }
+
+    function hideNode(node) {
+      node.setAttribute('style', 'display: none !important');
     }
   }
 

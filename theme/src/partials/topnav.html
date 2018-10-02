@@ -530,105 +530,117 @@
 
       <!-- Navigation -->
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">
-            Dashboard
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle @@if(category=='dashboards'){active}" href="#" id="topnavDashboards" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dashboards
           </a>
+          <ul class="dropdown-menu" aria-labelledby="topnavDashboards">
+            <li>
+              <a class="dropdown-item @@if(page=='index.html'){active}" href="index.html">
+                Default
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item @@if(page=='dashboard-alt.html'){active}" href="dashboard-alt.html">
+                Alternative
+              </a>
+            </li>
+          </ul>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#!" id="topnavPages" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle @@if(category=='pages'){active}" href="#" id="topnavPages" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Pages
           </a>
           <ul class="dropdown-menu" aria-labelledby="topnavPages">
             <li class="dropright">
-              <a class="dropdown-item dropdown-toggle" href="#!" id="topnavProfile" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="dropdown-item dropdown-toggle @@if(subcategory=='profile'){active}" href="#" id="topnavProfile" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Profile
               </a>
               <div class="dropdown-menu" aria-labelledby="topnavProfile">
-                <a class="dropdown-item" href="profile-posts.html">
+                <a class="dropdown-item @@if(page=='profile-posts.html'){active}" href="profile-posts.html">
                   Posts
                 </a>
-                <a class="dropdown-item" href="profile-groups.html">
+                <a class="dropdown-item @@if(page=='profile-groups.html'){active}" href="profile-groups.html">
                   Groups
                 </a>
-                <a class="dropdown-item" href="profile-projects.html">
+                <a class="dropdown-item @@if(page=='profile-projects.html'){active}" href="profile-projects.html">
                   Projects
                 </a>
-                <a class="dropdown-item" href="profile-files.html">
+                <a class="dropdown-item @@if(page=='profile-files.html'){active}" href="profile-files.html">
                   Files
                 </a>
-                <a class="dropdown-item" href="profile-subscribers.html">
+                <a class="dropdown-item @@if(page=='profile-subscribers.html'){active}" href="profile-subscribers.html">
                   Subscribers
                 </a>
               </div>
             </li>
             <li class="dropright">
-              <a class="dropdown-item dropdown-toggle" href="#!" id="topnavProject" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="dropdown-item dropdown-toggle @@if(subcategory=='project'){active}" href="#!" id="topnavProject" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Project
               </a>
               <div class="dropdown-menu" aria-labelledby="topnavProject">
-                <a class="dropdown-item" href="project-overview.html">
+                <a class="dropdown-item @@if(page=='project-overview.html'){active}" href="project-overview.html">
                   Overview
                 </a>
-                <a class="dropdown-item" href="project-files.html">
+                <a class="dropdown-item @@if(page=='project-files.html'){active}" href="project-files.html">
                   Files
                 </a>
-                <a class="dropdown-item" href="project-reports.html">
+                <a class="dropdown-item @@if(page=='project-reports.html'){active}" href="project-reports.html">
                   Reports
                 </a>
-                <a class="dropdown-item" href="project-new.html">
+                <a class="dropdown-item @@if(page=='project-new.html'){active}" href="project-new.html">
                   New project
                 </a>
               </div>
             </li>
             <li class="dropright">
-              <a class="dropdown-item dropdown-toggle" href="#!" id="topnavTeam" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="dropdown-item dropdown-toggle @@if(subcategory=='team'){active}" href="#!" id="topnavTeam" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Team
               </a>
               <div class="dropdown-menu" aria-labelledby="topnavTeam">
-                <a class="dropdown-item" href="team-overview.html">
+                <a class="dropdown-item @@if(page=='team-overview.html'){active}" href="team-overview.html">
                   Overview
                 </a>
-                <a class="dropdown-item" href="team-project.html">
-                  Project
+                <a class="dropdown-item @@if(page=='team-projects.html'){active}" href="team-projects.html">
+                  Projects
                 </a>
-                <a class="dropdown-item" href="team-members.html">
+                <a class="dropdown-item @@if(page=='team-members.html'){active}" href="team-members.html">
                   Members
                 </a>
-                <a class="dropdown-item" href="team-new.html">
+                <a class="dropdown-item @@if(page=='team-new.html'){active}" href="team-new.html">
                   New team
                 </a>
               </div>
             </li>
             <li>
-              <a class="dropdown-item" href="orders.html">
+              <a class="dropdown-item @@if(page=='orders.html'){active}" href="orders.html">
                 Orders
               </a>
             </li>
             <li>
-              <a class="dropdown-item" href="feed.html">
+              <a class="dropdown-item @@if(page=='feed.html'){active}" href="feed.html">
                 Feed
               </a>
             </li>
             <li>
-              <a class="dropdown-item" href="settings.html">
+              <a class="dropdown-item @@if(page=='settings.html'){active}" href="settings.html">
                 Settings
               </a>
             </li>
             <li>
-              <a class="dropdown-item" href="invoice.html">
+              <a class="dropdown-item @@if(page=='invoice.html'){active}" href="invoice.html">
                 Invoice
               </a>
             </li>
             <li>
-              <a class="dropdown-item" href="pricing.html">
+              <a class="dropdown-item @@if(page=='pricing.html'){active}" href="pricing.html">
                 Pricing
               </a>
             </li>
           </ul>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#!" id="topnavAuth" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="topnavAuth" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Auth
           </a>
           <ul class="dropdown-menu" aria-labelledby="topnavAuth">
@@ -696,22 +708,22 @@
           </ul>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#!" id="topnavDocumentation" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle @@if(category=='docs'){active}" href="#" id="topnavDocumentation" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Docs
           </a>
           <ul class="dropdown-menu" aria-labelledby="topnavDocumentation">
             <li>
-              <a class="dropdown-item" href="getting-started.html">
+              <a class="dropdown-item @@if(page=='getting-started.html'){active}" href="getting-started.html">
                 Getting started
               </a>
             </li>
             <li>
-              <a class="dropdown-item" href="components.html">
+              <a class="dropdown-item @@if(page=='components.html'){active}" href="components.html">
                 Components
               </a>
             </li>
             <li>
-              <a class="dropdown-item" href="changelog.html">
+              <a class="dropdown-item @@if(page=='changelog.html'){active}" href="changelog.html">
                 Changelog
               </a>
             </li>

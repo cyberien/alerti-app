@@ -4386,7 +4386,7 @@ input[type='button'].btn-block
 .custom-control-label::before
 {
     position: absolute;
-    top: .20312rem;
+    top: .20313rem;
     left: -1.5rem;
 
     display: block;
@@ -4406,7 +4406,7 @@ input[type='button'].btn-block
 .custom-control-label::after
 {
     position: absolute;
-    top: .20312rem;
+    top: .20313rem;
     left: -1.5rem;
 
     display: block;
@@ -6202,7 +6202,7 @@ input[type='button'].btn-block
 
 .progress
 {
-    font-size: .70312rem;
+    font-size: .70313rem;
 
     display: flex;
     overflow: hidden;

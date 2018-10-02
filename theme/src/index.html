@@ -13,7 +13,7 @@
 
     <!-- NAVIGATION
     ================================================== -->
-    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode ) {
+    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
       @@include("partials/sidebar.html", {
         "category": "dashboards",
         "subcategory": "",
@@ -22,7 +22,9 @@
     }
     @@if (navPosition == 'topnav' || demoMode) {
       @@include("partials/topnav.html", {
-        "page": "dashboard-topnav.html"
+        "category": "dashboards",
+        "subcategory": "",
+        "page": "index.html"
       })
     }
 
