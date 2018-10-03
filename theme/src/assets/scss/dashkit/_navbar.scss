@@ -220,7 +220,7 @@
 
             &:before {
               top: auto;
-              bottom: calc(-#{$navbar-padding-y} - 2px);
+              bottom: calc(-#{$navbar-padding-y} - #{$border-width});
               right: $navbar-nav-link-padding-x;
               left: $navbar-nav-link-padding-x;
               border-left: 0;

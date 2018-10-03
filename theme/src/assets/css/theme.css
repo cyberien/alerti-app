@@ -15130,7 +15130,7 @@ a.text-white:focus
 {
     top: auto;
     right: .5rem;
-    bottom: calc(-.75rem - 2px);
+    bottom: calc(-.75rem - 1px);
     left: .5rem;
 
     border-bottom: 1px solid #2c7be5; 
@@ -15182,7 +15182,7 @@ a.text-white:focus
     {
         top: auto;
         right: .5rem;
-        bottom: calc(-.75rem - 2px);
+        bottom: calc(-.75rem - 1px);
         left: .5rem;
 
         border-bottom: 1px solid #2c7be5; 
@@ -15235,7 +15235,7 @@ a.text-white:focus
     {
         top: auto;
         right: .5rem;
-        bottom: calc(-.75rem - 2px);
+        bottom: calc(-.75rem - 1px);
         left: .5rem;
 
         border-bottom: 1px solid #2c7be5; 
@@ -15288,7 +15288,7 @@ a.text-white:focus
     {
         top: auto;
         right: .5rem;
-        bottom: calc(-.75rem - 2px);
+        bottom: calc(-.75rem - 1px);
         left: .5rem;
 
         border-bottom: 1px solid #2c7be5; 
@@ -15341,7 +15341,7 @@ a.text-white:focus
     {
         top: auto;
         right: .5rem;
-        bottom: calc(-.75rem - 2px);
+        bottom: calc(-.75rem - 1px);
         left: .5rem;
 
         border-bottom: 1px solid #2c7be5; 
