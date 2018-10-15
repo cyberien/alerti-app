@@ -306,6 +306,83 @@
               </div>
             </div>
 
+            <p>
+              You can easily customize the layout of your theme by modifying the content of the <code>config.js</code> file located in the root folder. The config object properties accept the following values:
+            </p>
+
+            <table class="table table-bordered table-sm bg-white">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Type</th>
+                  <th>Options</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody">
+                <tr>
+                  <td>
+                    <code class="text-nowrap">demoMode</code>
+                  </td>
+                  <td>
+                    Boolean
+                  </td>
+                  <td>
+                    true | false
+                  </td>
+                  <td>
+                    Whether you want to enable users toggle layout options. This will also enable the config modal and its toggler button.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code class="text-nowrap">colorScheme</code>
+                  </td>
+                  <td>
+                    String
+                  </td>
+                  <td>
+                    "light" | "dark"
+                  </td>
+                  <td>
+                    The default color scheme. Works with <code>demoMode</code> set to <code>false</code>.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code class="text-nowrap">navPosition</code>
+                  </td>
+                  <td>
+                    String
+                  </td>
+                  <td>
+                    "sidenav" | "topnav" | "combo"
+                  </td>
+                  <td>
+                    The default navigation positioning. Works with <code>demoMode</code> set to <code>false</code>.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code class="text-nowrap">sidebarColor</code>
+                  </td>
+                  <td>
+                    String
+                  </td>
+                  <td>
+                    "default" | "vibrant"
+                  </td>
+                  <td>
+                    The default sidebar styling. Works with <code>demoMode</code> set to <code>false</code>.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p>
+              <span class="badge badge-soft-warning">Heads up!</span> Modifying <code>config.js</code> requires you to restart any of the currently active Gulp tasks.
+            </p>
+
           </div>
         </div> <!-- / .row -->
       </div>
