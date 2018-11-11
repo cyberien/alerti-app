@@ -2300,11 +2300,6 @@ pre code
     background-color: #1e3a5c;
     box-shadow: transparent;
 }
-.form-control:-ms-input-placeholder
-{
-    opacity: 1; 
-    color: #95aac9;
-}
 .form-control::-ms-input-placeholder
 {
     opacity: 1; 
@@ -4386,7 +4381,7 @@ input[type='button'].btn-block
 .custom-control-label::before
 {
     position: absolute;
-    top: .20313rem;
+    top: .20312rem;
     left: -1.5rem;
 
     display: block;
@@ -4406,7 +4401,7 @@ input[type='button'].btn-block
 .custom-control-label::after
 {
     position: absolute;
-    top: .20313rem;
+    top: .20312rem;
     left: -1.5rem;
 
     display: block;
@@ -6202,7 +6197,7 @@ input[type='button'].btn-block
 
 .progress
 {
-    font-size: .70313rem;
+    font-size: .70312rem;
 
     display: flex;
     overflow: hidden;
@@ -15568,7 +15563,7 @@ a.text-white:focus
 }
 .navbar-vertical.navbar-expand-xs .navbar-brand-img
 {
-    max-height: 2.5rem;
+    max-height: 3rem;
 }
 .navbar-vertical.navbar-expand-xs .navbar-user
 {
@@ -15696,7 +15691,7 @@ a.text-white:focus
     }
     .navbar-vertical.navbar-expand-sm .navbar-brand-img
     {
-        max-height: 2.5rem;
+        max-height: 3rem;
     }
     .navbar-vertical.navbar-expand-sm .navbar-user
     {
@@ -15825,7 +15820,7 @@ a.text-white:focus
     }
     .navbar-vertical.navbar-expand-md .navbar-brand-img
     {
-        max-height: 2.5rem;
+        max-height: 3rem;
     }
     .navbar-vertical.navbar-expand-md .navbar-user
     {
@@ -15954,7 +15949,7 @@ a.text-white:focus
     }
     .navbar-vertical.navbar-expand-lg .navbar-brand-img
     {
-        max-height: 2.5rem;
+        max-height: 3rem;
     }
     .navbar-vertical.navbar-expand-lg .navbar-user
     {
@@ -16083,7 +16078,7 @@ a.text-white:focus
     }
     .navbar-vertical.navbar-expand-xl .navbar-brand-img
     {
-        max-height: 2.5rem;
+        max-height: 3rem;
     }
     .navbar-vertical.navbar-expand-xl .navbar-user
     {
@@ -17992,14 +17987,6 @@ button:focus
     outline: 0;
     background-color: #1e3a5c;
     box-shadow: transparent;
-}
-.select2-container .select2-selection--single:-ms-input-placeholder,
-.select2-container--default.select2-container--focus .select2-selection--multiple:-ms-input-placeholder,
-.select2-container--default .select2-selection--multiple:-ms-input-placeholder,
-.select2-container--default .select2-search--dropdown .select2-search__field:-ms-input-placeholder
-{
-    opacity: 1; 
-    color: #95aac9;
 }
 .select2-container .select2-selection--single::-ms-input-placeholder,
 .select2-container--default.select2-container--focus .select2-selection--multiple::-ms-input-placeholder,
