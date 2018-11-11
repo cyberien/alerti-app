@@ -6,9 +6,9 @@
 
 var Lists = (function() {
 
-  //  //
+  //
   // Variables
-  //  //
+  //
 
   var $lists = $('[data-toggle="lists"]');
   var $listsSort = $('[data-sort]');

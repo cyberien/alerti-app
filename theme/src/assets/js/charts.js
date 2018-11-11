@@ -10,15 +10,16 @@ var ThemeCharts = (function() {
   // Variables
   //
 
-  // Toggle
+  // Selectors
+
   var $toggle = $('[data-toggle="chart"]');
 
-  // Fonts
+  // Config
+
   var fonts = {
     base: 'Cerebri Sans'
   }
 
-  // Colors
   var colors = {
     gray: {
       300: '#E3EBF6',
@@ -36,6 +37,8 @@ var ThemeCharts = (function() {
     white: '#FFFFFF',
     transparent: 'transparent',
   };
+
+  var colorScheme = ( getComputedStyle(document.body).backgroundColor == 'rgb(249, 251, 253)' ) ? 'light' : 'dark';
 
 
   //

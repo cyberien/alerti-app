@@ -1,5 +1,5 @@
 //
-// Demo ==================================
+// Demo
 // Demo code to toggle layout options
 //
 
@@ -11,6 +11,7 @@ var Demo = (function() {
   // Variables
   //
 
+  // Selectors
   var form = document.querySelector('#demoForm');
   var topnav = document.querySelector('#topnav');
   var topbar = document.querySelector('#topbar');
@@ -20,13 +21,38 @@ var Demo = (function() {
   var stylesheets = document.querySelectorAll('#stylesheetLight, #stylesheetDark');
   var stylesheetLight = document.querySelector('#stylesheetLight');
   var stylesheetDark = document.querySelector('#stylesheetDark');
-  var navPosition = ( localStorage.getItem('dashkitNavPosition') ) ? localStorage.getItem('dashkitNavPosition') : 'sidenav';
-  var sidebarColor = ( localStorage.getItem('dashkitSidebarColor') ) ? localStorage.getItem('dashkitSidebarColor') : 'default';
+
+  // Config
+  var config = {
+    colorScheme: ( localStorage.getItem('dashkitColorScheme') ) ? localStorage.getItem('dashkitColorScheme') : 'light',
+    navPosition: ( localStorage.getItem('dashkitNavPosition') ) ? localStorage.getItem('dashkitNavPosition') : 'sidenav',
+    sidebarColor: ( localStorage.getItem('dashkitSidebarColor') ) ? localStorage.getItem('dashkitSidebarColor') : 'default',
+  }
 
 
   //
   // Methods
   //
+
+  function parseUrl() {
+    var search = window.location.search.substring(1);
+    var params = search.split('&');
+
+    for ( var i = 0; i < params.length; i++ ) {
+      var arr = params[i].split('=');
+      var prop = arr[0];
+      var val = arr[1];
+
+      if ( prop == 'colorScheme' || prop == 'navPosition' || prop == 'sidebarColor' ) {
+
+        // Save to localStorage
+        localStorage.setItem('dashkit' + prop.charAt(0).toUpperCase() + prop.slice(1), val);
+
+        // Update local variables
+        config[prop] = val;
+      }
+    }
+  }
 
   function toggleColorScheme(colorScheme) {
     if ( colorScheme == 'light' ) {
@@ -101,7 +127,7 @@ var Demo = (function() {
     localStorage.setItem('dashkitSidebarColor', sidebarColor);
 
     // Reload page
-    location.reload();
+    window.location = window.location.pathname;
   }
 
 
@@ -109,24 +135,23 @@ var Demo = (function() {
   // Event
   //
 
-  // Document loaded
-  document.addEventListener('DOMContentLoaded', function() {
+  // Parse url
+  parseUrl();
 
-    // Toggle color scheme
-    toggleColorScheme(colorScheme);
+  // Toggle color scheme
+  toggleColorScheme(config.colorScheme);
 
-    // Toggle nav position
-    toggleNavPosition(navPosition);
+  // Toggle nav position
+  toggleNavPosition(config.navPosition);
 
-    // Toggle sidebar color
-    toggleSidebarColor(sidebarColor);
+  // Toggle sidebar color
+  toggleSidebarColor(config.sidebarColor);
 
-    // Toggle form controls
-    toggleFormControls(form, colorScheme, navPosition, sidebarColor);
+  // Toggle form controls
+  toggleFormControls(form, config.colorScheme, config.navPosition, config.sidebarColor);
 
-    // Enable body
-    document.body.style.display = 'block';
-  });
+  // Enable body
+  document.body.style.display = 'block';
 
   // Form submitted
   if ( form ) {
