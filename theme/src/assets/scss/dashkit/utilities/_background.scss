@@ -57,7 +57,7 @@
 // Vibrant
 
 .bg-vibrant {
-  background-image: linear-gradient(to bottom right, fade-out(#126FEB, .1), fade-out(#7203E1, .1)), url(../img/covers/sidebar-cover.jpg);
+  background-image: linear-gradient(to bottom right, fade-out(#126FEB, .1), fade-out(#7203E1, .1)), url(#{$path-to-img}/covers/sidebar-cover.jpg);
   background-repeat: no-repeat, no-repeat;
   background-position: center center, center center;
   background-size: cover, cover;
@@ -71,7 +71,7 @@
 // Hero
 
 .bg-hero {
-  background-image: linear-gradient(to bottom, fade-out($black, .15), fade-out($black, .15)), url(../img/covers/header-cover.jpg);
+  background-image: linear-gradient(to bottom, fade-out($black, .15), fade-out($black, .15)), url(#{$path-to-img}/covers/header-cover.jpg);
   background-repeat: no-repeat, no-repeat;
   background-position: center center, center center;
   background-size: cover, cover;

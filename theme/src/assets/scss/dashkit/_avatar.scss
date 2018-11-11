@@ -18,10 +18,10 @@
     content: '';
     position: absolute;
     width: 0; height: 0;
-    background-image: url(../img/masks/avatar-status.svg),
-                      url(../img/masks/avatar-group.svg),
-                      url(../img/masks/avatar-group-hover.svg),
-                      url(../img/masks/avatar-group-hover-last.svg);
+    background-image: url(#{$path-to-img}/masks/avatar-status.svg),
+                      url(#{$path-to-img}/masks/avatar-group.svg),
+                      url(#{$path-to-img}/masks/avatar-group-hover.svg),
+                      url(#{$path-to-img}/masks/avatar-group-hover-last.svg);
   }
 }
 
@@ -55,7 +55,7 @@
   }
 
   .avatar-img {
-    mask-image: url(../img/masks/avatar-status.svg);
+    mask-image: url(#{$path-to-img}/masks/avatar-status.svg);
     mask-size: 100% 100%;
   }
 }
@@ -169,7 +169,7 @@
   // Add some spacing between avatars
 
   .avatar:not(:last-child) {
-    mask-image: url(../img/masks/avatar-group.svg);
+    mask-image: url(#{$path-to-img}/masks/avatar-group.svg);
     mask-size: 100% 100%;
   }
 
@@ -180,11 +180,11 @@
     z-index: 1;
 
     + .avatar {
-      mask-image: url(../img/masks/avatar-group-hover.svg);
+      mask-image: url(#{$path-to-img}/masks/avatar-group-hover.svg);
       mask-size: 100% 100%;
 
       &:last-child {
-        mask-image: url(../img/masks/avatar-group-hover-last.svg);
+        mask-image: url(#{$path-to-img}/masks/avatar-group-hover-last.svg);
       }
     }
   }
