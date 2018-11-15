@@ -75,7 +75,7 @@ const paths = {
 
 gulp.task('sass', function() {
   gulp.src(paths.src.scss.main)
-    .pipe(wait(500))
+    //.pipe(wait(500))
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([require('postcss-flexbugs-fixes')]))
     .pipe(autoprefixer({
