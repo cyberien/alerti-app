@@ -171,7 +171,7 @@ gulp.task('html', function() {
 });
 
 gulp.task('build', function(callback) {
-  runsequence(['clean:tmp', 'clean:packageLock', 'clean:dist', 'copy:all', 'copy:libs'], ['sass', 'html'], 
+  runsequence(['clean:tmp', 'clean:packageLock', 'clean:dist', 'copy:all', 'copy:libs'], 'sass', 'html', 
     callback);
 });
 
