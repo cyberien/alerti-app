@@ -12,13 +12,11 @@ const fileinclude = require('gulp-file-include');
 const gulp = require('gulp');
 const gulpif = require('gulp-if');
 const npmdist = require('gulp-npm-dist');
-const postcss = require('gulp-postcss');
 const runsequence = require('run-sequence');
 const replace = require('gulp-replace');
 const sass = require('gulp-sass');
 const uglify = require('gulp-uglify');
 const useref = require('gulp-useref-plus');
-const wait = require('gulp-wait');
 
 const paths = {
   base:   {
@@ -75,9 +73,7 @@ const paths = {
 
 gulp.task('sass', function() {
   gulp.src(paths.src.scss.main)
-    //.pipe(wait(500))
     .pipe(sass().on('error', sass.logError))
-    .pipe(postcss([require('postcss-flexbugs-fixes')]))
     .pipe(autoprefixer({
       browsers: ['> 1%']
     }))
