@@ -162,7 +162,7 @@ gulp.task('html', function() {
     .pipe(useref())
     .pipe(cached('assets'))
     .pipe(gulpif('*.js', uglify()))
-    .pipe(gulpif('*.css', cssnano()))
+    .pipe(gulpif('*.css', cssnano({svgo: false})))
     .pipe(gulp.dest(paths.dist.base.dir))
 });
 
