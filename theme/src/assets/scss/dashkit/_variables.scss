@@ -302,6 +302,9 @@ $input-group-addon-color: $text-muted !default;
 $custom-select-focus-border-color: $input-focus-border-color !default;
 $custom-select-focus-box-shadow: inset 0 1px 2px rgba($black, .075), 0 0 5px rgba($custom-select-focus-border-color, .5) !default;
 
+$custom-control-indicator-bg: $border-color !default;
+$custom-control-indicator-border-width: 0 !default;
+
 $custom-switch-width: 3rem !default;
 $custom-switch-indicator-size: 1.125rem !default;
 $custom-switch-indicator-border-radius: $custom-switch-indicator-size / 2 !default;
@@ -659,5 +662,5 @@ $path-to-img: '../img/';
 
 $custom-switch-height: 1.5rem !default;
 $custom-switch-spacing: ($custom-switch-height - $custom-switch-indicator-size) / 2 !default;
-$custom-switch-bg: $border-color !default;
-$custom-switch-border-width: 0 !default;
+$custom-switch-bg: $custom-control-indicator-bg !default;
+$custom-switch-border-width: $custom-control-indicator-border-width !default;

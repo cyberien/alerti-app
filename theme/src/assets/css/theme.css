@@ -4550,8 +4550,8 @@ input[type='button'].btn-block
     content: '';
     pointer-events: none;
 
-    border: #b1c2d9 solid 1px; 
-    background-color: #fff;
+    border: #b1c2d9 solid 0; 
+    background-color: #e3ebf6;
 }
 .custom-control-label::after
 {
@@ -4633,8 +4633,8 @@ input[type='button'].btn-block
 }
 .custom-switch .custom-control-label::after
 {
-    top: calc(.20313rem + 2px);
-    left: calc(-3.5rem + 2px);
+    top: calc(.20313rem + 0);
+    left: calc(-3.5rem + 0);
 
     width: 1.125rem;
     height: 1.125rem;
@@ -4655,7 +4655,7 @@ input[type='button'].btn-block
 {
     transform: translateX(2rem); 
 
-    background-color: #fff;
+    background-color: #e3ebf6;
 }
 .custom-switch .custom-control-input:disabled:checked ~ .custom-control-label::before
 {

@@ -4550,7 +4550,7 @@ input[type='button'].btn-block
     content: '';
     pointer-events: none;
 
-    border: #b1c2d9 solid 1px; 
+    border: #b1c2d9 solid 0; 
     background-color: #244166;
 }
 .custom-control-label::after
@@ -4633,8 +4633,8 @@ input[type='button'].btn-block
 }
 .custom-switch .custom-control-label::after
 {
-    top: calc(.20313rem + 2px);
-    left: calc(-3.5rem + 2px);
+    top: calc(.20313rem + 0);
+    left: calc(-3.5rem + 0);
 
     width: 1.125rem;
     height: 1.125rem;
@@ -13716,7 +13716,7 @@ a.text-white:focus
 
     border-width: 0;
     border-radius: .75rem; 
-    background-color: #1e3a5c;
+    background-color: #244166;
 }
 .custom-switch .custom-control-label::after
 {
