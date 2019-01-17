@@ -1,0 +1,37 @@
+//
+// custom-forms.scss
+// Extended from Bootstrap
+//
+
+//
+// Bootstrap Overrides ===================================
+//
+
+// Switch
+
+.custom-switch {
+  min-height: $custom-switch-height;
+
+  .custom-control-label {
+
+    &::before {
+      top: 0;
+      height: $custom-switch-height;
+      background-color: $custom-switch-bg;
+      border-width: $custom-switch-border-width;
+      border-radius: $custom-switch-height / 2;
+    }
+    &::after {
+      top: $custom-switch-spacing;
+      left: $custom-switch-spacing - $custom-control-gutter - $custom-switch-width;
+      background-color: $white;
+    }
+  }
+
+  .custom-control-input:checked ~ .custom-control-label {
+
+    &::after {
+      transform: translateX($custom-switch-width - $custom-switch-spacing * 2 - $custom-switch-indicator-size);
+    }
+  }
+}
