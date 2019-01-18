@@ -168,6 +168,11 @@ $popover-bg: $gray-800-dark !default;
 $popover-border-color: $black !default;
 
 
+// Toasts
+
+$toast-background-color: $gray-800-dark !default;;
+
+
 // Modals
 
 $modal-content-bg: $gray-800-dark !default;
@@ -219,7 +224,7 @@ $navbar-light-bg: $gray-800-dark !default;
 $navbar-light-border-color: $black-dark !default;
 
 
-// Toggle
+// Switch
 
-$toggle-handle-bg: $gray-800-dark !default;
-$toggle-handle-active-bg: $white !default;
+$custom-switch-indicator-bg: $gray-800-dark !default;
+$custom-switch-indicator-active-bg: $white !default;

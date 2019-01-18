@@ -6776,25 +6776,25 @@ a.close.disabled
 
 .toast
 {
-    font-size: .875rem;
+    font-size: .9375rem;
 
     overflow: hidden;
 
-    max-width: 350px;
+    max-width: 300px;
 
     opacity: 0; 
-    border: 1px solid rgba(0, 0, 0, .1);
-    border-radius: .25rem;
-    background-color: rgba(255, 255, 255, .85);
+    border: 1px solid #1e3a5c;
+    border-radius: .375rem;
+    background-color: #152e4d;
     background-clip: padding-box;
-    box-shadow: 0 .25rem .75rem rgba(18, 38, 63, .1);
+    box-shadow: 0 .75rem 1.5rem rgba(18, 38, 63, .1);
 
     -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
 }
 .toast:not(:last-child)
 {
-    margin-bottom: .75rem;
+    margin-bottom: 1rem;
 }
 .toast.showing
 {
@@ -6815,11 +6815,11 @@ a.close.disabled
 {
     display: flex;
 
-    padding: .25rem .75rem;
+    padding: .75rem 1rem;
 
-    color: #95aac9;
-    border-bottom: 1px solid rgba(0, 0, 0, .05); 
-    background-color: rgba(255, 255, 255, .85);
+    color: #fff;
+    border-bottom: 1px solid #1e3a5c; 
+    background-color: #152e4d;
     background-clip: padding-box;
 
     align-items: center;
@@ -6827,7 +6827,7 @@ a.close.disabled
 
 .toast-body
 {
-    padding: .75rem;
+    padding: 1rem;
 }
 
 .modal-open
@@ -13714,20 +13714,20 @@ a.text-white:focus
 
     height: 1.5rem;
 
-    border-width: 0;
-    border-radius: .75rem; 
-    background-color: #244166;
+    border-radius: .75rem;
 }
 .custom-switch .custom-control-label::after
 {
     top: .1875rem;
     left: -3.3125rem;
 
-    background-color: #fff;
+    background-color: #152e4d;
 }
 .custom-switch .custom-control-input:checked ~ .custom-control-label::after
 {
-    transform: translateX(1.5rem);
+    transform: translateX(1.5rem); 
+
+    background-color: #fff;
 }
 
 .dropdown-toggle:after
@@ -14188,6 +14188,11 @@ a.text-white:focus
 .modal.show .modal-dialog
 {
     transform: translate(0, 0);
+}
+
+.modal-header .close
+{
+    margin: -1.5rem -1.5rem -1.5rem auto;
 }
 
 .modal-dialog-vertical
@@ -15564,6 +15569,11 @@ a.text-white:focus
     height: .25rem;
 }
 
+[type='search']::-webkit-search-cancel-button
+{
+    -webkit-appearance: none;
+}
+
 html
 {
     height: 100%;
@@ -15624,6 +15634,14 @@ body
     top: 50%;
 
     transform: translateY(-50%);
+}
+
+.toast
+{
+    position: fixed;
+    z-index: 1030; 
+    right: 1rem;
+    bottom: 1rem;
 }
 
 h1,

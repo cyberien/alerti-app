@@ -415,6 +415,22 @@ $popover-header-margin-bottom: .25rem !default;
 $popover-body-color: $text-muted !default;
 
 
+// Toasts
+
+$toast-max-width: 300px !default;
+$toast-padding-x: 1rem !default;
+$toast-padding-y: 0.75rem !default;
+$toast-font-size: $font-size-base !default;
+$toast-background-color: $white !default;
+$toast-border-color: $border-color !default;
+$toast-border-radius: $border-radius !default;
+$toast-box-shadow: 0 0.75rem 1.5rem fade-out($black, .9) !default;
+
+$toast-header-color: $body-color !default;
+$toast-header-background-color: $toast-background-color !default;
+$toast-header-border-color: $border-color !default;
+
+
 // Badges
 
 $badge-font-weight: $font-weight-normal !default;
@@ -662,5 +678,6 @@ $path-to-img: '../img/';
 
 $custom-switch-height: 1.5rem !default;
 $custom-switch-spacing: ($custom-switch-height - $custom-switch-indicator-size) / 2 !default;
-$custom-switch-bg: $custom-control-indicator-bg !default;
-$custom-switch-border-width: $custom-control-indicator-border-width !default;
+
+$custom-switch-indicator-bg: $white !default;
+$custom-switch-indicator-active-bg: $white !default;
