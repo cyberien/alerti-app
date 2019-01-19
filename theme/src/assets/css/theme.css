@@ -13514,6 +13514,12 @@ a.text-white:focus
     background-color: #fff;
 }
 
+.btn-group-toggle .btn-white:focus,
+.btn-group-toggle .btn-white.focus
+{
+    box-shadow: none;
+}
+
 .btn-outline-secondary:not(:hover):not([aria-expanded='true']):not([aria-pressed='true'])
 {
     border-color: #d2ddec;
