@@ -20,9 +20,6 @@ const sass = require('gulp-sass');
 const uglify = require('gulp-uglify');
 const useref = require('gulp-useref-plus');
 
-// Turn on/off partials
-const enablePartials = true;
-
 // Define paths
 const paths = {
   base:   {
@@ -118,19 +115,15 @@ gulp.task('scss', function() {
 });
 
 gulp.task('fileinclude', function(callback) {
-  if (enablePartials) {
-    return gulp
-      .src(paths.src.html.files)
-      .pipe(fileinclude({
-        prefix: '@@',
-        basepath: '@file',
-        indent: true,
-        context: config
-      }))
-      .pipe(gulp.dest(paths.src.tmp.dir));
-  } else {
-    callback();
-  }
+  return gulp
+    .src(paths.src.html.files)
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file',
+      indent: true,
+      context: config
+    }))
+    .pipe(gulp.dest(paths.src.tmp.dir));
 });
 
 gulp.task('clean:tmp', function(callback) {
