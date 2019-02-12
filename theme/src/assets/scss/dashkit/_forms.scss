@@ -15,6 +15,14 @@
 }
 
 
+// Form validation
+
+.was-validated .form-control:valid:focus, .form-control.is-valid:focus,
+.was-validated .form-control:invalid:focus, .form-control.is-invalid:focus {
+  box-shadow: none;
+}
+
+
 //
 // Dashkit ===================================
 //
