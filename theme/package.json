@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "browser-sync": "^2.26.3",
-    "del": "^3.0.0",
+    "del": "^4.0.0",
     "gulp": "4.0.0",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-cached": "^1.1.1",
@@ -20,15 +20,15 @@
     "gulp-npm-dist": "^1.0.2",
     "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.0.2",
-    "gulp-uglify": "^3.0.1",
+    "gulp-uglify": "^3.0.2",
     "gulp-useref-plus": "0.0.8"
   },
   "dependencies": {
-    "bootstrap": "4.3.0",
+    "bootstrap": "4.3.1",
     "chart.js": "^2.7.3",
     "dropzone": "^5.5.1",
-    "flatpickr": "^4.5.2",
-    "highlight.js": "^9.14.2",
+    "flatpickr": "^4.5.7",
+    "highlight.js": "^9.15.6",
     "highlightjs": "^9.12.0",
     "jquery": "^3.3.1",
     "jquery-mask-plugin": "^1.14.15",

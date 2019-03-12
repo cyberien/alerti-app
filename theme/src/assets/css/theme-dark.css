@@ -5,7 +5,7 @@
  * to ensure cascade of styles.
  */
 /*!
- * Bootstrap v4.3.0 (https://getbootstrap.com/)
+ * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -8164,22 +8164,27 @@ a.text-white:hover, a.text-white:focus {
     background-color: #FFFFFF;
     transform: translateX(1.5rem); }
 
-.dropdown-toggle:after {
-  content: '\e92e';
+.dropdown-toggle::before, .dropdown-toggle::after {
   width: auto;
   height: auto;
   border: none !important;
   vertical-align: middle;
   font-family: 'Feather'; }
 
-.dropup > .dropdown-toggle:after {
+.dropdown-toggle::after {
+  content: '\e92e'; }
+
+.dropup > .dropdown-toggle::after {
   content: '\e931'; }
 
-.dropright > .dropdown-toggle:after {
+.dropright > .dropdown-toggle::after {
   content: '\e930'; }
 
-.dropleft > .dropdown-toggle:after {
+.dropleft > .dropdown-toggle::before {
   content: '\e92f'; }
+
+.dropleft > .dropdown-toggle::after {
+  display: none; }
 
 .dropdown-item.dropdown-toggle {
   display: flex;
@@ -9785,26 +9790,28 @@ a:focus, button:focus {
 
 .icon {
   display: inline-block; }
+  .icon > .fe {
+    display: block;
+    min-width: 1.5em;
+    min-height: 1.5em;
+    text-align: center;
+    font-size: 1.0625rem; }
   .icon.active {
     position: relative; }
-    .icon.active:after {
-      content: '';
-      position: absolute;
-      top: 10%;
-      right: 30%;
-      width: 20%;
-      height: 20%;
-      border-radius: 50%;
-      background-color: #2C7BE5; }
-    .icon.active .fe {
-      display: block;
-      min-width: 1.5em;
-      min-height: 1.5em;
-      font-size: 1.0625rem;
+    .icon.active > .fe {
       -webkit-mask-image: url(../img//masks/icon-status.svg);
               mask-image: url(../img//masks/icon-status.svg);
       -webkit-mask-size: 100% 100%;
               mask-size: 100% 100%; }
+    .icon.active::after {
+      content: "";
+      position: absolute;
+      top: 10%;
+      right: 20%;
+      width: 20%;
+      height: 20%;
+      border-radius: 50%;
+      background-color: #2C7BE5; }
 
 .fe {
   line-height: inherit; }
