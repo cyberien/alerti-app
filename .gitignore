@@ -1,9 +1,5 @@
-.DS_Store
 node_modules/
-releases/
+dist/
+src/.tmp/
 package-lock.json
-theme/.DS_Store
-theme/package-lock.json
-theme/node_modules/
-theme/dist/
-theme/src/.tmp/
+.DS_Store

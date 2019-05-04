@@ -1,13 +1,20 @@
-# Dashkit #
+# DASHKIT #
 
-### Deploying ###
+Dashkit Theme by Good Themes.
 
-1. Open `theme/package.json` and change the version number to `x.x.x`
-2. Update the changelog file
-3. `gulp zip` to compile theme files and create `Dashkit-x.x.x.zip`. It will create a package inside a `releases` folder.
-4. Pop open the .zip and make sure it compiles and everything looks good. 
-5. Upload the .zip to the platform, and include the changelog details
-6. Copy the `/dist` folder to your desktop
-7. Checkout the `gh-pages` branch, delete every file except `CNAME` and copy over all of contents of `/dist`
-8. Commit/Push `gh-pages`, check it live to make sure it's good to go. 
-9. Login as the Bootstrap admin and approve the update!
+### Documentation ###
+
+* Development documentation is available at `src/getting-started.html` (or `dist/getting-started.html` once you've compiled), or visit http://dashkit.goodthemes.co/getting-started.html.
+* A full list components is available at `src/components.html` (or `dist/components.html` once you've compiled), or visit http://dashkit.goodthemes.co/components.html.
+
+### Getting Started ###
+
+The steps to compile and get started with development are covered in detail in documentation mentioned above, but the summary is:
+
+- npm install -g gulp-cli
+- npm install
+- gulp
+
+### Support ###
+
+Good Themes is happy to provide support for issues. Shoot us an email at support@goodthemes.co and we'll get you squared away.

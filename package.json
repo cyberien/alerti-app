@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "Dashkit",
-  "version": "",
+  "version": "1.3.4",
   "description": "",
   "main": "gulpfile.js",
   "author": "Good Themes",
@@ -9,9 +9,32 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-chug": "^0.5.1",
-    "gulp-zip": "^4.1.0"
+    "browser-sync": "^2.26.5",
+    "del": "^4.1.1",
+    "gulp": "^4.0.1",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-cached": "^1.1.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-file-include": "^2.0.1",
+    "gulp-if": "^2.0.2",
+    "gulp-npm-dist": "^1.0.3",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "gulp-useref-plus": "0.0.8"
   },
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "4.3.1",
+    "chart.js": "^2.8.0",
+    "dropzone": "^5.5.1",
+    "flatpickr": "^4.5.7",
+    "highlight.js": "^9.15.6",
+    "highlightjs": "^9.12.0",
+    "jquery": "^3.4.1",
+    "jquery-mask-plugin": "^1.14.15",
+    "list.js": "^1.5.0",
+    "quill": "^1.3.6",
+    "save": "^2.3.3",
+    "select2": "^4.0.7-rc.0"
+  }
 }

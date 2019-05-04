@@ -9244,7 +9244,7 @@ a.text-white:hover, a.text-white:focus {
 .popover {
   padding: 0.8rem 0.95rem; }
   .popover:hover {
-    display: block !important; }
+    visibility: visible !important; }
 
 .popover-header {
   margin-bottom: 0.25rem;
