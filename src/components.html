@@ -1880,7 +1880,7 @@
                 </div>
                 <div class="card-footer bg-dark">
                   <code class="highlight html bg-dark">
-                    &lt;div&nbsp;class=&quot;chart&quot;&gt;<br/>&nbsp;&nbsp;&lt;canvas&nbsp;id=&quot;ordersChart&quot;&nbsp;class=&quot;chart-canvas&quot;&gt;&lt;/canvas&gt;<br/>&lt;/div&gt;<br/><br/>&lt;script&gt;<br/>new&nbsp;Chart('ordersChart',&nbsp;{<br/>&nbsp;&nbsp;type:&nbsp;'bar',<br/>&nbsp;&nbsp;data:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;labels:&nbsp;['Jan',&nbsp;'Feb',&nbsp;'Mar',&nbsp;'Apr',&nbsp;'May',&nbsp;'Jun',&nbsp;'Jul',&nbsp;'Aug',&nbsp;'Sep',&nbsp;'Oct',&nbsp;'Nov',&nbsp;'Dec'],<br/>&nbsp;&nbsp;&nbsp;&nbsp;datasets:&nbsp;[{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;label:&nbsp;'Sales',<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data:&nbsp;[25,20,30,22,17,10,18,26,28,26,20,32]<br/>&nbsp;&nbsp;&nbsp;&nbsp;}]<br/>&nbsp;&nbsp;}<br/>});&lt;/script&gt;
+                    &lt;div&nbsp;class=&quot;chart&quot;&gt;<br/>&nbsp;&nbsp;&lt;canvas&nbsp;id=&quot;ordersChart&quot;&nbsp;class=&quot;chart-canvas&quot;&gt;&lt;/canvas&gt;<br/>&lt;/div&gt;<br/><br/>&lt;script&gt;<br/>new&nbsp;Chart('ordersChart',&nbsp;{<br/>&nbsp;&nbsp;type:&nbsp;'bar',<br/>&nbsp;&nbsp;data:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;labels:&nbsp;['Jan',&nbsp;'Feb',&nbsp;'Mar',&nbsp;'Apr',&nbsp;'May',&nbsp;'Jun',&nbsp;'Jul',&nbsp;'Aug',&nbsp;'Sep',&nbsp;'Oct',&nbsp;'Nov',&nbsp;'Dec'],<br/>&nbsp;&nbsp;&nbsp;&nbsp;datasets:&nbsp;[{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;label:&nbsp;'Sales',<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data:&nbsp;[25,20,30,22,17,10,18,26,28,26,20,32]<br/>&nbsp;&nbsp;&nbsp;&nbsp;}]<br/>&nbsp;&nbsp;}<br/>});<br>&lt;/script&gt;
                   </code>
                 </div>
               </div>
@@ -1903,13 +1903,15 @@
                 <div class="card-body">
                   
                   <div class="chart">
-                    <canvas id="devicesChart" class="chart-canvas"></canvas>
+                    <canvas id="devicesChart" class="chart-canvas" data-toggle="legend" data-target="#devicesChartLegend"></canvas>
                   </div>
+
+                  <div id="devicesChartLegend" class="chart-legend"></div>
 
                 </div>
                 <div class="card-body bg-dark">
                   <code class="highlight html bg-dark">
-                    &lt;div&nbsp;class=&quot;chart&quot;&gt;<br/>&nbsp;&nbsp;&lt;canvas&nbsp;id=&quot;devicesChart&quot;&nbsp;class=&quot;chart-canvas&quot;&gt;&lt;/canvas&gt;<br/>&lt;/div&gt;<br/><br/>&lt;script&gt;<br/>new&nbsp;Chart('devicesChart',&nbsp;{<br/>&nbsp;&nbsp;type:&nbsp;'doughnut',<br/>&nbsp;&nbsp;data:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;labels:&nbsp;['Desktop',&nbsp;'Tablet',&nbsp;'Mobile'],<br/>&nbsp;&nbsp;&nbsp;&nbsp;datasets:&nbsp;[{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data:&nbsp;[60,&nbsp;25,&nbsp;15]<br/>&nbsp;&nbsp;&nbsp;&nbsp;}]<br/>&nbsp;&nbsp;}<br/>});<br/>&lt;/script&gt;
+                    &lt;div&nbsp;class=&quot;chart&quot;&gt;<br/>&nbsp;&nbsp;&lt;canvas&nbsp;id=&quot;devicesChart&quot;&nbsp;class=&quot;chart-canvas&quot;&nbsp;data-toggle=&quot;legend&quot;&nbsp;data-target=&quot;#devicesChartLegend&quot;&gt;&lt;/canvas&gt;<br/>&lt;/div&gt;<br/><br/>&lt;div&nbsp;id=&quot;devicesChartLegend&quot;&nbsp;class=&quot;chart-legend&quot;&gt;&lt;/div&gt;<br/><br/>&lt;script&gt;<br/>new&nbsp;Chart('devicesChart',&nbsp;{<br/>&nbsp;&nbsp;type:&nbsp;'doughnut',<br/>&nbsp;&nbsp;data:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;labels:&nbsp;['Desktop',&nbsp;'Tablet',&nbsp;'Mobile'],<br/>&nbsp;&nbsp;&nbsp;&nbsp;datasets:&nbsp;[{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data:&nbsp;[60,&nbsp;25,&nbsp;15]<br/>&nbsp;&nbsp;&nbsp;&nbsp;}]<br/>&nbsp;&nbsp;}<br/>});<br/>&lt;/script&gt;
                   </code>
                 </div>
               </div>
@@ -2654,12 +2656,12 @@
                   
                   <input type="text" class="form-control mb-3" placeholder="Flatpickr example" data-toggle="flatpickr">
 
-                  <input type="text" class="form-control" placeholder="Flatpickr range example" data-toggle="flatpickr" data-flatpickr-mode="range">
+                  <input type="text" class="form-control" placeholder="Flatpickr range example" data-toggle="flatpickr" data-options='{"mode": "range"}'>
 
                 </div>
                 <div class="card-footer bg-dark">
                   <code class="highlight html bg-dark">
-                    &lt;input&nbsp;type=&quot;text&quot;&nbsp;class=&quot;form-control&quot;&nbsp;placeholder=&quot;Flatpickr&nbsp;example&quot;&nbsp;data-toggle=&quot;flatpickr&quot;&gt;<br/><br/>&lt;input&nbsp;type=&quot;text&quot;&nbsp;class=&quot;form-control&quot;&nbsp;placeholder=&quot;Flatpickr&nbsp;range&nbsp;example&quot;&nbsp;data-toggle=&quot;flatpickr&quot;&nbsp;data-flatpickr-mode=&quot;range&quot;&gt;
+                    &lt;input&nbsp;type=&quot;text&quot;&nbsp;class=&quot;form-control&quot;&nbsp;placeholder=&quot;Flatpickr&nbsp;example&quot;&nbsp;data-toggle=&quot;flatpickr&quot;&gt;<br/><br/>&lt;input&nbsp;type=&quot;text&quot;&nbsp;class=&quot;form-control&quot;&nbsp;placeholder=&quot;Flatpickr&nbsp;range&nbsp;example&quot;&nbsp;data-toggle=&quot;flatpickr&quot;&nbsp;data-options='{&quot;mode&quot;:&nbsp;&quot;range&quot;}'&gt;
                   </code>
                 </div>
               </div>
@@ -2713,7 +2715,7 @@
                 <div class="card-body">
                   
                   <form>
-                    <div data-toggle="quill" data-quill-placeholder="Quill WYSIWYG"></div>
+                    <div data-toggle="quill" data-options='{"placeholder": "Quill WYSIWYG"}'></div>
                   </form>
 
                 </div>
@@ -2741,7 +2743,7 @@
               <div class="card">
                 <div class="card-body">
 
-                  <div class="dropzone dropzone-single mb-3" data-toggle="dropzone" data-dropzone-url="http://">
+                  <div class="dropzone dropzone-single mb-3" data-toggle="dropzone" data-options='{"url": "https://", "maxFiles": 1, "acceptedFiles": "image/*"}'>
 
                     <!-- Fallback -->
                     <div class="fallback">
@@ -2760,7 +2762,7 @@
 
                   </div>
 
-                  <div class="dropzone dropzone-multiple" data-toggle="dropzone" data-dropzone-multiple data-dropzone-url="http://">
+                  <div class="dropzone dropzone-multiple" data-toggle="dropzone" data-options='{"url": "https://"}'>
 
                     <!-- Fallback -->
                     <div class="fallback">
@@ -2806,7 +2808,7 @@
                 </div>
                 <div class="card-footer bg-dark">
                   <code class="highlight html bg-dark">
-                    &lt;!--&nbsp;Single&nbsp;--&gt;<br/>&lt;div&nbsp;class=&quot;dropzone&nbsp;dropzone-single&nbsp;mb-3&quot;&nbsp;data-toggle=&quot;dropzone&quot;&nbsp;data-dropzone-url=&quot;http://&quot;&gt;<br/><br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;fallback&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;custom-file&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;file&quot;&nbsp;class=&quot;custom-file-input&quot;&nbsp;id=&quot;projectCoverUploads&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;custom-file-label&quot;&nbsp;for=&quot;projectCoverUploads&quot;&gt;Choose&nbsp;file&lt;/label&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dz-preview&nbsp;dz-preview-single&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dz-preview-cover&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;class=&quot;dz-preview-img&quot;&nbsp;src=&quot;...&quot;&nbsp;alt=&quot;...&quot;&nbsp;data-dz-thumbnail&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&lt;/div&gt;<br/><br/><br/>&lt;!--&nbsp;Multiple&nbsp;--&gt;<br/>&lt;div&nbsp;class=&quot;dropzone&nbsp;dropzone-multiple&quot;&nbsp;data-toggle=&quot;dropzone&quot;&nbsp;data-dropzone-multiple&nbsp;data-dropzone-url=&quot;http://&quot;&gt;<br/><br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;fallback&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;custom-file&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;file&quot;&nbsp;class=&quot;custom-file-input&quot;&nbsp;id=&quot;customFileUploadMultiple&quot;&nbsp;multiple&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;custom-file-label&quot;&nbsp;for=&quot;customFileUploadMultiple&quot;&gt;Choose&nbsp;file&lt;/label&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;dz-preview&nbsp;dz-preview-multiple&nbsp;list-group&nbsp;list-group-lg&nbsp;list-group-flush&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;list-group-item&nbsp;px-0&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;row&nbsp;align-items-center&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;avatar&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;class=&quot;avatar-img&nbsp;rounded&quot;&nbsp;src=&quot;...&quot;&nbsp;alt=&quot;...&quot;&nbsp;data-dz-thumbnail&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col&nbsp;ml-n3&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&nbsp;class=&quot;mb-1&quot;&nbsp;data-dz-name&gt;...&lt;/h4&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&nbsp;class=&quot;small&nbsp;text-muted&nbsp;mb-0&quot;&nbsp;data-dz-size&gt;...&lt;/p&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dropdown&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-ellipses&nbsp;dropdown-toggle&quot;&nbsp;role=&quot;button&quot;&nbsp;data-toggle=&quot;dropdown&quot;&nbsp;aria-haspopup=&quot;true&quot;&nbsp;aria-expanded=&quot;false&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i&nbsp;class=&quot;fe&nbsp;fe-more-vertical&quot;&gt;&lt;/i&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dropdown-menu&nbsp;dropdown-menu-right&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-item&quot;&nbsp;data-dz-remove&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remove<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br/>&nbsp;&nbsp;&lt;/ul&gt;<br/><br/>&lt;/div&gt;
+                    &lt;!--&nbsp;Single&nbsp;--&gt;<br/>&lt;div&nbsp;class=&quot;dropzone&nbsp;dropzone-single&quot;&nbsp;data-toggle=&quot;dropzone&quot;&nbsp;data-options='{&quot;url&quot;:&nbsp;&quot;https://&quot;,&nbsp;&quot;maxFiles&quot;:&nbsp;1,&nbsp;&quot;acceptedFiles&quot;:&nbsp;&quot;image/*&quot;}'&gt;<br/><br/>&nbsp;&nbsp;&lt;!--&nbsp;Fallback&nbsp;--&gt;<br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;fallback&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;custom-file&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;file&quot;&nbsp;class=&quot;custom-file-input&quot;&nbsp;id=&quot;projectCoverUploads&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;custom-file-label&quot;&nbsp;for=&quot;projectCoverUploads&quot;&gt;Choose&nbsp;file&lt;/label&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&nbsp;&nbsp;&lt;!--&nbsp;Preview&nbsp;--&gt;<br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dz-preview&nbsp;dz-preview-single&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dz-preview-cover&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;class=&quot;dz-preview-img&quot;&nbsp;src=&quot;...&quot;&nbsp;alt=&quot;...&quot;&nbsp;data-dz-thumbnail&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&lt;/div&gt;<br/><br/>&lt;!--&nbsp;Multiple&nbsp;--&gt;<br/>&lt;div&nbsp;class=&quot;dropzone&nbsp;dropzone-multiple&quot;&nbsp;data-toggle=&quot;dropzone&quot;&nbsp;data-options='{&quot;url&quot;:&nbsp;&quot;https://&quot;}'&gt;<br/><br/>&nbsp;&nbsp;&lt;!--&nbsp;Fallback&nbsp;--&gt;<br/>&nbsp;&nbsp;&lt;div&nbsp;class=&quot;fallback&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;custom-file&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;file&quot;&nbsp;class=&quot;custom-file-input&quot;&nbsp;id=&quot;customFileUploadMultiple&quot;&nbsp;multiple&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;custom-file-label&quot;&nbsp;for=&quot;customFileUploadMultiple&quot;&gt;Choose&nbsp;file&lt;/label&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&nbsp;&nbsp;&lt;!--&nbsp;Preview&nbsp;--&gt;<br/>&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;dz-preview&nbsp;dz-preview-multiple&nbsp;list-group&nbsp;list-group-lg&nbsp;list-group-flush&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;list-group-item&nbsp;px-0&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;row&nbsp;align-items-center&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;avatar&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;class=&quot;avatar-img&nbsp;rounded&quot;&nbsp;src=&quot;...&quot;&nbsp;alt=&quot;...&quot;&nbsp;data-dz-thumbnail&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col&nbsp;ml-n3&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&nbsp;class=&quot;mb-1&quot;&nbsp;data-dz-name&gt;...&lt;/h4&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&nbsp;class=&quot;small&nbsp;text-muted&nbsp;mb-0&quot;&nbsp;data-dz-size&gt;...&lt;/p&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dropdown&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-ellipses&nbsp;dropdown-toggle&quot;&nbsp;role=&quot;button&quot;&nbsp;data-toggle=&quot;dropdown&quot;&nbsp;aria-haspopup=&quot;true&quot;&nbsp;aria-expanded=&quot;false&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i&nbsp;class=&quot;fe&nbsp;fe-more-vertical&quot;&gt;&lt;/i&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dropdown-menu&nbsp;dropdown-menu-right&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-item&quot;&nbsp;data-dz-remove&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remove<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br/>&nbsp;&nbsp;&lt;/ul&gt;<br/><br/>&lt;/div&gt;
                   </code>
                 </div>
               </div>
@@ -2837,7 +2839,7 @@
                   </div>
                   
                   <div class="mb-3">
-                    <select class="form-control" data-toggle="select" data-minimum-results-for-search="-1">
+                    <select class="form-control" data-toggle="select" data-options='{"minimum-results-for-search": -1}'>
                       <option data-avatar-src="assets/img/avatars/profiles/avatar-1.jpg">
                         Dianna Smiley
                       </option>
@@ -2871,8 +2873,26 @@
                     </select>
                   </div>
 
-                  <div class="mb-0">
+                  <div class="mb-4">
                     <select class="form-control form-control-sm" data-toggle="select">
+                      <option>My first option</option>
+                      <option>Another option</option>
+                      <option>Third option is here</option>
+                    </select>
+                  </div>
+
+                  <div class="mb-3">
+                    <select class="form-control is-valid" data-toggle="select" data-options='{"placeholder": "Valid input"}' multiple>
+                      <option>CSS</option>
+                      <option>HTML</option>
+                      <option>JavaScript</option>
+                      <option>Bootstrap</option>
+                    </select>
+                  </div>
+
+                  <div class="mb-0">
+                    <select class="form-control is-invalid" data-toggle="select" data-options='{"placeholder": "Invalid input"}'>
+                      <option></option>
                       <option>My first option</option>
                       <option>Another option</option>
                       <option>Third option is here</option>
@@ -2882,7 +2902,7 @@
                 </div>
                 <div class="card-footer bg-dark">
                   <code class="highlight html bg-dark">
-                    &lt;select&nbsp;class=&quot;form-control&quot;&nbsp;data-toggle=&quot;select&quot;&gt;<br/>&nbsp;&nbsp;&lt;option&gt;My&nbsp;first&nbsp;option&lt;/option&gt;<br/>&nbsp;&nbsp;&lt;option&gt;Another&nbsp;option&lt;/option&gt;<br/>&nbsp;&nbsp;&lt;option&gt;Third&nbsp;option&nbsp;is&nbsp;here&lt;/option&gt;<br/>&lt;/select&gt;<br/><br/>&lt;select&nbsp;class=&quot;form-control&quot;&nbsp;data-toggle=&quot;select&quot;&nbsp;data-minimum-results-for-search=&quot;-1&quot;&gt;<br/>&nbsp;&nbsp;&lt;option&nbsp;data-avatar-src=&quot;assets/img/avatars/profiles/avatar-1.jpg&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;Dianna&nbsp;Smiley<br/>&nbsp;&nbsp;&lt;/option&gt;<br/>&lt;/select&gt;<br/><br/>&lt;select&nbsp;class=&quot;form-control&quot;&nbsp;data-toggle=&quot;select&quot;&nbsp;multiple&gt;<br/>&nbsp;&nbsp;&lt;option&gt;CSS&lt;/option&gt;<br/>&nbsp;&nbsp;&lt;option&gt;HTML&lt;/option&gt;<br/>&nbsp;&nbsp;&lt;option&gt;JavaScript&lt;/option&gt;<br/>&nbsp;&nbsp;&lt;option&gt;Bootstrap&lt;/option&gt;<br/>&lt;/select&gt;<br/><br/>&lt;select&nbsp;class=&quot;form-control&nbsp;form-control-lg&quot;&nbsp;data-toggle=&quot;select&quot;&nbsp;multiple&gt;<br/>&nbsp;&nbsp;&lt;option&gt;CSS&lt;/option&gt;<br/>&nbsp;&nbsp;&lt;option&gt;HTML&lt;/option&gt;<br/>&nbsp;&nbsp;&lt;option&gt;JavaScript&lt;/option&gt;<br/>&nbsp;&nbsp;&lt;option&gt;Bootstrap&lt;/option&gt;<br/>&lt;/select&gt;<br/><br/>&lt;select&nbsp;class=&quot;form-control&nbsp;form-control-sm&quot;&nbsp;data-toggle=&quot;select&quot;&gt;<br/>&nbsp;&nbsp;&lt;option&gt;My&nbsp;first&nbsp;option&lt;/option&gt;<br/>&nbsp;&nbsp;&lt;option&gt;Another&nbsp;option&lt;/option&gt;<br/>&nbsp;&nbsp;&lt;option&gt;Third&nbsp;option&nbsp;is&nbsp;here&lt;/option&gt;<br/>&lt;/select&gt;
+                    &lt;select&nbsp;class=&quot;form-control&quot;&nbsp;data-toggle=&quot;select&quot;&gt;<br/>&nbsp;&nbsp;&lt;option&gt;My&nbsp;first&nbsp;option&lt;/option&gt;<br/>&nbsp;&nbsp;&lt;option&gt;Another&nbsp;option&lt;/option&gt;<br/>&nbsp;&nbsp;&lt;option&gt;Third&nbsp;option&nbsp;is&nbsp;here&lt;/option&gt;<br/>&lt;/select&gt;<br/><br/>&lt;select&nbsp;class=&quot;form-control&quot;&nbsp;data-toggle=&quot;select&quot;&nbsp;data-options='{&quot;minimum-results-for-search&quot;:&nbsp;-1}'&gt;<br/>&nbsp;&nbsp;&lt;option&nbsp;data-avatar-src=&quot;assets/img/avatars/profiles/avatar-1.jpg&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;Dianna&nbsp;Smiley<br/>&nbsp;&nbsp;&lt;/option&gt;<br/>&nbsp;&nbsp;&lt;option&nbsp;data-avatar-src=&quot;assets/img/avatars/profiles/avatar-2.jpg&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;Ab&nbsp;Hadley<br/>&nbsp;&nbsp;&lt;/option&gt;<br/>&nbsp;&nbsp;&lt;option&nbsp;data-avatar-src=&quot;assets/img/avatars/profiles/avatar-3.jpg&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;Adolfo&nbsp;Hess<br/>&nbsp;&nbsp;&lt;/option&gt;<br/>&nbsp;&nbsp;&lt;option&nbsp;data-avatar-src=&quot;assets/img/avatars/profiles/avatar-4.jpg&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;Daniela&nbsp;Dewitt<br/>&nbsp;&nbsp;&lt;/option&gt;<br/>&lt;/select&gt;<br/><br/>&lt;select&nbsp;class=&quot;form-control&quot;&nbsp;data-toggle=&quot;select&quot;&nbsp;multiple&gt;<br/>&nbsp;&nbsp;&lt;option&gt;CSS&lt;/option&gt;<br/>&nbsp;&nbsp;&lt;option&gt;HTML&lt;/option&gt;<br/>&nbsp;&nbsp;&lt;option&gt;JavaScript&lt;/option&gt;<br/>&nbsp;&nbsp;&lt;option&gt;Bootstrap&lt;/option&gt;<br/>&lt;/select&gt;<br/><br/>&lt;select&nbsp;class=&quot;form-control&nbsp;form-control-lg&quot;&nbsp;data-toggle=&quot;select&quot;&nbsp;multiple&gt;<br/>&nbsp;&nbsp;&lt;option&gt;CSS&lt;/option&gt;<br/>&nbsp;&nbsp;&lt;option&gt;HTML&lt;/option&gt;<br/>&nbsp;&nbsp;&lt;option&gt;JavaScript&lt;/option&gt;<br/>&nbsp;&nbsp;&lt;option&gt;Bootstrap&lt;/option&gt;<br/>&lt;/select&gt;<br/><br/>&lt;select&nbsp;class=&quot;form-control&nbsp;form-control-sm&quot;&nbsp;data-toggle=&quot;select&quot;&gt;<br/>&nbsp;&nbsp;&lt;option&gt;My&nbsp;first&nbsp;option&lt;/option&gt;<br/>&nbsp;&nbsp;&lt;option&gt;Another&nbsp;option&lt;/option&gt;<br/>&nbsp;&nbsp;&lt;option&gt;Third&nbsp;option&nbsp;is&nbsp;here&lt;/option&gt;<br/>&lt;/select&gt;<br/><br/>&lt;select&nbsp;class=&quot;form-control&nbsp;is-valid&quot;&nbsp;data-toggle=&quot;select&quot;&nbsp;data-options='{&quot;placeholder&quot;:&nbsp;&quot;Valid&nbsp;input&quot;}'&nbsp;multiple&gt;<br/>&nbsp;&nbsp;&lt;option&gt;CSS&lt;/option&gt;<br/>&nbsp;&nbsp;&lt;option&gt;HTML&lt;/option&gt;<br/>&nbsp;&nbsp;&lt;option&gt;JavaScript&lt;/option&gt;<br/>&nbsp;&nbsp;&lt;option&gt;Bootstrap&lt;/option&gt;<br/>&lt;/select&gt;<br/><br/>&lt;select&nbsp;class=&quot;form-control&nbsp;is-invalid&quot;&nbsp;data-toggle=&quot;select&quot;&nbsp;data-options='{&quot;placeholder&quot;:&nbsp;&quot;Invalid&nbsp;input&quot;}'&gt;<br/>&nbsp;&nbsp;&lt;option&gt;&lt;/option&gt;<br/>&nbsp;&nbsp;&lt;option&gt;My&nbsp;first&nbsp;option&lt;/option&gt;<br/>&nbsp;&nbsp;&lt;option&gt;Another&nbsp;option&lt;/option&gt;<br/>&nbsp;&nbsp;&lt;option&gt;Third&nbsp;option&nbsp;is&nbsp;here&lt;/option&gt;<br/>&lt;/select&gt;
                   </code>
                 </div>
               </div>
@@ -3271,70 +3291,11 @@
               
               <!-- Subheading -->
               <p class="text-muted mb-4">
-                Create searchable, sortable, and filterable lists and tables with the simple but powerful List.js plugin. Please read the <a target="_blank" href="http://listjs.com/">official plugin documentation</a> for a full list of options. The following options are available via the <code>data</code> attributes to initialize the plugin without any JavaScript:
+                Create searchable, sortable, and filterable lists and tables with the simple but powerful List.js plugin. Please read the <a target="_blank" href="http://listjs.com/">official plugin documentation</a> for a full list of options.
               </p>
 
-              <!-- Table -->
-              <div class="card">
-                <div class="card-header">
-                  <h4 class="card-header-title">
-                    Options
-                  </h4>
-                </div>
-                <div class="table-responsive">
-                  <table class="table table-sm card-table">
-                    <thead>
-                      <tr>
-                        <th>
-                          Name
-                        </th>
-                        <th>
-                          Type
-                        </th>
-                        <th>
-                          Default
-                        </th>
-                        <th>
-                          Description
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>
-                          <code>data-toggle</code>
-                        </td>
-                        <td>
-                          string
-                        </td>
-                        <td>
-                          lists
-                        </td>
-                        <td>
-                          Creates a new <code>List</code> instance and initializes the plugin.
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <code>data-lists-values</code>
-                        </td>
-                        <td>
-                          array
-                        </td>
-                        <td>
-                          -
-                        </td>
-                        <td>
-                          An array of value names that will be used for searching, sorting and filtering.
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-
               <!-- Card -->
-              <div class="card" data-toggle="lists" data-lists-values='["name"]'>
+              <div class="card" data-toggle="lists" data-options='{"valueNames": ["name"]}'>
                 <div class="card-header">
                   <div class="row align-items-center">
                     <div class="col">
@@ -3511,7 +3472,7 @@
                 </div>
                 <div class="card-footer bg-dark">
                   <code class="highlight html bg-dark">
-                    &lt;div&nbsp;data-toggle=&quot;lists&quot;&nbsp;data-lists-values='[&quot;name&quot;]'&gt;<br/>&nbsp;&nbsp;<br/>&nbsp;&nbsp;&lt;input&nbsp;class=&quot;form-control&nbsp;search&quot;&nbsp;type=&quot;search&quot;&gt;<br/><br/>&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;list-group&nbsp;list&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;list-group-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;name&quot;&gt;Casey&nbsp;Fyfe&lt;/span&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;list-group-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;name&quot;&gt;Jane&nbsp;Roe&lt;/span&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;list-group-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;name&quot;&gt;Casey&nbsp;Fyfe&lt;/span&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;list-group-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;name&quot;&gt;Jane&nbsp;Roe&lt;/span&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br/>&nbsp;&nbsp;&lt;/ul&gt;<br/><br/>&lt;/div&gt;
+                    &lt;div&nbsp;data-toggle=&quot;lists&quot;&nbsp;data-options='{&quot;valueNames&quot;:&nbsp;[&quot;name&quot;]}'&gt;<br/>&nbsp;&nbsp;<br/>&nbsp;&nbsp;&lt;input&nbsp;class=&quot;form-control&nbsp;search&quot;&nbsp;type=&quot;search&quot;&nbsp;/&gt;<br/><br/>&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;list-group&nbsp;list&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;list-group-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;name&quot;&gt;Casey&nbsp;Fyfe&lt;/span&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;list-group-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;name&quot;&gt;Jane&nbsp;Roe&lt;/span&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;list-group-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;name&quot;&gt;Casey&nbsp;Fyfe&lt;/span&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;list-group-item&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;name&quot;&gt;Jane&nbsp;Roe&lt;/span&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br/>&nbsp;&nbsp;&lt;/ul&gt;<br/><br/>&lt;/div&gt;
                   </code>
                 </div>
               </div>
@@ -5119,7 +5080,7 @@
               <div class="card">
                 <div class="card-body">
                   
-                  <div class="table-responsive" data-toggle="lists" data-lists-values='["tables-row", "tables-first", "tables-last", "tables-handle"]'>
+                  <div class="table-responsive" data-toggle="lists" data-options='{"valueNames": ["tables-row", "tables-first", "tables-last", "tables-handle"]}'>
                     <table class="table">
                       <thead>
                         <tr>
@@ -5195,7 +5156,7 @@
                 </div>
                 <div class="card-footer bg-dark">
                   <code class="highlight html bg-dark">
-                    &lt;div&nbsp;class=&quot;table-responsive&quot;&nbsp;data-toggle=&quot;lists&quot;&nbsp;data-lists-values='[&quot;tables-row&quot;,&nbsp;&quot;tables-first&quot;,&nbsp;&quot;tables-last&quot;,&nbsp;&quot;tables-handle&quot;]'&gt;<br/>&nbsp;&nbsp;&lt;table&nbsp;class=&quot;table&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;thead&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&nbsp;scope=&quot;col&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;text-muted&nbsp;sort&quot;&nbsp;data-sort=&quot;tables-row&quot;&gt;#&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/th&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&nbsp;scope=&quot;col&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;text-muted&nbsp;sort&quot;&nbsp;data-sort=&quot;tables-first&quot;&gt;First&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/th&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&nbsp;scope=&quot;col&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;text-muted&nbsp;sort&quot;&nbsp;data-sort=&quot;tables-last&quot;&gt;Last&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/th&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&nbsp;scope=&quot;col&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;text-muted&nbsp;sort&quot;&nbsp;data-sort=&quot;tables-handle&quot;&gt;Handle&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/th&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/thead&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tbody&nbsp;class=&quot;list&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&nbsp;scope=&quot;row&quot;&nbsp;class=&quot;tables-row&quot;&gt;1&lt;/th&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&nbsp;class=&quot;tables-first&quot;&gt;Mark&lt;/td&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&nbsp;class=&quot;tables-last&quot;&gt;Otto&lt;/td&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&nbsp;class=&quot;tables-handle&quot;&gt;@mdo&lt;/td&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&nbsp;scope=&quot;row&quot;&nbsp;class=&quot;tables-row&quot;&gt;2&lt;/th&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&nbsp;class=&quot;tables-first&quot;&gt;Jacob&lt;/td&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&nbsp;class=&quot;tables-last&quot;&gt;Thornton&lt;/td&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&nbsp;class=&quot;tables-handle&quot;&gt;@fat&lt;/td&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&nbsp;scope=&quot;row&quot;&nbsp;class=&quot;tables-row&quot;&gt;3&lt;/th&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&nbsp;class=&quot;tables-first&quot;&gt;Larry&lt;/td&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&nbsp;class=&quot;tables-last&quot;&gt;the&nbsp;Bird&lt;/td&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&nbsp;class=&quot;tables-handle&quot;&gt;@twitter&lt;/td&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tbody&gt;<br/>&nbsp;&nbsp;&lt;/table&gt;<br/>&lt;/div&gt;
+                    &lt;div&nbsp;class=&quot;table-responsive&quot;&nbsp;data-toggle=&quot;lists&quot;&nbsp;data-options='{&quot;valueNames&quot;:&nbsp;[&quot;tables-row&quot;,&nbsp;&quot;tables-first&quot;,&nbsp;&quot;tables-last&quot;,&nbsp;&quot;tables-handle&quot;]}'&gt;<br/>&nbsp;&nbsp;&lt;table&nbsp;class=&quot;table&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;thead&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&nbsp;scope=&quot;col&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;text-muted&nbsp;sort&quot;&nbsp;data-sort=&quot;tables-row&quot;&gt;#&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/th&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&nbsp;scope=&quot;col&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;text-muted&nbsp;sort&quot;&nbsp;data-sort=&quot;tables-first&quot;&gt;First&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/th&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&nbsp;scope=&quot;col&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;text-muted&nbsp;sort&quot;&nbsp;data-sort=&quot;tables-last&quot;&gt;Last&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/th&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&nbsp;scope=&quot;col&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;text-muted&nbsp;sort&quot;&nbsp;data-sort=&quot;tables-handle&quot;&gt;Handle&lt;/a&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/th&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/thead&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;tbody&nbsp;class=&quot;list&quot;&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&nbsp;scope=&quot;row&quot;&nbsp;class=&quot;tables-row&quot;&gt;1&lt;/th&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&nbsp;class=&quot;tables-first&quot;&gt;Mark&lt;/td&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&nbsp;class=&quot;tables-last&quot;&gt;Otto&lt;/td&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&nbsp;class=&quot;tables-handle&quot;&gt;@mdo&lt;/td&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&nbsp;scope=&quot;row&quot;&nbsp;class=&quot;tables-row&quot;&gt;2&lt;/th&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&nbsp;class=&quot;tables-first&quot;&gt;Jacob&lt;/td&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&nbsp;class=&quot;tables-last&quot;&gt;Thornton&lt;/td&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&nbsp;class=&quot;tables-handle&quot;&gt;@fat&lt;/td&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&nbsp;scope=&quot;row&quot;&nbsp;class=&quot;tables-row&quot;&gt;3&lt;/th&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&nbsp;class=&quot;tables-first&quot;&gt;Larry&lt;/td&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&nbsp;class=&quot;tables-last&quot;&gt;the&nbsp;Bird&lt;/td&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&nbsp;class=&quot;tables-handle&quot;&gt;@twitter&lt;/td&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tbody&gt;<br/>&nbsp;&nbsp;&lt;/table&gt;<br/>&lt;/div&gt;
                   </code>
                 </div>
               </div>

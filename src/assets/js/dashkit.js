@@ -1,5 +1,6 @@
 //
-// Demo ===================================
+// dashkit.js
+// Theme module
 //
 
 'use strict';
@@ -15,7 +16,7 @@
   // Variables
   //
   
-  var headerChart = document.getElementById('headerChart');
+  var chart = document.getElementById('headerChart');
 
 
   //
@@ -72,9 +73,426 @@
   //
   // Events
   //
+  
+  if (chart) {
+    init(chart);
+  }
 
-  if (headerChart) {
-    init(headerChart);
+})();
+
+
+// Performance
+//
+// Performance card chart
+
+(function() {
+
+  //
+  // Variables
+  //
+
+  var chart = document.getElementById('performanceChart');
+
+
+  //
+  // Functions
+  //
+
+  function init(chart) {
+    new Chart(chart, {
+      type: 'line',
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              callback: function(value) {
+                if ( !(value % 10) ) {
+                  return '$' + value + 'k'
+                }
+              }
+            }
+          }]
+        },
+        tooltips: {
+          callbacks: {
+            label: function(item, data) {
+              var label = data.datasets[item.datasetIndex].label || '';
+              var yLabel = item.yLabel;
+              var content = '';
+
+              if (data.datasets.length > 1) {
+                content += '<span class="popover-body-label mr-auto">' + label + '</span>';
+              }
+
+              content += '<span class="popover-body-value">$' + yLabel + 'k</span>';
+              return content;
+            }
+          }
+        }
+      },
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        datasets: [{
+          label: 'Performance',
+          data: [0,10,5,15,10,20,15,25,20,30,25,40]
+        }]
+      }
+    });
+  }
+
+
+  //
+  // Events
+  //
+
+  if (chart) {
+    init(chart);
+  }
+
+})();
+
+
+// Performance alias
+//
+// Performance alias card chart
+
+(function() {
+
+  //
+  // Variables
+  //
+
+  var chart = document.getElementById('performanceChartAlias');
+
+
+  //
+  // Functions
+  //
+
+  function init(chart) {
+    new Chart(chart, {
+      type: 'line',
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              callback: function(value) {
+                if ( !(value % 10) ) {
+                  return '$' + value + 'k'
+                }
+              }
+            }
+          }]
+        },
+        tooltips: {
+          callbacks: {
+            label: function(item, data) {
+              var label = data.datasets[item.datasetIndex].label || '';
+              var yLabel = item.yLabel;
+              var content = '';
+
+              if (data.datasets.length > 1) {
+                content += '<span class="popover-body-label mr-auto">' + label + '</span>';
+              }
+
+              content += '<span class="popover-body-value">$' + yLabel + 'k</span>';
+              return content;
+            }
+          }
+        }
+      },
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        datasets: [{
+          label: 'Performance',
+          data: [0,10,5,15,10,20,15,25,20,30,25,40]
+        }]
+      }
+    });
+  }
+
+
+  //
+  // Events
+  //
+
+  if (chart) {
+    init(chart);
+  }
+
+})();
+
+
+// Orders
+//
+// Orders card chart
+
+(function() {
+
+  //
+  // Variables
+  //
+
+  var chart = document.getElementById('ordersChart');
+
+
+  //
+  // Functions
+  //
+
+  function init(chart) {
+    new Chart(chart, {
+      type: 'bar',
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              callback: function(value) {
+                if ( !(value % 10) ) {
+                  return '$' + value + 'k'
+                }
+              }
+            }
+          }]
+        },
+        tooltips: {
+          callbacks: {
+            label: function(item, data) {
+              var label = data.datasets[item.datasetIndex].label || '';
+              var yLabel = item.yLabel;
+              var content = '';
+
+              if (data.datasets.length > 1) {
+                content += '<span class="popover-body-label mr-auto">' + label + '</span>';
+              }
+
+              content += '<span class="popover-body-value">$' + yLabel + 'k</span>';
+              return content;
+            }
+          }
+        }
+      },
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        datasets: [{
+          label: 'Sales',
+          data: [25,20,30,22,17,10,18,26,28,26,20,32]
+        }]
+      }
+    });
+  }
+
+
+  //
+  // Events
+  //
+
+  if (chart) {
+    init(chart);
+  }
+  
+})();
+
+
+// Orders alias
+//
+// Orders alias card chart
+
+(function() {
+
+  //
+  // Variables
+  //
+
+  var chart = document.getElementById('ordersChartAlias');
+
+
+  //
+  // Functions
+  //
+
+  function init(chart) {
+    new Chart(chart, {
+      type: 'bar',
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              callback: function(value) {
+                if ( !(value % 10) ) {
+                  return '$' + value + 'k'
+                }
+              }
+            }
+          }]
+        },
+        tooltips: {
+          callbacks: {
+            label: function(item, data) {
+              var label = data.datasets[item.datasetIndex].label || '';
+              var yLabel = item.yLabel;
+              var content = '';
+
+              if (data.datasets.length > 1) {
+                content += '<span class="popover-body-label mr-auto">' + label + '</span>';
+              }
+
+              content += '<span class="popover-body-value">$' + yLabel + 'k</span>';
+              return content;
+            }
+          }
+        }
+      },
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        datasets: [{
+          label: 'Sales',
+          data: [25,20,30,22,17,10,18,26,28,26,20,32]
+        }]
+      }
+    });
+  }
+
+
+  //
+  // Events
+  //
+
+  if (chart) {
+    init(chart);
+  }
+  
+})();
+
+
+// Devices
+//
+// Devices card chart
+
+(function() {
+
+  //
+  // Variables
+  //
+
+  var chart = document.getElementById('devicesChart');
+
+
+  //
+  // Functions
+  //
+
+  function init(chart) {
+    new Chart(chart, {
+      type: 'doughnut',
+      options: {
+        tooltips: {
+          callbacks: {
+            title: function(item, data) {
+              var title = data.labels[item[0].index];
+              return title;
+            },
+            label: function(item, data) {
+              var value = data.datasets[0].data[item.index];
+              var content = '';
+
+              content += '<span class="popover-body-value">' + value + '%</span>';
+              return content;
+            }
+          }
+        }
+      },
+      data: {
+        labels: ['Desktop', 'Tablet', 'Mobile'],
+        datasets: [{
+          data: [60, 25, 15],
+          backgroundColor: [
+            '#2C7BE5',
+            '#A6C5F7',
+            '#D2DDEC'
+          ]
+        }]
+      }
+    });
+  }
+
+
+  //
+  // Events
+  //
+
+  if (chart) {
+    init(chart);
+  }
+
+})();
+
+
+// Weekly hours
+//
+// Weekly hours card chart
+
+(function() {
+
+  //
+  // Variables
+  //
+
+  var chart = document.getElementById('weeklyHoursChart');
+
+
+  //
+  // Functions
+  //
+
+  function init(chart) {
+    new Chart(chart, {
+      type: 'bar',
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              callback: function(value) {
+                if ( !(value % 10) ) {
+                  return value + 'hrs'
+                }
+              }
+            }
+          }]
+        },
+        tooltips: {
+          callbacks: {
+            label: function(item, data) {
+              var label = data.datasets[item.datasetIndex].label || '';
+              var yLabel = item.yLabel;
+              var content = '';
+
+              if (data.datasets.length > 1) {
+                content += '<span class="popover-body-label mr-auto">' + label + '</span>';
+              }
+
+              content += '<span class="popover-body-value">' + yLabel + 'hrs</span>';
+              return content;
+            }
+          }
+        }
+      },
+      data: {
+        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+        datasets: [{
+          data: [21, 12, 28, 15, 5, 12, 17, 2]
+        }]
+      }
+    });
+  }
+
+
+  //
+  // Events
+  //
+
+  if (chart) {
+    init(chart);
   }
 
 })();

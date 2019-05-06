@@ -195,7 +195,7 @@
                 
                 <!-- Chart -->
                 <div class="chart chart-appended">
-                  <canvas id="devicesChart" class="chart-canvas" data-target="#devicesChartLegend"></canvas>
+                  <canvas id="devicesChart" class="chart-canvas" data-toggle="legend" data-target="#devicesChartLegend"></canvas>
                 </div>
 
                 <!-- Legend -->
@@ -593,7 +593,7 @@
                   </div>
                 </div> <!-- / .row -->
               </div>
-              <div class="table-responsive mb-0" data-toggle="lists" data-lists-values='["goal-project", "goal-status", "goal-progress", "goal-date"]'>
+              <div class="table-responsive mb-0" data-toggle="lists" data-options='{"valueNames": ["goal-project", "goal-status", "goal-progress", "goal-date"]}'>
                 <table class="table table-sm table-nowrap card-table">
                   <thead>
                     <tr>

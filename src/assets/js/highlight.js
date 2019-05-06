@@ -1,24 +1,25 @@
 //
-// Highlight.js ==================================
+// highlight.js
+// Theme module
 //
 
 'use strict';
 
-var Highlight = (function() {
+(function() {
 
   //
   // Variables
   //
 
-  var $highlight = $('.highlight');
+  var highlight = document.querySelectorAll('.highlight');
 
 
   //
-  // Methods
+  // Functions
   //
 
-  function init(i, block) {
-    hljs.highlightBlock(block);
+  function init(el) {
+    hljs.highlightBlock(el);
   }
 
 
@@ -26,8 +27,10 @@ var Highlight = (function() {
   // Events
   //
 
-  $highlight.each(function(i, block) {
-    init(i, block);
-  });
+  if (highlight) {
+    [].forEach.call(highlight, function(el) {
+      init(el);
+    });
+  }
 
 })();

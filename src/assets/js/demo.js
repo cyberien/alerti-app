@@ -1,17 +1,16 @@
 //
-// Demo
-// Demo code to toggle layout options
+// demo.js
+// Theme module
 //
 
 'use strict';
 
-var Demo = (function() {
+(function() {
 
   //
   // Variables
   //
 
-  // Selectors
   var form = document.querySelector('#demoForm');
   var topnav = document.querySelector('#topnav');
   var topbar = document.querySelector('#topbar');
@@ -22,7 +21,6 @@ var Demo = (function() {
   var stylesheetLight = document.querySelector('#stylesheetLight');
   var stylesheetDark = document.querySelector('#stylesheetDark');
 
-  // Config
   var config = {
     colorScheme: ( localStorage.getItem('dashkitColorScheme') ) ? localStorage.getItem('dashkitColorScheme') : 'light',
     navPosition: ( localStorage.getItem('dashkitNavPosition') ) ? localStorage.getItem('dashkitNavPosition') : 'sidenav',
@@ -31,19 +29,19 @@ var Demo = (function() {
 
 
   //
-  // Methods
+  // Functions
   //
 
   function parseUrl() {
     var search = window.location.search.substring(1);
     var params = search.split('&');
 
-    for ( var i = 0; i < params.length; i++ ) {
+    for (var i = 0; i < params.length; i++) {
       var arr = params[i].split('=');
       var prop = arr[0];
       var val = arr[1];
 
-      if ( prop == 'colorScheme' || prop == 'navPosition' || prop == 'sidebarColor' ) {
+      if (prop == 'colorScheme' || prop == 'navPosition' || prop == 'sidebarColor') {
 
         // Save to localStorage
         localStorage.setItem('dashkit' + prop.charAt(0).toUpperCase() + prop.slice(1), val);
@@ -55,18 +53,20 @@ var Demo = (function() {
   }
 
   function toggleColorScheme(colorScheme) {
-    if ( colorScheme == 'light' ) {
+    if (colorScheme == 'light') {
       stylesheetLight.disabled = false;
       stylesheetDark.disabled = true;
-    } else if ( colorScheme == 'dark' ) {
+      colorScheme = 'light';
+    } else if (colorScheme == 'dark') {
       stylesheetLight.disabled = true;
       stylesheetDark.disabled = false;
+      colorScheme = 'dark';
     }
   }
 
   function toggleNavPosition(navPosition) {
-    if ( topnav && topbar && sidebar && sidebarUser) {
-      if ( navPosition == 'topnav' ) {
+    if (topnav && topbar && sidebar && sidebarUser) {
+      if (navPosition == 'topnav') {
         hideNode(topbar);
         hideNode(sidebar);
 
@@ -74,7 +74,7 @@ var Demo = (function() {
           containers[i].classList.remove('container-fluid');
           containers[i].classList.add('container');
         }
-      } else if ( navPosition == 'combo' ) {
+      } else if (navPosition == 'combo') {
         hideNode(topnav);
         hideNode(sidebarUser);
 
@@ -82,7 +82,7 @@ var Demo = (function() {
           containers[i].classList.remove('container');
           containers[i].classList.add('container-fluid');
         }
-      } else if ( navPosition == 'sidenav') {
+      } else if (navPosition == 'sidenav') {
         hideNode(topnav);
         hideNode(topbar);
 
@@ -100,10 +100,10 @@ var Demo = (function() {
 
   function toggleSidebarColor(sidebarColor) {
     if (sidebar) {
-      if ( sidebarColor == 'default' ) {
+      if (sidebarColor == 'default') {
         sidebar.classList.remove('navbar-dark', 'bg-vibrant');
         sidebar.classList.add('navbar-light');
-      } else if ( sidebarColor == 'vibrant' ) {
+      } else if (sidebarColor == 'vibrant') {
         sidebar.classList.remove('navbar-light');
         sidebar.classList.add('navbar-dark', 'bg-vibrant');
       }
@@ -154,7 +154,7 @@ var Demo = (function() {
   document.body.style.display = 'block';
 
   // Form submitted
-  if ( form ) {
+  if (form) {
     form.addEventListener('submit', function(e) {
       e.preventDefault();
 
