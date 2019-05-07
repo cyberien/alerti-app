@@ -27,53 +27,53 @@ const paths = {
       dir:    './'
     },
     node:         {
-      dir:    'node_modules'
+      dir:    './node_modules'
     },
     packageLock:  {
-      files:  'package-lock.json'
+      files:  './package-lock.json'
     }
   },
   dist:   {
     base:   {
-      dir:    'dist'
+      dir:    './dist'
     },
     libs:   {
-      dir:    'dist/assets/libs'
+      dir:    './dist/assets/libs'
     }
   },
   src:    {
     base:   {
-      dir:    'src',
-      files:  'src/**/*'
+      dir:    './src',
+      files:  './src/**/*'
     },
     css:    {
-      dir:    'src/assets/css',
-      files:  'src/assets/css/**/*'
+      dir:    './src/assets/css',
+      files:  './src/assets/css/**/*'
     },
     html:   {
-      dir:    'src',
-      files:  'src/*.html',
+      dir:    './src',
+      files:  './src/**/*.html',
     },
     img:    {
-      dir:    'src/assets/img',
-      files:  'src/assets/img/**/*',
+      dir:    './src/assets/img',
+      files:  './src/assets/img/**/*',
     },
     js:     {
-      dir:    'src/assets/js',
-      files:  'src/assets/js/**/*'
+      dir:    './src/assets/js',
+      files:  './src/assets/js/**/*'
     },
     partials:   {
-      dir:    'src/partials',
-      files:  'src/partials/**/*'
+      dir:    './src/partials',
+      files:  './src/partials/**/*'
     },
     scss:   {
-      dir:    'src/assets/scss',
-      files:  'src/assets/scss/**/*',
-      main:   'src/assets/scss/*.scss'
+      dir:    './src/assets/scss',
+      files:  './src/assets/scss/**/*',
+      main:   './src/assets/scss/*.scss'
     },
     tmp:    {
-      dir:    'src/.tmp',
-      files:  'src/.tmp/**/*'
+      dir:    './src/.tmp',
+      files:  './src/.tmp/**/*'
     }
   }
 };
@@ -116,13 +116,18 @@ gulp.task('scss', function() {
 
 gulp.task('fileinclude', function(callback) {
   return gulp
-    .src(paths.src.html.files)
+    .src([
+      paths.src.html.files,
+      '!' + paths.src.tmp.files,
+      '!' + paths.src.partials.files
+    ])
     .pipe(fileinclude({
       prefix: '@@',
       basepath: '@file',
       indent: true,
       context: config
     }))
+    .pipe(cached())
     .pipe(gulp.dest(paths.src.tmp.dir));
 });
 
@@ -163,18 +168,21 @@ gulp.task('copy:libs', function() {
 
 gulp.task('html', function() {
   return gulp
-    .src(paths.src.html.files)
+    .src([
+      paths.src.html.files,
+      '!' + paths.src.tmp.files,
+      '!' + paths.src.partials.files
+    ])
     .pipe(fileinclude({
       prefix: '@@',
       basepath: '@file',
       indent: true,
       context: config
     }))
-    .pipe(replace('<link rel="stylesheet" href="node_modules/', '<link rel="stylesheet" href="assets/libs/'))
-    .pipe(replace('<link href="node_modules/', '<link href="assets/libs/'))
-    .pipe(replace('<script src="node_modules/', '<script src="assets/libs/'))
+    .pipe(replace(/href="(.{0,10})node_modules/g, 'href="$1assets/libs'))
+    .pipe(replace(/src="(.{0,10})node_modules/g, 'src="$1assets/libs'))
     .pipe(useref())
-    .pipe(cached('assets'))
+    .pipe(cached())
     .pipe(gulpif('*.js', uglify()))
     .pipe(gulpif('*.css', cssnano({svgo: false})))
     .pipe(gulp.dest(paths.dist.base.dir));
