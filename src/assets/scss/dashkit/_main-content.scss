@@ -46,3 +46,27 @@
     }
   }
 }
+
+.navbar-vertical-sm.navbar-expand {
+  
+  @each $breakpoint, $dimension in $grid-breakpoints {
+      
+    &-#{$breakpoint} {
+        
+      @include media-breakpoint-up(#{$breakpoint}) {
+
+        // Left
+
+        &.fixed-left:not([style*="display: none"]) ~ .main-content {
+          margin-left: $navbar-vertical-width-sm;
+        }
+
+        // Right
+
+        &.fixed-right:not([style*="display: none"]) ~ .main-content {
+          margin-right: $navbar-vertical-width-sm;
+        }
+      }
+    }
+  }
+}

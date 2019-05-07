@@ -13,7 +13,7 @@
 
 .dropdown-toggle {
 
-  &::before, &::after {
+  &::after {
     width: auto; height: auto;
     border: none !important;
     vertical-align: middle;
@@ -43,10 +43,10 @@
 
   &::before {
     content: '\e92f';
-  }
-
-  &::after {
-    display: none;
+    width: auto; height: auto;
+    border: none !important;
+    vertical-align: middle;
+    font-family: 'Feather';
   }
 }
 

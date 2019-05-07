@@ -24,7 +24,9 @@
     var dropdownMenuSiblings = el.closest('.dropdown-menu').querySelectorAll('.dropdown-menu');
 
     [].forEach.call(dropdownMenuSiblings, function(el) {
-      el.classList.remove('show');
+      if (el !== dropdownMenu) {
+        el.classList.remove('show');
+      }
     });
 
     dropdownMenu.classList.toggle('show');

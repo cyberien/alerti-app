@@ -535,3 +535,69 @@
     }
   }
 }
+
+
+// Vertical small
+//
+// Creates a small vertion of the vertical navbar
+
+.navbar-vertical-sm {
+
+  // Expanded
+  // 
+  // Expanded navbar specific styles
+  
+  &.navbar-expand {
+    
+    @each $breakpoint, $dimension in $grid-breakpoints {
+        
+      &-#{$breakpoint} {
+          
+        @include media-breakpoint-up(#{$breakpoint}) {
+          max-width: $navbar-vertical-width-sm;
+          padding-left: $navbar-vertical-padding-x-sm;
+          padding-right: $navbar-vertical-padding-x-sm;
+          overflow: visible;
+
+          .navbar-collapse {
+            margin-left: -$navbar-vertical-padding-x-sm;
+            margin-right: -$navbar-vertical-padding-x-sm;
+            padding-left: $navbar-vertical-padding-x-sm;
+            padding-right: $navbar-vertical-padding-x-sm;
+          }
+
+          .navbar-nav {
+            margin-left: -$navbar-vertical-padding-x-sm;
+            margin-right: -$navbar-vertical-padding-x-sm;
+          }
+
+          .navbar-user {
+            margin-left: -$navbar-vertical-padding-x-sm;
+            margin-right: -$navbar-vertical-padding-x-sm;
+            padding-left: $navbar-vertical-padding-x-sm;
+            padding-right: $navbar-vertical-padding-x-sm;
+          }
+
+          .navbar-nav .nav-link {
+            justify-content: center;
+            padding-left: $navbar-vertical-padding-x-sm;
+            padding-right: $navbar-vertical-padding-x-sm;
+            text-align: center;
+          }
+
+          .navbar-nav > .nav-item > .nav-link.dropdown-toggle {
+
+            &::after {
+              display: none;
+            }
+          }
+
+          .navbar-user .dropright .dropdown-menu {
+            top: auto;
+            bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
