@@ -231,6 +231,12 @@
 
 
         // Navbar dropdowns
+        .dropup, .dropright, .dropdown, .dropleft {
+
+          &:hover > .dropdown-menu {
+            display: block;
+          }
+        }
 
         .navbar-nav .dropdown-menu {
           border: $dropdown-border-width solid $dropdown-border-color;
@@ -605,10 +611,6 @@
           .navbar-user .dropright .dropdown-menu {
             top: auto;
             bottom: 0;
-          }
-
-          .dropright:hover > .dropdown-menu {
-            display: block;
           }
         }
       }

@@ -102,15 +102,33 @@
   function toggleSidebarColor(sidebarColor) {
     if (sidebar) {
       if (sidebarColor == 'default') {
+
+        // Sidebar
         sidebar.classList.remove('navbar-dark', 'bg-vibrant');
-        sidebarSmall.classList.remove('navbar-dark', 'bg-vibrant');
         sidebar.classList.add('navbar-light');
+
+        // Sidebar small
+        sidebarSmall.classList.remove('navbar-dark', 'bg-vibrant');
         sidebarSmall.classList.add('navbar-light');
+
+        // Topnav
+        topnav.classList.remove('navbar-dark', 'bg-vibrant');
+        topnav.classList.add('navbar-light');
+
       } else if (sidebarColor == 'vibrant') {
+
+        // Sidebar
         sidebar.classList.remove('navbar-light');
-        sidebarSmall.classList.remove('navbar-light');
         sidebar.classList.add('navbar-dark', 'bg-vibrant');
+
+        // Sidebar small
+        sidebarSmall.classList.remove('navbar-light');
         sidebarSmall.classList.add('navbar-dark', 'bg-vibrant');
+
+        // Sidebar small
+        topnav.classList.remove('navbar-light');
+        topnav.classList.add('navbar-dark', 'bg-vibrant');
+
       }
     }
   }
