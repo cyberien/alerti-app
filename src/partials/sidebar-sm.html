@@ -51,9 +51,6 @@
           </div>
         </div>
       </form>
-
-      <!-- Divider -->
-      <hr class="d-none d-md-block my-3">
       
       <!-- Navigation -->
       <ul class="navbar-nav">
@@ -62,6 +59,9 @@
             <i class="fe fe-home"></i> <span class="d-md-none">Dashboards</span>
           </a>
           <ul class="dropdown-menu" aria-labelledby="sidebarDashboards">
+            <li class="dropdown-header">
+              <h6 class="text-uppercase mb-0">Dashboards</h6>
+            </li>
             <li>
               <a class="dropdown-item @@if(page=='index.html'){active}" href="index.html">
                 Default
@@ -79,6 +79,9 @@
             <i class="fe fe-file"></i> <span class="d-md-none">Pages</span>
           </a>
           <ul class="dropdown-menu" aria-labelledby="sidebarPages">
+            <li class="dropdown-header">
+              <h6 class="text-uppercase mb-0">Pages</h6>
+            </li>
             <li class="dropright">
               <a class="dropdown-item dropdown-toggle @@if(subcategory=='profile'){active}" href="#" id="sidebarProfile" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Profile
@@ -171,6 +174,9 @@
             <i class="fe fe-user"></i> <span class="d-md-none">Auth</span>
           </a>
           <ul class="dropdown-menu" aria-labelledby="sidebarAuth">
+            <li class="dropdown-header">
+              <h6 class="text-uppercase mb-0">Authentication</h6>
+            </li>
             <li class="dropright">
               <a class="dropdown-item dropdown-toggle" href="#" id="sidebarSignIn" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Sign in
@@ -269,7 +275,7 @@
       @@if (demoMode) {
       <!-- Customize -->
       <a href="#modalDemo" class="btn btn-block btn-primary mb-4" data-toggle="modal">
-        <i class="fe fe-sliders mr-2"></i>
+        <i class="fe fe-sliders"></i> <span class="d-md-none ml-2">Customize</span>
       </a>
       }
       
