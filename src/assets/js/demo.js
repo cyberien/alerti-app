@@ -15,16 +15,19 @@
   var topnav = document.querySelector('#topnav');
   var topbar = document.querySelector('#topbar');
   var sidebar = document.querySelector('#sidebar');
+  var sidebarSmall = document.querySelector('#sidebarSmall');
   var sidebarUser = document.querySelector('#sidebarUser');
+  var sidebarUserSmall = document.querySelector('#sidebarSmallUser');
   var containers = document.querySelectorAll('[class^="container"]');
   var stylesheets = document.querySelectorAll('#stylesheetLight, #stylesheetDark');
   var stylesheetLight = document.querySelector('#stylesheetLight');
   var stylesheetDark = document.querySelector('#stylesheetDark');
 
   var config = {
-    colorScheme: ( localStorage.getItem('dashkitColorScheme') ) ? localStorage.getItem('dashkitColorScheme') : 'light',
-    navPosition: ( localStorage.getItem('dashkitNavPosition') ) ? localStorage.getItem('dashkitNavPosition') : 'sidenav',
-    sidebarColor: ( localStorage.getItem('dashkitSidebarColor') ) ? localStorage.getItem('dashkitSidebarColor') : 'default',
+    colorScheme: (localStorage.getItem('dashkitColorScheme')) ? localStorage.getItem('dashkitColorScheme') : 'light',
+    navPosition: (localStorage.getItem('dashkitNavPosition')) ? localStorage.getItem('dashkitNavPosition') : 'sidenav',
+    sidebarColor: (localStorage.getItem('dashkitSidebarColor')) ? localStorage.getItem('dashkitSidebarColor') : 'default',
+    sidebarSize: (localStorage.getItem('dashkitSidebarSize')) ? localStorage.getItem('dashkitSidebarSize') : 'base'
   }
 
 
@@ -41,7 +44,7 @@
       var prop = arr[0];
       var val = arr[1];
 
-      if (prop == 'colorScheme' || prop == 'navPosition' || prop == 'sidebarColor') {
+      if (prop == 'colorScheme' || prop == 'navPosition' || prop == 'sidebarColor' || prop == 'sidebarSize') {
 
         // Save to localStorage
         localStorage.setItem('dashkit' + prop.charAt(0).toUpperCase() + prop.slice(1), val);
@@ -65,10 +68,11 @@
   }
 
   function toggleNavPosition(navPosition) {
-    if (topnav && topbar && sidebar && sidebarUser) {
+    if (topnav && topbar && sidebar && sidebarSmall && sidebarUser && sidebarUserSmall) {
       if (navPosition == 'topnav') {
         hideNode(topbar);
         hideNode(sidebar);
+        hideNode(sidebarSmall);
 
         for (var i = 0; i < containers.length; i++) {
           containers[i].classList.remove('container-fluid');
@@ -77,6 +81,7 @@
       } else if (navPosition == 'combo') {
         hideNode(topnav);
         hideNode(sidebarUser);
+        hideNode(sidebarUserSmall);
 
         for (var i = 0; i < containers.length; i++) {
           containers[i].classList.remove('container');
@@ -92,42 +97,57 @@
         }
       }
     }
-
-    function hideNode(node) {
-      node.setAttribute('style', 'display: none !important');
-    }
   }
 
   function toggleSidebarColor(sidebarColor) {
     if (sidebar) {
       if (sidebarColor == 'default') {
         sidebar.classList.remove('navbar-dark', 'bg-vibrant');
+        sidebarSmall.classList.remove('navbar-dark', 'bg-vibrant');
         sidebar.classList.add('navbar-light');
+        sidebarSmall.classList.add('navbar-light');
       } else if (sidebarColor == 'vibrant') {
         sidebar.classList.remove('navbar-light');
+        sidebarSmall.classList.remove('navbar-light');
         sidebar.classList.add('navbar-dark', 'bg-vibrant');
+        sidebarSmall.classList.add('navbar-dark', 'bg-vibrant');
       }
     }
   }
 
-  function toggleFormControls(form, colorScheme, navPosition, sidebarColor) {
+  function toggleSidebarSize(sidebarSize) {
+    if (sidebarSize == 'base') {
+      hideNode(sidebarSmall);
+    } else if (sidebarSize == 'small') {
+      hideNode(sidebar);
+    }
+  }
+
+  function toggleFormControls(form, colorScheme, navPosition, sidebarColor, sidebarSize) {
     $(form).find('[name="colorScheme"][value="' + colorScheme + '"]').closest('.btn').button('toggle');
     $(form).find('[name="navPosition"][value="' + navPosition + '"]').closest('.btn').button('toggle');
     $(form).find('[name="sidebarColor"][value="' + sidebarColor + '"]').closest('.btn').button('toggle');
+    $(form).find('[name="sidebarSize"][value="' + sidebarSize + '"]').closest('.btn').button('toggle');
   }
 
   function submitForm(form) {
     var colorScheme = form.querySelector('[name="colorScheme"]:checked').value;
     var navPosition = form.querySelector('[name="navPosition"]:checked').value;
     var sidebarColor = form.querySelector('[name="sidebarColor"]:checked').value;
+    var sidebarSize = form.querySelector('[name="sidebarSize"]:checked').value;
 
     // Save data to localStorage
     localStorage.setItem('dashkitColorScheme', colorScheme);
     localStorage.setItem('dashkitNavPosition', navPosition);
     localStorage.setItem('dashkitSidebarColor', sidebarColor);
+    localStorage.setItem('dashkitSidebarSize', sidebarSize);
 
     // Reload page
     window.location = window.location.pathname;
+  }
+
+  function hideNode(node) {
+    node.setAttribute('style', 'display: none !important');
   }
 
 
@@ -147,8 +167,11 @@
   // Toggle sidebar color
   toggleSidebarColor(config.sidebarColor);
 
+  // Toggle sidebar size
+  toggleSidebarSize(config.sidebarSize);
+
   // Toggle form controls
-  toggleFormControls(form, config.colorScheme, config.navPosition, config.sidebarColor);
+  toggleFormControls(form, config.colorScheme, config.navPosition, config.sidebarColor, config.sidebarSize);
 
   // Enable body
   document.body.style.display = 'block';

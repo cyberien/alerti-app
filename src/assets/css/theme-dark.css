@@ -9249,10 +9249,8 @@ a.text-white:hover, a.text-white:focus {
   padding-right: 0.75rem;
   overflow: visible; }
   .navbar-vertical-sm.navbar-expand-xs .navbar-brand {
-    margin-bottom: 0.75rem;
     padding-top: 0.45313rem;
-    padding-bottom: 1.20313rem;
-    border-bottom: 1px solid #1E3A5C; }
+    padding-bottom: 1.20313rem; }
   .navbar-vertical-sm.navbar-expand-xs .navbar-brand-img {
     width: auto;
     max-height: 1.5rem; }
@@ -9289,10 +9287,8 @@ a.text-white:hover, a.text-white:focus {
     padding-right: 0.75rem;
     overflow: visible; }
     .navbar-vertical-sm.navbar-expand-sm .navbar-brand {
-      margin-bottom: 0.75rem;
       padding-top: 0.45313rem;
-      padding-bottom: 1.20313rem;
-      border-bottom: 1px solid #1E3A5C; }
+      padding-bottom: 1.20313rem; }
     .navbar-vertical-sm.navbar-expand-sm .navbar-brand-img {
       width: auto;
       max-height: 1.5rem; }
@@ -9329,10 +9325,8 @@ a.text-white:hover, a.text-white:focus {
     padding-right: 0.75rem;
     overflow: visible; }
     .navbar-vertical-sm.navbar-expand-md .navbar-brand {
-      margin-bottom: 0.75rem;
       padding-top: 0.45313rem;
-      padding-bottom: 1.20313rem;
-      border-bottom: 1px solid #1E3A5C; }
+      padding-bottom: 1.20313rem; }
     .navbar-vertical-sm.navbar-expand-md .navbar-brand-img {
       width: auto;
       max-height: 1.5rem; }
@@ -9369,10 +9363,8 @@ a.text-white:hover, a.text-white:focus {
     padding-right: 0.75rem;
     overflow: visible; }
     .navbar-vertical-sm.navbar-expand-lg .navbar-brand {
-      margin-bottom: 0.75rem;
       padding-top: 0.45313rem;
-      padding-bottom: 1.20313rem;
-      border-bottom: 1px solid #1E3A5C; }
+      padding-bottom: 1.20313rem; }
     .navbar-vertical-sm.navbar-expand-lg .navbar-brand-img {
       width: auto;
       max-height: 1.5rem; }
@@ -9409,10 +9401,8 @@ a.text-white:hover, a.text-white:focus {
     padding-right: 0.75rem;
     overflow: visible; }
     .navbar-vertical-sm.navbar-expand-xl .navbar-brand {
-      margin-bottom: 0.75rem;
       padding-top: 0.45313rem;
-      padding-bottom: 1.20313rem;
-      border-bottom: 1px solid #1E3A5C; }
+      padding-bottom: 1.20313rem; }
     .navbar-vertical-sm.navbar-expand-xl .navbar-brand-img {
       width: auto;
       max-height: 1.5rem; }

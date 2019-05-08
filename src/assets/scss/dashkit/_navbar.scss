@@ -560,10 +560,8 @@
           overflow: visible;
 
           .navbar-brand {
-            margin-bottom: $navbar-padding-y;
             padding-top: ($nav-link-padding-y * 2 + $font-size-base * $line-height-base) / 2 - $navbar-padding-y;
             padding-bottom: ($nav-link-padding-y * 2 + $font-size-base * $line-height-base) / 2;
-            border-bottom: $border-width solid $border-color;
           }
 
           .navbar-brand-img {

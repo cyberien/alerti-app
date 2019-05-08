@@ -14,11 +14,20 @@
     <!-- NAVIGATION
     ================================================== -->
     @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
-      @@include("partials/sidebar-sm.html", {
-        "category": "dashboards",
-        "subcategory": "",
-        "page": "index.html"
-      })
+      @@if (sidebarSize == 'base' || demoMode) {
+        @@include("partials/sidebar.html", {
+          "category": "dashboards",
+          "subcategory": "",
+          "page": "index.html"
+        })
+      }
+      @@if (sidebarSize == 'small' || demoMode) {
+        @@include("partials/sidebar-sm.html", {
+          "category": "dashboards",
+          "subcategory": "",
+          "page": "index.html"
+        })
+      }
     }
     @@if (navPosition == 'topnav' || demoMode) {
       @@include("partials/topnav.html", {
