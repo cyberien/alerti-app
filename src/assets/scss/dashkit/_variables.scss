@@ -31,6 +31,12 @@ $gray-800: #3B506C !default;
 $gray-900: #283E59 !default;
 $black:    #12263F !default;
 
+$gray-600-dark: #244166 !default;
+$gray-700-dark: #1E3A5C !default;
+$gray-800-dark: #152E4D !default;
+$gray-900-dark: #132A46 !default;
+$black-dark: #12263F !default;
+
 $blue:       #2C7BE5 !default;
 $indigo:     #727cf5 !default; // NOT USED
 $purple:     #6b5eae !default;
@@ -350,7 +356,7 @@ $navbar-brand-padding-y: 0 !default;
 
 $navbar-toggler-padding-x: 0 !default;
 
-$navbar-dark-color: fade-out($white, .3) !default;
+$navbar-dark-color: $gray-700 !default;
 $navbar-dark-hover-color: $white !default;
 $navbar-dark-active-color: $white !default;
 $navbar-dark-toggler-border-color: transparent !default;
@@ -655,11 +661,19 @@ $navbar-icon-min-width: 1.75rem !default;
 $navbar-breadcrumb-padding-y: $nav-link-padding-y !default;
 $navbar-breadcrumb-padding-x: 0 !default;
 
-$navbar-dark-bg: $dark !default;
-$navbar-dark-border-color: fade-out($white, .8) !default;
-$navbar-dark-heading-color: fade-out($white, .6) !default;
-$navbar-dark-divider-color: fade-out($white, .8) !default;
-$navbar-dark-brand-filter: brightness(0) invert(1);
+$navbar-vibrant-border-color: transparent !default;
+$navbar-vibrant-heading-color: fade-out($white, .6) !default;
+$navbar-vibrant-divider-color: fade-out($white, .8) !default;
+$navbar-vibrant-color: fade-out($white, .3) !default;
+$navbar-vibrant-hover-color: $white !default;
+$navbar-vibrant-active-color: $white !default;
+$navbar-vibrant-brand-filter: brightness(0) invert(1) !default;
+
+$navbar-dark-bg: $gray-800-dark !default;
+$navbar-dark-border-color: $black-dark !default;
+$navbar-dark-heading-color: $navbar-dark-color !default;
+$navbar-dark-divider-color: $gray-700-dark !default;
+$navbar-dark-brand-filter: none !default;
 
 $navbar-light-bg: $white !default;
 $navbar-light-border-color: $border-color !default;

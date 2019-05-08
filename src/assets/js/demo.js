@@ -18,6 +18,8 @@
   var sidebarSmall = document.querySelector('#sidebarSmall');
   var sidebarUser = document.querySelector('#sidebarUser');
   var sidebarUserSmall = document.querySelector('#sidebarSmallUser');
+  var sidebarSizeContainer = document.querySelector('#sidebarSizeContainer')
+  var navPositionToggle = document.querySelectorAll('input[name="navPosition"]');
   var containers = document.querySelectorAll('[class^="container"]');
   var stylesheets = document.querySelectorAll('#stylesheetLight, #stylesheetDark');
   var stylesheetLight = document.querySelector('#stylesheetLight');
@@ -26,7 +28,7 @@
   var config = {
     colorScheme: (localStorage.getItem('dashkitColorScheme')) ? localStorage.getItem('dashkitColorScheme') : 'light',
     navPosition: (localStorage.getItem('dashkitNavPosition')) ? localStorage.getItem('dashkitNavPosition') : 'sidenav',
-    sidebarColor: (localStorage.getItem('dashkitSidebarColor')) ? localStorage.getItem('dashkitSidebarColor') : 'default',
+    navColor: (localStorage.getItem('dashkitNavColor')) ? localStorage.getItem('dashkitNavColor') : 'default',
     sidebarSize: (localStorage.getItem('dashkitSidebarSize')) ? localStorage.getItem('dashkitSidebarSize') : 'base'
   }
 
@@ -44,7 +46,7 @@
       var prop = arr[0];
       var val = arr[1];
 
-      if (prop == 'colorScheme' || prop == 'navPosition' || prop == 'sidebarColor' || prop == 'sidebarSize') {
+      if (prop == 'colorScheme' || prop == 'navPosition' || prop == 'navColor' || prop == 'sidebarSize') {
 
         // Save to localStorage
         localStorage.setItem('dashkit' + prop.charAt(0).toUpperCase() + prop.slice(1), val);
@@ -99,35 +101,42 @@
     }
   }
 
-  function toggleSidebarColor(sidebarColor) {
-    if (sidebar) {
-      if (sidebarColor == 'default') {
+  function toggleNavColor(navColor) {
+    
+    if (sidebar && sidebarSmall && topnav) {
+
+      if (navColor == 'default') {
 
         // Sidebar
-        sidebar.classList.remove('navbar-dark', 'bg-vibrant');
         sidebar.classList.add('navbar-light');
 
         // Sidebar small
-        sidebarSmall.classList.remove('navbar-dark', 'bg-vibrant');
         sidebarSmall.classList.add('navbar-light');
 
         // Topnav
-        topnav.classList.remove('navbar-dark', 'bg-vibrant');
         topnav.classList.add('navbar-light');
 
-      } else if (sidebarColor == 'vibrant') {
+      } else if (navColor == 'inverted') {
 
         // Sidebar
-        sidebar.classList.remove('navbar-light');
-        sidebar.classList.add('navbar-dark', 'bg-vibrant');
+        sidebar.classList.add('navbar-dark');
 
         // Sidebar small
-        sidebarSmall.classList.remove('navbar-light');
-        sidebarSmall.classList.add('navbar-dark', 'bg-vibrant');
+        sidebarSmall.classList.add('navbar-dark');
+
+        // Topnav
+        topnav.classList.add('navbar-dark');
+
+      } else if (navColor == 'vibrant') {
+
+        // Sidebar
+        sidebar.classList.add('navbar-dark', 'navbar-vibrant');
 
         // Sidebar small
-        topnav.classList.remove('navbar-light');
-        topnav.classList.add('navbar-dark', 'bg-vibrant');
+        sidebarSmall.classList.add('navbar-dark', 'navbar-vibrant');
+
+        // Sidebar small
+        topnav.classList.add('navbar-dark', 'navbar-vibrant');
 
       }
     }
@@ -141,23 +150,31 @@
     }
   }
 
-  function toggleFormControls(form, colorScheme, navPosition, sidebarColor, sidebarSize) {
+  function toggleFormControls(form, colorScheme, navPosition, navColor, sidebarSize) {
     $(form).find('[name="colorScheme"][value="' + colorScheme + '"]').closest('.btn').button('toggle');
     $(form).find('[name="navPosition"][value="' + navPosition + '"]').closest('.btn').button('toggle');
-    $(form).find('[name="sidebarColor"][value="' + sidebarColor + '"]').closest('.btn').button('toggle');
+    $(form).find('[name="navColor"][value="' + navColor + '"]').closest('.btn').button('toggle');
     $(form).find('[name="sidebarSize"][value="' + sidebarSize + '"]').closest('.btn').button('toggle');
+  }
+
+  function toggleSidebarSizeCongainer(navPosition) {
+    if (navPosition == 'topnav') {
+      $(sidebarSizeContainer).collapse('hide');
+    } else {
+      $(sidebarSizeContainer).collapse('show');
+    }
   }
 
   function submitForm(form) {
     var colorScheme = form.querySelector('[name="colorScheme"]:checked').value;
     var navPosition = form.querySelector('[name="navPosition"]:checked').value;
-    var sidebarColor = form.querySelector('[name="sidebarColor"]:checked').value;
+    var navColor = form.querySelector('[name="navColor"]:checked').value;
     var sidebarSize = form.querySelector('[name="sidebarSize"]:checked').value;
 
     // Save data to localStorage
     localStorage.setItem('dashkitColorScheme', colorScheme);
     localStorage.setItem('dashkitNavPosition', navPosition);
-    localStorage.setItem('dashkitSidebarColor', sidebarColor);
+    localStorage.setItem('dashkitNavColor', navColor);
     localStorage.setItem('dashkitSidebarSize', sidebarSize);
 
     // Reload page
@@ -183,24 +200,34 @@
   toggleNavPosition(config.navPosition);
 
   // Toggle sidebar color
-  toggleSidebarColor(config.sidebarColor);
+  toggleNavColor(config.navColor);
 
   // Toggle sidebar size
   toggleSidebarSize(config.sidebarSize);
 
   // Toggle form controls
-  toggleFormControls(form, config.colorScheme, config.navPosition, config.sidebarColor, config.sidebarSize);
+  toggleFormControls(form, config.colorScheme, config.navPosition, config.navColor, config.sidebarSize);
+
+  // Toggle sidebarSize container
+  toggleSidebarSizeCongainer(config.navPosition);
 
   // Enable body
   document.body.style.display = 'block';
 
-  // Form submitted
   if (form) {
+
+    // Form submitted
     form.addEventListener('submit', function(e) {
       e.preventDefault();
-
-      // Apply changes
       submitForm(form);
+    });
+
+    // Nav position changed
+    [].forEach.call(navPositionToggle, function(el) {
+      el.parentElement.addEventListener('click', function() {
+        var navPosition = el.value;
+        toggleSidebarSizeCongainer(navPosition);
+      });
     });
   }
 

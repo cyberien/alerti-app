@@ -1,8 +1,8 @@
-<nav class="navbar navbar-vertical navbar-vertical-sm fixed-left navbar-expand-md @@if(sidebarColor=='default'){navbar-light}@@if(sidebarColor=='vibrant'){navbar-dark bg-vibrant}" id="sidebarSmall">
+<nav class="navbar navbar-vertical navbar-vertical-sm fixed-left navbar-expand-md @@if(navColor=='default' && !demoMode){navbar-light}@@if(navColor=='inverted' &&!demoMode){}@@if(navColor=='vibrant' && !demoMode){navbar-dark bg-vibrant}" id="sidebarSmall">
   <div class="container-fluid">
 
     <!-- Toggler -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebarCollapse" aria-controls="sidebarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebarSmallCollapse" aria-controls="sidebarSmallCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -62,7 +62,7 @@
             <i class="fe fe-home"></i> <span class="d-md-none">Dashboards</span>
           </a>
           <ul class="dropdown-menu" aria-labelledby="sidebarSmallDashboards">
-            <li class="dropdown-header">
+            <li class="dropdown-header d-none d-md-block">
               <h6 class="text-uppercase mb-0">Dashboards</h6>
             </li>
             <li>
@@ -82,7 +82,7 @@
             <i class="fe fe-file"></i> <span class="d-md-none">Pages</span>
           </a>
           <ul class="dropdown-menu" aria-labelledby="sidebarSmallPages">
-            <li class="dropdown-header">
+            <li class="dropdown-header d-none d-md-block">
               <h6 class="text-uppercase mb-0">Pages</h6>
             </li>
             <li class="dropright">
@@ -177,7 +177,7 @@
             <i class="fe fe-user"></i> <span class="d-md-none">Auth</span>
           </a>
           <ul class="dropdown-menu" aria-labelledby="sidebarSmallAuth">
-            <li class="dropdown-header">
+            <li class="dropdown-header d-none d-md-block">
               <h6 class="text-uppercase mb-0">Authentication</h6>
             </li>
             <li class="dropright">
@@ -255,18 +255,18 @@
 
       <!-- Navigation -->
       <ul class="navbar-nav mb-md-4">
-        <li class="nav-item">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Getting started">
           <a class="nav-link @@if(page=='getting-started.html'){active}" href="getting-started.html">
             <i class="fe fe-clipboard"></i> <span class="d-md-none">Getting started</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link @@if(category=='components'){active}" href="components.html">
+          <a class="nav-link @@if(category=='components'){active}" href="components.html" data-toggle="tooltip" data-placement="right" title="Components">
             <i class="fe fe-book-open"></i> <span class="d-md-none">Components</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link @@if(page=='changelog.html'){active}" href="changelog.html">
+          <a class="nav-link @@if(page=='changelog.html'){active}" href="changelog.html" data-toggle="tooltip" data-placement="right" title="Changelog">
             <i class="fe fe-git-branch"></i> <span class="d-md-none">Changelog</span> <span class="badge badge-primary ml-auto d-md-none">v1.3.4</span>
           </a>
         </li>

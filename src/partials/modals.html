@@ -61,37 +61,44 @@
         </div>
 
         <h4 class="mb-1">
-          Sidebar Color
+          Navigation Color <span class="badge badge-soft-primary">New</span>
         </h4>
 
         <p class="small text-muted mb-3">
-          Usually dictated by the color scheme, but can be overriden. 
+          Usually dictated by the color scheme, but can be overriden.  
         </p>
 
         <div class="btn-group-toggle d-flex mb-4" data-toggle="buttons">
           <label class="btn btn-white active col">
-            <input type="radio" name="sidebarColor" id="sidebarColorDefault" value="default" checked> Default
+            <input type="radio" name="navColor" id="navColorDefault" value="default" checked> Default
           </label>
           <label class="btn btn-white col ml-2">
-            <input type="radio" name="sidebarColor" id="sidebarColorVibrant" value="vibrant"> Vibrant
+            <input type="radio" name="navColor" id="navColorVibrant" value="inverted"> Inverted
+          </label>
+          <label class="btn btn-white col ml-2">
+            <input type="radio" name="navColor" id="navColorVibrant" value="vibrant"> Vibrant
           </label>
         </div>
 
-        <h4 class="mb-1">
-          Sidenav Sizing
-        </h4>
+        <div class="collapse show" id="sidebarSizeContainer">
 
-        <p class="small text-muted mb-3">
-          Standard navigation sizing or minified icons with dropdowns.
-        </p>
+          <h4 class="mb-1">
+            Sidenav Sizing <span class="badge badge-soft-primary">New</span>
+          </h4>
 
-        <div class="btn-group-toggle d-flex" data-toggle="buttons">
-          <label class="btn btn-white active col">
-            <input type="radio" name="sidebarSize" id="sidebarSizeBase" value="base" checked> Fullsize
-          </label>
-          <label class="btn btn-white col ml-2">
-            <input type="radio" name="sidebarSize" id="sidebarSizeSmall" value="small"> Icons
-          </label>
+          <p class="small text-muted mb-3">
+            Standard navigation sizing or minified icons with dropdowns.
+          </p>
+
+          <div class="btn-group-toggle d-flex" data-toggle="buttons">
+            <label class="btn btn-white active col">
+              <input type="radio" name="sidebarSize" id="sidebarSizeBase" value="base" checked> Fullsize
+            </label>
+            <label class="btn btn-white col ml-2">
+              <input type="radio" name="sidebarSize" id="sidebarSizeSmall" value="small"> Icons
+            </label>
+          </div>
+
         </div>
       
       </div>
