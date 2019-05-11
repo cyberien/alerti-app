@@ -1,0 +1,970 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include("partials/head.html", {
+      "title": "Dashkit"
+    })
+  </head>
+  <body>
+
+    <!-- MODALS
+    ================================================== -->
+    @@include("partials/modals.html")
+
+    <!-- NAVIGATION
+    ================================================== -->
+    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
+      @@if (sidebarSize == 'base' || demoMode) {
+        @@include("partials/sidebar.html", {
+          "category": "dashboards",
+          "subcategory": "",
+          "page": "index.html"
+        })
+      }
+      @@if (sidebarSize == 'small' || demoMode) {
+        @@include("partials/sidebar-sm.html", {
+          "category": "dashboards",
+          "subcategory": "",
+          "page": "index.html"
+        })
+      }
+    }
+    @@if (navPosition == 'topnav' || demoMode) {
+      @@include("partials/topnav.html", {
+        "category": "dashboards",
+        "subcategory": "",
+        "page": "index.html"
+      })
+    }
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content">
+
+      @@if (navPosition == 'combo' || demoMode) {
+        @@include("partials/topbar.html")
+      }
+      
+      <!-- HEADER -->
+      <div class="header mt-md-5">
+        <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
+
+          <!-- Body -->
+          <div class="header-body">
+            <div class="row align-items-center">
+              <div class="col">
+                
+                <!-- Pretitle -->
+                <h6 class="header-pretitle">
+                  Kanban boards
+                </h6>
+
+                <!-- Title -->
+                <h1 class="header-title">
+                  Dashkit Update
+                </h1>
+
+              </div>
+              <div class="col-auto">
+                
+                <!-- Buttons -->
+                <a href="#!" class="btn btn-white mr-2">
+                  Edit
+                </a>
+
+                <!-- Navigation (button group) -->
+                <div class="nav btn-group d-inline-flex" role="tablist">
+                  <button class="btn btn-white active" id="kanbanColumnsToggle" data-toggle="tab" data-target="#kanbanColumns" role="tab" aria-controls="kabbanColumns" aria-selected="true">
+                    <span class="fe fe-grid"></span>
+                  </button>
+                  <button class="btn btn-white" id="kanbanListToggle" data-toggle="tab" data-target="#kanbanList" role="tab" aria-controls="kanbanList" aria-selected="false">
+                    <span class="fe fe-list"></span>
+                  </button>
+                </div> <!-- / .nav -->
+
+              </div>
+            </div> <!-- / .row -->
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CONTENT -->
+      <div class="tab-content">
+        <div class="tab-pane fade show active" id="kanbanColumns" role="tabpanel" aria-labelledby="kanbanColumnsToggle">
+          <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
+            <div class="row">
+              <div class="col-4">
+
+                <!-- Card -->
+                <div class="card card-flush">
+                  <div class="card-header">
+                    <div class="row align-items-center">
+                      <div class="col">
+                    
+                        <!-- Title -->
+                        <h4 class="card-header-title">
+                          Redesign
+                        </h4>
+
+                      </div>
+                      <div class="col-auto">
+
+                        <!-- Dropdown -->
+                        <div class="dropdown">
+                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#!" class="dropdown-item">
+                              Action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Another action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Something else here
+                            </a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div> <!-- / .row -->
+                  </div>
+                  <div class="card-body">
+                    
+                    <!-- Card -->
+                    <div class="card card-sm mb-3">
+                      <div class="card-body">
+                        
+                        <!-- Body -->
+                        <p>
+                          Create the release notes for the new pages so customers are warned.
+                        </p>
+
+                        <!-- Footer -->
+                        <div class="row align-items-center">
+                          <div class="col">
+                            
+                            <!-- Time -->
+                            <p class="card-text small text-muted">
+                              <i class="fe fe-clock"></i> Jun 9
+                            </p>
+
+                          </div>
+                          <div class="col-auto">
+                            
+                            <!-- Avatar group -->
+                            <div class="avatar-group">
+                              <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
+                                <img src="assets/img/avatars/profiles/avatar-2.jpg" class="avatar-img rounded-circle" alt="...">
+                              </a>
+                            </div>
+
+                          </div>
+                        </div> <!-- / .row -->
+
+                      </div>
+                    </div>
+
+                    <!-- Card -->
+                    <div class="card card-sm mb-3">
+
+                      <!-- Image -->
+                      <img src="assets/img/posts/post-1.jpg" alt="..." class="card-img-top">
+
+                      <!-- Body -->
+                      <div class="card-body">
+                        
+                        <!-- Body -->
+                        <p>
+                          Create the release notes for the new pages so customers are warned.
+                        </p>
+
+                        <!-- Footer -->
+                        <div class="row align-items-center">
+                          <div class="col">
+                            
+                            <!-- Time -->
+                            <p class="card-text small text-muted">
+                              <i class="fe fe-message-circle"></i> 23 <i class="fe fe-clock ml-3"></i> Sep 9
+                            </p>
+
+                          </div>
+                          <div class="col-auto">
+                            
+                            <!-- Avatar group -->
+                            <div class="avatar-group">
+                              <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
+                                <img src="assets/img/avatars/profiles/avatar-2.jpg" class="avatar-img rounded-circle" alt="...">
+                              </a>
+                              <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Adolfo Hess">
+                                <img src="assets/img/avatars/profiles/avatar-3.jpg" class="avatar-img rounded-circle" alt="...">
+                              </a>
+                              <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Daniela Dewitt">
+                                <img src="assets/img/avatars/profiles/avatar-4.jpg" class="avatar-img rounded-circle" alt="...">
+                              </a>
+                            </div>
+
+                          </div>
+                        </div> <!-- / .row -->
+
+                      </div>
+
+                    </div>
+
+                    <!-- Card -->
+                    <div class="card card-sm mb-3">
+                      <div class="card-body">
+
+                        <!-- Badge -->
+                        <p class="mb-3">
+                          <span class="badge badge-soft-success">
+                            Shipped
+                          </span>
+                        </p>
+                        
+                        <!-- Body -->
+                        <p class="mb-0">
+                          Create the release notes for the new pages so customers are warned.
+                        </p>
+
+                      </div>
+                    </div>
+                    
+                    <!-- Link -->
+                    <p class="text-center mt-4 mb-0">
+                      <a href="#!">Add Card</a>
+                    </p>
+                  
+                  </div>
+                </div>
+                
+              </div>
+              <div class="col-4">
+
+                <!-- Card -->
+                <div class="card card-flush">
+                  <div class="card-header">
+                    <div class="row align-items-center">
+                      <div class="col">
+                    
+                        <!-- Title -->
+                        <h4 class="card-header-title">
+                          Some Other List
+                        </h4>
+
+                      </div>
+                      <div class="col-auto">
+
+                        <!-- Dropdown -->
+                        <div class="dropdown">
+                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#!" class="dropdown-item">
+                              Action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Another action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Something else here
+                            </a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div> <!-- / .row -->
+                  </div>
+                  <div class="card-body">
+                    
+                    <!-- Card -->
+                    <div class="card card-sm mb-3">
+                      <div class="card-body">
+                        
+                        <!-- Body -->
+                        <p>
+                          Create the release notes for the new pages so customers are warned.
+                        </p>
+
+                        <!-- Footer -->
+                        <div class="row align-items-center">
+                          <div class="col">
+                            
+                            <!-- Time -->
+                            <p class="card-text small text-muted">
+                              <i class="fe fe-clock"></i> Jun 9
+                            </p>
+
+                          </div>
+                          <div class="col-auto">
+                            
+                            <!-- Avatar group -->
+                            <div class="avatar-group">
+                              <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
+                                <img src="assets/img/avatars/profiles/avatar-2.jpg" class="avatar-img rounded-circle" alt="...">
+                              </a>
+                            </div>
+
+                          </div>
+                        </div> <!-- / .row -->
+
+                      </div>
+                    </div>
+
+                    <!-- Card -->
+                    <div class="card card-sm mb-3">
+                      <div class="card-body">
+                        
+                        <!-- Body -->
+                        <p>
+                          Create the release notes for the new pages so customers are warned.
+                        </p>
+
+                        <!-- Footer -->
+                        <div class="row align-items-center">
+                          <div class="col">
+                            
+                            <!-- Time -->
+                            <p class="card-text small text-muted">
+                              <i class="fe fe-clock"></i> Jun 9
+                            </p>
+
+                          </div>
+                          <div class="col-auto">
+                            
+                            <!-- Avatar group -->
+                            <div class="avatar-group">
+                              <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
+                                <img src="assets/img/avatars/profiles/avatar-2.jpg" class="avatar-img rounded-circle" alt="...">
+                              </a>
+                            </div>
+
+                          </div>
+                        </div> <!-- / .row -->
+
+                      </div>
+                    </div>
+
+                    <!-- Card -->
+                    <div class="card card-sm mb-3">
+
+                      <!-- Image -->
+                      <img src="assets/img/posts/post-1.jpg" alt="..." class="card-img-top">
+
+                      <!-- Body -->
+                      <div class="card-body">
+                        
+                        <!-- Body -->
+                        <p>
+                          Create the release notes for the new pages so customers are warned.
+                        </p>
+
+                        <!-- Footer -->
+                        <div class="row align-items-center">
+                          <div class="col">
+                            
+                            <!-- Time -->
+                            <p class="card-text small text-muted">
+                              <i class="fe fe-message-circle"></i> 23 <i class="fe fe-clock ml-3"></i> Sep 9
+                            </p>
+
+                          </div>
+                          <div class="col-auto">
+                            
+                            <!-- Avatar group -->
+                            <div class="avatar-group">
+                              <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
+                                <img src="assets/img/avatars/profiles/avatar-2.jpg" class="avatar-img rounded-circle" alt="...">
+                              </a>
+                              <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Adolfo Hess">
+                                <img src="assets/img/avatars/profiles/avatar-3.jpg" class="avatar-img rounded-circle" alt="...">
+                              </a>
+                              <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Daniela Dewitt">
+                                <img src="assets/img/avatars/profiles/avatar-4.jpg" class="avatar-img rounded-circle" alt="...">
+                              </a>
+                            </div>
+
+                          </div>
+                        </div> <!-- / .row -->
+
+                      </div>
+
+                    </div>
+
+                    <!-- Card -->
+                    <div class="card card-sm mb-0">
+                      <div class="card-body">
+
+                        <!-- Form -->
+                        <form>
+
+                          <!-- Input -->
+                          <div class="form-group">
+                            <textarea class="form-control form-control-flush" placeholder="Draft your card"></textarea>
+                          </div>
+
+                          <!-- Footer -->
+                          <div class="row align-items-center">
+                            <div class="col">
+                              
+                              <!-- Time -->
+                              <a class="small text-muted" href="#" data-toggle="flatpickr" onclick="return false;">
+                                <i class="fe fe-clock"></i> No due date
+                              </a>
+
+                            </div>
+                            <div class="col-auto">
+                              
+                              <!-- Buttons -->
+                              <button class="btn btn-sm btn-white" type="reset">
+                                Cancel
+                              </button>
+                              <button class="btn btn-sm btn-primary" type="submit">
+                                Add
+                              </button>
+
+                            </div>
+                          </div> <!-- / .row -->
+
+                        </form>
+
+                      </div>
+                    </div>
+                  
+                  </div>
+                </div>
+                
+              </div>
+              <div class="col-4">
+                
+                <!-- Card -->
+                <div class="card">
+                  <div class="card-body">
+                    
+                    <!-- Link -->
+                    <p class="text-center mb-0">
+                      <a href="#!">Add list</a>
+                    </p>
+
+                  </div>
+                </div>
+
+                <!-- Card -->
+                <div class="card">
+                  <div class="card-body">
+                    
+                    <!-- Form -->
+                    <form class="d-flex align-items-center">
+
+                      <!-- Input -->
+                      <input type="text" class="form-control form-control-flush form-control-auto h4" placeholder="Name your list">
+
+                      <!-- Close -->
+                      <button class="close close-sm ml-3" type="reset">
+                        <i class="fe fe-x"></i>
+                      </button>
+
+                    </form>
+
+                  </div>
+                </div>
+
+                <!-- Card -->
+                <div class="card card-flush">
+                  <div class="card-header">
+                    <div class="row align-items-center">
+                      <div class="col">
+                    
+                        <!-- Title -->
+                        <h4 class="card-header-title">
+                          Redesign
+                        </h4>
+
+                      </div>
+                      <div class="col-auto">
+
+                        <!-- Dropdown -->
+                        <div class="dropdown">
+                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#!" class="dropdown-item">
+                              Action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Another action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Something else here
+                            </a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div> <!-- / .row -->
+                  </div>
+                  <div class="card-body">
+
+                    <!-- Card -->
+                    <div class="card card-sm mb-0">
+                      <div class="card-body">
+                    
+                        <!-- Form -->
+                        <form class="d-flex align-items-start">
+
+                          <!-- Textarea -->
+                          <textarea class="form-control form-control-flush" placeholder="Draft your card"></textarea>
+
+                          <!-- Close -->
+                          <button class="close close-sm ml-3">
+                            <i class="fe fe-x"></i>
+                          </button>
+
+                        </form>
+
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div> <!-- / .row -->
+          </div>
+        </div>
+        <div class="tab-pane fade" id="kanbanList" role="tabpanel" aria-labelledby="kanbanListToggle">
+          <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
+            <div class="row">
+              <div class="col-12">
+
+                <!-- List group -->
+                <div class="list-group list-group-lg list-group-flush">
+                  <div class="list-group-item">
+                    
+                    <!-- Header -->
+                    <div class="row align-items-center mb-4">
+                      <div class="col">
+                        
+                        <!-- Heading -->
+                        <h2 class="mb-0">Redesign</h2>
+
+                      </div>
+                      <div class="col-auto">
+                        
+                        <!-- Drodpown -->
+                        <div class="dropdown">
+                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#!" class="dropdown-item">
+                              Action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Another action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Something else here
+                            </a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div> <!-- / .row -->
+
+                    <!-- Card -->
+                    <div class="card card-sm mb-3">
+                      <div class="card-body">
+                        <div class="row align-items-center">
+                          <div class="col-12 col-md">
+                            
+                            <!-- Title -->
+                            <p class="mb-md-0">
+                              Create the release notes for the new pages so customers are warned.
+                            </p>
+
+                          </div>
+                          <div class="col-6 col-md-auto">
+                            
+                            <!-- Date -->
+                            <span class="small text-muted">
+                              <i class="fe fe-clock"></i> Jun 9
+                            </span>
+
+                          </div>
+                          <div class="col-6 col-md-3 col-lg-2 col-xl-1 text-right">
+                            
+                            <!-- Avatar group -->
+                            <div class="avatar-group">
+                              <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
+                                <img src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
+                              </a>
+                            </div>
+
+                          </div>
+                        </div> <!-- / .row -->
+                      </div>
+                    </div>
+
+                    <!-- Card -->
+                    <div class="card card-sm mb-3">
+                      <div class="card-body">
+                        <div class="row align-items-center">
+                          <div class="col-12 col-md">
+                            
+                            <!-- Title -->
+                            <p class="mb-md-0">
+                              This is a todo with an attachment, comments, and a due date.
+                            </p>
+
+                          </div>
+                          <div class="col-6 col-md-auto">
+                            
+                            <!-- Fiels -->
+                            <span class="small text-muted mr-4">
+                              <i class="fe fe-paperclip"></i> 2 
+                            </span>
+
+                            <!-- Comments -->
+                            <span class="small text-muted mr-4">
+                              <i class="fe fe-message-circle"></i> 23 
+                            </span>
+
+                            <!-- Date -->
+                            <span class="small text-muted">
+                              <i class="fe fe-clock"></i> Jun 9
+                            </span>
+
+                          </div>
+                          <div class="col-6 col-md-3 col-lg-2 col-xl-1 text-right">
+                            
+                            <!-- Avatar group -->
+                            <div class="avatar-group">
+                              <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
+                                <img src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
+                              </a>
+                              <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Adolfo Hess">
+                                <img src="assets/img/avatars/profiles/avatar-3.jpg" alt="..." class="avatar-img rounded-circle">
+                              </a>
+                              <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Daniela Dewitt">
+                                <img src="assets/img/avatars/profiles/avatar-4.jpg" alt="..." class="avatar-img rounded-circle">
+                              </a>
+                            </div>
+
+                          </div>
+                        </div> <!-- / .row -->
+                      </div>
+                    </div>
+
+                    <!-- Card -->
+                    <div class="card card-sm">
+                      <div class="card-body">
+                        <div class="row align-items-center">
+                          <div class="col-12 col-md">
+                            
+                            <!-- Title -->
+                            <p class="mb-md-0">
+                              This is an extremely long todo to show wrapping. This is an extremely long todo to show wrapping.This is an extremely long todo to show wrapping.
+                            </p>
+
+                          </div>
+                          <div class="col-6 col-md-auto">
+                            
+                            <!-- Fiels -->
+                            <span class="small text-muted mr-4">
+                              <i class="fe fe-paperclip"></i> 2 
+                            </span>
+
+                            <!-- Comments -->
+                            <span class="small text-muted mr-4">
+                              <i class="fe fe-message-circle"></i> 23 
+                            </span>
+
+                            <!-- Date -->
+                            <span class="small text-muted">
+                              <i class="fe fe-clock"></i> Jun 9
+                            </span>
+
+                          </div>
+                          <div class="col-6 col-md-3 col-lg-2 col-xl-1 text-right">
+                            
+                            <!-- Avatar group -->
+                            <div class="avatar-group">
+                              <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
+                                <img src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
+                              </a>
+                              <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Adolfo Hess">
+                                <img src="assets/img/avatars/profiles/avatar-3.jpg" alt="..." class="avatar-img rounded-circle">
+                              </a>
+                              <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Daniela Dewitt">
+                                <img src="assets/img/avatars/profiles/avatar-4.jpg" alt="..." class="avatar-img rounded-circle">
+                              </a>
+                            </div>
+
+                          </div>
+                        </div> <!-- / .row -->
+                      </div>
+                    </div>
+
+                    <!-- Link -->
+                    <a href="#!">
+                      + Add Card
+                    </a>
+
+                  </div>
+                  <div class="list-group-item">
+
+                    <!-- Header -->
+                    <div class="row align-items-center mb-4">
+                      <div class="col">
+                        
+                        <!-- Heading -->
+                        <h2 class="mb-0">Some Other List</h2>
+
+                      </div>
+                      <div class="col-auto">
+                        
+                        <!-- Drodpown -->
+                        <div class="dropdown">
+                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#!" class="dropdown-item">
+                              Action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Another action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Something else here
+                            </a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div> <!-- / .row -->
+
+                    <!-- Card -->
+                    <div class="card card-sm mb-3">
+                      <div class="card-body">
+                        <div class="row align-items-center">
+                          <div class="col-12 col-md">
+                            
+                            <!-- Title -->
+                            <p class="mb-md-0">
+                              Create the release notes for the new pages so customers are warned.
+                            </p>
+
+                          </div>
+                          <div class="col-6 col-md-auto">
+                            
+                            <!-- Date -->
+                            <span class="small text-muted">
+                              <i class="fe fe-clock"></i> Jun 9
+                            </span>
+
+                          </div>
+                          <div class="col-6 col-md-3 col-lg-2 col-xl-1 text-right">
+                            
+                            <!-- Avatar group -->
+                            <div class="avatar-group">
+                              <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
+                                <img src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
+                              </a>
+                            </div>
+
+                          </div>
+                        </div> <!-- / .row -->
+                      </div>
+                    </div>
+
+                    <!-- Card -->
+                    <div class="card card-sm mb-3">
+                      <div class="card-body">
+                        <div class="row align-items-center">
+                          <div class="col-12 col-md">
+                            
+                            <!-- Title -->
+                            <p class="mb-md-0">
+                              This is a todo with an attachment, comments, and a due date.
+                            </p>
+
+                          </div>
+                          <div class="col-6 col-md-auto">
+                            
+                            <!-- Fiels -->
+                            <span class="small text-muted mr-4">
+                              <i class="fe fe-paperclip"></i> 2 
+                            </span>
+
+                            <!-- Comments -->
+                            <span class="small text-muted mr-4">
+                              <i class="fe fe-message-circle"></i> 23 
+                            </span>
+
+                            <!-- Date -->
+                            <span class="small text-muted">
+                              <i class="fe fe-clock"></i> Jun 9
+                            </span>
+
+                          </div>
+                          <div class="col-6 col-md-3 col-lg-2 col-xl-1 text-right">
+                            
+                            <!-- Avatar group -->
+                            <div class="avatar-group">
+                              <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
+                                <img src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
+                              </a>
+                              <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Adolfo Hess">
+                                <img src="assets/img/avatars/profiles/avatar-3.jpg" alt="..." class="avatar-img rounded-circle">
+                              </a>
+                              <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Daniela Dewitt">
+                                <img src="assets/img/avatars/profiles/avatar-4.jpg" alt="..." class="avatar-img rounded-circle">
+                              </a>
+                            </div>
+
+                          </div>
+                        </div> <!-- / .row -->
+                      </div>
+                    </div>
+
+                    <!-- Card -->
+                    <div class="card card-sm mb-3">
+                      <div class="card-body">
+                        <div class="row align-items-center">
+                          <div class="col-12 col-md">
+                            
+                            <!-- Title -->
+                            <p class="mb-md-0">
+                              This is an extremely long todo to show wrapping. This is an extremely long todo to show wrapping.This is an extremely long todo to show wrapping.
+                            </p>
+
+                          </div>
+                          <div class="col-6 col-md-auto">
+                            
+                            <!-- Fiels -->
+                            <span class="small text-muted mr-4">
+                              <i class="fe fe-paperclip"></i> 2 
+                            </span>
+
+                            <!-- Comments -->
+                            <span class="small text-muted mr-4">
+                              <i class="fe fe-message-circle"></i> 23 
+                            </span>
+
+                            <!-- Date -->
+                            <span class="small text-muted">
+                              <i class="fe fe-clock"></i> Jun 9
+                            </span>
+
+                          </div>
+                          <div class="col-6 col-md-3 col-lg-2 col-xl-1 text-right">
+                            
+                            <!-- Avatar group -->
+                            <div class="avatar-group">
+                              <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
+                                <img src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
+                              </a>
+                              <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Adolfo Hess">
+                                <img src="assets/img/avatars/profiles/avatar-3.jpg" alt="..." class="avatar-img rounded-circle">
+                              </a>
+                              <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Daniela Dewitt">
+                                <img src="assets/img/avatars/profiles/avatar-4.jpg" alt="..." class="avatar-img rounded-circle">
+                              </a>
+                            </div>
+
+                          </div>
+                        </div> <!-- / .row -->
+                      </div>
+                    </div>
+
+                    <!-- Card -->
+                    <div class="card card-sm mb-0">
+                      <div class="card-body">
+                        <div class="row align-items-center">
+                          <div class="col-12 col-md">
+
+                            <!-- Form -->
+                            <form>
+                              <input type="text" class="form-control form-control-flush form-control-auto" placeholder="Draft your card">
+                            </form>
+
+                          </div>
+                          <div class="col-6 col-md-auto">
+                            
+                            <!-- Date -->
+                            <span class="small text-muted">
+                              <i class="fe fe-clock"></i> No due date
+                            </span>
+
+                          </div>
+                          <div class="col-6 col-md-auto">
+                            
+                            <!-- Buttons -->
+                            <a href="#!" class="btn btn-sm btn-white">
+                              Cancel
+                            </a>
+                            <a href="#!" class="btn btn-sm btn-primary">
+                              Add
+                            </a>
+
+                          </div>
+                        </div> <!-- / .row -->
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="list-group-item">
+                    
+                    <a href="#!" class="h2">
+                      + Add List
+                    </a>
+
+                  </div>
+                  <div class="list-group-item">
+                    
+                    <!-- Form -->
+                    <form>
+                      <div class="row align-items-center">
+                        <div class="col-12 col-md">
+                          
+                          <!-- Button -->
+                          <input type="text" class="form-control form-control-flush form-control-auto h2" placeholder="Name your list">
+
+                        </div>
+                        <div class="col-auto">
+                          
+                          <!-- Buttons -->
+                          <button class="btn btn-sm btn-white" type="reset">
+                            Cancel
+                          </button>
+                          <button class="btn btn-sm btn-primary" type="submit">
+                            Add
+                          </button>
+
+                        </div>
+                      </div> <!-- / .row -->
+                    </form>
+
+                  </div>
+                </div>
+
+              </div>
+            </div> <!-- / .row -->
+          </div>
+        </div>
+      </div>
+      
+    </div> <!-- / .main-content -->
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("partials/scripts.html")
+
+  </body>
+</html>

@@ -153,3 +153,21 @@
   background-color: transparent;
   box-shadow: none;
 }
+
+
+// Flush
+
+.card-flush > .card-header {
+  border-bottom: 0;
+}
+
+.card-flush > .card-header ~ .card-body {
+  padding-top: 0;
+}
+
+
+// Sizing
+
+.card-sm .card-body {
+  padding: $card-spacer-x-sm;
+}

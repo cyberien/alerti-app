@@ -93,14 +93,14 @@ $spacer: 1.5rem !default;
 $spacers: () !default;
 $spacers: map-merge((
   0: 0,
-  1: ($spacer * .125),
-  2: ($spacer * .25),
-  3: ($spacer * .5),
-  4: $spacer,
-  5: ($spacer * 1.5),
-  6: ($spacer * 3),
-  7: ($spacer * 4.5),
-  8: ($spacer * 9)
+  1: ($spacer * .125),  // 3px
+  2: ($spacer * .25),   // 6px
+  3: ($spacer * .5),    // 12px
+  4: $spacer,           // 24px
+  5: ($spacer * 1.5),   // 36px
+  6: ($spacer * 3),     // 72px
+  7: ($spacer * 4.5),   // 108px
+  8: ($spacer * 9)      // 216px
 ), $spacers);
 
 // This variable affects the `.h-*` and `.w-*` classes.
@@ -565,6 +565,8 @@ $breadcrumb-font-size-sm: $font-size-sm !default;
 
 // Cards
 
+$card-spacer-x-sm: 1rem !default;
+
 $card-outline-color: $card-border-color !default;
 $card-box-shadow: 0 .75rem 1.5rem transparentize($black, .97) !default;
 
@@ -699,3 +701,8 @@ $custom-switch-spacing: ($custom-switch-height - $custom-switch-indicator-size) 
 
 $custom-switch-indicator-bg: $white !default;
 $custom-switch-indicator-active-bg: $white !default;
+
+
+// Close
+
+$close-font-size-sm: $font-size-base !default;

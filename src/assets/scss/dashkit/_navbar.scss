@@ -282,10 +282,14 @@
 
 
   // Navbar dropdowns
-  .dropup, .dropright, .dropdown, .dropleft {
 
-    &:hover > .dropdown-menu {
-      display: block;
+  .navbar {
+
+    .dropup, .dropright, .dropdown, .dropleft {
+
+      &:hover > .dropdown-menu {
+        display: block;
+      }
     }
   }
 

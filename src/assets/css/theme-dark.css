@@ -8147,6 +8147,18 @@ a.text-white:hover, a.text-white:focus {
   background-color: transparent;
   box-shadow: none; }
 
+.card-flush > .card-header {
+  border-bottom: 0; }
+
+.card-flush > .card-header ~ .card-body {
+  padding-top: 0; }
+
+.card-sm .card-body {
+  padding: 1rem; }
+
+.close-sm {
+  font-size: 0.9375rem; }
+
 .highlight {
   padding: 0; }
 
@@ -8231,9 +8243,13 @@ a.text-white:hover, a.text-white:focus {
 .form-control-flush {
   padding: 0;
   border-width: 0;
-  background-color: transparent; }
+  background-color: transparent;
+  resize: none; }
   .form-control-flush:focus {
     background-color: transparent; }
+
+.form-control-auto {
+  height: auto; }
 
 .form-control-rounded {
   border-radius: 20rem; }
@@ -8338,6 +8354,26 @@ a.text-white:hover, a.text-white:focus {
   padding: 0;
   border-width: 0;
   background-color: transparent; }
+
+.form-control.h1, .form-control.h2, .form-control.h3, .form-control.h4, .form-control.h5 {
+  margin-bottom: 0;
+  font-weight: 500;
+  letter-spacing: -0.02em; }
+
+.form-control.h1 {
+  font-size: 1.625rem; }
+
+.form-control.h2 {
+  font-size: 1.25rem; }
+
+.form-control.h3 {
+  font-size: 1.0625rem; }
+
+.form-control.h4 {
+  font-size: 0.9375rem; }
+
+.form-control.h5 {
+  font-size: 0.8125rem; }
 
 .jumbotron {
   padding: 1rem; }
@@ -8447,6 +8483,10 @@ a.text-white:hover, a.text-white:focus {
 .list-group-lg .list-group-item {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem; }
+
+.list-group-flush .list-group-item {
+  padding-left: 0;
+  padding-right: 0; }
 
 .modal.fade .modal-dialog {
   transform: translate(0, -150px); }
@@ -8709,7 +8749,7 @@ a.text-white:hover, a.text-white:focus {
         left: 0.5rem;
         border-left: 0;
         border-bottom: 1px solid #2C7BE5; }
-  .dropup:hover > .dropdown-menu, .dropright:hover > .dropdown-menu, .dropdown:hover > .dropdown-menu, .dropleft:hover > .dropdown-menu {
+  .navbar .dropup:hover > .dropdown-menu, .navbar .dropright:hover > .dropdown-menu, .navbar .dropdown:hover > .dropdown-menu, .navbar .dropleft:hover > .dropdown-menu {
     display: block; }
   .navbar-nav .dropdown-menu {
     border: 1px solid #12263F; }
@@ -8995,7 +9035,7 @@ h5, .h5 {
 h6, .h6 {
   margin-bottom: 0.5625rem; }
 
-h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {
+h1 > a, .h1 > a, h2 > a, .h2 > a, h3 > a, .h3 > a, h4 > a, .h4 > a, h5 > a, .h5 > a, h6 > a, .h6 > a {
   color: inherit; }
 
 .display-1,
@@ -9004,7 +9044,7 @@ h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {
 .display-4 {
   letter-spacing: -0.02em; }
 
-h1, h2, h3, h4, h5, h6 {
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   letter-spacing: -0.02em; }
 
 h6.text-uppercase {
