@@ -1,0 +1,15 @@
+//
+// kanban.scss
+// Dashkit component
+//
+
+.kanban-row {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.kanban-row > [class*="col"] {
+  min-width: $kanban-col-width;
+  width: $kanban-col-width;
+  max-width: $kanban-col-width;
+}
