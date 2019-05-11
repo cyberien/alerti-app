@@ -13,3 +13,19 @@
   width: $kanban-col-width;
   max-width: $kanban-col-width;
 }
+
+.kanban-card-container .card-header {
+  border-bottom: 0;
+}
+
+.kanban-card-container .card-header ~ .card-body {
+  padding-top: 0;
+}
+
+.kanban-card {
+  margin-bottom: 0;
+}
+
+.kanban-card + .kanban-card {
+  margin-top: $kanban-card-margin-bottom;
+}

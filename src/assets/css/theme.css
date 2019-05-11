@@ -8147,11 +8147,10 @@ a.text-white:hover, a.text-white:focus {
   background-color: transparent;
   box-shadow: none; }
 
-.card-flush > .card-header {
-  border-bottom: 0; }
-
-.card-flush > .card-header ~ .card-body {
-  padding-top: 0; }
+.card-flush {
+  background: none;
+  border: none;
+  box-shadow: none; }
 
 .card-sm .card-body {
   padding: 1rem; }
@@ -9509,6 +9508,18 @@ a:focus, button:focus {
   min-width: 350px;
   width: 350px;
   max-width: 350px; }
+
+.kanban-card-container .card-header {
+  border-bottom: 0; }
+
+.kanban-card-container .card-header ~ .card-body {
+  padding-top: 0; }
+
+.kanban-card {
+  margin-bottom: 0; }
+
+.kanban-card + .kanban-card {
+  margin-top: 0.75rem; }
 
 @media (min-width: 768px) {
   .main-content .container-fluid {

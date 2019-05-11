@@ -157,12 +157,10 @@
 
 // Flush
 
-.card-flush > .card-header {
-  border-bottom: 0;
-}
-
-.card-flush > .card-header ~ .card-body {
-  padding-top: 0;
+.card-flush {
+  background: none;
+  border: none;
+  box-shadow: none;
 }
 
 
