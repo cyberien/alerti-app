@@ -22,7 +22,12 @@
   //
 
   function init(categories) {
-    var arr = Array.from(categories);
+    var arr = [];
+
+    for(var i = 0; i < categories.length; i++) {
+      arr.push(categories[i]);
+    }
+    
     dragula(arr);
   }
 
