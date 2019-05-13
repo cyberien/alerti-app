@@ -155,7 +155,7 @@
 }
 
 
-// Flush
+// Card flush
 
 .card-flush {
   background: none;
@@ -164,8 +164,19 @@
 }
 
 
-// Sizing
+// Card sizing
 
 .card-sm .card-body {
   padding: $card-spacer-x-sm;
+}
+
+
+// Card header flush
+
+.card-header-flush {
+  border-bottom: 0;
+}
+
+.card-header-flush + .card-body {
+  padding-top: 0;
 }

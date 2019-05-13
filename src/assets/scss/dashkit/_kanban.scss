@@ -3,29 +3,37 @@
 // Dashkit component
 //
 
-.kanban-row {
-  flex-wrap: nowrap;
+// Container
+
+.container-fluid.kanban-container {
+  min-height: calc(100vh - 129px);
+}
+
+.container.kanban-container {
+  min-height: calc(100vh - 129px - 69px);
+}
+
+.kanban-container {
   overflow-x: auto;
 }
 
-.kanban-row > [class*="col"] {
+.kanban-container > .row {
+  flex-wrap: nowrap;
+}
+
+.kanban-container > .row > [class*="col"] {
   min-width: $kanban-col-width;
   width: $kanban-col-width;
   max-width: $kanban-col-width;
 }
 
-.kanban-card-container .card-header {
-  border-bottom: 0;
-}
 
-.kanban-card-container .card-header ~ .card-body {
-  padding-top: 0;
-}
+// Nested cards
 
-.kanban-card {
+.kanban-category .card {
   margin-bottom: 0;
 }
 
-.kanban-card + .kanban-card {
-  margin-top: $kanban-card-margin-bottom;
+.kanban-category .card + .card {
+  margin-top: .75rem;
 }

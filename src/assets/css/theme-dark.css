@@ -8155,6 +8155,12 @@ a.text-white:hover, a.text-white:focus {
 .card-sm .card-body {
   padding: 1rem; }
 
+.card-header-flush {
+  border-bottom: 0; }
+
+.card-header-flush + .card-body {
+  padding-top: 0; }
+
 .close-sm {
   font-size: 0.9375rem; }
 
@@ -9500,26 +9506,28 @@ a:focus, button:focus {
 .fe {
   line-height: inherit; }
 
-.kanban-row {
-  flex-wrap: nowrap;
+.container-fluid.kanban-container {
+  min-height: calc(100vh - 129px); }
+
+.container.kanban-container {
+  min-height: calc(100vh - 129px - 69px); }
+
+.kanban-container {
   overflow-x: auto; }
 
-.kanban-row > [class*="col"] {
-  min-width: 350px;
-  width: 350px;
-  max-width: 350px; }
+.kanban-container > .row {
+  flex-wrap: nowrap; }
 
-.kanban-card-container .card-header {
-  border-bottom: 0; }
+.kanban-container > .row > [class*="col"] {
+  min-width: 375px;
+  width: 375px;
+  max-width: 375px; }
 
-.kanban-card-container .card-header ~ .card-body {
-  padding-top: 0; }
-
-.kanban-card {
+.kanban-category .card {
   margin-bottom: 0; }
 
-.kanban-card + .kanban-card {
-  margin-top: 0.75rem; }
+.kanban-category .card + .card {
+  margin-top: .75rem; }
 
 @media (min-width: 768px) {
   .main-content .container-fluid {
