@@ -28,12 +28,19 @@
 }
 
 
-// Nested cards
+// Category
 
-.kanban-category .card {
-  margin-bottom: 0;
+.kanban-category {
+  min-height: 1rem; // in case all items have been moved
 }
 
-.kanban-category .card + .card {
-  margin-top: .75rem;
+
+// Item
+
+.kanban-item {
+  touch-action: none;
+}
+
+.kanban-item.gu-mirror {
+  opacity: 1;
 }

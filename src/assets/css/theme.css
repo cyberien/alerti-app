@@ -9523,11 +9523,14 @@ a:focus, button:focus {
   width: 375px;
   max-width: 375px; }
 
-.kanban-category .card {
-  margin-bottom: 0; }
+.kanban-category {
+  min-height: 1rem; }
 
-.kanban-category .card + .card {
-  margin-top: .75rem; }
+.kanban-item {
+  touch-action: none; }
+
+.kanban-item.gu-mirror {
+  opacity: 1; }
 
 @media (min-width: 768px) {
   .main-content .container-fluid {

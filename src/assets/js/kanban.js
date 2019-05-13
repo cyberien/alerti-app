@@ -21,23 +21,27 @@
   // Functions
   //
 
-  function init() {
-    
+  function init(categories) {
+    var arr = Array.from(categories);
+    dragula(arr);
   }
 
   function toggleItems(el) {
-    var card = el.closest('.kanban-add');
-    var link = card.querySelector('.kanban-add-link');
-    var form = card.querySelector('.kanban-add-form');
+    var parent = el.closest('.kanban-add');
+    var card = parent.querySelector('.card');
+    var link = parent.querySelector('.kanban-add-link');
+    var form = parent.querySelector('.kanban-add-form');
 
     link.classList.toggle('d-none');
     form.classList.toggle('d-none');
 
-    if (card.classList.contains('card-sm')) {
-      if (card.classList.contains('card-flush')) {
-        card.classList.remove('card-flush');
-      } else {
-        card.classList.add('card-flush');
+    if (card) {
+      if (card.classList.contains('card-sm')) {
+        if (card.classList.contains('card-flush')) {
+          card.classList.remove('card-flush');
+        } else {
+          card.classList.add('card-flush');
+        }
       }
     }
   }
@@ -47,7 +51,9 @@
   // Events
   //
 
-  init();
+  if (categories) {
+    init(categories);
+  }
 
   if (links) {
     [].forEach.call(links, function(el) {
