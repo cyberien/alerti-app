@@ -255,18 +255,18 @@
 
       <!-- Navigation -->
       <ul class="navbar-nav mb-md-4">
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Getting started">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" data-template='<div class="tooltip d-none d-md-block" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>' title="Getting started">
           <a class="nav-link @@if(page=='getting-started.html'){active}" href="getting-started.html">
             <i class="fe fe-clipboard"></i> <span class="d-md-none">Getting started</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link @@if(category=='components'){active}" href="components.html" data-toggle="tooltip" data-placement="right" title="Components">
+          <a class="nav-link @@if(category=='components'){active}" href="components.html" data-toggle="tooltip" data-placement="right" data-template='<div class="tooltip d-none d-md-block" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>' title="Components">
             <i class="fe fe-book-open"></i> <span class="d-md-none">Components</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link @@if(page=='changelog.html'){active}" href="changelog.html" data-toggle="tooltip" data-placement="right" title="Changelog">
+          <a class="nav-link @@if(page=='changelog.html'){active}" href="changelog.html" data-toggle="tooltip" data-placement="right" data-template='<div class="tooltip d-none d-md-block" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>' title="Changelog">
             <i class="fe fe-git-branch"></i> <span class="d-md-none">Changelog</span> <span class="badge badge-primary ml-auto d-md-none">v1.3.4</span>
           </a>
         </li>
@@ -277,9 +277,11 @@
       
       @@if (demoMode) {
       <!-- Customize -->
-      <a href="#modalDemo" class="btn btn-block btn-primary mb-4" data-toggle="modal">
-        <i class="fe fe-sliders"></i> <span class="d-md-none ml-2">Customize</span>
-      </a>
+      <div class="mb-4" data-toggle="tooltip" data-placement="right" data-template='<div class="tooltip d-none d-md-block" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>' title="Customize">
+        <a href="#modalDemo" class="btn btn-block btn-primary" data-toggle="modal">
+          <i class="fe fe-sliders"></i> <span class="d-md-none ml-2">Customize</span>
+        </a>
+      </div>
       }
       
       @@if (navPosition == 'sidenav') {

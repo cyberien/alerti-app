@@ -4279,7 +4279,7 @@ a.close.disabled {
     .bs-tooltip-top .arrow::before, .bs-tooltip-auto[x-placement^="top"] .arrow::before {
       top: 0;
       border-width: 0.4rem 0.4rem 0;
-      border-top-color: #12263F; }
+      border-top-color: #152E4D; }
 
 .bs-tooltip-right, .bs-tooltip-auto[x-placement^="right"] {
   padding: 0 0.4rem; }
@@ -4290,7 +4290,7 @@ a.close.disabled {
     .bs-tooltip-right .arrow::before, .bs-tooltip-auto[x-placement^="right"] .arrow::before {
       right: 0;
       border-width: 0.4rem 0.4rem 0.4rem 0;
-      border-right-color: #12263F; }
+      border-right-color: #152E4D; }
 
 .bs-tooltip-bottom, .bs-tooltip-auto[x-placement^="bottom"] {
   padding: 0.4rem 0; }
@@ -4299,7 +4299,7 @@ a.close.disabled {
     .bs-tooltip-bottom .arrow::before, .bs-tooltip-auto[x-placement^="bottom"] .arrow::before {
       bottom: 0;
       border-width: 0 0.4rem 0.4rem;
-      border-bottom-color: #12263F; }
+      border-bottom-color: #152E4D; }
 
 .bs-tooltip-left, .bs-tooltip-auto[x-placement^="left"] {
   padding: 0 0.4rem; }
@@ -4310,14 +4310,14 @@ a.close.disabled {
     .bs-tooltip-left .arrow::before, .bs-tooltip-auto[x-placement^="left"] .arrow::before {
       left: 0;
       border-width: 0.4rem 0 0.4rem 0.4rem;
-      border-left-color: #12263F; }
+      border-left-color: #152E4D; }
 
 .tooltip-inner {
   max-width: 200px;
   padding: 0.25rem 0.5rem;
   color: #FFFFFF;
   text-align: center;
-  background-color: #12263F;
+  background-color: #152E4D;
   border-radius: 0.375rem; }
 
 .popover {
@@ -8598,8 +8598,7 @@ a.text-white:hover, a.text-white:focus {
 
 .navbar-dark {
   background-color: #FFFFFF;
-  border-color: #1E3A5C;
-  border: none; }
+  border-color: #FFFFFF; }
 
 .navbar-dark .navbar-heading {
   color: #6E84A3; }
@@ -8621,11 +8620,22 @@ a.text-white:hover, a.text-white:focus {
 .navbar-dark .navbar-collapse::before {
   border-top-color: #E3EBF6; }
 
+@media (max-width: 767.98px) {
+  .navbar-dark .dropdown-item {
+    color: #6E84A3; }
+    .navbar-dark .dropdown-item:hover, .navbar-dark .dropdown-item:focus {
+      color: #12263F; }
+  .navbar-dark.navbar-vibrant .navbar-nav .show > .nav-link,
+  .navbar-dark .dropdown-item.active,
+  .navbar-dark .dropdown-item:active {
+    color: #12263F; } }
+
 .navbar-dark.navbar-vibrant {
   background-image: linear-gradient(to bottom right, rgba(18, 111, 235, 0.9), rgba(114, 3, 225, 0.9)), url(../img//covers/sidebar-cover.jpg);
   background-repeat: no-repeat, no-repeat;
   background-position: center center, center center;
   background-size: cover, cover;
+  background-origin: border-box;
   border-color: transparent; }
   @media (max-width: 767.98px) {
     .navbar-dark.navbar-vibrant {
@@ -8660,9 +8670,25 @@ a.text-white:hover, a.text-white:focus {
 .navbar-dark.navbar-vibrant .navbar-collapse::before {
   border-top-color: rgba(255, 255, 255, 0.2); }
 
+.navbar-dark.navbar-vibrant .navbar-nav .nav-link.active::before {
+  border-color: #FFFFFF; }
+
+@media (max-width: 767.98px) {
+  .navbar-dark.navbar-vibrant .dropdown-item {
+    color: rgba(255, 255, 255, 0.7); }
+    .navbar-dark.navbar-vibrant .dropdown-item:hover, .navbar-dark.navbar-vibrant .dropdown-item:focus {
+      color: #FFFFFF; }
+  .navbar-dark.navbar-vibrant .navbar-nav .show > .nav-link,
+  .navbar-dark.navbar-vibrant .dropdown-item.active,
+  .navbar-dark.navbar-vibrant .dropdown-item:active {
+    color: #FFFFFF; } }
+
+.navbar-dark.navbar-vibrant .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
+
 .navbar-light {
   background-color: #152E4D;
-  border-color: #12263F; }
+  border-color: #152E4D; }
 
 .navbar-light .navbar-heading {
   color: #6E84A3; }
@@ -8732,6 +8758,10 @@ a.text-white:hover, a.text-white:focus {
 
 .navbar-nav .dropdown-menu .dropdown-menu {
   margin-left: 0.75rem; }
+
+@media (max-width: 767.98px) {
+  .dropdown-menu {
+    background-color: transparent; } }
 
 @media (min-width: 768px) {
   padding-left: 0;

@@ -135,7 +135,7 @@ $navbar-dark-active-color: $black !default;
 $navbar-dark-toggler-border-color: transparent !default;
 
 $navbar-dark-bg: $white !default;
-$navbar-dark-border-color: $border-color !default;
+$navbar-dark-border-color: $white !default;
 $navbar-dark-heading-color: $text-muted !default;
 $navbar-dark-divider-color: $gray-300 !default;
 $navbar-dark-brand-filter: none;
@@ -176,7 +176,7 @@ $card-border-color: $border-color !default;
 
 // Tooltips
 
-$tooltip-bg: $black !default;
+$tooltip-bg: $gray-800-dark !default;
 $tooltip-color: $white !default;
 
 
@@ -239,7 +239,7 @@ $header-body-border-color-dark: $border-color !default;
 // Navbar
 
 $navbar-light-bg: $gray-800-dark !default;
-$navbar-light-border-color: $black-dark !default;
+$navbar-light-border-color: $gray-800-dark !default;
 
 
 // Switch
