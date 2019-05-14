@@ -65,6 +65,8 @@ $theme-colors: map-merge((
 ), $theme-colors);
 // stylelint-enable
 
+$lighter: $gray-900-dark !default;
+
 // Customize the light and dark text colors for use in our YIQ color contrast function.
 $yiq-text-dark: $gray-900 !default;
 $yiq-text-light: $white !default;
@@ -221,7 +223,7 @@ $badge-soft-bg-level: 10 !default;
 
 // Cards
 
-$card-outline-color: transparent !default;
+$card-outline-color: $body-bg !default;
 
 
 // Comment

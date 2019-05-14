@@ -34,7 +34,7 @@
 .form-control-flush {
   padding: 0;
   border-width: 0;
-  background-color: transparent;
+  background-color: transparent !important;
   resize: none;
 
   &:focus {

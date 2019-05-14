@@ -100,7 +100,7 @@ gulp.task('browsersyncReload', function(callback) {
 gulp.task('watch', function() {
   gulp.watch(paths.src.scss.files, gulp.series('scss'));
   gulp.watch([paths.src.js.files, paths.src.img.files], gulp.series('browsersyncReload'));
-  gulp.watch([paths.src.html.files, paths.src.partials.files], gulp.series('fileinclude', 'browsersyncReload'));
+  gulp.watch([paths.src.html.files], gulp.series('fileinclude', 'browsersyncReload'));
 });
 
 gulp.task('scss', function() {

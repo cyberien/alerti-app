@@ -71,6 +71,8 @@ $theme-colors: map-merge((
 ), $theme-colors);
 // stylelint-enable
 
+$lighter: $gray-100 !default;
+
 // Customize the light and dark text colors for use in our YIQ color contrast function.
 $yiq-text-dark: $gray-900 !default;
 $yiq-text-light: $white !default;
@@ -711,3 +713,9 @@ $close-font-size-sm: $font-size-base !default;
 // Kanban
 
 $kanban-col-width: 375px !default;
+
+
+// Components
+
+$box-shadow-lift: 0 1rem 2.5rem fade-out($black, .9), 0 .5rem 1rem -.75rem fade-out($black, .9) !default;
+$box-shadow-lift-lg: 0 2rem 5rem fade-out($black, .9), 0 .5rem 1rem -.75rem fade-out($black, .95) !default;
