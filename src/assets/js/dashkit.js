@@ -496,3 +496,70 @@
   }
 
 })();
+
+
+// Sparkline
+//
+// Sparkline card chart
+
+(function() {
+
+  //
+  // Variables
+  //
+  
+  var charts = document.querySelectorAll('.chart-sparkline > .chart-canvas');
+
+
+  //
+  // Functions
+  //
+
+  function init(chart) {
+    new Chart(chart, {
+      type: 'line',
+      options: {
+        scales: {
+          yAxes: [{
+            display: false
+          }],
+          xAxes: [{
+            display: false
+          }]
+        },
+        elements: {
+          line: {
+            borderWidth: 2,
+            borderColor: '#D2DDEC'
+          },
+          point: {
+            backgroundColor: 'transparent'
+          }
+        },
+        tooltips: {
+          custom: function() {
+            return false;
+          }
+        }
+      },
+      data: {
+        labels: new Array(12),
+        datasets: [{
+          data: [0, 15, 10, 25, 30, 15, 40, 50, 80, 60, 55, 65]
+        }]
+      }
+    });
+  };
+
+
+  //
+  // Events
+  //
+  
+  if (charts) {
+    [].forEach.call(charts, function(el) {
+      init(el);
+    });
+  }
+
+})();

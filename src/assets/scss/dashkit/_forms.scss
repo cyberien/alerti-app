@@ -32,14 +32,11 @@
 // Removes borders and paddings from inputs and text areas
 
 .form-control-flush {
-  padding: 0;
-  border-width: 0;
+  padding-left: 0;
+  padding-right: 0;
+  border-color: transparent !important;
   background-color: transparent !important;
   resize: none;
-
-  &:focus {
-    background-color: transparent;
-  }
 }
 
 
@@ -49,6 +46,8 @@
 
 .form-control-auto {
   height: auto;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 
@@ -223,9 +222,10 @@
 .input-group-flush {
 
   > .form-control {
-    padding: 0;
-    border-width: 0;
-    background-color: transparent;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-color: transparent !important;
+    background-color: transparent !important;
   }
 
   > .input-group-prepend,

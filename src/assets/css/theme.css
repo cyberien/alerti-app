@@ -8249,15 +8249,16 @@ a.text-white:hover, a.text-white:focus {
   box-shadow: none; }
 
 .form-control-flush {
-  padding: 0;
-  border-width: 0;
+  padding-left: 0;
+  padding-right: 0;
+  border-color: transparent !important;
   background-color: transparent !important;
   resize: none; }
-  .form-control-flush:focus {
-    background-color: transparent; }
 
 .form-control-auto {
-  height: auto; }
+  height: auto;
+  padding-top: 0;
+  padding-bottom: 0; }
 
 .form-control-rounded {
   border-radius: 20rem; }
@@ -8353,9 +8354,10 @@ a.text-white:hover, a.text-white:focus {
   border-bottom-right-radius: 20rem; }
 
 .input-group-flush > .form-control {
-  padding: 0;
-  border-width: 0;
-  background-color: transparent; }
+  padding-top: 0;
+  padding-bottom: 0;
+  border-color: transparent !important;
+  background-color: transparent !important; }
 
 .input-group-flush > .input-group-prepend > .input-group-text,
 .input-group-flush > .input-group-append > .input-group-text {
@@ -9440,6 +9442,10 @@ a:focus, button:focus {
 .chart-sm.chart-appended {
   height: calc(225px - 3.71875rem); }
 
+.chart-sparkline {
+  width: 75px;
+  height: 35px; }
+
 .chart-legend {
   display: flex;
   justify-content: center;
@@ -9476,7 +9482,7 @@ a:focus, button:focus {
   display: inline-block;
   padding: 1rem 1.25rem;
   background-color: #F9FBFD;
-  border-radius: 0.375rem; }
+  border-radius: 0.5rem; }
 
 .comment-time {
   display: block;

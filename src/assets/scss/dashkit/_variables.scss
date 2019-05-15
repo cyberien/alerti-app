@@ -580,6 +580,9 @@ $card-header-min-height: 3.75rem !default;
 $chart-height: 300px !default;
 $chart-height-sm: 225px !default;
 
+$chart-sparkline-width: 75px !default;
+$chart-sparkline-height: 35px !default
+
 $chart-legend-margin-top: 2.5rem !default;
 $chart-legend-font-size: $font-size-sm !default;
 $chart-legend-color: $text-muted !default;
@@ -593,7 +596,7 @@ $comment-margin-bottom: 1rem !default;
 $comment-body-padding-y: 1rem !default;
 $comment-body-padding-x: 1.25rem !default;
 $comment-body-bg: $body-bg !default;
-$comment-body-border-radius: $border-radius !default;
+$comment-body-border-radius: $border-radius-lg !default;
 $comment-body-font-size: $font-size-sm !default;
 
 $comment-time-margin-bottom: .5625rem !default;
