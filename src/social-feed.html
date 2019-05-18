@@ -16,24 +16,24 @@
     @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
       @@if (sidebarSize == 'base' || demoMode) {
         @@include("partials/sidebar.html", {
-          "category": "dashboards",
-          "subcategory": "",
-          "page": "index.html"
+          "category": "pages",
+          "subcategory": "feed",
+          "page": "social-feed.html"
         })
       }
       @@if (sidebarSize == 'small' || demoMode) {
         @@include("partials/sidebar-sm.html", {
-          "category": "dashboards",
-          "subcategory": "",
-          "page": "index.html"
+          "category": "pages",
+          "subcategory": "feed",
+          "page": "social-feed.html"
         })
       }
     }
     @@if (navPosition == 'topnav' || demoMode) {
       @@include("partials/topnav.html", {
-        "category": "dashboards",
-        "subcategory": "",
-        "page": "index.html"
+        "category": "pages",
+        "subcategory": "feed",
+        "page": "social-feed.html"
       })
     }
 

@@ -67,7 +67,7 @@
               </li>
               <li class="nav-item">
                 <a href="dashboard-alt.html" class="nav-link @@if(page=='dashboard-alt.html'){active}">
-                  Alternative <span class="badge badge-soft-success ml-auto">New</span>
+                  Alternative
                 </a>
               </li>
             </ul>
@@ -172,13 +172,32 @@
                 </div>
               </li>
               <li class="nav-item">
-                <a href="orders.html" class="nav-link @@if(page=='orders.html'){active}">
-                  Orders
+                <a href="#sidebarFeed" class="nav-link" data-toggle="collapse" role="button" aria-expanded="@@if(subcategory=='feed'){true}@@if(subcategory!=='feed'){false}" aria-controls="sidebarFeed">
+                  Feed
+                </a>
+                <div class="collapse @@if(subcategory=='feed'){show}" id="sidebarFeed">
+                  <ul class="nav nav-sm flex-column">
+                    <li class="nav-item">
+                      <a href="feed.html" class="nav-link @@if(page=='feed.html'){active}">
+                        Platform
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="social-feed.html" class="nav-link @@if(page=='social-feed.html'){active}">
+                        Social <span class="badge badge-soft-success ml-auto">New</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a href="kanban.html" class="nav-link @@if(page=='kanban.html'){active}">
+                  Kanban <span class="badge badge-soft-success ml-auto">New</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="feed.html" class="nav-link @@if(page=='feed.html'){active}">
-                  Feed
+                <a href="orders.html" class="nav-link @@if(page=='orders.html'){active}">
+                  Orders
                 </a>
               </li>
               <li class="nav-item">

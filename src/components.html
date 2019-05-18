@@ -16,24 +16,24 @@
     @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
       @@if (sidebarSize == 'base' || demoMode) {
         @@include("partials/sidebar.html", {
-          "category": "dashboards",
+          "category": "components",
           "subcategory": "",
-          "page": "index.html"
+          "page": "components.html"
         })
       }
       @@if (sidebarSize == 'small' || demoMode) {
         @@include("partials/sidebar-sm.html", {
-          "category": "dashboards",
+          "category": "components",
           "subcategory": "",
-          "page": "index.html"
+          "page": "components.html"
         })
       }
     }
     @@if (navPosition == 'topnav' || demoMode) {
       @@include("partials/topnav.html", {
-        "category": "dashboards",
+        "category": "components",
         "subcategory": "",
-        "page": "index.html"
+        "page": "components.html"
       })
     }
 

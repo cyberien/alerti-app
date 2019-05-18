@@ -596,14 +596,27 @@
                 </a>
               </div>
             </li>
+            <li class="dropright">
+              <a class="dropdown-item dropdown-toggle @@if(subcategory=='feed'){active}" href="#" id="topnavFeed" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Feed
+              </a>
+              <div class="dropdown-menu" aria-labelledby="topnavFeed">
+                <a class="dropdown-item @@if(page=='feed.html'){active}" href="feed.html">
+                  Platform
+                </a>
+                <a class="dropdown-item @@if(page=='social-feed.html'){active}" href="social-feed.html">
+                  Social
+                </a>
+              </div>
+            </li>
             <li>
-              <a class="dropdown-item @@if(page=='orders.html'){active}" href="orders.html">
-                Orders
+              <a class="dropdown-item @@if(page=='kanban.html'){active}" href="kanban.html">
+                Kanban
               </a>
             </li>
             <li>
-              <a class="dropdown-item @@if(page=='feed.html'){active}" href="feed.html">
-                Feed
+              <a class="dropdown-item @@if(page=='orders.html'){active}" href="orders.html">
+                Orders
               </a>
             </li>
             <li>
