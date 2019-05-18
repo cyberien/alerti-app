@@ -22,7 +22,7 @@
     var options = el.dataset.options;
         options = options ? JSON.parse(options) : {};
 
-    $(el).flatpickr(options);
+    flatpickr(el, options);
   }
 
 

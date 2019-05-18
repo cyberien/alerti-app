@@ -74,6 +74,11 @@
         toggleItems(el);
       });
     });
+    [].forEach.call(forms, function(el) {
+      el.addEventListener('submit', function(e) {
+        e.preventDefault();
+      });
+    });
   }
 
 })();
