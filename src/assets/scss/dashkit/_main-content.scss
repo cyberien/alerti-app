@@ -7,8 +7,10 @@
 //
 // General styles
 
-.main-content {
-
+.navbar-vertical:not([style*="display: none"]) ~  .main-content,
+.navbar-vertical-sm:not([style*="display: none"]) ~  .main-content {
+  
+  .container,
   .container-fluid {
 
     @include media-breakpoint-up(md) {
@@ -23,50 +25,38 @@
 //
 // Offsets the main content depending on the sidebar positioning
 
-.navbar-vertical.navbar-expand {
-  
-  @each $breakpoint, $dimension in $grid-breakpoints {
-      
-    &-#{$breakpoint} {
+.navbar-vertical {
         
-      @include media-breakpoint-up(#{$breakpoint}) {
+  @include media-breakpoint-up(md) {
 
-        // Left
+    // Left
 
-        &.fixed-left:not([style*="display: none"]) ~ .main-content {
-          margin-left: $navbar-vertical-width;
-        }
+    &.fixed-left:not([style*="display: none"]) ~ .main-content {
+      margin-left: $navbar-vertical-width;
+    }
 
-        // Right
+    // Right
 
-        &.fixed-right:not([style*="display: none"]) ~ .main-content {
-          margin-right: $navbar-vertical-width;
-        }
-      }
+    &.fixed-right:not([style*="display: none"]) ~ .main-content {
+      margin-right: $navbar-vertical-width;
     }
   }
 }
 
-.navbar-vertical-sm.navbar-expand {
-  
-  @each $breakpoint, $dimension in $grid-breakpoints {
-      
-    &-#{$breakpoint} {
-        
-      @include media-breakpoint-up(#{$breakpoint}) {
+.navbar-vertical-sm {
 
-        // Left
+  @include media-breakpoint-up(md) {
 
-        &.fixed-left:not([style*="display: none"]) ~ .main-content {
-          margin-left: $navbar-vertical-width-sm;
-        }
+    // Left
 
-        // Right
+    &.fixed-left:not([style*="display: none"]) ~ .main-content {
+      margin-left: $navbar-vertical-width-sm;
+    }
 
-        &.fixed-right:not([style*="display: none"]) ~ .main-content {
-          margin-right: $navbar-vertical-width-sm;
-        }
-      }
+    // Right
+
+    &.fixed-right:not([style*="display: none"]) ~ .main-content {
+      margin-right: $navbar-vertical-width-sm;
     }
   }
 }

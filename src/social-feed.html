@@ -39,14 +39,14 @@
 
     <!-- MAIN CONTENT
     ================================================== -->
-    <div class="main-content pt-4 pt-md-5">
+    <div class="main-content">
 
       @@if (navPosition == 'combo' || demoMode) {
         @@include("partials/topbar.html")
       }
 
       <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
-        <div class="row">
+        <div class="row mt-4 mt-md-5">
           <div class="col-12 col-xl-8">
 
             <!-- Card -->
