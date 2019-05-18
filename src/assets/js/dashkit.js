@@ -533,7 +533,7 @@
             borderColor: '#D2DDEC'
           },
           point: {
-            backgroundColor: 'transparent'
+            hoverRadius: 0
           }
         },
         tooltips: {

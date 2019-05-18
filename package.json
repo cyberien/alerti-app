@@ -24,6 +24,7 @@
     "gulp-useref-plus": "0.0.8"
   },
   "dependencies": {
+    "autosize": "^4.0.2",
     "bootstrap": "4.3.1",
     "chart.js": "2.8.0",
     "dragula": "^3.7.2",
