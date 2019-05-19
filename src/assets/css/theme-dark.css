@@ -2634,7 +2634,7 @@ input[type="button"].btn-block {
   vertical-align: top; }
   .custom-control-label::before {
     position: absolute;
-    top: 0.20313rem;
+    top: 0.20312rem;
     left: -1.5rem;
     display: block;
     width: 1rem;
@@ -2645,7 +2645,7 @@ input[type="button"].btn-block {
     border: #B1C2D9 solid 0; }
   .custom-control-label::after {
     position: absolute;
-    top: 0.20313rem;
+    top: 0.20312rem;
     left: -1.5rem;
     display: block;
     width: 1rem;
@@ -2689,7 +2689,7 @@ input[type="button"].btn-block {
     pointer-events: all;
     border-radius: 0.5625rem; }
   .custom-switch .custom-control-label::after {
-    top: calc(0.20313rem + 0);
+    top: calc(0.20312rem + 0);
     left: calc(-3.5rem + 0);
     width: 1.125rem;
     height: 1.125rem;
@@ -3759,7 +3759,7 @@ input[type="button"].btn-block {
   display: flex;
   height: 1rem;
   overflow: hidden;
-  font-size: 0.70313rem;
+  font-size: 0.70312rem;
   background-color: #244166;
   border-radius: 200px; }
 
@@ -8056,7 +8056,7 @@ a.text-white:hover, a.text-white:focus {
 .card {
   margin-bottom: 1.5rem;
   border-color: #152E4D;
-  box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03); }
+  box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.5); }
 
 .card-img-top {
   min-height: 1px; }
@@ -8946,8 +8946,8 @@ a.text-white:hover, a.text-white:focus {
     padding-right: 0.75rem;
     overflow: visible; }
     .navbar-vertical-sm .navbar-brand {
-      padding-top: 0.45313rem;
-      padding-bottom: 1.20313rem; }
+      padding-top: 0.45312rem;
+      padding-bottom: 1.20312rem; }
     .navbar-vertical-sm .navbar-brand-img {
       width: auto;
       max-height: 1.5rem; }
