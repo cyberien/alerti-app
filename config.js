@@ -1,7 +1,7 @@
 module.exports =  {
-  demoMode: true,
+  demoMode: false,
   colorScheme: 'light',
   navPosition: 'sidenav',
   navColor: 'default',
-  sidebarSize: 'base'
+  sidebarSize: 'small'
 }

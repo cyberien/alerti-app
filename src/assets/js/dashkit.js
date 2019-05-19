@@ -563,3 +563,41 @@
   }
 
 })();
+
+
+// Orders select
+//
+// Select all checkboxes
+
+(function() {
+
+  //
+  // Variables
+  //
+
+  var ordersSelect = document.querySelectorAll('[name="ordersSelect"]');
+  var ordersSelectAll = document.getElementById('ordersSelectAll');
+
+
+  //
+  // Funcitons
+  //
+
+  function selectAll(el) {
+    [].forEach.call(ordersSelect, function(checkbox) {
+      checkbox.checked = el.checked;
+    });
+  }
+
+
+  //
+  // Events
+  //
+
+  if (ordersSelect && ordersSelectAll) {
+    ordersSelectAll.addEventListener('change', function() {
+      selectAll(this);
+    });
+  }
+
+})();
