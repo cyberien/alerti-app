@@ -1,5 +1,5 @@
 /**
- * Dashkit v1.3.4
+ * Dashkit v1.4.0
  *
  * Custom variables followed by Dashkit variables followed by Bootstrap variables
  * to ensure cascade of styles.
@@ -8055,7 +8055,7 @@ a.text-white:hover, a.text-white:focus {
 
 .card {
   margin-bottom: 1.5rem;
-  border-color: #12263F;
+  border-color: #152E4D;
   box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03); }
 
 .card-img-top {

@@ -245,15 +245,35 @@
                 </ul>
               </li>
               <li>
-                <code>topbar.html</code>
+                <code>sidebar-sm.html</code>
+                <ul>
+                  <li>
+                    <code>@@category (string)</code> - Parameter for which category of the sidebar should be given an active state.
+                  </li>
+                  <li>
+                    <code>@@subcategory (string)</code> - Parameter for which subcategory of the sidebar should be given an active state.
+                  </li>
+                  <li>
+                    <code>@@page (string)</code> - Parameter for which page of the sidebar should be given an active state.
+                  </li>
+                </ul>
               </li>
               <li>
                 <code>topnav.html</code>
                 <ul>
                   <li>
+                    <code>@@category (string)</code> - Parameter for which category of the topnav should be given an active state.
+                  </li>
+                  <li>
+                    <code>@@subcategory (string)</code> - Parameter for which subcategory of the topnav should be given an active state.
+                  </li>
+                  <li>
                     <code>@@page (string)</code> - Parameter for which page of the topnav should be given an active state.
                   </li>
                 </ul>
+              </li>
+              <li>
+                <code>topbar.html</code>
               </li>
               <li>
                 <code>script.html</code> 
@@ -373,7 +393,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <code class="text-nowrap">sidebarColor</code>
+                    <code class="text-nowrap">navColor</code>
                   </td>
                   <td>
                     String
@@ -382,7 +402,21 @@
                     "default" | "vibrant"
                   </td>
                   <td>
-                    The default sidebar styling. Works with <code>demoMode</code> set to <code>false</code>.
+                    The default navigation styling. Works with <code>demoMode</code> set to <code>false</code>.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <code class="text-nowrap">sidebarSize</code>
+                  </td>
+                  <td>
+                    String
+                  </td>
+                  <td>
+                    "base" | "small"
+                  </td>
+                  <td>
+                    The default sidebar size. Works with <code>demoMode</code> set to <code>false</code>.
                   </td>
                 </tr>
               </tbody>

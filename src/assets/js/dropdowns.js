@@ -49,6 +49,7 @@
 
   [].forEach.call(dropdownSubmenuToggle, function(el) {
     el.addEventListener('click', function(e) {
+      e.preventDefault();
       toggleSubmenu(el);
       e.stopPropagation();
     });

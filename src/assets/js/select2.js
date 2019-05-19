@@ -39,7 +39,9 @@
     var avatar = option.dataset.avatarSrc;
 
     if (avatar) {
-      var content = $('<span class="avatar avatar-xs mr-3"><img class="avatar-img rounded-circle" src="' + avatar + '" alt="' + item.text + '"></span><span>' + item.text + '</span>');
+      var content = document.createElement('div');
+
+      content.innerHTML = '<span class="avatar avatar-xs mr-3"><img class="avatar-img rounded-circle" src="' + avatar + '" alt="' + item.text + '"></span><span>' + item.text + '</span>';
     } else {
       var content = item.text;
     }
