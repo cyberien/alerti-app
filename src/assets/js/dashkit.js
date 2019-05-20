@@ -580,7 +580,7 @@
 
 
   //
-  // Funcitons
+  // Functions
   //
 
   function selectAll(el) {

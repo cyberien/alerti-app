@@ -9571,7 +9571,8 @@ a:focus, button:focus {
   min-height: calc(100vh - 129px - 69px); }
 
 .kanban-container {
-  overflow-x: auto; }
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch; }
 
 .kanban-container > .row {
   flex-wrap: nowrap; }

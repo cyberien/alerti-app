@@ -14,7 +14,9 @@
 }
 
 .kanban-container {
-  overflow-x: auto;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+
 }
 
 .kanban-container > .row {
