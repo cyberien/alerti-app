@@ -508,7 +508,71 @@
   // Variables
   //
   
-  var charts = document.querySelectorAll('.chart-sparkline > .chart-canvas');
+  var chart = document.getElementById('sparklineChart');
+
+
+  //
+  // Functions
+  //
+
+  function init(chart) {
+    new Chart(chart, {
+      type: 'line',
+      options: {
+        scales: {
+          yAxes: [{
+            display: false
+          }],
+          xAxes: [{
+            display: false
+          }]
+        },
+        elements: {
+          line: {
+            borderWidth: 2
+          },
+          point: {
+            hoverRadius: 0
+          }
+        },
+        tooltips: {
+          custom: function() {
+            return false;
+          }
+        }
+      },
+      data: {
+        labels: new Array(12),
+        datasets: [{
+          data: [0, 15, 10, 25, 30, 15, 40, 50, 80, 60, 55, 65]
+        }]
+      }
+    });
+  };
+
+
+  //
+  // Events
+  //
+  
+  if (chart) {
+    init(chart);
+  }
+
+})();
+
+
+// Sparkline
+//
+// Sparkline card charts (gray)
+
+(function() {
+
+  //
+  // Variables
+  //
+  
+  var charts = document.querySelectorAll('#sparklineChartSocialOne, #sparklineChartSocialTwo, #sparklineChartSocialThree, #sparklineChartSocialFour');
 
 
   //

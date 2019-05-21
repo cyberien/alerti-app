@@ -33,18 +33,27 @@
 // Category
 
 .kanban-category {
-  min-height: 1rem; // in case all items have been moved
+  min-height: 1rem;
 }
 
 
 // Item
 
 .kanban-item {
-  touch-action: none;
+  outline: none;
+  user-select: none;
 }
 
-.kanban-item.gu-mirror {
-  opacity: 1;
+.kanban-item.draggable-source--is-dragging {
+  opacity: .2;
+}
+
+.kanban-item.draggable-mirror {
+  z-index: $zindex-fixed;
+}
+
+.card-body .kanban-item.draggable-mirror > .card {
+  transform: rotateZ(-3deg);
 }
 
 

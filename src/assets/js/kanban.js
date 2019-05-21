@@ -12,7 +12,6 @@
   //
 
   var categories = document.querySelectorAll('.kanban-category');
-  var items = document.querySelectorAll('.kanban-item');
   var links = document.querySelectorAll('.kanban-add-link');
   var forms = document.querySelectorAll('.kanban-add-form');
 
@@ -22,13 +21,12 @@
   //
 
   function init(categories) {
-    var arr = [];
-
-    for(var i = 0; i < categories.length; i++) {
-      arr.push(categories[i]);
-    }
-    
-    dragula(arr);
+    new Draggable.Sortable(categories, {
+      draggable: '.kanban-item',
+      mirror: {
+        constrainDimensions: true
+      }
+    });
   }
 
   function toggleItems(el) {
@@ -70,11 +68,13 @@
 
   if (forms) {
     [].forEach.call(forms, function(el) {
+
+      // Reset
       el.addEventListener('reset', function() {
         toggleItems(el);
       });
-    });
-    [].forEach.call(forms, function(el) {
+
+      // Submit
       el.addEventListener('submit', function(e) {
         e.preventDefault();
       });

@@ -121,7 +121,7 @@
 
                   <!-- Title -->
                   <h1 class="header-title">
-                    Autosize <span class="badge badge-soft-primary ml-1 mt-n1">Dashkit only</span>
+                    Autosize <span class="badge badge-soft-primary ml-1 mt-n1">Dashkit only</span> <span class="badge badge-soft-success mt-n1">New</span>
                   </h1>
 
                   <!-- Subtitle -->
@@ -2071,6 +2071,35 @@
 
               <!-- Heading -->
               <h2 class="mb-2">
+                Sparkline
+              </h2>
+              
+              <!-- Subheading -->
+              <p class="text-muted mb-4">
+                A simple little line chart with disabled interactions.
+              </p>
+
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  
+                  <div class="chart chart-sparkline">
+                    <canvas class="chart-canvas"></canvas>
+                  </div>
+
+                </div>
+                <div class="card-body bg-dark">
+                  <code class="highlight html bg-dark">
+                    &lt;div&nbsp;class=&quot;chart&nbsp;chart-sparkline&quot;&nbsp;id=&quot;sparklineChart&quot;&gt;<br/>&nbsp;&nbsp;&lt;canvas&nbsp;class=&quot;chart-canvas&quot;&gt;&lt;/canvas&gt;<br/>&lt;/div&gt;<br/><br/>&lt;script&gt;<br/>&nbsp;&nbsp;new&nbsp;Chart('sparkChart',&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;type:&nbsp;'line',<br/>&nbsp;&nbsp;&nbsp;&nbsp;options:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scales:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;yAxes:&nbsp;[{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;false<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}],<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xAxes:&nbsp;[{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;false<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}]<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elements:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;line:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;borderWidth:&nbsp;2,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;borderColor:&nbsp;'#D2DDEC'<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;point:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hoverRadius:&nbsp;0<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tooltips:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;custom:&nbsp;function()&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;false;<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;&nbsp;&nbsp;},<br/>&nbsp;&nbsp;&nbsp;&nbsp;data:&nbsp;{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;labels:&nbsp;new&nbsp;Array(12),<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;datasets:&nbsp;[{<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data:&nbsp;[0,&nbsp;15,&nbsp;10,&nbsp;25,&nbsp;30,&nbsp;15,&nbsp;40,&nbsp;50,&nbsp;80,&nbsp;60,&nbsp;55,&nbsp;65]<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}]<br/>&nbsp;&nbsp;&nbsp;&nbsp;}<br/>&nbsp;&nbsp;});<br/>&lt;/script&gt;
+                  </code>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <hr class="my-5">
+
+              <!-- Heading -->
+              <h2 class="mb-2">
                 Toggle chart data
               </h2>
               
@@ -3397,7 +3426,7 @@
 
                   <!-- Title -->
                   <h1 class="header-title">
-                    Kanban <span class="badge badge-soft-primary ml-1 mt-n1">Dashkit only</span>
+                    Kanban <span class="badge badge-soft-primary ml-1 mt-n1">Dashkit only</span> <span class="badge badge-soft-success mt-n1">New</span>
                   </h1>
 
                   <!-- Subtitle -->
@@ -3654,7 +3683,7 @@
 
                   <!-- Title -->
                   <h1 class="header-title">
-                    Map <span class="badge badge-soft-primary ml-1 mt-n1">Dashkit only</span>
+                    Map <span class="badge badge-soft-primary ml-1 mt-n1">Dashkit only</span> <span class="badge badge-soft-success mt-n1">New</span>
                   </h1>
 
                   <!-- Subtitle -->
@@ -5380,7 +5409,7 @@
                       <hr>
 
                       <!-- Form -->
-                      <div class="row align-items-center">
+                      <div class="row">
                         <div class="col-auto">
 
                           <!-- Avatar -->
@@ -5392,16 +5421,16 @@
                         <div class="col ml-n2">
 
                           <!-- Input -->
-                          <form>
+                          <form class="mt-1">
                             <label class="sr-only">Leave a comment...</label>
                             <textarea class="form-control form-control-flush" data-toggle="autosize" rows="1" placeholder="Leave a comment"></textarea>
                           </form>
 
                         </div>
-                        <div class="col-auto">
+                        <div class="col-auto align-self-end">
                           
                           <!-- Icons -->
-                          <div class="text-muted">
+                          <div class="text-muted mb-2">
                             <a class="text-reset mr-3" href="#!" data-toggle="tooltip" title="Add photo">
                               <i class="fe fe-camera"></i>
                             </a>
