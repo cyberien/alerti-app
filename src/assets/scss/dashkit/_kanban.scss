@@ -16,7 +16,6 @@
 .kanban-container {
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
-
 }
 
 .kanban-container > .row {
@@ -24,8 +23,6 @@
 }
 
 .kanban-container > .row > [class*="col"] {
-  min-width: $kanban-col-width;
-  width: $kanban-col-width;
   max-width: $kanban-col-width;
 }
 

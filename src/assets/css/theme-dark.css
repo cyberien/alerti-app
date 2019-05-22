@@ -8054,12 +8054,10 @@ a.text-white:hover, a.text-white:focus {
   margin-left: 0; }
 
 .card {
+  display: block;
   margin-bottom: 1.5rem;
   border-color: #152E4D;
   box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.5); }
-
-.card-img-top {
-  min-height: 1px; }
 
 .card-header {
   display: flex;
@@ -9578,8 +9576,6 @@ a:focus, button:focus {
   flex-wrap: nowrap; }
 
 .kanban-container > .row > [class*="col"] {
-  min-width: 375px;
-  width: 375px;
   max-width: 375px; }
 
 .kanban-category {

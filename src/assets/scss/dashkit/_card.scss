@@ -8,13 +8,10 @@
 //
 
 .card {
+  display: block;
   margin-bottom: $spacer;
   border-color: $card-outline-color;
   box-shadow: $card-box-shadow;
-}
-
-.card-img-top {
-  min-height: 1px;
 }
 
 .card-header {
