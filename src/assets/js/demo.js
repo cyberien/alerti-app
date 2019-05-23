@@ -5,6 +5,8 @@
 
 'use strict';
 
+var demoMode = true;
+
 (function() {
 
   //
