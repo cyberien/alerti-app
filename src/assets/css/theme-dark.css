@@ -8764,8 +8764,9 @@ a.text-white:hover, a.text-white:focus {
     background-color: transparent; } }
 
 @media (min-width: 768px) {
-  padding-left: 0;
-  padding-right: 0;
+  .navbar {
+    padding-left: 0;
+    padding-right: 0; }
   .navbar > [class*="container"] {
     padding-left: 0;
     padding-right: 0; }
