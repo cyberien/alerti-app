@@ -78,10 +78,12 @@
   //
 
   if (Chart) {
-    if (!demoMode) {
+    if (typeof demoMode == 'undefined') {
       globalOptions();
-    } else if (demoMode && config.colorScheme == 'dark') {
-      globalOptions();
+    } else {
+      if (demoMode && config.colorScheme == 'dark') {
+        globalOptions();
+      }
     }
   }
 

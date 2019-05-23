@@ -5,9 +5,7 @@
 
 'use strict';
 
-var demoMode = true;
-
-(function() {
+var demoMode = (function() {
 
   //
   // Variables
@@ -232,5 +230,12 @@ var demoMode = true;
       });
     });
   }
+
+
+  //
+  // Return
+  //
+
+  return true;
 
 })();
