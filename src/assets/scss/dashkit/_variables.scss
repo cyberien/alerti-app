@@ -515,6 +515,11 @@ $code-color: $blue !default;
 // Dashkit =====================================
 //
 
+// Paths
+
+$path-to-fonts: '../fonts' !default;
+$path-to-img: '../img' !default;
+
 
 // Type
 
@@ -695,12 +700,6 @@ $navbar-dropdown-toggle-on-hover: true !default;
 // Progress bars
 
 $progress-height-sm: 0.25rem !default;
-
-
-// Paths
-
-$path-to-fonts: '../fonts' !default;
-$path-to-img: '../img/' !default;
 
 
 // Forms
