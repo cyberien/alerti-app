@@ -9,7 +9,7 @@
 //
 
 .navbar {
-  border-width: 0 0 1px 0;
+  border-width: 0 0 $border-width 0;
   border-style: solid;
 }
 
@@ -49,20 +49,30 @@
   border-top-color: $navbar-dark-divider-color;
 }
 
-@include media-breakpoint-down(sm) {
+.navbar-dark.navbar-expand {
 
-  .navbar-dark .dropdown-item {
-    color: $navbar-dark-color;
+  @each $breakpoint, $value in $grid-breakpoints {
+    $prev: breakpoint-prev($breakpoint, $grid-breakpoints);
 
-    @include hover-focus {
-      color: $navbar-dark-hover-color;
+    &-#{$breakpoint} {
+
+      @include media-breakpoint-down(#{$prev}) {
+
+        .navbar-nav .dropdown-item {
+          color: $navbar-dark-color;
+
+          @include hover-focus {
+            color: $navbar-dark-hover-color;
+          }
+        }
+        
+        .navbar-nav .show > .nav-link,
+        .navbar-nav .dropdown-item.active,
+        .navbar-nav .dropdown-item:active {
+          color: $navbar-dark-active-color;
+        }
+      }
     }
-  }
-  
-  .navbar-dark.navbar-vibrant .navbar-nav .show > .nav-link,
-  .navbar-dark .dropdown-item.active,
-  .navbar-dark .dropdown-item:active {
-    color: $navbar-dark-active-color;
   }
 }
 
@@ -127,20 +137,31 @@
   border-color: $white;
 }
 
-@include media-breakpoint-down(sm) {
-  
-  .navbar-dark.navbar-vibrant .dropdown-item {
-    color: $navbar-vibrant-color;
+.navbar-dark.navbar-vibrant.navbar-expand {
 
-    @include hover-focus {
-      color: $navbar-vibrant-hover-color;
+  @each $breakpoint, $value in $grid-breakpoints {
+    $prev: breakpoint-prev($breakpoint, $grid-breakpoints);
+
+    &-#{$breakpoint} {
+
+      @include media-breakpoint-down(#{$prev}) {
+
+        .navbar-nav .dropdown-item {
+          color: $navbar-vibrant-color;
+
+          @include hover-focus {
+            color: $navbar-vibrant-hover-color;
+          }
+        }
+        
+        .navbar-nav .show > .nav-link,
+        .navbar-nav .dropdown-item.active,
+        .navbar-nav .dropdown-item:active {
+          color: $navbar-vibrant-active-color;
+        }
+
+      }
     }
-  }
-  
-  .navbar-dark.navbar-vibrant .navbar-nav .show > .nav-link,
-  .navbar-dark.navbar-vibrant .dropdown-item.active,
-  .navbar-dark.navbar-vibrant .dropdown-item:active {
-    color: $navbar-vibrant-active-color;
   }
 }
 
@@ -208,7 +229,6 @@
 
   // Spacer to replace margin / padding as those
   // cause .navbar-collapse to "jump" when collapsing
-  
   &:before {
     content: '';
     display: block;
@@ -248,7 +268,7 @@
 // Navbar icons
 
 .navbar-nav .nav-link > .fe {
-  min-width: $navbar-icon-min-width; // Note: Test if we actually need this?
+  min-width: $navbar-icon-min-width;
   padding-bottom: .125em;
   font-size: $font-size-lg;
   line-height: ($font-size-base * $line-height-base);
@@ -265,10 +285,21 @@
   margin-left: $dropdown-item-padding-x / 2;
 }
 
-@include media-breakpoint-down(sm) {
-  .dropdown-menu {
-    background-color: transparent;
-  } 
+.navbar-expand {
+
+  @each $breakpoint, $value in $grid-breakpoints {
+    $prev: breakpoint-prev($breakpoint, $grid-breakpoints);
+
+    &-#{$breakpoint} {
+
+      @include media-breakpoint-down(#{$prev}) {
+
+        .navbar-nav .dropdown-menu {
+          background-color: transparent;
+        }
+      }
+    }
+  }
 }
 
 
@@ -276,89 +307,77 @@
 // 
 // Expanded navbar specific styles
         
-@include media-breakpoint-up(md) {
+.navbar-expand {
 
-  .navbar {
-    padding-left: 0;
-    padding-right: 0;
-  }
+  @each $breakpoint, $value in $grid-breakpoints {
 
+    &-#{$breakpoint} {
 
-  // Container
+      @include media-breakpoint-up(#{$breakpoint}) {
+        padding-left: 0;
+        padding-right: 0;
 
-  .navbar > [class*="container"] {
-    padding-left: 0;
-    padding-right: 0;
-  }
+        > [class*="container"] {
+          padding-left: 0;
+          padding-right: 0;
+        }
 
+        .navbar-collapse {
+          flex-grow: inherit;
+          
+          &:before {
+            display: none;
+          }
+        }
 
-  // Navbar collapse
+        .navbar-nav {
+          margin-left: 0;
+          margin-right: 0;
+        }
 
-  .navbar-collapse {
-    flex-grow: inherit;
-    
-    &:before {
-      display: none;
-    }
-  }
+        .navbar-nav .nav-link {
 
+          // Increase $nav-link-padding-y value to align the underline
+          // with the bottom of the navbar
+          padding: .625rem $navbar-nav-link-padding-x;
 
-  // Navbar navigation
+          &.active {
+            position: relative;
 
-  .navbar-nav {
-    margin-left: 0;
-    margin-right: 0;
-  }
+            &:before {
+              top: auto;
+              bottom: calc(-#{$navbar-padding-y} - #{$border-width});
+              right: $navbar-nav-link-padding-x;
+              left: $navbar-nav-link-padding-x;
+              border-left: 0;
+              border-bottom: 1px solid $primary;
+            }
+          }
+        }
 
-  .navbar-nav .nav-link {
+        .dropup, .dropright, .dropdown, .dropleft {
 
-    // Increase $nav-link-padding-y value to align the underline
-    // with the bottom of the navbar
-    
-    padding: .625rem $navbar-nav-link-padding-x;
+          &:hover > .dropdown-menu {
+            display: block;
+          }
+        }
 
-    &.active {
-      position: relative;
+        .navbar-nav .dropdown-menu {
+          border: $dropdown-border-width solid $dropdown-border-color;
+        }
 
-      &:before {
-        top: auto;
-        bottom: calc(-#{$navbar-padding-y} - #{$border-width});
-        right: $navbar-nav-link-padding-x;
-        left: $navbar-nav-link-padding-x;
-        border-left: 0;
-        border-bottom: 1px solid $primary;
+        .navbar-nav .dropdown-menu .dropdown-menu {
+          margin-left: 0;
+        }
       }
     }
   }
-
-
-  // Navbar dropdowns
-
-  .navbar {
-
-    .dropup, .dropright, .dropdown, .dropleft {
-
-      &:hover > .dropdown-menu {
-        display: block;
-      }
-    }
-  }
-
-  .navbar-nav .dropdown-menu {
-    border: $dropdown-border-width solid $dropdown-border-color;
-  }
-
-  .navbar-nav .dropdown-menu .dropdown-menu {
-    margin-left: 0;
-  }
-
 }
 
 
 //
 // Dashkit ===================================
 //
-
 
 // Navbar fixed
 //
@@ -382,7 +401,6 @@
   overflow-x: auto;
 
   // Hide scrollbar
-
   &::-webkit-scrollbar {
     display: none;
   }
@@ -430,7 +448,6 @@
 .navbar-user .dropdown-toggle {
 
   // Remove the default dropdown arrow
-
   &:after {
     display: none;
   }
@@ -451,8 +468,6 @@
 
 .navbar-vertical {
 
-  // Navbar navigation
-
   .navbar-nav .nav-link {
     display: flex;
     align-items: center;
@@ -469,7 +484,6 @@
     }
 
     // Expanded
-
     &[aria-expanded="true"] {
 
       &:after {
@@ -488,9 +502,6 @@
     padding-left: $navbar-padding-x * 1.5 + $navbar-icon-min-width;
   }
 
-
-  // Navbar heading
-
   .navbar-heading {
     padding-top: $nav-link-padding-y;
     padding-bottom: $nav-link-padding-y;
@@ -504,137 +515,122 @@
   // 
   // Expanded navbar specific styles
   
-  @include media-breakpoint-up(md) {
-    display: block;
-    position: fixed;
-    top: 0; bottom: 0;
-    width: 100%;
-    max-width: $navbar-vertical-width;
-    padding-left: $navbar-vertical-padding-x;
-    padding-right: $navbar-vertical-padding-x;
-    overflow-y: auto;
+  &.navbar-expand {
 
-    // Container
+    @each $breakpoint, $value in $grid-breakpoints {
 
-    > [class*="container"] {
-      flex-direction: column;
-      align-items: stretch;
-      min-height: 100%;
-      padding-left: 0;
-      padding-right: 0;
+      &-#{$breakpoint} {
 
-      // Target IE 10 & 11
+        @include media-breakpoint-up(#{$breakpoint}) {
+          display: block;
+          position: fixed;
+          top: 0; bottom: 0;
+          width: 100%;
+          max-width: $navbar-vertical-width;
+          padding-left: $navbar-vertical-padding-x;
+          padding-right: $navbar-vertical-padding-x;
+          overflow-y: auto;
 
-      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-        min-height: none;
-        height: 100%;
-      }
-    }
+          > [class*="container"] {
+            flex-direction: column;
+            align-items: stretch;
+            min-height: 100%;
+            padding-left: 0;
+            padding-right: 0;
 
+            // Target IE 10 & 11
+            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+              min-height: none;
+              height: 100%;
+            }
+          }
 
-    // Fixes the vertical navbar to the left
+          &.fixed-left {
+            left: 0;
+            border-width: 0 1px 0 0;
+          }
 
-    &.fixed-left {
-      left: 0;
-      border-width: 0 1px 0 0;
-    }
+          &.fixed-right {
+            right: 0;
+            border-width: 0 0 0 1px;
+          }
 
+          .navbar-collapse {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            margin-left: -$navbar-vertical-padding-x;
+            margin-right: -$navbar-vertical-padding-x;
+            padding-left: $navbar-vertical-padding-x;
+            padding-right: $navbar-vertical-padding-x;
 
-    // Fixed the vertical navbar to the right
+            > * {
+              min-width: 100%;
+            }
+          }
 
-    &.fixed-right {
-      right: 0;
-      border-width: 0 0 0 1px;
-    }
+          .navbar-nav {
+            flex-direction: column;
+            margin-left: -$navbar-vertical-padding-x;
+            margin-right: -$navbar-vertical-padding-x;
+          }
 
+          .navbar-nav .nav-link {
+            padding: $nav-link-padding-y $navbar-vertical-padding-x;
 
-    // Navbar collapse
+            &.active {
 
-    .navbar-collapse {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
-      margin-left: -$navbar-vertical-padding-x;
-      margin-right: -$navbar-vertical-padding-x;
-      padding-left: $navbar-vertical-padding-x;
-      padding-right: $navbar-vertical-padding-x;
+              &:before {
+                top: $nav-link-padding-y;
+                bottom: $nav-link-padding-y;
+                left: 0; right: auto;
+                border-left: 2px solid $primary;
+                border-bottom: 0;
+              }
+            }
+          }
 
-      > * {
-        min-width: 100%;
-      }
-    }
+          // Second level
+          .navbar-nav .nav .nav-link {
+            padding-left: $navbar-vertical-padding-x + $navbar-icon-min-width;
+          }
 
+          // Third level
+          .navbar-nav .nav .nav .nav-link {
+            padding-left: $navbar-vertical-padding-x * 1.5 + $navbar-icon-min-width;
+          }
 
-    // Navbar navigation
+          .navbar-brand {
+            display: block;
+            text-align: center;
+            padding-top: (2rem - $navbar-padding-y);
+            padding-bottom: (2rem - $navbar-padding-y);
+          }
 
-    .navbar-nav {
-      flex-direction: column;
-      margin-left: -$navbar-vertical-padding-x;
-      margin-right: -$navbar-vertical-padding-x;
-    }
+          .navbar-brand-img {
+            max-height: 3rem;
+          }
 
-    .navbar-nav .nav-link {
-      padding: $nav-link-padding-y $navbar-vertical-padding-x;
+          .navbar-user {
+            margin-left: -$navbar-vertical-padding-x;
+            margin-right: -$navbar-vertical-padding-x;
+            padding-top: $spacer;
+            padding-bottom: $spacer - $navbar-padding-y;
+            padding-left: $navbar-vertical-padding-x;
+            padding-right: $navbar-vertical-padding-x;
+            border-top-width: 1px;
+            border-top-style: solid;
 
-      &.active {
-
-        &:before {
-          top: $nav-link-padding-y;
-          bottom: $nav-link-padding-y;
-          left: 0; right: auto;
-          border-left: 2px solid $primary;
-          border-bottom: 0;
+            .dropup .dropdown-menu {
+              left: 50%;
+              transform: translateX(-50%);
+            }
+          }
         }
       }
     }
-
-    // Second level
-    .navbar-nav .nav .nav-link {
-      padding-left: $navbar-vertical-padding-x + $navbar-icon-min-width;
-    }
-
-    // Third level
-    .navbar-nav .nav .nav .nav-link {
-      padding-left: $navbar-vertical-padding-x * 1.5 + $navbar-icon-min-width;
-    }
-
-
-    // Navbar brand
-
-    .navbar-brand {
-      display: block;
-      text-align: center;
-      padding-top: (2rem - $navbar-padding-y);
-      padding-bottom: (2rem - $navbar-padding-y);
-    }
-
-    .navbar-brand-img {
-      max-height: 3rem;
-    }
-
-
-    // Navbar user
-
-    .navbar-user {
-      margin-left: -$navbar-vertical-padding-x;
-      margin-right: -$navbar-vertical-padding-x;
-      padding-top: $spacer;
-      padding-bottom: $spacer - $navbar-padding-y;
-      padding-left: $navbar-vertical-padding-x;
-      padding-right: $navbar-vertical-padding-x;
-      border-top-width: 1px;
-      border-top-style: solid;
-
-      // Dropup menu
-
-      .dropup .dropdown-menu {
-        left: 50%;
-        transform: translateX(-50%);
-      }
-    }
   }
-
 }
 
 
@@ -648,59 +644,67 @@
   // 
   // Expanded navbar specific styles
   
-  @include media-breakpoint-up(md) {
-    max-width: $navbar-vertical-width-sm;
-    padding-left: $navbar-vertical-padding-x-sm;
-    padding-right: $navbar-vertical-padding-x-sm;
-    overflow: visible;
+  &.navbar-expand {
 
-    .navbar-brand {
-      padding-top: ($nav-link-padding-y * 2 + $font-size-base * $line-height-base) / 2 - $navbar-padding-y;
-      padding-bottom: ($nav-link-padding-y * 2 + $font-size-base * $line-height-base) / 2;
-    }
+    @each $breakpoint, $value in $grid-breakpoints {
 
-    .navbar-brand-img {
-      width: auto;
-      max-height: 1.5rem;
-    }
+      &-#{$breakpoint} {
 
-    .navbar-collapse {
-      margin-left: -$navbar-vertical-padding-x-sm;
-      margin-right: -$navbar-vertical-padding-x-sm;
-      padding-left: $navbar-vertical-padding-x-sm;
-      padding-right: $navbar-vertical-padding-x-sm;
-    }
+        @include media-breakpoint-up(#{$breakpoint}) {
+          max-width: $navbar-vertical-width-sm;
+          padding-left: $navbar-vertical-padding-x-sm;
+          padding-right: $navbar-vertical-padding-x-sm;
+          overflow: visible;
 
-    .navbar-nav {
-      margin-left: -$navbar-vertical-padding-x-sm;
-      margin-right: -$navbar-vertical-padding-x-sm;
-    }
+          .navbar-brand {
+            padding-top: ($nav-link-padding-y * 2 + $font-size-base * $line-height-base) / 2 - $navbar-padding-y;
+            padding-bottom: ($nav-link-padding-y * 2 + $font-size-base * $line-height-base) / 2;
+          }
 
-    .navbar-nav > .nav-item > .nav-link {
-      justify-content: center;
-      padding-left: $navbar-vertical-padding-x-sm;
-      padding-right: $navbar-vertical-padding-x-sm;
-      text-align: center;
-    }
+          .navbar-brand-img {
+            width: auto;
+            max-height: 1.5rem;
+          }
 
-    .navbar-nav > .nav-item > .dropdown-toggle {
+          .navbar-collapse {
+            margin-left: -$navbar-vertical-padding-x-sm;
+            margin-right: -$navbar-vertical-padding-x-sm;
+            padding-left: $navbar-vertical-padding-x-sm;
+            padding-right: $navbar-vertical-padding-x-sm;
+          }
 
-      &::after {
-        display: none;
+          .navbar-nav {
+            margin-left: -$navbar-vertical-padding-x-sm;
+            margin-right: -$navbar-vertical-padding-x-sm;
+          }
+
+          .navbar-nav > .nav-item > .nav-link {
+            justify-content: center;
+            padding-left: $navbar-vertical-padding-x-sm;
+            padding-right: $navbar-vertical-padding-x-sm;
+            text-align: center;
+          }
+
+          .navbar-nav > .nav-item > .dropdown-toggle {
+
+            &::after {
+              display: none;
+            }
+          }
+
+          .navbar-user {
+            margin-left: -$navbar-vertical-padding-x-sm;
+            margin-right: -$navbar-vertical-padding-x-sm;
+            padding-left: $navbar-vertical-padding-x-sm;
+            padding-right: $navbar-vertical-padding-x-sm;
+          }
+
+          .navbar-user .dropright .dropdown-menu {
+            top: auto;
+            bottom: 0;
+          }
+        }
       }
     }
-
-    .navbar-user {
-      margin-left: -$navbar-vertical-padding-x-sm;
-      margin-right: -$navbar-vertical-padding-x-sm;
-      padding-left: $navbar-vertical-padding-x-sm;
-      padding-right: $navbar-vertical-padding-x-sm;
-    }
-
-    .navbar-user .dropright .dropdown-menu {
-      top: auto;
-      bottom: 0;
-    }
   }
-
 }
