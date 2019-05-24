@@ -354,11 +354,17 @@
             }
           }
         }
+        
+        // Toggle dropdown on hover
+        @if ($navbar-dropdown-toggle-on-hover) {
+          .dropup, .dropright, .dropdown, .dropleft {
 
-        .dropup, .dropright, .dropdown, .dropleft {
+            @include hover {
 
-          &:hover > .dropdown-menu {
-            display: block;
+              > .dropdown-menu {
+                display: block;
+              }
+            }
           }
         }
 
