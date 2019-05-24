@@ -77,7 +77,7 @@
   // Events
   //
 
-  if (Chart) {
+  if (typeof Chart !== 'undefined') {
     if (typeof demoMode == 'undefined') {
       globalOptions();
     } else {

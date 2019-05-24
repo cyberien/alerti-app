@@ -27,7 +27,7 @@
   // Events
   //
 
-  if (highlight) {
+  if (typeof hljs !== 'undefined' && highlight) {
     [].forEach.call(highlight, function(el) {
       init(el);
     });

@@ -353,31 +353,36 @@
   // Events
   //
 
-  if (Chart) {
+  if (typeof Chart !== 'undefined') {
+
+    // Global options
     globalOptions();
-  }
 
-  if (toggle) {
-    [].forEach.call(toggle, function(el) {
-      el.addEventListener('change', function() {
-        if (el.dataset.add) {
-          toggleOptions(el);
-        }
+    // Toggle chart
+    if (toggle) {
+      [].forEach.call(toggle, function(el) {
+        el.addEventListener('change', function() {
+          if (el.dataset.add) {
+            toggleOptions(el);
+          }
+        });
+        el.addEventListener('click', function() {
+          if (el.dataset.update) {
+            updateOptions(el);
+          }
+        });
       });
-      el.addEventListener('click', function() {
-        if (el.dataset.update) {
-          updateOptions(el);
-        }
-      });
-    });
-  }
+    }
 
-  if (legend) {
-    document.addEventListener('DOMContentLoaded', function() {
-      [].forEach.call(legend, function(el) {
-        toggleLegend(el);
+    // Toggle lenegd
+    if (legend) {
+      document.addEventListener('DOMContentLoaded', function() {
+        [].forEach.call(legend, function(el) {
+          toggleLegend(el);
+        });
       });
-    });
+    }
+    
   }
 
 })();

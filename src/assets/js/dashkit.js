@@ -74,7 +74,7 @@
   // Events
   //
   
-  if (chart) {
+  if (typeof Chart !== 'undefined' && chart) {
     init(chart);
   }
 
@@ -145,7 +145,7 @@
   // Events
   //
 
-  if (chart) {
+  if (typeof Chart !== 'undefined' && chart) {
     init(chart);
   }
 
@@ -216,7 +216,7 @@
   // Events
   //
 
-  if (chart) {
+  if (typeof Chart !== 'undefined' && chart) {
     init(chart);
   }
 
@@ -287,7 +287,7 @@
   // Events
   //
 
-  if (chart) {
+  if (typeof Chart !== 'undefined' && chart) {
     init(chart);
   }
   
@@ -358,7 +358,7 @@
   // Events
   //
 
-  if (chart) {
+  if (typeof Chart !== 'undefined' && chart) {
     init(chart);
   }
   
@@ -421,7 +421,7 @@
   // Events
   //
 
-  if (chart) {
+  if (typeof Chart !== 'undefined' && chart) {
     init(chart);
   }
 
@@ -491,7 +491,7 @@
   // Events
   //
 
-  if (chart) {
+  if (typeof Chart !== 'undefined' && chart) {
     init(chart);
   }
 
@@ -555,7 +555,7 @@
   // Events
   //
   
-  if (chart) {
+  if (typeof Chart !== 'undefined' && chart) {
     init(chart);
   }
 
@@ -620,7 +620,7 @@
   // Events
   //
   
-  if (charts) {
+  if (typeof Chart !== 'undefined' && charts) {
     [].forEach.call(charts, function(el) {
       init(el);
     });

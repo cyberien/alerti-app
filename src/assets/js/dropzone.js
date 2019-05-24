@@ -11,7 +11,7 @@
   // Variables
   //
 
-  var dropzone = document.querySelectorAll('[data-toggle="dropzone"]');
+  var toggle = document.querySelectorAll('[data-toggle="dropzone"]');
 
 
   //
@@ -55,12 +55,10 @@
   // Events
   //
 
-  if (Dropzone) {
+  if (typeof Dropzone !== 'undefined' && toggle) {
     globalOptions();
-  }
 
-  if (dropzone) {
-    [].forEach.call(dropzone, function(el) {
+    [].forEach.call(toggle, function(el) {
       init(el);
     });
   }

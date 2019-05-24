@@ -31,18 +31,21 @@
   // Events
   //
 
-  if (toggle) {
-    [].forEach.call(toggle, function(el) {
-      init(el);
-    });
-  }
+  if (typeof List !== 'undefined') {
 
-  if (toggleSort) {
-    [].forEach.call(toggleSort, function(el) {
-      el.addEventListener('click', function(e) {
-        e.preventDefault();
+    if (toggle) {
+      [].forEach.call(toggle, function(el) {
+        init(el);
       });
-    });
+    }
+
+    if (toggleSort) {
+      [].forEach.call(toggleSort, function(el) {
+        el.addEventListener('click', function(e) {
+          e.preventDefault();
+        });
+      });
+    }
   }
 
 })();

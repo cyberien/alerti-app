@@ -47,13 +47,15 @@
   // Events
   //
 
-  [].forEach.call(dropdownSubmenuToggle, function(el) {
-    el.addEventListener('click', function(e) {
-      e.preventDefault();
-      toggleSubmenu(el);
-      e.stopPropagation();
+  if (dropdownSubmenuToggle) {
+    [].forEach.call(dropdownSubmenuToggle, function(el) {
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        toggleSubmenu(el);
+        e.stopPropagation();
+      });
     });
-  });
+  }
 
   $(dropdown).on('hide.bs.dropdown', function() {
     hideSubmenu(this);

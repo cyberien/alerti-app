@@ -30,7 +30,7 @@
   // Events
   //
 
-  if (toggle) {
+  if (typeof flatpickr !== 'undefined' && toggle) {
     [].forEach.call(toggle, function(el) {
       init(el);
     });

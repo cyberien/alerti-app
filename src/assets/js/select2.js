@@ -54,7 +54,7 @@
   // Events
   //
 
-  if (toggle) {
+  if (jQuery().select2 && toggle) {
     [].forEach.call(toggle, function(el) {
       init(el);
     });

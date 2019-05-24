@@ -54,7 +54,7 @@
   // Events
   //
 
-  if (categories) {
+  if (typeof Draggable !== 'undefined' && categories) {
     init(categories);
   }
 

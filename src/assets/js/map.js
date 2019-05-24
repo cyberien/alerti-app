@@ -40,7 +40,7 @@
   // Events
   //
 
-  if (map) {
+  if (typeof mapboxgl !== 'undefined' && map) {
     [].forEach.call(map, function(el) {
       init(el);
     });

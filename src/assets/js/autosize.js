@@ -27,7 +27,7 @@
   // Event
   //
 
-  if (toggle) {
+  if (typeof autosize !== 'undefined' && toggle) {
     [].forEach.call(toggle, function(el) {
       init(el);
     });

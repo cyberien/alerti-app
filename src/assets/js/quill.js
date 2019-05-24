@@ -37,7 +37,7 @@
   // Events
   //
 
-  if (toggle) {
+  if (typeof Quill !== 'undefined' && toggle) {
     [].forEach.call(toggle, function(el) {
       init(el);
     });
