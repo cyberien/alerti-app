@@ -518,8 +518,6 @@ $code-color: $blue !default;
 
 // Type
 
-$font-path: '../fonts/cerebrisans' !default;
-
 $font-size-xs: ($font-size-base * .6666666667) !default; // 10px
 
 $headings-letter-spacing: -.02em !default;
@@ -699,6 +697,7 @@ $progress-height-sm: 0.25rem !default;
 
 // Paths
 
+$path-to-fonts: '../fonts' !default;
 $path-to-img: '../img/' !default;
 
 
