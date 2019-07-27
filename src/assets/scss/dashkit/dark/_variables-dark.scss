@@ -59,6 +59,12 @@ $table-border-color: $border-color !default;
 
 $table-head-bg: $black-dark !default;
 
+$table-accent-bg: $gray-700-dark !default;
+$table-active-bg: $gray-700-dark !default;
+
+$table-bg-level: 0 !default;
+$table-border-level: 0 !default;
+
 
 // Forms
 
@@ -204,8 +210,3 @@ $navbar-light-border-color: $gray-800-dark !default;
 
 $custom-switch-indicator-bg: $gray-800-dark !default;
 $custom-switch-indicator-active-bg: $white !default;
-
-
-// Tables
-
-$table-accent-bg: $gray-700-dark !default;
