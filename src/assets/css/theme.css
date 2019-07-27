@@ -8019,6 +8019,17 @@ a.text-white:hover, a.text-white:focus {
 .breadcrumb-sm {
   font-size: 0.8125rem; }
 
+.breadcrumb-overflow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto; }
+  .breadcrumb-overflow::-webkit-scrollbar {
+    display: none; }
+
+.breadcrumb-overflow .breadcrumb-item {
+  white-space: nowrap; }
+
 .btn-white {
   border-color: #E3EBF6; }
   .btn-white:hover, .btn-white:focus {

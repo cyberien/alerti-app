@@ -1073,7 +1073,7 @@ pre {
   border: 0; }
 
 .table-striped tbody tr:nth-of-type(odd) {
-  background-color: #F9FBFD; }
+  background-color: #1E3A5C; }
 
 .table-hover tbody tr:hover {
   color: #FFFFFF;
@@ -8018,6 +8018,17 @@ a.text-white:hover, a.text-white:focus {
 
 .breadcrumb-sm {
   font-size: 0.8125rem; }
+
+.breadcrumb-overflow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto; }
+  .breadcrumb-overflow::-webkit-scrollbar {
+    display: none; }
+
+.breadcrumb-overflow .breadcrumb-item {
+  white-space: nowrap; }
 
 .btn-white {
   border-color: #E3EBF6; }
