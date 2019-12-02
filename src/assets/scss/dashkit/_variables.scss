@@ -218,11 +218,14 @@ $table-cell-padding-sm: .9375rem !default;
 
 $table-accent-bg: $gray-100 !default;
 $table-hover-bg: $gray-100 !default;
+$table-active-bg: $gray-100 !default;
 
 $table-border-color: $gray-200 !default;
 
 $table-head-bg: $gray-100 !default;
 $table-head-color: $text-muted !default;
+
+$table-striped-order: even !default;
 
 
 // Buttons + Forms

@@ -55,14 +55,13 @@ $text-muted: $gray-700 !default;
 //
 // Customizes the `.table` component with basic values, each used across all table variations.
 
-$table-hover-bg: $gray-900-dark !default;
-
 $table-border-color: $border-color !default;
 
 $table-head-bg: $black-dark !default;
 
-$table-accent-bg: $gray-700-dark !default;
-$table-active-bg: $gray-700-dark !default;
+$table-accent-bg: $gray-900-dark !default;
+$table-hover-bg: $gray-900-dark !default;
+$table-active-bg: $gray-900-dark !default;
 
 $table-bg-level: 0 !default;
 $table-border-level: 0 !default;
@@ -153,7 +152,8 @@ $popover-border-color: $black !default;
 
 // Toasts
 
-$toast-background-color: $gray-800-dark !default;;
+$toast-background-color: $gray-800-dark !default;
+;
 
 
 // Modals
