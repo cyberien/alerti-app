@@ -32,7 +32,6 @@ var demoMode = (function() {
     sidebarSize: (localStorage.getItem('dashkitSidebarSize')) ? localStorage.getItem('dashkitSidebarSize') : 'base'
   }
 
-
   //
   // Functions
   //
@@ -102,7 +101,7 @@ var demoMode = (function() {
   }
 
   function toggleNavColor(navColor) {
-    
+
     if (sidebar && sidebarSmall && topnav) {
 
       if (navColor == 'default') {
@@ -185,7 +184,6 @@ var demoMode = (function() {
     node.setAttribute('style', 'display: none !important');
   }
 
-
   //
   // Event
   //
@@ -230,7 +228,6 @@ var demoMode = (function() {
       });
     });
   }
-
 
   //
   // Return

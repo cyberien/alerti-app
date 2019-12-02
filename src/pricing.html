@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     @@include("partials/head.html", {
-      "title": "Dashkit"
+    "title": "Dashkit"
     })
   </head>
   <body>
@@ -14,27 +14,27 @@
     <!-- NAVIGATION
     ================================================== -->
     @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
-      @@if (sidebarSize == 'base' || demoMode) {
-        @@include("partials/sidebar.html", {
-          "category": "pages",
-          "subcategory": "",
-          "page": "pricing.html"
-        })
-      }
-      @@if (sidebarSize == 'small' || demoMode) {
-        @@include("partials/sidebar-sm.html", {
-          "category": "pages",
-          "subcategory": "",
-          "page": "pricing.html"
-        })
-      }
+    @@if (sidebarSize == 'base' || demoMode) {
+    @@include("partials/sidebar.html", {
+    "category": "pages",
+    "subcategory": "",
+    "page": "pricing.html"
+    })
+    }
+    @@if (sidebarSize == 'small' || demoMode) {
+    @@include("partials/sidebar-sm.html", {
+    "category": "pages",
+    "subcategory": "",
+    "page": "pricing.html"
+    })
+    }
     }
     @@if (navPosition == 'topnav' || demoMode) {
-      @@include("partials/topnav.html", {
-        "category": "pages",
-        "subcategory": "",
-        "page": "pricing.html"
-      })
+    @@include("partials/topnav.html", {
+    "category": "pages",
+    "subcategory": "",
+    "page": "pricing.html"
+    })
     }
 
     <!-- MAIN CONTENT
@@ -42,7 +42,7 @@
     <div class="main-content">
 
       @@if (navPosition == 'combo' || demoMode) {
-        @@include("partials/topbar.html")
+      @@include("partials/topbar.html")
       }
 
       <!-- HEADER -->
@@ -50,12 +50,12 @@
         <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
           <div class="row justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-6">
-              
+
               <!-- Title -->
               <h1 class="display-3 text-center text-white">
                 Plans & Pricing
               </h1>
-              
+
               <!-- Text -->
               <p class="lead text-center text-muted">
                 We have plans and prices that fit your business perfectly. Make your client site a success with our products.
@@ -70,16 +70,16 @@
       <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
         <div class="row mt-n7">
           <div class="col-12 col-lg-4">
-            
+
             <!-- Card -->
             <div class="card">
               <div class="card-body">
-                
+
                 <!-- Title -->
                 <h6 class="text-uppercase text-center text-muted my-4">
                   Basic plan
                 </h6>
-                
+
                 <!-- Price -->
                 <div class="row no-gutters align-items-center justify-content-center">
                   <div class="col-auto">
@@ -89,7 +89,7 @@
                     <div class="display-2 mb-0">19</div>
                   </div>
                 </div> <!-- / .row -->
-                
+
                 <!-- Period -->
                 <div class="h6 text-uppercase text-center text-muted mb-5">
                   / month
@@ -123,16 +123,16 @@
 
           </div>
           <div class="col-12 col-lg-4">
-            
+
             <!-- Card -->
             <div class="card">
               <div class="card-body">
-                
+
                 <!-- Title -->
                 <h6 class="text-uppercase text-center text-muted my-4">
                   Standard plan
                 </h6>
-                
+
                 <!-- Price -->
                 <div class="row no-gutters align-items-center justify-content-center">
                   <div class="col-auto">
@@ -142,7 +142,7 @@
                     <div class="display-2 mb-0">29</div>
                   </div>
                 </div> <!-- / .row -->
-                
+
                 <!-- Period -->
                 <div class="h6 text-uppercase text-center text-muted mb-5">
                   / month
@@ -176,16 +176,16 @@
 
           </div>
           <div class="col-12 col-lg-4">
-            
+
             <!-- Card -->
             <div class="card">
               <div class="card-body">
-                
+
                 <!-- Title -->
                 <h6 class="text-uppercase text-center text-muted my-4">
                   Enterprise plan
                 </h6>
-                
+
                 <!-- Price -->
                 <div class="row no-gutters align-items-center justify-content-center">
                   <div class="col-auto">
@@ -195,7 +195,7 @@
                     <div class="display-2 mb-0">99</div>
                   </div>
                 </div> <!-- / .row -->
-                
+
                 <!-- Period -->
                 <div class="h6 text-uppercase text-center text-muted mb-5">
                   / month
@@ -231,7 +231,7 @@
         </div> <!-- / .row -->
         <div class="row">
           <div class="col-12 col-md-6">
-            
+
             <!-- Card -->
             <div class="card card-inactive">
               <div class="card-body">
@@ -252,13 +252,13 @@
                     Contact us
                   </a>
                 </div>
-                
+
               </div>
             </div>
 
           </div>
           <div class="col-12 col-md-6">
-            
+
             <!-- Card -->
             <div class="card card-inactive">
               <div class="card-body">
@@ -279,7 +279,7 @@
                     Build it
                   </a>
                 </div>
-                
+
               </div>
             </div>
 

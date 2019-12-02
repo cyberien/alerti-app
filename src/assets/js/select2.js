@@ -13,19 +13,22 @@
 
   var toggle = document.querySelectorAll('[data-toggle="select"]');
 
-
   //
   // Functions
   //
 
   function init(el) {
     var elementOptions = el.dataset.options;
-        elementOptions = elementOptions ? JSON.parse(elementOptions) : {};
+    elementOptions = elementOptions ? JSON.parse(elementOptions) : {};
+
     var defaultOptions = {
-      dropdownParent: $(el).closest('.modal').length ? $(el).closest('.modal') : $(document.body),
+      containerCssClass: el.getAttribute('class'),
+      dropdownCssClass: 'dropdown-menu show',
+      dropdownParent: el.closest('.modal') ? el.closest('.modal') : document.body,
       templateResult: formatTemplate
     };
-    var options = Object.assign(elementOptions, defaultOptions);
+
+    var options = Object.assign(defaultOptions, elementOptions);
 
     $(el).select2(options);
   }
@@ -49,7 +52,6 @@
     return content;
   }
 
-
   //
   // Events
   //
@@ -59,5 +61,5 @@
       init(el);
     });
   }
-  
+
 })();
