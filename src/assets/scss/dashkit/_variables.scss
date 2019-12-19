@@ -457,7 +457,8 @@ $modal-inner-padding: 1.5rem !default;
 
 $modal-content-border-color: transparent !default;
 
-$modal-header-padding: 1.5rem !default;
+$modal-header-padding-y: 1rem !default;
+$modal-header-padding: $modal-header-padding-y $modal-inner-padding !default;
 $modal-header-border-color: $border-color !default;
 $modal-footer-border-color: $border-color !default;
 
