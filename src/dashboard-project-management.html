@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include("partials/head.html", {
+    "title": "Dashkit"
+    })
+  </head>
+  <body>
+
+    <!-- MODALS
+    ================================================== -->
+    @@include("partials/modals.html")
+
+    <!-- NAVIGATION
+    ================================================== -->
+    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
+    @@if (sidebarSize == 'base' || demoMode) {
+    @@include("partials/sidebar.html", {
+    "category": "dashboards",
+    "subcategory": "",
+    "page": "index.html"
+    })
+    }
+    @@if (sidebarSize == 'small' || demoMode) {
+    @@include("partials/sidebar-sm.html", {
+    "category": "dashboards",
+    "subcategory": "",
+    "page": "index.html"
+    })
+    }
+    }
+    @@if (navPosition == 'topnav' || demoMode) {
+    @@include("partials/topnav.html", {
+    "category": "dashboards",
+    "subcategory": "",
+    "page": "index.html"
+    })
+    }
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content">
+
+      @@if (navPosition == 'combo' || demoMode) {
+      @@include("partials/topbar.html")
+      }
+
+      <!-- CARDS -->
+      <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
+        <div class="row">
+          <div class="col-12 col-lg-8">
+
+            <!-- Projects -->
+            <div class="card">
+              <div class="card-header">
+                <div class="row align-items-center">
+                  <div class="col">
+
+                    <!-- Title -->
+                    <h4 class="card-header-title">
+                      Scratchpad Checklist
+                    </h4>
+
+                  </div>
+                  <div class="col-auto">
+
+                    <!-- Badge -->
+                    <span class="badge badge-soft-secondary">
+                      23 Complete Items
+                    </span>
+
+                  </div>
+                </div> <!-- / .row -->
+              </div>
+              <div class="card-body">
+
+                <!-- Checklist -->
+                <div class="checklist">
+                  <div class="custom-control custom-checkbox checklist-control">
+                    <input class="custom-control-input" id="checklistOne" type="checkbox">
+                    <label class="custom-control-label" for="checklistOne"></label>
+                    <span class="custom-control-caption">
+                      Create the release notes for the new pages so customers are warned.
+                    </span>
+                  </div>
+                  <div class="custom-control custom-checkbox checklist-control">
+                    <input class="custom-control-input" id="checklistTwo" type="checkbox">
+                    <label class="custom-control-label" for="checklistTwo"></label>
+                    <span class="custom-control-caption">
+                      Delete the old mess in functions files.
+                    </span>
+                  </div>
+                  <div class="custom-control custom-checkbox checklist-control">
+                    <input class="custom-control-input" id="checklistThree" type="checkbox">
+                    <label class="custom-control-label" for="checklistThree"></label>
+                    <span class="custom-control-caption">
+                      Create the release notes for the new pages so customers are warned.
+                    </span>
+                  </div>
+                  <div class="custom-control custom-checkbox checklist-control">
+                    <input class="custom-control-input" id="checklistFour" type="checkbox">
+                    <label class="custom-control-label" for="checklistFour"></label>
+                    <span class="custom-control-caption">
+                      Delete the old mess in functions files.
+                    </span>
+                  </div>
+                  <div class="custom-control custom-checkbox checklist-control">
+                    <input class="custom-control-input" id="checklistFive" type="checkbox">
+                    <label class="custom-control-label" for="checklistFive"></label>
+                    <span class="custom-control-caption">
+                      Create the release notes for the new pages so customers are warned.
+                    </span>
+                  </div>
+                  <div class="custom-control custom-checkbox checklist-control">
+                    <input class="custom-control-input" id="checklistSix" type="checkbox">
+                    <label class="custom-control-label" for="checklistSix"></label>
+                    <span class="custom-control-caption">
+                      Delete the old mess in functions files.
+                    </span>
+                  </div>
+                  <div class="custom-control custom-checkbox checklist-control">
+                    <input class="custom-control-input" id="checklistSeven" type="checkbox">
+                    <label class="custom-control-label" for="checklistSeven"></label>
+                    <span class="custom-control-caption">
+                      Create the release notes for the new pages so customers are warned.
+                    </span>
+                  </div>
+                </div>
+
+              </div> <!-- / .card-body -->
+              <div class="card-footer">
+                <div class="row align-items-center">
+                  <div class="col">
+
+                    <!-- Input -->
+                    <input class="form-control form-control-flush" type="text" placeholder="Create a task">
+
+                  </div>
+                  <div class="col-auto">
+
+                    <!-- Button -->
+                    <button class="btn btn-sm btn-primary">
+                      Add
+                    </button>
+
+                  </div>
+                </div> <!-- / .row -->
+              </div> <!-- / .card-footer -->
+            </div> <!-- / .card -->
+
+          </div>
+        </div> <!-- / .row -->
+      </div>
+
+    </div> <!-- / .main-content -->
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("partials/scripts.html")
+
+  </body>
+</html>

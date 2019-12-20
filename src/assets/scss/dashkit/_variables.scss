@@ -730,3 +730,9 @@ $kanban-col-width: 375px !default;
 
 $box-shadow-lift: 0 1rem 2.5rem fade-out($black, .9), 0 .5rem 1rem -.75rem fade-out($black, .9) !default;
 $box-shadow-lift-lg: 0 2rem 5rem fade-out($black, .9), 0 .5rem 1rem -.75rem fade-out($black, .95) !default;
+
+
+// Checklist
+
+$checklist-control-spacer: .75rem !default;
+$checklist-control-checked-color: $gray-700 !default;

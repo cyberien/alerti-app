@@ -11024,6 +11024,29 @@ a:focus, button:focus {
 .comment-text:last-child {
   margin-bottom: 0; }
 
+.checklist {
+  outline: none; }
+
+.checklist-control {
+  outline: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+
+.checklist-control .custom-control-input:checked ~ .custom-control-caption {
+  text-decoration: line-through;
+  color: #6E84A3; }
+
+.checklist-control + .checklist-control {
+  margin-top: 0.75rem; }
+
+.checklist-control:first-child[style*="display: none"] + .checklist-control {
+  margin-top: 0; }
+
+.checklist-control.draggable-mirror {
+  z-index: 1030; }
+
 .header {
   margin-bottom: 2rem; }
 
