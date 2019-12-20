@@ -5,7 +5,6 @@
 
 'use strict';
 
-
 // Header
 //
 // Header card chart
@@ -15,9 +14,8 @@
   //
   // Variables
   //
-  
-  var chart = document.getElementById('headerChart');
 
+  var chart = document.getElementById('headerChart');
 
   //
   // Functions
@@ -35,7 +33,7 @@
             },
             ticks: {
               callback: function(value) {
-                if ( !(value % 10) ) {
+                if (!(value % 10)) {
                   return '$' + value + 'k';
                 }
               }
@@ -63,23 +61,89 @@
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         datasets: [{
           label: 'Performance',
-          data: [0,10,5,15,10,20,15,25,20,30,25,40]
+          data: [0, 10, 5, 15, 10, 20, 15, 25, 20, 30, 25, 40]
         }]
       }
     });
   };
 
-
   //
   // Events
   //
-  
+
   if (typeof Chart !== 'undefined' && chart) {
     init(chart);
   }
 
 })();
 
+// Header (bars)
+//
+// Header card chart
+
+(function() {
+
+  //
+  // Variables
+  //
+
+  var chart = document.getElementById('headerChartBars');
+
+  //
+  // Functions
+  //
+
+  function init(chart) {
+    new Chart(chart, {
+      type: 'bar',
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              callback: function(value) {
+                if (!(value % 10)) {
+                  return '$' + value + 'k';
+                }
+              }
+            }
+          }]
+        },
+        tooltips: {
+          callbacks: {
+            label: function(item, data) {
+              var label = data.datasets[item.datasetIndex].label || '';
+              var yLabel = item.yLabel;
+              var content = '';
+
+              if (data.datasets.length > 1) {
+                content += '<span class="popover-body-label mr-auto">' + label + '</span>';
+              }
+
+              content += '<span class="popover-body-value">$' + yLabel + 'k</span>';
+              return content;
+            }
+          }
+        }
+      },
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        datasets: [{
+          label: 'Performance',
+          data: [0, 10, 5, 15, 10, 20, 15, 25, 20, 30, 25, 40]
+        }]
+      }
+    });
+  };
+
+  //
+  // Events
+  //
+
+  if (typeof Chart !== 'undefined' && chart) {
+    init(chart);
+  }
+
+})();
 
 // Performance
 //
@@ -93,7 +157,6 @@
 
   var chart = document.getElementById('performanceChart');
 
-
   //
   // Functions
   //
@@ -106,7 +169,7 @@
           yAxes: [{
             ticks: {
               callback: function(value) {
-                if ( !(value % 10) ) {
+                if (!(value % 10)) {
                   return '$' + value + 'k'
                 }
               }
@@ -134,12 +197,11 @@
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         datasets: [{
           label: 'Performance',
-          data: [0,10,5,15,10,20,15,25,20,30,25,40]
+          data: [0, 10, 5, 15, 10, 20, 15, 25, 20, 30, 25, 40]
         }]
       }
     });
   }
-
 
   //
   // Events
@@ -150,7 +212,6 @@
   }
 
 })();
-
 
 // Performance alias
 //
@@ -164,7 +225,6 @@
 
   var chart = document.getElementById('performanceChartAlias');
 
-
   //
   // Functions
   //
@@ -177,7 +237,7 @@
           yAxes: [{
             ticks: {
               callback: function(value) {
-                if ( !(value % 10) ) {
+                if (!(value % 10)) {
                   return '$' + value + 'k'
                 }
               }
@@ -205,12 +265,11 @@
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         datasets: [{
           label: 'Performance',
-          data: [0,10,5,15,10,20,15,25,20,30,25,40]
+          data: [0, 10, 5, 15, 10, 20, 15, 25, 20, 30, 25, 40]
         }]
       }
     });
   }
-
 
   //
   // Events
@@ -221,7 +280,6 @@
   }
 
 })();
-
 
 // Orders
 //
@@ -235,7 +293,6 @@
 
   var chart = document.getElementById('ordersChart');
 
-
   //
   // Functions
   //
@@ -248,7 +305,7 @@
           yAxes: [{
             ticks: {
               callback: function(value) {
-                if ( !(value % 10) ) {
+                if (!(value % 10)) {
                   return '$' + value + 'k'
                 }
               }
@@ -276,12 +333,11 @@
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         datasets: [{
           label: 'Sales',
-          data: [25,20,30,22,17,10,18,26,28,26,20,32]
+          data: [25, 20, 30, 22, 17, 10, 18, 26, 28, 26, 20, 32]
         }]
       }
     });
   }
-
 
   //
   // Events
@@ -290,9 +346,8 @@
   if (typeof Chart !== 'undefined' && chart) {
     init(chart);
   }
-  
-})();
 
+})();
 
 // Orders alias
 //
@@ -306,7 +361,6 @@
 
   var chart = document.getElementById('ordersChartAlias');
 
-
   //
   // Functions
   //
@@ -319,7 +373,7 @@
           yAxes: [{
             ticks: {
               callback: function(value) {
-                if ( !(value % 10) ) {
+                if (!(value % 10)) {
                   return '$' + value + 'k'
                 }
               }
@@ -347,12 +401,11 @@
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         datasets: [{
           label: 'Sales',
-          data: [25,20,30,22,17,10,18,26,28,26,20,32]
+          data: [25, 20, 30, 22, 17, 10, 18, 26, 28, 26, 20, 32]
         }]
       }
     });
   }
-
 
   //
   // Events
@@ -361,9 +414,8 @@
   if (typeof Chart !== 'undefined' && chart) {
     init(chart);
   }
-  
-})();
 
+})();
 
 // Devices
 //
@@ -376,7 +428,6 @@
   //
 
   var chart = document.getElementById('devicesChart');
-
 
   //
   // Functions
@@ -416,7 +467,6 @@
     });
   }
 
-
   //
   // Events
   //
@@ -426,7 +476,6 @@
   }
 
 })();
-
 
 // Weekly hours
 //
@@ -440,7 +489,6 @@
 
   var chart = document.getElementById('weeklyHoursChart');
 
-
   //
   // Functions
   //
@@ -453,7 +501,7 @@
           yAxes: [{
             ticks: {
               callback: function(value) {
-                if ( !(value % 10) ) {
+                if (!(value % 10)) {
                   return value + 'hrs'
                 }
               }
@@ -486,7 +534,6 @@
     });
   }
 
-
   //
   // Events
   //
@@ -497,7 +544,6 @@
 
 })();
 
-
 // Sparkline
 //
 // Sparkline card chart
@@ -507,9 +553,8 @@
   //
   // Variables
   //
-  
-  var chart = document.getElementById('sparklineChart');
 
+  var chart = document.getElementById('sparklineChart');
 
   //
   // Functions
@@ -550,30 +595,27 @@
     });
   };
 
-
   //
   // Events
   //
-  
+
   if (typeof Chart !== 'undefined' && chart) {
     init(chart);
   }
 
 })();
 
-
 // Sparkline
 //
-// Sparkline card charts (gray)
+// Sparkline card chart (gray)
 
 (function() {
 
   //
   // Variables
   //
-  
-  var charts = document.querySelectorAll('#sparklineChartSocialOne, #sparklineChartSocialTwo, #sparklineChartSocialThree, #sparklineChartSocialFour');
 
+  var charts = document.querySelectorAll('#sparklineChartSocialOne, #sparklineChartSocialTwo, #sparklineChartSocialThree, #sparklineChartSocialFour');
 
   //
   // Functions
@@ -615,11 +657,10 @@
     });
   };
 
-
   //
   // Events
   //
-  
+
   if (typeof Chart !== 'undefined' && charts) {
     [].forEach.call(charts, function(el) {
       init(el);
@@ -628,6 +669,66 @@
 
 })();
 
+// Sparkline
+//
+// Sparkline card chart (progress)
+
+(function() {
+
+  //
+  // Variables
+  //
+
+  var chart = document.getElementById('sparklineChartProgress');
+
+  //
+  // Functions
+  //
+
+  function init(chart) {
+    new Chart(chart, {
+      type: 'line',
+      options: {
+        scales: {
+          yAxes: [{
+            display: false
+          }],
+          xAxes: [{
+            display: false
+          }]
+        },
+        elements: {
+          line: {
+            borderWidth: 2
+          },
+          point: {
+            hoverRadius: 0
+          }
+        },
+        tooltips: {
+          custom: function() {
+            return false;
+          }
+        }
+      },
+      data: {
+        labels: new Array(12),
+        datasets: [{
+          data: [0, 15, 10, 25, 30, 15, 40, 50, 80, 60, 55, 65]
+        }]
+      }
+    });
+  };
+
+  //
+  // Events
+  //
+
+  if (typeof Chart !== 'undefined' && chart) {
+    init(chart);
+  }
+
+})();
 
 // Orders select
 //
@@ -642,7 +743,6 @@
   var ordersSelect = document.querySelectorAll('[name="ordersSelect"]');
   var ordersSelectAll = document.getElementById('ordersSelectAll');
 
-
   //
   // Functions
   //
@@ -652,7 +752,6 @@
       checkbox.checked = el.checked;
     });
   }
-
 
   //
   // Events

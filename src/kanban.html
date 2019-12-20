@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     @@include("partials/head.html", {
-      "title": "Dashkit"
+    "title": "Dashkit"
     })
   </head>
   <body>
@@ -14,27 +14,27 @@
     <!-- NAVIGATION
     ================================================== -->
     @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
-      @@if (sidebarSize == 'base' || demoMode) {
-        @@include("partials/sidebar.html", {
-          "category": "pages",
-          "subcategory": "",
-          "page": "kanban.html"
-        })
-      }
-      @@if (sidebarSize == 'small' || demoMode) {
-        @@include("partials/sidebar-sm.html", {
-          "category": "pages",
-          "subcategory": "",
-          "page": "kanban.html"
-        })
-      }
+    @@if (sidebarSize == 'base' || demoMode) {
+    @@include("partials/sidebar.html", {
+    "category": "pages",
+    "subcategory": "",
+    "page": "kanban.html"
+    })
+    }
+    @@if (sidebarSize == 'small' || demoMode) {
+    @@include("partials/sidebar-sm.html", {
+    "category": "pages",
+    "subcategory": "",
+    "page": "kanban.html"
+    })
+    }
     }
     @@if (navPosition == 'topnav' || demoMode) {
-      @@include("partials/topnav.html", {
-        "category": "pages",
-        "subcategory": "",
-        "page": "kanban.html"
-      })
+    @@include("partials/topnav.html", {
+    "category": "pages",
+    "subcategory": "",
+    "page": "kanban.html"
+    })
     }
 
     <!-- MAIN CONTENT
@@ -42,9 +42,9 @@
     <div class="main-content">
 
       @@if (navPosition == 'combo' || demoMode) {
-        @@include("partials/topbar.html")
+      @@include("partials/topbar.html")
       }
-      
+
       <!-- HEADER -->
       <div class="header">
         <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
@@ -53,7 +53,7 @@
           <div class="header-body">
             <div class="row align-items-center">
               <div class="col">
-                
+
                 <!-- Pretitle -->
                 <h6 class="header-pretitle">
                   Kanban boards
@@ -66,7 +66,7 @@
 
               </div>
               <div class="col-auto">
-                
+
                 <!-- Buttons -->
                 <a href="#!" class="btn btn-white mr-2">
                   Edit
@@ -101,7 +101,7 @@
                   <div class="card-header card-header-flush">
                     <div class="row align-items-center">
                       <div class="col">
-                    
+
                         <!-- Title -->
                         <h4 class="card-header-title">
                           How to Use Kanban
@@ -135,12 +135,12 @@
 
                     <!-- Category -->
                     <div class="kanban-category">
-                    
+
                       <!-- Card -->
                       <div class="kanban-item">
                         <div class="card card-sm mb-3" data-toggle="modal" data-target="#modalKanbanTask">
                           <div class="card-body">
-                            
+
                             <!-- Body -->
                             <p class="mb-0">
                               <strong>🤚 Drag me</strong> around to move me within this list of between lists.
@@ -154,7 +154,7 @@
                       <div class="kanban-item">
                         <div class="card card-sm mb-3" data-toggle="modal" data-target="#modalKanbanTask">
                           <div class="card-body">
-                            
+
                             <!-- Body -->
                             <p class="mb-0">
                               <strong>👆 Click me</strong> to open a modal that shows all the description, comments, files, and activity associated with this card.
@@ -168,7 +168,7 @@
                       <div class="kanban-item">
                         <div class="card card-sm mb-3" data-toggle="modal" data-target="#modalKanbanTaskEmpty">
                           <div class="card-body">
-                            
+
                             <!-- Body -->
                             <p class="mb-0">
                               <strong>🐣 Click me</strong> to see that same modal, but for a task that is brand new and doesn't have activity or files.
@@ -182,10 +182,10 @@
                       <div class="kanban-item">
                         <div class="card card-sm mb-3" data-toggle="modal" data-target="#modalKanbanTask">
                           <div class="card-body">
-                            
+
                             <!-- Body -->
                             <p class="mb-0">
-                              <strong>👇 Click "Add Card"</strong> at the bottom of this column to see what creating a new card looks like. You can even add a date. 
+                              <strong>👇 Click "Add Card"</strong> at the bottom of this column to see what creating a new card looks like. You can even add a date.
                             </p>
 
                           </div>
@@ -196,7 +196,7 @@
                       <div class="kanban-item">
                         <div class="card card-sm mb-3" data-toggle="modal" data-target="#modalKanbanTask">
                           <div class="card-body">
-                            
+
                             <!-- Body -->
                             <p class="mb-0">
                               <strong>👉 Click "Add List"</strong> past the last column on the right to see what it looks like to name a new column.
@@ -210,7 +210,7 @@
                       <div class="kanban-item">
                         <div class="card card-sm mb-3" data-toggle="modal" data-target="#modalKanbanTask">
                           <div class="card-body">
-                            
+
                             <!-- Body -->
                             <p class="mb-0">
                               <strong>⚙️ Click the grid/list toggle</strong> in the top right of this page to see what these tasks look like organized as a draggable list!
@@ -219,14 +219,14 @@
                           </div>
                         </div>
                       </div>
-                      
+
                     </div>
 
                     <!-- Add -->
                     <div class="kanban-add">
                       <div class="card card-sm card-flush mb-0">
                         <div class="card-body">
-                          
+
                           <!-- Link -->
                           <div class="text-center">
                             <a class="kanban-add-link" href="#!">Add Card</a>
@@ -243,7 +243,7 @@
                             <!-- Footer -->
                             <div class="row align-items-center">
                               <div class="col d-flex align-items-center">
-                                  
+
                                 <!-- Icon -->
                                 <span class="text-muted small mr-2">
                                   <i class="fe fe-clock"></i>
@@ -254,7 +254,7 @@
 
                               </div>
                               <div class="col-auto">
-                                
+
                                 <!-- Buttons -->
                                 <button class="btn btn-sm btn-white" type="reset">
                                   Cancel
@@ -271,10 +271,10 @@
                         </div>
                       </div>
                     </div>
-                  
+
                   </div>
                 </div>
-                
+
               </div>
               <div class="col-12">
 
@@ -283,7 +283,7 @@
                   <div class="card-header card-header-flush">
                     <div class="row align-items-center">
                       <div class="col">
-                    
+
                         <!-- Title -->
                         <h4 class="card-header-title">
                           Release 1.1.0
@@ -317,12 +317,12 @@
 
                     <!-- Category -->
                     <div class="kanban-category">
-                    
+
                       <!-- Card -->
                       <div class="kanban-item">
                         <div class="card card-sm mb-3" data-toggle="modal" data-target="#modalKanbanTask">
                           <div class="card-body">
-                            
+
                             <!-- Body -->
                             <p>
                               Create the release notes for the new pages so customers are aware.
@@ -331,7 +331,7 @@
                             <!-- Footer -->
                             <div class="row align-items-center">
                               <div class="col">
-                                
+
                                 <!-- Time -->
                                 <p class="card-text small text-muted">
                                   <i class="fe fe-clock"></i> Jun 9
@@ -339,7 +339,7 @@
 
                               </div>
                               <div class="col-auto">
-                                
+
                                 <!-- Avatar group -->
                                 <div class="avatar-group">
                                   <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
@@ -363,7 +363,7 @@
 
                           <!-- Body -->
                           <div class="card-body">
-                            
+
                             <!-- Body -->
                             <p>
                               Finish the design for blog listings and articles, including mixed media
@@ -372,7 +372,7 @@
                             <!-- Footer -->
                             <div class="row align-items-center">
                               <div class="col">
-                                
+
                                 <!-- Time -->
                                 <p class="card-text small text-muted">
                                   <i class="fe fe-message-circle"></i> 23 <i class="fe fe-clock ml-3"></i> Sep 9
@@ -380,7 +380,7 @@
 
                               </div>
                               <div class="col-auto">
-                                
+
                                 <!-- Avatar group -->
                                 <div class="avatar-group">
                                   <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
@@ -413,7 +413,7 @@
                                 Reviewed
                               </span>
                             </p>
-                            
+
                             <!-- Body -->
                             <p class="mb-0">
                               Clear all the deprecation warnings for out of date NPM packages
@@ -427,7 +427,7 @@
                       <div class="kanban-item">
                         <div class="card card-sm mb-3" data-toggle="modal" data-target="#modalKanbanTask">
                           <div class="card-body">
-                            
+
                             <!-- Body -->
                             <p>
                               Review all the indentation changes to be sure they will resolve all customer issues
@@ -436,7 +436,7 @@
                             <!-- Footer -->
                             <div class="row align-items-center">
                               <div class="col">
-                                
+
                                 <!-- Time -->
                                 <p class="card-text small text-muted">
                                   <i class="fe fe-clock"></i> Jun 11
@@ -444,7 +444,7 @@
 
                               </div>
                               <div class="col-auto">
-                                
+
                                 <!-- Avatar group -->
                                 <div class="avatar-group">
                                   <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Miyah Miles">
@@ -460,12 +460,12 @@
                       </div>
 
                     </div>
-                      
+
                     <!-- Add -->
                     <div class="kanban-add">
                       <div class="card card-sm card-flush mb-0">
                         <div class="card-body">
-                          
+
                           <!-- Link -->
                           <div class="text-center">
                             <a class="kanban-add-link" href="#!">Add Card</a>
@@ -482,7 +482,7 @@
                             <!-- Footer -->
                             <div class="row align-items-center">
                               <div class="col d-flex align-items-center">
-                                  
+
                                 <!-- Icon -->
                                 <span class="text-muted small mr-2">
                                   <i class="fe fe-clock"></i>
@@ -493,7 +493,7 @@
 
                               </div>
                               <div class="col-auto">
-                                
+
                                 <!-- Buttons -->
                                 <button class="btn btn-sm btn-white" type="reset">
                                   Cancel
@@ -510,10 +510,10 @@
                         </div>
                       </div>
                     </div>
-                  
+
                   </div>
                 </div>
-                
+
               </div>
               <div class="col-12">
 
@@ -522,7 +522,7 @@
                   <div class="card-header card-header-flush">
                     <div class="row align-items-center">
                       <div class="col">
-                    
+
                         <!-- Title -->
                         <h4 class="card-header-title">
                           Next Up
@@ -556,12 +556,12 @@
 
                     <!-- Category -->
                     <div class="kanban-category">
-                    
+
                       <!-- Card -->
                       <div class="kanban-item">
                         <div class="card card-sm mb-3" data-toggle="modal" data-target="#modalKanbanTask">
                           <div class="card-body">
-                            
+
                             <!-- Body -->
                             <p>
                               Design portfolio pages and a case study focused page
@@ -570,7 +570,7 @@
                             <!-- Footer -->
                             <div class="row align-items-center">
                               <div class="col">
-                                
+
                                 <!-- Time -->
                                 <p class="card-text small text-muted">
                                   <i class="fe fe-clock"></i> Jul 6
@@ -578,7 +578,7 @@
 
                               </div>
                               <div class="col-auto">
-                                
+
                                 <!-- Avatar group -->
                                 <div class="avatar-group">
                                   <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ryu Duke">
@@ -597,7 +597,7 @@
                       <div class="kanban-item">
                         <div class="card card-sm mb-3" data-toggle="modal" data-target="#modalKanbanTask">
                           <div class="card-body">
-                            
+
                             <!-- Body -->
                             <p class="mb-0">
                               Create a screenshot component extension for highlighting hotspots with popover hovers
@@ -616,7 +616,7 @@
 
                           <!-- Body -->
                           <div class="card-body">
-                            
+
                             <!-- Body -->
                             <p>
                               Include an even larger library of illustrations that we can provide in SVG that cover more use cases
@@ -625,7 +625,7 @@
                             <!-- Footer -->
                             <div class="row align-items-center">
                               <div class="col">
-                                
+
                                 <!-- Time -->
                                 <p class="card-text small text-muted">
                                   <i class="fe fe-message-circle"></i> 23 <i class="fe fe-clock ml-3"></i> Sep 9
@@ -633,7 +633,7 @@
 
                               </div>
                               <div class="col-auto">
-                                
+
                                 <!-- Avatar group -->
                                 <div class="avatar-group">
                                   <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
@@ -659,7 +659,7 @@
                       <div class="kanban-item">
                         <div class="card card-sm mb-3" data-toggle="modal" data-target="#modalKanbanTask">
                           <div class="card-body">
-                            
+
                             <!-- Body -->
                             <p class="mb-0">
                               Create basic auth pages (login, sign up, forgot password) even though we don't have any settings yet
@@ -673,7 +673,7 @@
                       <div class="kanban-item">
                         <div class="card card-sm mb-3" data-toggle="modal" data-target="#modalKanbanTask">
                           <div class="card-body">
-                            
+
                             <!-- Body -->
                             <p>
                               Code up the utility pages for basic errors and failure states
@@ -682,7 +682,7 @@
                             <!-- Footer -->
                             <div class="row align-items-center">
                               <div class="col">
-                                
+
                                 <!-- Time -->
                                 <p class="card-text small text-muted">
                                   <i class="fe fe-clock"></i> Jul 12
@@ -690,7 +690,7 @@
 
                               </div>
                               <div class="col-auto">
-                                
+
                                 <!-- Avatar group -->
                                 <div class="avatar-group">
                                   <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Adolfo Hess">
@@ -711,7 +711,7 @@
                     <div class="kanban-add">
                       <div class="card card-sm card-flush mb-0">
                         <div class="card-body">
-                          
+
                           <!-- Link -->
                           <div class="text-center">
                             <a class="kanban-add-link" href="#!">Add Card</a>
@@ -728,7 +728,7 @@
                             <!-- Footer -->
                             <div class="row align-items-center">
                               <div class="col d-flex align-items-center">
-                                  
+
                                 <!-- Icon -->
                                 <span class="text-muted small mr-2">
                                   <i class="fe fe-clock"></i>
@@ -739,7 +739,7 @@
 
                               </div>
                               <div class="col-auto">
-                                
+
                                 <!-- Buttons -->
                                 <button class="btn btn-sm btn-white" type="reset">
                                   Cancel
@@ -756,10 +756,10 @@
                         </div>
                       </div>
                     </div>
-                  
+
                   </div>
                 </div>
-                
+
               </div>
               <div class="col-12">
 
@@ -768,7 +768,7 @@
                   <div class="card-header card-header-flush">
                     <div class="row align-items-center">
                       <div class="col">
-                    
+
                         <!-- Title -->
                         <h4 class="card-header-title">
                           Release 1.1.0
@@ -802,12 +802,12 @@
 
                     <!-- Category -->
                     <div class="kanban-category">
-                    
+
                       <!-- Card -->
                       <div class="kanban-item">
                         <div class="card card-sm mb-3" data-toggle="modal" data-target="#modalKanbanTask">
                           <div class="card-body">
-                            
+
                             <!-- Body -->
                             <p>
                               Create the release notes for the new pages so customers are aware.
@@ -816,7 +816,7 @@
                             <!-- Footer -->
                             <div class="row align-items-center">
                               <div class="col">
-                                
+
                                 <!-- Time -->
                                 <p class="card-text small text-muted">
                                   <i class="fe fe-clock"></i> Jun 9
@@ -824,7 +824,7 @@
 
                               </div>
                               <div class="col-auto">
-                                
+
                                 <!-- Avatar group -->
                                 <div class="avatar-group">
                                   <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
@@ -848,7 +848,7 @@
 
                           <!-- Body -->
                           <div class="card-body">
-                            
+
                             <!-- Body -->
                             <p>
                               Finish the design for blog listings and articles, including mixed media
@@ -857,7 +857,7 @@
                             <!-- Footer -->
                             <div class="row align-items-center">
                               <div class="col">
-                                
+
                                 <!-- Time -->
                                 <p class="card-text small text-muted">
                                   <i class="fe fe-message-circle"></i> 23 <i class="fe fe-clock ml-3"></i> Sep 9
@@ -865,7 +865,7 @@
 
                               </div>
                               <div class="col-auto">
-                                
+
                                 <!-- Avatar group -->
                                 <div class="avatar-group">
                                   <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
@@ -898,7 +898,7 @@
                                 Reviewed
                               </span>
                             </p>
-                            
+
                             <!-- Body -->
                             <p class="mb-0">
                               Clear all the deprecation warnings for out of date NPM packages
@@ -912,7 +912,7 @@
                       <div class="kanban-item">
                         <div class="card card-sm mb-3" data-toggle="modal" data-target="#modalKanbanTask">
                           <div class="card-body">
-                            
+
                             <!-- Body -->
                             <p>
                               Review all the indentation changes to be sure they will resolve all customer issues
@@ -921,7 +921,7 @@
                             <!-- Footer -->
                             <div class="row align-items-center">
                               <div class="col">
-                                
+
                                 <!-- Time -->
                                 <p class="card-text small text-muted">
                                   <i class="fe fe-clock"></i> Jun 11
@@ -929,7 +929,7 @@
 
                               </div>
                               <div class="col-auto">
-                                
+
                                 <!-- Avatar group -->
                                 <div class="avatar-group">
                                   <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Miyah Miles">
@@ -945,12 +945,12 @@
                       </div>
 
                     </div>
-                      
+
                     <!-- Add -->
                     <div class="kanban-add">
                       <div class="card card-sm card-flush mb-0">
                         <div class="card-body">
-                          
+
                           <!-- Link -->
                           <div class="text-center">
                             <a class="kanban-add-link" href="#!">Add Card</a>
@@ -967,7 +967,7 @@
                             <!-- Footer -->
                             <div class="row align-items-center">
                               <div class="col d-flex align-items-center">
-                                  
+
                                 <!-- Icon -->
                                 <span class="text-muted small mr-2">
                                   <i class="fe fe-clock"></i>
@@ -978,7 +978,7 @@
 
                               </div>
                               <div class="col-auto">
-                                
+
                                 <!-- Buttons -->
                                 <button class="btn btn-sm btn-white" type="reset">
                                   Cancel
@@ -995,18 +995,18 @@
                         </div>
                       </div>
                     </div>
-                  
+
                   </div>
                 </div>
-                
+
               </div>
               <div class="col-12">
-                
+
                 <!-- Card -->
                 <div class="kanban-add">
                   <div class="card mb-0">
                     <div class="card-body">
-                      
+
                       <!-- Link -->
                       <div class="text-center">
                         <a class="kanban-add-link" href="#!">Add list</a>
@@ -1023,7 +1023,7 @@
                           <button class="close close-sm ml-3" type="reset">
                             <i class="fe fe-x"></i>
                           </button>
-                        
+
                         </div>
                       </form>
 
@@ -1043,17 +1043,17 @@
                 <!-- List group -->
                 <div class="list-group list-group-lg list-group-flush">
                   <div class="list-group-item">
-                    
+
                     <!-- Header -->
                     <div class="row align-items-center mb-4">
                       <div class="col">
-                        
+
                         <!-- Heading -->
                         <h2 class="mb-0">How to Use Kanban</h2>
 
                       </div>
                       <div class="col-auto">
-                        
+
                         <!-- Drodpown -->
                         <div class="dropdown">
                           <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -1082,7 +1082,7 @@
                       <div class="kanban-item">
                         <div class="card card-sm mb-3" data-toggle="modal" data-target="#modalKanbanTask">
                           <div class="card-body">
-                            
+
                             <!-- Body -->
                             <p class="mb-0">
                               <strong>🤚 Drag me</strong> around to move me within this list of between lists.
@@ -1096,7 +1096,7 @@
                       <div class="kanban-item">
                         <div class="card card-sm mb-3" data-toggle="modal" data-target="#modalKanbanTask">
                           <div class="card-body">
-                            
+
                             <!-- Body -->
                             <p class="mb-0">
                               <strong>👆 Click me</strong> to open a modal that shows all the description, comments, files, and activity associated with this card.
@@ -1110,7 +1110,7 @@
                       <div class="kanban-item">
                         <div class="card card-sm mb-3" data-toggle="modal" data-target="#modalKanbanTaskEmpty">
                           <div class="card-body">
-                            
+
                             <!-- Body -->
                             <p class="mb-0">
                               <strong>🐣 Click me</strong> to see that same modal, but for a task that is brand new and doesn't have activity or files.
@@ -1124,10 +1124,10 @@
                       <div class="kanban-item">
                         <div class="card card-sm mb-3" data-toggle="modal" data-target="#modalKanbanTask">
                           <div class="card-body">
-                            
+
                             <!-- Body -->
                             <p class="mb-0">
-                              <strong>👇 Click "Add Card"</strong> at the bottom of this section to see what creating a new card looks like. You can even add a date. 
+                              <strong>👇 Click "Add Card"</strong> at the bottom of this section to see what creating a new card looks like. You can even add a date.
                             </p>
 
                           </div>
@@ -1138,7 +1138,7 @@
                       <div class="kanban-item">
                         <div class="card card-sm mb-3" data-toggle="modal" data-target="#modalKanbanTask">
                           <div class="card-body">
-                            
+
                             <!-- Body -->
                             <p class="mb-0">
                               <strong>👇 Click "Add List"</strong> past the last list section at the bottom of this page to see what it looks like to name a new list.
@@ -1152,7 +1152,7 @@
                       <div class="kanban-item">
                         <div class="card card-sm mb-3" data-toggle="modal" data-target="#modalKanbanTask">
                           <div class="card-body">
-                            
+
                             <!-- Body -->
                             <p class="mb-0">
                               <strong>⚙️ Click the grid/column toggle</strong> in the top right of this page to see what these tasks look like organized as a draggable column!
@@ -1182,7 +1182,7 @@
 
                               </div>
                               <div class="col-6 col-md-auto d-flex align-items-center">
-                                
+
                                 <!-- Icon -->
                                 <span class="text-muted small mr-2">
                                   <i class="fe fe-clock"></i>
@@ -1193,7 +1193,7 @@
 
                               </div>
                               <div class="col-6 col-md-auto">
-                                
+
                                 <!-- Buttons -->
                                 <button class="btn btn-sm btn-white" type="reset">
                                   Cancel
@@ -1216,13 +1216,13 @@
                     <!-- Header -->
                     <div class="row align-items-center mb-4">
                       <div class="col">
-                        
+
                         <!-- Heading -->
                         <h2 class="mb-0">Release 1.1.0</h2>
 
                       </div>
                       <div class="col-auto">
-                        
+
                         <!-- Drodpown -->
                         <div class="dropdown">
                           <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -1390,7 +1390,7 @@
 
                               </div>
                               <div class="col-6 col-md-auto d-flex align-items-center">
-                                
+
                                 <!-- Icon -->
                                 <span class="text-muted small mr-2">
                                   <i class="fe fe-clock"></i>
@@ -1401,7 +1401,7 @@
 
                               </div>
                               <div class="col-6 col-md-auto">
-                                
+
                                 <!-- Buttons -->
                                 <button class="btn btn-sm btn-white" type="reset">
                                   Cancel
@@ -1424,13 +1424,13 @@
                     <!-- Header -->
                     <div class="row align-items-center mb-4">
                       <div class="col">
-                        
+
                         <!-- Heading -->
                         <h2 class="mb-0">Next Up</h2>
 
                       </div>
                       <div class="col-auto">
-                        
+
                         <!-- Dropdown -->
                         <div class="dropdown">
                           <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -1500,7 +1500,7 @@
                             <p class="mb-0">
                               Create a screenshot component extension for highlighting hotspots with popover hovers
                             </p>
-                            
+
                           </div>
                         </div>
                       </div>
@@ -1617,7 +1617,7 @@
 
                               </div>
                               <div class="col-6 col-md-auto d-flex align-items-center">
-                                
+
                                 <!-- Icon -->
                                 <span class="text-muted small mr-2">
                                   <i class="fe fe-clock"></i>
@@ -1628,7 +1628,7 @@
 
                               </div>
                               <div class="col-6 col-md-auto">
-                                
+
                                 <!-- Buttons -->
                                 <button class="btn btn-sm btn-white" type="reset">
                                   Cancel
@@ -1650,7 +1650,7 @@
 
                     <!-- Add -->
                     <div class="kanban-add">
-                    
+
                       <!-- Link -->
                       <a class="kanban-add-link h2" href="#!">
                         + Add List
@@ -1660,13 +1660,13 @@
                       <form class="kanban-add-form d-none">
                         <div class="row align-items-center">
                           <div class="col-12 col-md">
-                            
+
                             <!-- Button -->
                             <input type="text" class="form-control form-control-flush form-control-auto h2" placeholder="Name your list">
 
                           </div>
                           <div class="col-auto">
-                            
+
                             <!-- Buttons -->
                             <button class="btn btn-sm btn-white" type="reset">
                               Cancel
@@ -1689,7 +1689,7 @@
           </div>
         </div>
       </div>
-      
+
     </div> <!-- / .main-content -->
 
     <!-- JAVASCRIPT
