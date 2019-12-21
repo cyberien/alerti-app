@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include("partials/head.html", {
+    "title": "Dashkit"
+    })
+  </head>
+  <body>
+
+    <!-- MODALS
+    ================================================== -->
+    @@include("partials/modals.html")
+
+    <!-- NAVIGATION
+    ================================================== -->
+    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
+    @@if (sidebarSize == 'base' || demoMode) {
+    @@include("partials/sidebar.html", {
+    "category": "dashboards",
+    "subcategory": "",
+    "page": "index.html"
+    })
+    }
+    @@if (sidebarSize == 'small' || demoMode) {
+    @@include("partials/sidebar-sm.html", {
+    "category": "dashboards",
+    "subcategory": "",
+    "page": "index.html"
+    })
+    }
+    }
+    @@if (navPosition == 'topnav' || demoMode) {
+    @@include("partials/topnav.html", {
+    "category": "dashboards",
+    "subcategory": "",
+    "page": "index.html"
+    })
+    }
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content">
+
+      @@if (navPosition == 'combo' || demoMode) {
+      @@include("partials/topbar.html")
+      }
+
+      <!-- HEADER -->
+      <div class="header">
+        <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
+
+          <!-- Body -->
+          <div class="header-body">
+            <div class="row align-items-end">
+              <div class="col">
+
+                <!-- Pretitle -->
+                <h6 class="header-pretitle">
+                  Dashboard
+                </h6>
+
+                <!-- Title -->
+                <h1 class="header-title">
+                  E-Commerce
+                </h1>
+
+              </div>
+              <div class="col-auto">
+
+                <!-- Button -->
+                <a href="#!" class="btn btn-primary lift">
+                  Create Report
+                </a>
+
+              </div>
+            </div> <!-- / .row -->
+          </div> <!-- / .header-body -->
+
+        </div>
+      </div> <!-- / .header -->
+
+      <!-- CARDS -->
+      <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
+        <div class="row">
+          <div class="col-12 col-lg-6 col-xl">
+
+            <!-- Card -->
+            <div class="card">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col">
+
+                    <!-- Title -->
+                    <h6 class="card-title text-uppercase text-muted mb-2">
+                      Weekly Sales
+                    </h6>
+
+                    <!-- Heading -->
+                    <span class="h2 mb-0">
+                      $24,500
+                    </span>
+
+                    <!-- Badge -->
+                    <span class="badge badge-soft-success mt-n1">
+                      +3.5%
+                    </span>
+
+                  </div>
+                  <div class="col-auto">
+
+                    <!-- Icon -->
+                    <span class="h2 fe fe-dollar-sign text-muted mb-0"></span>
+
+                  </div>
+                </div> <!-- / .row -->
+
+              </div>
+            </div>
+
+          </div>
+          <div class="col-12 col-lg-6 col-xl">
+
+            <!-- Card -->
+            <div class="card">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col">
+
+                    <!-- Title -->
+                    <h6 class="card-title text-uppercase text-muted mb-2">
+                      Orders Placed
+                    </h6>
+
+                    <!-- Heading -->
+                    <span class="h2 mb-0">
+                      763.5
+                    </span>
+
+                  </div>
+                  <div class="col-auto">
+
+                    <!-- Icon -->
+                    <span class="h2 fe fe-briefcase text-muted mb-0"></span>
+
+                  </div>
+                </div> <!-- / .row -->
+
+              </div>
+            </div>
+
+          </div>
+          <div class="col-12 col-lg-6 col-xl">
+
+            <!-- Card -->
+            <div class="card">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col">
+
+                    <!-- Title -->
+                    <h6 class="card-title text-uppercase text-muted mb-2">
+                      Conversion Rate
+                    </h6>
+
+                    <div class="row align-items-center no-gutters">
+                      <div class="col-auto">
+
+                        <!-- Heading -->
+                        <span class="h2 mr-2 mb-0">
+                          84.5%
+                        </span>
+
+                      </div>
+                      <div class="col">
+
+                        <!-- Progress -->
+                        <div class="progress progress-sm">
+                          <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+
+                      </div>
+                    </div> <!-- / .row -->
+
+                  </div>
+                  <div class="col-auto">
+
+                    <!-- Icon -->
+                    <span class="h2 fe fe-clipboard text-muted mb-0"></span>
+
+                  </div>
+                </div> <!-- / .row -->
+
+              </div>
+            </div>
+
+          </div>
+          <div class="col-12 col-lg-6 col-xl">
+
+            <!-- Card -->
+            <div class="card">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col">
+
+                    <!-- Title -->
+                    <h6 class="card-title text-uppercase text-muted mb-2">
+                      Avg. Order VaLue
+                    </h6>
+
+                    <!-- Heading -->
+                    <span class="h2 mb-0">
+                      $85.50
+                    </span>
+
+                  </div>
+                  <div class="col-auto">
+
+                    <!-- Chart -->
+                    <div class="chart chart-sparkline">
+                      <canvas class="chart-canvas" id="sparklineChart"></canvas>
+                    </div>
+
+                  </div>
+                </div> <!-- / .row -->
+
+              </div>
+            </div>
+
+          </div>
+        </div> <!-- / .row -->
+        <div class="row">
+          <div class="col-12 col-xl-8">
+
+          </div>
+          <div class="col-12 col-xl-4">
+
+            <!-- Traffic -->
+            <div class="card">
+              <div class="card-header">
+                <div class="row align-items-center">
+                  <div class="col">
+
+                    <!-- Title -->
+                    <h4 class="card-header-title">
+                      Traffic Channels
+                    </h4>
+
+                  </div>
+                  <div class="col-auto">
+
+                    <!-- Tabs -->
+                    <ul class="nav nav-tabs nav-tabs-sm card-header-tabs">
+                      <li class="nav-item" data-toggle="chart" data-target="#devicesChart" data-update='{"data":{"datasets":[{"data":[60,25,15]}]}}'>
+                        <a href="#" class="nav-link active" data-toggle="tab">
+                          All
+                        </a>
+                      </li>
+                      <li class="nav-item" data-toggle="chart" data-target="#devicesChart" data-update='{"data":{"datasets":[{"data":[15,45,20]}]}}'>
+                        <a href="#" class="nav-link" data-toggle="tab">
+                          Direct
+                        </a>
+                      </li>
+                    </ul>
+
+                  </div>
+                </div> <!-- / .row -->
+
+              </div>
+              <div class="card-body">
+
+                <!-- Chart -->
+                <div class="chart chart-appended">
+                  <canvas id="devicesChart" class="chart-canvas" data-toggle="legend" data-target="#devicesChartLegend"></canvas>
+                </div>
+
+                <!-- Legend -->
+                <div id="devicesChartLegend" class="chart-legend"></div>
+
+              </div>
+            </div>
+
+          </div>
+        </div> <!-- / .row -->
+        <div class="row">
+          <div class="col-12">
+
+            <!-- Orders -->
+            <div class="card">
+              <div class="card-header">
+                <div class="row align-items-center">
+                  <div class="col">
+
+                    <!-- Title -->
+                    <h4 class="card-header-title">
+                      Orders
+                    </h4>
+
+                  </div>
+                  <div class="col-auto mr-n3">
+
+                    <!-- Caption -->
+                    <span class="text-muted">
+                      Show affiliate:
+                    </span>
+
+                  </div>
+                  <div class="col-auto">
+
+                    <!-- Switch -->
+                    <div class="custom-control custom-switch">
+                      <input type="checkbox" class="custom-control-input" id="cardToggle" data-toggle="chart" data-target="#ordersChart" data-add='{"data":{"datasets":[{"data":[15,10,20,12,7,0,8,16,18,16,10,22],"backgroundColor":"#d2ddec","label":"Affiliate"}]}}'>
+                      <label class="custom-control-label" for="cardToggle"></label>
+                    </div>
+
+                  </div>
+                </div> <!-- / .row -->
+
+              </div>
+              <div class="card-body">
+
+                <!-- Chart -->
+                <div class="chart">
+                  <canvas id="ordersChart" class="chart-canvas"></canvas>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div> <!-- / .row -->
+      </div>
+
+    </div> <!-- / .main-content -->
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("partials/scripts.html")
+
+  </body>
+</html>
