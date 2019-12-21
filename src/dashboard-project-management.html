@@ -121,7 +121,7 @@
       <!-- CARDS -->
       <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
         <div class="row">
-          <div class="col-12 col-lg-8">
+          <div class="col-12 col-xl-8">
 
             <!-- Projects -->
             <div class="card">
@@ -439,7 +439,7 @@
               </div>
             </div>
 
-            <!-- Tasks -->
+            <!-- Kanban -->
             <div class="card">
               <div class="card-header">
                 <div class="row align-items-center">
@@ -661,18 +661,30 @@
                           Progress
                         </h6>
 
-                        <!-- Heading -->
-                        <span class="h2 mb-0">
-                          72%
-                        </span>
+                        <div class="row align-items-center no-gutters">
+                          <div class="col-auto">
+
+                            <!-- Heading -->
+                            <span class="h2 mr-2 mb-0">
+                              84.5%
+                            </span>
+
+                          </div>
+                          <div class="col">
+
+                            <!-- Progress -->
+                            <div class="progress progress-sm">
+                              <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+
+                          </div>
+                        </div> <!-- / .row -->
 
                       </div>
                       <div class="col-auto">
 
-                        <!-- Chart -->
-                        <div class="chart chart-sparkline chart-sparkline-doughnut">
-                          <canvas class="chart-canvas" id="sparklineChartProgress"></canvas>
-                        </div>
+                        <!-- Icon -->
+                        <span class="h2 fe fe-clipboard text-muted mb-0"></span>
 
                       </div>
                     </div> <!-- / .row -->
@@ -716,7 +728,7 @@
               </div>
             </div> <!-- / .row -->
 
-            <!-- Chdcklist -->
+            <!-- Checklist -->
             <div class="card">
               <div class="card-header">
                 <div class="row align-items-center">
@@ -813,6 +825,464 @@
                 </div> <!-- / .row -->
               </div> <!-- / .card-footer -->
             </div> <!-- / .card -->
+
+          </div>
+          <div class="col-12 col-xl-4">
+
+            <!-- Activity -->
+            <div class="card">
+              <div class="card-header">
+                <div class="row align-items-center">
+                  <div class="col">
+
+                    <!-- Title -->
+                    <h4 class="card-header-title">
+                      Recent Activity
+                    </h4>
+
+                  </div>
+                  <div class="col-auto">
+
+                    <!-- Button -->
+                    <a class="small" href="kanban.html">View all</a>
+
+                  </div>
+                </div> <!-- / .row -->
+              </div>
+              <div class="card-body">
+
+                <!-- List group -->
+                <div class="list-group list-group-flush list-group-activity my-n3">
+                  <div class="list-group-item">
+                    <div class="row">
+                      <div class="col-auto">
+
+                        <!-- Avatar -->
+                        <div class="avatar avatar-sm">
+                          <div class="avatar-title font-size-lg bg-primary-soft rounded-circle text-primary">
+                            <i class="fe fe-mail"></i>
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="col ml-n2">
+
+                        <!-- Heading -->
+                        <h5 class="mb-1">
+                          Launchday 1.4.0 update email sent
+                        </h5>
+
+                        <!-- Text -->
+                        <p class="small text-gray-700 mb-0">
+                          Sent to all 1,851 subscribers over a 24 hour period
+                        </p>
+
+                        <!-- Time -->
+                        <small class="text-muted">
+                          2m ago
+                        </small>
+
+                      </div>
+                    </div> <!-- / .row -->
+                  </div>
+                  <div class="list-group-item">
+                    <div class="row">
+                      <div class="col-auto">
+
+                        <!-- Avatar -->
+                        <div class="avatar avatar-sm">
+                          <div class="avatar-title font-size-lg bg-primary-soft rounded-circle text-primary">
+                            <i class="fe fe-mail"></i>
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="col ml-n2">
+
+                        <!-- Heading -->
+                        <h5 class="mb-1">
+                          Launchday 1.4.0 update email sent
+                        </h5>
+
+                        <!-- Text -->
+                        <p class="small text-gray-700 mb-0">
+                          Sent to all 1,851 subscribers over a 24 hour period
+                        </p>
+
+                        <!-- Time -->
+                        <small class="text-muted">
+                          2m ago
+                        </small>
+
+                      </div>
+                    </div> <!-- / .row -->
+                  </div>
+                  <div class="list-group-item">
+                    <div class="row">
+                      <div class="col-auto">
+
+                        <!-- Avatar -->
+                        <div class="avatar avatar-sm">
+                          <div class="avatar-title font-size-lg bg-primary-soft rounded-circle text-primary">
+                            <i class="fe fe-mail"></i>
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="col ml-n2">
+
+                        <!-- Heading -->
+                        <h5 class="mb-1">
+                          Launchday 1.4.0 update email sent
+                        </h5>
+
+                        <!-- Text -->
+                        <p class="small text-gray-700 mb-0">
+                          Sent to all 1,851 subscribers over a 24 hour period
+                        </p>
+
+                        <!-- Time -->
+                        <small class="text-muted">
+                          2m ago
+                        </small>
+
+                      </div>
+                    </div> <!-- / .row -->
+                  </div>
+                  <div class="list-group-item">
+                    <div class="row">
+                      <div class="col-auto">
+
+                        <!-- Avatar -->
+                        <div class="avatar avatar-sm">
+                          <div class="avatar-title font-size-lg bg-primary-soft rounded-circle text-primary">
+                            <i class="fe fe-mail"></i>
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="col ml-n2">
+
+                        <!-- Heading -->
+                        <h5 class="mb-1">
+                          Launchday 1.4.0 update email sent
+                        </h5>
+
+                        <!-- Text -->
+                        <p class="small text-gray-700 mb-0">
+                          Sent to all 1,851 subscribers over a 24 hour period
+                        </p>
+
+                        <!-- Time -->
+                        <small class="text-muted">
+                          2m ago
+                        </small>
+
+                      </div>
+                    </div> <!-- / .row -->
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Uploads -->
+            <div class="card">
+              <div class="card-header">
+                <div class="row align-items-center">
+                  <div class="col">
+
+                    <!-- Title -->
+                    <h4 class="card-header-title">
+                      Latest Uploads
+                    </h4>
+
+                  </div>
+                  <div class="col-auto">
+
+                    <!-- Link -->
+                    <a href="#!" class="small">View all</a>
+
+                  </div>
+                </div> <!-- / .row -->
+              </div>
+              <div class="card-body">
+
+                <div class="row align-items-center">
+                  <div class="col-auto">
+
+                    <!-- Avatar -->
+                    <a href="#!" class="avatar">
+                      <img src="assets/img/files/file-1.jpg" alt="..." class="avatar-img rounded">
+                    </a>
+
+                  </div>
+                  <div class="col ml-n2">
+
+                    <!-- Title -->
+                    <h4 class="card-title mb-1">
+                      <a href="#!">Launchday Logo</a>
+                    </h4>
+
+                    <!-- Time -->
+                    <p class="card-text small text-muted">
+                      2.5kb SVG
+                    </p>
+
+                  </div>
+                  <div class="col-auto">
+
+                    <!-- Dropdown -->
+                    <div class="dropdown">
+                      <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fe fe-more-vertical"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a href="#!" class="dropdown-item">
+                          Action
+                        </a>
+                        <a href="#!" class="dropdown-item">
+                          Another action
+                        </a>
+                        <a href="#!" class="dropdown-item">
+                          Something else here
+                        </a>
+                      </div>
+                    </div>
+
+                  </div>
+                </div> <!-- / .row -->
+
+                <!-- Divider -->
+                <hr>
+
+                <div class="row align-items-center">
+                  <div class="col-auto">
+
+                    <!-- Avatar -->
+                    <a href="#!" class="avatar">
+                      <img src="assets/img/files/file-2.jpg" alt="..." class="avatar-img rounded">
+                    </a>
+
+                  </div>
+                  <div class="col ml-n2">
+
+                    <!-- Title -->
+                    <h4 class="card-title mb-1">
+                      <a href="#!">Example Grid</a>
+                    </h4>
+
+                    <!-- Time -->
+                    <p class="card-text small text-muted">
+                      1.5mb PNG
+                    </p>
+
+                  </div>
+                  <div class="col-auto">
+
+                    <!-- Dropdown -->
+                    <div class="dropdown">
+                      <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fe fe-more-vertical"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a href="#!" class="dropdown-item">
+                          Action
+                        </a>
+                        <a href="#!" class="dropdown-item">
+                          Another action
+                        </a>
+                        <a href="#!" class="dropdown-item">
+                          Something else here
+                        </a>
+                      </div>
+                    </div>
+
+                  </div>
+                </div> <!-- / .row -->
+
+                <!-- Divider -->
+                <hr>
+
+                <div class="row align-items-center">
+                  <div class="col-auto">
+
+                    <!-- Avatar -->
+                    <a href="#!" class="avatar">
+                      <div class="avatar-title rounded bg-white text-secondary">
+                        <span class="fe fe-folder"></span>
+                      </div>
+                    </a>
+
+                  </div>
+                  <div class="col ml-n2">
+
+                    <!-- Title -->
+                    <h4 class="card-title mb-1">
+                      <a href="#!">Screenshot Collection</a>
+                    </h4>
+
+                    <!-- Time -->
+                    <p class="card-text small text-muted">
+                      6.9mb directory
+                    </p>
+
+                  </div>
+                  <div class="col-auto">
+
+                    <!-- Dropdown -->
+                    <div class="dropdown">
+                      <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fe fe-more-vertical"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a href="#!" class="dropdown-item">
+                          Action
+                        </a>
+                        <a href="#!" class="dropdown-item">
+                          Another action
+                        </a>
+                        <a href="#!" class="dropdown-item">
+                          Something else here
+                        </a>
+                      </div>
+                    </div>
+
+                  </div>
+                </div> <!-- / .row -->
+
+                <!-- Divider -->
+                <hr>
+
+                <div class="row align-items-center">
+                  <div class="col-auto">
+
+                    <!-- Avatar -->
+                    <a href="#!" class="avatar">
+                      <img src="assets/img/files/file-3.jpg" alt="..." class="avatar-img rounded">
+                    </a>
+
+                  </div>
+                  <div class="col ml-n2">
+
+                    <!-- Title -->
+                    <h4 class="card-title mb-1">
+                      <a href="#!">Launchday Cover</a>
+                    </h4>
+
+                    <!-- Time -->
+                    <p class="card-text small text-muted">
+                      750kb JPG
+                    </p>
+
+                  </div>
+                  <div class="col-auto">
+
+                    <!-- Dropdown -->
+                    <div class="dropdown">
+                      <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fe fe-more-vertical"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a href="#!" class="dropdown-item">
+                          Action
+                        </a>
+                        <a href="#!" class="dropdown-item">
+                          Another action
+                        </a>
+                        <a href="#!" class="dropdown-item">
+                          Something else here
+                        </a>
+                      </div>
+                    </div>
+
+                  </div>
+                </div> <!-- / .row -->
+
+              </div> <!-- / .card-body -->
+            </div> <!-- / .card -->
+
+            <!-- Traffic -->
+            <div class="card">
+              <div class="card-header">
+                <div class="row align-items-center">
+                  <div class="col">
+
+                    <!-- Title -->
+                    <h4 class="card-header-title">
+                      Traffic Channels
+                    </h4>
+
+                  </div>
+                  <div class="col-auto">
+
+                    <!-- Tabs -->
+                    <ul class="nav nav-tabs nav-tabs-sm card-header-tabs">
+                      <li class="nav-item" data-toggle="chart" data-target="#devicesChart" data-update='{"data":{"datasets":[{"data":[60,25,15]}]}}'>
+                        <a href="#" class="nav-link active" data-toggle="tab">
+                          All
+                        </a>
+                      </li>
+                      <li class="nav-item" data-toggle="chart" data-target="#devicesChart" data-update='{"data":{"datasets":[{"data":[15,45,20]}]}}'>
+                        <a href="#" class="nav-link" data-toggle="tab">
+                          Direct
+                        </a>
+                      </li>
+                    </ul>
+
+                  </div>
+                </div> <!-- / .row -->
+
+              </div>
+              <div class="card-body">
+
+                <!-- Chart -->
+                <div class="chart chart-appended">
+                  <canvas id="devicesChart" class="chart-canvas" data-toggle="legend" data-target="#devicesChartLegend"></canvas>
+                </div>
+
+                <!-- Legend -->
+                <div id="devicesChartLegend" class="chart-legend"></div>
+
+              </div>
+            </div>
+
+            <!-- Ad -->
+            <div class="card">
+              <a class="" href="https://themes.getbootstrap.com/preview/?theme_id=23273">
+                <img class="card-img-top" src="assets/img/kanban/kanban-2.jpg" alt="...">
+              </a>
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col">
+
+                    <!-- Title -->
+                    <h4 class="card-title mb-1">
+                      Get Landkit theme!
+                    </h4>
+
+                    <!-- Badge -->
+                    <span class="badge badge-soft-success">
+                      Ad
+                    </span>
+
+                    <!-- Price -->
+                    <small class="text-muted">
+                      $49.99
+                    </small>
+
+                  </div>
+                  <div class="col-auto">
+
+                    <!-- Button -->
+                    <a class="btn btn-sm btn-white" href="https://themes.getbootstrap.com/preview/?theme_id=23273">
+                      Buy now
+                    </a>
+
+                  </div>
+                </div> <!-- / .row -->
+              </div>
+            </div>
 
           </div>
         </div> <!-- / .row -->
