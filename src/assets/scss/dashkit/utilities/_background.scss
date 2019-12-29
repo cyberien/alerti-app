@@ -75,6 +75,6 @@
 
 @each $color, $value in $theme-colors {
   .bg-#{$color}-soft {
-    background-color: theme-color-level($color, -11) !important;
+    background-color: theme-color-level($color, $bg-soft-level) !important;
   }
 }

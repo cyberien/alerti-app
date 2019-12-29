@@ -213,8 +213,8 @@ $list-inline-padding: 6px !default;
 //
 // Customizes the `.table` component with basic values, each used across all table variations.
 
-$table-cell-padding: .9375rem !default;
-$table-cell-padding-sm: .9375rem !default;
+$table-cell-padding: 1rem !default;
+$table-cell-padding-sm: 1rem !default;
 
 $table-accent-bg: $gray-100 !default;
 $table-hover-bg: $gray-100 !default;
@@ -484,8 +484,10 @@ $progress-border-radius: 200px !default; // Always rounds even if height is manu
 
 // List groups
 
-$list-group-bg: transparent;
+$list-group-bg: transparent !default;
 $list-group-border-color: $border-color !default;
+
+$list-group-item-padding-y: 1rem !default;
 
 
 // Figures
@@ -556,6 +558,17 @@ $avatar-size-xxl: 8rem !default;
 
 $avatar-title-bg: $gray-500 !default;
 $avatar-title-color: $white !default;
+
+
+// Popover
+
+$popover-lg-max-width: 300px !default;
+
+$popover-dark-bg: $black !default;
+$popover-dark-border-color: $black !default;
+
+$popover-dark-header-bg: $black !default;
+$popover-dark-header-color: $white !default;
 
 
 // Badges
@@ -736,3 +749,8 @@ $box-shadow-lift-lg: 0 2rem 5rem fade-out($black, .9), 0 .5rem 1rem -.75rem fade
 
 $checklist-control-spacer: .75rem !default;
 $checklist-control-checked-color: $gray-700 !default;
+
+
+// Backgrounds
+
+$bg-soft-level: -11 !default;

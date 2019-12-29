@@ -66,8 +66,13 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="dashboard-alt.html" class="nav-link @@if(page=='dashboard-alt.html'){active}">
-                  Alternative
+                <a href="dashboard-analytics.html" class="nav-link @@if(page=='dashboard-analytics.html'){active}">
+                  Analytics
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="dashboard-project-management.html" class="nav-link @@if(page=='dashboard-project-management.html'){active}">
+                  Project Management
                 </a>
               </li>
             </ul>
@@ -506,9 +511,11 @@
 
       @@if (demoMode) {
       <!-- Customize -->
-      <a href="#modalDemo" class="btn btn-block btn-primary mb-4" data-toggle="modal">
-        <i class="fe fe-sliders mr-2"></i> Customize
-      </a>
+      <div id="popoverDemo" data-toggle="popover" data-trigger="manual" title="Make Dashkit Your Own!" data-content="Switch the demo to Dark Mode or adjust the navigation layout, icons, and colors!">
+        <a href="#modalDemo" class="btn btn-block btn-primary mb-4" data-toggle="modal">
+          <i class="fe fe-sliders mr-2"></i> Customize
+        </a>
+      </div>
       }
 
       @@if (navPosition == 'sidenav') {

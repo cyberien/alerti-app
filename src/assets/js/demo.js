@@ -11,6 +11,7 @@ var demoMode = (function() {
   // Variables
   //
 
+  var popover = document.querySelector('#popoverDemo');
   var form = document.querySelector('#demoForm');
   var topnav = document.querySelector('#topnav');
   var topbar = document.querySelector('#topbar');
@@ -21,11 +22,11 @@ var demoMode = (function() {
   var sidebarSizeContainer = document.querySelector('#sidebarSizeContainer')
   var navPositionToggle = document.querySelectorAll('input[name="navPosition"]');
   var containers = document.querySelectorAll('[class^="container"]');
-  var stylesheets = document.querySelectorAll('#stylesheetLight, #stylesheetDark');
   var stylesheetLight = document.querySelector('#stylesheetLight');
   var stylesheetDark = document.querySelector('#stylesheetDark');
 
   var config = {
+    showPopover: (localStorage.getItem('dashkitShowPopover')) ? localStorage.getItem('dashkitShowPopover') : true,
     colorScheme: (localStorage.getItem('dashkitColorScheme')) ? localStorage.getItem('dashkitColorScheme') : 'light',
     navPosition: (localStorage.getItem('dashkitNavPosition')) ? localStorage.getItem('dashkitNavPosition') : 'sidenav',
     navColor: (localStorage.getItem('dashkitNavColor')) ? localStorage.getItem('dashkitNavColor') : 'default',
@@ -35,6 +36,27 @@ var demoMode = (function() {
   //
   // Functions
   //
+
+  function togglePopover() {
+    if (popover) {
+      var showPopover = JSON.parse(config.showPopover);
+
+      // Show popover on load
+      if (showPopover) {
+        $(popover).popover({
+          'boundary': 'viewport',
+          'placement': 'top',
+          'template': '<div class="popover popover-lg popover-dark" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
+        }).popover('show');
+      }
+
+      // Hide popover on click
+      popover.addEventListener('click', function() {
+        $(popover).popover('hide');
+        localStorage.setItem('dashkitShowPopover', false);
+      });
+    }
+  }
 
   function parseUrl() {
     var search = window.location.search.substring(1);
@@ -181,12 +203,15 @@ var demoMode = (function() {
   }
 
   function hideNode(node) {
-    node.setAttribute('style', 'display: none !important');
+    node && node.setAttribute('style', 'display: none !important');
   }
 
   //
   // Event
   //
+
+  // Toggle popover
+  togglePopover();
 
   // Parse url
   parseUrl();

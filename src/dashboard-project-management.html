@@ -18,14 +18,14 @@
     @@include("partials/sidebar.html", {
     "category": "dashboards",
     "subcategory": "",
-    "page": "index.html"
+    "page": "dashboard-project-management.html"
     })
     }
     @@if (sidebarSize == 'small' || demoMode) {
     @@include("partials/sidebar-sm.html", {
     "category": "dashboards",
     "subcategory": "",
-    "page": "index.html"
+    "page": "dashboard-project-management.html"
     })
     }
     }
@@ -33,7 +33,7 @@
     @@include("partials/topnav.html", {
     "category": "dashboards",
     "subcategory": "",
-    "page": "index.html"
+    "page": "dashboard-project-management.html"
     })
     }
 
@@ -69,7 +69,7 @@
 
                 <!-- Nav -->
                 <ul class="nav nav-tabs header-tabs">
-                  <li class="nav-item" data-toggle="chart" data-target="#headerChartBars" data-update='{"data":{"datasets":[{"data":[0,10,5,15,10,20,15,25,20,30,25,40]}]}}' data-prefix="$" data-suffix="k">
+                  <li class="nav-item" data-toggle="chart" data-target="#earningsChart" data-update='{"data":{"datasets":[{"data":[18,10,5,15,10,20,15,25,20,26,25,29,18,10,5,15,10,20]}]}}' data-prefix="$" data-suffix="k">
                     <a href="#" class="nav-link text-center active" data-toggle="tab">
                       <h6 class="header-pretitle text-secondary">
                         Earnings
@@ -79,7 +79,7 @@
                       </h3>
                     </a>
                   </li>
-                  <li class="nav-item" data-toggle="chart" data-target="#headerChartBars" data-update='{"data":{"datasets":[{"data":[50,75, 35,25,55,87,67,53,25,80,87,45]}]}}' data-prefix="" data-suffix="k">
+                  <li class="nav-item" data-toggle="chart" data-target="#earningsChart" data-update='{"data":{"datasets":[{"data":[50,75,35,25,55,87,67,53,25,80,87,45,50,75,35,25,55]}]}}' data-prefix="" data-suffix="k">
                     <a href="#" class="nav-link text-center" data-toggle="tab">
                       <h6 class="header-pretitle text-secondary">
                         Sessions
@@ -89,7 +89,7 @@
                       </h3>
                     </a>
                   </li>
-                  <li class="nav-item" data-toggle="chart" data-target="#headerChartBars" data-update='{"data":{"datasets":[{"data":[40,57,25,50,57,32,46,28,59,34,52,48]}]}}' data-prefix="" data-suffix="%">
+                  <li class="nav-item" data-toggle="chart" data-target="#earningsChart" data-update='{"data":{"datasets":[{"data":[40,57,25,50,57,32,46,28,59,34,52,48,40,57,25,50,57]}]}}' data-prefix="" data-suffix="%">
                     <a href="#" class="nav-link text-center" data-toggle="tab">
                       <h6 class="header-pretitle text-secondary">
                         Bounce
@@ -110,7 +110,7 @@
 
             <!-- Chart -->
             <div class="chart">
-              <canvas id="headerChartBars" class="chart-canvas"></canvas>
+              <canvas id="earningsChart" class="chart-canvas"></canvas>
             </div>
 
           </div>
@@ -178,7 +178,7 @@
                   <tbody class="list">
                     <tr>
                       <td class="project-project">
-                        Update the API <br>
+                        <h4 class="font-weight-normal mb-1">Update the API</h4>
                         <small class="text-muted">Oki Doki Collective</small>
                       </td>
                       <td class="project-status">
@@ -232,7 +232,7 @@
                     </tr>
                     <tr>
                       <td class="project-project">
-                        Release v1.2-Beta <br>
+                        <h4 class="font-weight-normal mb-1">Release v1.2-Beta</h4>
                         <small class="text-muted">Oki Doki Collective</small>
                       </td>
                       <td class="project-status">
@@ -283,7 +283,7 @@
                     </tr>
                     <tr>
                       <td class="project-project">
-                        GDPR Compliance <br>
+                        <h4 class="font-weight-normal mb-1">GDPR Compliance</h4>
                         <small class="text-muted">Oki Doki Collective</small>
                       </td>
                       <td class="project-status">
@@ -334,7 +334,7 @@
                     </tr>
                     <tr>
                       <td class="project-project">
-                        v1.2 Documentation <br>
+                        <h4 class="font-weight-normal mb-1">v1.2 Documentation</h4>
                         <small class="text-muted">Oki Doki Collective</small>
                       </td>
                       <td class="project-status">
@@ -382,7 +382,7 @@
                     </tr>
                     <tr>
                       <td class="project-project">
-                        Plan design offsite <br>
+                        <h4 class="font-weight-normal mb-1">Plan design offsite</h4>
                         <small class="text-muted">Oki Doki Collective</small>
                       </td>
                       <td class="project-status">
@@ -1020,14 +1020,14 @@
                   <div class="col ml-n2">
 
                     <!-- Title -->
-                    <h4 class="card-title mb-1">
+                    <h4 class="font-weight-normal mb-1">
                       <a href="#!">Launchday Logo</a>
                     </h4>
 
-                    <!-- Time -->
-                    <p class="card-text small text-muted">
+                    <!-- Text -->
+                    <small class="text-muted">
                       2.5kb SVG
-                    </p>
+                    </small>
 
                   </div>
                   <div class="col-auto">
@@ -1068,14 +1068,14 @@
                   <div class="col ml-n2">
 
                     <!-- Title -->
-                    <h4 class="card-title mb-1">
+                    <h4 class="font-weight-normal mb-1">
                       <a href="#!">Example Grid</a>
                     </h4>
 
-                    <!-- Time -->
-                    <p class="card-text small text-muted">
+                    <!-- Text -->
+                    <small class="text-muted">
                       1.5mb PNG
-                    </p>
+                    </small>
 
                   </div>
                   <div class="col-auto">
@@ -1118,14 +1118,14 @@
                   <div class="col ml-n2">
 
                     <!-- Title -->
-                    <h4 class="card-title mb-1">
+                    <h4 class="font-weight-normal mb-1">
                       <a href="#!">Screenshot Collection</a>
                     </h4>
 
-                    <!-- Time -->
-                    <p class="card-text small text-muted">
+                    <!-- Text -->
+                    <small class="text-muted">
                       6.9mb directory
-                    </p>
+                    </small>
 
                   </div>
                   <div class="col-auto">
@@ -1166,14 +1166,14 @@
                   <div class="col ml-n2">
 
                     <!-- Title -->
-                    <h4 class="card-title mb-1">
+                    <h4 class="font-weight-normal mb-1">
                       <a href="#!">Launchday Cover</a>
                     </h4>
 
-                    <!-- Time -->
-                    <p class="card-text small text-muted">
+                    <!-- Text -->
+                    <small class="text-muted">
                       750kb JPG
-                    </p>
+                    </small>
 
                   </div>
                   <div class="col-auto">
@@ -1218,12 +1218,12 @@
 
                     <!-- Tabs -->
                     <ul class="nav nav-tabs nav-tabs-sm card-header-tabs">
-                      <li class="nav-item" data-toggle="chart" data-target="#devicesChart" data-update='{"data":{"datasets":[{"data":[60,25,15]}]}}'>
+                      <li class="nav-item" data-toggle="chart" data-target="#trafficChart" data-update='{"data":{"datasets":[{"data":[60,25,15]}]}}'>
                         <a href="#" class="nav-link active" data-toggle="tab">
                           All
                         </a>
                       </li>
-                      <li class="nav-item" data-toggle="chart" data-target="#devicesChart" data-update='{"data":{"datasets":[{"data":[15,45,20]}]}}'>
+                      <li class="nav-item" data-toggle="chart" data-target="#trafficChart" data-update='{"data":{"datasets":[{"data":[15,45,20]}]}}'>
                         <a href="#" class="nav-link" data-toggle="tab">
                           Direct
                         </a>
@@ -1238,11 +1238,11 @@
 
                 <!-- Chart -->
                 <div class="chart chart-appended">
-                  <canvas id="devicesChart" class="chart-canvas" data-toggle="legend" data-target="#devicesChartLegend"></canvas>
+                  <canvas id="trafficChart" class="chart-canvas" data-toggle="legend" data-target="#trafficChartLegend"></canvas>
                 </div>
 
                 <!-- Legend -->
-                <div id="devicesChartLegend" class="chart-legend"></div>
+                <div id="trafficChartLegend" class="chart-legend"></div>
 
               </div>
             </div>

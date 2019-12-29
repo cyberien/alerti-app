@@ -36,7 +36,6 @@
   var toggle = document.querySelectorAll('[data-toggle="chart"]');
   var legend = document.querySelectorAll('[data-toggle="legend"]');
 
-
   //
   // Functions
   //
@@ -97,7 +96,7 @@
         tooltip.setAttribute('role', 'tooltip');
         tooltip.classList.add('popover');
         tooltip.classList.add('bs-popover-top');
-        
+
         document.body.appendChild(tooltip);
       }
 
@@ -126,7 +125,7 @@
           var styles = 'background-color: ' + colors.backgroundColor;
           var indicator = '<span class="popover-body-indicator" style="' + styles + '"></span>';
           var align = (bodyLines.length > 1) ? 'justify-content-left' : 'justify-content-center';
-          
+
           html += '<div class="popover-body d-flex align-items-center ' + align + '">' + indicator + body + '</div>';
         });
 
@@ -159,7 +158,7 @@
     Chart.defaults.global.tooltips.callbacks.label = function(item, data) {
       var label = data.datasets[item.datasetIndex].label || '';
       var yLabel = item.yLabel;
-      var content = ''; 
+      var content = '';
 
       if (data.datasets.length > 1) {
         content += '<span class="popover-body-label mr-auto">' + label + '</span>';
@@ -215,7 +214,7 @@
         beginAtZero: true,
         padding: 10,
         callback: function(value) {
-          if ( !(value % 10) ) {
+          if (!(value % 10)) {
             return value
           }
         }
@@ -308,7 +307,7 @@
     suffix = suffix ? suffix : '';
 
     chart.options.scales.yAxes[0].ticks.callback = function(value) {
-      if ( !(value % 10) ) {
+      if (!(value % 10)) {
         return prefix + value + suffix;
       }
     }
@@ -348,7 +347,6 @@
     return chartInstance;
   }
 
-
   //
   // Events
   //
@@ -382,7 +380,7 @@
         });
       });
     }
-    
+
   }
 
 })();
