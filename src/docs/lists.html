@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include("../partials/head.html", {
+    "title": "Dashkit"
+    })
+  </head>
+  <body>
+
+    <!-- MODALS
+    ================================================== -->
+    @@include("../partials/modals.html")
+
+    <!-- NAVIGATION
+    ================================================== -->
+    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
+    @@if (sidebarSize == 'base' || demoMode) {
+    @@include("../partials/sidebar.html", {
+    "category": "components",
+    "subcategory": "",
+    "page": "lists.html"
+    })
+    }
+    @@if (sidebarSize == 'small' || demoMode) {
+    @@include("../partials/sidebar-sm.html", {
+    "category": "components",
+    "subcategory": "",
+    "page": "lists.html"
+    })
+    }
+    }
+    @@if (navPosition == 'topnav' || demoMode) {
+    @@include("../partials/topnav.html", {
+    "category": "components",
+    "subcategory": "",
+    "page": "lists.html"
+    })
+    }
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content">
+
+      @@if (navPosition == 'combo' || demoMode) {
+      @@include("../partials/topbar.html")
+      }
+
+      <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10 col-xl-8">
+
+            <!-- Header -->
+            <div class="header mt-md-5">
+              <div class="header-body">
+
+                <!-- Title -->
+                <h1 class="header-title">
+                  Lists
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="header-subtitle">
+                  List groups are a flexible and powerful component for displaying a series of content. Modify and extend them to support just about any content within. Please read the <a target="_blank" href="http://getbootstrap.com/docs/4.1/components/list-group/">official Bootstrap documentation</a> for a full list of options.
+                </p>
+
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="card">
+              <div class="card-body">
+
+                <ul class="list-group">
+                  <li class="list-group-item active">Cras justo odio</li>
+                  <li class="list-group-item">Dapibus ac facilisis in</li>
+                  <li class="list-group-item">Morbi leo risus</li>
+                  <li class="list-group-item">Porta ac consectetur ac</li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Morbi leo risus
+                    <span class="badge badge-primary badge-pill">1</span>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+
+            <!-- Divider -->
+            <hr class="my-5">
+
+            <!-- Heading -->
+            <h2 class="mb-2">
+              List group large <span class="badge badge-soft-primary ml-1 mt-n1">Dashkit only</span>
+            </h2>
+
+            <!-- Subheading -->
+            <p class="text-muted mb-4">
+              Increase the vertical padding of list group items with the <code>.list-group-lg</code> modifier.
+            </p>
+
+            <!-- Card -->
+            <div class="card">
+              <div class="card-body">
+
+                <ul class="list-group list-group-lg">
+                  <li class="list-group-item active">Cras justo odio</li>
+                  <li class="list-group-item">Dapibus ac facilisis in</li>
+                  <li class="list-group-item">Morbi leo risus</li>
+                  <li class="list-group-item">Porta ac consectetur ac</li>
+                  <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+
+              </div>
+              <div class="card-footer bg-dark">
+                <code class="highlight html bg-dark">
+                  &lt;ul&nbsp;class=&quot;list-group&nbsp;list-group-lg&quot;&gt;<br />&nbsp;&nbsp;&lt;li&nbsp;class=&quot;list-group-item&nbsp;active&quot;&gt;Cras&nbsp;justo&nbsp;odio&lt;/li&gt;<br />&nbsp;&nbsp;&lt;li&nbsp;class=&quot;list-group-item&quot;&gt;Dapibus&nbsp;ac&nbsp;facilisis&nbsp;in&lt;/li&gt;<br />&nbsp;&nbsp;&lt;li&nbsp;class=&quot;list-group-item&quot;&gt;Morbi&nbsp;leo&nbsp;risus&lt;/li&gt;<br />&nbsp;&nbsp;&lt;li&nbsp;class=&quot;list-group-item&quot;&gt;Porta&nbsp;ac&nbsp;consectetur&nbsp;ac&lt;/li&gt;<br />&nbsp;&nbsp;&lt;li&nbsp;class=&quot;list-group-item&quot;&gt;Vestibulum&nbsp;at&nbsp;eros&lt;/li&gt;<br />&lt;/ul&gt;
+                </code>
+              </div>
+            </div>
+
+            <!-- Divider -->
+            <hr class="my-5">
+
+            <!-- Heading -->
+            <h2 class="mb-2">
+              List.js <span class="badge badge-soft-primary ml-1 mt-n1">Dashkit only</span> <span class="badge badge-soft-warning ml-1 mt-n1">Plugin</span>
+            </h2>
+
+            <!-- Subheading -->
+            <p class="text-muted mb-4">
+              Create searchable, sortable, and filterable lists and tables with the simple but powerful List.js plugin. Please read the <a target="_blank" href="http://listjs.com/">official plugin documentation</a> for a full list of options.
+            </p>
+
+            <!-- Card -->
+            <div class="card" data-toggle="lists" data-options='{"valueNames": ["name"]}'>
+              <div class="card-header">
+                <div class="row align-items-center">
+                  <div class="col">
+
+                    <!-- Title -->
+                    <h4 class="card-header-title">
+                      Add a member
+                    </h4>
+
+                  </div>
+                </div> <!-- / .row -->
+              </div>
+              <div class="card-header">
+
+                <!-- Form -->
+                <form>
+                  <div class="input-group input-group-flush input-group-merge">
+                    <input type="search" class="form-control form-control-prepended search" placeholder="Search">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <span class="fe fe-search"></span>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+
+              </div>
+              <div class="card-body">
+
+                <!-- List group -->
+                <ul class="list-group list-group-flush list my-n3">
+                  <li class="list-group-item px-0">
+
+                    <div class="row align-items-center">
+                      <div class="col-auto">
+
+                        <!-- Avatar -->
+                        <a href="profile-posts.html" class="avatar">
+                          <img src="@@webRoot/assets/img/avatars/profiles/avatar-5.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+
+                      </div>
+                      <div class="col ml-n2">
+
+                        <!-- Title -->
+                        <h4 class="mb-1 name">
+                          <a href="profile-posts.html">Miyah Myles</a>
+                        </h4>
+
+                        <!-- Time -->
+                        <p class="small mb-0">
+                          <span class="text-success">●</span> Online
+                        </p>
+
+                      </div>
+                      <div class="col-auto">
+
+                        <!-- Button -->
+                        <a href="#!" class="btn btn-sm btn-white">
+                          Add
+                        </a>
+
+                      </div>
+                    </div> <!-- / .row -->
+
+                  </li>
+                  <li class="list-group-item px-0">
+
+                    <div class="row align-items-center">
+                      <div class="col-auto">
+
+                        <!-- Avatar -->
+                        <a href="profile-posts.html" class="avatar">
+                          <img src="@@webRoot/assets/img/avatars/profiles/avatar-6.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+
+                      </div>
+                      <div class="col ml-n2">
+
+                        <!-- Title -->
+                        <h4 class="mb-1 name">
+                          <a href="profile-posts.html">Ryu Duke</a>
+                        </h4>
+
+                        <!-- Time -->
+                        <p class="small mb-0">
+                          <span class="text-success">●</span> Online
+                        </p>
+
+                      </div>
+                      <div class="col-auto">
+
+                        <!-- Button -->
+                        <a href="#!" class="btn btn-sm btn-white">
+                          Add
+                        </a>
+
+                      </div>
+                    </div> <!-- / .row -->
+
+                  </li>
+                  <li class="list-group-item px-0">
+
+                    <div class="row align-items-center">
+                      <div class="col-auto">
+
+                        <!-- Avatar -->
+                        <a href="profile-posts.html" class="avatar">
+                          <img src="@@webRoot/assets/img/avatars/profiles/avatar-7.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+
+                      </div>
+                      <div class="col ml-n2">
+
+                        <!-- Title -->
+                        <h4 class="mb-1 name">
+                          <a href="profile-posts.html">Glen Rouse</a>
+                        </h4>
+
+                        <!-- Time -->
+                        <p class="small mb-0">
+                          <span class="text-warning">●</span> Busy
+                        </p>
+
+                      </div>
+                      <div class="col-auto">
+
+                        <!-- Button -->
+                        <a href="#!" class="btn btn-sm btn-white">
+                          Add
+                        </a>
+
+                      </div>
+                    </div> <!-- / .row -->
+
+                  </li>
+                  <li class="list-group-item px-0">
+
+                    <div class="row align-items-center">
+                      <div class="col-auto">
+
+                        <!-- Avatar -->
+                        <a href="profile-posts.html" class="avatar">
+                          <img src="@@webRoot/assets/img/avatars/profiles/avatar-8.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+
+                      </div>
+                      <div class="col ml-n2">
+
+                        <!-- Title -->
+                        <h4 class="mb-1 name">
+                          <a href="profile-posts.html">Grace Gross</a>
+                        </h4>
+
+                        <!-- Time -->
+                        <p class="small mb-0">
+                          <span class="text-danger">●</span> Offline
+                        </p>
+
+                      </div>
+                      <div class="col-auto">
+
+                        <!-- Button -->
+                        <a href="#!" class="btn btn-sm btn-white">
+                          Add
+                        </a>
+
+                      </div>
+                    </div> <!-- / .row -->
+
+                  </li>
+                </ul>
+
+              </div>
+              <div class="card-footer bg-dark">
+                <code class="highlight html bg-dark">
+                  &lt;div&nbsp;data-toggle=&quot;lists&quot;&nbsp;data-options='{&quot;valueNames&quot;:&nbsp;[&quot;name&quot;]}'&gt;<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;&lt;input&nbsp;class=&quot;form-control&nbsp;search&quot;&nbsp;type=&quot;search&quot;&nbsp;/&gt;<br /><br />&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;list-group&nbsp;list&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;list-group-item&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;name&quot;&gt;Casey&nbsp;Fyfe&lt;/span&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;list-group-item&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;name&quot;&gt;Jane&nbsp;Roe&lt;/span&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;list-group-item&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;name&quot;&gt;Casey&nbsp;Fyfe&lt;/span&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;list-group-item&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;name&quot;&gt;Jane&nbsp;Roe&lt;/span&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br />&nbsp;&nbsp;&lt;/ul&gt;<br /><br />&lt;/div&gt;
+                </code>
+              </div>
+            </div>
+
+          </div>
+        </div> <!-- / .row -->
+      </div>
+
+    </div> <!-- / .main-content -->
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("../partials/scripts.html")
+
+  </body>
+</html>

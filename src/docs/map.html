@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include("../partials/head.html", {
+    "title": "Dashkit"
+    })
+  </head>
+  <body>
+
+    <!-- MODALS
+    ================================================== -->
+    @@include("../partials/modals.html")
+
+    <!-- NAVIGATION
+    ================================================== -->
+    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
+    @@if (sidebarSize == 'base' || demoMode) {
+    @@include("../partials/sidebar.html", {
+    "category": "components",
+    "subcategory": "",
+    "page": "map.html"
+    })
+    }
+    @@if (sidebarSize == 'small' || demoMode) {
+    @@include("../partials/sidebar-sm.html", {
+    "category": "components",
+    "subcategory": "",
+    "page": "map.html"
+    })
+    }
+    }
+    @@if (navPosition == 'topnav' || demoMode) {
+    @@include("../partials/topnav.html", {
+    "category": "components",
+    "subcategory": "",
+    "page": "map.html"
+    })
+    }
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content">
+
+      @@if (navPosition == 'combo' || demoMode) {
+      @@include("../partials/topbar.html")
+      }
+
+      <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10 col-xl-8">
+
+            <!-- Header -->
+            <div class="header mt-md-5">
+              <div class="header-body">
+
+                <!-- Title -->
+                <h1 class="header-title">
+                  Map <span class="badge badge-soft-primary ml-1 mt-n1">Dashkit only</span> <span class="badge badge-soft-success mt-n1">New</span>
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="header-subtitle">
+                  Adds an interactive map powered by Mapbox. You can pass any options supported by the plugin via the <code>data-options</code> attribute. The value must be a valid JSON object. Please read the <a target="_blank" href="https://www.mapbox.com/">official plugin documentation</a> for a full list of options.
+                </p>
+
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="card">
+              <div class="card-body">
+
+                <div class="embed-responsive embed-responsive-21by9 rounded">
+                  <div class="embed-responsive-item" data-toggle="map" data-options='{"center": [-118.244615, 34.052979], "zoom": 12}'></div>
+                </div>
+
+              </div>
+              <div class="card-footer bg-dark">
+                <code class="highlight html bg-dark">
+                  &lt;div&nbsp;class=&quot;embed-responsive&nbsp;embed-responsive-21by9&nbsp;rounded&quot;&gt;<br />&nbsp;&nbsp;&lt;div&nbsp;class=&quot;embed-responsive-item&quot;&nbsp;data-toggle=&quot;map&quot;&nbsp;data-options='{&quot;center&quot;:&nbsp;[-118.244615,&nbsp;34.052979],&nbsp;&quot;zoom&quot;:&nbsp;12}'&gt;&lt;/div&gt;<br />&lt;/div&gt;
+                </code>
+              </div>
+            </div>
+
+          </div>
+        </div> <!-- / .row -->
+      </div>
+
+    </div> <!-- / .main-content -->
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("../partials/scripts.html")
+
+  </body>
+</html>

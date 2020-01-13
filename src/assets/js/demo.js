@@ -39,7 +39,7 @@ var demoMode = (function() {
 
   function togglePopover() {
     if (popover) {
-      var showPopover = JSON.parse(config.showPopover);
+      var showPopover = JSON.parse(config.showPopover) && config.sidebarSize === 'base';
 
       // Show popover on load
       if (showPopover) {

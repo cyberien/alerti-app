@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include("../partials/head.html", {
+    "title": "Dashkit"
+    })
+  </head>
+  <body>
+
+    <!-- MODALS
+    ================================================== -->
+    @@include("../partials/modals.html")
+
+    <!-- NAVIGATION
+    ================================================== -->
+    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
+    @@if (sidebarSize == 'base' || demoMode) {
+    @@include("../partials/sidebar.html", {
+    "category": "components",
+    "subcategory": "",
+    "page": "charts.html"
+    })
+    }
+    @@if (sidebarSize == 'small' || demoMode) {
+    @@include("../partials/sidebar-sm.html", {
+    "category": "components",
+    "subcategory": "",
+    "page": "charts.html"
+    })
+    }
+    }
+    @@if (navPosition == 'topnav' || demoMode) {
+    @@include("../partials/topnav.html", {
+    "category": "components",
+    "subcategory": "",
+    "page": "charts.html"
+    })
+    }
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content">
+
+      @@if (navPosition == 'combo' || demoMode) {
+      @@include("../partials/topbar.html")
+      }
+
+      <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10 col-xl-8">
+
+            <!-- Header -->
+            <div class="header mt-md-5">
+              <div class="header-body">
+
+                <!-- Title -->
+                <h1 class="header-title">
+                  Charts <span class="badge badge-soft-primary ml-1 mt-n1">Dashkit only</span> <span class="badge badge-soft-warning ml-1 mt-n1">Plugin</span>
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="header-subtitle">
+                  Create beautiful charts with a simple, but powerful and flexible JavaScript Chart.js plugin. Please read the <a target="_blank" href="https://www.chartjs.org/">official documentation</a> for a full list of options.
+                </p>
+
+              </div>
+            </div>
+
+            <!-- Heading -->
+            <h2 class="mb-2">
+              Line
+            </h2>
+
+            <!-- Subheading -->
+            <p class="text-muted mb-4">
+              A line chart is a way of plotting data points on a line. Often, it is used to show trend data, or the comparison of two data sets.
+            </p>
+
+            <!-- Card -->
+            <div class="card">
+              <div class="card-body">
+
+                <div class="chart">
+                  <canvas id="performanceChart" class="chart-canvas"></canvas>
+                </div>
+
+              </div>
+              <div class="card-footer bg-dark">
+                <code class="highlight html bg-dark">
+                  &lt;div&nbsp;class=&quot;chart&quot;&gt;<br />&nbsp;&nbsp;&lt;canvas&nbsp;id=&quot;performanceChart&quot;&nbsp;class=&quot;chart-canvas&quot;&gt;&lt;/canvas&gt;<br />&lt;/div&gt;<br /><br />&lt;script&gt;<br />new&nbsp;Chart('performanceChart'),&nbsp;{<br />&nbsp;&nbsp;type:&nbsp;'line',<br />&nbsp;&nbsp;data:&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;labels:&nbsp;['Jan',&nbsp;'Feb',&nbsp;'Mar',&nbsp;'Apr',&nbsp;'May',&nbsp;'Jun',&nbsp;'Jul',&nbsp;'Aug',&nbsp;'Sep',&nbsp;'Oct',&nbsp;'Nov',&nbsp;'Dec'],<br />&nbsp;&nbsp;&nbsp;&nbsp;datasets:&nbsp;[{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;label:&nbsp;'Performance',<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data:&nbsp;[0,10,5,15,10,20,15,25,20,30,25,40]<br />&nbsp;&nbsp;&nbsp;&nbsp;}]<br />&nbsp;&nbsp;}<br />});<br />&lt;/script&gt;
+                </code>
+              </div>
+            </div>
+
+            <!-- Divider -->
+            <hr class="my-5">
+
+            <!-- Heading -->
+            <h2 class="mb-2">
+              Bar
+            </h2>
+
+            <!-- Subheading -->
+            <p class="text-muted mb-4">
+              A bar chart provides a way of showing data values represented as vertical bars. It is sometimes used to show trend data, and the comparison of multiple data sets side by side.
+            </p>
+
+            <!-- Card -->
+            <div class="card">
+              <div class="card-body">
+
+                <div class="chart">
+                  <canvas id="ordersChart" class="chart-canvas"></canvas>
+                </div>
+
+              </div>
+              <div class="card-footer bg-dark">
+                <code class="highlight html bg-dark">
+                  &lt;div&nbsp;class=&quot;chart&quot;&gt;<br />&nbsp;&nbsp;&lt;canvas&nbsp;id=&quot;ordersChart&quot;&nbsp;class=&quot;chart-canvas&quot;&gt;&lt;/canvas&gt;<br />&lt;/div&gt;<br /><br />&lt;script&gt;<br />new&nbsp;Chart('ordersChart',&nbsp;{<br />&nbsp;&nbsp;type:&nbsp;'bar',<br />&nbsp;&nbsp;data:&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;labels:&nbsp;['Jan',&nbsp;'Feb',&nbsp;'Mar',&nbsp;'Apr',&nbsp;'May',&nbsp;'Jun',&nbsp;'Jul',&nbsp;'Aug',&nbsp;'Sep',&nbsp;'Oct',&nbsp;'Nov',&nbsp;'Dec'],<br />&nbsp;&nbsp;&nbsp;&nbsp;datasets:&nbsp;[{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;label:&nbsp;'Sales',<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data:&nbsp;[25,20,30,22,17,10,18,26,28,26,20,32]<br />&nbsp;&nbsp;&nbsp;&nbsp;}]<br />&nbsp;&nbsp;}<br />});<br>&lt;/script&gt;
+                </code>
+              </div>
+            </div>
+
+            <!-- Divider -->
+            <hr class="my-5">
+
+            <!-- Heading -->
+            <h2 class="mb-2">
+              Doughnut
+            </h2>
+
+            <!-- Subheading -->
+            <p class="text-muted mb-4">
+              Excellent at showing the relational proportions between data.
+            </p>
+
+            <!-- Card -->
+            <div class="card">
+              <div class="card-body">
+
+                <div class="chart">
+                  <canvas id="devicesChart" class="chart-canvas" data-toggle="legend" data-target="#devicesChartLegend"></canvas>
+                </div>
+
+                <div id="devicesChartLegend" class="chart-legend"></div>
+
+              </div>
+              <div class="card-body bg-dark">
+                <code class="highlight html bg-dark">
+                  &lt;div&nbsp;class=&quot;chart&quot;&gt;<br />&nbsp;&nbsp;&lt;canvas&nbsp;id=&quot;devicesChart&quot;&nbsp;class=&quot;chart-canvas&quot;&nbsp;data-toggle=&quot;legend&quot;&nbsp;data-target=&quot;#devicesChartLegend&quot;&gt;&lt;/canvas&gt;<br />&lt;/div&gt;<br /><br />&lt;div&nbsp;id=&quot;devicesChartLegend&quot;&nbsp;class=&quot;chart-legend&quot;&gt;&lt;/div&gt;<br /><br />&lt;script&gt;<br />new&nbsp;Chart('devicesChart',&nbsp;{<br />&nbsp;&nbsp;type:&nbsp;'doughnut',<br />&nbsp;&nbsp;data:&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;labels:&nbsp;['Desktop',&nbsp;'Tablet',&nbsp;'Mobile'],<br />&nbsp;&nbsp;&nbsp;&nbsp;datasets:&nbsp;[{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data:&nbsp;[60,&nbsp;25,&nbsp;15]<br />&nbsp;&nbsp;&nbsp;&nbsp;}]<br />&nbsp;&nbsp;}<br />});<br />&lt;/script&gt;
+                </code>
+              </div>
+            </div>
+
+            <!-- Divider -->
+            <hr class="my-5">
+
+            <!-- Heading -->
+            <h2 class="mb-2">
+              Sparkline
+            </h2>
+
+            <!-- Subheading -->
+            <p class="text-muted mb-4">
+              A simple little line chart with disabled interactions.
+            </p>
+
+            <!-- Card -->
+            <div class="card">
+              <div class="card-body">
+
+                <div class="chart chart-sparkline">
+                  <canvas class="chart-canvas" id="sparklineChart"></canvas>
+                </div>
+
+              </div>
+              <div class="card-body bg-dark">
+                <code class="highlight html bg-dark">
+                  &lt;div&nbsp;class=&quot;chart&nbsp;chart-sparkline&quot;&gt;<br />&nbsp;&nbsp;&lt;canvas&nbsp;class=&quot;chart-canvas&quot;&nbsp;id=&quot;sparklineChart&quot;&gt;&lt;/canvas&gt;<br />&lt;/div&gt;<br /><br />&lt;script&gt;<br />&nbsp;&nbsp;new&nbsp;Chart('sparkChart',&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;type:&nbsp;'line',<br />&nbsp;&nbsp;&nbsp;&nbsp;options:&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scales:&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;yAxes:&nbsp;[{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;false<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}],<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xAxes:&nbsp;[{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;false<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elements:&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;line:&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;borderWidth:&nbsp;2<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;point:&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hoverRadius:&nbsp;0<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tooltips:&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;custom:&nbsp;function()&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;false;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;},<br />&nbsp;&nbsp;&nbsp;&nbsp;data:&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;labels:&nbsp;new&nbsp;Array(12),<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;datasets:&nbsp;[{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data:&nbsp;[0,&nbsp;15,&nbsp;10,&nbsp;25,&nbsp;30,&nbsp;15,&nbsp;40,&nbsp;50,&nbsp;80,&nbsp;60,&nbsp;55,&nbsp;65]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}]<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;});<br />&lt;/script&gt;
+                </code>
+              </div>
+            </div>
+
+            <!-- Divider -->
+            <hr class="my-5">
+
+            <!-- Heading -->
+            <h2 class="mb-2">
+              Toggle chart data
+            </h2>
+
+            <!-- Subheading -->
+            <p class="text-muted mb-4">
+              Easily toggle an additional set of data with a simple interface based on the <code>data</code> attributes.
+            </p>
+
+            <!-- Table -->
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-header-title">
+                  Options
+                </h4>
+              </div>
+              <div class="table-responsive">
+                <table class="table table-sm card-table">
+                  <thead>
+                    <tr>
+                      <th>
+                        Name
+                      </th>
+                      <th>
+                        Type
+                      </th>
+                      <th>
+                        Default
+                      </th>
+                      <th>
+                        Description
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <code>data-toggle</code>
+                      </td>
+                      <td>
+                        string
+                      </td>
+                      <td>
+                        chart
+                      </td>
+                      <td>
+                        Activates the toggle functionality.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>data-target</code>
+                      </td>
+                      <td>
+                        string
+                      </td>
+                      <td>
+                        -
+                      </td>
+                      <td>
+                        The selector of a chart the new set of data will be applied to.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>data-add</code>
+                      </td>
+                      <td>
+                        object
+                      </td>
+                      <td>
+                        -
+                      </td>
+                      <td>
+                        The new set of data to be applied in the chart.js format. Please read the <a target="_blank" href="http://www.chartjs.org/">official documentation</a> for more info.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="card">
+              <div class="card-header">
+                <div class="row align-items-center">
+                  <div class="col">
+
+                    <!-- Title -->
+                    <h4 class="card-header-title">
+                      Orders
+                    </h4>
+
+                  </div>
+                  <div class="col-auto mr-n3">
+
+                    <!-- Caption -->
+                    <span class="text-muted">
+                      Show affiliate:
+                    </span>
+
+                  </div>
+                  <div class="col-auto">
+
+                    <!-- Switch -->
+                    <div class="custom-control custom-switch">
+                      <input type="checkbox" class="custom-control-input" id="cardToggle" data-toggle="chart" data-target="#ordersChartAlias" data-add='{"data":{"datasets":[{"data":[15,10,20,12,7,0,8,16,18,16,10,22],"backgroundColor":"#d2ddec","label":"Affiliate"}]}}'>
+                      <label class="custom-control-label" for="cardToggle"></label>
+                    </div>
+
+                  </div>
+                </div> <!-- / .row -->
+
+              </div>
+              <div class="card-body">
+
+                <!-- Chart -->
+                <div class="chart">
+                  <canvas id="ordersChartAlias" class="chart-canvas"></canvas>
+                </div>
+
+              </div>
+              <div class="card-footer bg-dark">
+                <code class="highlight html bg-dark">
+                  &lt;div&nbsp;class=&quot;custom-control&nbsp;custom-checkbox-toggle&quot;&gt;<br />&nbsp;&nbsp;&lt;input&nbsp;type=&quot;checkbox&quot;&nbsp;class=&quot;custom-control-input&quot;&nbsp;id=&quot;cardToggle&quot;&nbsp;data-toggle=&quot;chart&quot;&nbsp;data-target=&quot;#ordersChart&quot;&nbsp;data-add='{&quot;data&quot;:{&quot;datasets&quot;:[{&quot;data&quot;:[15,10,20,12,7,0,8,16,18,16,10,22],&quot;backgroundColor&quot;:&quot;#d2ddec&quot;,&quot;label&quot;:&quot;Affiliate&quot;}]}}'&gt;<br />&nbsp;&nbsp;&lt;label&nbsp;class=&quot;custom-control-label&quot;&nbsp;for=&quot;cardToggle&quot;&gt;&lt;/label&gt;<br />&lt;/div&gt;<br /><br />&lt;div&nbsp;class=&quot;chart&quot;&gt;<br />&nbsp;&nbsp;&lt;canvas&nbsp;id=&quot;ordersChart&quot;&nbsp;class=&quot;chart-canvas&quot;&gt;&lt;/canvas&gt;<br />&lt;/div&gt;
+                </code>
+              </div>
+            </div>
+
+            <!-- Divider -->
+            <hr class="my-5">
+
+            <!-- Heading -->
+            <h2 class="mb-2">
+              Update chart data
+            </h2>
+
+            <!-- Subheading -->
+            <p class="text-muted mb-4">
+              Update the current set of data with a similar to the toggle interface. Please use the options above along with the new <code>data</code> attributes:
+            </p>
+
+            <!-- Table -->
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-header-title">
+                  Options
+                </h4>
+              </div>
+              <div class="table-responsive">
+                <table class="table table-sm card-table">
+                  <thead>
+                    <tr>
+                      <th>
+                        Name
+                      </th>
+                      <th>
+                        Type
+                      </th>
+                      <th>
+                        Default
+                      </th>
+                      <th>
+                        Description
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <code>data-update</code>
+                      </td>
+                      <td>
+                        object
+                      </td>
+                      <td>
+                        -
+                      </td>
+                      <td>
+                        The new set of data to be applied in the chart.js format. Please read the <a target="_blank" href="http://www.chartjs.org/">official documentation</a> for more info. This attribute should not be used together with the <code>data-add</code> attribute.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>data-prefix</code>
+                      </td>
+                      <td>
+                        string
+                      </td>
+                      <td>
+                        -
+                      </td>
+                      <td>
+                        Changes the prefix value for the y axes ticks and tooltips.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <code>data-suffix</code>
+                      </td>
+                      <td>
+                        string
+                      </td>
+                      <td>
+                        -
+                      </td>
+                      <td>
+                        Changes the suffix value for the y axes ticks and tooltips.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="card">
+              <div class="card-header">
+
+                <!-- Tabs -->
+                <ul class="nav nav-tabs card-header-tabs">
+                  <li class="nav-item" data-toggle="chart" data-target="#performanceChartAlias" data-update='{"data":{"datasets":[{"data":[0,10,5,15,10,20,15,25,20,30,25,40]}]}}' data-prefix="$" data-suffix="k">
+                    <a class="nav-link active" href="#" data-toggle="tab">
+                      Earned
+                    </a>
+                  </li>
+                  <li class="nav-item" data-toggle="chart" data-target="#performanceChartAlias" data-update='{"data":{"datasets":[{"data":[7,35,12,27,34,17,19,30,28,32,24,39]}]}}' data-prefix="" data-suffix="hr">
+                    <a class="nav-link" href="#" data-toggle="tab">
+                      Hours Worked
+                    </a>
+                  </li>
+                </ul>
+
+              </div>
+              <div class="card-body">
+
+                <!-- Chart -->
+                <div class="chart">
+                  <canvas id="performanceChartAlias" class="chart-canvas"></canvas>
+                </div>
+
+              </div>
+              <div class="card-footer bg-dark">
+                <code class="highlight html bg-dark">
+                  &lt;ul&nbsp;class=&quot;nav&nbsp;nav-tabs&nbsp;card-header-tabs&quot;&gt;<br />&nbsp;&nbsp;&lt;li&nbsp;class=&quot;nav-item&quot;&nbsp;data-toggle=&quot;chart&quot;&nbsp;data-target=&quot;#performanceChartAlias&quot;&nbsp;data-update='{&quot;data&quot;:{&quot;datasets&quot;:[{&quot;data&quot;:[0,10,5,15,10,20,15,25,20,30,25,40]}]}}'&nbsp;data-prefix=&quot;$&quot;&nbsp;data-suffix=&quot;k&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;class=&quot;nav-link&nbsp;active&quot;&nbsp;href=&quot;#&quot;&nbsp;data-toggle=&quot;tab&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Earned<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br />&nbsp;&nbsp;&lt;/li&gt;<br />&nbsp;&nbsp;&lt;li&nbsp;class=&quot;nav-item&quot;&nbsp;data-toggle=&quot;chart&quot;&nbsp;data-target=&quot;#performanceChartAlias&quot;&nbsp;data-update='{&quot;data&quot;:{&quot;datasets&quot;:[{&quot;data&quot;:[7,35,12,27,34,17,19,30,28,32,24,39]}]}}'&nbsp;data-prefix=&quot;&quot;&nbsp;data-suffix=&quot;hr&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;class=&quot;nav-link&quot;&nbsp;href=&quot;#&quot;&nbsp;data-toggle=&quot;tab&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hours&nbsp;Worked<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br />&nbsp;&nbsp;&lt;/li&gt;<br />&lt;/ul&gt;<br /><br />&lt;div&nbsp;class=&quot;chart&quot;&gt;<br />&nbsp;&nbsp;&lt;canvas&nbsp;id=&quot;performanceChartAlias&quot;&nbsp;class=&quot;chart-canvas&quot;&gt;&lt;/canvas&gt;<br />&lt;/div&gt;
+                </code>
+              </div>
+            </div>
+
+          </div>
+        </div> <!-- / .row -->
+      </div>
+
+    </div> <!-- / .main-content -->
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("../partials/scripts.html")
+
+  </body>
+</html>
