@@ -5,9 +5,7 @@
 
 'use strict';
 
-// Audience
-//
-// Audience card chart
+// Audience chart
 
 (function() {
 
@@ -77,9 +75,7 @@
 
 })();
 
-// Convertions
-//
-// Convertions card chart
+// Convertions chart
 
 (function() {
 
@@ -145,9 +141,7 @@
 
 })();
 
-// Traffic
-//
-// Traffic card chart
+// Traffic chart
 
 (function() {
 
@@ -201,9 +195,7 @@
 
 })();
 
-// Followers
-//
-// Followers card chart
+// Followers chart
 
 (function() {
 
@@ -274,9 +266,7 @@
 
 })();
 
-// Sales
-//
-// Sales card chart
+// Sales chart
 
 (function() {
 
@@ -342,9 +332,7 @@
 
 })();
 
-// Orders
-//
-// Orders card chart
+// Orders chart
 
 (function() {
 
@@ -410,9 +398,7 @@
 
 })();
 
-// Earnings
-//
-// Earnings card chart
+// Earnings chart
 
 (function() {
 
@@ -478,277 +464,7 @@
 
 })();
 
-// Header
-//
-// Header card chart
-
-(function() {
-
-  //
-  // Variables
-  //
-
-  var chart = document.getElementById('headerChart');
-
-  //
-  // Functions
-  //
-
-  function init(chart) {
-    new Chart(chart, {
-      type: 'line',
-      options: {
-        scales: {
-          yAxes: [{
-            gridLines: {
-              color: '#283E59',
-              zeroLineColor: '#283E59'
-            },
-            ticks: {
-              callback: function(value) {
-                if (!(value % 10)) {
-                  return '$' + value + 'k';
-                }
-              }
-            }
-          }]
-        },
-        tooltips: {
-          callbacks: {
-            label: function(item, data) {
-              var label = data.datasets[item.datasetIndex].label || '';
-              var yLabel = item.yLabel;
-              var content = '';
-
-              if (data.datasets.length > 1) {
-                content += '<span class="popover-body-label mr-auto">' + label + '</span>';
-              }
-
-              content += '<span class="popover-body-value">$' + yLabel + 'k</span>';
-              return content;
-            }
-          }
-        }
-      },
-      data: {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-        datasets: [{
-          label: 'Performance',
-          data: [0, 10, 5, 15, 10, 20, 15, 25, 20, 30, 25, 40]
-        }]
-      }
-    });
-  };
-
-  //
-  // Events
-  //
-
-  if (typeof Chart !== 'undefined' && chart) {
-    init(chart);
-  }
-
-})();
-
-// Performance alias
-//
-// Performance alias card chart
-
-(function() {
-
-  //
-  // Variables
-  //
-
-  var chart = document.getElementById('performanceChartAlias');
-
-  //
-  // Functions
-  //
-
-  function init(chart) {
-    new Chart(chart, {
-      type: 'line',
-      options: {
-        scales: {
-          yAxes: [{
-            ticks: {
-              callback: function(value) {
-                if (!(value % 10)) {
-                  return '$' + value + 'k'
-                }
-              }
-            }
-          }]
-        },
-        tooltips: {
-          callbacks: {
-            label: function(item, data) {
-              var label = data.datasets[item.datasetIndex].label || '';
-              var yLabel = item.yLabel;
-              var content = '';
-
-              if (data.datasets.length > 1) {
-                content += '<span class="popover-body-label mr-auto">' + label + '</span>';
-              }
-
-              content += '<span class="popover-body-value">$' + yLabel + 'k</span>';
-              return content;
-            }
-          }
-        }
-      },
-      data: {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-        datasets: [{
-          label: 'Performance',
-          data: [0, 10, 5, 15, 10, 20, 15, 25, 20, 30, 25, 40]
-        }]
-      }
-    });
-  }
-
-  //
-  // Events
-  //
-
-  if (typeof Chart !== 'undefined' && chart) {
-    init(chart);
-  }
-
-})();
-
-// Orders alias
-//
-// Orders alias card chart
-
-(function() {
-
-  //
-  // Variables
-  //
-
-  var chart = document.getElementById('ordersChartAlias');
-
-  //
-  // Functions
-  //
-
-  function init(chart) {
-    new Chart(chart, {
-      type: 'bar',
-      options: {
-        scales: {
-          yAxes: [{
-            ticks: {
-              callback: function(value) {
-                if (!(value % 10)) {
-                  return '$' + value + 'k'
-                }
-              }
-            }
-          }]
-        },
-        tooltips: {
-          callbacks: {
-            label: function(item, data) {
-              var label = data.datasets[item.datasetIndex].label || '';
-              var yLabel = item.yLabel;
-              var content = '';
-
-              if (data.datasets.length > 1) {
-                content += '<span class="popover-body-label mr-auto">' + label + '</span>';
-              }
-
-              content += '<span class="popover-body-value">$' + yLabel + 'k</span>';
-              return content;
-            }
-          }
-        }
-      },
-      data: {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-        datasets: [{
-          label: 'Sales',
-          data: [25, 20, 30, 22, 17, 10, 18, 26, 28, 26, 20, 32]
-        }]
-      }
-    });
-  }
-
-  //
-  // Events
-  //
-
-  if (typeof Chart !== 'undefined' && chart) {
-    init(chart);
-  }
-
-})();
-
-// Devices
-//
-// Devices card chart
-
-(function() {
-
-  //
-  // Variables
-  //
-
-  var chart = document.getElementById('devicesChart');
-
-  //
-  // Functions
-  //
-
-  function init(chart) {
-    new Chart(chart, {
-      type: 'doughnut',
-      options: {
-        tooltips: {
-          callbacks: {
-            title: function(item, data) {
-              var title = data.labels[item[0].index];
-              return title;
-            },
-            label: function(item, data) {
-              var value = data.datasets[0].data[item.index];
-              var content = '';
-
-              content += '<span class="popover-body-value">' + value + '%</span>';
-              return content;
-            }
-          }
-        }
-      },
-      data: {
-        labels: ['Desktop', 'Tablet', 'Mobile'],
-        datasets: [{
-          data: [60, 25, 15],
-          backgroundColor: [
-            '#2C7BE5',
-            '#A6C5F7',
-            '#D2DDEC'
-          ]
-        }]
-      }
-    });
-  }
-
-  //
-  // Events
-  //
-
-  if (typeof Chart !== 'undefined' && chart) {
-    init(chart);
-  }
-
-})();
-
-// Weekly hours
-//
-// Weekly hours card chart
+// Weekly hours chart
 
 (function() {
 
@@ -813,9 +529,73 @@
 
 })();
 
-// Sparkline
-//
-// Sparkline card chart
+// Overview chart
+
+(function() {
+
+  //
+  // Variables
+  //
+
+  var chart = document.getElementById('overviewChart');
+
+  //
+  // Functions
+  //
+
+  function init(chart) {
+    new Chart(chart, {
+      type: 'line',
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              callback: function(value) {
+                if (!(value % 10)) {
+                  return '$' + value + 'k'
+                }
+              }
+            }
+          }]
+        },
+        tooltips: {
+          callbacks: {
+            label: function(item, data) {
+              var label = data.datasets[item.datasetIndex].label || '';
+              var yLabel = item.yLabel;
+              var content = '';
+
+              if (data.datasets.length > 1) {
+                content += '<span class="popover-body-label mr-auto">' + label + '</span>';
+              }
+
+              content += '<span class="popover-body-value">$' + yLabel + 'k</span>';
+              return content;
+            }
+          }
+        }
+      },
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        datasets: [{
+          label: 'Performance',
+          data: [0, 10, 5, 15, 10, 20, 15, 25, 20, 30, 25, 40]
+        }]
+      }
+    });
+  }
+
+  //
+  // Events
+  //
+
+  if (chart) {
+    init(chart);
+  }
+
+})();
+
+// Sparkline chart
 
 (function() {
 
@@ -874,9 +654,7 @@
 
 })();
 
-// Sparkline
-//
-// Sparkline card chart (gray)
+// Sparkline chart (gray)
 
 (function() {
 
@@ -938,9 +716,7 @@
 
 })();
 
-// Sparkline
-//
-// Sparkline card chart (progress)
+// Feed chart
 
 (function() {
 
@@ -948,7 +724,7 @@
   // Variables
   //
 
-  var chart = document.getElementById('sparklineChartProgress');
+  var chart = document.getElementById('feedChart');
 
   //
   // Functions
@@ -956,80 +732,52 @@
 
   function init(chart) {
     new Chart(chart, {
-      type: 'line',
+      type: 'bar',
       options: {
         scales: {
           yAxes: [{
-            display: false
-          }],
-          xAxes: [{
-            display: false
+            ticks: {
+              callback: function(value) {
+                if (!(value % 10)) {
+                  return '$' + value + 'k'
+                }
+              }
+            }
           }]
         },
-        elements: {
-          line: {
-            borderWidth: 2
-          },
-          point: {
-            hoverRadius: 0
-          }
-        },
         tooltips: {
-          custom: function() {
-            return false;
+          callbacks: {
+            label: function(item, data) {
+              var label = data.datasets[item.datasetIndex].label || '';
+              var yLabel = item.yLabel;
+              var content = '';
+
+              if (data.datasets.length > 1) {
+                content += '<span class="popover-body-label mr-auto">' + label + '</span>';
+              }
+
+              content += '<span class="popover-body-value">$' + yLabel + 'k</span>';
+              return content;
+            }
           }
         }
       },
       data: {
-        labels: new Array(12),
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         datasets: [{
-          data: [0, 15, 10, 25, 30, 15, 40, 50, 80, 60, 55, 65]
+          label: 'Sales',
+          data: [25, 20, 30, 22, 17, 10, 18, 26, 28, 26, 20, 32]
         }]
       }
     });
-  };
+  }
 
   //
   // Events
   //
 
-  if (typeof Chart !== 'undefined' && chart) {
+  if (chart) {
     init(chart);
-  }
-
-})();
-
-// Orders select
-//
-// Select all checkboxes
-
-(function() {
-
-  //
-  // Variables
-  //
-
-  var ordersSelect = document.querySelectorAll('[name="ordersSelect"]');
-  var ordersSelectAll = document.getElementById('ordersSelectAll');
-
-  //
-  // Functions
-  //
-
-  function selectAll(el) {
-    [].forEach.call(ordersSelect, function(checkbox) {
-      checkbox.checked = el.checked;
-    });
-  }
-
-  //
-  // Events
-  //
-
-  if (ordersSelect && ordersSelectAll) {
-    ordersSelectAll.addEventListener('change', function() {
-      selectAll(this);
-    });
   }
 
 })();

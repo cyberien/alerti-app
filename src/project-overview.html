@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     @@include("partials/head.html", {
-      "title": "Dashkit"
+    "title": "Dashkit"
     })
   </head>
   <body>
@@ -14,27 +14,27 @@
     <!-- NAVIGATION
     ================================================== -->
     @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
-      @@if (sidebarSize == 'base' || demoMode) {
-        @@include("partials/sidebar.html", {
-          "category": "pages",
-          "subcategory": "project",
-          "page": "project-overview.html"
-        })
-      }
-      @@if (sidebarSize == 'small' || demoMode) {
-        @@include("partials/sidebar-sm.html", {
-          "category": "pages",
-          "subcategory": "project",
-          "page": "project-overview.html"
-        })
-      }
+    @@if (sidebarSize == 'base' || demoMode) {
+    @@include("partials/sidebar.html", {
+    "category": "pages",
+    "subcategory": "project",
+    "page": "project-overview.html"
+    })
+    }
+    @@if (sidebarSize == 'small' || demoMode) {
+    @@include("partials/sidebar-sm.html", {
+    "category": "pages",
+    "subcategory": "project",
+    "page": "project-overview.html"
+    })
+    }
     }
     @@if (navPosition == 'topnav' || demoMode) {
-      @@include("partials/topnav.html", {
-        "category": "pages",
-        "subcategory": "project",
-        "page": "project-overview.html"
-      })
+    @@include("partials/topnav.html", {
+    "category": "pages",
+    "subcategory": "project",
+    "page": "project-overview.html"
+    })
     }
 
     <!-- MAIN CONTENT
@@ -42,13 +42,13 @@
     <div class="main-content">
 
       @@if (navPosition == 'combo' || demoMode) {
-        @@include("partials/topbar.html")
+      @@include("partials/topbar.html")
       }
 
       <!-- HEADER -->
       <div class="header">
         <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
-          
+
           <!-- Body -->
           <div class="header-body">
             <div class="row align-items-center">
@@ -61,7 +61,7 @@
 
               </div>
               <div class="col ml-n3 ml-md-n2">
-                
+
                 <!-- Pretitle -->
                 <h6 class="header-pretitle">
                   Projects
@@ -74,7 +74,7 @@
 
               </div>
               <div class="col-12 col-md-auto mt-3 mt-md-0">
-                
+
                 <!-- Avatar group -->
                 <div class="avatar-group">
                   <a href="profile-posts.html" class="avatar" data-toggle="tooltip" title="Dianna Smiley">
@@ -100,7 +100,7 @@
             </div> <!-- / .row -->
             <div class="row align-items-center">
               <div class="col">
-                
+
                 <!-- Nav -->
                 <ul class="nav nav-tabs nav-overflow header-tabs">
                   <li class="nav-item">
@@ -131,7 +131,7 @@
       <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
         <div class="row">
           <div class="col-12">
-            
+
             <!-- Alert -->
             <div class="alert alert-primary">
               This project is forecasted to complete below budget!
@@ -146,15 +146,15 @@
             <!-- Card -->
             <div class="card">
               <div class="card-header">
-                
+
                 <!-- Tabs -->
                 <ul class="nav nav-tabs card-header-tabs">
-                  <li class="nav-item" data-toggle="chart" data-target="#performanceChart" data-update='{"data":{"datasets":[{"data":[0,10,5,15,10,20,15,25,20,30,25,40]}]}}' data-prefix="$" data-suffix="k">
+                  <li class="nav-item" data-toggle="chart" data-target="#overviewChart" data-update='{"data":{"datasets":[{"data":[0,10,5,15,10,20,15,25,20,30,25,40]}]}}' data-prefix="$" data-suffix="k">
                     <a class="nav-link active" href="#" data-toggle="tab">
                       Earned
                     </a>
                   </li>
-                  <li class="nav-item" data-toggle="chart" data-target="#performanceChart" data-update='{"data":{"datasets":[{"data":[7,35,12,27,34,17,19,30,28,32,24,39]}]}}' data-prefix="" data-suffix="hr">
+                  <li class="nav-item" data-toggle="chart" data-target="#overviewChart" data-update='{"data":{"datasets":[{"data":[7,35,12,27,34,17,19,30,28,32,24,39]}]}}' data-prefix="" data-suffix="hr">
                     <a class="nav-link" href="#" data-toggle="tab">
                       Hours Worked
                     </a>
@@ -163,10 +163,10 @@
 
               </div>
               <div class="card-body">
-                
+
                 <!-- Chart -->
                 <div class="chart">
-                  <canvas id="performanceChart" class="chart-canvas"></canvas>
+                  <canvas id="overviewChart" class="chart-canvas"></canvas>
                 </div>
 
               </div>
@@ -176,7 +176,7 @@
         </div> <!-- / .row -->
         <div class="row">
           <div class="col-12 col-lg-6 col-xl">
-            
+
             <!-- Card -->
             <div class="card">
               <div class="card-body">
@@ -187,7 +187,7 @@
                     <h6 class="card-title text-uppercase text-muted mb-2">
                       Budget
                     </h6>
-                    
+
                     <!-- Heading -->
                     <span class="h2 mb-0">
                       $24,500
@@ -200,7 +200,7 @@
 
                   </div>
                   <div class="col-auto">
-                    
+
                     <!-- Icon -->
                     <span class="h2 fe fe-dollar-sign text-muted mb-0"></span>
 
@@ -212,7 +212,7 @@
 
           </div>
           <div class="col-12 col-lg-6 col-xl">
-            
+
             <!-- Card -->
             <div class="card">
               <div class="card-body">
@@ -223,7 +223,7 @@
                     <h6 class="card-title text-uppercase text-muted mb-2">
                       Total Hours
                     </h6>
-                    
+
                     <!-- Heading -->
                     <span class="h2 mb-0">
                       763.5
@@ -231,7 +231,7 @@
 
                   </div>
                   <div class="col-auto">
-                    
+
                     <!-- Icon -->
                     <span class="h2 fe fe-briefcase text-muted mb-0"></span>
 
@@ -240,10 +240,10 @@
 
               </div>
             </div>
-              
+
           </div>
           <div class="col-12 col-lg-6 col-xl">
-            
+
             <!-- Card -->
             <div class="card">
               <div class="card-body">
@@ -262,10 +262,10 @@
                         <span class="h2 mr-2 mb-0">
                           84.5%
                         </span>
-                        
+
                       </div>
                       <div class="col">
-                        
+
                         <!-- Progress -->
                         <div class="progress progress-sm">
                           <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
@@ -276,7 +276,7 @@
 
                   </div>
                   <div class="col-auto">
-                    
+
                     <!-- Icon -->
                     <span class="h2 fe fe-clipboard text-muted mb-0"></span>
 
@@ -285,10 +285,10 @@
 
               </div>
             </div>
-              
+
           </div>
           <div class="col-12 col-lg-6 col-xl">
-            
+
             <!-- Card -->
             <div class="card">
               <div class="card-body">
@@ -299,7 +299,7 @@
                     <h6 class="card-title text-uppercase text-muted mb-2">
                       Cost/Unit
                     </h6>
-                    
+
                     <!-- Heading -->
                     <span class="h2 mb-0">
                       $5.50
@@ -307,7 +307,7 @@
 
                   </div>
                   <div class="col-auto">
-                    
+
                     <!-- Chart -->
                     <div class="chart chart-sparkline">
                       <canvas class="chart-canvas" id="sparklineChart"></canvas>
@@ -318,18 +318,18 @@
 
               </div>
             </div>
-              
+
           </div>
         </div> <!-- / .row -->
         <div class="row">
           <div class="col-12 col-xl-8">
-            
+
             <!-- Performance -->
             <div class="card">
               <div class="card-header">
                 <div class="row align-items-center">
                   <div class="col">
-                    
+
                     <!-- Title -->
                     <h4 class="card-header-title">
                       Performance
@@ -337,7 +337,7 @@
 
                   </div>
                   <div class="col-auto">
-                    
+
                     <!-- Button -->
                     <a href="#!" class="btn btn-sm btn-white">
                       Export
@@ -375,7 +375,7 @@
                         <a href="profile-posts.htmL" class="avatar avatar-xs d-inline-block mr-2">
                           <img src="assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
                         </a>
-                        
+
                         <!-- Title -->
                         <span>Dianna Smiley</span>
 
@@ -414,7 +414,7 @@
                         <a href="profile-posts.html" class="avatar avatar-xs d-inline-block mr-2">
                           <img src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
                         </a>
-                        
+
                         <!-- Title -->
                         <span>Ab Hadley</span>
 
@@ -453,7 +453,7 @@
                         <a href="profile-posts.html" class="avatar avatar-xs d-inline-block mr-2">
                           <img src="assets/img/avatars/profiles/avatar-3.jpg" alt="..." class="avatar-img rounded-circle">
                         </a>
-                        
+
                         <!-- Title -->
                         <span>Adolfo Hess</span>
 
@@ -492,7 +492,7 @@
                         <a href="profile-posts.html" class="avatar avatar-xs d-inline-block mr-2">
                           <img src="assets/img/avatars/profiles/avatar-4.jpg" alt="..." class="avatar-img rounded-circle">
                         </a>
-                        
+
                         <!-- Title -->
                         <span>Daniela Dewitt</span>
 
@@ -531,7 +531,7 @@
                         <a href="profile-posts.html" class="avatar avatar-xs d-inline-block mr-2">
                           <img src="assets/img/avatars/profiles/avatar-5.jpg" alt="..." class="avatar-img rounded-circle">
                         </a>
-                        
+
                         <!-- Title -->
                         <span>Miyah Myles</span>
 
@@ -570,13 +570,13 @@
 
           </div>
           <div class="col-12 col-xl-4">
-            
+
             <!-- Latest Files -->
             <div class="card">
               <div class="card-header">
                 <div class="row align-items-center">
                   <div class="col">
-                    
+
                     <!-- Title -->
                     <h4 class="card-header-title">
                       Latest Files
@@ -587,7 +587,7 @@
 
                     <!-- Link -->
                     <a href="#!" class="small">View all</a>
-                    
+
                   </div>
                 </div> <!-- / .row -->
               </div>
@@ -595,7 +595,7 @@
 
                 <div class="row align-items-center">
                   <div class="col-auto">
-                    
+
                     <!-- Avatar -->
                     <a href="#!" class="avatar">
                       <img src="assets/img/files/file-1.jpg" alt="..." class="avatar-img rounded">
@@ -613,10 +613,10 @@
                     <p class="card-text small text-muted">
                       2.5kb SVG
                     </p>
-                    
+
                   </div>
                   <div class="col-auto">
-                    
+
                     <!-- Dropdown -->
                     <div class="dropdown">
                       <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -634,7 +634,7 @@
                         </a>
                       </div>
                     </div>
-                    
+
                   </div>
                 </div> <!-- / .row -->
 
@@ -643,7 +643,7 @@
 
                 <div class="row align-items-center">
                   <div class="col-auto">
-                    
+
                     <!-- Avatar -->
                     <a href="#!" class="avatar">
                       <img src="assets/img/files/file-2.jpg" alt="..." class="avatar-img rounded">
@@ -661,10 +661,10 @@
                     <p class="card-text small text-muted">
                       1.5mb PNG
                     </p>
-                    
+
                   </div>
                   <div class="col-auto">
-                    
+
                     <!-- Dropdown -->
                     <div class="dropdown">
                       <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -682,7 +682,7 @@
                         </a>
                       </div>
                     </div>
-                    
+
                   </div>
                 </div> <!-- / .row -->
 
@@ -691,7 +691,7 @@
 
                 <div class="row align-items-center">
                   <div class="col-auto">
-                    
+
                     <!-- Avatar -->
                     <a href="#!" class="avatar">
                       <div class="avatar-title rounded bg-white text-secondary">
@@ -711,10 +711,10 @@
                     <p class="card-text small text-muted">
                       6.9mb directory
                     </p>
-                    
+
                   </div>
                   <div class="col-auto">
-                    
+
                     <!-- Dropdown -->
                     <div class="dropdown">
                       <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -732,7 +732,7 @@
                         </a>
                       </div>
                     </div>
-                    
+
                   </div>
                 </div> <!-- / .row -->
 
@@ -741,7 +741,7 @@
 
                 <div class="row align-items-center">
                   <div class="col-auto">
-                    
+
                     <!-- Avatar -->
                     <a href="#!" class="avatar">
                       <img src="assets/img/files/file-3.jpg" alt="..." class="avatar-img rounded">
@@ -759,10 +759,10 @@
                     <p class="card-text small text-muted">
                       750kb JPG
                     </p>
-                    
+
                   </div>
                   <div class="col-auto">
-                    
+
                     <!-- Dropdown -->
                     <div class="dropdown">
                       <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -780,7 +780,7 @@
                         </a>
                       </div>
                     </div>
-                    
+
                   </div>
                 </div> <!-- / .row -->
 
@@ -790,7 +790,7 @@
           </div>
         </div> <!-- / .row -->
       </div>
-      
+
     </div> <!-- / .main-content -->
 
     <!-- JAVASCRIPT
