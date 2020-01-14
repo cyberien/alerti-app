@@ -78,18 +78,9 @@
 // Convertions chart
 
 (function() {
-
-  //
-  // Variables
-  //
-
   var chart = document.getElementById('conversionsChart');
 
-  //
-  // Functions
-  //
-
-  function init(chart) {
+  if (typeof Chart !== 'undefined' && chart) {
     new Chart(chart, {
       type: 'bar',
       options: {
@@ -97,28 +88,10 @@
           yAxes: [{
             ticks: {
               callback: function(value) {
-                if (!(value % 10)) {
-                  return value + '%'
-                }
+                return value + '%';
               }
             }
           }]
-        },
-        tooltips: {
-          callbacks: {
-            label: function(item, data) {
-              var label = data.datasets[item.datasetIndex].label || '';
-              var yLabel = item.yLabel;
-              var content = '';
-
-              if (data.datasets.length > 1) {
-                content += '<span class="popover-body-label mr-auto">' + label + '</span>';
-              }
-
-              content += '<span class="popover-body-value">' + yLabel + '%</span>';
-              return content;
-            }
-          }
         }
       },
       data: {
@@ -129,14 +102,6 @@
         }]
       }
     });
-  }
-
-  //
-  // Events
-  //
-
-  if (typeof Chart !== 'undefined' && chart) {
-    init(chart);
   }
 
 })();
@@ -161,16 +126,8 @@
       options: {
         tooltips: {
           callbacks: {
-            title: function(item, data) {
-              var title = data.labels[item[0].index];
-              return title;
-            },
-            label: function(item, data) {
-              var value = data.datasets[0].data[item.index];
-              var content = '';
-
-              content += '<span class="popover-body-value">' + value + '%</span>';
-              return content;
+            afterLabel: function() {
+              return '%'
             }
           }
         }

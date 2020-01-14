@@ -75,6 +75,7 @@
 
     // Rectangle
     Chart.defaults.global.elements.rectangle.backgroundColor = colors.primary[700];
+    Chart.defaults.global.elements.rectangle.maxBarThickness = 10;
 
     // Arc
     Chart.defaults.global.elements.arc.backgroundColor = colors.primary[700];
@@ -89,6 +90,7 @@
     Chart.defaults.global.tooltips.custom = function(model) {
       var tooltip = document.getElementById('chart-tooltip');
 
+      // Create tooltip if doesn't exist
       if (!tooltip) {
         tooltip = document.createElement('div');
 
@@ -100,26 +102,29 @@
         document.body.appendChild(tooltip);
       }
 
+      // Hide tooltip if not visible
       if (model.opacity === 0) {
         tooltip.style.visibility = 'hidden';
+
         return;
       }
 
-      function getBody(bodyItem) {
-        return bodyItem.lines;
-      }
-
       if (model.body) {
-        var titleLines = model.title || [];
-        var bodyLines = model.body.map(getBody);
         var html = '';
+        var titleLines = model.title || [];
+        var bodyLines = model.body.map(function(body) {
+          return body.lines;
+        });
 
+        // Add arrow
         html += '<div class="arrow"></div>';
 
+        // Add title
         titleLines.forEach(function(title) {
           html += '<h3 class="popover-header text-center">' + title + '</h3>';
         });
 
+        // Add content
         bodyLines.forEach(function(body, i) {
           var colors = model.labelColors[i];
           var styles = 'background-color: ' + colors.backgroundColor;
@@ -134,9 +139,6 @@
 
       var canvas = this._chart.canvas;
       var canvasRect = canvas.getBoundingClientRect();
-
-      var canvasWidth = canvas.offsetWidth;
-      var canvasHeight = canvas.offsetHeight;
 
       var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
       var scrollLeft = window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0;
@@ -153,18 +155,19 @@
       tooltip.style.top = top + 'px';
       tooltip.style.left = left + 'px';
       tooltip.style.visibility = 'visible';
-
     };
+
     Chart.defaults.global.tooltips.callbacks.label = function(item, data) {
-      var label = data.datasets[item.datasetIndex].label || '';
-      var yLabel = item.yLabel;
       var content = '';
+      var value = item.yLabel;
+      var label = data.datasets[item.datasetIndex].label;
+      var callback = this._chart.options.scales.yAxes[0].ticks.callback;
 
       if (data.datasets.length > 1) {
-        content += '<span class="popover-body-label mr-auto">' + label + '</span>';
+        content = '<span class="popover-body-label mr-auto">' + label + '</span>';
       }
 
-      content += '<span class="popover-body-value">' + yLabel + '</span>';
+      content += '<span class="popover-body-value">' + callback(value) + '</span>';
 
       return content;
     };
@@ -172,15 +175,15 @@
     // Doughnut
     Chart.defaults.doughnut.cutoutPercentage = 83;
     Chart.defaults.doughnut.tooltips.callbacks.title = function(item, data) {
-      var title = data.labels[item[0].index];
-      return title;
+      return data.labels[item[0].index];
     };
     Chart.defaults.doughnut.tooltips.callbacks.label = function(item, data) {
       var value = data.datasets[0].data[item.index];
-      var content = '';
+      var callbacks = this._chart.options.tooltips.callbacks;
+      var afterLabel = callbacks.afterLabel() ? callbacks.afterLabel() : '';
+      var beforeLabel = callbacks.beforeLabel() ? callbacks.beforeLabel() : '';
 
-      content += '<span class="popover-body-value">' + value + '</span>';
-      return content;
+      return '<span class="popover-body-value">' + beforeLabel + value + afterLabel + '</span>';
     };
     Chart.defaults.doughnut.legendCallback = function(chart) {
       var data = chart.data;
@@ -213,11 +216,7 @@
       ticks: {
         beginAtZero: true,
         padding: 10,
-        callback: function(value) {
-          if (!(value % 10)) {
-            return value
-          }
-        }
+        stepSize: 10
       }
     });
 
@@ -230,8 +229,7 @@
       },
       ticks: {
         padding: 20
-      },
-      maxBarThickness: 10
+      }
     });
 
   }
