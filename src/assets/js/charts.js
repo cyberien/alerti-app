@@ -43,7 +43,6 @@
   function globalOptions() {
 
     // Global
-
     Chart.defaults.global.responsive = true;
     Chart.defaults.global.maintainAspectRatio = false;
 
@@ -89,6 +88,7 @@
     Chart.defaults.global.tooltips.intersect = false;
     Chart.defaults.global.tooltips.custom = function(model) {
       var tooltip = document.getElementById('chart-tooltip');
+      var chartType = this._chart.config.type;
 
       // Create tooltip if doesn't exist
       if (!tooltip) {
@@ -110,31 +110,30 @@
       }
 
       if (model.body) {
-        var html = '';
-        var titleLines = model.title || [];
-        var bodyLines = model.body.map(function(body) {
+        var title = model.title || [];
+        var body = model.body.map(function(body) {
           return body.lines;
         });
 
         // Add arrow
-        html += '<div class="arrow"></div>';
+        var content = '<div class="arrow"></div>';
 
         // Add title
-        titleLines.forEach(function(title) {
-          html += '<h3 class="popover-header text-center">' + title + '</h3>';
+        title.forEach(function(title) {
+          content += '<h3 class="popover-header text-center">' + title + '</h3>';
         });
 
         // Add content
-        bodyLines.forEach(function(body, i) {
+        body.forEach(function(body, i) {
           var colors = model.labelColors[i];
-          var styles = 'background-color: ' + colors.backgroundColor;
-          var indicator = '<span class="popover-body-indicator" style="' + styles + '"></span>';
-          var align = (bodyLines.length > 1) ? 'justify-content-left' : 'justify-content-center';
+          var currentColor = (chartType === 'line' && colors.borderColor !== 'rgba(0,0,0,0.1)') ? colors.borderColor : colors.backgroundColor;
+          var indicator = '<span class="popover-body-indicator" style="background-color: ' + currentColor + '"></span>';
+          var justifyContent = (body.length > 1) ? 'justify-content-left' : 'justify-content-center';
 
-          html += '<div class="popover-body d-flex align-items-center ' + align + '">' + indicator + body + '</div>';
+          content += '<div class="popover-body d-flex align-items-center ' + justifyContent + '">' + indicator + body + '</div>';
         });
 
-        tooltip.innerHTML = html;
+        tooltip.innerHTML = content;
       }
 
       var canvas = this._chart.canvas;
