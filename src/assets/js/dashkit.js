@@ -8,18 +8,9 @@
 // Audience chart
 
 (function() {
-
-  //
-  // Variables
-  //
-
   var chart = document.getElementById('audienceChart');
 
-  //
-  // Functions
-  //
-
-  function init(chart) {
+  if (typeof Chart !== 'undefined' && chart) {
     new Chart(chart, {
       type: 'line',
       options: {
@@ -31,28 +22,10 @@
             },
             ticks: {
               callback: function(value) {
-                if (!(value % 10)) {
-                  return value + 'k';
-                }
+                return value + 'k';
               }
             }
           }]
-        },
-        tooltips: {
-          callbacks: {
-            label: function(item, data) {
-              var label = data.datasets[item.datasetIndex].label || '';
-              var yLabel = item.yLabel;
-              var content = '';
-
-              if (data.datasets.length > 1) {
-                content += '<span class="popover-body-label mr-auto">' + label + '</span>';
-              }
-
-              content += '<span class="popover-body-value">' + yLabel + 'k</span>';
-              return content;
-            }
-          }
         }
       },
       data: {
@@ -63,16 +36,7 @@
         }]
       }
     });
-  };
-
-  //
-  // Events
-  //
-
-  if (typeof Chart !== 'undefined' && chart) {
-    init(chart);
   }
-
 })();
 
 // Convertions chart
@@ -103,24 +67,14 @@
       }
     });
   }
-
 })();
 
 // Traffic chart
 
 (function() {
-
-  //
-  // Variables
-  //
-
   var chart = document.getElementById('trafficChart');
 
-  //
-  // Functions
-  //
-
-  function init(chart) {
+  if (typeof Chart !== 'undefined' && chart) {
     new Chart(chart, {
       type: 'doughnut',
       options: {
@@ -141,32 +95,14 @@
       }
     });
   }
-
-  //
-  // Events
-  //
-
-  if (typeof Chart !== 'undefined' && chart) {
-    init(chart);
-  }
-
 })();
 
 // Followers chart
 
 (function() {
-
-  //
-  // Variables
-  //
-
   var chart = document.getElementById('followersChart');
 
-  //
-  // Functions
-  //
-
-  function init(chart) {
+  if (typeof Chart !== 'undefined' && chart) {
     new Chart(chart, {
       type: 'line',
       options: {
@@ -174,28 +110,10 @@
           yAxes: [{
             ticks: {
               callback: function(value) {
-                if (!(value % 10)) {
-                  return value + 'k'
-                }
+                return value + 'k';
               }
             }
           }]
-        },
-        tooltips: {
-          callbacks: {
-            label: function(item, data) {
-              var label = data.datasets[item.datasetIndex].label || '';
-              var yLabel = item.yLabel;
-              var content = '';
-
-              if (data.datasets.length > 1) {
-                content += '<span class="popover-body-label mr-auto">' + label + '</span>';
-              }
-
-              content += '<span class="popover-body-value">' + yLabel + 'k</span>';
-              return content;
-            }
-          }
         }
       },
       data: {
@@ -212,32 +130,14 @@
       }
     });
   }
-
-  //
-  // Events
-  //
-
-  if (typeof Chart !== 'undefined' && chart) {
-    init(chart);
-  }
-
 })();
 
 // Sales chart
 
 (function() {
-
-  //
-  // Variables
-  //
-
   var chart = document.getElementById('salesChart');
 
-  //
-  // Functions
-  //
-
-  function init(chart) {
+  if (typeof Chart !== 'undefined' && chart) {
     new Chart(chart, {
       type: 'line',
       options: {
@@ -245,28 +145,10 @@
           yAxes: [{
             ticks: {
               callback: function(value) {
-                if (!(value % 10)) {
-                  return '$' + value + 'k'
-                }
+                return '$' + value + 'k';
               }
             }
           }]
-        },
-        tooltips: {
-          callbacks: {
-            label: function(item, data) {
-              var label = data.datasets[item.datasetIndex].label || '';
-              var yLabel = item.yLabel;
-              var content = '';
-
-              if (data.datasets.length > 1) {
-                content += '<span class="popover-body-label mr-auto">' + label + '</span>';
-              }
-
-              content += '<span class="popover-body-value">$' + yLabel + 'k</span>';
-              return content;
-            }
-          }
         }
       },
       data: {
@@ -278,32 +160,14 @@
       }
     });
   }
-
-  //
-  // Events
-  //
-
-  if (typeof Chart !== 'undefined' && chart) {
-    init(chart);
-  }
-
 })();
 
 // Orders chart
 
 (function() {
-
-  //
-  // Variables
-  //
-
   var chart = document.getElementById('ordersChart');
 
-  //
-  // Functions
-  //
-
-  function init(chart) {
+  if (typeof Chart !== 'undefined' && chart) {
     new Chart(chart, {
       type: 'bar',
       options: {
@@ -311,28 +175,10 @@
           yAxes: [{
             ticks: {
               callback: function(value) {
-                if (!(value % 10)) {
-                  return '$' + value + 'k'
-                }
+                return '$' + value + 'k';
               }
             }
           }]
-        },
-        tooltips: {
-          callbacks: {
-            label: function(item, data) {
-              var label = data.datasets[item.datasetIndex].label || '';
-              var yLabel = item.yLabel;
-              var content = '';
-
-              if (data.datasets.length > 1) {
-                content += '<span class="popover-body-label mr-auto">' + label + '</span>';
-              }
-
-              content += '<span class="popover-body-value">$' + yLabel + 'k</span>';
-              return content;
-            }
-          }
         }
       },
       data: {
@@ -344,32 +190,14 @@
       }
     });
   }
-
-  //
-  // Events
-  //
-
-  if (typeof Chart !== 'undefined' && chart) {
-    init(chart);
-  }
-
 })();
 
 // Earnings chart
 
 (function() {
-
-  //
-  // Variables
-  //
-
   var chart = document.getElementById('earningsChart');
 
-  //
-  // Functions
-  //
-
-  function init(chart) {
+  if (typeof Chart !== 'undefined' && chart) {
     new Chart(chart, {
       type: 'bar',
       options: {
@@ -377,28 +205,10 @@
           yAxes: [{
             ticks: {
               callback: function(value) {
-                if (!(value % 10)) {
-                  return '$' + value + 'k';
-                }
+                return '$' + value + 'k';
               }
             }
           }]
-        },
-        tooltips: {
-          callbacks: {
-            label: function(item, data) {
-              var label = data.datasets[item.datasetIndex].label || '';
-              var yLabel = item.yLabel;
-              var content = '';
-
-              if (data.datasets.length > 1) {
-                content += '<span class="popover-body-label mr-auto">' + label + '</span>';
-              }
-
-              content += '<span class="popover-body-value">$' + yLabel + 'k</span>';
-              return content;
-            }
-          }
         }
       },
       data: {
@@ -409,33 +219,15 @@
         }]
       }
     });
-  };
-
-  //
-  // Events
-  //
-
-  if (typeof Chart !== 'undefined' && chart) {
-    init(chart);
   }
-
 })();
 
 // Weekly hours chart
 
 (function() {
-
-  //
-  // Variables
-  //
-
   var chart = document.getElementById('weeklyHoursChart');
 
-  //
-  // Functions
-  //
-
-  function init(chart) {
+  if (typeof Chart !== 'undefined' && chart) {
     new Chart(chart, {
       type: 'bar',
       options: {
@@ -443,28 +235,10 @@
           yAxes: [{
             ticks: {
               callback: function(value) {
-                if (!(value % 10)) {
-                  return value + 'hrs'
-                }
+                return value + 'hrs';
               }
             }
           }]
-        },
-        tooltips: {
-          callbacks: {
-            label: function(item, data) {
-              var label = data.datasets[item.datasetIndex].label || '';
-              var yLabel = item.yLabel;
-              var content = '';
-
-              if (data.datasets.length > 1) {
-                content += '<span class="popover-body-label mr-auto">' + label + '</span>';
-              }
-
-              content += '<span class="popover-body-value">' + yLabel + 'hrs</span>';
-              return content;
-            }
-          }
         }
       },
       data: {
@@ -475,32 +249,14 @@
       }
     });
   }
-
-  //
-  // Events
-  //
-
-  if (typeof Chart !== 'undefined' && chart) {
-    init(chart);
-  }
-
 })();
 
 // Overview chart
 
 (function() {
-
-  //
-  // Variables
-  //
-
   var chart = document.getElementById('overviewChart');
 
-  //
-  // Functions
-  //
-
-  function init(chart) {
+  if (chart) {
     new Chart(chart, {
       type: 'line',
       options: {
@@ -508,28 +264,10 @@
           yAxes: [{
             ticks: {
               callback: function(value) {
-                if (!(value % 10)) {
-                  return '$' + value + 'k'
-                }
+                return '$' + value + 'k';
               }
             }
           }]
-        },
-        tooltips: {
-          callbacks: {
-            label: function(item, data) {
-              var label = data.datasets[item.datasetIndex].label || '';
-              var yLabel = item.yLabel;
-              var content = '';
-
-              if (data.datasets.length > 1) {
-                content += '<span class="popover-body-label mr-auto">' + label + '</span>';
-              }
-
-              content += '<span class="popover-body-value">$' + yLabel + 'k</span>';
-              return content;
-            }
-          }
         }
       },
       data: {
@@ -541,32 +279,14 @@
       }
     });
   }
-
-  //
-  // Events
-  //
-
-  if (chart) {
-    init(chart);
-  }
-
 })();
 
 // Sparkline chart
 
 (function() {
-
-  //
-  // Variables
-  //
-
   var chart = document.getElementById('sparklineChart');
 
-  //
-  // Functions
-  //
-
-  function init(chart) {
+  if (typeof Chart !== 'undefined' && chart) {
     new Chart(chart, {
       type: 'line',
       options: {
@@ -599,95 +319,59 @@
         }]
       }
     });
-  };
-
-  //
-  // Events
-  //
-
-  if (typeof Chart !== 'undefined' && chart) {
-    init(chart);
   }
-
 })();
 
 // Sparkline chart (gray)
 
 (function() {
-
-  //
-  // Variables
-  //
-
   var charts = document.querySelectorAll('#sparklineChartSocialOne, #sparklineChartSocialTwo, #sparklineChartSocialThree, #sparklineChartSocialFour');
 
-  //
-  // Functions
-  //
-
-  function init(chart) {
-    new Chart(chart, {
-      type: 'line',
-      options: {
-        scales: {
-          yAxes: [{
-            display: false
-          }],
-          xAxes: [{
-            display: false
-          }]
-        },
-        elements: {
-          line: {
-            borderWidth: 2,
-            borderColor: '#D2DDEC'
-          },
-          point: {
-            hoverRadius: 0
-          }
-        },
-        tooltips: {
-          custom: function() {
-            return false;
-          }
-        }
-      },
-      data: {
-        labels: new Array(12),
-        datasets: [{
-          data: [0, 15, 10, 25, 30, 15, 40, 50, 80, 60, 55, 65]
-        }]
-      }
-    });
-  };
-
-  //
-  // Events
-  //
-
   if (typeof Chart !== 'undefined' && charts) {
-    [].forEach.call(charts, function(el) {
-      init(el);
+    [].forEach.call(charts, function(chart) {
+      new Chart(chart, {
+        type: 'line',
+        options: {
+          scales: {
+            yAxes: [{
+              display: false
+            }],
+            xAxes: [{
+              display: false
+            }]
+          },
+          elements: {
+            line: {
+              borderWidth: 2,
+              borderColor: '#D2DDEC'
+            },
+            point: {
+              hoverRadius: 0
+            }
+          },
+          tooltips: {
+            custom: function() {
+              return false;
+            }
+          }
+        },
+        data: {
+          labels: new Array(12),
+          datasets: [{
+            data: [0, 15, 10, 25, 30, 15, 40, 50, 80, 60, 55, 65]
+          }]
+        }
+      });
     });
   }
-
 })();
 
 // Feed chart
 
 (function() {
-
-  //
-  // Variables
-  //
-
   var chart = document.getElementById('feedChart');
 
-  //
-  // Functions
-  //
-
-  function init(chart) {
+  if (chart) {
     new Chart(chart, {
       type: 'bar',
       options: {
@@ -695,28 +379,10 @@
           yAxes: [{
             ticks: {
               callback: function(value) {
-                if (!(value % 10)) {
-                  return '$' + value + 'k'
-                }
+                return '$' + value + 'k';
               }
             }
           }]
-        },
-        tooltips: {
-          callbacks: {
-            label: function(item, data) {
-              var label = data.datasets[item.datasetIndex].label || '';
-              var yLabel = item.yLabel;
-              var content = '';
-
-              if (data.datasets.length > 1) {
-                content += '<span class="popover-body-label mr-auto">' + label + '</span>';
-              }
-
-              content += '<span class="popover-body-value">$' + yLabel + 'k</span>';
-              return content;
-            }
-          }
         }
       },
       data: {
@@ -728,13 +394,4 @@
       }
     });
   }
-
-  //
-  // Events
-  //
-
-  if (chart) {
-    init(chart);
-  }
-
 })();
