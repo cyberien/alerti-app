@@ -31,10 +31,10 @@
 
   var fonts = {
     base: 'Cerebri Sans'
-  }
+  };
 
-  var toggle = document.querySelectorAll('[data-toggle="chart"]');
-  var legend = document.querySelectorAll('[data-toggle="legend"]');
+  var toggles = document.querySelectorAll('[data-toggle="chart"]');
+  var legends = document.querySelectorAll('[data-toggle="legend"]');
 
   //
   // Functions
@@ -126,8 +126,8 @@
         // Add content
         body.forEach(function(body, i) {
           var colors = model.labelColors[i];
-          var currentColor = (chartType === 'line' && colors.borderColor !== 'rgba(0,0,0,0.1)') ? colors.borderColor : colors.backgroundColor;
-          var indicator = '<span class="popover-body-indicator" style="background-color: ' + currentColor + '"></span>';
+          var indicatorColor = (chartType === 'line' && colors.borderColor !== 'rgba(0,0,0,0.1)') ? colors.borderColor : colors.backgroundColor;
+          var indicator = '<span class="popover-body-indicator" style="background-color: ' + indicatorColor + '"></span>';
           var justifyContent = (body.length > 1) ? 'justify-content-left' : 'justify-content-center';
 
           content += '<div class="popover-body d-flex align-items-center ' + justifyContent + '">' + indicator + body + '</div>';
@@ -161,8 +161,15 @@
       var value = item.yLabel;
       var label = data.datasets[item.datasetIndex].label;
       var callback = this._chart.options.scales.yAxes[0].ticks.callback;
+      var datasetsVisible = 0;
 
-      if (data.datasets.length > 1) {
+      data.datasets.forEach(function(dataset) {
+        if (!dataset.hidden) {
+          ++datasetsVisible;
+        }
+      });
+
+      if (datasetsVisible > 1) {
         content = '<span class="popover-body-label mr-auto">' + label + '</span>';
       }
 
@@ -230,106 +237,6 @@
         padding: 20
       }
     });
-
-  }
-
-  function toggleOptions(el) {
-    var target = el.dataset.target;
-    var targetEl = document.querySelector(target);
-    var chart = getChartInstance(targetEl);
-    var options = JSON.parse(el.dataset.add);
-
-    if (el.checked) {
-      pushOptions(chart, options);
-    } else {
-      popOptions(chart, options);
-    }
-
-    chart.update();
-  }
-
-  function updateOptions(el) {
-    var target = el.dataset.target;
-    var targetEl = document.querySelector(target);
-    var chart = getChartInstance(targetEl);
-    var options = JSON.parse(el.dataset.update);
-    var prefix = el.dataset.prefix;
-    var suffix = el.dataset.suffix;
-
-    parseOptions(chart, options);
-
-    if (prefix || suffix) {
-      toggleTicks(chart, prefix, suffix);
-    }
-
-    chart.update();
-  }
-
-  function parseOptions(chart, options) {
-    for (var item in options) {
-      if (typeof options[item] !== 'object') {
-        chart[item] = options[item];
-      } else {
-        parseOptions(chart[item], options[item]);
-      }
-    }
-  }
-
-  function pushOptions(chart, options) {
-    for (var item in options) {
-      if (Array.isArray(options[item])) {
-        options[item].forEach(function(data) {
-          chart[item].push(data);
-        });
-      } else {
-        pushOptions(chart[item], options[item]);
-      }
-    }
-  }
-
-  function popOptions(chart, options) {
-    for (var item in options) {
-      if (Array.isArray(options[item])) {
-        options[item].forEach(function(data) {
-          chart[item].pop();
-        });
-      } else {
-        popOptions(chart[item], options[item]);
-      }
-    }
-  }
-
-  function toggleTicks(chart, prefix, suffix) {
-    prefix = prefix ? prefix : '';
-    suffix = suffix ? suffix : '';
-
-    chart.options.scales.yAxes[0].ticks.callback = function(value) {
-      if (!(value % 10)) {
-        return prefix + value + suffix;
-      }
-    }
-
-    chart.options.tooltips.callbacks.label = function(item, data) {
-      var label = data.datasets[item.datasetIndex].label || '';
-      var yLabel = item.yLabel;
-      var content = '';
-
-      if (data.datasets.length > 1) {
-        content += '<span class="popover-body-label mr-auto">' + label + '</span>';
-      }
-
-      content += '<span class="popover-body-value">' + prefix + yLabel + suffix + '</span>';
-      return content;
-    }
-  }
-
-  function toggleLegend(el) {
-    var chart = getChartInstance(el);
-    var legend = chart.generateLegend();
-    var target = el.dataset.target;
-    var targetEl = document.querySelector(target);
-
-    targetEl.innerHTML = legend;
   }
 
   function getChartInstance(chart) {
@@ -344,6 +251,68 @@
     return chartInstance;
   }
 
+  function toggleDataset(toggle) {
+    var id = toggle.dataset.target;
+    var action = toggle.dataset.action;
+    var index = parseInt(toggle.dataset.dataset);
+
+    var chart = document.querySelector(id);
+    var chartInstance = getChartInstance(chart);
+
+    // Action: Toggle
+    if (action === 'toggle') {
+
+      var firstDataset = chartInstance.data.datasets[0];
+      var originalDataset = firstDataset.hidden ? firstDataset : undefined;
+
+      // Copy first dataset data
+      if (!originalDataset) {
+        originalDataset = {};
+
+        for (var prop in firstDataset) {
+          if (prop !== '_meta') {
+            originalDataset[prop] = firstDataset[prop];
+          }
+        }
+
+        originalDataset.hidden = true;
+        chartInstance.data.datasets.unshift(originalDataset);
+      }
+
+      // Toggle active dataset data
+      var targetDataset = chartInstance.data.datasets[1];
+      var sourceDataset = (index + 1 === 1) ? originalDataset : chartInstance.data.datasets[index + 1];
+
+      for (var prop in targetDataset) {
+        if (prop !== '_meta') {
+          targetDataset[prop] = sourceDataset[prop];
+        }
+      }
+    }
+
+    // Action: Add
+    if (action === 'add') {
+      var dataset = chartInstance.data.datasets[index];
+      var isHidden = dataset.hidden;
+
+      // Toggle dataset
+      dataset.hidden = !isHidden;
+    }
+
+    // Update chart
+    chartInstance.update();
+  }
+
+  function toggleLegend(legend) {
+    var chart = getChartInstance(legend);
+    var content = chart.generateLegend();
+
+    var id = legend.dataset.target;
+    var container = document.querySelector(id);
+
+    container.innerHTML = content;
+  }
+
   //
   // Events
   //
@@ -353,31 +322,25 @@
     // Global options
     globalOptions();
 
-    // Toggle chart
-    if (toggle) {
-      [].forEach.call(toggle, function(el) {
-        el.addEventListener('change', function() {
-          if (el.dataset.add) {
-            toggleOptions(el);
-          }
+    // Toggle dataset
+    if (toggles) {
+      [].forEach.call(toggles, function(toggle) {
+        var event = toggle.dataset.trigger;
+
+        toggle.addEventListener(event, function() {
+          toggleDataset(toggle);
         });
-        el.addEventListener('click', function() {
-          if (el.dataset.update) {
-            updateOptions(el);
-          }
-        });
+
       });
     }
 
-    // Toggle lenegd
-    if (legend) {
+    // Toggle legend
+    if (legends) {
       document.addEventListener('DOMContentLoaded', function() {
-        [].forEach.call(legend, function(el) {
-          toggleLegend(el);
+        [].forEach.call(legends, function(legend) {
+          toggleLegend(legend);
         });
       });
     }
-
   }
-
 })();

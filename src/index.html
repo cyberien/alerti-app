@@ -69,7 +69,7 @@
 
                 <!-- Nav -->
                 <ul class="nav nav-tabs header-tabs">
-                  <li class="nav-item" data-toggle="chart" data-target="#audienceChart" data-update='{"data":{"datasets":[{"data":[0,10,5,15,10,20,15,25,20,30,25,40]}]}}' data-suffix="k">
+                  <li class="nav-item" data-toggle="chart" data-target="#audienceChart" data-trigger="click" data-action="toggle" data-dataset="0">
                     <a href="#" class="nav-link text-center active" data-toggle="tab">
                       <h6 class="header-pretitle text-secondary">
                         Users
@@ -79,7 +79,7 @@
                       </h3>
                     </a>
                   </li>
-                  <li class="nav-item" data-toggle="chart" data-target="#audienceChart" data-update='{"data":{"datasets":[{"data":[50,75, 35,25,55,87,67,53,25,80,87,45]}]}}' data-prefix="" data-suffix="k">
+                  <li class="nav-item" data-toggle="chart" data-target="#audienceChart" data-trigger="click" data-action="toggle" data-dataset="1">
                     <a href="#" class="nav-link text-center" data-toggle="tab">
                       <h6 class="header-pretitle text-secondary">
                         Sessions
@@ -89,7 +89,7 @@
                       </h3>
                     </a>
                   </li>
-                  <li class="nav-item" data-toggle="chart" data-target="#audienceChart" data-update='{"data":{"datasets":[{"data":[40,57,25,50,57,32,46,28,59,34,52,48]}]}}' data-prefix="" data-suffix="%">
+                  <li class="nav-item" data-toggle="chart" data-target="#audienceChart" data-trigger="click" data-action="toggle" data-dataset="2">
                     <a href="#" class="nav-link text-center" data-toggle="tab">
                       <h6 class="header-pretitle text-secondary">
                         Bounce
@@ -147,7 +147,7 @@
 
                     <!-- Switch -->
                     <div class="custom-control custom-switch">
-                      <input type="checkbox" class="custom-control-input" id="cardToggle" data-toggle="chart" data-target="#conversionsChart" data-add='{"data":{"datasets":[{"data":[15,10,20,12,7,0,8,16,18,16,10,22],"backgroundColor":"#d2ddec","label":"2018"}]}}'>
+                      <input type="checkbox" class="custom-control-input" id="cardToggle" data-toggle="chart" data-target="#conversionsChart" data-trigger="change" data-action="add" data-dataset="1">
                       <label class="custom-control-label" for="cardToggle"></label>
                     </div>
 
@@ -184,12 +184,12 @@
 
                     <!-- Tabs -->
                     <ul class="nav nav-tabs nav-tabs-sm card-header-tabs">
-                      <li class="nav-item" data-toggle="chart" data-target="#trafficChart" data-update='{"data":{"datasets":[{"data":[60,25,15]}]}}'>
+                      <li class="nav-item" data-toggle="chart" data-target="#trafficChart" data-trigger="click" data-action="toggle" data-dataset="0">
                         <a href="#" class="nav-link active" data-toggle="tab">
                           All
                         </a>
                       </li>
-                      <li class="nav-item" data-toggle="chart" data-target="#trafficChart" data-update='{"data":{"datasets":[{"data":[15,45,20]}]}}'>
+                      <li class="nav-item" data-toggle="chart" data-target="#trafficChart" data-trigger="click" data-action="toggle" data-dataset="1">
                         <a href="#" class="nav-link" data-toggle="tab">
                           Direct
                         </a>

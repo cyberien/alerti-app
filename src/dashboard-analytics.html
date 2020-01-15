@@ -247,17 +247,17 @@
 
                     <!-- Nav -->
                     <ul class="nav nav-tabs nav-tabs-sm card-header-tabs">
-                      <li class="nav-item" data-toggle="chart" data-target="#salesChart" data-update='{"data":{"datasets":[{"data":[0,10,5,15,10,20,15,25,20,30,25]}]}}'>
+                      <li class="nav-item" data-toggle="chart" data-target="#salesChart" data-trigger="click" data-action="toggle" data-dataset="0">
                         <a class="nav-link active" href="#" data-toggle="tab">
                           All
                         </a>
                       </li>
-                      <li class="nav-item" data-toggle="chart" data-target="#salesChart" data-update='{"data":{"datasets":[{"data":[7,40,12,27,34,17,19,30,28,32,24]}]}}'>
+                      <li class="nav-item" data-toggle="chart" data-target="#salesChart" data-trigger="click" data-action="toggle" data-dataset="1">
                         <a class="nav-link" href="#" data-toggle="tab">
                           Direct
                         </a>
                       </li>
-                      <li class="nav-item" data-toggle="chart" data-target="#salesChart" data-update='{"data":{"datasets":[{"data":[2,12,35,25,36,25,34,16,4,14,15]}]}}'>
+                      <li class="nav-item" data-toggle="chart" data-target="#salesChart" data-trigger="click" data-action="toggle" data-dataset="2">
                         <a class="nav-link" href="#" data-toggle="tab">
                           Organic
                         </a>
@@ -297,12 +297,12 @@
 
                     <!-- Tabs -->
                     <ul class="nav nav-tabs nav-tabs-sm card-header-tabs">
-                      <li class="nav-item" data-toggle="chart" data-target="#trafficChart" data-update='{"data":{"datasets":[{"data":[60,25,15]}]}}'>
+                      <li class="nav-item" data-toggle="chart" data-target="#trafficChart" data-trigger="click" data-action="toggle" data-dataset="0">
                         <a href="#" class="nav-link active" data-toggle="tab">
                           All
                         </a>
                       </li>
-                      <li class="nav-item" data-toggle="chart" data-target="#trafficChart" data-update='{"data":{"datasets":[{"data":[15,45,20]}]}}'>
+                      <li class="nav-item" data-toggle="chart" data-target="#trafficChart" data-trigger="click" data-action="toggle" data-dataset="1">
                         <a href="#" class="nav-link" data-toggle="tab">
                           Direct
                         </a>
@@ -355,7 +355,7 @@
 
                     <!-- Switch -->
                     <div class="custom-control custom-switch">
-                      <input type="checkbox" class="custom-control-input" id="cardToggle" data-toggle="chart" data-target="#ordersChart" data-add='{"data":{"datasets":[{"data":[15,10,20,12,7,0,8,16,18,16,10,22,15,10,20,12,7,0],"backgroundColor":"#d2ddec","label":"Affiliate"}]}}'>
+                      <input type="checkbox" class="custom-control-input" id="cardToggle" data-toggle="chart" data-target="#ordersChart" data-trigger="change" data-action="add" data-dataset="1">
                       <label class="custom-control-label" for="cardToggle"></label>
                     </div>
 
