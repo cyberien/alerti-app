@@ -161,15 +161,12 @@
       var value = item.yLabel;
       var label = data.datasets[item.datasetIndex].label;
       var callback = this._chart.options.scales.yAxes[0].ticks.callback;
-      var datasetsVisible = 0;
 
-      data.datasets.forEach(function(dataset) {
-        if (!dataset.hidden) {
-          ++datasetsVisible;
-        }
+      var activeDatasets = data.datasets.filter(function(dataset) {
+        return !dataset.hidden;
       });
 
-      if (datasetsVisible > 1) {
+      if (activeDatasets.length > 1) {
         content = '<span class="popover-body-label mr-auto">' + label + '</span>';
       }
 
@@ -261,33 +258,44 @@
 
     // Action: Toggle
     if (action === 'toggle') {
+      var datasets = chartInstance.data.datasets;
 
-      var firstDataset = chartInstance.data.datasets[0];
-      var originalDataset = firstDataset.hidden ? firstDataset : undefined;
+      var activeDataset = datasets.filter(function(dataset) {
+        return !dataset.hidden;
+      })[0];
 
-      // Copy first dataset data
-      if (!originalDataset) {
-        originalDataset = {};
+      var backupDataset = datasets.filter(function(dataset) {
+        return dataset.order === 1000;
+      })[0];
 
-        for (var prop in firstDataset) {
+      // Backup active dataset
+      if (!backupDataset) {
+        backupDataset = {};
+
+        for (var prop in activeDataset) {
           if (prop !== '_meta') {
-            originalDataset[prop] = firstDataset[prop];
+            backupDataset[prop] = activeDataset[prop];
           }
         }
 
-        originalDataset.hidden = true;
-        chartInstance.data.datasets.unshift(originalDataset);
+        backupDataset.order = 1000;
+        backupDataset.hidden = true;
+
+        // Push to the dataset list
+        datasets.push(backupDataset);
       }
 
-      // Toggle active dataset data
-      var targetDataset = chartInstance.data.datasets[1];
-      var sourceDataset = (index + 1 === 1) ? originalDataset : chartInstance.data.datasets[index + 1];
+      // Toggle dataset
+      var sourceDataset = (datasets[index] === activeDataset) ? backupDataset : datasets[index];
 
-      for (var prop in targetDataset) {
+      for (var prop in activeDataset) {
         if (prop !== '_meta') {
-          targetDataset[prop] = sourceDataset[prop];
+          activeDataset[prop] = sourceDataset[prop];
         }
       }
+
+      // Update chart
+      chartInstance.update();
     }
 
     // Action: Add
