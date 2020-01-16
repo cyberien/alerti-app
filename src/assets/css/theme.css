@@ -9154,9 +9154,15 @@ a.text-white:hover, a.text-white:focus {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem; }
 
-.list-group-flush .list-group-item {
+.list-group-flush > .list-group-item {
   padding-left: 0;
   padding-right: 0; }
+
+.list-group-flush-y > .list-group-item:first-child {
+  padding-top: 0; }
+
+.list-group-flush-y > .list-group-item:last-child {
+  padding-bottom: 0; }
 
 .list-group-activity .list-group-item {
   border: 0; }
