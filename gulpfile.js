@@ -75,6 +75,8 @@ const paths = {
   }
 };
 
+const gtag = '<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156446909-1"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "UA-156446909-1");</script>';
+
 //
 // Tasks ===================================
 //
@@ -168,7 +170,7 @@ gulp.task('html', function() {
       prefix: '@@',
       basepath: '@file',
       indent: true,
-      content: config
+      context: config
     }))
     .pipe(replace(/href="(.{0,10})node_modules/g, 'href="$1assets/libs'))
     .pipe(replace(/src="(.{0,10})node_modules/g, 'src="$1assets/libs'))
@@ -179,6 +181,29 @@ gulp.task('html', function() {
     .pipe(gulp.dest(paths.dist.base.dir));
 });
 
-gulp.task('build', gulp.series(gulp.parallel('clean:tmp', 'clean:dist', 'copy:all', 'copy:libs'), 'scss', 'html'));
+gulp.task('html-preview', function() {
+  return gulp
+    .src([
+      paths.src.html.files,
+      '!' + paths.src.tmp.files,
+      '!' + paths.src.partials.files
+    ])
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file',
+      indent: true,
+      context: config
+    }))
+    .pipe(replace('</head>', '  <!-- Global site tag (gtag.js) - Google Analytics -->\n    ' + gtag + '\n\n  </head>'))
+    .pipe(replace(/href="(.{0,10})node_modules/g, 'href="$1assets/libs'))
+    .pipe(replace(/src="(.{0,10})node_modules/g, 'src="$1assets/libs'))
+    .pipe(useref())
+    .pipe(cached())
+    .pipe(gulpif('*.js', uglify()))
+    .pipe(gulpif('*.css', cleancss()))
+    .pipe(gulp.dest(paths.dist.base.dir));
+});
 
+gulp.task('build', gulp.series(gulp.parallel('clean:tmp', 'clean:dist', 'copy:all', 'copy:libs'), 'scss', 'html'));
+gulp.task('build-preview', gulp.series(gulp.parallel('clean:tmp', 'clean:dist', 'copy:all', 'copy:libs'), 'scss', 'html-preview'));
 gulp.task('default', gulp.series(gulp.parallel('fileinclude', 'scss'), gulp.parallel('browsersync', 'watch')));

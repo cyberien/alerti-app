@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     @@include("partials/head.html", {
-      "title": "Dashkit"
+    "title": "Dashkit"
     })
   </head>
   <body>
@@ -14,27 +14,27 @@
     <!-- NAVIGATION
     ================================================== -->
     @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
-      @@if (sidebarSize == 'base' || demoMode) {
-        @@include("partials/sidebar.html", {
-          "category": "pages",
-          "subcategory": "profile",
-          "page": "profile-groups.html"
-        })
-      }
-      @@if (sidebarSize == 'small' || demoMode) {
-        @@include("partials/sidebar-sm.html", {
-          "category": "pages",
-          "subcategory": "profile",
-          "page": "profile-groups.html"
-        })
-      }
+    @@if (sidebarSize == 'base' || demoMode) {
+    @@include("partials/sidebar.html", {
+    "category": "pages",
+    "subcategory": "profile",
+    "page": "profile-groups.html"
+    })
+    }
+    @@if (sidebarSize == 'small' || demoMode) {
+    @@include("partials/sidebar-sm.html", {
+    "category": "pages",
+    "subcategory": "profile",
+    "page": "profile-groups.html"
+    })
+    }
     }
     @@if (navPosition == 'topnav' || demoMode) {
-      @@include("partials/topnav.html", {
-        "category": "pages",
-        "subcategory": "profile",
-        "page": "profile-groups.html"
-      })
+    @@include("partials/topnav.html", {
+    "category": "pages",
+    "subcategory": "profile",
+    "page": "profile-groups.html"
+    })
     }
 
     <!-- MAIN CONTENT
@@ -42,7 +42,7 @@
     <div class="main-content">
 
       @@if (navPosition == 'combo' || demoMode) {
-        @@include("partials/topbar.html")
+      @@include("partials/topbar.html")
       }
 
       <!-- HEADER -->
@@ -50,14 +50,14 @@
 
         <!-- Image -->
         <img src="assets/img/covers/profile-cover-1.jpg" class="header-img-top" alt="...">
-        
+
         <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
 
           <!-- Body -->
           <div class="header-body mt-n5 mt-md-n6">
             <div class="row align-items-end">
               <div class="col-auto">
-                
+
                 <!-- Avatar -->
                 <div class="avatar avatar-xxl header-avatar-top">
                   <img src="assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle border border-4 border-body">
@@ -65,7 +65,7 @@
 
               </div>
               <div class="col mb-3 ml-n3 ml-md-n2">
-                
+
                 <!-- Pretitle -->
                 <h6 class="header-pretitle">
                   Members
@@ -78,7 +78,7 @@
 
               </div>
               <div class="col-12 col-md-auto mt-2 mt-md-0 mb-md-3">
-                
+
                 <!-- Button -->
                 <a href="#!" class="btn btn-primary d-block d-md-inline-block lift">
                   Subscribe
@@ -88,7 +88,7 @@
             </div> <!-- / .row -->
             <div class="row align-items-center">
               <div class="col">
-                
+
                 <!-- Nav -->
                 <ul class="nav nav-tabs nav-overflow header-tabs">
                   <li class="nav-item">
@@ -129,7 +129,7 @@
       <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
         <div class="row">
           <div class="col-12 col-lg-6">
-            
+
             <!-- Card -->
             <div class="card">
               <div class="card-body">
@@ -151,7 +151,7 @@
                     </a>
                   </div>
                 </div>
-                
+
                 <!-- Avatar -->
                 <div class="text-center">
                   <a href="team-overview.html" class="card-avatar avatar avatar-lg mx-auto">
@@ -174,7 +174,7 @@
 
                 <div class="row align-items-center">
                   <div class="col">
-                    
+
                     <!-- Time -->
                     <p class="card-text small text-muted">
                       <i class="fe fe-clock"></i> Updated 2hr ago
@@ -182,7 +182,7 @@
 
                   </div>
                   <div class="col-auto">
-                    
+
                     <!-- Avatar group -->
                     <div class="avatar-group">
                       <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
@@ -210,7 +210,7 @@
 
           </div>
           <div class="col-12 col-lg-6">
-            
+
             <!-- Card -->
             <div class="card">
               <div class="card-body">
@@ -232,7 +232,7 @@
                     </a>
                   </div>
                 </div>
-                
+
                 <!-- Avatar -->
                 <div class="text-center">
                   <a href="team-overview.html" class="card-avatar avatar avatar-lg mx-auto">
@@ -247,7 +247,7 @@
 
                 <!-- Text -->
                 <p class="card-text text-center text-muted mb-4">
-                  Medium is an online publishing platform developed by Evan Williams, and launched in August 2012. 
+                  Medium is an online publishing platform developed by Evan Williams, and launched in August 2012.
                 </p>
 
                 <!-- Divider -->
@@ -255,7 +255,7 @@
 
                 <div class="row align-items-center">
                   <div class="col">
-                    
+
                     <!-- Time -->
                     <p class="card-text small text-muted">
                       <i class="fe fe-clock"></i> Updated 4hr ago
@@ -263,7 +263,7 @@
 
                   </div>
                   <div class="col-auto">
-                    
+
                     <!-- Avatar group -->
                     <div class="avatar-group">
                       <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
@@ -291,7 +291,7 @@
 
           </div>
           <div class="col-12 col-lg-6">
-            
+
             <!-- Card -->
             <div class="card">
               <div class="card-body">
@@ -313,7 +313,7 @@
                     </a>
                   </div>
                 </div>
-                
+
                 <!-- Avatar -->
                 <div class="text-center">
                   <a href="team-overview.html" class="card-avatar avatar avatar-lg mx-auto">
@@ -336,7 +336,7 @@
 
                 <div class="row align-items-center">
                   <div class="col">
-                    
+
                     <!-- Time -->
                     <p class="card-text small text-muted">
                       <i class="fe fe-clock"></i> Updated 5hr ago
@@ -344,7 +344,7 @@
 
                   </div>
                   <div class="col-auto">
-                    
+
                     <!-- Avatar group -->
                     <div class="avatar-group">
                       <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
@@ -372,7 +372,7 @@
 
           </div>
           <div class="col-12 col-lg-6">
-            
+
             <!-- Card -->
             <div class="card">
               <div class="card-body">
@@ -394,7 +394,7 @@
                     </a>
                   </div>
                 </div>
-                
+
                 <!-- Avatar -->
                 <div class="text-center">
                   <a href="team-overview.html" class="card-avatar avatar avatar-lg mx-auto">
@@ -417,7 +417,7 @@
 
                 <div class="row align-items-center">
                   <div class="col">
-                    
+
                     <!-- Time -->
                     <p class="card-text small text-muted">
                       <i class="fe fe-clock"></i> Updated 4hr ago
@@ -425,7 +425,7 @@
 
                   </div>
                   <div class="col-auto">
-                    
+
                     <!-- Avatar group -->
                     <div class="avatar-group">
                       <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
@@ -453,7 +453,7 @@
 
           </div>
           <div class="col-12 col-lg-6">
-            
+
             <!-- Card -->
             <div class="card">
               <div class="card-body">
@@ -475,7 +475,7 @@
                     </a>
                   </div>
                 </div>
-                
+
                 <!-- Avatar -->
                 <div class="text-center">
                   <a href="team-overview.html" class="card-avatar avatar avatar-lg mx-auto">
@@ -498,7 +498,7 @@
 
                 <div class="row align-items-center">
                   <div class="col">
-                    
+
                     <!-- Time -->
                     <p class="card-text small text-muted">
                       <i class="fe fe-clock"></i> Updated 1d ago
@@ -506,7 +506,7 @@
 
                   </div>
                   <div class="col-auto">
-                    
+
                     <!-- Avatar group -->
                     <div class="avatar-group">
                       <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
@@ -534,7 +534,7 @@
 
           </div>
           <div class="col-12 col-lg-6">
-            
+
             <!-- Card -->
             <div class="card">
               <div class="card-body">
@@ -556,7 +556,7 @@
                     </a>
                   </div>
                 </div>
-                
+
                 <!-- Avatar -->
                 <div class="text-center">
                   <a href="team-overview.html" class="card-avatar avatar avatar-lg mx-auto">
@@ -579,7 +579,7 @@
 
                 <div class="row align-items-center">
                   <div class="col">
-                    
+
                     <!-- Time -->
                     <p class="card-text small text-muted">
                       <i class="fe fe-clock"></i> Updated 2d ago
@@ -587,7 +587,7 @@
 
                   </div>
                   <div class="col-auto">
-                    
+
                     <!-- Avatar group -->
                     <div class="avatar-group">
                       <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
@@ -615,7 +615,7 @@
 
           </div>
           <div class="col-12 col-lg-6">
-            
+
             <!-- Card -->
             <div class="card">
               <div class="card-body">
@@ -637,7 +637,7 @@
                     </a>
                   </div>
                 </div>
-                
+
                 <!-- Avatar -->
                 <div class="text-center">
                   <a href="team-overview.html" class="card-avatar avatar avatar-lg mx-auto">
@@ -660,7 +660,7 @@
 
                 <div class="row align-items-center">
                   <div class="col">
-                    
+
                     <!-- Time -->
                     <p class="card-text small text-muted">
                       <i class="fe fe-clock"></i> Updated 3d ago
@@ -668,7 +668,7 @@
 
                   </div>
                   <div class="col-auto">
-                    
+
                     <!-- Avatar group -->
                     <div class="avatar-group">
                       <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
@@ -696,7 +696,7 @@
 
           </div>
           <div class="col-12 col-lg-6">
-            
+
             <!-- Card -->
             <div class="card">
               <div class="card-body">
@@ -718,7 +718,7 @@
                     </a>
                   </div>
                 </div>
-                
+
                 <!-- Avatar -->
                 <div class="text-center">
                   <a href="team-overview.html" class="card-avatar avatar avatar-lg mx-auto">
@@ -733,7 +733,7 @@
 
                 <!-- Text -->
                 <p class="card-text text-center text-muted mb-4">
-                  Slack is a cloud-based set of team collaboration tools and services, founded by Stewart Butterfield. 
+                  Slack is a cloud-based set of team collaboration tools and services, founded by Stewart Butterfield.
                 </p>
 
                 <!-- Divider -->
@@ -741,7 +741,7 @@
 
                 <div class="row align-items-center">
                   <div class="col">
-                    
+
                     <!-- Time -->
                     <p class="card-text small text-muted">
                       <i class="fe fe-clock"></i> Updated 1w ago
@@ -749,7 +749,7 @@
 
                   </div>
                   <div class="col-auto">
-                    
+
                     <!-- Avatar group -->
                     <div class="avatar-group">
                       <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">

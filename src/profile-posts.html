@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     @@include("partials/head.html", {
-      "title": "Dashkit"
+    "title": "Dashkit"
     })
   </head>
   <body>
@@ -14,27 +14,27 @@
     <!-- NAVIGATION
     ================================================== -->
     @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
-      @@if (sidebarSize == 'base' || demoMode) {
-        @@include("partials/sidebar.html", {
-          "category": "pages",
-          "subcategory": "profile",
-          "page": "profile-posts.html"
-        })
-      }
-      @@if (sidebarSize == 'small' || demoMode) {
-        @@include("partials/sidebar-sm.html", {
-          "category": "pages",
-          "subcategory": "profile",
-          "page": "profile-posts.html"
-        })
-      }
+    @@if (sidebarSize == 'base' || demoMode) {
+    @@include("partials/sidebar.html", {
+    "category": "pages",
+    "subcategory": "profile",
+    "page": "profile-posts.html"
+    })
+    }
+    @@if (sidebarSize == 'small' || demoMode) {
+    @@include("partials/sidebar-sm.html", {
+    "category": "pages",
+    "subcategory": "profile",
+    "page": "profile-posts.html"
+    })
+    }
     }
     @@if (navPosition == 'topnav' || demoMode) {
-      @@include("partials/topnav.html", {
-        "category": "pages",
-        "subcategory": "profile",
-        "page": "profile-posts.html"
-      })
+    @@include("partials/topnav.html", {
+    "category": "pages",
+    "subcategory": "profile",
+    "page": "profile-posts.html"
+    })
     }
 
     <!-- MAIN CONTENT
@@ -42,7 +42,7 @@
     <div class="main-content">
 
       @@if (navPosition == 'combo' || demoMode) {
-        @@include("partials/topbar.html")
+      @@include("partials/topbar.html")
       }
 
       <!-- HEADER -->
@@ -50,14 +50,14 @@
 
         <!-- Image -->
         <img src="assets/img/covers/profile-cover-1.jpg" class="header-img-top" alt="...">
-        
+
         <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
 
           <!-- Body -->
           <div class="header-body mt-n5 mt-md-n6">
             <div class="row align-items-end">
               <div class="col-auto">
-                
+
                 <!-- Avatar -->
                 <div class="avatar avatar-xxl header-avatar-top">
                   <img src="assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle border border-4 border-body">
@@ -65,7 +65,7 @@
 
               </div>
               <div class="col mb-3 ml-n3 ml-md-n2">
-                
+
                 <!-- Pretitle -->
                 <h6 class="header-pretitle">
                   Members
@@ -78,7 +78,7 @@
 
               </div>
               <div class="col-12 col-md-auto mt-2 mt-md-0 mb-md-3">
-                
+
                 <!-- Button -->
                 <a href="#!" class="btn btn-primary d-block d-md-inline-block lift">
                   Subscribe
@@ -88,7 +88,7 @@
             </div> <!-- / .row -->
             <div class="row align-items-center">
               <div class="col">
-                
+
                 <!-- Nav -->
                 <ul class="nav nav-tabs nav-overflow header-tabs">
                   <li class="nav-item">
@@ -129,16 +129,16 @@
       <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
         <div class="row">
           <div class="col-12 col-xl-8">
-            
+
             <!-- Card -->
             <div class="card">
               <div class="card-body">
-                
+
                 <!-- Header -->
                 <div class="mb-3">
                   <div class="row align-items-center">
                     <div class="col-auto">
-                      
+
                       <!-- Avatar -->
                       <a href="#!" class="avatar">
                         <img src="assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
@@ -156,10 +156,10 @@
                       <p class="card-text small text-muted">
                         <span class="fe fe-clock"></span> <time datetime="2018-05-24">4hr ago</time>
                       </p>
-                      
+
                     </div>
                     <div class="col-auto">
-                      
+
                       <!-- Dropdown -->
                       <div class="dropdown">
                         <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -177,7 +177,7 @@
                           </a>
                         </div>
                       </div>
-                      
+
                     </div>
                   </div> <!-- / .row -->
                 </div>
@@ -186,9 +186,10 @@
                 <p class="mb-3">
                   I've been working on shipping the latest version of Launchday. The story I'm trying to focus on is something like "You're launching soon and need to be 100% focused on your product. Don't lose precious days designing, coding, and testing a product site. Instead, build one in minutes."
                 </p>
-                
+
+                <!-- Text -->
                 <p class="mb-4">
-                    What do you y'all think? Would love some feedback from <a href="#!" class="badge badge-soft-primary">@Ab</a> or <a href="#!" class="badge badge-soft-primary">@Adolfo</a>?
+                  What do you y'all think? Would love some feedback from <a href="#!" class="badge badge-soft-primary">@Ab</a> or <a href="#!" class="badge badge-soft-primary">@Adolfo</a>?
                 </p>
 
                 <!-- Image -->
@@ -196,11 +197,11 @@
                   <img src="assets/img/posts/post-1.jpg" alt="..." class="img-fluid rounded">
                 </p>
 
-                <!-- Buttons -->
                 <div class="mb-3">
                   <div class="row">
                     <div class="col">
 
+                      <!-- Buttons -->
                       <a href="#!" class="btn btn-sm btn-white">
                         😬 1
                       </a>
@@ -214,6 +215,7 @@
                     </div>
                     <div class="col-auto mr-n3">
 
+                      <!-- Avatar group -->
                       <div class="avatar-group d-none d-sm-flex">
                         <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
                           <img src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
@@ -232,6 +234,7 @@
                     </div>
                     <div class="col-auto">
 
+                      <!-- Button -->
                       <a href="#!" class="btn btn-sm btn-white">
                         Share
                       </a>
@@ -256,7 +259,7 @@
 
                     </div>
                     <div class="col ml-n2">
-                      
+
                       <!-- Body -->
                       <div class="comment-body">
 
@@ -301,7 +304,7 @@
 
                     </div>
                     <div class="col ml-n2">
-                      
+
                       <!-- Body -->
                       <div class="comment-body">
 
@@ -358,7 +361,7 @@
 
                   </div>
                   <div class="col-auto align-self-end">
-                    
+
                     <!-- Icons -->
                     <div class="text-muted mb-2">
                       <a class="text-reset mr-3" href="#!" data-toggle="tooltip" title="Add photo">
@@ -381,12 +384,12 @@
             <!-- Card -->
             <div class="card">
               <div class="card-body">
-                
+
                 <!-- Header -->
                 <div class="mb-3">
                   <div class="row align-items-center">
                     <div class="col-auto">
-                      
+
                       <!-- Avatar -->
                       <a href="#!" class="avatar">
                         <img src="assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
@@ -404,10 +407,10 @@
                       <p class="card-text small text-muted">
                         <span class="fe fe-clock"></span> <time datetime="2018-05-24">4hr ago</time>
                       </p>
-                      
+
                     </div>
                     <div class="col-auto">
-                      
+
                       <!-- Dropdown -->
                       <div class="dropdown">
                         <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -425,7 +428,7 @@
                           </a>
                         </div>
                       </div>
-                      
+
                     </div>
                   </div> <!-- / .row -->
                 </div>
@@ -434,23 +437,24 @@
                 <p class="mb-3">
                   I've spent a lot of time thinking about our design process and trying to figure out a better order for us to tackle things. Right now it feels like we're everywhere with tools and process, so here's my suggestion:
                 </p>
-                
+
+                <!-- List -->
                 <ol class="mb-3">
                   <li><strong>Define the goals</strong>: Create a template for expressing what the purpose of a project is and why we're investing time and money in tackling it.</li>
                   <li><strong>Sketch a solution</strong>: Use tried and true paper and pencil to express ideas and share them with others at the company before going too deep on design.</li>
                   <li><strong>User test with Figma</strong>: Use the page linking in Figma to get a rough clickable prototype and test this with real users.</li>
                   <li><strong>Prototype with code</strong>: Built and HTML/CSS with dummied data to test how things feel before building a true front-end.</li>
                 </ol>
-                
+
                 <p class="mb-4">
                   Wanna help me out <a href="#!" class="badge badge-soft-primary">@Ryu Duke</a> or <a href="#!" class="badge badge-soft-primary">@Miyah Miles</a>?
                 </p>
 
-                <!-- Buttons -->
                 <div class="mb-3">
                   <div class="row">
                     <div class="col">
 
+                      <!-- Buttons -->
                       <a href="#!" class="btn btn-sm btn-white">
                         😍 4
                       </a>
@@ -464,6 +468,7 @@
                     </div>
                     <div class="col-auto mr-n3">
 
+                      <!-- Avatar group -->
                       <div class="avatar-group d-none d-sm-flex">
                         <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Daniela Dewitt">
                           <img src="assets/img/avatars/profiles/avatar-4.jpg" alt="..." class="avatar-img rounded-circle">
@@ -479,6 +484,7 @@
                     </div>
                     <div class="col-auto">
 
+                      <!-- Button -->
                       <a href="#!" class="btn btn-sm btn-white">
                         Share
                       </a>
@@ -503,7 +509,7 @@
 
                     </div>
                     <div class="col ml-n2">
-                      
+
                       <!-- Body -->
                       <div class="comment-body">
 
@@ -548,7 +554,7 @@
 
                     </div>
                     <div class="col ml-n2">
-                      
+
                       <!-- Body -->
                       <div class="comment-body">
 
@@ -605,7 +611,7 @@
 
                   </div>
                   <div class="col-auto align-self-end">
-                    
+
                     <!-- Icons -->
                     <div class="text-muted mb-2">
                       <a class="text-reset mr-3" href="#!" data-toggle="tooltip" title="Add photo">
@@ -627,91 +633,94 @@
 
           </div>
           <div class="col-12 col-xl-4">
-            
+
             <!-- Card -->
             <div class="card">
               <div class="card-body">
 
-                <div class="row align-items-center">
-                  <div class="col">
-                    
-                    <!-- Title -->
-                    <h5 class="mb-0">
-                      Birthday
-                    </h5>
+                <!-- List group -->
+                <div class="list-group list-group-flush my-n3">
+                  <div class="list-group-item">
+                    <div class="row align-items-center">
+                      <div class="col">
 
+                        <!-- Title -->
+                        <h5 class="mb-0">
+                          Birthday
+                        </h5>
+
+                      </div>
+                      <div class="col-auto">
+
+                        <!-- Time -->
+                        <time class="small text-muted" datetime="1988-10-24">
+                          10/24/88
+                        </time>
+
+                      </div>
+                    </div> <!-- / .row -->
                   </div>
-                  <div class="col-auto">
-                    
-                    <time class="small text-muted" datetime="1988-10-24">
-                      10/24/88
-                    </time>
+                  <div class="list-group-item">
+                    <div class="row align-items-center">
+                      <div class="col">
 
+                        <!-- Title -->
+                        <h5 class="mb-0">
+                          Joined
+                        </h5>
+
+                      </div>
+                      <div class="col-auto">
+
+                        <!-- Time -->
+                        <time class="small text-muted" datetime="2018-10-28">
+                          10/24/18
+                        </time>
+
+                      </div>
+                    </div> <!-- / .row -->
                   </div>
-                </div> <!-- / .row -->
+                  <div class="list-group-item">
+                    <div class="row align-items-center">
+                      <div class="col">
 
-                <!-- Divider -->
-                <hr>
+                        <!-- Title -->
+                        <h5 class="mb-0">
+                          Location
+                        </h5>
 
-                <div class="row align-items-center">
-                  <div class="col">
-                    
-                    <!-- Title -->
-                    <h5 class="mb-0">
-                      Joined
-                    </h5>
+                      </div>
+                      <div class="col-auto">
 
+                        <!-- Text -->
+                        <small class="text-muted">
+                          Los Angeles, CA
+                        </small>
+
+                      </div>
+                    </div> <!-- / .row -->
                   </div>
-                  <div class="col-auto">
-                    
-                    <time class="small text-muted" datetime="2018-10-28">
-                      10/24/18
-                    </time>
+                  <div class="list-group-item">
+                    <div class="row align-items-center">
+                      <div class="col">
 
+                        <!-- Title -->
+                        <h5 class="mb-0">
+                          Website
+                        </h5>
+
+                      </div>
+                      <div class="col-auto">
+
+                        <!-- Link -->
+                        <a href="#!" class="small">
+                          themes.getbootstrap.com
+                        </a>
+
+                      </div>
+                    </div> <!-- / .row -->
                   </div>
-                </div> <!-- / .row -->
-
-                <!-- Divider -->
-                <hr>
-
-                <div class="row align-items-center">
-                  <div class="col">
-                    
-                    <!-- Title -->
-                    <h5 class="mb-0">
-                      Location
-                    </h5>
-
-                  </div>
-                  <div class="col-auto">
-                    
-                    <small class="text-muted">
-                      Los Angeles, CA
-                    </small>
-
-                  </div>
-                </div> <!-- / .row -->
-
-                <!-- Divider -->
-                <hr>
-
-                <div class="row align-items-center">
-                  <div class="col">
-                    
-                    <!-- Title -->
-                    <h5 class="mb-0">
-                      Website
-                    </h5>
-
-                  </div>
-                  <div class="col-auto">
-                    
-                    <a href="#!" class="small">
-                      themes.getbootstrap.com
-                    </a>
-
-                  </div>
-                </div> <!-- / .row -->
+                </div>
 
               </div>
             </div>
@@ -719,7 +728,7 @@
             <!-- Weekly Hours -->
             <div class="card">
               <div class="card-header">
-                
+
                 <!-- Title -->
                 <h4 class="card-header-title">
                   Weekly Hours
@@ -727,7 +736,7 @@
 
               </div>
               <div class="card-body">
-                
+
                 <!-- Chart -->
                 <div class="chart chart-sm">
                   <canvas id="weeklyHoursChart" class="chart-canvas"></canvas>
