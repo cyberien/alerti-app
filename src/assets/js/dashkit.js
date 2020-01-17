@@ -499,3 +499,20 @@
     });
   }
 })();
+
+// Orders select
+
+(function() {
+  var ordersSelect = document.querySelectorAll('[name="ordersSelect"]');
+  var ordersSelectAll = document.getElementById('ordersSelectAll');
+
+  if (ordersSelect && ordersSelectAll) {
+    ordersSelectAll.addEventListener('change', function() {
+      var that = this;
+
+      [].forEach.call(ordersSelect, function(checkbox) {
+        checkbox.checked = that.checked;
+      });
+    });
+  }
+})();

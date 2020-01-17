@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     @@include("partials/head.html", {
-      "title": "Dashkit"
+    "title": "Dashkit"
     })
   </head>
   <body>
@@ -14,27 +14,27 @@
     <!-- NAVIGATION
     ================================================== -->
     @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
-      @@if (sidebarSize == 'base' || demoMode) {
-        @@include("partials/sidebar.html", {
-          "category": "pages",
-          "subcategory": "",
-          "page": "orders.html"
-        })
-      }
-      @@if (sidebarSize == 'small' || demoMode) {
-        @@include("partials/sidebar-sm.html", {
-          "category": "pages",
-          "subcategory": "",
-          "page": "orders.html"
-        })
-      }
+    @@if (sidebarSize == 'base' || demoMode) {
+    @@include("partials/sidebar.html", {
+    "category": "pages",
+    "subcategory": "",
+    "page": "orders.html"
+    })
+    }
+    @@if (sidebarSize == 'small' || demoMode) {
+    @@include("partials/sidebar-sm.html", {
+    "category": "pages",
+    "subcategory": "",
+    "page": "orders.html"
+    })
+    }
     }
     @@if (navPosition == 'topnav' || demoMode) {
-      @@include("partials/topnav.html", {
-        "category": "pages",
-        "subcategory": "",
-        "page": "orders.html"
-      })
+    @@include("partials/topnav.html", {
+    "category": "pages",
+    "subcategory": "",
+    "page": "orders.html"
+    })
     }
 
     <!-- MAIN CONTENT
@@ -42,19 +42,19 @@
     <div class="main-content">
 
       @@if (navPosition == 'combo' || demoMode) {
-        @@include("partials/topbar.html")
+      @@include("partials/topbar.html")
       }
 
       <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
         <div class="row justify-content-center">
           <div class="col-12">
-            
+
             <!-- Header -->
             <div class="header mt-md-5">
               <div class="header-body">
                 <div class="row align-items-center">
                   <div class="col">
-                    
+
                     <!-- Pretitle -->
                     <h6 class="header-pretitle">
                       Overview
@@ -67,17 +67,17 @@
 
                   </div>
                   <div class="col-auto">
-                    
+
                     <!-- Button -->
                     <a href="#" class="btn btn-primary lift">
                       New order
                     </a>
-                    
+
                   </div>
                 </div> <!-- / .row -->
                 <div class="row align-items-center">
                   <div class="col">
-                    
+
                     <!-- Nav -->
                     <ul class="nav nav-tabs nav-overflow header-tabs">
                       <li class="nav-item">
@@ -119,13 +119,13 @@
                         <span class="fe fe-search text-muted"></span>
                       </div>
                       <div class="col">
-                          <input type="search" class="form-control form-control-flush search" placeholder="Search">
+                        <input type="search" class="form-control form-control-flush search" placeholder="Search">
                       </div>
                     </form>
-                    
+
                   </div>
                   <div class="col-auto">
-                    
+
                     <!-- Button -->
 
                     <div class="dropdown">
@@ -579,7 +579,7 @@
           </div>
         </div> <!-- / .row -->
       </div>
-      
+
     </div> <!-- / .main-content -->
 
     <!-- JAVASCRIPT
