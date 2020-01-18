@@ -8712,7 +8712,7 @@ a.text-white:hover, a.text-white:focus {
           flex-grow: 1;
   -webkit-box-align: center;
           align-items: center;
-  min-height: 3.75rem;
+  height: 3.75rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem; }
   .card-header > * {

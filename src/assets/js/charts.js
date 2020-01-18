@@ -158,9 +158,22 @@
 
     Chart.defaults.global.tooltips.callbacks.label = function(item, data) {
       var content = '';
+
       var value = item.yLabel;
-      var label = data.datasets[item.datasetIndex].label;
-      var callback = this._chart.options.scales.yAxes[0].ticks.callback;
+      var dataset = data.datasets[item.datasetIndex]
+      var label = dataset.label;
+
+      var yAxisID = dataset.yAxisID ? dataset.yAxisID : 0;
+      var yAxes = this._chart.options.scales.yAxes;
+      var yAxis = yAxes[0];
+
+      if (yAxisID) {
+        var yAxis = yAxes.filter(function(item) {
+          return item.id == yAxisID;
+        })[0];
+      }
+
+      var callback = yAxis.ticks.callback;
 
       var activeDatasets = data.datasets.filter(function(dataset) {
         return !dataset.hidden;
