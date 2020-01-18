@@ -8819,6 +8819,17 @@ a.text-white:hover, a.text-white:focus {
 .card-fill {
   min-height: calc(100% - 1.5rem); }
 
+.card-adjust {
+  height: 0;
+  min-height: 100%; }
+
+.card-adjust .card {
+  height: calc(100% - 1.5rem); }
+
+.card-adjust .card-body {
+  height: calc(100% - 60px);
+  overflow-y: auto; }
+
 .card-adjust-xs {
   height: 0;
   min-height: 100%; }

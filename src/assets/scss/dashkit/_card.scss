@@ -214,6 +214,22 @@
 // Limits the height to the height of the neighboring card and adds a scrollbar to the card body
 
 .card-adjust {
+  height: 0;
+  min-height: 100%;
+}
+
+.card-adjust .card {
+  height: calc(100% - #{$card-margin-bottom});
+}
+
+.card-adjust .card-body {
+  height: calc(100% - #{$card-header-height});
+  overflow-y: auto;
+}
+
+// Responsive
+
+.card-adjust {
 
   @each $breakpoint, $value in $grid-breakpoints {
 
