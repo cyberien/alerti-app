@@ -42,7 +42,7 @@ var demoMode = (function() {
       var showPopover = JSON.parse(config.showPopover) && config.sidebarSize === 'base';
 
       // Show popover on load
-      if (true) {
+      if (showPopover) {
         $(popover).popover({
           'boundary': 'viewport',
           'offset': '50px',

@@ -16,24 +16,24 @@
     @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
     @@if (sidebarSize == 'base' || demoMode) {
     @@include("partials/sidebar.html", {
-    "category": "pages",
-    "subcategory": "feed",
-    "page": "feed.html"
+    "category": "",
+    "subcategory": "",
+    "page": "widgets.html"
     })
     }
     @@if (sidebarSize == 'small' || demoMode) {
     @@include("partials/sidebar-sm.html", {
-    "category": "pages",
-    "subcategory": "feed",
-    "page": "feed.html"
+    "category": "",
+    "subcategory": "",
+    "page": "widgets.html"
     })
     }
     }
     @@if (navPosition == 'topnav' || demoMode) {
     @@include("partials/topnav.html", {
-    "category": "pages",
-    "subcategory": "feed",
-    "page": "feed.html"
+    "category": "",
+    "subcategory": "",
+    "page": "widgets.html"
     })
     }
 
@@ -4301,7 +4301,7 @@
 
                       <!-- Image -->
                       <div class="avatar">
-                        <img class="avatar-img rounded" src="..." alt="..." data-dz-thumbnail>
+                        <img class="avatar-img rounded" src="data:image/svg+xml,%3csvg3c/svg%3e" alt="..." data-dz-thumbnail>
                       </div>
 
                     </div>

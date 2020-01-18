@@ -66,13 +66,18 @@
               <h6 class="text-uppercase mb-0">Dashboards</h6>
             </li>
             <li>
-              <a class="dropdown-item @@if(page=='index.html'){active}" href="@@webRoot/index.html">
+              <a href="@@webRoot/index.html" class="dropdown-item @@if(page=='index.html'){active}">
                 Default
               </a>
             </li>
             <li>
-              <a class="dropdown-item @@if(page=='dashboard-alt.html'){active}" href="@@webRoot/dashboard-alt.html">
-                Alternative
+              <a href="@@webRoot/dashboard-project-management.html" class="dropdown-item @@if(page=='dashboard-project-management.html'){active}">
+                Project Management
+              </a>
+            </li>
+            <li>
+              <a href="@@webRoot/dashboard-analytics.html" class="dropdown-item @@if(page=='dashboard-analytics.html'){active}">
+                Analytics
               </a>
             </li>
           </ul>
@@ -159,6 +164,11 @@
               </div>
             </li>
             <li>
+              <a class="dropdown-item @@if(page=='wizard.html'){active}" href="@@webRoot/wizard.html">
+                Wizard
+              </a>
+            </li>
+            <li>
               <a class="dropdown-item @@if(page=='kanban.html'){active}" href="@@webRoot/kanban.html">
                 Kanban
               </a>
@@ -184,6 +194,11 @@
               </a>
             </li>
           </ul>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" data-template='<div class="tooltip d-none d-md-block" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>' title="Widgets">
+          <a class="nav-link @@if(page=='widgets.html'){active}" href="@@webRoot/widgets.html">
+            <i class="fe fe-grid"></i> <span class="d-md-none">Widgets</span>
+          </a>
         </li>
         <li class="nav-item dropright">
           <a class="nav-link dropdown-toggle" id="sidebarSmallAuth" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -268,10 +283,25 @@
 
       <!-- Navigation -->
       <ul class="navbar-nav mb-md-4">
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" data-template='<div class="tooltip d-none d-md-block" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>' title="Getting started">
-          <a class="nav-link @@if(page=='getting-started.html'){active}" href="@@webRoot/docs/getting-started.html">
-            <i class="fe fe-clipboard"></i> <span class="d-md-none">Getting started</span>
+        <li class="nav-item dropright">
+          <a class="nav-link dropdown-toggle @@if(category=='basics'){active}" id="sidebarSmallBasics" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Basics">
+            <i class="fe fe-clipboard"></i> <span class="d-md-none">Basics</span>
           </a>
+          <ul class="dropdown-menu" aria-labelledby="sidebarSmallBasics">
+            <li class="dropdown-header d-none d-md-block">
+              <h6 class="text-uppercase mb-0">Basics</h6>
+            </li>
+            <li>
+              <a href="@@webRoot/docs/getting-started.html" class="dropdown-item @@if(page=='getting-started.html'){active}">
+                Getting Started
+              </a>
+            </li>
+            <li>
+              <a href="@@webRoot/docs/design-file.html" class="dropdown-item @@if(page=='design-file.html'){active}">
+                Design File
+              </a>
+            </li>
+          </ul>
         </li>
         <li class="nav-item">
           <a class="nav-link @@if(category=='components'){active}" href="@@webRoot/docs/alerts.html" data-toggle="tooltip" data-placement="right" data-template='<div class="tooltip d-none d-md-block" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>' title="Components">

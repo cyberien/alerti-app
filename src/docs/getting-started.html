@@ -18,14 +18,14 @@
     @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
     @@if (sidebarSize == 'base' || demoMode) {
     @@include("../partials/sidebar.html", {
-    "category": "",
+    "category": "basics",
     "subcategory": "",
     "page": "getting-started.html"
     })
     }
     @@if (sidebarSize == 'small' || demoMode) {
     @@include("../partials/sidebar-sm.html", {
-    "category": "",
+    "category": "basics",
     "subcategory": "",
     "page": "getting-started.html"
     })
@@ -33,7 +33,7 @@
     }
     @@if (navPosition == 'topnav' || demoMode) {
     @@include("../partials/topnav.html", {
-    "category": "",
+    "category": "basics",
     "subcategory": "",
     "page": "getting-started.html"
     })

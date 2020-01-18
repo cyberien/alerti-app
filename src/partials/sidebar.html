@@ -66,13 +66,13 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="@@webRoot/dashboard-analytics.html" class="nav-link @@if(page=='dashboard-analytics.html'){active}">
-                  Analytics
+                <a href="@@webRoot/dashboard-project-management.html" class="nav-link @@if(page=='dashboard-project-management.html'){active}">
+                  Project Management
                 </a>
               </li>
               <li class="nav-item">
-                <a href="@@webRoot/dashboard-project-management.html" class="nav-link @@if(page=='dashboard-project-management.html'){active}">
-                  Project Management
+                <a href="@@webRoot/dashboard-analytics.html" class="nav-link @@if(page=='dashboard-analytics.html'){active}">
+                  Analytics
                 </a>
               </li>
             </ul>
@@ -196,8 +196,13 @@
                 </div>
               </li>
               <li class="nav-item">
+                <a href="@@webRoot/wizard.html" class="nav-link @@if(page=='wizard.html'){active}">
+                  Wizard <span class="badge badge-soft-success ml-auto">New</span>
+                </a>
+              </li>
+              <li class="nav-item">
                 <a href="@@webRoot/kanban.html" class="nav-link @@if(page=='kanban.html'){active}">
-                  Kanban <span class="badge badge-soft-success ml-auto">New</span>
+                  Kanban
                 </a>
               </li>
               <li class="nav-item">
@@ -222,6 +227,11 @@
               </li>
             </ul>
           </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link @@if(page=='widgets.html'){active}" href="widgets.html">
+            <i class="fe fe-grid"></i> Widgets <span class="badge badge-soft-success ml-auto">New</span>
+          </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#sidebarAuth" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarAuth">
@@ -341,9 +351,23 @@
       <!-- Navigation -->
       <ul class="navbar-nav mb-md-4">
         <li class="nav-item">
-          <a class="nav-link @@if(page=='getting-started.html'){active}" href="@@webRoot/docs/getting-started.html">
-            <i class="fe fe-clipboard"></i> Getting started
+          <a class="nav-link" href="#sidebarBasics" data-toggle="collapse" role="button" aria-expanded="@@if(category=='basics'){true}@@if( category!=='basics'){false}" aria-controls="sidebarBasics">
+            <i class="fe fe-clipboard"></i> Basics
           </a>
+          <div class="collapse @@if(category=='basics'){show}" id="sidebarBasics">
+            <ul class="nav nav-sm flex-column">
+              <li class="nav-item @@if(page=='getting-started.html'){active}">
+                <a href="@@webRoot/docs/getting-started.html" class="nav-link">
+                  Getting Started
+                </a>
+              </li>
+              <li class="nav-item @@if(page=='design-file.html'){active}">
+                <a href="@@webRoot/docs/design-file.html" class="nav-link">
+                  Design File
+                </a>
+              </li>
+            </ul>
+          </div>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#sidebarComponents" data-toggle="collapse" role="button" aria-expanded="@@if(category=='components'){true}@@if( category!=='components'){false}" aria-controls="sidebarComponents">
