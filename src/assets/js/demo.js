@@ -42,17 +42,19 @@ var demoMode = (function() {
       var showPopover = JSON.parse(config.showPopover) && config.sidebarSize === 'base';
 
       // Show popover on load
-      if (showPopover) {
+      if (true) {
         $(popover).popover({
           'boundary': 'viewport',
+          'offset': '50px',
           'placement': 'top',
-          'template': '<div class="popover popover-lg popover-dark" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
+          'template': '<div class="popover popover-lg popover-dark d-none d-md-block" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
         }).popover('show');
       }
 
       // Hide popover on click
       popover.addEventListener('click', function() {
         $(popover).popover('hide');
+
         localStorage.setItem('dashkitShowPopover', false);
       });
     }
