@@ -590,12 +590,13 @@ $breadcrumb-font-size-sm: $font-size-sm !default;
 
 // Cards
 
+$card-margin-bottom: $spacer !default;
 $card-spacer-x-sm: 1rem !default;
 
 $card-outline-color: $card-border-color !default;
 $card-box-shadow: 0 .75rem 1.5rem transparentize($black, .97) !default;
 
-$card-header-min-height: 3.75rem !default;
+$card-header-height: 60px !default;
 
 
 // Charts
