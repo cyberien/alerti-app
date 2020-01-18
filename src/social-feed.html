@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     @@include("partials/head.html", {
-      "title": "Dashkit"
+    "title": "Dashkit"
     })
   </head>
   <body>
@@ -14,27 +14,27 @@
     <!-- NAVIGATION
     ================================================== -->
     @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
-      @@if (sidebarSize == 'base' || demoMode) {
-        @@include("partials/sidebar.html", {
-          "category": "pages",
-          "subcategory": "feed",
-          "page": "social-feed.html"
-        })
-      }
-      @@if (sidebarSize == 'small' || demoMode) {
-        @@include("partials/sidebar-sm.html", {
-          "category": "pages",
-          "subcategory": "feed",
-          "page": "social-feed.html"
-        })
-      }
+    @@if (sidebarSize == 'base' || demoMode) {
+    @@include("partials/sidebar.html", {
+    "category": "pages",
+    "subcategory": "feed",
+    "page": "social-feed.html"
+    })
+    }
+    @@if (sidebarSize == 'small' || demoMode) {
+    @@include("partials/sidebar-sm.html", {
+    "category": "pages",
+    "subcategory": "feed",
+    "page": "social-feed.html"
+    })
+    }
     }
     @@if (navPosition == 'topnav' || demoMode) {
-      @@include("partials/topnav.html", {
-        "category": "pages",
-        "subcategory": "feed",
-        "page": "social-feed.html"
-      })
+    @@include("partials/topnav.html", {
+    "category": "pages",
+    "subcategory": "feed",
+    "page": "social-feed.html"
+    })
     }
 
     <!-- MAIN CONTENT
@@ -42,7 +42,7 @@
     <div class="main-content">
 
       @@if (navPosition == 'combo' || demoMode) {
-        @@include("partials/topbar.html")
+      @@include("partials/topbar.html")
       }
 
       <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
@@ -52,7 +52,7 @@
             <!-- Card -->
             <div class="card">
               <div class="card-body">
-                
+
                 <!-- Form -->
                 <form>
                   <div class="form-group">
@@ -63,7 +63,7 @@
                 <!-- Footer -->
                 <div class="row align-items-center">
                   <div class="col">
-                    
+
                     <!-- Symbols -->
                     <small class="text-muted">
                       0/500
@@ -71,7 +71,7 @@
 
                   </div>
                   <div class="col-auto">
-                    
+
                     <!-- Icons -->
                     <div class="text-muted">
                       <a class="text-reset mr-3" href="#!" data-toggle="tooltip" title="Add photo">
@@ -94,12 +94,12 @@
             <!-- Card -->
             <div class="card">
               <div class="card-body">
-                
+
                 <!-- Header -->
                 <div class="mb-3">
                   <div class="row align-items-center">
                     <div class="col-auto">
-                      
+
                       <!-- Avatar -->
                       <a href="#!" class="avatar">
                         <img src="assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
@@ -109,7 +109,7 @@
                     <div class="col ml-n2">
 
                       <!-- Title -->
-                      <h4 class="card-title mb-1">
+                      <h4 class="mb-1">
                         Dianna Smiley
                       </h4>
 
@@ -117,15 +117,19 @@
                       <p class="card-text small text-muted">
                         <span class="fe fe-clock"></span> <time datetime="2018-05-24">4hr ago</time>
                       </p>
-                      
+
                     </div>
                     <div class="col-auto">
-                      
+
                       <!-- Dropdown -->
                       <div class="dropdown">
+
+                        <!-- Toggle -->
                         <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <i class="fe fe-more-vertical"></i>
                         </a>
+
+                        <!-- Menu -->
                         <div class="dropdown-menu dropdown-menu-right">
                           <a href="#!" class="dropdown-item">
                             Action
@@ -137,8 +141,9 @@
                             Something else here
                           </a>
                         </div>
+
                       </div>
-                      
+
                     </div>
                   </div> <!-- / .row -->
                 </div>
@@ -147,9 +152,9 @@
                 <p class="mb-3">
                   I've been working on shipping the latest version of Launchday. The story I'm trying to focus on is something like "You're launching soon and need to be 100% focused on your product. Don't lose precious days designing, coding, and testing a product site. Instead, build one in minutes."
                 </p>
-                
+
                 <p class="mb-4">
-                    What do you y'all think? Would love some feedback from <a href="#!" class="badge badge-soft-primary">@Ab</a> or <a href="#!" class="badge badge-soft-primary">@Adolfo</a>?
+                  What do you y'all think? Would love some feedback from <a href="#!" class="badge badge-soft-primary">@Ab</a> or <a href="#!" class="badge badge-soft-primary">@Adolfo</a>?
                 </p>
 
                 <!-- Image -->
@@ -162,6 +167,7 @@
                   <div class="row">
                     <div class="col">
 
+                      <!-- Reaction -->
                       <a href="#!" class="btn btn-sm btn-white">
                         😬 1
                       </a>
@@ -175,6 +181,7 @@
                     </div>
                     <div class="col-auto mr-n3">
 
+                      <!-- Avatar group -->
                       <div class="avatar-group d-none d-sm-flex">
                         <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
                           <img src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
@@ -193,6 +200,7 @@
                     </div>
                     <div class="col-auto">
 
+                      <!-- Button -->
                       <a href="#!" class="btn btn-sm btn-white">
                         Share
                       </a>
@@ -216,7 +224,7 @@
 
                     </div>
                     <div class="col ml-n2">
-                      
+
                       <!-- Body -->
                       <div class="comment-body">
 
@@ -261,7 +269,7 @@
 
                     </div>
                     <div class="col ml-n2">
-                      
+
                       <!-- Body -->
                       <div class="comment-body">
 
@@ -310,7 +318,7 @@
                   </div>
                   <div class="col ml-n2">
 
-                    <!-- Input -->
+                    <!-- Form -->
                     <form class="mt-1">
                       <label class="sr-only">Leave a comment...</label>
                       <textarea class="form-control form-control-flush" data-toggle="autosize" rows="1" placeholder="Leave a comment"></textarea>
@@ -318,7 +326,7 @@
 
                   </div>
                   <div class="col-auto align-self-end">
-                    
+
                     <!-- Icons -->
                     <div class="text-muted mb-2">
                       <a class="text-reset mr-3" href="#!" data-toggle="tooltip" title="Add photo">
@@ -341,12 +349,12 @@
             <!-- Card -->
             <div class="card">
               <div class="card-body">
-                
+
                 <!-- Header -->
                 <div class="mb-3">
                   <div class="row align-items-center">
                     <div class="col-auto">
-                      
+
                       <!-- Avatar -->
                       <a href="#!" class="avatar">
                         <img src="assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
@@ -356,7 +364,7 @@
                     <div class="col ml-n2">
 
                       <!-- Title -->
-                      <h4 class="card-title mb-1">
+                      <h4 class="mb-1">
                         Dianna Smiley
                       </h4>
 
@@ -364,10 +372,10 @@
                       <p class="card-text small text-muted">
                         <span class="fe fe-clock"></span> <time datetime="2018-05-24">4hr ago</time>
                       </p>
-                      
+
                     </div>
                     <div class="col-auto">
-                      
+
                       <!-- Dropdown -->
                       <div class="dropdown">
                         <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -385,7 +393,7 @@
                           </a>
                         </div>
                       </div>
-                      
+
                     </div>
                   </div> <!-- / .row -->
                 </div>
@@ -403,6 +411,7 @@
                   <div class="row">
                     <div class="col">
 
+                      <!-- Reaction -->
                       <a href="#!" class="btn btn-sm btn-white">
                         😬 1
                       </a>
@@ -416,6 +425,7 @@
                     </div>
                     <div class="col-auto mr-n3">
 
+                      <!-- Avatar group -->
                       <div class="avatar-group d-none d-sm-flex">
                         <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
                           <img src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
@@ -434,6 +444,7 @@
                     </div>
                     <div class="col-auto">
 
+                      <!-- Button -->
                       <a href="#!" class="btn btn-sm btn-white">
                         Share
                       </a>
@@ -460,12 +471,12 @@
                     <!-- Input -->
                     <form class="mt-1">
                       <label class="sr-only">Leave a comment...</label>
-                      <textarea class="form-control form-control-flush"  data-toggle="autosize" rows="1" placeholder="Leave a comment"></textarea>
+                      <textarea class="form-control form-control-flush" data-toggle="autosize" rows="1" placeholder="Leave a comment"></textarea>
                     </form>
 
                   </div>
                   <div class="col-auto align-self-end">
-                    
+
                     <!-- Icons -->
                     <div class="text-muted mb-2">
                       <a class="text-reset mr-3" href="#!" data-toggle="tooltip" title="Add photo">
@@ -488,12 +499,12 @@
             <!-- Card -->
             <div class="card">
               <div class="card-body">
-                
+
                 <!-- Header -->
                 <div class="mb-3">
                   <div class="row align-items-center">
                     <div class="col-auto">
-                      
+
                       <!-- Avatar -->
                       <a href="#!" class="avatar">
                         <img src="assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
@@ -503,7 +514,7 @@
                     <div class="col ml-n2">
 
                       <!-- Title -->
-                      <h4 class="card-title mb-1">
+                      <h4 class="mb-1">
                         Dianna Smiley
                       </h4>
 
@@ -511,10 +522,10 @@
                       <p class="card-text small text-muted">
                         <span class="fe fe-clock"></span> <time datetime="2018-05-24">4hr ago</time>
                       </p>
-                      
+
                     </div>
                     <div class="col-auto">
-                      
+
                       <!-- Dropdown -->
                       <div class="dropdown">
                         <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -532,7 +543,7 @@
                           </a>
                         </div>
                       </div>
-                      
+
                     </div>
                   </div> <!-- / .row -->
                 </div>
@@ -541,9 +552,10 @@
                 <p class="mb-3">
                   I've been working on shipping the latest version of Launchday. The story I'm trying to focus on is something like "You're launching soon and need to be 100% focused on your product. Don't lose precious days designing, coding, and testing a product site. Instead, build one in minutes."
                 </p>
-                
+
+                <!-- Text -->
                 <p class="mb-4">
-                    What do you y'all think? Would love some feedback from <a href="#!" class="badge badge-soft-primary">@Ab</a> or <a href="#!" class="badge badge-soft-primary">@Adolfo</a>?
+                  What do you y'all think? Would love some feedback from <a href="#!" class="badge badge-soft-primary">@Ab</a> or <a href="#!" class="badge badge-soft-primary">@Adolfo</a>?
                 </p>
 
                 <!-- Map -->
@@ -556,6 +568,7 @@
                   <div class="row">
                     <div class="col">
 
+                      <!-- Reaction -->
                       <a href="#!" class="btn btn-sm btn-white">
                         🎉 5
                       </a>
@@ -566,6 +579,7 @@
                     </div>
                     <div class="col-auto mr-n3">
 
+                      <!-- Avatar group -->
                       <div class="avatar-group d-none d-sm-flex">
                         <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Glen Rouse">
                           <img src="assets/img/avatars/profiles/avatar-7.jpg" alt="..." class="avatar-img rounded-circle">
@@ -578,6 +592,7 @@
                     </div>
                     <div class="col-auto">
 
+                      <!-- Button -->
                       <a href="#!" class="btn btn-sm btn-white">
                         Share
                       </a>
@@ -601,7 +616,7 @@
 
                     </div>
                     <div class="col ml-n2">
-                      
+
                       <!-- Body -->
                       <div class="comment-body">
 
@@ -658,7 +673,7 @@
 
                   </div>
                   <div class="col-auto align-self-end">
-                    
+
                     <!-- Icons -->
                     <div class="text-muted mb-2">
                       <a class="text-reset mr-3" href="#!" data-toggle="tooltip" title="Add photo">
@@ -677,10 +692,10 @@
 
               </div>
             </div>
-            
+
           </div>
           <div class="col-12 col-xl-4">
-            
+
             <!-- Card -->
             <div class="card">
               <div class="card-header">
@@ -704,145 +719,140 @@
                 </div> <!-- / .row -->
               </div>
               <div class="card-body">
-                
-                <!-- Item -->
-                <div class="row align-items-center">
-                  <div class="col-auto">
-                    
-                    <!-- Avatar -->
-                    <a href="profile-posts.html" class="avatar">
-                      <img src="assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
-                    </a>
 
+                <!-- List group -->
+                <div class="list-group list-group-flush my-n3">
+                  <div class="list-group-item">
+                    <div class="row align-items-center">
+                      <div class="col-auto">
+
+                        <!-- Avatar -->
+                        <a href="profile-posts.html" class="avatar">
+                          <img src="assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+
+                      </div>
+                      <div class="col ml-n2">
+
+                        <!-- Title -->
+                        <h4 class="mb-1">
+                          <a href="profile-posts.html">Dianna Smiley</a>
+                        </h4>
+
+                        <!-- Status -->
+                        <p class="card-text small">
+                          <span class="text-success">●</span> Online
+                        </p>
+
+                      </div>
+                      <div class="col-auto">
+
+                        <!-- Button -->
+                        <a href="#!" class="btn btn-sm btn-white">
+                          Follow
+                        </a>
+
+                      </div>
+                    </div>
                   </div>
-                  <div class="col ml-n2">
-                    
-                    <!-- Title -->
-                    <h4 class="card-title mb-1">
-                      <a href="profile-posts.html">Dianna Smiley</a>
-                    </h4>
+                  <div class="list-group-item">
+                    <div class="row align-items-center">
+                      <div class="col-auto">
 
-                    <!-- Status -->
-                    <p class="card-text small">
-                      <span class="text-success">●</span> Online
-                    </p>
+                        <!-- Avatar -->
+                        <a href="profile-posts.html" class="avatar">
+                          <img src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
 
+                      </div>
+                      <div class="col ml-n2">
+
+                        <!-- Title -->
+                        <h4 class="mb-1">
+                          <a href="profile-posts.html">Ab Hadley</a>
+                        </h4>
+
+                        <!-- Status -->
+                        <p class="card-text small">
+                          <span class="text-success">●</span> Online
+                        </p>
+
+                      </div>
+                      <div class="col-auto">
+
+                        <!-- Button -->
+                        <a href="#!" class="btn btn-sm btn-white">
+                          Follow
+                        </a>
+
+                      </div>
+                    </div>
                   </div>
-                  <div class="col-auto">
-                    
-                    <!-- Button -->
-                    <a href="#!" class="btn btn-sm btn-white">
-                      Follow
-                    </a>
+                  <div class="list-group-item">
+                    <div class="row align-items-center">
+                      <div class="col-auto">
 
+                        <!-- Avatar -->
+                        <a href="profile-posts.html" class="avatar">
+                          <img src="assets/img/avatars/profiles/avatar-3.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+
+                      </div>
+                      <div class="col ml-n2">
+
+                        <!-- Title -->
+                        <h4 class="mb-1">
+                          <a href="profile-posts.html">Adolfo Hess</a>
+                        </h4>
+
+                        <!-- Status -->
+                        <p class="card-text small">
+                          <span class="text-success">●</span> Online
+                        </p>
+
+                      </div>
+                      <div class="col-auto">
+
+                        <!-- Button -->
+                        <a href="#!" class="btn btn-sm btn-white">
+                          Follow
+                        </a>
+
+                      </div>
+                    </div>
                   </div>
-                </div>
+                  <div class="list-group-item">
+                    <div class="row align-items-center">
+                      <div class="col-auto">
 
-                <!-- Divider -->
-                <hr>
+                        <!-- Avatar -->
+                        <a href="profile-posts.html" class="avatar">
+                          <img src="assets/img/avatars/profiles/avatar-4.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
 
-                <!-- Item -->
-                <div class="row align-items-center">
-                  <div class="col-auto">
-                    
-                    <!-- Avatar -->
-                    <a href="profile-posts.html" class="avatar">
-                      <img src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
-                    </a>
+                      </div>
+                      <div class="col ml-n2">
 
-                  </div>
-                  <div class="col ml-n2">
-                    
-                    <!-- Title -->
-                    <h4 class="card-title mb-1">
-                      <a href="profile-posts.html">Ab Hadley</a>
-                    </h4>
+                        <!-- Title -->
+                        <h4 class="mb-1">
+                          <a href="profile-posts.html">Daniela Dewitt</a>
+                        </h4>
 
-                    <!-- Status -->
-                    <p class="card-text small">
-                      <span class="text-success">●</span> Online
-                    </p>
+                        <!-- Status -->
+                        <p class="card-text small">
+                          <span class="text-warning">●</span> Busy
+                        </p>
 
-                  </div>
-                  <div class="col-auto">
-                    
-                    <!-- Button -->
-                    <a href="#!" class="btn btn-sm btn-white">
-                      Follow
-                    </a>
+                      </div>
+                      <div class="col-auto">
 
-                  </div>
-                </div>
+                        <!-- Button -->
+                        <a href="#!" class="btn btn-sm btn-white">
+                          Follow
+                        </a>
 
-                <!-- Divider -->
-                <hr>
-
-                <!-- Item -->
-                <div class="row align-items-center">
-                  <div class="col-auto">
-                    
-                    <!-- Avatar -->
-                    <a href="profile-posts.html" class="avatar">
-                      <img src="assets/img/avatars/profiles/avatar-3.jpg" alt="..." class="avatar-img rounded-circle">
-                    </a>
-
-                  </div>
-                  <div class="col ml-n2">
-                    
-                    <!-- Title -->
-                    <h4 class="card-title mb-1">
-                      <a href="profile-posts.html">Adolfo Hess</a>
-                    </h4>
-
-                    <!-- Status -->
-                    <p class="card-text small">
-                      <span class="text-success">●</span> Online
-                    </p>
-
-                  </div>
-                  <div class="col-auto">
-                    
-                    <!-- Button -->
-                    <a href="#!" class="btn btn-sm btn-white">
-                      Follow
-                    </a>
-
-                  </div>
-                </div>
-
-                <!-- Divider -->
-                <hr>
-
-                <!-- Item -->
-                <div class="row align-items-center">
-                  <div class="col-auto">
-                    
-                    <!-- Avatar -->
-                    <a href="profile-posts.html" class="avatar">
-                      <img src="assets/img/avatars/profiles/avatar-4.jpg" alt="..." class="avatar-img rounded-circle">
-                    </a>
-
-                  </div>
-                  <div class="col ml-n2">
-                    
-                    <!-- Title -->
-                    <h4 class="card-title mb-1">
-                      <a href="profile-posts.html">Daniela Dewitt</a>
-                    </h4>
-
-                    <!-- Status -->
-                    <p class="card-text small">
-                      <span class="text-warning">●</span> Busy
-                    </p>
-
-                  </div>
-                  <div class="col-auto">
-                    
-                    <!-- Button -->
-                    <a href="#!" class="btn btn-sm btn-white">
-                      Follow
-                    </a>
-
+                      </div>
+                    </div>
                   </div>
                 </div>
 
@@ -862,139 +872,139 @@
 
                   </div>
                   <div class="col-auto">
-                    
+
                     <!-- Link -->
                     <a class="small" href="#!">
                       View all
                     </a>
-                  
+
                   </div>
                 </div> <!-- / .row -->
               </div>
               <div class="card-body">
 
-                <!-- Item -->
-                <div class="row align-items-center">
-                  <div class="col">
+                <!-- List group -->
+                <div class="list-group list-group-flush my-n3">
+                  <div class="list-group-item">
+                    <div class="row align-items-center">
+                      <div class="col">
 
-                    <!-- Title -->
-                    <h4 class="card-title mb-1">
-                      <a href="#!">Landkit Update</a>
-                    </h4>
+                        <!-- Title -->
+                        <h4 class="mb-1">
+                          <a href="#!">Landkit Update</a>
+                        </h4>
 
-                    <!-- Subtitle -->
-                    <small class="text-muted">
-                      2.45k posts
-                    </small>
+                        <!-- Subtitle -->
+                        <small class="text-muted">
+                          2.45k posts
+                        </small>
 
+                      </div>
+                      <div class="col-auto">
+
+                        <!-- Chart -->
+                        <div class="chart chart-sparkline">
+                          <canvas class="chart-canvas" id="sparklineChartSocialOne"></canvas>
+                        </div>
+
+                      </div>
+                    </div> <!-- / .row -->
                   </div>
-                  <div class="col-auto">
-                    
-                    <!-- Chart -->
-                    <div class="chart chart-sparkline">
-                      <canvas class="chart-canvas" id="sparklineChartSocialOne"></canvas>
-                    </div>
+                  <div class="list-group-item">
+                    <div class="row align-items-center">
+                      <div class="col">
 
+                        <!-- Title -->
+                        <h4 class="mb-1">
+                          <a href="#!">Stripe API</a>
+                        </h4>
+
+                        <!-- Subtitle -->
+                        <small class="text-muted">
+                          1.1k posts
+                        </small>
+
+                      </div>
+                      <div class="col-auto">
+
+                        <!-- Chart -->
+                        <div class="chart chart-sparkline">
+                          <canvas class="chart-canvas" id="sparklineChartSocialTwo"></canvas>
+                        </div>
+
+                      </div>
+                    </div> <!-- / .row -->
                   </div>
-                </div> <!-- / .row -->
+                  <div class="list-group-item">
+                    <div class="row align-items-center">
+                      <div class="col">
 
-                <!-- Divider -->
-                <hr>
+                        <!-- Title -->
+                        <h4 class="mb-1">
+                          <a href="#!">Oki Doki</a>
+                        </h4>
 
-                <!-- Item -->
-                <div class="row align-items-center">
-                  <div class="col">
+                        <!-- Subtitle -->
+                        <small class="text-muted">
+                          9.2k posts
+                        </small>
 
-                    <!-- Title -->
-                    <h4 class="card-title mb-1">
-                      <a href="#!">Stripe API</a>
-                    </h4>
+                      </div>
+                      <div class="col-auto">
 
-                    <!-- Subtitle -->
-                    <small class="text-muted">
-                      1.1k posts
-                    </small>
+                        <!-- Chart -->
+                        <div class="chart chart-sparkline">
+                          <canvas class="chart-canvas" id="sparklineChartSocialThree"></canvas>
+                        </div>
 
+                      </div>
+                    </div> <!-- / .row -->
                   </div>
-                  <div class="col-auto">
-                    
-                    <!-- Chart -->
-                    <div class="chart chart-sparkline">
-                      <canvas class="chart-canvas" id="sparklineChartSocialTwo"></canvas>
-                    </div>
+                  <div class="list-group-item">
+                    <div class="row align-items-center">
+                      <div class="col">
 
+                        <!-- Title -->
+                        <h4 class="mb-1">
+                          <a href="#!">Bootstrap</a>
+                        </h4>
+
+                        <!-- Subtitle -->
+                        <small class="text-muted">
+                          6.87k posts
+                        </small>
+
+                      </div>
+                      <div class="col-auto">
+
+                        <!-- Chart -->
+                        <div class="chart chart-sparkline">
+                          <canvas class="chart-canvas" id="sparklineChartSocialFour"></canvas>
+                        </div>
+
+                      </div>
+                    </div> <!-- / .row -->
                   </div>
-                </div> <!-- / .row -->
+                </div>
 
-                <!-- Divider -->
-                <hr>
-
-                <!-- Item -->
-                <div class="row align-items-center">
-                  <div class="col">
-
-                    <!-- Title -->
-                    <h4 class="card-title mb-1">
-                      <a href="#!">Oki Doki</a>
-                    </h4>
-
-                    <!-- Subtitle -->
-                    <small class="text-muted">
-                      9.2k posts
-                    </small>
-
-                  </div>
-                  <div class="col-auto">
-                    
-                    <!-- Chart -->
-                    <div class="chart chart-sparkline">
-                      <canvas class="chart-canvas" id="sparklineChartSocialThree"></canvas>
-                    </div>
-
-                  </div>
-                </div> <!-- / .row -->
-
-                <!-- Divider -->
-                <hr>
-
-                <!-- Item -->
-                <div class="row align-items-center">
-                  <div class="col">
-
-                    <!-- Title -->
-                    <h4 class="card-title mb-1">
-                      <a href="#!">Bootstrap</a>
-                    </h4>
-
-                    <!-- Subtitle -->
-                    <small class="text-muted">
-                      6.87k posts
-                    </small>
-
-                  </div>
-                  <div class="col-auto">
-                    
-                    <!-- Chart -->
-                    <div class="chart chart-sparkline">
-                      <canvas class="chart-canvas" id="sparklineChartSocialFour"></canvas>
-                    </div>
-
-                  </div>
-                </div> <!-- / .row -->
               </div>
             </div>
 
             <!-- Card -->
             <div class="card">
+
+              <!-- Image  -->
               <a class="" href="https://themes.getbootstrap.com/preview/?theme_id=23273">
                 <img class="card-img-top" src="assets/img/kanban/kanban-2.jpg" alt="...">
               </a>
+
+              <!-- Body -->
               <div class="card-body">
                 <div class="row align-items-center">
                   <div class="col">
 
                     <!-- Title -->
-                    <h4 class="card-title mb-1">
+                    <h4 class="mb-1">
                       Get Landkit theme!
                     </h4>
 
@@ -1007,7 +1017,7 @@
                     <small class="text-muted">
                       $49.99
                     </small>
-                  
+
                   </div>
                   <div class="col-auto">
 
@@ -1019,12 +1029,13 @@
                   </div>
                 </div> <!-- / .row -->
               </div>
+
             </div>
 
           </div>
         </div>
       </div>
-      
+
     </div> <!-- / .main-content -->
 
     <!-- JAVASCRIPT

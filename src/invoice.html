@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     @@include("partials/head.html", {
-      "title": "Dashkit"
+    "title": "Dashkit"
     })
   </head>
   <body>
@@ -14,27 +14,27 @@
     <!-- NAVIGATION
     ================================================== -->
     @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
-      @@if (sidebarSize == 'base' || demoMode) {
-        @@include("partials/sidebar.html", {
-          "category": "pages",
-          "subcategory": "",
-          "page": "invoice.html"
-        })
-      }
-      @@if (sidebarSize == 'small' || demoMode) {
-        @@include("partials/sidebar-sm.html", {
-          "category": "pages",
-          "subcategory": "",
-          "page": "invoice.html"
-        })
-      }
+    @@if (sidebarSize == 'base' || demoMode) {
+    @@include("partials/sidebar.html", {
+    "category": "pages",
+    "subcategory": "",
+    "page": "invoice.html"
+    })
+    }
+    @@if (sidebarSize == 'small' || demoMode) {
+    @@include("partials/sidebar-sm.html", {
+    "category": "pages",
+    "subcategory": "",
+    "page": "invoice.html"
+    })
+    }
     }
     @@if (navPosition == 'topnav' || demoMode) {
-      @@include("partials/topnav.html", {
-        "category": "pages",
-        "subcategory": "",
-        "page": "invoice.html"
-      })
+    @@include("partials/topnav.html", {
+    "category": "pages",
+    "subcategory": "",
+    "page": "invoice.html"
+    })
     }
 
     <!-- MAIN CONTENT
@@ -42,19 +42,19 @@
     <div class="main-content">
 
       @@if (navPosition == 'combo' || demoMode) {
-        @@include("partials/topbar.html")
+      @@include("partials/topbar.html")
       }
 
       <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
         <div class="row justify-content-center">
           <div class="col-12 col-lg-10 col-xl-8">
-            
+
             <!-- Header -->
             <div class="header mt-md-5">
               <div class="header-body">
                 <div class="row align-items-center">
                   <div class="col">
-                    
+
                     <!-- Pretitle -->
                     <h6 class="header-pretitle">
                       Payments
@@ -67,7 +67,7 @@
 
                   </div>
                   <div class="col-auto">
-                    
+
                     <!-- Buttons -->
                     <a href="#!" class="btn btn-white lift">
                       Download
@@ -95,7 +95,7 @@
               </div> <!-- / .row -->
               <div class="row">
                 <div class="col text-center">
-                  
+
                   <!-- Logo -->
                   <img src="assets/img/logo.svg" alt="..." class="img-fluid mb-4" style="max-width: 2.5rem;">
 
@@ -113,11 +113,13 @@
               </div> <!-- / .row -->
               <div class="row">
                 <div class="col-12 col-md-6">
-                  
+
+                  <!-- Heading -->
                   <h6 class="text-uppercase text-muted">
                     Invoiced from
                   </h6>
 
+                  <!-- Text -->
                   <p class="text-muted mb-4">
                     <strong class="text-body">Kenny Blankenship</strong> <br>
                     CEO of Good Themes <br>
@@ -125,10 +127,12 @@
                     San Francisco, CA
                   </p>
 
+                  <!-- Heading -->
                   <h6 class="text-uppercase text-muted">
                     Invoiced ID
                   </h6>
 
+                  <!-- Text -->
                   <p class="mb-4">
                     #SDF9823KD
                   </p>
@@ -136,10 +140,12 @@
                 </div>
                 <div class="col-12 col-md-6 text-md-right">
 
+                  <!-- Heading -->
                   <h6 class="text-uppercase text-muted">
                     Invoiced to
                   </h6>
 
+                  <!-- Text -->
                   <p class="text-muted mb-4">
                     <strong class="text-body">Jimmy LeBuyer</strong> <br>
                     Acquisitions at Themers <br>
@@ -147,19 +153,21 @@
                     Los Angeles, CA
                   </p>
 
+                  <!-- Heading -->
                   <h6 class="text-uppercase text-muted">
                     Due date
                   </h6>
 
+                  <!-- Text -->
                   <p class="mb-4">
                     <time datetime="2018-04-23">Apr 23, 2018</time>
                   </p>
-                  
+
                 </div>
               </div> <!-- / .row -->
               <div class="row">
                 <div class="col-12">
-                  
+
                   <!-- Table -->
                   <div class="table-responsive">
                     <table class="table my-4">
@@ -201,7 +209,7 @@
                         </tr>
                         <tr>
                           <td class="px-0 border-top border-top-2">
-                           <strong>Total amount due</strong>
+                            <strong>Total amount due</strong>
                           </td>
                           <td colspan="2" class="px-0 text-right border-top border-top-2">
                             <span class="h3">
@@ -214,7 +222,7 @@
                   </div>
 
                   <hr class="my-5">
-                  
+
                   <!-- Title -->
                   <h6 class="text-uppercase">
                     Notes
@@ -232,7 +240,7 @@
           </div>
         </div> <!-- / .row -->
       </div>
-      
+
     </div> <!-- / .main-content -->
 
     <!-- JAVASCRIPT

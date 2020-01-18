@@ -49,25 +49,6 @@
         <div class="row justify-content-center">
           <div class="col-12 col-lg-10 col-xl-8">
 
-            <!-- Tabs (hidden) -->
-            <ul class="nav nav-tabs d-none">
-              <li class="nav-item">
-                <a class="nav-link active" id="wizardTabOne" data-toggle="tab" href="#wizardStepOne" role="tab" aria-controls="wizardStepOne" aria-selected="true">
-                  Step 1
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="wizardTabTwo" data-toggle="tab" href="#wizardStepTwo" role="tab" aria-controls="wizardStepTwo" aria-selected="false">
-                  Step 2
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="wizardTabthree" data-toggle="tab" href="#wizardStepThree" role="tab" aria-controls="wizardStepThree" aria-selected="false">
-                  Step 3
-                </a>
-              </li>
-            </ul>
-
             <!-- Form -->
             <form class="tab-content py-6" id="wizardSteps">
               <div class="tab-pane fade show active" id="wizardStepOne" role="tabpanel" aria-labelledby="wizardTabOne">
@@ -96,28 +77,44 @@
 
                 <!-- Team name -->
                 <div class="form-group">
+
+                  <!-- Label -->
                   <label>
                     Team name
                   </label>
+
+                  <!-- Input -->
                   <input type="text" class="form-control">
+
                 </div>
 
                 <!-- Team description -->
                 <div class="form-group">
+
+                  <!-- Label -->
                   <label class="mb-1">
                     Team description
                   </label>
+
+                  <!-- Text -->
                   <small class="form-text text-muted">
                     This is how others will learn about the project, so make it good!
                   </small>
+
+                  <!-- Quill -->
                   <div data-toggle="quill"></div>
+
                 </div>
 
                 <!-- Team members -->
                 <div class="form-group">
+
+                  <!-- Label -->
                   <label>
                     Add team members
                   </label>
+
+                  <!-- Select -->
                   <select class="form-control" data-toggle="select" multiple>
                     <option data-avatar-src="assets/img/avatars/profiles/avatar-1.jpg">
                       Dianna Smiley
@@ -132,6 +129,7 @@
                       Daniela Dewitt
                     </option>
                   </select>
+
                 </div>
 
                 <!-- Divider -->
@@ -186,14 +184,21 @@
 
                 <!-- Project cover -->
                 <div class="form-group">
+
+                  <!-- Label -->
                   <label class="mb-1">
                     Project cover
                   </label>
+
+                  <!-- Text -->
                   <small class="form-text text-muted">
                     Please use an image no larger than 1200px * 600px.
                   </small>
+
+                  <!-- Dropzone -->
                   <div class="dropzone dropzone-single mb-3" data-toggle="dropzone" data-options='{"url": "https://", "maxFiles": 1, "acceptedFiles": "image/*"}'>
 
+                    <!-- Fallback -->
                     <div class="fallback">
                       <div class="custom-file">
                         <input type="file" class="custom-file-input" id="projectCoverUploads">
@@ -201,6 +206,7 @@
                       </div>
                     </div>
 
+                    <!-- Preview -->
                     <div class="dz-preview dz-preview-single">
                       <div class="dz-preview-cover">
                         <img class="dz-preview-img" src="data:image/svg+xml,%3csvg3c/svg%3e" alt="..." data-dz-thumbnail>
@@ -215,16 +221,23 @@
 
                 <!-- Starting files -->
                 <div class="form-group">
+
+                  <!-- Label -->
                   <label class="mb-1">
                     Starting files
                   </label>
+
+                  <!-- Text -->
                   <small class="form-text text-muted">
                     Upload any files you want to start the projust with.
                   </small>
+
+                  <!-- Card -->
                   <div class="card">
                     <div class="card-body">
                       <div class="dropzone dropzone-multiple" data-toggle="dropzone" data-options='{"url": "https://"}'>
 
+                        <!-- Fallback -->
                         <div class="fallback">
                           <div class="custom-file">
                             <input type="file" class="custom-file-input" id="customFileUpload" multiple>
@@ -232,29 +245,44 @@
                           </div>
                         </div>
 
+                        <!-- Preview -->
                         <ul class="dz-preview dz-preview-multiple list-group list-group-lg list-group-flush">
                           <li class="list-group-item px-0">
                             <div class="row align-items-center">
                               <div class="col-auto">
+
+                                <!-- Image -->
                                 <div class="avatar">
                                   <img class="avatar-img rounded" src="data:image/svg+xml,%3csvg3c/svg%3e" alt="..." data-dz-thumbnail>
                                 </div>
+
                               </div>
                               <div class="col ml-n3">
+
+                                <!-- Heading -->
                                 <h4 class="mb-1" data-dz-name>...</h4>
+
+                                <!-- Text -->
                                 <p class="small text-muted mb-0" data-dz-size></p>
+
                               </div>
                               <div class="col-auto">
 
+                                <!-- Dropdown -->
                                 <div class="dropdown">
+
+                                  <!-- Toggle -->
                                   <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="fe fe-more-vertical"></i>
                                   </a>
+
+                                  <!-- Menu -->
                                   <div class="dropdown-menu dropdown-menu-right">
                                     <a href="#" class="dropdown-item" data-dz-remove>
                                       Remove
                                     </a>
                                   </div>
+
                                 </div>
 
                               </div>
@@ -319,15 +347,20 @@
 
                 <!-- Project tags -->
                 <div class="form-group">
+
+                  <!-- Label -->
                   <label>
                     Project tags
                   </label>
+
+                  <!-- Select -->
                   <select class="form-control" data-toggle="select" multiple>
                     <option>CSS</option>
                     <option>HTML</option>
                     <option>JavaScript</option>
                     <option>Bootstrap</option>
                   </select>
+
                 </div>
 
                 <div class="row">
@@ -335,10 +368,15 @@
 
                     <!-- Start date -->
                     <div class="form-group">
+
+                      <!-- Label -->
                       <label>
                         Start date
                       </label>
+
+                      <!-- Input -->
                       <input type="text" class="form-control" data-toggle="flatpickr">
+
                     </div>
 
                   </div>
@@ -346,10 +384,15 @@
 
                     <!-- Start date -->
                     <div class="form-group">
+
+                      <!-- Label -->
                       <label>
                         End date
                       </label>
+
+                      <!-- Input -->
                       <input type="text" class="form-control" data-toggle="flatpickr">
+
                     </div>
 
                   </div>
@@ -363,16 +406,23 @@
 
                     <!-- Private project -->
                     <div class="form-group">
+
+                      <!-- Label -->
                       <label class="mb-1">
                         Private project
                       </label>
+
+                      <!-- Text -->
                       <small class="form-text text-muted">
                         If you are available for hire outside of the current situation, you can encourage others to hire you.
                       </small>
+
+                      <!-- Switch -->
                       <div class="custom-control custom-switch">
                         <input type="checkbox" class="custom-control-input" id="switchOne">
                         <label class="custom-control-label" for="switchOne"></label>
                       </div>
+
                     </div>
 
                   </div>
@@ -382,10 +432,12 @@
                     <div class="card bg-light border">
                       <div class="card-body">
 
+                        <!-- Heading -->
                         <h4 class="mb-2">
                           <i class="fe fe-alert-triangle"></i> Warning
                         </h4>
 
+                        <!-- Text -->
                         <p class="small text-muted mb-0">
                           Once a project is made private, you cannot revert it to a public project.
                         </p>

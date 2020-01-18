@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     @@include("partials/head.html", {
-      "title": "Dashkit"
+    "title": "Dashkit"
     })
   </head>
   <body>
@@ -14,27 +14,27 @@
     <!-- NAVIGATION
     ================================================== -->
     @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
-      @@if (sidebarSize == 'base' || demoMode) {
-        @@include("partials/sidebar.html", {
-          "category": "pages",
-          "subcategory": "profile",
-          "page": "profile-files.html"
-        })
-      }
-      @@if (sidebarSize == 'small' || demoMode) {
-        @@include("partials/sidebar-sm.html", {
-          "category": "pages",
-          "subcategory": "profile",
-          "page": "profile-files.html"
-        })
-      }
+    @@if (sidebarSize == 'base' || demoMode) {
+    @@include("partials/sidebar.html", {
+    "category": "pages",
+    "subcategory": "profile",
+    "page": "profile-files.html"
+    })
+    }
+    @@if (sidebarSize == 'small' || demoMode) {
+    @@include("partials/sidebar-sm.html", {
+    "category": "pages",
+    "subcategory": "profile",
+    "page": "profile-files.html"
+    })
+    }
     }
     @@if (navPosition == 'topnav' || demoMode) {
-      @@include("partials/topnav.html", {
-        "category": "pages",
-        "subcategory": "profile",
-        "page": "profile-files.html"
-      })
+    @@include("partials/topnav.html", {
+    "category": "pages",
+    "subcategory": "profile",
+    "page": "profile-files.html"
+    })
     }
 
     <!-- MAIN CONTENT
@@ -42,7 +42,7 @@
     <div class="main-content">
 
       @@if (navPosition == 'combo' || demoMode) {
-        @@include("partials/topbar.html")
+      @@include("partials/topbar.html")
       }
 
       <!-- HEADER -->
@@ -50,14 +50,14 @@
 
         <!-- Image -->
         <img src="assets/img/covers/profile-cover-1.jpg" class="header-img-top" alt="...">
-        
+
         <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
 
           <!-- Body -->
           <div class="header-body mt-n5 mt-md-n6">
             <div class="row align-items-end">
               <div class="col-auto">
-                
+
                 <!-- Avatar -->
                 <div class="avatar avatar-xxl header-avatar-top">
                   <img src="assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle border border-4 border-body">
@@ -65,7 +65,7 @@
 
               </div>
               <div class="col mb-3 ml-n3 ml-md-n2">
-                
+
                 <!-- Pretitle -->
                 <h6 class="header-pretitle">
                   Members
@@ -78,7 +78,7 @@
 
               </div>
               <div class="col-12 col-md-auto mt-2 mt-md-0 mb-md-3">
-                
+
                 <!-- Button -->
                 <a href="#!" class="btn btn-primary d-block d-md-inline-block lift">
                   Subscribe
@@ -88,7 +88,7 @@
             </div> <!-- / .row -->
             <div class="row align-items-center">
               <div class="col">
-                
+
                 <!-- Nav -->
                 <ul class="nav nav-tabs nav-overflow header-tabs">
                   <li class="nav-item">
@@ -129,13 +129,13 @@
       <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
         <div class="row">
           <div class="col-12">
-            
+
             <!-- Files -->
             <div class="card" data-toggle="lists" data-options='{"valueNames": ["name"]}'>
               <div class="card-header">
                 <div class="row align-items-center">
                   <div class="col">
-                    
+
                     <!-- Title -->
                     <h4 class="card-header-title">
                       Files
@@ -143,7 +143,7 @@
 
                   </div>
                   <div class="col-auto">
-                    
+
                     <!-- Dropdown -->
                     <div class="dropdown">
 
@@ -163,10 +163,10 @@
                       </div>
 
                     </div>
-    
+
                   </div>
                   <div class="col-auto">
-                    
+
                     <!-- Button -->
                     <a href="#!" class="btn btn-sm btn-primary">
                       Upload
@@ -178,7 +178,7 @@
               <div class="card-header">
                 <div class="row">
                   <div class="col-12">
-                    
+
                     <!-- Form -->
                     <form>
                       <div class="input-group input-group-flush input-group-merge">
@@ -198,11 +198,10 @@
 
                 <!-- List -->
                 <ul class="list-group list-group-lg list-group-flush list my-n4">
-                  <li class="list-group-item px-0">
-                    
+                  <li class="list-group-item">
                     <div class="row align-items-center">
                       <div class="col-auto">
-                        
+
                         <!-- Avatar -->
                         <a href="#!" class="avatar avatar-lg">
                           <img src="assets/img/files/file-1.jpg" alt="..." class="avatar-img rounded">
@@ -212,7 +211,7 @@
                       <div class="col ml-n2">
 
                         <!-- Title -->
-                        <h4 class="card-title mb-1 name">
+                        <h4 class="mb-1 name">
                           <a href="#!">Launchday Logo</a>
                         </h4>
 
@@ -225,10 +224,10 @@
                         <p class="card-text small text-muted">
                           Uploaded by Dianna Smiley on <time datetime="2018-01-03">Jan 3, 2018</time>
                         </p>
-                        
+
                       </div>
                       <div class="col-auto">
-                        
+
                         <!-- Button -->
                         <a href="#!" class="btn btn-sm btn-white d-none d-md-inline-block">
                           Download
@@ -236,12 +235,16 @@
 
                       </div>
                       <div class="col-auto">
-                        
+
                         <!-- Dropdown -->
                         <div class="dropdown">
+
+                          <!-- Toggle -->
                           <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fe fe-more-vertical"></i>
                           </a>
+
+                          <!-- Menu -->
                           <div class="dropdown-menu dropdown-menu-right">
                             <a href="#!" class="dropdown-item">
                               Action
@@ -253,17 +256,16 @@
                               Something else here
                             </a>
                           </div>
+
                         </div>
 
                       </div>
                     </div> <!-- / .row -->
-
                   </li>
-                  <li class="list-group-item px-0">
-                    
+                  <li class="list-group-item">
                     <div class="row align-items-center">
                       <div class="col-auto">
-                        
+
                         <!-- Avatar -->
                         <a href="#!" class="avatar avatar-lg">
                           <img src="assets/img/files/file-2.jpg" alt="..." class="avatar-img rounded">
@@ -273,7 +275,7 @@
                       <div class="col ml-n2">
 
                         <!-- Title -->
-                        <h4 class="card-title mb-1 name">
+                        <h4 class="mb-1 name">
                           <a href="#!">Example Grid</a>
                         </h4>
 
@@ -286,10 +288,10 @@
                         <p class="card-text small text-muted">
                           Uploaded by Dianna Smiley on <time datetime="2018-01-03">Jan 3, 2018</time>
                         </p>
-                        
+
                       </div>
                       <div class="col-auto">
-                        
+
                         <!-- Button -->
                         <a href="#!" class="btn btn-sm btn-white d-none d-md-inline-block">
                           Download
@@ -297,12 +299,16 @@
 
                       </div>
                       <div class="col-auto">
-                        
+
                         <!-- Dropdown -->
                         <div class="dropdown">
+
+                          <!-- Toggle -->
                           <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fe fe-more-vertical"></i>
                           </a>
+
+                          <!-- Menu -->
                           <div class="dropdown-menu dropdown-menu-right">
                             <a href="#!" class="dropdown-item">
                               Action
@@ -314,17 +320,16 @@
                               Something else here
                             </a>
                           </div>
+
                         </div>
 
                       </div>
                     </div> <!-- / .row -->
-
                   </li>
-                  <li class="list-group-item px-0">
-                    
+                  <li class="list-group-item">
                     <div class="row align-items-center">
                       <div class="col-auto">
-                        
+
                         <!-- Avatar -->
                         <a href="#!" class="avatar avatar-lg">
                           <span class="avatar-title rounded bg-white text-secondary">
@@ -336,7 +341,7 @@
                       <div class="col ml-n2">
 
                         <!-- Title -->
-                        <h4 class="card-title mb-1 name">
+                        <h4 class="mb-1 name">
                           <a href="#!">Screenshot Collection</a>
                         </h4>
 
@@ -349,10 +354,10 @@
                         <p class="card-text small text-muted">
                           Uploaded by Dianna Smiley on <time datetime="2018-01-03">Jan 3, 2018</time>
                         </p>
-                        
+
                       </div>
                       <div class="col-auto">
-                        
+
                         <!-- Button -->
                         <a href="#!" class="btn btn-sm btn-white d-none d-md-inline-block">
                           Download
@@ -360,12 +365,16 @@
 
                       </div>
                       <div class="col-auto">
-                        
+
                         <!-- Dropdown -->
                         <div class="dropdown">
+
+                          <!-- Toggle -->
                           <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fe fe-more-vertical"></i>
                           </a>
+
+                          <!-- Menu -->
                           <div class="dropdown-menu dropdown-menu-right">
                             <a href="#!" class="dropdown-item">
                               Action
@@ -377,17 +386,16 @@
                               Something else here
                             </a>
                           </div>
+
                         </div>
 
                       </div>
                     </div> <!-- / .row -->
-
                   </li>
-                  <li class="list-group-item px-0">
-                    
+                  <li class="list-group-item">
                     <div class="row align-items-center">
                       <div class="col-auto">
-                        
+
                         <!-- Avatar -->
                         <a href="#!" class="avatar avatar-lg">
                           <span class="avatar-title rounded bg-white text-secondary">
@@ -399,7 +407,7 @@
                       <div class="col ml-n2">
 
                         <!-- Title -->
-                        <h4 class="card-title mb-1 name">
+                        <h4 class="mb-1 name">
                           <a href="#!">Database migration (compressed)</a>
                         </h4>
 
@@ -412,10 +420,10 @@
                         <p class="card-text small text-muted">
                           Uploaded by Dianna Smiley on <time datetime="2018-01-03">Jan 3, 2018</time>
                         </p>
-                        
+
                       </div>
                       <div class="col-auto">
-                        
+
                         <!-- Button -->
                         <a href="#!" class="btn btn-sm btn-white d-none d-md-inline-block">
                           Download
@@ -423,12 +431,16 @@
 
                       </div>
                       <div class="col-auto">
-                        
+
                         <!-- Dropdown -->
                         <div class="dropdown">
+
+                          <!-- Toggle -->
                           <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fe fe-more-vertical"></i>
                           </a>
+
+                          <!-- Menu -->
                           <div class="dropdown-menu dropdown-menu-right">
                             <a href="#!" class="dropdown-item">
                               Action
@@ -440,17 +452,16 @@
                               Something else here
                             </a>
                           </div>
+
                         </div>
 
                       </div>
                     </div> <!-- / .row -->
-
                   </li>
-                  <li class="list-group-item px-0">
-                    
+                  <li class="list-group-item">
                     <div class="row align-items-center">
                       <div class="col-auto">
-                        
+
                         <!-- Avatar -->
                         <a href="#!" class="avatar avatar-lg">
                           <img src="assets/img/files/file-3.jpg" alt="..." class="avatar-img rounded">
@@ -460,7 +471,7 @@
                       <div class="col ml-n2">
 
                         <!-- Title -->
-                        <h4 class="card-title mb-1 name">
+                        <h4 class="mb-1 name">
                           <a href="#!">Launchday Cover</a>
                         </h4>
 
@@ -473,10 +484,10 @@
                         <p class="card-text small text-muted">
                           Uploaded by Dianna Smiley on <time datetime="2018-01-03">Jan 3, 2018</time>
                         </p>
-                        
+
                       </div>
                       <div class="col-auto">
-                        
+
                         <!-- Button -->
                         <a href="#!" class="btn btn-sm btn-white d-none d-md-inline-block">
                           Download
@@ -484,12 +495,16 @@
 
                       </div>
                       <div class="col-auto">
-                        
+
                         <!-- Dropdown -->
                         <div class="dropdown">
+
+                          <!-- Toggle -->
                           <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fe fe-more-vertical"></i>
                           </a>
+
+                          <!-- Menu -->
                           <div class="dropdown-menu dropdown-menu-right">
                             <a href="#!" class="dropdown-item">
                               Action
@@ -501,17 +516,16 @@
                               Something else here
                             </a>
                           </div>
+
                         </div>
 
                       </div>
                     </div> <!-- / .row -->
-
                   </li>
-                  <li class="list-group-item px-0">
-                    
+                  <li class="list-group-item">
                     <div class="row align-items-center">
                       <div class="col-auto">
-                        
+
                         <!-- Avatar -->
                         <a href="#!" class="avatar avatar-lg">
                           <span class="avatar-title rounded bg-white text-secondary">
@@ -523,7 +537,7 @@
                       <div class="col ml-n2">
 
                         <!-- Title -->
-                        <h4 class="card-title mb-1 name">
+                        <h4 class="mb-1 name">
                           <a href="#!">Prototype Screencap</a>
                         </h4>
 
@@ -536,10 +550,10 @@
                         <p class="card-text small text-muted">
                           Uploaded by Dianna Smiley on <time datetime="2018-01-03">Jan 3, 2018</time>
                         </p>
-                        
+
                       </div>
                       <div class="col-auto">
-                        
+
                         <!-- Button -->
                         <a href="#!" class="btn btn-sm btn-white d-none d-md-inline-block">
                           Download
@@ -547,12 +561,16 @@
 
                       </div>
                       <div class="col-auto">
-                        
+
                         <!-- Dropdown -->
                         <div class="dropdown">
+
+                          <!-- Toggle -->
                           <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fe fe-more-vertical"></i>
                           </a>
+
+                          <!-- Menu -->
                           <div class="dropdown-menu dropdown-menu-right">
                             <a href="#!" class="dropdown-item">
                               Action
@@ -564,17 +582,16 @@
                               Something else here
                             </a>
                           </div>
+
                         </div>
 
                       </div>
                     </div> <!-- / .row -->
-
                   </li>
-                  <li class="list-group-item px-0">
-                    
+                  <li class="list-group-item">
                     <div class="row align-items-center">
                       <div class="col-auto">
-                        
+
                         <!-- Avatar -->
                         <a href="#!" class="avatar avatar-lg">
                           <img src="assets/img/files/file-4.jpg" alt="..." class="avatar-img rounded">
@@ -584,7 +601,7 @@
                       <div class="col ml-n2">
 
                         <!-- Title -->
-                        <h4 class="card-title mb-1 name">
+                        <h4 class="mb-1 name">
                           <a href="#!">Header block example</a>
                         </h4>
 
@@ -597,10 +614,10 @@
                         <p class="card-text small text-muted">
                           Uploaded by Dianna Smiley on <time datetime="2018-01-03">Jan 3, 2018</time>
                         </p>
-                        
+
                       </div>
                       <div class="col-auto">
-                        
+
                         <!-- Button -->
                         <a href="#!" class="btn btn-sm btn-white d-none d-md-inline-block">
                           Download
@@ -608,12 +625,16 @@
 
                       </div>
                       <div class="col-auto">
-                        
+
                         <!-- Dropdown -->
                         <div class="dropdown">
+
+                          <!-- Toggle -->
                           <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fe fe-more-vertical"></i>
                           </a>
+
+                          <!-- Menu -->
                           <div class="dropdown-menu dropdown-menu-right">
                             <a href="#!" class="dropdown-item">
                               Action
@@ -625,17 +646,16 @@
                               Something else here
                             </a>
                           </div>
+
                         </div>
 
                       </div>
                     </div> <!-- / .row -->
-
                   </li>
-                  <li class="list-group-item px-0">
-                    
+                  <li class="list-group-item">
                     <div class="row align-items-center">
                       <div class="col-auto">
-                        
+
                         <!-- Avatar -->
                         <a href="#!" class="avatar avatar-lg">
                           <span class="avatar-title rounded bg-white text-secondary">
@@ -647,7 +667,7 @@
                       <div class="col ml-n2">
 
                         <!-- Title -->
-                        <h4 class="card-title mb-1 name">
+                        <h4 class="mb-1 name">
                           <a href="#!">User test results slides</a>
                         </h4>
 
@@ -660,10 +680,10 @@
                         <p class="card-text small text-muted">
                           Uploaded by Dianna Smiley on <time datetime="2018-01-03">Jan 3, 2018</time>
                         </p>
-                        
+
                       </div>
                       <div class="col-auto">
-                        
+
                         <!-- Button -->
                         <a href="#!" class="btn btn-sm btn-white d-none d-md-inline-block">
                           Download
@@ -671,12 +691,16 @@
 
                       </div>
                       <div class="col-auto">
-                        
+
                         <!-- Dropdown -->
                         <div class="dropdown">
+
+                          <!-- Toggle -->
                           <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fe fe-more-vertical"></i>
                           </a>
+
+                          <!-- Menu -->
                           <div class="dropdown-menu dropdown-menu-right">
                             <a href="#!" class="dropdown-item">
                               Action
@@ -688,11 +712,11 @@
                               Something else here
                             </a>
                           </div>
+
                         </div>
 
                       </div>
                     </div> <!-- / .row -->
-
                   </li>
                 </ul>
 

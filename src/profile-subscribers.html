@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     @@include("partials/head.html", {
-      "title": "Dashkit"
+    "title": "Dashkit"
     })
   </head>
   <body>
@@ -14,27 +14,27 @@
     <!-- NAVIGATION
     ================================================== -->
     @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
-      @@if (sidebarSize == 'base' || demoMode) {
-        @@include("partials/sidebar.html", {
-          "category": "pages",
-          "subcategory": "profile",
-          "page": "profile-subscribers.html"
-        })
-      }
-      @@if (sidebarSize == 'small' || demoMode) {
-        @@include("partials/sidebar-sm.html", {
-          "category": "pages",
-          "subcategory": "profile",
-          "page": "profile-subscribers.html"
-        })
-      }
+    @@if (sidebarSize == 'base' || demoMode) {
+    @@include("partials/sidebar.html", {
+    "category": "pages",
+    "subcategory": "profile",
+    "page": "profile-subscribers.html"
+    })
+    }
+    @@if (sidebarSize == 'small' || demoMode) {
+    @@include("partials/sidebar-sm.html", {
+    "category": "pages",
+    "subcategory": "profile",
+    "page": "profile-subscribers.html"
+    })
+    }
     }
     @@if (navPosition == 'topnav' || demoMode) {
-      @@include("partials/topnav.html", {
-        "category": "pages",
-        "subcategory": "profile",
-        "page": "profile-subscribers.html"
-      })
+    @@include("partials/topnav.html", {
+    "category": "pages",
+    "subcategory": "profile",
+    "page": "profile-subscribers.html"
+    })
     }
 
     <!-- MAIN CONTENT
@@ -42,7 +42,7 @@
     <div class="main-content">
 
       @@if (navPosition == 'combo' || demoMode) {
-        @@include("partials/topbar.html")
+      @@include("partials/topbar.html")
       }
 
       <!-- HEADER -->
@@ -50,14 +50,14 @@
 
         <!-- Image -->
         <img src="assets/img/covers/profile-cover-1.jpg" class="header-img-top" alt="...">
-        
+
         <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
 
           <!-- Body -->
           <div class="header-body mt-n5 mt-md-n6">
             <div class="row align-items-end">
               <div class="col-auto">
-                
+
                 <!-- Avatar -->
                 <div class="avatar avatar-xxl header-avatar-top">
                   <img src="assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle border border-4 border-body">
@@ -65,7 +65,7 @@
 
               </div>
               <div class="col mb-3 ml-n3 ml-md-n2">
-                
+
                 <!-- Pretitle -->
                 <h6 class="header-pretitle">
                   Members
@@ -78,7 +78,7 @@
 
               </div>
               <div class="col-12 col-md-auto mt-2 mt-md-0 mb-md-3">
-                
+
                 <!-- Button -->
                 <a href="#!" class="btn btn-primary d-block d-md-inline-block lift">
                   Subscribe
@@ -88,7 +88,7 @@
             </div> <!-- / .row -->
             <div class="row align-items-center">
               <div class="col">
-                
+
                 <!-- Nav -->
                 <ul class="nav nav-tabs nav-overflow header-tabs">
                   <li class="nav-item">
@@ -129,12 +129,13 @@
       <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
         <div class="row">
           <div class="col-12 col-md-6 col-xl-4">
-            
+
             <!-- Card -->
             <div class="card">
 
+              <!-- Dropdown -->
               <div class="dropdown card-dropdown">
-                <a href="#" class="dropdown-ellipses dropdown-toggle text-white" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a href="#!" class="dropdown-ellipses dropdown-toggle text-white" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="fe fe-more-vertical"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
@@ -150,25 +151,29 @@
                 </div>
               </div>
 
-              <img src="assets/img/covers/profile-cover-2.jpg" alt="..." class="card-img-top">
+              <!-- Image -->
+              <img src="../assets/img/covers/profile-cover-2.jpg" alt="..." class="card-img-top">
 
+              <!-- Body -->
               <div class="card-body text-center">
 
+                <!-- Image -->
                 <a href="profile-posts.html" class="avatar avatar-xl card-avatar card-avatar-top">
-                  <img src="assets/img/avatars/profiles/avatar-2.jpg" class="avatar-img rounded-circle border border-4 border-card" alt="...">
+                  <img src="../assets/img/avatars/profiles/avatar-2.jpg" class="avatar-img rounded-circle border border-4 border-card" alt="...">
                 </a>
 
+                <!-- Heading -->
                 <h2 class="card-title">
                   <a href="profile-posts.html">Ab Hadley</a>
                 </h2>
 
-                <p class="card-text text-muted">
-                  <small>
-                    Working on the latest API integration.
-                  </small>
+                <!-- Text -->
+                <p class="small text-muted mb-3">
+                  Woprking on the latest API integration.
                 </p>
-                
-                <p class="card-text">
+
+                <!-- Badges -->
+                <p class="mb-4">
                   <span class="badge badge-soft-secondary">
                     UX Team
                   </span>
@@ -176,25 +181,29 @@
                     Research Team
                   </span>
                 </p>
-                
+
+                <!-- Divider -->
                 <hr>
 
+                <!-- Footer -->
                 <div class="row align-items-center justify-content-between">
                   <div class="col-auto">
-                    
+
+                    <!-- Status -->
                     <small>
                       <span class="text-success">●</span> Online
                     </small>
 
                   </div>
                   <div class="col-auto">
-                    
+
+                    <!-- Link -->
                     <a href="#!" class="btn btn-sm btn-primary">
                       Subscribe
                     </a>
 
                   </div>
-                </div> 
+                </div>
 
               </div>
 
@@ -202,12 +211,13 @@
 
           </div>
           <div class="col-12 col-md-6 col-xl-4">
-            
+
             <!-- Card -->
             <div class="card">
 
+              <!-- Dropdown -->
               <div class="dropdown card-dropdown">
-                <a href="#" class="dropdown-ellipses dropdown-toggle text-white" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a href="#!" class="dropdown-ellipses dropdown-toggle text-white" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="fe fe-more-vertical"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
@@ -223,25 +233,29 @@
                 </div>
               </div>
 
-              <img src="assets/img/covers/profile-cover-3.jpg" alt="..." class="card-img-top">
+              <!-- Image -->
+              <img src="../assets/img/covers/profile-cover-3.jpg" alt="..." class="card-img-top">
 
+              <!-- Body -->
               <div class="card-body text-center">
 
+                <!-- Image -->
                 <a href="profile-posts.html" class="avatar avatar-xl card-avatar card-avatar-top">
-                  <img src="assets/img/avatars/profiles/avatar-3.jpg" class="avatar-img rounded-circle border border-4 border-card" alt="...">
+                  <img src="../assets/img/avatars/profiles/avatar-3.jpg" class="avatar-img rounded-circle border border-4 border-card" alt="...">
                 </a>
 
+                <!-- Heading -->
                 <h2 class="card-title">
                   <a href="profile-posts.html">Adolfo Hess</a>
                 </h2>
 
-                <p class="card-text text-muted">
-                  <small>
-                    Vactioning with the fam
-                  </small>
+                <!-- Text -->
+                <p class="small text-muted mb-3">
+                  Vactioning with the fam
                 </p>
-                
-                <p class="card-text">
+
+                <!-- Badges -->
+                <p class="mb-4">
                   <span class="badge badge-soft-secondary">
                     Reliability
                   </span>
@@ -249,25 +263,29 @@
                     QA
                   </span>
                 </p>
-                
+
+                <!-- Divider -->
                 <hr>
 
+                <!-- Footer -->
                 <div class="row align-items-center justify-content-between">
                   <div class="col-auto">
-                    
+
+                    <!-- Status -->
                     <small>
                       <span class="text-success">●</span> Online
                     </small>
 
                   </div>
                   <div class="col-auto">
-                    
+
+                    <!-- Link -->
                     <a href="#!" class="btn btn-sm btn-primary">
                       Subscribe
                     </a>
 
                   </div>
-                </div> 
+                </div>
 
               </div>
 
@@ -275,12 +293,13 @@
 
           </div>
           <div class="col-12 col-md-6 col-xl-4">
-            
+
             <!-- Card -->
             <div class="card">
 
+              <!-- Dropdown -->
               <div class="dropdown card-dropdown">
-                <a href="#" class="dropdown-ellipses dropdown-toggle text-white" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a href="#!" class="dropdown-ellipses dropdown-toggle text-white" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="fe fe-more-vertical"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
@@ -296,25 +315,29 @@
                 </div>
               </div>
 
-              <img src="assets/img/covers/profile-cover-4.jpg" alt="..." class="card-img-top">
+              <!-- Image -->
+              <img src="../assets/img/covers/profile-cover-4.jpg" alt="..." class="card-img-top">
 
+              <!-- Body -->
               <div class="card-body text-center">
 
+                <!-- Image -->
                 <a href="profile-posts.html" class="avatar avatar-xl card-avatar card-avatar-top">
-                  <img src="assets/img/avatars/profiles/avatar-4.jpg" class="avatar-img rounded-circle border border-4 border-card" alt="...">
+                  <img src="../assets/img/avatars/profiles/avatar-4.jpg" class="avatar-img rounded-circle border border-4 border-card" alt="...">
                 </a>
 
+                <!-- Heading -->
                 <h2 class="card-title">
                   <a href="profile-posts.html">Daniela Dewitt</a>
                 </h2>
 
-                <p class="card-text text-muted">
-                  <small>
-                    Arts District project management stuff.
-                  </small>
+                <!-- Text -->
+                <p class="small text-muted mb-3">
+                  Arts District project management stuff.
                 </p>
-                
-                <p class="card-text">
+
+                <!-- Badges -->
+                <p class="mb-4">
                   <span class="badge badge-soft-secondary">
                     Front-End
                   </span>
@@ -322,25 +345,29 @@
                     UX
                   </span>
                 </p>
-                
+
+                <!-- Divider -->
                 <hr>
 
+                <!-- Footer -->
                 <div class="row align-items-center justify-content-between">
                   <div class="col-auto">
-                    
+
+                    <!-- Status -->
                     <small>
                       <span class="text-warning">●</span> Busy
                     </small>
 
                   </div>
                   <div class="col-auto">
-                    
+
+                    <!-- Link -->
                     <a href="#!" class="btn btn-sm btn-primary">
                       Subscribe
                     </a>
 
                   </div>
-                </div> 
+                </div>
 
               </div>
 
@@ -348,12 +375,13 @@
 
           </div>
           <div class="col-12 col-md-6 col-xl-4">
-            
+
             <!-- Card -->
             <div class="card">
 
+              <!-- Dropdown -->
               <div class="dropdown card-dropdown">
-                <a href="#" class="dropdown-ellipses dropdown-toggle text-white" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a href="#!" class="dropdown-ellipses dropdown-toggle text-white" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="fe fe-more-vertical"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
@@ -369,51 +397,59 @@
                 </div>
               </div>
 
-              <img src="assets/img/covers/profile-cover-5.jpg" alt="..." class="card-img-top">
+              <!-- Image -->
+              <img src="../assets/img/covers/profile-cover-5.jpg" alt="..." class="card-img-top">
 
+              <!-- Body -->
               <div class="card-body text-center">
 
+                <!-- Image -->
                 <a href="profile-posts.html" class="avatar avatar-xl card-avatar card-avatar-top">
-                  <img src="assets/img/avatars/profiles/avatar-5.jpg" class="avatar-img rounded-circle border border-4 border-card" alt="...">
+                  <img src="../assets/img/avatars/profiles/avatar-5.jpg" class="avatar-img rounded-circle border border-4 border-card" alt="...">
                 </a>
 
+                <!-- Heading -->
                 <h2 class="card-title">
                   <a href="profile-posts.html">Miyah Myles</a>
                 </h2>
 
-                <p class="card-text text-muted">
-                  <small>
-                    Trying to finish this research!
-                  </small>
+                <!-- Text -->
+                <p class="small text-muted mb-3">
+                  Trying to finish this research!
                 </p>
-                
-                <p class="card-text">
+
+                <!-- Badges -->
+                <p class="mb-4">
                   <span class="badge badge-soft-secondary">
-                    Back-End
+                    Back-end
                   </span>
                   <span class="badge badge-soft-secondary">
                     Ops
                   </span>
                 </p>
-                
+
+                <!-- Divider -->
                 <hr>
 
+                <!-- Footer -->
                 <div class="row align-items-center justify-content-between">
                   <div class="col-auto">
-                    
+
+                    <!-- Status -->
                     <small>
                       <span class="text-success">●</span> Online
                     </small>
 
                   </div>
                   <div class="col-auto">
-                    
+
+                    <!-- Link -->
                     <a href="#!" class="btn btn-sm btn-primary">
                       Subscribe
                     </a>
 
                   </div>
-                </div> 
+                </div>
 
               </div>
 
@@ -421,12 +457,13 @@
 
           </div>
           <div class="col-12 col-md-6 col-xl-4">
-            
+
             <!-- Card -->
             <div class="card">
 
+              <!-- Dropdown -->
               <div class="dropdown card-dropdown">
-                <a href="#" class="dropdown-ellipses dropdown-toggle text-white" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a href="#!" class="dropdown-ellipses dropdown-toggle text-white" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="fe fe-more-vertical"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
@@ -442,25 +479,29 @@
                 </div>
               </div>
 
-              <img src="assets/img/covers/profile-cover-6.jpg" alt="..." class="card-img-top">
+              <!-- Image -->
+              <img src="../assets/img/covers/profile-cover-6.jpg" alt="..." class="card-img-top">
 
+              <!-- Body -->
               <div class="card-body text-center">
 
+                <!-- Image -->
                 <a href="profile-posts.html" class="avatar avatar-xl card-avatar card-avatar-top">
-                  <img src="assets/img/avatars/profiles/avatar-6.jpg" class="avatar-img rounded-circle border border-4 border-card" alt="...">
+                  <img src="../assets/img/avatars/profiles/avatar-6.jpg" class="avatar-img rounded-circle border border-4 border-card" alt="...">
                 </a>
 
+                <!-- Heading -->
                 <h2 class="card-title">
                   <a href="profile-posts.html">Ryu Duke</a>
                 </h2>
 
-                <p class="card-text text-muted">
-                  <small>
-                    Updating the compiler to work with Jenkins.
-                  </small>
+                <!-- Text -->
+                <p class="small text-muted mb-3">
+                  Updating the compiler to work with Jenkins.
                 </p>
-                
-                <p class="card-text">
+
+                <!-- Badges -->
+                <p class="mb-4">
                   <span class="badge badge-soft-secondary">
                     HR
                   </span>
@@ -468,25 +509,29 @@
                     Management
                   </span>
                 </p>
-                
+
+                <!-- Divider -->
                 <hr>
 
+                <!-- Footer -->
                 <div class="row align-items-center justify-content-between">
                   <div class="col-auto">
-                    
+
+                    <!-- Status -->
                     <small>
                       <span class="text-success">●</span> Online
                     </small>
 
                   </div>
                   <div class="col-auto">
-                    
+
+                    <!-- Link -->
                     <a href="#!" class="btn btn-sm btn-primary">
                       Subscribe
                     </a>
 
                   </div>
-                </div> 
+                </div>
 
               </div>
 
@@ -494,12 +539,13 @@
 
           </div>
           <div class="col-12 col-md-6 col-xl-4">
-            
+
             <!-- Card -->
             <div class="card">
 
+              <!-- Dropdown -->
               <div class="dropdown card-dropdown">
-                <a href="#" class="dropdown-ellipses dropdown-toggle text-white" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a href="#!" class="dropdown-ellipses dropdown-toggle text-white" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="fe fe-more-vertical"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
@@ -515,58 +561,66 @@
                 </div>
               </div>
 
-              <img src="assets/img/covers/profile-cover-7.jpg" alt="..." class="card-img-top">
+              <!-- Image -->
+              <img src="../assets/img/covers/profile-cover-7.jpg" alt="..." class="card-img-top">
 
+              <!-- Body -->
               <div class="card-body text-center">
 
+                <!-- Image -->
                 <a href="profile-posts.html" class="avatar avatar-xl card-avatar card-avatar-top">
-                  <img src="assets/img/avatars/profiles/avatar-7.jpg" class="avatar-img rounded-circle border border-4 border-card" alt="...">
+                  <img src="../assets/img/avatars/profiles/avatar-7.jpg" class="avatar-img rounded-circle border border-4 border-card" alt="...">
                 </a>
 
+                <!-- Heading -->
                 <h2 class="card-title">
                   <a href="profile-posts.html">Glen Rouse</a>
                 </h2>
 
-                <p class="card-text text-muted">
-                  <small>
-                    😭 Working on the summit deck...
-                  </small>
+                <!-- Text -->
+                <p class="small text-muted mb-3">
+                  😭 Working on the summit deck...
                 </p>
-                
-                <p class="card-text">
+
+                <!-- Badges -->
+                <p class="mb-4">
                   <span class="badge badge-soft-secondary">
-                    Designer
+                    UX Team
                   </span>
                   <span class="badge badge-soft-secondary">
-                    UI
+                    Research Team
                   </span>
                 </p>
-                
+
+                <!-- Divider -->
                 <hr>
 
+                <!-- Footer -->
                 <div class="row align-items-center justify-content-between">
                   <div class="col-auto">
-                    
+
+                    <!-- Status -->
                     <small>
                       <span class="text-secondary">●</span> Offline
                     </small>
 
                   </div>
                   <div class="col-auto">
-                    
+
+                    <!-- Link -->
                     <a href="#!" class="btn btn-sm btn-primary">
                       Subscribe
                     </a>
 
                   </div>
-                </div> 
+                </div>
 
               </div>
 
             </div>
 
           </div>
-          
+
         </div>
       </div>
 
