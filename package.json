@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "Dashkit",
-  "version": "1.4.2",
+  "version": "1.5.0",
   "description": "",
   "main": "gulpfile.js",
   "author": "Good Themes",
@@ -21,7 +21,7 @@
     "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2",
-    "gulp-useref": "^4.0.0"
+    "gulp-useref": "^4.0.1"
   },
   "dependencies": {
     "@shopify/draggable": "^1.0.0-beta.8",
