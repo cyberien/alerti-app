@@ -11,11 +11,13 @@
   margin-bottom: $card-margin-bottom;
   border-color: $card-outline-color;
   box-shadow: $card-box-shadow;
-
-  > * {
-    flex-shrink: 0;
-  }
 }
+
+.card > * {
+  flex-shrink: 0;
+}
+
+// Header
 
 .card-header {
   display: flex;
@@ -24,11 +26,9 @@
   height: $card-header-height;
   padding-top: $card-spacer-y / 2;
   padding-bottom: $card-spacer-y / 2;
-
-  > * {
-    flex: 1;
-  }
 }
+
+// Title
 
 .card-title {
   margin-bottom: $card-spacer-y / 2;

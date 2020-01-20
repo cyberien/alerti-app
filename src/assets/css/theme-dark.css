@@ -8700,8 +8700,9 @@ a.text-white:hover, a.text-white:focus {
   margin-bottom: 1.5rem;
   border-color: #152E4D;
   box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.5); }
-  .card > * {
-    flex-shrink: 0; }
+
+.card > * {
+  flex-shrink: 0; }
 
 .card-header {
   display: -webkit-box;
@@ -8714,9 +8715,6 @@ a.text-white:hover, a.text-white:focus {
   height: 60px;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem; }
-  .card-header > * {
-    -webkit-box-flex: 1;
-            flex: 1; }
 
 .card-title {
   margin-bottom: 0.5rem; }

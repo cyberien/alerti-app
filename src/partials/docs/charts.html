@@ -31,6 +31,7 @@
   <div class="card">
     <div class="card-body">
 
+      <!-- Chart -->
       <div class="chart">
         <canvas id="overviewChart" class="chart-canvas"></canvas>
       </div>
@@ -60,6 +61,7 @@
   <div class="card">
     <div class="card-body">
 
+      <!-- Chart -->
       <div class="chart">
         <canvas id="feedChart" class="chart-canvas"></canvas>
       </div>
@@ -89,10 +91,12 @@
   <div class="card">
     <div class="card-body">
 
+      <!-- Chart -->
       <div class="chart">
         <canvas id="trafficChart" class="chart-canvas" data-toggle="legend" data-target="#trafficChartLegend"></canvas>
       </div>
 
+      <!-- Legend -->
       <div id="trafficChartLegend" class="chart-legend"></div>
 
     </div>
@@ -120,6 +124,7 @@
   <div class="card">
     <div class="card-body">
 
+      <!-- Chart -->
       <div class="chart chart-sparkline">
         <canvas class="chart-canvas" id="sparklineChart"></canvas>
       </div>
@@ -249,33 +254,22 @@
   <!-- Card -->
   <div class="card">
     <div class="card-header">
-      <div class="row align-items-center">
-        <div class="col-12 col-md">
 
-          <!-- Title -->
-          <h4 class="card-header-title">
-            Conversions
-          </h4>
+      <!-- Title -->
+      <h4 class="card-header-title mr-auto">
+        Conversions
+      </h4>
 
-        </div>
-        <div class="col-auto mr-n3">
+      <!-- Caption -->
+      <span class="text-muted mr-3">
+        Last year comparision:
+      </span>
 
-          <!-- Caption -->
-          <span class="text-muted">
-            Last year comparision:
-          </span>
-
-        </div>
-        <div class="col-auto">
-
-          <!-- Switch -->
-          <div class="custom-control custom-switch">
-            <input type="checkbox" class="custom-control-input" id="cardToggle" data-toggle="chart" data-target="#conversionsChart" data-trigger="change" data-action="add" data-dataset="1">
-            <label class="custom-control-label" for="cardToggle"></label>
-          </div>
-
-        </div>
-      </div> <!-- / .row -->
+      <!-- Switch -->
+      <div class="custom-control custom-switch">
+        <input type="checkbox" class="custom-control-input" id="cardToggle" data-toggle="chart" data-target="#conversionsChart" data-trigger="change" data-action="add" data-dataset="1">
+        <label class="custom-control-label" for="cardToggle"></label>
+      </div>
 
     </div>
     <div class="card-body">
@@ -296,38 +290,30 @@
   <!-- Card -->
   <div class="card">
     <div class="card-header">
-      <div class="row align-items-center">
-        <div class="col">
 
-          <!-- Title -->
-          <h4 class="card-header-title">
-            Sales
-          </h4>
+      <!-- Title -->
+      <h4 class="card-header-title mr-auto">
+        Sales
+      </h4>
 
-        </div>
-        <div class="col-auto">
-
-          <!-- Nav -->
-          <ul class="nav nav-tabs nav-tabs-sm card-header-tabs">
-            <li class="nav-item" data-toggle="chart" data-target="#salesChart" data-trigger="click" data-action="toggle" data-dataset="0">
-              <a class="nav-link active" href="#" data-toggle="tab">
-                All
-              </a>
-            </li>
-            <li class="nav-item" data-toggle="chart" data-target="#salesChart" data-trigger="click" data-action="toggle" data-dataset="1">
-              <a class="nav-link" href="#" data-toggle="tab">
-                Direct
-              </a>
-            </li>
-            <li class="nav-item" data-toggle="chart" data-target="#salesChart" data-trigger="click" data-action="toggle" data-dataset="2">
-              <a class="nav-link" href="#" data-toggle="tab">
-                Organic
-              </a>
-            </li>
-          </ul>
-
-        </div>
-      </div> <!-- / .row -->
+      <!-- Nav -->
+      <ul class="nav nav-tabs nav-tabs-sm card-header-tabs">
+        <li class="nav-item" data-toggle="chart" data-target="#salesChart" data-trigger="click" data-action="toggle" data-dataset="0">
+          <a class="nav-link active" href="#" data-toggle="tab">
+            All
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="chart" data-target="#salesChart" data-trigger="click" data-action="toggle" data-dataset="1">
+          <a class="nav-link" href="#" data-toggle="tab">
+            Direct
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="chart" data-target="#salesChart" data-trigger="click" data-action="toggle" data-dataset="2">
+          <a class="nav-link" href="#" data-toggle="tab">
+            Organic
+          </a>
+        </li>
+      </ul>
 
     </div>
     <div class="card-body">
