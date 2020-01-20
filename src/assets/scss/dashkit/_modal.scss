@@ -97,5 +97,5 @@
 
 .modal-header-tabs {
   margin-top: -$modal-header-padding-y;
-  margin-bottom: -$modal-header-padding-y;
+  margin-bottom: calc(-#{$modal-header-padding-y} - #{$border-width});
 }

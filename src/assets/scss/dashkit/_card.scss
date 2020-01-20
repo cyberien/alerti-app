@@ -8,16 +8,18 @@
 //
 
 .card {
-  display: block;
   margin-bottom: $card-margin-bottom;
   border-color: $card-outline-color;
   box-shadow: $card-box-shadow;
+
+  > * {
+    flex-shrink: 0;
+  }
 }
 
 .card-header {
   display: flex;
   flex-direction: row;
-  flex-grow: 1;
   align-items: center;
   height: $card-header-height;
   padding-top: $card-spacer-y / 2;
@@ -29,7 +31,7 @@
 }
 
 .card-title {
-  margin-bottom: .5rem;
+  margin-bottom: $card-spacer-y / 2;
 }
 
 
@@ -182,7 +184,8 @@
 //
 // Affects card padding
 
-.card-sm .card-body {
+.card-sm .card-body,
+.card-sm .card-footer-boxed {
   padding: $card-spacer-x-sm;
 }
 
@@ -205,7 +208,34 @@
 // Fills the whole available space to fit the height of the neighboring card
 
 .card-fill {
-  min-height: calc(100% - #{$card-margin-bottom});
+  height: calc(100% - #{$card-margin-bottom});
+}
+
+.card-fill .card-body {
+  flex-grow: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+// Responsive
+
+.card-fill {
+
+  @each $breakpoint, $value in $grid-breakpoints {
+
+    &-#{$breakpoint} {
+
+      @include media-breakpoint-up(#{$breakpoint}) {
+        height: calc(100% - #{$card-margin-bottom});
+
+        .card-body {
+          flex-grow: 0;
+          margin-top: auto;
+          margin-bottom: auto;
+        }
+      }
+    }
+  }
 }
 
 
@@ -250,4 +280,15 @@
       }
     }
   }
+}
+
+
+// Card footer boxed
+
+.card-footer-boxed {
+  padding-right: 0;
+  padding-bottom: $card-spacer-x;
+  padding-left: 0;
+  margin-left: $card-spacer-x;
+  margin-right: $card-spacer-x;
 }

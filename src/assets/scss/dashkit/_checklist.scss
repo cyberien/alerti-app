@@ -28,3 +28,7 @@
 .checklist-control.draggable-mirror {
   z-index: $zindex-fixed;
 }
+
+.checklist-control.draggable-source--is-dragging {
+  opacity: .2;
+}
