@@ -26,6 +26,10 @@
   height: $card-header-height;
   padding-top: $card-spacer-y / 2;
   padding-bottom: $card-spacer-y / 2;
+
+  > *:first-child {
+    flex: 1;
+  }
 }
 
 // Title

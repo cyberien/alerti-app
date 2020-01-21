@@ -133,6 +133,38 @@
   }
 })();
 
+// Traffic chart (alt)
+
+(function() {
+  var chart = document.getElementById('trafficChartAlt');
+
+  if (typeof Chart !== 'undefined' && chart) {
+    new Chart(chart, {
+      type: 'doughnut',
+      options: {
+        tooltips: {
+          callbacks: {
+            afterLabel: function() {
+              return '%'
+            }
+          }
+        }
+      },
+      data: {
+        labels: ['Direct', 'Organic', 'Referral'],
+        datasets: [{
+          data: [60, 25, 15],
+          backgroundColor: ['#2C7BE5', '#A6C5F7', '#D2DDEC']
+        }, {
+          data: [15, 45, 20],
+          backgroundColor: ['#2C7BE5', '#A6C5F7', '#D2DDEC'],
+          hidden: true
+        }]
+      }
+    });
+  }
+})();
+
 // Followers chart
 
 (function() {

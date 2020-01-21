@@ -8715,6 +8715,9 @@ a.text-white:hover, a.text-white:focus {
   height: 60px;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem; }
+  .card-header > *:first-child {
+    -webkit-box-flex: 1;
+            flex: 1; }
 
 .card-title {
   margin-bottom: 0.5rem; }
