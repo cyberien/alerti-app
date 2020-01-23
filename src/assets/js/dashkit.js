@@ -188,7 +188,7 @@
         labels: ['Oct 1', 'Oct 2', 'Oct 3', 'Oct 4', 'Oct 5', 'Oct 6', 'Oct 7', 'Oct 8', 'Oct 9', 'Oct 10', 'Oct 11', 'Oct 12'],
         datasets: [{
           label: 'Facebook',
-          data: [50, 75, 35, 25, 55, 87, 67, 53, 25, 80, 87, 45],
+          data: [15, 10, 12, 25, 30, 15, 40, 50, 80, 60, 55, 65],
           borderColor: '#4267B2'
         }, {
           label: 'Twitter',

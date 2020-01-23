@@ -1,59 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    @@include("partials/head.html", {
-    "title": "Dashkit"
-    })
+    @@include("partials/head.html", { "title": "Dashkit" })
   </head>
   <body>
-
     <!-- MODALS
     ================================================== -->
     @@include("partials/modals.html")
 
     <!-- NAVIGATION
     ================================================== -->
-    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
-    @@if (sidebarSize == 'base' || demoMode) {
-    @@include("partials/sidebar.html", {
-    "category": "dashboards",
-    "subcategory": "",
-    "page": "index.html"
-    })
-    }
-    @@if (sidebarSize == 'small' || demoMode) {
-    @@include("partials/sidebar-sm.html", {
-    "category": "dashboards",
-    "subcategory": "",
-    "page": "index.html"
-    })
-    }
-    }
-    @@if (navPosition == 'topnav' || demoMode) {
-    @@include("partials/topnav.html", {
-    "category": "dashboards",
-    "subcategory": "",
-    "page": "index.html"
-    })
-    }
+    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) { @@if (sidebarSize ==
+    'base' || demoMode) { @@include("partials/sidebar.html", { "category": "dashboards",
+    "subcategory": "", "page": "index.html" }) } @@if (sidebarSize == 'small' || demoMode) {
+    @@include("partials/sidebar-sm.html", { "category": "dashboards", "subcategory": "", "page":
+    "index.html" }) } } @@if (navPosition == 'topnav' || demoMode) {
+    @@include("partials/topnav.html", { "category": "dashboards", "subcategory": "", "page":
+    "index.html" }) }
 
     <!-- MAIN CONTENT
     ================================================== -->
     <div class="main-content">
-
-      @@if (navPosition == 'combo' || demoMode) {
-      @@include("partials/topbar.html")
-      }
+      @@if (navPosition == 'combo' || demoMode) { @@include("partials/topbar.html") }
 
       <!-- HEADER -->
       <div class="header bg-dark pb-5">
-        <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
-
+        <div
+          class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}"
+        >
           <!-- Body -->
           <div class="header-body">
             <div class="row align-items-end">
               <div class="col">
-
                 <!-- Pretitle -->
                 <h6 class="header-pretitle text-secondary">
                   Annual
@@ -63,13 +41,18 @@
                 <h1 class="header-title text-white">
                   Audience
                 </h1>
-
               </div>
               <div class="col-auto">
-
                 <!-- Nav -->
                 <ul class="nav nav-tabs header-tabs">
-                  <li class="nav-item" data-toggle="chart" data-target="#audienceChart" data-trigger="click" data-action="toggle" data-dataset="0">
+                  <li
+                    class="nav-item"
+                    data-toggle="chart"
+                    data-target="#audienceChart"
+                    data-trigger="click"
+                    data-action="toggle"
+                    data-dataset="0"
+                  >
                     <a href="#" class="nav-link text-center active" data-toggle="tab">
                       <h6 class="header-pretitle text-secondary">
                         Users
@@ -79,7 +62,14 @@
                       </h3>
                     </a>
                   </li>
-                  <li class="nav-item" data-toggle="chart" data-target="#audienceChart" data-trigger="click" data-action="toggle" data-dataset="1">
+                  <li
+                    class="nav-item"
+                    data-toggle="chart"
+                    data-target="#audienceChart"
+                    data-trigger="click"
+                    data-action="toggle"
+                    data-dataset="1"
+                  >
                     <a href="#" class="nav-link text-center" data-toggle="tab">
                       <h6 class="header-pretitle text-secondary">
                         Sessions
@@ -89,7 +79,14 @@
                       </h3>
                     </a>
                   </li>
-                  <li class="nav-item" data-toggle="chart" data-target="#audienceChart" data-trigger="click" data-action="toggle" data-dataset="2">
+                  <li
+                    class="nav-item"
+                    data-toggle="chart"
+                    data-target="#audienceChart"
+                    data-trigger="click"
+                    data-action="toggle"
+                    data-dataset="2"
+                  >
                     <a href="#" class="nav-link text-center" data-toggle="tab">
                       <h6 class="header-pretitle text-secondary">
                         Bounce
@@ -100,33 +97,32 @@
                     </a>
                   </li>
                 </ul>
-
               </div>
-            </div> <!-- / .row -->
-          </div> <!-- / .header-body -->
+            </div>
+            <!-- / .row -->
+          </div>
+          <!-- / .header-body -->
 
           <!-- Footer -->
           <div class="header-footer">
-
             <!-- Chart -->
             <div class="chart">
               <canvas id="audienceChart" class="chart-canvas"></canvas>
             </div>
-
           </div>
-
         </div>
-      </div> <!-- / .header -->
+      </div>
+      <!-- / .header -->
 
       <!-- CARDS -->
-      <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container} mt-n6">
+      <div
+        class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container} mt-n6"
+      >
         <div class="row">
           <div class="col-12 col-xl-8">
-
             <!-- Convertions -->
             <div class="card">
               <div class="card-header">
-
                 <!-- Title -->
                 <h4 class="card-header-title">
                   Conversions
@@ -139,28 +135,31 @@
 
                 <!-- Switch -->
                 <div class="custom-control custom-switch">
-                  <input type="checkbox" class="custom-control-input" id="cardToggle" data-toggle="chart" data-target="#conversionsChart" data-trigger="change" data-action="add" data-dataset="1">
+                  <input
+                    type="checkbox"
+                    class="custom-control-input"
+                    id="cardToggle"
+                    data-toggle="chart"
+                    data-target="#conversionsChart"
+                    data-trigger="change"
+                    data-action="add"
+                    data-dataset="1"
+                  />
                   <label class="custom-control-label" for="cardToggle"></label>
                 </div>
-
               </div>
               <div class="card-body">
-
                 <!-- Chart -->
                 <div class="chart">
                   <canvas id="conversionsChart" class="chart-canvas"></canvas>
                 </div>
-
               </div>
             </div>
-
           </div>
           <div class="col-12 col-xl-4">
-
             <!-- Traffic -->
             <div class="card">
               <div class="card-header">
-
                 <!-- Title -->
                 <h4 class="card-header-title">
                   Traffic Channels
@@ -168,43 +167,57 @@
 
                 <!-- Tabs -->
                 <ul class="nav nav-tabs nav-tabs-sm card-header-tabs">
-                  <li class="nav-item" data-toggle="chart" data-target="#trafficChart" data-trigger="click" data-action="toggle" data-dataset="0">
+                  <li
+                    class="nav-item"
+                    data-toggle="chart"
+                    data-target="#trafficChart"
+                    data-trigger="click"
+                    data-action="toggle"
+                    data-dataset="0"
+                  >
                     <a href="#" class="nav-link active" data-toggle="tab">
                       All
                     </a>
                   </li>
-                  <li class="nav-item" data-toggle="chart" data-target="#trafficChart" data-trigger="click" data-action="toggle" data-dataset="1">
+                  <li
+                    class="nav-item"
+                    data-toggle="chart"
+                    data-target="#trafficChart"
+                    data-trigger="click"
+                    data-action="toggle"
+                    data-dataset="1"
+                  >
                     <a href="#" class="nav-link" data-toggle="tab">
                       Direct
                     </a>
                   </li>
                 </ul>
-
               </div>
               <div class="card-body">
-
                 <!-- Chart -->
                 <div class="chart chart-appended">
-                  <canvas id="trafficChart" class="chart-canvas" data-toggle="legend" data-target="#trafficChartLegend"></canvas>
+                  <canvas
+                    id="trafficChart"
+                    class="chart-canvas"
+                    data-toggle="legend"
+                    data-target="#trafficChartLegend"
+                  ></canvas>
                 </div>
 
                 <!-- Legend -->
                 <div id="trafficChartLegend" class="chart-legend"></div>
-
               </div>
             </div>
-
           </div>
-        </div> <!-- / .row -->
+        </div>
+        <!-- / .row -->
         <div class="row">
           <div class="col-12 col-lg-6 col-xl">
-
             <!-- Acquisition  -->
             <div class="card">
               <div class="card-body">
                 <div class="row align-items-center">
                   <div class="col">
-
                     <!-- Title -->
                     <h6 class="text-uppercase text-muted mb-2">
                       Acquisition Value
@@ -219,28 +232,22 @@
                     <span class="badge badge-soft-success mt-n1">
                       +3.5%
                     </span>
-
                   </div>
                   <div class="col-auto">
-
                     <!-- Icon -->
                     <span class="h2 fe fe-dollar-sign text-muted mb-0"></span>
-
                   </div>
-                </div> <!-- / .row -->
-
+                </div>
+                <!-- / .row -->
               </div>
             </div>
-
           </div>
           <div class="col-12 col-lg-6 col-xl">
-
             <!-- Hours -->
             <div class="card">
               <div class="card-body">
                 <div class="row align-items-center">
                   <div class="col">
-
                     <!-- Title -->
                     <h6 class="text-uppercase text-muted mb-2">
                       Total HOURS on site
@@ -250,28 +257,22 @@
                     <span class="h2 mb-0">
                       763.5
                     </span>
-
                   </div>
                   <div class="col-auto">
-
                     <!-- Icon -->
                     <span class="h2 fe fe-briefcase text-muted mb-0"></span>
-
                   </div>
-                </div> <!-- / .row -->
-
+                </div>
+                <!-- / .row -->
               </div>
             </div>
-
           </div>
           <div class="col-12 col-lg-6 col-xl">
-
             <!-- Exit -->
             <div class="card">
               <div class="card-body">
                 <div class="row align-items-center">
                   <div class="col">
-
                     <!-- Title -->
                     <h6 class="text-uppercase text-muted mb-2">
                       Exit %
@@ -281,30 +282,24 @@
                     <span class="h2 mb-0">
                       35.5%
                     </span>
-
                   </div>
                   <div class="col-auto">
-
                     <!-- Chart -->
                     <div class="chart chart-sparkline">
                       <canvas class="chart-canvas" id="sparklineChart"></canvas>
                     </div>
-
                   </div>
-                </div> <!-- / .row -->
-
+                </div>
+                <!-- / .row -->
               </div>
             </div>
-
           </div>
           <div class="col-12 col-lg-6 col-xl">
-
             <!-- Time -->
             <div class="card">
               <div class="card-body">
                 <div class="row align-items-center">
                   <div class="col">
-
                     <!-- Title -->
                     <h6 class="text-uppercase text-muted mb-2">
                       Avg. Time on Page
@@ -314,183 +309,23 @@
                     <span class="h2 mb-0">
                       2:37
                     </span>
-
                   </div>
                   <div class="col-auto">
-
                     <!-- Icon -->
                     <span class="h2 fe fe-clock text-muted mb-0"></span>
-
                   </div>
-                </div> <!-- / .row -->
-
+                </div>
+                <!-- / .row -->
               </div>
             </div>
-
           </div>
-        </div> <!-- / .row -->
+        </div>
+        <!-- / .row -->
         <div class="row">
-          <div class="col-12 col-xl-4">
-
-            <!-- Activity -->
-            <div class="card-adjust-xl">
-              <div class="card">
-                <div class="card-header">
-
-                  <!-- Title -->
-                  <h4 class="card-header-title">
-                    Recent Activity
-                  </h4>
-
-                  <!-- Button -->
-                  <a class="small" href="#!">View all</a>
-
-                </div>
-                <div class="card-body">
-
-                  <!-- List group -->
-                  <div class="list-group list-group-flush list-group-activity my-n3">
-                    <div class="list-group-item">
-                      <div class="row">
-                        <div class="col-auto">
-
-                          <!-- Avatar -->
-                          <div class="avatar avatar-sm">
-                            <div class="avatar-title font-size-lg bg-primary-soft rounded-circle text-primary">
-                              <i class="fe fe-mail"></i>
-                            </div>
-                          </div>
-
-                        </div>
-                        <div class="col ml-n2">
-
-                          <!-- Heading -->
-                          <h5 class="mb-1">
-                            Launchday 1.4.0 update email sent
-                          </h5>
-
-                          <!-- Text -->
-                          <p class="small text-gray-700 mb-0">
-                            Sent to all 1,851 subscribers over a 24 hour period
-                          </p>
-
-                          <!-- Time -->
-                          <small class="text-muted">
-                            2m ago
-                          </small>
-
-                        </div>
-                      </div> <!-- / .row -->
-                    </div>
-                    <div class="list-group-item">
-                      <div class="row">
-                        <div class="col-auto">
-
-                          <!-- Avatar -->
-                          <div class="avatar avatar-sm">
-                            <div class="avatar-title font-size-lg bg-primary-soft rounded-circle text-primary">
-                              <i class="fe fe-mail"></i>
-                            </div>
-                          </div>
-
-                        </div>
-                        <div class="col ml-n2">
-
-                          <!-- Heading -->
-                          <h5 class="mb-1">
-                            Launchday 1.4.0 update email sent
-                          </h5>
-
-                          <!-- Text -->
-                          <p class="small text-gray-700 mb-0">
-                            Sent to all 1,851 subscribers over a 24 hour period
-                          </p>
-
-                          <!-- Time -->
-                          <small class="text-muted">
-                            2m ago
-                          </small>
-
-                        </div>
-                      </div> <!-- / .row -->
-                    </div>
-                    <div class="list-group-item">
-                      <div class="row">
-                        <div class="col-auto">
-
-                          <!-- Avatar -->
-                          <div class="avatar avatar-sm">
-                            <div class="avatar-title font-size-lg bg-primary-soft rounded-circle text-primary">
-                              <i class="fe fe-mail"></i>
-                            </div>
-                          </div>
-
-                        </div>
-                        <div class="col ml-n2">
-
-                          <!-- Heading -->
-                          <h5 class="mb-1">
-                            Launchday 1.4.0 update email sent
-                          </h5>
-
-                          <!-- Text -->
-                          <p class="small text-gray-700 mb-0">
-                            Sent to all 1,851 subscribers over a 24 hour period
-                          </p>
-
-                          <!-- Time -->
-                          <small class="text-muted">
-                            2m ago
-                          </small>
-
-                        </div>
-                      </div> <!-- / .row -->
-                    </div>
-                    <div class="list-group-item">
-                      <div class="row">
-                        <div class="col-auto">
-
-                          <!-- Avatar -->
-                          <div class="avatar avatar-sm">
-                            <div class="avatar-title font-size-lg bg-primary-soft rounded-circle text-primary">
-                              <i class="fe fe-mail"></i>
-                            </div>
-                          </div>
-
-                        </div>
-                        <div class="col ml-n2">
-
-                          <!-- Heading -->
-                          <h5 class="mb-1">
-                            Launchday 1.4.0 update email sent
-                          </h5>
-
-                          <!-- Text -->
-                          <p class="small text-gray-700 mb-0">
-                            Sent to all 1,851 subscribers over a 24 hour period
-                          </p>
-
-                          <!-- Time -->
-                          <small class="text-muted">
-                            2m ago
-                          </small>
-
-                        </div>
-                      </div> <!-- / .row -->
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-
-          </div>
           <div class="col-12 col-xl-8">
-
             <!-- Content -->
             <div class="card">
               <div class="card-header">
-
                 <!-- Title -->
                 <h4 class="card-header-title">
                   Popular Content
@@ -500,9 +335,12 @@
                 <a href="#!" class="btn btn-sm btn-white">
                   Export
                 </a>
-
               </div>
-              <div class="table-responsive mb-0" data-toggle="lists" data-options='{"valueNames": ["content-title", "content-pageviews", "content-pagewview", "content-time"]}'>
+              <div
+                class="table-responsive mb-0"
+                data-toggle="lists"
+                data-options='{"valueNames": ["content-title", "content-pageviews", "content-pagewview", "content-time"]}'
+              >
                 <table class="table table-sm table-nowrap table-hover card-table">
                   <thead>
                     <tr>
@@ -543,10 +381,16 @@
                         2:14
                       </td>
                       <td class="text-right">
-
                         <!-- Dropdown -->
                         <div class="dropdown">
-                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <a
+                            href="#"
+                            class="dropdown-ellipses dropdown-toggle"
+                            role="button"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                          >
                             <i class="fe fe-more-vertical"></i>
                           </a>
                           <div class="dropdown-menu dropdown-menu-right">
@@ -561,7 +405,6 @@
                             </a>
                           </div>
                         </div>
-
                       </td>
                     </tr>
                     <tr>
@@ -578,10 +421,16 @@
                         1:53
                       </td>
                       <td class="text-right">
-
                         <!-- Dropdown -->
                         <div class="dropdown">
-                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <a
+                            href="#"
+                            class="dropdown-ellipses dropdown-toggle"
+                            role="button"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                          >
                             <i class="fe fe-more-vertical"></i>
                           </a>
                           <div class="dropdown-menu dropdown-menu-right">
@@ -596,7 +445,6 @@
                             </a>
                           </div>
                         </div>
-
                       </td>
                     </tr>
                     <tr>
@@ -613,10 +461,16 @@
                         2:03
                       </td>
                       <td class="text-right">
-
                         <!-- Dropdown -->
                         <div class="dropdown">
-                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <a
+                            href="#"
+                            class="dropdown-ellipses dropdown-toggle"
+                            role="button"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                          >
                             <i class="fe fe-more-vertical"></i>
                           </a>
                           <div class="dropdown-menu dropdown-menu-right">
@@ -631,7 +485,6 @@
                             </a>
                           </div>
                         </div>
-
                       </td>
                     </tr>
                     <tr>
@@ -648,10 +501,16 @@
                         0:45
                       </td>
                       <td class="text-right">
-
                         <!-- Dropdown -->
                         <div class="dropdown">
-                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <a
+                            href="#"
+                            class="dropdown-ellipses dropdown-toggle"
+                            role="button"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                          >
                             <i class="fe fe-more-vertical"></i>
                           </a>
                           <div class="dropdown-menu dropdown-menu-right">
@@ -666,7 +525,6 @@
                             </a>
                           </div>
                         </div>
-
                       </td>
                     </tr>
                     <tr>
@@ -683,10 +541,16 @@
                         6:10
                       </td>
                       <td class="text-right">
-
                         <!-- Dropdown -->
                         <div class="dropdown">
-                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <a
+                            href="#"
+                            class="dropdown-ellipses dropdown-toggle"
+                            role="button"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                          >
                             <i class="fe fe-more-vertical"></i>
                           </a>
                           <div class="dropdown-menu dropdown-menu-right">
@@ -701,23 +565,15 @@
                             </a>
                           </div>
                         </div>
-
                       </td>
                     </tr>
                   </tbody>
                 </table>
               </div>
             </div>
-
-          </div>
-        </div> <!-- / .row -->
-        <div class="row">
-          <div class="col-12 col-xl-8">
-
             <!-- Followers -->
             <div class="card">
               <div class="card-header">
-
                 <!-- Title -->
                 <h4 class="card-header-title">
                   Follower Count
@@ -730,72 +586,215 @@
                 <span class="ml-2">
                   <span style="color: #1DA1F2">●</span> <small class="text-muted">Twitter</small>
                 </span>
-
               </div>
               <div class="card-body">
-
                 <!-- Chart -->
                 <div class="chart">
                   <canvas id="followersChart" class="chart-canvas"></canvas>
                 </div>
-
               </div>
             </div>
-
           </div>
           <div class="col-12 col-xl-4">
+            <!-- Activity -->
+            <div class="">
+              <div class="card">
+                <div class="card-header">
+                  <!-- Title -->
+                  <h4 class="card-header-title">
+                    Recent Activity
+                  </h4>
 
-            <!-- Ad -->
+                  <!-- Button -->
+                  <a class="small" href="#!">View all</a>
+                </div>
+                <div class="card-body">
+                  <!-- List group -->
+                  <div class="list-group list-group-flush list-group-activity my-n3">
+                    <div class="list-group-item">
+                      <div class="row">
+                        <div class="col-auto">
+                          <!-- Avatar -->
+                          <div class="avatar avatar-sm avatar-online">
+                            <img
+                              class="avatar-img rounded-circle"
+                              src="assets/img/avatars/profiles/avatar-1.jpg"
+                              alt="..."
+                            />
+                          </div>
+                        </div>
+                        <div class="col ml-n2">
+                          <!-- Heading -->
+                          <h5 class="mb-1">
+                            Dianna Smiley
+                          </h5>
+
+                          <!-- Text -->
+                          <p class="small text-gray-700 mb-0">
+                            Uploaded the files "Launchday Logo" and "New Design".
+                          </p>
+
+                          <!-- Time -->
+                          <small class="text-muted">
+                            2m ago
+                          </small>
+                        </div>
+                      </div>
+                      <!-- / .row -->
+                    </div>
+                    <div class="list-group-item">
+                      <div class="row">
+                        <div class="col-auto">
+                          <!-- Avatar -->
+                          <div class="avatar avatar-sm avatar-online">
+                            <img
+                              class="avatar-img rounded-circle"
+                              src="assets/img/avatars/profiles/avatar-2.jpg"
+                              alt="..."
+                            />
+                          </div>
+                        </div>
+                        <div class="col ml-n2">
+                          <!-- Heading -->
+                          <h5 class="mb-1">
+                            Ab Hadley
+                          </h5>
+
+                          <!-- Text -->
+                          <p class="small text-gray-700 mb-0">
+                            Shared the "Why Dashkit?" post with 124 subscribers.
+                          </p>
+
+                          <!-- Time -->
+                          <small class="text-muted">
+                            1h ago
+                          </small>
+                        </div>
+                      </div>
+                      <!-- / .row -->
+                    </div>
+                    <div class="list-group-item">
+                      <div class="row">
+                        <div class="col-auto">
+                          <!-- Avatar -->
+                          <div class="avatar avatar-sm avatar-offline">
+                            <img
+                              class="avatar-img rounded-circle"
+                              src="assets/img/avatars/profiles/avatar-3.jpg"
+                              alt="..."
+                            />
+                          </div>
+                        </div>
+                        <div class="col ml-n2">
+                          <!-- Heading -->
+                          <h5 class="mb-1">
+                            Adolfo Hess
+                          </h5>
+
+                          <!-- Text -->
+                          <p class="small text-gray-700 mb-0">
+                            Exported sales data from Launchday's subscriber data.
+                          </p>
+
+                          <!-- Time -->
+                          <small class="text-muted">
+                            3h ago
+                          </small>
+                        </div>
+                      </div>
+                      <!-- / .row -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Checklist -->
             <div class="card">
+              <div class="card-header">
+                <!-- Title -->
+                <h4 class="card-header-title">
+                  Scratchpad Checklist
+                </h4>
 
-              <!-- Image -->
-              <a href="https://themes.getbootstrap.com/preview/?theme_id=23273">
-                <img class="card-img-top" src="assets/img/kanban/kanban-2.jpg" alt="...">
-              </a>
-
-              <!-- Body -->
+                <!-- Badge -->
+                <span class="badge badge-soft-secondary">
+                  23 Complete Items
+                </span>
+              </div>
               <div class="card-body">
+                <!-- Checklist -->
+                <div class="checklist">
+                  <div class="custom-control custom-checkbox checklist-control">
+                    <input class="custom-control-input" id="checklistTwo" type="checkbox" />
+                    <label class="custom-control-label" for="checklistTwo"></label>
+                    <span class="custom-control-caption">
+                      Delete the old mess in functions files.
+                    </span>
+                  </div>
+                  <div class="custom-control custom-checkbox checklist-control">
+                    <input class="custom-control-input" id="checklistThree" type="checkbox" />
+                    <label class="custom-control-label" for="checklistThree"></label>
+                    <span class="custom-control-caption">
+                      Create the release notes for the new pages so customers get psyched.
+                    </span>
+                  </div>
+                  <div class="custom-control custom-checkbox checklist-control">
+                    <input class="custom-control-input" id="checklistFour" type="checkbox" />
+                    <label class="custom-control-label" for="checklistFour"></label>
+                    <span class="custom-control-caption">
+                      Send Dianna those meeting notes
+                    </span>
+                  </div>
+                  <div class="custom-control custom-checkbox checklist-control">
+                    <input class="custom-control-input" id="checklistFive" type="checkbox" />
+                    <label class="custom-control-label" for="checklistFive"></label>
+                    <span class="custom-control-caption">
+                      Share the documentation for the new unified API
+                    </span>
+                  </div>
+                  <div class="custom-control custom-checkbox checklist-control">
+                    <input class="custom-control-input" id="checklistSix" type="checkbox" checked />
+                    <label class="custom-control-label" for="checklistSix"></label>
+                    <span class="custom-control-caption">
+                      Clean up the Figma file with all of the avatars, buttons, and other
+                      components.
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!-- / .card-body -->
+              <div class="card-footer">
                 <div class="row align-items-center">
                   <div class="col">
-
-                    <!-- Title -->
-                    <h4 class="mb-1">
-                      Get Landkit theme!
-                    </h4>
-
-                    <!-- Badge -->
-                    <span class="badge badge-soft-success">
-                      Ad
-                    </span>
-
-                    <!-- Price -->
-                    <small class="text-muted">
-                      $49.99
-                    </small>
-
+                    <!-- Input -->
+                    <textarea
+                      class="form-control form-control-flush form-control-auto"
+                      data-toggle="autosize"
+                      rows="1"
+                      placeholder="Create a task"
+                    ></textarea>
                   </div>
                   <div class="col-auto">
-
                     <!-- Button -->
-                    <a class="btn btn-sm btn-white" href="https://themes.getbootstrap.com/preview/?theme_id=23273">
-                      Buy now
-                    </a>
-
+                    <button class="btn btn-sm btn-primary">
+                      Add
+                    </button>
                   </div>
-                </div> <!-- / .row -->
+                </div>
+                <!-- / .row -->
               </div>
-
+              <!-- / .card-footer -->
             </div>
-
+            <!-- / .card -->
           </div>
         </div>
+        <!-- / .row -->
       </div>
-
-    </div> <!-- / .main-content -->
+    </div>
+    <!-- / .main-content -->
 
     <!-- JAVASCRIPT
     ================================================== -->
     @@include("partials/scripts.html")
-
   </body>
 </html>
