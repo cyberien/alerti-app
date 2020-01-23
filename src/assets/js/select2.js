@@ -18,9 +18,9 @@
   //
 
   function init(el) {
-    var elementOptions = el.dataset.options;
-    elementOptions = elementOptions ? JSON.parse(elementOptions) : {};
+    var elementOptions = el.dataset.options ? JSON.parse(el.dataset.options) : {};
 
+    // Default options
     var defaultOptions = {
       containerCssClass: el.getAttribute('class'),
       dropdownCssClass: 'dropdown-menu show',
@@ -28,26 +28,24 @@
       templateResult: formatTemplate
     };
 
+    // Combine options
     var options = Object.assign(defaultOptions, elementOptions);
 
+    // Init Select2
     $(el).select2(options);
   }
 
   function formatTemplate(item) {
-    if (!item.id) {
+
+    // Quit if there's no avatar to display
+    if (!item.id || !item.element || !item.element.dataset.avatarSrc) {
       return item.text;
     }
 
-    var option = item.element;
-    var avatar = option.dataset.avatarSrc;
+    var avatar = item.element.dataset.avatarSrc;
+    var content = document.createElement('div');
 
-    if (avatar) {
-      var content = document.createElement('div');
-
-      content.innerHTML = '<span class="avatar avatar-xs mr-3"><img class="avatar-img rounded-circle" src="' + avatar + '" alt="' + item.text + '"></span><span>' + item.text + '</span>';
-    } else {
-      var content = item.text;
-    }
+    content.innerHTML = '<span class="avatar avatar-xs mr-3"><img class="avatar-img rounded-circle" src="' + avatar + '" alt="' + item.text + '"></span><span>' + item.text + '</span>';
 
     return content;
   }
