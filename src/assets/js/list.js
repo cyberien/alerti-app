@@ -14,18 +14,16 @@
   var toggle = document.querySelectorAll('[data-toggle="lists"]');
   var toggleSort = document.querySelectorAll('[data-toggle="lists"] [data-sort]');
 
-
   //
   // Functions
   //
 
   function init(el) {
-    var options = el.dataset.options;
-        options = options ? JSON.parse(options) : {};
+    var options = el.dataset.options ? JSON.parse(el.dataset.options) : {};
 
+    // Init
     new List(el, options);
   }
-
 
   //
   // Events

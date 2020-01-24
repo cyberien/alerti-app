@@ -83,7 +83,7 @@
   </p>
 
   <!-- Card -->
-  <div class="card" data-toggle="lists" data-options='{"valueNames": ["name"]}'>
+  <div class="card" id="lists" data-toggle="lists" data-options='{"valueNames": ["name"], "page": 3, "pagination": true}'>
     <div class="card-header">
 
       <!-- Title -->
@@ -111,7 +111,7 @@
 
       <!-- List group -->
       <ul class="list-group list-group-flush list my-n3">
-        <li class="list-group-item px-0">
+        <li class="list-group-item">
           <div class="row align-items-center">
             <div class="col-auto">
 
@@ -144,7 +144,7 @@
             </div>
           </div> <!-- / .row -->
         </li>
-        <li class="list-group-item px-0">
+        <li class="list-group-item">
           <div class="row align-items-center">
             <div class="col-auto">
 
@@ -177,7 +177,7 @@
             </div>
           </div> <!-- / .row -->
         </li>
-        <li class="list-group-item px-0">
+        <li class="list-group-item">
           <div class="row align-items-center">
             <div class="col-auto">
 
@@ -210,7 +210,7 @@
             </div>
           </div> <!-- / .row -->
         </li>
-        <li class="list-group-item px-0">
+        <li class="list-group-item">
           <div class="row align-items-center">
             <div class="col-auto">
 
@@ -246,9 +246,15 @@
       </ul>
 
     </div>
+    <div class="card-footer">
+
+      <!-- Pagination -->
+      <ul class="pagination mb-0"></ul>
+
+    </div>
     <div class="card-footer bg-dark">
       <code class="highlight html bg-dark">
-        &lt;div&nbsp;data-toggle=&quot;lists&quot;&nbsp;data-options='{&quot;valueNames&quot;:&nbsp;[&quot;name&quot;]}'&gt;<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;&lt;input&nbsp;class=&quot;form-control&nbsp;search&quot;&nbsp;type=&quot;search&quot;&nbsp;/&gt;<br /><br />&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;list-group&nbsp;list&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;list-group-item&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;name&quot;&gt;Casey&nbsp;Fyfe&lt;/span&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;list-group-item&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;name&quot;&gt;Jane&nbsp;Roe&lt;/span&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;list-group-item&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;name&quot;&gt;Casey&nbsp;Fyfe&lt;/span&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;list-group-item&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;name&quot;&gt;Jane&nbsp;Roe&lt;/span&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br />&nbsp;&nbsp;&lt;/ul&gt;<br /><br />&lt;/div&gt;
+        &lt;div&nbsp;id=&quot;lists&quot;&nbsp;data-toggle=&quot;lists&quot;&nbsp;data-options='{&quot;valueNames&quot;:&nbsp;[&quot;name&quot;],&nbsp;&quot;page&quot;:&nbsp;3,&nbsp;&quot;pagination&quot;:&nbsp;true}'&gt;<br /><br />&nbsp;&nbsp;&lt;!--&nbsp;Search&nbsp;--&gt;<br />&nbsp;&nbsp;&lt;input&nbsp;type=&quot;search&quot;&nbsp;class=&quot;search&quot;&gt;<br /><br />&nbsp;&nbsp;&lt;!--&nbsp;List&nbsp;--&gt;<br />&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;list&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;name&quot;&gt;Casey&nbsp;Fyfe&lt;/li&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;name&quot;&gt;Jane&nbsp;Roe&lt;/li&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;name&quot;&gt;Casey&nbsp;Fyfe&lt;/li&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;name&quot;&gt;Jane&nbsp;Roe&lt;/li&gt;<br />&nbsp;&nbsp;&lt;/ul&gt;<br /><br />&nbsp;&nbsp;&lt;!--&nbsp;Pagination&nbsp;--&gt;<br />&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;pagination&quot;&gt;&lt;/ul&gt;<br /><br />&lt;/div&gt;<br />
       </code>
     </div>
   </div>

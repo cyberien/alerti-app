@@ -1,37 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    @@include("../partials/head.html", { "title": "Dashkit" })
+    @@include("../partials/head.html", {
+    "title": "Dashkit"
+    })
   </head>
-
   <body>
+
     <!-- MODALS
     ================================================== -->
     @@include("../partials/modals.html")
 
     <!-- NAVIGATION
     ================================================== -->
-    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) { @@if (sidebarSize ==
-    'base' || demoMode) { @@include("../partials/sidebar.html", { "category": "basics",
-    "subcategory": "", "page": "design-file.html" }) } @@if (sidebarSize == 'small' || demoMode) {
-    @@include("../partials/sidebar-sm.html", { "category": "basics", "subcategory": "", "page":
-    "design-file.html" }) } } @@if (navPosition == 'topnav' || demoMode) {
-    @@include("../partials/topnav.html", { "category": "basics", "subcategory": "", "page":
-    "design-file.html" }) }
+    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
+    @@if (sidebarSize == 'base' || demoMode) {
+    @@include("../partials/sidebar.html", {
+    "category": "basics",
+    "subcategory": "",
+    "page": "design-file.html"
+    })
+    }
+    @@if (sidebarSize == 'small' || demoMode) {
+    @@include("../partials/sidebar-sm.html", {
+    "category": "basics",
+    "subcategory": "",
+    "page": "design-file.html"
+    })
+    }
+    }
+    @@if (navPosition == 'topnav' || demoMode) {
+    @@include("../partials/topnav.html", {
+    "category": "basics",
+    "subcategory": "", "page":
+    "design-file.html"
+    })
+    }
 
     <!-- MAIN CONTENT
     ================================================== -->
     <div class="main-content pb-6">
-      @@if (navPosition == 'combo' || demoMode) { @@include("../partials/topbar.html") }
 
-      <div
-        class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}"
-      >
+      @@if (navPosition == 'combo' || demoMode) {
+      @@include("../partials/topbar.html")
+      }
+
+      <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
         <div class="row justify-content-center">
           <div class="col-12 col-lg-10 col-xl-8">
+
             <!-- Header -->
             <div class="header mt-md-5">
               <div class="header-body">
+
                 <!-- Pretitle -->
                 <h6 class="header-pretitle">
                   Documentation
@@ -53,10 +74,12 @@
             <!-- Header -->
             <div class="header mt-md-5">
               <div class="header-body">
+
                 <!-- Title -->
                 <h1 class="header-title">
                   Why Figma?
                 </h1>
+
               </div>
             </div>
 
@@ -86,10 +109,12 @@
             <!-- Header -->
             <div class="header mt-md-5">
               <div class="header-body">
+
                 <!-- Title -->
                 <h1 class="header-title">
                   Unofficial Figma File
                 </h1>
+
               </div>
             </div>
 
@@ -124,15 +149,16 @@
 
             <!-- Image -->
             <img src="@@webRoot/assets/img/figma.jpg" alt="..." class="img-fluid rounded-lg" />
+
           </div>
-        </div>
-        <!-- / .row -->
+        </div> <!-- / .row -->
       </div>
-    </div>
-    <!-- / .main-content -->
+
+    </div> <!-- / .main-content -->
 
     <!-- JAVASCRIPT
     ================================================== -->
     @@include("../partials/scripts.html")
+
   </body>
 </html>

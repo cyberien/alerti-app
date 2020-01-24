@@ -1,22 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    @@include("partials/head.html", { "title": "Dashkit" })
+    @@include("partials/head.html", {
+    "title": "Dashkit"
+    })
   </head>
   <body>
+
     <!-- MODALS
     ================================================== -->
     @@include("partials/modals.html")
 
     <!-- NAVIGATION
     ================================================== -->
-    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) { @@if (sidebarSize ==
-    'base' || demoMode) { @@include("partials/sidebar.html", { "category": "dashboards",
-    "subcategory": "", "page": "dashboard-analytics.html" }) } @@if (sidebarSize == 'small' ||
-    demoMode) { @@include("partials/sidebar-sm.html", { "category": "dashboards", "subcategory": "",
-    "page": "dashboard-analytics.html" }) } } @@if (navPosition == 'topnav' || demoMode) {
-    @@include("partials/topnav.html", { "category": "dashboards", "subcategory": "", "page":
-    "dashboard-analytics.html" }) }
+    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
+    @@if (sidebarSize == 'base' || demoMode) {
+    @@include("partials/sidebar.html", {
+    "category": "dashboards",
+    "subcategory": "",
+    "page": "dashboard-ecommerce.html"
+    })
+    }
+    @@if (sidebarSize == 'small' || demoMode) {
+    @@include("partials/sidebar-sm.html", {
+    "category": "dashboards",
+    "subcategory": "",
+    "page": "dashboard-ecommerce.html"
+    })
+    }
+    }
+    @@if (navPosition == 'topnav' || demoMode) {
+    @@include("partials/topnav.html", {
+    "category": "dashboards",
+    "subcategory": "",
+    "page": "dashboard-ecommerce.html"
+    })
+    }
 
     <!-- MAIN CONTENT
     ================================================== -->
@@ -25,13 +44,13 @@
 
       <!-- HEADER -->
       <div class="header">
-        <div
-          class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}"
-        >
+        <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
+
           <!-- Body -->
           <div class="header-body">
             <div class="row align-items-end">
               <div class="col">
+
                 <!-- Pretitle -->
                 <h6 class="header-pretitle">
                   Dashboard
@@ -41,32 +60,33 @@
                 <h1 class="header-title">
                   E-Commerce
                 </h1>
+
               </div>
               <div class="col-auto">
+
                 <!-- Button -->
                 <a href="#!" class="btn btn-primary lift">
                   Create Report
                 </a>
+
               </div>
-            </div>
-            <!-- / .row -->
-          </div>
-          <!-- / .header-body -->
+            </div> <!-- / .row -->
+          </div> <!-- / .header-body -->
+
         </div>
-      </div>
-      <!-- / .header -->
+      </div> <!-- / .header -->
 
       <!-- CARDS -->
-      <div
-        class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}"
-      >
+      <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
         <div class="row">
           <div class="col-12 col-lg-6 col-xl">
+
             <!-- Card -->
             <div class="card">
               <div class="card-body">
                 <div class="row align-items-center">
                   <div class="col">
+
                     <!-- Title -->
                     <h6 class="text-uppercase text-muted mb-2">
                       Weekly Sales
@@ -81,22 +101,27 @@
                     <span class="badge badge-soft-success mt-n1">
                       +3.5%
                     </span>
+
                   </div>
                   <div class="col-auto">
+
                     <!-- Icon -->
                     <span class="h2 fe fe-dollar-sign text-muted mb-0"></span>
+
                   </div>
-                </div>
-                <!-- / .row -->
+                </div> <!-- / .row -->
               </div>
             </div>
+
           </div>
           <div class="col-12 col-lg-6 col-xl">
+
             <!-- Card -->
             <div class="card">
               <div class="card-body">
                 <div class="row align-items-center">
                   <div class="col">
+
                     <!-- Title -->
                     <h6 class="text-uppercase text-muted mb-2">
                       Orders Placed
@@ -106,22 +131,27 @@
                     <span class="h2 mb-0">
                       763.5
                     </span>
+
                   </div>
                   <div class="col-auto">
+
                     <!-- Icon -->
                     <span class="h2 fe fe-briefcase text-muted mb-0"></span>
+
                   </div>
-                </div>
-                <!-- / .row -->
+                </div> <!-- / .row -->
               </div>
             </div>
+
           </div>
           <div class="col-12 col-lg-6 col-xl">
+
             <!-- Card -->
             <div class="card">
               <div class="card-body">
                 <div class="row align-items-center">
                   <div class="col">
+
                     <!-- Title -->
                     <h6 class="text-uppercase text-muted mb-2">
                       Conversion Rate
@@ -129,42 +159,42 @@
 
                     <div class="row align-items-center no-gutters">
                       <div class="col-auto">
+
                         <!-- Heading -->
                         <span class="h2 mr-2 mb-0">
                           84.5%
                         </span>
+
                       </div>
                       <div class="col">
+
                         <!-- Progress -->
                         <div class="progress progress-sm">
-                          <div
-                            class="progress-bar"
-                            role="progressbar"
-                            style="width: 85%"
-                            aria-valuenow="85"
-                            aria-valuemin="0"
-                            aria-valuemax="100"
-                          ></div>
+                          <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
+
                       </div>
-                    </div>
-                    <!-- / .row -->
+                    </div> <!-- / .row -->
                   </div>
                   <div class="col-auto">
+
                     <!-- Icon -->
                     <span class="h2 fe fe-clipboard text-muted mb-0"></span>
+
                   </div>
-                </div>
-                <!-- / .row -->
+                </div> <!-- / .row -->
               </div>
             </div>
+
           </div>
           <div class="col-12 col-lg-6 col-xl">
+
             <!-- Card -->
             <div class="card">
               <div class="card-body">
                 <div class="row align-items-center">
                   <div class="col">
+
                     <!-- Title -->
                     <h6 class="text-uppercase text-muted mb-2">
                       Avg. Order VaLue
@@ -174,25 +204,29 @@
                     <span class="h2 mb-0">
                       $85.50
                     </span>
+
                   </div>
                   <div class="col-auto">
+
                     <!-- Chart -->
                     <div class="chart chart-sparkline">
                       <canvas class="chart-canvas" id="sparklineChart"></canvas>
                     </div>
+
                   </div>
-                </div>
-                <!-- / .row -->
+                </div> <!-- / .row -->
               </div>
             </div>
+
           </div>
-        </div>
-        <!-- / .row -->
+        </div> <!-- / .row -->
         <div class="row">
           <div class="col-12 col-xl-8">
+
             <!-- Sales -->
             <div class="card">
               <div class="card-header">
+
                 <!-- Title -->
                 <h4 class="card-header-title">
                   Sales
@@ -200,56 +234,40 @@
 
                 <!-- Nav -->
                 <ul class="nav nav-tabs nav-tabs-sm card-header-tabs">
-                  <li
-                    class="nav-item"
-                    data-toggle="chart"
-                    data-target="#salesChart"
-                    data-trigger="click"
-                    data-action="toggle"
-                    data-dataset="0"
-                  >
+                  <li class="nav-item" data-toggle="chart" data-target="#salesChart" data-trigger="click" data-action="toggle" data-dataset="0">
                     <a class="nav-link active" href="#" data-toggle="tab">
                       All
                     </a>
                   </li>
-                  <li
-                    class="nav-item"
-                    data-toggle="chart"
-                    data-target="#salesChart"
-                    data-trigger="click"
-                    data-action="toggle"
-                    data-dataset="1"
-                  >
+                  <li class="nav-item" data-toggle="chart" data-target="#salesChart" data-trigger="click" data-action="toggle" data-dataset="1">
                     <a class="nav-link" href="#" data-toggle="tab">
                       Direct
                     </a>
                   </li>
-                  <li
-                    class="nav-item"
-                    data-toggle="chart"
-                    data-target="#salesChart"
-                    data-trigger="click"
-                    data-action="toggle"
-                    data-dataset="2"
-                  >
+                  <li class="nav-item" data-toggle="chart" data-target="#salesChart" data-trigger="click" data-action="toggle" data-dataset="2">
                     <a class="nav-link" href="#" data-toggle="tab">
                       Organic
                     </a>
                   </li>
                 </ul>
+
               </div>
               <div class="card-body">
+
                 <!-- Chart -->
                 <div class="chart">
                   <canvas id="salesChart" class="chart-canvas"></canvas>
                 </div>
+
               </div>
             </div>
           </div>
           <div class="col-12 col-xl-4">
+
             <!-- Traffic -->
             <div class="card">
               <div class="card-header">
+
                 <!-- Title -->
                 <h4 class="card-header-title">
                   Traffic Channels
@@ -257,55 +275,41 @@
 
                 <!-- Tabs -->
                 <ul class="nav nav-tabs nav-tabs-sm card-header-tabs">
-                  <li
-                    class="nav-item"
-                    data-toggle="chart"
-                    data-target="#trafficChart"
-                    data-trigger="click"
-                    data-action="toggle"
-                    data-dataset="0"
-                  >
+                  <li class="nav-item" data-toggle="chart" data-target="#trafficChart" data-trigger="click" data-action="toggle" data-dataset="0">
                     <a href="#" class="nav-link active" data-toggle="tab">
                       All
                     </a>
                   </li>
-                  <li
-                    class="nav-item"
-                    data-toggle="chart"
-                    data-target="#trafficChart"
-                    data-trigger="click"
-                    data-action="toggle"
-                    data-dataset="1"
-                  >
+                  <li class="nav-item" data-toggle="chart" data-target="#trafficChart" data-trigger="click" data-action="toggle" data-dataset="1">
                     <a href="#" class="nav-link" data-toggle="tab">
                       Direct
                     </a>
                   </li>
                 </ul>
+
               </div>
               <div class="card-body">
+
                 <!-- Chart -->
                 <div class="chart chart-appended">
-                  <canvas
-                    id="trafficChart"
-                    class="chart-canvas"
-                    data-toggle="legend"
-                    data-target="#trafficChartLegend"
-                  ></canvas>
+                  <canvas id="trafficChart" class="chart-canvas" data-toggle="legend" data-target="#trafficChartLegend"></canvas>
                 </div>
 
                 <!-- Legend -->
                 <div id="trafficChartLegend" class="chart-legend"></div>
+
               </div>
             </div>
+
           </div>
-        </div>
-        <!-- / .row -->
+        </div> <!-- / .row -->
         <div class="row">
           <div class="col-12">
+
             <!-- Orders -->
             <div class="card">
               <div class="card-header">
+
                 <!-- Title -->
                 <h4 class="card-header-title">
                   Orders
@@ -318,35 +322,31 @@
 
                 <!-- Switch -->
                 <div class="custom-control custom-switch">
-                  <input
-                    type="checkbox"
-                    class="custom-control-input"
-                    id="cardToggle"
-                    data-toggle="chart"
-                    data-target="#ordersChart"
-                    data-trigger="change"
-                    data-action="add"
-                    data-dataset="1"
-                  />
+                  <input type="checkbox" class="custom-control-input" id="cardToggle" data-toggle="chart" data-target="#ordersChart" data-trigger="change" data-action="add" data-dataset="1" />
                   <label class="custom-control-label" for="cardToggle"></label>
                 </div>
+
               </div>
               <div class="card-body">
+
                 <!-- Chart -->
                 <div class="chart">
                   <canvas id="ordersChart" class="chart-canvas"></canvas>
                 </div>
+
               </div>
             </div>
+
           </div>
-        </div>
-        <!-- / .row -->
+        </div> <!-- / .row -->
         <div class="row">
           <div class="col-12 col-xl-4">
+
             <!-- Activity -->
             <div class="card-adjust-xl">
               <div class="card">
                 <div class="card-header">
+
                   <!-- Title -->
                   <h4 class="card-header-title">
                     Recent Activity
@@ -354,23 +354,24 @@
 
                   <!-- Button -->
                   <a class="small" href="#!">View all</a>
+
                 </div>
                 <div class="card-body">
+
                   <!-- List group -->
                   <div class="list-group list-group-flush list-group-activity my-n3">
                     <div class="list-group-item">
                       <div class="row">
                         <div class="col-auto">
+
                           <!-- Avatar -->
                           <div class="avatar avatar-sm">
-                            <img
-                              src="@@webRoot/assets/img/avatars/profiles/avatar-1.jpg"
-                              alt="..."
-                              class="avatar-img rounded-circle"
-                            />
+                            <img src="@@webRoot/assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle" />
                           </div>
+
                         </div>
                         <div class="col ml-n2">
+
                           <!-- Content -->
                           <div class="small">
                             <strong>Dianna Smiley</strong> shared your post with Ab Hadley, Adolfo
@@ -381,23 +382,22 @@
                           <small class="text-muted">
                             2m ago
                           </small>
+
                         </div>
-                      </div>
-                      <!-- / .row -->
+                      </div> <!-- / .row -->
                     </div>
                     <div class="list-group-item">
                       <div class="row">
                         <div class="col-auto">
+
                           <!-- Avatar -->
                           <div class="avatar avatar-sm">
-                            <img
-                              src="@@webRoot/assets/img/avatars/profiles/avatar-2.jpg"
-                              alt="..."
-                              class="avatar-img rounded-circle"
-                            />
+                            <img src="@@webRoot/assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle" />
                           </div>
+
                         </div>
                         <div class="col ml-n2">
+
                           <!-- Content -->
                           <div class="small">
                             <strong>Ab Hadley</strong> reacted to your post with a 😍
@@ -407,23 +407,22 @@
                           <small class="text-muted">
                             2m ago
                           </small>
+
                         </div>
-                      </div>
-                      <!-- / .row -->
+                      </div> <!-- / .row -->
                     </div>
                     <div class="list-group-item">
                       <div class="row">
                         <div class="col-auto">
+
                           <!-- Avatar -->
                           <div class="avatar avatar-sm">
-                            <img
-                              src="@@webRoot/assets/img/avatars/profiles/avatar-3.jpg"
-                              alt="..."
-                              class="avatar-img rounded-circle"
-                            />
+                            <img src="@@webRoot/assets/img/avatars/profiles/avatar-3.jpg" alt="..." class="avatar-img rounded-circle" />
                           </div>
+
                         </div>
                         <div class="col ml-n2">
+
                           <!-- Content -->
                           <div class="small">
                             <strong>Adolfo Hess</strong> commented
@@ -437,23 +436,22 @@
                           <small class="text-muted">
                             2m ago
                           </small>
+
                         </div>
-                      </div>
-                      <!-- / .row -->
+                      </div> <!-- / .row -->
                     </div>
                     <div class="list-group-item">
                       <div class="row">
                         <div class="col-auto">
+
                           <!-- Avatar -->
                           <div class="avatar avatar-sm">
-                            <img
-                              src="@@webRoot/assets/img/avatars/profiles/avatar-4.jpg"
-                              alt="..."
-                              class="avatar-img rounded-circle"
-                            />
+                            <img src="@@webRoot/assets/img/avatars/profiles/avatar-4.jpg" alt="..." class="avatar-img rounded-circle" />
                           </div>
+
                         </div>
                         <div class="col ml-n2">
+
                           <!-- Content -->
                           <div class="small">
                             <strong>Daniela Dewitt</strong> subscribed to you.
@@ -463,23 +461,22 @@
                           <small class="text-muted">
                             2m ago
                           </small>
+
                         </div>
-                      </div>
-                      <!-- / .row -->
+                      </div> <!-- / .row -->
                     </div>
                     <div class="list-group-item">
                       <div class="row">
                         <div class="col-auto">
+
                           <!-- Avatar -->
                           <div class="avatar avatar-sm">
-                            <img
-                              src="@@webRoot/assets/img/avatars/profiles/avatar-5.jpg"
-                              alt="..."
-                              class="avatar-img rounded-circle"
-                            />
+                            <img src="@@webRoot/assets/img/avatars/profiles/avatar-5.jpg" alt="..." class="avatar-img rounded-circle" />
                           </div>
+
                         </div>
                         <div class="col ml-n2">
+
                           <!-- Content -->
                           <div class="small">
                             <strong>Miyah Myles</strong> shared your post with Ryu Duke, Glen Rouse,
@@ -490,23 +487,22 @@
                           <small class="text-muted">
                             2m ago
                           </small>
+
                         </div>
-                      </div>
-                      <!-- / .row -->
+                      </div> <!-- / .row -->
                     </div>
                     <div class="list-group-item">
                       <div class="row">
                         <div class="col-auto">
+
                           <!-- Avatar -->
                           <div class="avatar avatar-sm">
-                            <img
-                              src="@@webRoot/assets/img/avatars/profiles/avatar-6.jpg"
-                              alt="..."
-                              class="avatar-img rounded-circle"
-                            />
+                            <img src="@@webRoot/assets/img/avatars/profiles/avatar-6.jpg" alt="..." class="avatar-img rounded-circle" />
                           </div>
+
                         </div>
                         <div class="col ml-n2">
+
                           <!-- Content -->
                           <div class="small">
                             <strong>Ryu Duke</strong> reacted to your post with a 😍
@@ -516,19 +512,23 @@
                           <small class="text-muted">
                             2m ago
                           </small>
+
                         </div>
-                      </div>
-                      <!-- / .row -->
+                      </div> <!-- / .row -->
                     </div>
                   </div>
+
                 </div>
               </div>
             </div>
+
           </div>
           <div class="col-12 col-xl-8">
+
             <!-- Products -->
             <div class="card">
               <div class="card-header">
+
                 <!-- Title -->
                 <h4 class="card-header-title">
                   Best Selling Products
@@ -538,12 +538,9 @@
                 <a href="#!" class="btn btn-sm btn-white">
                   Export
                 </a>
+
               </div>
-              <div
-                class="table-responsive mb-0"
-                data-toggle="lists"
-                data-options='{"valueNames": ["products-product", "products-stock", "products-price", "products-sales"]}'
-              >
+              <div class="table-responsive mb-0" data-toggle="lists" data-options='{"valueNames": ["products-product", "products-stock", "products-price", "products-sales"]}'>
                 <table class="table table-sm table-nowrap table-hover card-table">
                   <thead>
                     <tr>
@@ -573,27 +570,29 @@
                     <tr>
                       <td class="products-product">
                         <div class="d-flex align-items-center">
+
                           <!-- Image -->
                           <div class="avatar">
-                            <img
-                              class="avatar-img rounded mr-3"
-                              src="assets/img/avatars/products/product-1.jpg"
-                              alt="..."
-                            />
+                            <img class="avatar-img rounded mr-3" src="assets/img/avatars/products/product-1.jpg" alt="..." />
                           </div>
 
                           <div class="ml-3">
+
                             <!-- Heading -->
                             <h4 class="font-weight-normal mb-1">Sketchpad</h4>
 
                             <!-- Text -->
                             <small class="text-muted">3" x 5" Size</small>
+
                           </div>
+
                         </div>
                       </td>
                       <td class="products-stock">
+
                         <!-- Badge -->
                         <span class="badge badge-soft-success">Available</span>
+
                       </td>
                       <td class="products-price">
                         $14.99
@@ -602,16 +601,10 @@
                         $3,145.23
                       </td>
                       <td class="text-right">
+
                         <!-- Dropdown -->
                         <div class="dropdown">
-                          <a
-                            href="#"
-                            class="dropdown-ellipses dropdown-toggle"
-                            role="button"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                          >
+                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fe fe-more-vertical"></i>
                           </a>
                           <div class="dropdown-menu dropdown-menu-right">
@@ -626,32 +619,35 @@
                             </a>
                           </div>
                         </div>
+
                       </td>
                     </tr>
                     <tr>
                       <td class="products-product">
                         <div class="d-flex align-items-center">
+
                           <!-- Image -->
                           <div class="avatar">
-                            <img
-                              class="avatar-img rounded mr-3"
-                              src="assets/img/avatars/products/product-2.jpg"
-                              alt="..."
-                            />
+                            <img class="avatar-img rounded mr-3" src="assets/img/avatars/products/product-2.jpg" alt="..." />
                           </div>
 
                           <div class="ml-3">
+
                             <!-- Heading -->
                             <h4 class="font-weight-normal mb-1">Turtleshell Shades</h4>
 
                             <!-- Text -->
                             <small class="text-muted">UV + Blue Light</small>
+
                           </div>
+
                         </div>
                       </td>
                       <td class="products-stock">
+
                         <!-- Badge -->
                         <span class="badge badge-soft-warning">Unavailable</span>
+
                       </td>
                       <td class="products-price">
                         $39.99
@@ -660,16 +656,10 @@
                         $2,611.82
                       </td>
                       <td class="text-right">
+
                         <!-- Dropdown -->
                         <div class="dropdown">
-                          <a
-                            href="#"
-                            class="dropdown-ellipses dropdown-toggle"
-                            role="button"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                          >
+                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fe fe-more-vertical"></i>
                           </a>
                           <div class="dropdown-menu dropdown-menu-right">
@@ -684,32 +674,35 @@
                             </a>
                           </div>
                         </div>
+
                       </td>
                     </tr>
                     <tr>
                       <td class="products-product">
                         <div class="d-flex align-items-center">
+
                           <!-- Image -->
                           <div class="avatar">
-                            <img
-                              class="avatar-img rounded mr-3"
-                              src="assets/img/avatars/products/product-3.jpg"
-                              alt="..."
-                            />
+                            <img class="avatar-img rounded mr-3" src="assets/img/avatars/products/product-3.jpg" alt="..." />
                           </div>
 
                           <div class="ml-3">
+
                             <!-- Heading -->
                             <h4 class="font-weight-normal mb-1">Nike "Go Bag"</h4>
 
                             <!-- Text -->
                             <small class="text-muted">Leather + Gortex</small>
+
                           </div>
+
                         </div>
                       </td>
                       <td class="products-stock">
+
                         <!-- Badge -->
                         <span class="badge badge-soft-success">Available</span>
+
                       </td>
                       <td class="products-price">
                         $149.99
@@ -718,16 +711,10 @@
                         $2,372.19
                       </td>
                       <td class="text-right">
+
                         <!-- Dropdown -->
                         <div class="dropdown">
-                          <a
-                            href="#"
-                            class="dropdown-ellipses dropdown-toggle"
-                            role="button"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                          >
+                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fe fe-more-vertical"></i>
                           </a>
                           <div class="dropdown-menu dropdown-menu-right">
@@ -742,32 +729,35 @@
                             </a>
                           </div>
                         </div>
+
                       </td>
                     </tr>
                     <tr>
                       <td class="products-product">
                         <div class="d-flex align-items-center">
+
                           <!-- Image -->
                           <div class="avatar">
-                            <img
-                              class="avatar-img rounded mr-3"
-                              src="assets/img/avatars/products/product-4.jpg"
-                              alt="..."
-                            />
+                            <img class="avatar-img rounded mr-3" src="assets/img/avatars/products/product-4.jpg" alt="..." />
                           </div>
 
                           <div class="ml-3">
+
                             <!-- Heading -->
                             <h4 class="font-weight-normal mb-1">Swell Bottle</h4>
 
                             <!-- Text -->
                             <small class="text-muted">Bone Clay White</small>
+
                           </div>
+
                         </div>
                       </td>
                       <td class="products-stock">
+
                         <!-- Badge -->
                         <span class="badge badge-soft-success">Available</span>
+
                       </td>
                       <td class="products-price">
                         $24.99
@@ -776,16 +766,10 @@
                         $1,145.23
                       </td>
                       <td class="text-right">
+
                         <!-- Dropdown -->
                         <div class="dropdown">
-                          <a
-                            href="#"
-                            class="dropdown-ellipses dropdown-toggle"
-                            role="button"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                          >
+                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fe fe-more-vertical"></i>
                           </a>
                           <div class="dropdown-menu dropdown-menu-right">
@@ -800,21 +784,23 @@
                             </a>
                           </div>
                         </div>
+
                       </td>
                     </tr>
                   </tbody>
                 </table>
               </div>
             </div>
+
           </div>
-        </div>
-        <!-- / .row -->
+        </div> <!-- / .row -->
       </div>
-    </div>
-    <!-- / .main-content -->
+
+    </div> <!-- / .main-content -->
 
     <!-- JAVASCRIPT
     ================================================== -->
     @@include("partials/scripts.html")
+
   </body>
 </html>

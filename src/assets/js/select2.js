@@ -20,7 +20,6 @@
   function init(el) {
     var elementOptions = el.dataset.options ? JSON.parse(el.dataset.options) : {};
 
-    // Default options
     var defaultOptions = {
       containerCssClass: el.getAttribute('class'),
       dropdownCssClass: 'dropdown-menu show',
@@ -28,10 +27,9 @@
       templateResult: formatTemplate
     };
 
-    // Combine options
     var options = Object.assign(defaultOptions, elementOptions);
 
-    // Init Select2
+    // Init
     $(el).select2(options);
   }
 

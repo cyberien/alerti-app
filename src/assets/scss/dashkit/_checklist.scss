@@ -8,6 +8,8 @@
 }
 
 .checklist-control {
+  display: flex;
+  flex-wrap: nowrap;
   outline: none;
   user-select: none;
 }
