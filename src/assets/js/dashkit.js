@@ -223,13 +223,13 @@
         }
       },
       data: {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         datasets: [{
           label: 'Sales',
-          data: [25, 20, 30, 22, 17, 10, 18, 26, 28, 26, 20, 32, 25, 20, 30, 22, 17, 10]
+          data: [25, 20, 30, 22, 17, 10, 18, 26, 28, 26, 20, 32]
         }, {
           label: 'Affiliate',
-          data: [15, 10, 20, 12, 7, 0, 8, 16, 18, 16, 10, 22, 15, 10, 20, 12, 7, 0],
+          data: [15, 10, 20, 12, 7, 0, 8, 16, 18, 16, 10, 22],
           backgroundColor: '#d2ddec',
           hidden: true
         }]
