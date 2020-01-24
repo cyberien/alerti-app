@@ -47,7 +47,7 @@
       data: {
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         datasets: [{
-          label: 'Users',
+          label: 'Customers',
           data: [0, 10, 5, 15, 10, 20, 15, 25, 20, 30, 25, 40],
           yAxisID: 'yAxisOne'
         }, {
@@ -56,7 +56,7 @@
           yAxisID: 'yAxisOne',
           hidden: true
         }, {
-          label: 'Bounce',
+          label: 'Conversion',
           data: [40, 57, 25, 50, 57, 32, 46, 28, 59, 34, 52, 48],
           yAxisID: 'yAxisTwo',
           hidden: true
