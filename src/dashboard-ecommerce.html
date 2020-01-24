@@ -43,7 +43,7 @@
       @@if (navPosition == 'combo' || demoMode) { @@include("partials/topbar.html") }
 
       <!-- HEADER -->
-      <div class="header">
+      <div class="header bg-dark pb-5">
         <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
 
           <!-- Body -->
@@ -52,32 +52,146 @@
               <div class="col">
 
                 <!-- Pretitle -->
-                <h6 class="header-pretitle">
-                  Dashboard
+                <h6 class="header-pretitle text-secondary">
+                  Annual
                 </h6>
 
                 <!-- Title -->
-                <h1 class="header-title">
-                  E-Commerce
+                <h1 class="header-title text-white">
+                  Audience
                 </h1>
 
               </div>
               <div class="col-auto">
 
-                <!-- Button -->
-                <a href="#!" class="btn btn-primary lift">
-                  Create Report
-                </a>
+                <!-- Nav -->
+                <ul class="nav nav-tabs header-tabs">
+                  <li class="nav-item" data-toggle="chart" data-target="#audienceChart" data-trigger="click" data-action="toggle" data-dataset="0">
+                    <a href="#" class="nav-link text-center active" data-toggle="tab">
+                      <h6 class="header-pretitle text-secondary">
+                        Users
+                      </h6>
+                      <h3 class="text-white mb-0">
+                        73.2k
+                      </h3>
+                    </a>
+                  </li>
+                  <li class="nav-item" data-toggle="chart" data-target="#audienceChart" data-trigger="click" data-action="toggle" data-dataset="1">
+                    <a href="#" class="nav-link text-center" data-toggle="tab">
+                      <h6 class="header-pretitle text-secondary">
+                        Sessions
+                      </h6>
+                      <h3 class="text-white mb-0">
+                        92.1k
+                      </h3>
+                    </a>
+                  </li>
+                  <li class="nav-item" data-toggle="chart" data-target="#audienceChart" data-trigger="click" data-action="toggle" data-dataset="2">
+                    <a href="#" class="nav-link text-center" data-toggle="tab">
+                      <h6 class="header-pretitle text-secondary">
+                        Bounce
+                      </h6>
+                      <h3 class="text-white mb-0">
+                        50.2%
+                      </h3>
+                    </a>
+                  </li>
+                </ul>
 
               </div>
-            </div> <!-- / .row -->
+            </div><!-- / .row -->
           </div> <!-- / .header-body -->
+
+          <!-- Footer -->
+          <div class="header-footer">
+
+            <!-- Chart -->
+            <div class="chart">
+              <canvas id="audienceChart" class="chart-canvas"></canvas>
+            </div>
+
+          </div>
 
         </div>
       </div> <!-- / .header -->
 
       <!-- CARDS -->
-      <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
+      <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container} mt-n6">
+        <div class="row">
+          <div class="col-12 col-xl-8">
+
+            <!-- Orders -->
+            <div class="card">
+              <div class="card-header">
+
+                <!-- Title -->
+                <h4 class="card-header-title">
+                  Orders
+                </h4>
+
+                <!-- Caption -->
+                <span class="text-muted mr-3">
+                  Show affiliate:
+                </span>
+
+                <!-- Switch -->
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="cardToggle" data-toggle="chart" data-target="#ordersChart" data-trigger="change" data-action="add" data-dataset="1" />
+                  <label class="custom-control-label" for="cardToggle"></label>
+                </div>
+
+              </div>
+              <div class="card-body">
+
+                <!-- Chart -->
+                <div class="chart">
+                  <canvas id="ordersChart" class="chart-canvas"></canvas>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-xl-4">
+
+            <!-- Traffic -->
+            <div class="card">
+              <div class="card-header">
+
+                <!-- Title -->
+                <h4 class="card-header-title">
+                  Traffic Channels
+                </h4>
+
+                <!-- Tabs -->
+                <ul class="nav nav-tabs nav-tabs-sm card-header-tabs">
+                  <li class="nav-item" data-toggle="chart" data-target="#trafficChart" data-trigger="click" data-action="toggle" data-dataset="0">
+                    <a href="#" class="nav-link active" data-toggle="tab">
+                      All
+                    </a>
+                  </li>
+                  <li class="nav-item" data-toggle="chart" data-target="#trafficChart" data-trigger="click" data-action="toggle" data-dataset="1">
+                    <a href="#" class="nav-link" data-toggle="tab">
+                      Direct
+                    </a>
+                  </li>
+                </ul>
+
+              </div>
+              <div class="card-body">
+
+                <!-- Chart -->
+                <div class="chart chart-appended">
+                  <canvas id="trafficChart" class="chart-canvas" data-toggle="legend" data-target="#trafficChartLegend"></canvas>
+                </div>
+
+                <!-- Legend -->
+                <div id="trafficChartLegend" class="chart-legend"></div>
+
+              </div>
+            </div>
+
+          </div>
+        </div> <!-- / .row -->
         <div class="row">
           <div class="col-12 col-lg-6 col-xl">
 
@@ -197,7 +311,7 @@
 
                     <!-- Title -->
                     <h6 class="text-uppercase text-muted mb-2">
-                      Avg. Order VaLue
+                      Avg. Value
                     </h6>
 
                     <!-- Heading -->
@@ -215,125 +329,6 @@
 
                   </div>
                 </div> <!-- / .row -->
-              </div>
-            </div>
-
-          </div>
-        </div> <!-- / .row -->
-        <div class="row">
-          <div class="col-12 col-xl-8">
-
-            <!-- Sales -->
-            <div class="card">
-              <div class="card-header">
-
-                <!-- Title -->
-                <h4 class="card-header-title">
-                  Sales
-                </h4>
-
-                <!-- Nav -->
-                <ul class="nav nav-tabs nav-tabs-sm card-header-tabs">
-                  <li class="nav-item" data-toggle="chart" data-target="#salesChart" data-trigger="click" data-action="toggle" data-dataset="0">
-                    <a class="nav-link active" href="#" data-toggle="tab">
-                      All
-                    </a>
-                  </li>
-                  <li class="nav-item" data-toggle="chart" data-target="#salesChart" data-trigger="click" data-action="toggle" data-dataset="1">
-                    <a class="nav-link" href="#" data-toggle="tab">
-                      Direct
-                    </a>
-                  </li>
-                  <li class="nav-item" data-toggle="chart" data-target="#salesChart" data-trigger="click" data-action="toggle" data-dataset="2">
-                    <a class="nav-link" href="#" data-toggle="tab">
-                      Organic
-                    </a>
-                  </li>
-                </ul>
-
-              </div>
-              <div class="card-body">
-
-                <!-- Chart -->
-                <div class="chart">
-                  <canvas id="salesChart" class="chart-canvas"></canvas>
-                </div>
-
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-xl-4">
-
-            <!-- Traffic -->
-            <div class="card">
-              <div class="card-header">
-
-                <!-- Title -->
-                <h4 class="card-header-title">
-                  Traffic Channels
-                </h4>
-
-                <!-- Tabs -->
-                <ul class="nav nav-tabs nav-tabs-sm card-header-tabs">
-                  <li class="nav-item" data-toggle="chart" data-target="#trafficChart" data-trigger="click" data-action="toggle" data-dataset="0">
-                    <a href="#" class="nav-link active" data-toggle="tab">
-                      All
-                    </a>
-                  </li>
-                  <li class="nav-item" data-toggle="chart" data-target="#trafficChart" data-trigger="click" data-action="toggle" data-dataset="1">
-                    <a href="#" class="nav-link" data-toggle="tab">
-                      Direct
-                    </a>
-                  </li>
-                </ul>
-
-              </div>
-              <div class="card-body">
-
-                <!-- Chart -->
-                <div class="chart chart-appended">
-                  <canvas id="trafficChart" class="chart-canvas" data-toggle="legend" data-target="#trafficChartLegend"></canvas>
-                </div>
-
-                <!-- Legend -->
-                <div id="trafficChartLegend" class="chart-legend"></div>
-
-              </div>
-            </div>
-
-          </div>
-        </div> <!-- / .row -->
-        <div class="row">
-          <div class="col-12">
-
-            <!-- Orders -->
-            <div class="card">
-              <div class="card-header">
-
-                <!-- Title -->
-                <h4 class="card-header-title">
-                  Orders
-                </h4>
-
-                <!-- Caption -->
-                <span class="text-muted mr-3">
-                  Show affiliate:
-                </span>
-
-                <!-- Switch -->
-                <div class="custom-control custom-switch">
-                  <input type="checkbox" class="custom-control-input" id="cardToggle" data-toggle="chart" data-target="#ordersChart" data-trigger="change" data-action="add" data-dataset="1" />
-                  <label class="custom-control-label" for="cardToggle"></label>
-                </div>
-
-              </div>
-              <div class="card-body">
-
-                <!-- Chart -->
-                <div class="chart">
-                  <canvas id="ordersChart" class="chart-canvas"></canvas>
-                </div>
-
               </div>
             </div>
 

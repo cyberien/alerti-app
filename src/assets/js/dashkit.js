@@ -165,41 +165,6 @@
   }
 })();
 
-// Followers chart
-
-(function() {
-  var chart = document.getElementById('followersChart');
-
-  if (typeof Chart !== 'undefined' && chart) {
-    new Chart(chart, {
-      type: 'line',
-      options: {
-        scales: {
-          yAxes: [{
-            ticks: {
-              callback: function(value) {
-                return value + 'k';
-              }
-            }
-          }]
-        }
-      },
-      data: {
-        labels: ['Oct 1', 'Oct 2', 'Oct 3', 'Oct 4', 'Oct 5', 'Oct 6', 'Oct 7', 'Oct 8', 'Oct 9', 'Oct 10', 'Oct 11', 'Oct 12'],
-        datasets: [{
-          label: 'Facebook',
-          data: [15, 10, 12, 25, 30, 15, 40, 50, 80, 60, 55, 65],
-          borderColor: '#4267B2'
-        }, {
-          label: 'Twitter',
-          data: [40, 57, 25, 50, 57, 32, 46, 28, 59, 34, 52, 48],
-          borderColor: '#1DA1F2'
-        }]
-      }
-    });
-  }
-})();
-
 // Sales chart
 
 (function() {
