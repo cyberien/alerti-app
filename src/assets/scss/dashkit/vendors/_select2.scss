@@ -34,6 +34,10 @@
   padding: $dropdown-item-padding-y $input-padding-x;
 }
 
+.select2-search--dropdown.select2-search--hide {
+  display: none;
+}
+
 .select2-search--dropdown .select2-search__field {
   width: 100%;
   height: $input-height-sm;
