@@ -4236,11 +4236,11 @@ input[type="button"].btn-block {
 
 .list-group-item-action {
   width: 100%;
-  color: #6E84A3;
+  color: #12263F;
   text-align: inherit; }
   .list-group-item-action:hover, .list-group-item-action:focus {
     z-index: 1;
-    color: #6E84A3;
+    color: #12263F;
     text-decoration: none;
     background-color: #F9FBFD; }
   .list-group-item-action:active {
@@ -11845,6 +11845,10 @@ a:focus, button:focus {
     box-shadow: transparent;
     outline: none; }
 
+.select2-container--default .select2-results > .select2-results__options {
+  max-height: 200px;
+  overflow: auto; }
+
 .select2-results__options {
   padding-left: 0;
   margin-bottom: 0; }
@@ -11893,7 +11897,7 @@ a:focus, button:focus {
     color: #12263F; }
 
 .select2-search--inline .select2-search__field {
-  height: calc(1em * $input-line-height);
+  height: calc(1em * 1.5);
   padding-bottom: .25rem;
   background-color: transparent;
   border: 0;

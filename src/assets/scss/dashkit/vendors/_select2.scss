@@ -57,6 +57,11 @@
   }
 }
 
+.select2-container--default .select2-results > .select2-results__options {
+  max-height: 200px;
+  overflow: auto;
+}
+
 .select2-results__options {
   padding-left: 0;
   margin-bottom: 0;
@@ -114,7 +119,7 @@
 }
 
 .select2-search--inline .select2-search__field {
-  height: calc(1em * $input-line-height);
+  height: calc(1em * #{$input-line-height});
   padding-bottom: .25rem;
   background-color: transparent;
   border: 0;

@@ -1,6 +1,5 @@
 //
 // dashkit.js
-// Theme module
 //
 
 'use strict';
