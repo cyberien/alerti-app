@@ -163,6 +163,28 @@
                 </a>
               </div>
             </li>
+            <li class="dropright">
+              <a class="dropdown-item dropdown-toggle @@if(subcategory=='account'){active}" href="#" id="sidebarSmallAccount" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Account
+              </a>
+              <div class="dropdown-menu" aria-labelledby="sidebarSmallAccount">
+                <a class="dropdown-item @@if(page=='account-general.html'){active}" href="@@webRoot/account-general.html">
+                  General
+                </a>
+                <a class="dropdown-item @@if(page=='account-billing.html'){active}" href="@@webRoot/account-billing.html">
+                  Billing
+                </a>
+                <a class="dropdown-item @@if(page=='account-members.html'){active}" href="@@webRoot/account-members.html">
+                  Members
+                </a>
+                <a class="dropdown-item @@if(page=='account-security.html'){active}" href="@@webRoot/account-security.html">
+                  Security
+                </a>
+                <a class="dropdown-item @@if(page=='account-notifications.html'){active}" href="@@webRoot/account-notifications.html">
+                  Notifications
+                </a>
+              </div>
+            </li>
             <li>
               <a class="dropdown-item @@if(page=='wizard.html'){active}" href="@@webRoot/wizard.html">
                 Wizard

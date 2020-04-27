@@ -17,25 +17,26 @@
     @@if (sidebarSize == 'base' || demoMode) {
     @@include("partials/sidebar.html", {
     "category": "pages",
-    "subcategory": "",
-    "page": "settings.html"
+    "subcategory": "account",
+    "page": "account-notifications.html"
     })
     }
     @@if (sidebarSize == 'small' || demoMode) {
     @@include("partials/sidebar-sm.html", {
     "category": "pages",
-    "subcategory": "",
-    "page": "settings.html"
+    "subcategory": "account",
+    "page": "account-notifications.html"
     })
     }
     }
     @@if (navPosition == 'topnav' || demoMode) {
     @@include("partials/topnav.html", {
     "category": "pages",
-    "subcategory": "",
-    "page": "settings.html"
+    "subcategory": "account",
+    "page": "account-notifications.html"
     })
     }
+
 
     <!-- MAIN CONTENT
     ================================================== -->
@@ -62,7 +63,7 @@
 
                     <!-- Title -->
                     <h1 class="header-title">
-                      Settings
+                      Account
                     </h1>
 
                   </div>
@@ -78,11 +79,6 @@
                         </a>
                       </li>
                       <li class="nav-item">
-                        <a href="account-security.html" class="nav-link">
-                          Security
-                        </a>
-                      </li>
-                      <li class="nav-item">
                         <a href="account-billing.html" class="nav-link">
                           Billing
                         </a>
@@ -90,6 +86,11 @@
                       <li class="nav-item">
                         <a href="account-members.html" class="nav-link">
                           Members
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="account-security.html" class="nav-link">
+                          Security
                         </a>
                       </li>
                       <li class="nav-item">
@@ -374,6 +375,8 @@
 
               </div>
             </div>
+
+            <br>
 
           </div>
         </div> <!-- / .row -->

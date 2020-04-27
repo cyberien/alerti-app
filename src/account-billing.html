@@ -17,23 +17,23 @@
     @@if (sidebarSize == 'base' || demoMode) {
     @@include("partials/sidebar.html", {
     "category": "pages",
-    "subcategory": "",
-    "page": "settings.html"
+    "subcategory": "account",
+    "page": "account-billing.html"
     })
     }
     @@if (sidebarSize == 'small' || demoMode) {
     @@include("partials/sidebar-sm.html", {
     "category": "pages",
-    "subcategory": "",
-    "page": "settings.html"
+    "subcategory": "account",
+    "page": "account-billing.html"
     })
     }
     }
     @@if (navPosition == 'topnav' || demoMode) {
     @@include("partials/topnav.html", {
     "category": "pages",
-    "subcategory": "",
-    "page": "settings.html"
+    "subcategory": "account",
+    "page": "account-billing.html"
     })
     }
 
@@ -62,7 +62,7 @@
 
                     <!-- Title -->
                     <h1 class="header-title">
-                      Settings
+                      Account
                     </h1>
 
                   </div>
@@ -78,11 +78,6 @@
                         </a>
                       </li>
                       <li class="nav-item">
-                        <a href="account-security.html" class="nav-link">
-                          Security
-                        </a>
-                      </li>
-                      <li class="nav-item">
                         <a href="account-billing.html" class="nav-link active">
                           Billing
                         </a>
@@ -90,6 +85,11 @@
                       <li class="nav-item">
                         <a href="account-members.html" class="nav-link">
                           Members
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="account-security.html" class="nav-link">
+                          Security
                         </a>
                       </li>
                       <li class="nav-item">
@@ -132,7 +132,7 @@
                       <div class="col-auto">
 
                         <!-- Icon -->
-                        <a class="btn btn-sm btn-primary" href="#!">Upgrade</a>
+                        <a class="btn btn-sm btn-primary" href="pricing.html">Upgrade</a>
 
                       </div>
                     </div> <!-- / .row -->
@@ -340,7 +340,7 @@
                     </tr>
                     <tr>
                       <td>
-                        <a href="#!">Invoice #10395</a>
+                        <a href="#!">Invoice #10244</a>
                       </td>
                       <td>
                         <time datetime="2020-03-24">Mar. 24, 2020</time>
@@ -354,7 +354,7 @@
                     </tr>
                     <tr>
                       <td>
-                        <a href="#!">Invoice #10395</a>
+                        <a href="#!">Invoice #10119</a>
                       </td>
                       <td>
                         <time datetime="2020-02-24">Feb. 24, 2020</time>
@@ -368,7 +368,7 @@
                     </tr>
                     <tr>
                       <td>
-                        <a href="#!">Invoice #10395</a>
+                        <a href="#!">Invoice #10062</a>
                       </td>
                       <td>
                         <time datetime="2020-01-24">Jan. 24, 2020</time>
@@ -389,6 +389,8 @@
             <p class="text-center">
               <small class="text-muted">Don’t need Dashkit anymore? <a href="#!">Cancel your account</a></small>
             </p>
+
+            <br>
 
           </div>
         </div> <!-- / .row -->

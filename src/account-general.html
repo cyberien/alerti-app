@@ -17,23 +17,23 @@
     @@if (sidebarSize == 'base' || demoMode) {
     @@include("partials/sidebar.html", {
     "category": "pages",
-    "subcategory": "",
-    "page": "settings.html"
+    "subcategory": "account",
+    "page": "account-general.html"
     })
     }
     @@if (sidebarSize == 'small' || demoMode) {
     @@include("partials/sidebar-sm.html", {
     "category": "pages",
-    "subcategory": "",
-    "page": "settings.html"
+    "subcategory": "account",
+    "page": "account-general.html"
     })
     }
     }
     @@if (navPosition == 'topnav' || demoMode) {
     @@include("partials/topnav.html", {
     "category": "pages",
-    "subcategory": "",
-    "page": "settings.html"
+    "subcategory": "account",
+    "page": "account-general.html"
     })
     }
 
@@ -62,7 +62,7 @@
 
                     <!-- Title -->
                     <h1 class="header-title">
-                      Settings
+                      Account
                     </h1>
 
                   </div>
@@ -78,11 +78,6 @@
                         </a>
                       </li>
                       <li class="nav-item">
-                        <a href="account-security.html" class="nav-link">
-                          Security
-                        </a>
-                      </li>
-                      <li class="nav-item">
                         <a href="account-billing.html" class="nav-link">
                           Billing
                         </a>
@@ -90,6 +85,11 @@
                       <li class="nav-item">
                         <a href="account-members.html" class="nav-link">
                           Members
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="account-security.html" class="nav-link">
+                          Security
                         </a>
                       </li>
                       <li class="nav-item">
@@ -105,7 +105,7 @@
             </div>
 
             <!-- Form -->
-            <form class="mb-4">
+            <form>
 
               <div class="row justify-content-between align-items-center">
                 <div class="col">
@@ -331,7 +331,7 @@
                   </h4>
 
                   <!-- Text -->
-                  <p class="small text-muted">
+                  <p class="small text-muted mb-md-0">
                     Please note, deleting your account is a permanent action and will no be recoverable once completed.
                   </p>
 
@@ -347,6 +347,8 @@
               </div> <!-- / .row -->
 
             </form>
+
+            <br><br>
 
           </div>
         </div> <!-- / .row -->
