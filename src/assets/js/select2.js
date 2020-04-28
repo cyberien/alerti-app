@@ -22,6 +22,7 @@
 
     var defaultOptions = {
       containerCssClass: el.getAttribute('class'),
+      dropdownAutoWidth: true,
       dropdownCssClass: 'dropdown-menu show',
       dropdownParent: el.closest('.modal') ? el.closest('.modal') : document.body,
       templateResult: formatTemplate
