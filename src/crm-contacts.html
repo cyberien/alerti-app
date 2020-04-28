@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include("partials/head.html", {
+    "title": "Dashkit"
+    })
+  </head>
+  <body>
+
+    <!-- MODALS
+    ================================================== -->
+    @@include("partials/modals.html")
+
+    <!-- NAVIGATION
+    ================================================== -->
+    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
+    @@if (sidebarSize == 'base' || demoMode) {
+    @@include("partials/sidebar.html", {
+    "category": "dashboards",
+    "subcategory": "crm",
+    "page": "crm-dummy.html"
+    })
+    }
+    @@if (sidebarSize == 'small' || demoMode) {
+    @@include("partials/sidebar-sm.html", {
+    "category": "dashboards",
+    "subcategory": "crm",
+    "page": "crm-dummy.html"
+    })
+    }
+    }
+    @@if (navPosition == 'topnav' || demoMode) {
+    @@include("partials/topnav.html", {
+    "category": "dashboards",
+    "subcategory": "crm",
+    "page": "crm-dummy.html"
+    })
+    }
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content">
+
+      @@if (navPosition == 'combo' || demoMode) {
+      @@include("partials/topbar.html")
+      }
+
+      <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
+        <div class="row justify-content-center">
+          <div class="col-12">
+
+            <!-- Header -->
+            <div class="header mt-md-5">
+              <div class="header-body">
+                <div class="row align-items-center">
+                  <div class="col">
+
+                    <!-- Pretitle -->
+                    <h6 class="header-pretitle">
+                      Overview
+                    </h6>
+
+                    <!-- Title -->
+                    <h1 class="header-title text-truncate">
+                      Contacts
+                    </h1>
+
+                  </div>
+                  <div class="col-auto">
+
+                    <!-- Navigation (button group) -->
+                    <div class="nav btn-group d-inline-flex" role="tablist">
+                      <button class="btn btn-white active" id="kanbanColumnsToggle" data-toggle="tab" data-target="#kanbanColumns" role="tab" aria-controls="kabbanColumns" aria-selected="true">
+                        <span class="fe fe-grid"></span>
+                      </button>
+                      <button class="btn btn-white" id="kanbanListToggle" data-toggle="tab" data-target="#kanbanList" role="tab" aria-controls="kanbanList" aria-selected="false">
+                        <span class="fe fe-list"></span>
+                      </button>
+                    </div> <!-- / .nav -->
+
+                    <!-- Buttons -->
+                    <a href="#!" class="btn btn-primary ml-2">
+                      Add contact
+                    </a>
+
+                  </div>
+                </div> <!-- / .row -->
+                <div class="row align-items-center">
+                  <div class="col">
+
+                    <!-- Nav -->
+                    <ul class="nav nav-tabs nav-overflow header-tabs">
+                      <li class="nav-item">
+                        <a href="#!" class="nav-link text-nowrap active">
+                          All contacts <span class="badge badge-pill badge-soft-secondary">823</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#!" class="nav-link text-nowrap">
+                          Your contacts <span class="badge badge-pill badge-soft-secondary">231</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#!" class="nav-link text-nowrap">
+                          Deleted <span class="badge badge-pill badge-soft-secondary">22</span>
+                        </a>
+                      </li>
+                    </ul>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="card">
+              <div class="card-header">
+                <div class="row align-items-center">
+                  <div class="col">
+
+                    <!-- Form -->
+                    <form>
+                      <div class="input-group input-group-flush">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <i class="fe fe-search"></i>
+                          </span>
+                        </div>
+                        <input class="form-control search" type="search" placeholder="Search">
+                      </div>
+                    </form>
+
+                  </div>
+                  <div class="col-auto mr-n3">
+
+                    <!-- Select -->
+                    <select class="custom-select custom-select-sm form-control-flush" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
+                      <option>5 per page</option>
+                      <option>10 per page</option>
+                      <option>25 per page</option>
+                      <option>50 per page</option>
+                    </select>
+
+                  </div>
+                  <div class="col-auto">
+
+                    <!-- Dropdown -->
+                    <div class="dropdown">
+                      <button class="btn btn-sm btn-white" id="tableFilterButton" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fe fe-sliders mr-1"></i> Filter
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-right dropdown-menu-card">
+                        <form>
+                          <div class="card-header">
+
+                            <!-- Title -->
+                            <h4 class="card-header-title">
+                              Filters
+                            </h4>
+
+                            <!-- Link -->
+                            <a class="text-reset" href="#">
+                              <small>Clear filters</small>
+                            </a>
+
+                          </div>
+                          <div class="card-header">
+                            <div class="row">
+                              <div class="col">
+
+                                <!-- Text -->
+                                <small>Owner</small>
+
+                              </div>
+                              <div class="col-auto">
+
+                                <!-- Select -->
+                                <select class="custom-select custom-select-sm" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
+                                  <option>Dave Gamache</option>
+                                </select>
+
+                              </div>
+                            </div> <!-- / .row -->
+                          </div>
+                          <div class="card-header">
+                            <div class="row">
+                              <div class="col">
+
+                                <!-- Text -->
+                                <small>Industry</small>
+
+                              </div>
+                              <div class="col-auto">
+
+                                <!-- Select -->
+                                <select class="custom-select custom-select-sm" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
+                                  <option>Any</option>
+                                </select>
+
+                              </div>
+                            </div> <!-- / .row -->
+                          </div>
+                          <div class="card-footer">
+
+                            <!-- Button -->
+                            <button class="btn btn-block btn-primary">
+                              Create new filter
+                            </button>
+
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+
+
+                  </div>
+                </div> <!-- / .row -->
+              </div>
+              <div class="table-responsive">
+                <table class="table table-sm table-hover table-nowrap card-table">
+                  <thead>
+                    <tr>
+                      <th>
+
+                        <!-- Checkbox -->
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="tableCheckboxAll">
+                          <label class="custom-control-label" for="tableCheckboxAll"></label>
+                        </div>
+
+                      </th>
+                      <th>Name</th>
+                      <th>Job title</th>
+                      <th>Email</th>
+                      <th>Phone</th>
+                      <th colspan="2">Company</th>
+                    </tr>
+                  </thead>
+                  <tbody class="font-size-base">
+                    <tr>
+                      <td>
+
+                        <!-- Checkbox -->
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="tableCheckboxOne">
+                          <label class="custom-control-label" for="tableCheckboxOne"></label>
+                        </div>
+
+                      </td>
+                      <td>
+
+                        <!-- Avatar -->
+                        <div class="avatar avatar-xs align-middle mr-2">
+                          <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-1.jpg" alt="...">
+                        </div> <a class="text-reset" href="profile-posts.html">David Gamache</a>
+
+                      </td>
+                      <td>
+                        Designer
+                      </td>
+                      <td>
+
+                        <!-- Email -->
+                        <a class="text-reset" href="mailto:dhgamache@gmail.com">dhgamache@gmail.com</a>
+
+                      </td>
+                      <td>
+
+                        <!-- Phone -->
+                        <a class="text-reset" href="tel:1-650-430-1780">(650) 430-1780</a>
+
+                      </td>
+                      <td>
+
+                        <!-- Link -->
+                        <a class="text-reset" href="team-overview.html">Oki Doki Collective</a>
+
+                      </td>
+                      <td class="text-right">
+
+                        <!-- Dropdown -->
+                        <div class="dropdown">
+                          <a class="dropdown-ellipses dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#!" class="dropdown-item">
+                              Action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Another action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Something else here
+                            </a>
+                          </div>
+                        </div>
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+
+                        <!-- Checkbox -->
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="tableCheckboxTwo">
+                          <label class="custom-control-label" for="tableCheckboxTwo"></label>
+                        </div>
+
+                      </td>
+                      <td>
+
+                        <!-- Avatar -->
+                        <div class="avatar avatar-xs align-middle mr-2">
+                          <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-1.jpg" alt="...">
+                        </div> <a class="text-reset" href="profile-posts.html">David Gamache</a>
+
+                      </td>
+                      <td>
+                        Designer
+                      </td>
+                      <td>
+
+                        <!-- Email -->
+                        <a class="text-reset" href="mailto:dhgamache@gmail.com">dhgamache@gmail.com</a>
+
+                      </td>
+                      <td>
+
+                        <!-- Phone -->
+                        <a class="text-reset" href="tel:1-650-430-1780">(650) 430-1780</a>
+
+                      </td>
+                      <td>
+
+                        <!-- Link -->
+                        <a class="text-reset" href="team-overview.html">Oki Doki Collective</a>
+
+                      </td>
+                      <td class="text-right">
+
+                        <!-- Dropdown -->
+                        <div class="dropdown">
+                          <a class="dropdown-ellipses dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#!" class="dropdown-item">
+                              Action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Another action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Something else here
+                            </a>
+                          </div>
+                        </div>
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+
+                        <!-- Checkbox -->
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="tableCheckboxThree">
+                          <label class="custom-control-label" for="tableCheckboxThree"></label>
+                        </div>
+
+                      </td>
+                      <td>
+
+                        <!-- Avatar -->
+                        <div class="avatar avatar-xs align-middle mr-2">
+                          <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-1.jpg" alt="...">
+                        </div> <a class="text-reset" href="profile-posts.html">David Gamache</a>
+
+                      </td>
+                      <td>
+                        Designer
+                      </td>
+                      <td>
+
+                        <!-- Email -->
+                        <a class="text-reset" href="mailto:dhgamache@gmail.com">dhgamache@gmail.com</a>
+
+                      </td>
+                      <td>
+
+                        <!-- Phone -->
+                        <a class="text-reset" href="tel:1-650-430-1780">(650) 430-1780</a>
+
+                      </td>
+                      <td>
+
+                        <!-- Link -->
+                        <a class="text-reset" href="team-overview.html">Oki Doki Collective</a>
+
+                      </td>
+                      <td class="text-right">
+
+                        <!-- Dropdown -->
+                        <div class="dropdown">
+                          <a class="dropdown-ellipses dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#!" class="dropdown-item">
+                              Action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Another action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Something else here
+                            </a>
+                          </div>
+                        </div>
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+
+                        <!-- Checkbox -->
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="tableCheckboxFour">
+                          <label class="custom-control-label" for="tableCheckboxFour"></label>
+                        </div>
+
+                      </td>
+                      <td>
+
+                        <!-- Avatar -->
+                        <div class="avatar avatar-xs align-middle mr-2">
+                          <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-1.jpg" alt="...">
+                        </div> <a class="text-reset" href="profile-posts.html">David Gamache</a>
+
+                      </td>
+                      <td>
+                        Designer
+                      </td>
+                      <td>
+
+                        <!-- Email -->
+                        <a class="text-reset" href="mailto:dhgamache@gmail.com">dhgamache@gmail.com</a>
+
+                      </td>
+                      <td>
+
+                        <!-- Phone -->
+                        <a class="text-reset" href="tel:1-650-430-1780">(650) 430-1780</a>
+
+                      </td>
+                      <td>
+
+                        <!-- Link -->
+                        <a class="text-reset" href="team-overview.html">Oki Doki Collective</a>
+
+                      </td>
+                      <td class="text-right">
+
+                        <!-- Dropdown -->
+                        <div class="dropdown">
+                          <a class="dropdown-ellipses dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#!" class="dropdown-item">
+                              Action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Another action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Something else here
+                            </a>
+                          </div>
+                        </div>
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+
+                        <!-- Checkbox -->
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="tableCheckboxFive">
+                          <label class="custom-control-label" for="tableCheckboxFive"></label>
+                        </div>
+
+                      </td>
+                      <td>
+
+                        <!-- Avatar -->
+                        <div class="avatar avatar-xs align-middle mr-2">
+                          <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-1.jpg" alt="...">
+                        </div> <a class="text-reset" href="profile-posts.html">David Gamache</a>
+
+                      </td>
+                      <td>
+                        Designer
+                      </td>
+                      <td>
+
+                        <!-- Email -->
+                        <a class="text-reset" href="mailto:dhgamache@gmail.com">dhgamache@gmail.com</a>
+
+                      </td>
+                      <td>
+
+                        <!-- Phone -->
+                        <a class="text-reset" href="tel:1-650-430-1780">(650) 430-1780</a>
+
+                      </td>
+                      <td>
+
+                        <!-- Link -->
+                        <a class="text-reset" href="team-overview.html">Oki Doki Collective</a>
+
+                      </td>
+                      <td class="text-right">
+
+                        <!-- Dropdown -->
+                        <div class="dropdown">
+                          <a class="dropdown-ellipses dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#!" class="dropdown-item">
+                              Action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Another action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Something else here
+                            </a>
+                          </div>
+                        </div>
+
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+        </div> <!-- / .row -->
+      </div>
+
+    </div> <!-- / .main-content -->
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("partials/scripts.html")
+
+  </body>
+</html>

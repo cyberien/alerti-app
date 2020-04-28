@@ -8545,10 +8545,12 @@ a.text-white:hover, a.text-white:focus {
 
 .form-control-flush {
   padding-left: 0;
-  padding-right: 0;
   border-color: transparent !important;
   background-color: transparent !important;
   resize: none; }
+
+.form-control:not(.custom-select) {
+  padding-right: 0; }
 
 .form-control-auto {
   height: auto;
@@ -10082,6 +10084,9 @@ body {
 .table-checkbox .custom-control-label::after {
   top: 50%;
   transform: translateY(-50%); }
+
+.table a[class*="text-reset"]:hover {
+  color: #2C7BE5 !important; }
 
 h1, .h1 {
   margin-bottom: 1.125rem;
