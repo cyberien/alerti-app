@@ -179,10 +179,71 @@
                   Members
                 </h4>
 
-                <!-- Button -->
-                <a class="btn btn-sm btn-primary" href="#!">
-                  Add member
-                </a>
+                <!-- Dropdown -->
+                <div class="dropdown">
+                  <button class="btn btn-sm btn-primary" type="button" id="inviteMember" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Invite member
+                  </button>
+                  <div class="dropdown-menu dropdown-menu-right dropdown-menu-card" aria-labelledby="inviteMember">
+                    <form>
+                      <div class="card-header">
+
+                        <!-- Title -->
+                        <h4 class="card-header-title">
+                          Invite a member
+                        </h4>
+
+                        <!-- Badge -->
+                        <span class="badge badge-soft-primary">2 seats left</span>
+
+                      </div>
+                      <div class="card-header">
+                        <div class="row no-gutters align-items-center">
+                          <div class="col-3">
+
+                            <!-- Label -->
+                            <label class="mb-0" for="inviteMemberName">
+                              Name
+                            </label>
+
+                          </div>
+                          <div class="col">
+
+                            <!-- Input -->
+                            <input class="form-control form-control-flush" id="inviteMemberName" type="text" placeholder="Full name">
+
+                          </div>
+                        </div> <!-- / .row -->
+                      </div>
+                      <div class="card-header">
+                        <div class="row no-gutters align-items-center">
+                          <div class="col-3">
+
+                            <!-- Label -->
+                            <label class="mb-0" for="inviteMemberEmail">
+                              Email
+                            </label>
+
+                          </div>
+                          <div class="col">
+
+                            <!-- Input -->
+                            <input class="form-control form-control-flush" id="inviteMemberEmail" type="text" placeholder="Email address">
+
+                          </div>
+                        </div> <!-- / .row -->
+                      </div>
+                      <div class="card-footer">
+
+                        <!-- Button -->
+                        <button class="btn btn-block btn-primary" type="submit">
+                          Invite member
+                        </button>
+
+                      </div>
+                    </form>
+                  </div>
+                </div>
 
               </div>
               <div class="card-body">
@@ -321,6 +382,62 @@
                         <!-- Email -->
                         <p class="small text-muted mb-0">
                           <a class="d-block text-reset text-truncate" href="mailt:adolfo.hess@company.com">adolfo.hess@company.com</a>
+                        </p>
+
+                      </div>
+                      <div class="col-auto ml-auto mr-n3">
+
+                        <!-- Select -->
+                        <select class="custom-select custom-select-sm" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
+                          <option>Admin</option>
+                          <option>Staff</option>
+                          <option>Custom</option>
+                        </select>
+
+                      </div>
+                      <div class="col-auto">
+
+                        <!-- Dropdown -->
+                        <div class="dropdown">
+                          <a class="dropdown-ellipses dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#!">
+                              Action
+                            </a>
+                            <a class="dropdown-item" href="#!">
+                              Another action
+                            </a>
+                            <a class="dropdown-item" href="#!">
+                              Something else here
+                            </a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div> <!-- / .row -->
+                  </div>
+                  <div class="list-group-item">
+                    <div class="row align-items-center">
+                      <div class="col-auto">
+
+                        <!-- Avatar -->
+                        <a href="profile-posts.html" class="avatar">
+                          <img src="assets/img/avatars/profiles/avatar-4.jpg" alt="..." class="avatar-img rounded-circle">
+                        </a>
+
+                      </div>
+                      <div class="col-5 ml-n2">
+
+                        <!-- Title -->
+                        <h4 class="mb-1">
+                          <a href="profile-posts.html">Daniela Dewitt</a>
+                        </h4>
+
+                        <!-- Email -->
+                        <p class="small text-muted mb-0">
+                          <a class="d-block text-reset text-truncate" href="mailt:daniela.dewitt@company.com">daniela.dewitt@company.com</a>
                         </p>
 
                       </div>

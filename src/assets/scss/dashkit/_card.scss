@@ -32,6 +32,10 @@
   }
 }
 
+.card-header + .card-footer {
+  border-top-width: 0;
+}
+
 // Title
 
 .card-title {
