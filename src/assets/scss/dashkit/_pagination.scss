@@ -1,0 +1,54 @@
+//
+// pagination.scss
+// Extended from Bootstrap
+//
+
+// 
+// Bootstrap Overrides =====================================
+//
+
+.pagination-lg .page-link {
+  font-size: $font-size-base;
+}
+
+
+// 
+// Dashkit =====================================
+//
+
+// Pagination tabs
+
+.pagination-tabs .page-link {
+  padding: $pagination-tabs-padding-y $pagination-tabs-padding-x;
+  background-color: $pagination-tabs-bg-color;
+  border-width: $border-width 0 0 0;
+  border-radius: 0;
+  color: $pagination-tabs-color;
+}
+
+.pagination-tabs .page-link:hover {
+  color: $pagination-tabs-hover-color;
+}
+
+.pagination-tabs .active .page-link {
+  background-color: $pagination-tabs-bg-color;
+  color: $pagination-tabs-active-color;
+}
+
+
+// Pagination overflow
+//
+// Allow links to overflow and make horizontally scrollable
+
+.pagination-overflow {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.pagination-overflow::-webkit-scrollbar {
+  display: none;
+}
+
+.pagination-overflow .page-link {
+  white-space: nowrap;
+}

@@ -35,3 +35,29 @@
     }
   }
 }
+
+
+
+//
+// Dashkit ===================================
+//
+
+// Checkbox circle
+
+.custom-checkbox-circle {
+  padding-left: $custom-control-gutter + $custom-checkbox-circle-indicator-size;
+}
+
+.custom-checkbox-circle .custom-control-label::after,
+.custom-checkbox-circle .custom-control-label::before {
+  top: ($font-size-base * $line-height-base - $custom-checkbox-circle-indicator-size) / 2;
+  left: -($custom-control-gutter + $custom-checkbox-circle-indicator-size);
+  width: $custom-checkbox-circle-indicator-size;
+  height: $custom-checkbox-circle-indicator-size;
+  border-radius: $custom-checkbox-circle-indicator-border-radius;
+}
+
+.custom-checkbox-circle .custom-control-input:checked ~ .custom-control-label::after {
+  background-image: escape-svg($custom-checkbox-circle-indicator-icon-checked);
+  background-size: $custom-checkbox-circle-indicator-bg-size;
+}

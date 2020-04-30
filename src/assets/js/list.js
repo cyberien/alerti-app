@@ -1,49 +1,39 @@
 //
 // list.js
-// Theme module
 //
 
 'use strict';
 
 (function() {
+  var lists = document.querySelectorAll('[data-list]');
+  var listSorts = document.querySelectorAll('[data-sort]');
+  var sortEvents = ['click'];
 
-  //
-  // Variables
-  //
+  function init(list) {
+    var listOptions = list.dataset.list && JSON.parse(list.dataset.list);
 
-  var toggle = document.querySelectorAll('[data-toggle="lists"]');
-  var toggleSort = document.querySelectorAll('[data-toggle="lists"] [data-sort]');
+    var defaultOptions = {
+      listClass: 'list',
+      paginationClass: 'list-pagination',
+      searchClass: 'list-search',
+      sortClass: 'list-sort'
+    };
 
-  //
-  // Functions
-  //
-
-  function init(el) {
-    var options = el.dataset.options ? JSON.parse(el.dataset.options) : {};
+    var options = Object.assign(defaultOptions, listOptions);
 
     // Init
-    new List(el, options);
-  }
+    var listObj = new List(list, options);
+  };
 
-  //
-  // Events
-  //
+  if (typeof List !== 'undefined' && lists) {
+    [].forEach.call(lists, function(list) {
+      init(list);
+    });
 
-  if (typeof List !== 'undefined') {
-
-    if (toggle) {
-      [].forEach.call(toggle, function(el) {
-        init(el);
+    [].forEach.call(listSorts, function(sort) {
+      sort.addEventListener(sortEvents[0], function(e) {
+        e.preventDefault();
       });
-    }
-
-    if (toggleSort) {
-      [].forEach.call(toggleSort, function(el) {
-        el.addEventListener('click', function(e) {
-          e.preventDefault();
-        });
-      });
-    }
+    });
   }
-
 })();

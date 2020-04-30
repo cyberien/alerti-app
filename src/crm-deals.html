@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    @@include("partials/head.html", {
+    "title": "Dashkit"
+    })
+  </head>
+  <body>
+
+    <!-- MODALS
+    ================================================== -->
+    @@include("partials/modals.html")
+
+    <!-- NAVIGATION
+    ================================================== -->
+    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
+    @@if (sidebarSize == 'base' || demoMode) {
+    @@include("partials/sidebar.html", {
+    "category": "dashboards",
+    "subcategory": "crm",
+    "page": "crm-contacts.html"
+    })
+    }
+    @@if (sidebarSize == 'small' || demoMode) {
+    @@include("partials/sidebar-sm.html", {
+    "category": "dashboards",
+    "subcategory": "crm",
+    "page": "crm-contacts.html"
+    })
+    }
+    }
+    @@if (navPosition == 'topnav' || demoMode) {
+    @@include("partials/topnav.html", {
+    "category": "dashboards",
+    "subcategory": "crm",
+    "page": "crm-contacts.html"
+    })
+    }
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content">
+
+      @@if (navPosition == 'combo' || demoMode) {
+      @@include("partials/topbar.html")
+      }
+
+      <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
+        <div class="row justify-content-center">
+          <div class="col-12">
+
+            <!-- Header -->
+            <div class="header mt-md-5">
+              <div class="header-body">
+                <div class="row align-items-center">
+                  <div class="col">
+
+                    <!-- Pretitle -->
+                    <h6 class="header-pretitle">
+                      Overview
+                    </h6>
+
+                    <!-- Title -->
+                    <h1 class="header-title text-truncate">
+                      Deals
+                    </h1>
+
+                  </div>
+                  <div class="col-auto">
+
+                    <!-- Navigation (button group) -->
+                    <div class="nav btn-group d-inline-flex" role="tablist">
+                      <button class="btn btn-white active" id="dealsListTab" data-toggle="tab" data-target="#dealsList" role="tab" aria-controls="dealsList" aria-selected="true">
+                        <span class="fe fe-grid"></span>
+                      </button>
+                      <button class="btn btn-white" id="dealsCardsTab" data-toggle="tab" data-target="#dealsCards" role="tab" aria-controls="dealsCards" aria-selected="false">
+                        <span class="fe fe-list"></span>
+                      </button>
+                    </div> <!-- / .nav -->
+
+                    <!-- Buttons -->
+                    <a href="#!" class="btn btn-primary ml-2">
+                      Add deal
+                    </a>
+
+                  </div>
+                </div> <!-- / .row -->
+                <div class="row align-items-center">
+                  <div class="col">
+
+                    <!-- Nav -->
+                    <ul class="nav nav-tabs nav-overflow header-tabs">
+                      <li class="nav-item">
+                        <a href="#!" class="nav-link text-nowrap active">
+                          All deals <span class="badge badge-pill badge-soft-secondary">943</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#!" class="nav-link text-nowrap">
+                          Your deals <span class="badge badge-pill badge-soft-secondary">379</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#!" class="nav-link text-nowrap">
+                          Deleted <span class="badge badge-pill badge-soft-secondary">127</span>
+                        </a>
+                      </li>
+                    </ul>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab content -->
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="dealsList" role="tabpanel" aria-labelledby="dealsListTab">
+
+                <!-- Card -->
+                <div class="card" data-list='{"valueNames": ["item-name", "item-stage", "item-amount", "item-owner", "item-contacted"]}'>
+                  <div class="card-header">
+                    <div class="row align-items-center">
+                      <div class="col">
+
+                        <!-- Form -->
+                        <form>
+                          <div class="input-group input-group-flush">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">
+                                <i class="fe fe-search"></i>
+                              </span>
+                            </div>
+                            <input class="list-search form-control" type="search" placeholder="Search">
+                          </div>
+                        </form>
+
+                      </div>
+                      <div class="col-auto mr-n3">
+
+                        <!-- Select -->
+                        <select class="custom-select custom-select-sm form-control-flush" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
+                          <option>5 per page</option>
+                          <option>10 per page</option>
+                          <option>25 per page</option>
+                          <option>50 per page</option>
+                        </select>
+
+                      </div>
+                      <div class="col-auto">
+
+                        <!-- Dropdown -->
+                        <div class="dropdown">
+                          <button class="btn btn-sm btn-white" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-sliders mr-1"></i> Filter
+                          </button>
+                          <form class="dropdown-menu dropdown-menu-right dropdown-menu-card">
+                            <div class="card-header">
+
+                              <!-- Title -->
+                              <h4 class="card-header-title">
+                                Filters
+                              </h4>
+
+                              <!-- Link -->
+                              <a class="text-reset" href="#">
+                                <small>Clear filters</small>
+                              </a>
+
+                            </div>
+                            <div class="card-body">
+
+                              <!-- List group -->
+                              <div class="list-group list-group-flush mt-n4 mb-4">
+                                <div class="list-group-item">
+                                  <div class="row">
+                                    <div class="col">
+
+                                      <!-- Text -->
+                                      <small>Owner</small>
+
+                                    </div>
+                                    <div class="col-auto">
+
+                                      <!-- Select -->
+                                      <select class="custom-select custom-select-sm" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
+                                        <option>Dave Gamache</option>
+                                      </select>
+
+                                    </div>
+                                  </div> <!-- / .row -->
+                                </div>
+                                <div class="list-group-item">
+                                  <div class="row">
+                                    <div class="col">
+
+                                      <!-- Text -->
+                                      <small>Industry</small>
+
+                                    </div>
+                                    <div class="col-auto">
+
+                                      <!-- Select -->
+                                      <select class="custom-select custom-select-sm" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
+                                        <option>Any</option>
+                                      </select>
+
+                                    </div>
+                                  </div> <!-- / .row -->
+                                </div>
+                              </div>
+
+                              <!-- Button -->
+                              <button class="btn btn-block btn-primary">
+                                Create new filter
+                              </button>
+
+                            </div>
+                          </form>
+                        </div>
+
+
+                      </div>
+                    </div> <!-- / .row -->
+                  </div>
+                  <div class="table-responsive">
+                    <table class="table table-sm table-hover table-nowrap card-table">
+                      <thead>
+                        <tr>
+                          <th>
+
+                            <!-- Checkbox -->
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="listCheckboxAll">
+                              <label class="custom-control-label" for="listCheckboxAll"></label>
+                            </div>
+
+                          </th>
+                          <th>
+                            <a class="list-sort text-muted" data-sort="item-name" href="#">Name</a>
+                          </th>
+                          <th>
+                            <a class="list-sort text-muted" data-sort="item-title" href="#">Stage</a>
+                          </th>
+                          <th>
+                            <a class="list-sort text-muted" data-sort="item-email" href="#">Amount</a>
+                          </th>
+                          <th>
+                            <a class="list-sort text-muted" data-sort="item-phone" href="#">Owner</a>
+                          </th>
+                          <th colspan="2">
+                            <a class="list-sort text-muted" data-sort="item-company" href="#">Last contacted</a>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody class="list font-size-base">
+                        <tr>
+                          <td>
+
+                            <!-- Checkbox -->
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="listCheckboxOne">
+                              <label class="custom-control-label" for="listCheckboxOne"></label>
+                            </div>
+
+                          </td>
+                          <td class="item-name">
+                            PayPal onsite contract
+                          </td>
+                          <td class="item-stage">
+                            Contract sent
+                          </td>
+                          <td class="item-amount">
+                            $25,000
+                          </td>
+                          <td>
+
+                            <!-- Avatar -->
+                            <div class="avatar avatar-xs align-middle mr-2">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-1.jpg" alt="...">
+                            </div> <a class="item-owner text-reset" href="profile-posts.html">Dianna Smiley</a>
+
+                          </td>
+                          <td class="item-contacted">
+
+                            <!-- Date -->
+                            <time datetime="2020-01-14">Jan 14, 2020</time>
+
+                          </td>
+                          <td class="text-right">
+
+                            <!-- Dropdown -->
+                            <div class="dropdown">
+                              <a class="dropdown-ellipses dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fe fe-more-vertical"></i>
+                              </a>
+                              <div class="dropdown-menu dropdown-menu-right">
+                                <a href="#!" class="dropdown-item">
+                                  Action
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                  Another action
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                  Something else here
+                                </a>
+                              </div>
+                            </div>
+
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+
+                            <!-- Checkbox -->
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="listCheckboxTwo">
+                              <label class="custom-control-label" for="listCheckboxTwo"></label>
+                            </div>
+
+                          </td>
+                          <td class="item-name">
+                            PayPal onsite contract
+                          </td>
+                          <td class="item-stage">
+                            Contract sent
+                          </td>
+                          <td class="item-amount">
+                            $25,000
+                          </td>
+                          <td>
+
+                            <!-- Avatar -->
+                            <div class="avatar avatar-xs align-middle mr-2">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-1.jpg" alt="...">
+                            </div> <a class="item-owner text-reset" href="profile-posts.html">Dianna Smiley</a>
+
+                          </td>
+                          <td class="item-contacted">
+
+                            <!-- Date -->
+                            <time datetime="2020-01-14">Jan 14, 2020</time>
+
+                          </td>
+                          <td class="text-right">
+
+                            <!-- Dropdown -->
+                            <div class="dropdown">
+                              <a class="dropdown-ellipses dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fe fe-more-vertical"></i>
+                              </a>
+                              <div class="dropdown-menu dropdown-menu-right">
+                                <a href="#!" class="dropdown-item">
+                                  Action
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                  Another action
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                  Something else here
+                                </a>
+                              </div>
+                            </div>
+
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+
+                            <!-- Checkbox -->
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="listCheckboxThree">
+                              <label class="custom-control-label" for="listCheckboxThree"></label>
+                            </div>
+
+                          </td>
+                          <td class="item-name">
+                            PayPal onsite contract
+                          </td>
+                          <td class="item-stage">
+                            Contract sent
+                          </td>
+                          <td class="item-amount">
+                            $25,000
+                          </td>
+                          <td>
+
+                            <!-- Avatar -->
+                            <div class="avatar avatar-xs align-middle mr-2">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-1.jpg" alt="...">
+                            </div> <a class="item-owner text-reset" href="profile-posts.html">Dianna Smiley</a>
+
+                          </td>
+                          <td class="item-contacted">
+
+                            <!-- Date -->
+                            <time datetime="2020-01-14">Jan 14, 2020</time>
+
+                          </td>
+                          <td class="text-right">
+
+                            <!-- Dropdown -->
+                            <div class="dropdown">
+                              <a class="dropdown-ellipses dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fe fe-more-vertical"></i>
+                              </a>
+                              <div class="dropdown-menu dropdown-menu-right">
+                                <a href="#!" class="dropdown-item">
+                                  Action
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                  Another action
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                  Something else here
+                                </a>
+                              </div>
+                            </div>
+
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+
+                            <!-- Checkbox -->
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="listCheckboxFour">
+                              <label class="custom-control-label" for="listCheckboxFour"></label>
+                            </div>
+
+                          </td>
+                          <td class="item-name">
+                            PayPal onsite contract
+                          </td>
+                          <td class="item-stage">
+                            Contract sent
+                          </td>
+                          <td class="item-amount">
+                            $25,000
+                          </td>
+                          <td>
+
+                            <!-- Avatar -->
+                            <div class="avatar avatar-xs align-middle mr-2">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-1.jpg" alt="...">
+                            </div> <a class="item-owner text-reset" href="profile-posts.html">Dianna Smiley</a>
+
+                          </td>
+                          <td class="item-contacted">
+
+                            <!-- Date -->
+                            <time datetime="2020-01-14">Jan 14, 2020</time>
+
+                          </td>
+                          <td class="text-right">
+
+                            <!-- Dropdown -->
+                            <div class="dropdown">
+                              <a class="dropdown-ellipses dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fe fe-more-vertical"></i>
+                              </a>
+                              <div class="dropdown-menu dropdown-menu-right">
+                                <a href="#!" class="dropdown-item">
+                                  Action
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                  Another action
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                  Something else here
+                                </a>
+                              </div>
+                            </div>
+
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+
+                            <!-- Checkbox -->
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="listCheckboxFive">
+                              <label class="custom-control-label" for="listCheckboxFive"></label>
+                            </div>
+
+                          </td>
+                          <td class="item-name">
+                            PayPal onsite contract
+                          </td>
+                          <td class="item-stage">
+                            Contract sent
+                          </td>
+                          <td class="item-amount">
+                            $25,000
+                          </td>
+                          <td>
+
+                            <!-- Avatar -->
+                            <div class="avatar avatar-xs align-middle mr-2">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-1.jpg" alt="...">
+                            </div> <a class="item-owner text-reset" href="profile-posts.html">Dianna Smiley</a>
+
+                          </td>
+                          <td class="item-contacted">
+
+                            <!-- Date -->
+                            <time datetime="2020-01-14">Jan 14, 2020</time>
+
+                          </td>
+                          <td class="text-right">
+
+                            <!-- Dropdown -->
+                            <div class="dropdown">
+                              <a class="dropdown-ellipses dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fe fe-more-vertical"></i>
+                              </a>
+                              <div class="dropdown-menu dropdown-menu-right">
+                                <a href="#!" class="dropdown-item">
+                                  Action
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                  Another action
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                  Something else here
+                                </a>
+                              </div>
+                            </div>
+
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="card-footer">
+
+                    <!-- Pagination -->
+                    <ul class="pagination pagination-tabs pagination-overflow card-pagination">
+                      <li class="page-item mr-auto">
+                        <a class="page-link text-reset" href="#">
+                          <i class="fe fe-arrow-left mr-1"></i> Previous
+                        </a>
+                      </li>
+                      <li class="page-item active">
+                        <a class="page-link" href="#">1</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                      </li>
+                      <li class="page-item ml-auto">
+                        <a class="page-link text-reset" href="#">
+                          Next <i class="fe fe-arrow-right ml-1"></i>
+                        </a>
+                      </li>
+                    </ul>
+
+                  </div>
+                </div>
+
+              </div>
+              <div class="tab-pane fade" id="dealsCards" role="tabpanel" aria-labelledby="dealsCardsTab">
+
+              </div>
+            </div>
+
+          </div>
+        </div> <!-- / .row -->
+      </div>
+
+    </div> <!-- / .main-content -->
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("partials/scripts.html")
+
+  </body>
+</html>

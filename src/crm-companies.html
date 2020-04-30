@@ -18,14 +18,14 @@
     @@include("partials/sidebar.html", {
     "category": "dashboards",
     "subcategory": "crm",
-    "page": "crm-contacts.html"
+    "page": "crm-companies.html"
     })
     }
     @@if (sidebarSize == 'small' || demoMode) {
     @@include("partials/sidebar-sm.html", {
     "category": "dashboards",
     "subcategory": "crm",
-    "page": "crm-contacts.html"
+    "page": "crm-companies.html"
     })
     }
     }
@@ -33,7 +33,7 @@
     @@include("partials/topnav.html", {
     "category": "dashboards",
     "subcategory": "crm",
-    "page": "crm-contacts.html"
+    "page": "crm-companies.html"
     })
     }
 
@@ -62,7 +62,7 @@
 
                     <!-- Title -->
                     <h1 class="header-title text-truncate">
-                      Contacts
+                      Companies
                     </h1>
 
                   </div>
@@ -70,17 +70,17 @@
 
                     <!-- Navigation (button group) -->
                     <div class="nav btn-group d-inline-flex" role="tablist">
-                      <button class="btn btn-white active" id="contactsListTab" data-toggle="tab" data-target="#contactsList" role="tab" aria-controls="contactsList" aria-selected="true">
+                      <button class="btn btn-white active" id="companiesListTab" data-toggle="tab" data-target="#companiesList" role="tab" aria-controls="companiesList" aria-selected="true">
                         <span class="fe fe-grid"></span>
                       </button>
-                      <button class="btn btn-white" id="contactsCardsTab" data-toggle="tab" data-target="#contactsCards" role="tab" aria-controls="contactsCards" aria-selected="false">
+                      <button class="btn btn-white" id="companiesCardsTab" data-toggle="tab" data-target="#companiesCards" role="tab" aria-controls="companiesCards" aria-selected="false">
                         <span class="fe fe-list"></span>
                       </button>
                     </div> <!-- / .nav -->
 
                     <!-- Buttons -->
                     <a href="#!" class="btn btn-primary ml-2">
-                      Add contact
+                      Add company
                     </a>
 
                   </div>
@@ -92,17 +92,17 @@
                     <ul class="nav nav-tabs nav-overflow header-tabs">
                       <li class="nav-item">
                         <a href="#!" class="nav-link text-nowrap active">
-                          All contacts <span class="badge badge-pill badge-soft-secondary">823</span>
+                          All companies <span class="badge badge-pill badge-soft-secondary">627</span>
                         </a>
                       </li>
                       <li class="nav-item">
                         <a href="#!" class="nav-link text-nowrap">
-                          Your contacts <span class="badge badge-pill badge-soft-secondary">231</span>
+                          Your companies <span class="badge badge-pill badge-soft-secondary">198</span>
                         </a>
                       </li>
                       <li class="nav-item">
                         <a href="#!" class="nav-link text-nowrap">
-                          Deleted <span class="badge badge-pill badge-soft-secondary">22</span>
+                          Deleted <span class="badge badge-pill badge-soft-secondary">29</span>
                         </a>
                       </li>
                     </ul>
@@ -114,10 +114,10 @@
 
             <!-- Tab content -->
             <div class="tab-content">
-              <div class="tab-pane fade show active" id="contactsList" role="tabpanel" aria-labelledby="contactsListTab">
+              <div class="tab-pane fade show active" id="companiesList" role="tabpanel" aria-labelledby="companiesListTab">
 
                 <!-- Card -->
-                <div class="card" data-list='{"valueNames": ["item-name", "item-title", "item-score", "item-company"]}'>
+                <div class="card" data-list='{"valueNames": ["item-name", "item-industry", "item-location", "item-owner", "item-created"]}'>
                   <div class="card-header">
                     <div class="row align-items-center">
                       <div class="col">
@@ -239,19 +239,16 @@
                             <a class="list-sort text-muted" data-sort="item-name" href="#">Name</a>
                           </th>
                           <th>
-                            <a class="list-sort text-muted" data-sort="item-title" href="#">Job title</a>
+                            <a class="list-sort text-muted" data-sort="item-title" href="#">Industry</a>
                           </th>
                           <th>
-                            <a class="list-sort text-muted" data-sort="item-email" href="#">Email</a>
+                            <a class="list-sort text-muted" data-sort="item-email" href="#">Location</a>
                           </th>
                           <th>
-                            <a class="list-sort text-muted" data-sort="item-phone" href="#">Phone</a>
-                          </th>
-                          <th>
-                            <a class="list-sort text-muted" data-sort="item-score" href="#">Lead score</a>
+                            <a class="list-sort text-muted" data-sort="item-phone" href="#">Owner</a>
                           </th>
                           <th colspan="2">
-                            <a class="list-sort text-muted" data-sort="item-company" href="#">Company</a>
+                            <a class="list-sort text-muted" data-sort="item-company" href="#">Created at</a>
                           </th>
                         </tr>
                       </thead>
@@ -270,35 +267,28 @@
 
                             <!-- Avatar -->
                             <div class="avatar avatar-xs align-middle mr-2">
-                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-1.jpg" alt="...">
-                            </div> <a class="item-name text-reset" href="profile-posts.html">Dianna Smiley</a>
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/teams/team-logo-1.jpg" alt="...">
+                            </div> <a class="item-name text-reset" href="team-overview.html">Launchday</a>
 
                           </td>
-                          <td class="item-title">
-                            Designer
+                          <td class="item-industry">
+                            Transportation
                           </td>
-                          <td class="item-email">
-
-                            <!-- Email -->
-                            <a class="text-reset" href="mailto:diana.smiley@company.com">diana.smiley@company.com</a>
-
+                          <td class="item-location">
+                            Vero Beach, CA
                           </td>
                           <td class="item-phone">
 
-                            <!-- Phone -->
-                            <a class="text-reset" href="tel:1-650-430-1780">(988) 568-3568</a>
+                            <!-- Avatar -->
+                            <div class="avatar avatar-xs align-middle mr-2">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-1.jpg" alt="...">
+                            </div> <a class="item-owner text-reset" href="profile-posts.html">Dianna Smiley</a>
 
                           </td>
-                          <td>
+                          <td class="item-created">
 
                             <!-- Badge -->
-                            <span class="item-score badge badge-soft-danger">1/10</span>
-
-                          </td>
-                          <td class="item-company">
-
-                            <!-- Link -->
-                            <a class="text-reset" href="team-overview.html">Twitter</a>
+                            <time datetime="2020-01-14">Jan 14, 2020</time>
 
                           </td>
                           <td class="text-right">
@@ -337,35 +327,28 @@
 
                             <!-- Avatar -->
                             <div class="avatar avatar-xs align-middle mr-2">
-                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-2.jpg" alt="...">
-                            </div> <a class="item-name text-reset" href="profile-posts.html">Ab Hadley</a>
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/teams/team-logo-2.jpg" alt="...">
+                            </div> <a class="item-name text-reset" href="team-overview.html">Medium Corporation</a>
 
                           </td>
-                          <td class="item-title">
-                            Engineer
+                          <td class="item-industry">
+                            Transportation
                           </td>
-                          <td class="item-email">
-
-                            <!-- Email -->
-                            <a class="text-reset" href="mailto:ab.hadley@company.com">ab.hadley@company.com</a>
-
+                          <td class="item-location">
+                            Vero Beach, CA
                           </td>
                           <td class="item-phone">
 
-                            <!-- Phone -->
-                            <a class="text-reset" href="tel:1-650-430-1780">(650) 430-9876</a>
+                            <!-- Avatar -->
+                            <div class="avatar avatar-xs align-middle mr-2">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-1.jpg" alt="...">
+                            </div> <a class="item-owner text-reset" href="profile-posts.html">Dianna Smiley</a>
 
                           </td>
-                          <td>
+                          <td class="item-created">
 
                             <!-- Badge -->
-                            <span class="item-score badge badge-soft-success">8/10</span>
-
-                          </td>
-                          <td class="item-company">
-
-                            <!-- Link -->
-                            <a class="text-reset" href="team-overview.html">Google</a>
+                            <time datetime="2020-01-14">Jan 14, 2020</time>
 
                           </td>
                           <td class="text-right">
@@ -404,35 +387,28 @@
 
                             <!-- Avatar -->
                             <div class="avatar avatar-xs align-middle mr-2">
-                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-3.jpg" alt="...">
-                            </div> <a class="item-name text-reset" href="profile-posts.html">Adolfo Hess</a>
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/teams/team-logo-3.jpg" alt="...">
+                            </div> <a class="item-name text-reset" href="team-overview.html">Lyft</a>
 
                           </td>
-                          <td class="item-title">
-                            CEO
+                          <td class="item-industry">
+                            Transportation
                           </td>
-                          <td class="item-email">
-
-                            <!-- Email -->
-                            <a class="text-reset" href="mailto:adolfo.hess@company.com">adolfo.hess@company.com</a>
-
+                          <td class="item-location">
+                            Vero Beach, CA
                           </td>
                           <td class="item-phone">
 
-                            <!-- Phone -->
-                            <a class="text-reset" href="tel:1-650-430-1780">(968) 682-1364</a>
+                            <!-- Avatar -->
+                            <div class="avatar avatar-xs align-middle mr-2">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-1.jpg" alt="...">
+                            </div> <a class="item-owner text-reset" href="profile-posts.html">Dianna Smiley</a>
 
                           </td>
-                          <td>
+                          <td class="item-created">
 
                             <!-- Badge -->
-                            <span class="item-score badge badge-soft-success">7/10</span>
-
-                          </td>
-                          <td class="item-company">
-
-                            <!-- Link -->
-                            <a class="text-reset" href="team-overview.html">Google</a>
+                            <time datetime="2020-01-14">Jan 14, 2020</time>
 
                           </td>
                           <td class="text-right">
@@ -471,35 +447,28 @@
 
                             <!-- Avatar -->
                             <div class="avatar avatar-xs align-middle mr-2">
-                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-4.jpg" alt="...">
-                            </div> <a class="item-name text-reset" href="profile-posts.html">Daniela Dewitt</a>
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/teams/team-logo-4.jpg" alt="...">
+                            </div> <a class="item-name text-reset" href="team-overview.html">PayPal</a>
 
                           </td>
-                          <td class="item-title">
-                            Designer
+                          <td class="item-industry">
+                            Transportation
                           </td>
-                          <td class="item-email">
-
-                            <!-- Email -->
-                            <a class="text-reset" href="mailto:daniela.dewitt@company.com">daniela.dewitt@company.com</a>
-
+                          <td class="item-location">
+                            Vero Beach, CA
                           </td>
                           <td class="item-phone">
 
-                            <!-- Phone -->
-                            <a class="text-reset" href="tel:1-650-430-1780">(650) 430-9876</a>
+                            <!-- Avatar -->
+                            <div class="avatar avatar-xs align-middle mr-2">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-1.jpg" alt="...">
+                            </div> <a class="item-owner text-reset" href="profile-posts.html">Dianna Smiley</a>
 
                           </td>
-                          <td>
+                          <td class="item-created">
 
                             <!-- Badge -->
-                            <span class="item-score badge badge-soft-warning">4/10</span>
-
-                          </td>
-                          <td class="item-company">
-
-                            <!-- Link -->
-                            <a class="text-reset" href="team-overview.html">Twitch</a>
+                            <time datetime="2020-01-14">Jan 14, 2020</time>
 
                           </td>
                           <td class="text-right">
@@ -538,35 +507,28 @@
 
                             <!-- Avatar -->
                             <div class="avatar avatar-xs align-middle mr-2">
-                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-5.jpg" alt="...">
-                            </div> <a class="item-name text-reset" href="profile-posts.html">Miyah Myles</a>
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/teams/team-logo-5.jpg" alt="...">
+                            </div> <a class="item-name text-reset" href="team-overview.html">Dropbox Inc. </a>
 
                           </td>
-                          <td class="item-title">
-                            Courier
+                          <td class="item-industry">
+                            Transportation
                           </td>
-                          <td class="item-email">
-
-                            <!-- Email -->
-                            <a class="text-reset" href="mailto:miyah.myles@company.com">miyah.myles@company.com</a>
-
+                          <td class="item-location">
+                            Vero Beach, CA
                           </td>
                           <td class="item-phone">
 
-                            <!-- Phone -->
-                            <a class="text-reset" href="tel:1-650-430-1780">(935) 165-8435</a>
+                            <!-- Avatar -->
+                            <div class="avatar avatar-xs align-middle mr-2">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-1.jpg" alt="...">
+                            </div> <a class="item-owner text-reset" href="profile-posts.html">Dianna Smiley</a>
 
                           </td>
-                          <td>
+                          <td class="item-created">
 
                             <!-- Badge -->
-                            <span class="item-score badge badge-soft-danger">3/10</span>
-
-                          </td>
-                          <td class="item-company">
-
-                            <!-- Link -->
-                            <a class="text-reset" href="team-overview.html">Facebook</a>
+                            <time datetime="2020-01-14">Jan 14, 2020</time>
 
                           </td>
                           <td class="text-right">
@@ -623,7 +585,7 @@
                 </div>
 
               </div>
-              <div class="tab-pane fade" id="contactsCards" role="tabpanel" aria-labelledby="contactsCardsTab">
+              <div class="tab-pane fade" id="companiesCards" role="tabpanel" aria-labelledby="companiesCardsTab">
 
                 <!-- Cards -->
                 <div data-list='{"valueNames": ["item-name", "item-title", "item-email", "item-phone", "item-score", "item-company"]}'>
@@ -746,6 +708,111 @@
 
                               <!-- Checkbox -->
                               <div class="custom-control custom-checkbox custom-checkbox-circle">
+                                <input type="checkbox" class="custom-control-input" id="cardsCheckboxFive">
+                                <label class="custom-control-label" for="cardsCheckboxFive"></label>
+                              </div>
+
+                            </div>
+                            <div class="col-auto">
+
+                              <!-- Dropdown -->
+                              <div class="dropdown">
+                                <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <i class="fe fe-more-vertical"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                  <a href="#!" class="dropdown-item">
+                                    Action
+                                  </a>
+                                  <a href="#!" class="dropdown-item">
+                                    Another action
+                                  </a>
+                                  <a href="#!" class="dropdown-item">
+                                    Something else here
+                                  </a>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div> <!-- / .row -->
+
+                          <!-- Image -->
+                          <a href="team-overview.html" class="avatar avatar-xl card-avatar">
+                            <img src="../assets/img/avatars/teams/team-logo-1.jpg" class="avatar-img rounded" alt="...">
+                          </a>
+
+                          <!-- Body -->
+                          <div class="text-center mb-5">
+
+                            <!-- Heading -->
+                            <h2 class="card-title item-name">
+                              <a href="team-overview.html">Launchday</a>
+                            </h2>
+
+                            <!-- Text -->
+                            <p class="small text-muted mb-0">
+                              Launchday is a SaaS website builder with a focus on quality, easy to build product sites.
+                            </p>
+
+                          </div>
+
+                          <!-- Divider -->
+                          <hr class="card-divider mb-0">
+
+                          <!-- List group -->
+                          <div class="list-group list-group-flush mb-n3">
+                            <div class="list-group-item">
+                              <div class="row">
+                                <div class="col">
+
+                                  <!-- Text -->
+                                  <small>Contact</small>
+
+                                </div>
+                                <div class="col-auto">
+
+                                  <!-- Link -->
+                                  <a href="profile-posts.html">
+                                    <small class="item-owner">Dave Gamache</small>
+                                  </a>
+
+                                </div>
+                              </div> <!-- / .row -->
+                            </div>
+                            <div class="list-group-item">
+                              <div class="row">
+                                <div class="col">
+
+                                  <!-- Text -->
+                                  <small>Created</small>
+
+                                </div>
+                                <div class="col-auto">
+
+                                  <!-- Time -->
+                                  <time class="item-created" datetime="2020-01-14">Jan 14, 2020</time>
+
+                                </div>
+                              </div> <!-- / .row -->
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4">
+
+                      <!-- Card -->
+                      <div class="card">
+                        <div class="card-body">
+
+                          <!-- Header -->
+                          <div class="row align-items-center">
+                            <div class="col">
+
+                              <!-- Checkbox -->
+                              <div class="custom-control custom-checkbox custom-checkbox-circle">
                                 <input type="checkbox" class="custom-control-input" id="cardsCheckboxOne">
                                 <label class="custom-control-label" for="cardsCheckboxOne"></label>
                               </div>
@@ -775,8 +842,8 @@
                           </div> <!-- / .row -->
 
                           <!-- Image -->
-                          <a href="profile-posts.html" class="avatar avatar-xl card-avatar">
-                            <img src="../assets/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle" alt="...">
+                          <a href="team-overview.html" class="avatar avatar-xl card-avatar">
+                            <img src="../assets/img/avatars/teams/team-logo-2.jpg" class="avatar-img rounded" alt="...">
                           </a>
 
                           <!-- Body -->
@@ -784,21 +851,13 @@
 
                             <!-- Heading -->
                             <h2 class="card-title item-name">
-                              <a href="profile-posts.html">Dianna Smiley</a>
+                              <a href="team-overview.html">Medium Corporation</a>
                             </h2>
 
                             <!-- Text -->
-                            <p class="small text-muted mb-3">
-                              <span class="item-title">Designer</span> at <span class="item-company">Twitter</span>
+                            <p class="small text-muted mb-0">
+                              Medium is an online publishing platform developed by Evan Williams, and launched in August 2012.
                             </p>
-
-                            <!-- Buttons -->
-                            <a class="btn btn-sm btn-white" href="tel:1-650-430-1780">
-                              <i class="fe fe-phone mr-1"></i> Call
-                            </a>
-                            <a class="btn btn-sm btn-white" href="mailto:diana.smiley@company.com">
-                              <i class="fe fe-mail mr-1"></i> Email
-                            </a>
 
                           </div>
 
@@ -812,13 +871,15 @@
                                 <div class="col">
 
                                   <!-- Text -->
-                                  <small>Company</small>
+                                  <small>Contact</small>
 
                                 </div>
                                 <div class="col-auto">
 
-                                  <!-- Text -->
-                                  <small>Twitter</small>
+                                  <!-- Link -->
+                                  <a href="profile-posts.html">
+                                    <small class="item-owner">Dave Gamache</small>
+                                  </a>
 
                                 </div>
                               </div> <!-- / .row -->
@@ -828,13 +889,13 @@
                                 <div class="col">
 
                                   <!-- Text -->
-                                  <small>Lead Score</small>
+                                  <small>Created</small>
 
                                 </div>
                                 <div class="col-auto">
 
-                                  <!-- Badge -->
-                                  <span class="item-score badge badge-soft-danger">1/10</span>
+                                  <!-- Time -->
+                                  <time class="item-created" datetime="2020-01-14">Jan 14, 2020</time>
 
                                 </div>
                               </div> <!-- / .row -->
@@ -886,8 +947,8 @@
                           </div> <!-- / .row -->
 
                           <!-- Image -->
-                          <a href="profile-posts.html" class="avatar avatar-xl card-avatar">
-                            <img src="../assets/img/avatars/profiles/avatar-2.jpg" class="avatar-img rounded-circle" alt="...">
+                          <a href="team-overview.html" class="avatar avatar-xl card-avatar">
+                            <img src="../assets/img/avatars/teams/team-logo-3.jpg" class="avatar-img rounded" alt="...">
                           </a>
 
                           <!-- Body -->
@@ -895,21 +956,13 @@
 
                             <!-- Heading -->
                             <h2 class="card-title item-name">
-                              <a href="profile-posts.html">Ab Hadley</a>
+                              <a href="team-overview.html">Lyft</a>
                             </h2>
 
                             <!-- Text -->
-                            <p class="small text-muted mb-3">
-                              <span class="item-title">Engineer</span> at <span class="item-company">Google</span>
+                            <p class="small text-muted mb-0">
+                              Lyft is an on-demand transportation company based in San Francisco, California.
                             </p>
-
-                            <!-- Buttons -->
-                            <a class="btn btn-sm btn-white" href="tel:1-650-430-1780">
-                              <i class="fe fe-phone mr-1"></i> Call
-                            </a>
-                            <a class="btn btn-sm btn-white" href="mailto:ab.hadley@company.com">
-                              <i class="fe fe-mail mr-1"></i> Email
-                            </a>
 
                           </div>
 
@@ -923,13 +976,15 @@
                                 <div class="col">
 
                                   <!-- Text -->
-                                  <small>Company</small>
+                                  <small>Contact</small>
 
                                 </div>
                                 <div class="col-auto">
 
-                                  <!-- Text -->
-                                  <small>Engineer</small>
+                                  <!-- Link -->
+                                  <a href="profile-posts.html">
+                                    <small class="item-owner">Dave Gamache</small>
+                                  </a>
 
                                 </div>
                               </div> <!-- / .row -->
@@ -939,13 +994,13 @@
                                 <div class="col">
 
                                   <!-- Text -->
-                                  <small>Lead Score</small>
+                                  <small>Created</small>
 
                                 </div>
                                 <div class="col-auto">
 
-                                  <!-- Badge -->
-                                  <span class="item-score badge badge-soft-success">8/10</span>
+                                  <!-- Time -->
+                                  <time class="item-created" datetime="2020-01-14">Jan 14, 2020</time>
 
                                 </div>
                               </div> <!-- / .row -->
@@ -968,8 +1023,8 @@
 
                               <!-- Checkbox -->
                               <div class="custom-control custom-checkbox custom-checkbox-circle">
-                                <input type="checkbox" class="custom-control-input" id="cardsCheckBoxThree">
-                                <label class="custom-control-label" for="cardsCheckBoxThree"></label>
+                                <input type="checkbox" class="custom-control-input" id="cardsCheckboxThree">
+                                <label class="custom-control-label" for="cardsCheckboxThree"></label>
                               </div>
 
                             </div>
@@ -997,8 +1052,8 @@
                           </div> <!-- / .row -->
 
                           <!-- Image -->
-                          <a href="profile-posts.html" class="avatar avatar-xl card-avatar">
-                            <img src="../assets/img/avatars/profiles/avatar-3.jpg" class="avatar-img rounded-circle" alt="...">
+                          <a href="team-overview.html" class="avatar avatar-xl card-avatar">
+                            <img src="../assets/img/avatars/teams/team-logo-4.jpg" class="avatar-img rounded" alt="...">
                           </a>
 
                           <!-- Body -->
@@ -1006,21 +1061,13 @@
 
                             <!-- Heading -->
                             <h2 class="card-title item-name">
-                              <a href="profile-posts.html">Adolfo Hess</a>
+                              <a href="team-overview.html">PayPal</a>
                             </h2>
 
                             <!-- Text -->
-                            <p class="small text-muted mb-3">
-                              <span class="item-title">CEO</span> at <span class="item-company">Google</span>
+                            <p class="small text-muted mb-0">
+                              PayPal is a worldwide online payments system that supports online money transfers and services.
                             </p>
-
-                            <!-- Buttons -->
-                            <a class="btn btn-sm btn-white" href="tel:1-650-430-1780">
-                              <i class="fe fe-phone mr-1"></i> Call
-                            </a>
-                            <a class="btn btn-sm btn-white" href="mailto:adolfo.hess@company.com">
-                              <i class="fe fe-mail mr-1"></i> Email
-                            </a>
 
                           </div>
 
@@ -1034,13 +1081,15 @@
                                 <div class="col">
 
                                   <!-- Text -->
-                                  <small>Company</small>
+                                  <small>Contact</small>
 
                                 </div>
                                 <div class="col-auto">
 
-                                  <!-- Text -->
-                                  <small>Twitter</small>
+                                  <!-- Link -->
+                                  <a href="profile-posts.html">
+                                    <small class="item-owner">Dave Gamache</small>
+                                  </a>
 
                                 </div>
                               </div> <!-- / .row -->
@@ -1050,13 +1099,13 @@
                                 <div class="col">
 
                                   <!-- Text -->
-                                  <small>Lead Score</small>
+                                  <small>Created</small>
 
                                 </div>
                                 <div class="col-auto">
 
-                                  <!-- Badge -->
-                                  <span class="item-score badge badge-soft-success">7/10</span>
+                                  <!-- Time -->
+                                  <time class="item-created" datetime="2020-01-14">Jan 14, 2020</time>
 
                                 </div>
                               </div> <!-- / .row -->
@@ -1108,8 +1157,8 @@
                           </div> <!-- / .row -->
 
                           <!-- Image -->
-                          <a href="profile-posts.html" class="avatar avatar-xl card-avatar">
-                            <img src="../assets/img/avatars/profiles/avatar-4.jpg" class="avatar-img rounded-circle" alt="...">
+                          <a href="team-overview.html" class="avatar avatar-xl card-avatar">
+                            <img src="../assets/img/avatars/teams/team-logo-5.jpg" class="avatar-img rounded" alt="...">
                           </a>
 
                           <!-- Body -->
@@ -1117,21 +1166,13 @@
 
                             <!-- Heading -->
                             <h2 class="card-title item-name">
-                              <a href="profile-posts.html">Daniela Dewitt</a>
+                              <a href="team-overview.html">Dropbox Inc.</a>
                             </h2>
 
                             <!-- Text -->
-                            <p class="small text-muted mb-3">
-                              <span class="item-title">Designer</span> at <span class="item-position">Twitch</span>
+                            <p class="small text-muted mb-0">
+                              Dropbox is a file hosting service that offers cloud storage, file synchronization, a personal cloud.
                             </p>
-
-                            <!-- Buttons -->
-                            <a class="btn btn-sm btn-white" href="tel:tel:1-650-430-1780">
-                              <i class="fe fe-phone mr-1"></i> Call
-                            </a>
-                            <a class="btn btn-sm btn-white" href="mailto:daniela.dewitt@company.com">
-                              <i class="fe fe-mail mr-1"></i> Email
-                            </a>
 
                           </div>
 
@@ -1145,13 +1186,15 @@
                                 <div class="col">
 
                                   <!-- Text -->
-                                  <small>Company</small>
+                                  <small>Contact</small>
 
                                 </div>
                                 <div class="col-auto">
 
-                                  <!-- Text -->
-                                  <small>Twitch</small>
+                                  <!-- Link -->
+                                  <a href="profile-posts.html">
+                                    <small class="item-owner">Dave Gamache</small>
+                                  </a>
 
                                 </div>
                               </div> <!-- / .row -->
@@ -1161,124 +1204,13 @@
                                 <div class="col">
 
                                   <!-- Text -->
-                                  <small>Lead Score</small>
+                                  <small>Created</small>
 
                                 </div>
                                 <div class="col-auto">
 
-                                  <!-- Badge -->
-                                  <span class="item-score badge badge-soft-warning">4/10</span>
-
-                                </div>
-                              </div> <!-- / .row -->
-                            </div>
-                          </div>
-
-                        </div>
-                      </div>
-
-                    </div>
-                    <div class="col-12 col-md-6 col-xl-4">
-
-                      <!-- Card -->
-                      <div class="card">
-                        <div class="card-body">
-
-                          <!-- Header -->
-                          <div class="row align-items-center">
-                            <div class="col">
-
-                              <!-- Checkbox -->
-                              <div class="custom-control custom-checkbox custom-checkbox-circle">
-                                <input type="checkbox" class="custom-control-input" id="cardsCheckboxFive">
-                                <label class="custom-control-label" for="cardsCheckboxFive"></label>
-                              </div>
-
-                            </div>
-                            <div class="col-auto">
-
-                              <!-- Dropdown -->
-                              <div class="dropdown">
-                                <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  <i class="fe fe-more-vertical"></i>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                  <a href="#!" class="dropdown-item">
-                                    Action
-                                  </a>
-                                  <a href="#!" class="dropdown-item">
-                                    Another action
-                                  </a>
-                                  <a href="#!" class="dropdown-item">
-                                    Something else here
-                                  </a>
-                                </div>
-                              </div>
-
-                            </div>
-                          </div> <!-- / .row -->
-
-                          <!-- Image -->
-                          <a href="profile-posts.html" class="avatar avatar-xl card-avatar">
-                            <img src="../assets/img/avatars/profiles/avatar-5.jpg" class="avatar-img rounded-circle" alt="...">
-                          </a>
-
-                          <!-- Body -->
-                          <div class="text-center mb-5">
-
-                            <!-- Heading -->
-                            <h2 class="card-title item-name">
-                              <a href="profile-posts.html">Miyah Myles</a>
-                            </h2>
-
-                            <!-- Text -->
-                            <p class="small text-muted mb-3">
-                              <span class="item-title">Courier</span> at <span class="item-company">Facebook</span>
-                            </p>
-
-                            <!-- Buttons -->
-                            <a class="btn btn-sm btn-white" href="tel:1-650-430-1780">
-                              <i class="fe fe-phone mr-1"></i> Call
-                            </a>
-                            <a class="btn btn-sm btn-white" href="mailto:miyah.myles@company.com">
-                              <i class="fe fe-mail mr-1"></i> Email
-                            </a>
-
-                          </div>
-
-                          <!-- Divider -->
-                          <hr class="card-divider mb-0">
-
-                          <!-- List group -->
-                          <div class="list-group list-group-flush mb-n3">
-                            <div class="list-group-item">
-                              <div class="row">
-                                <div class="col">
-
-                                  <!-- Text -->
-                                  <small>Company</small>
-
-                                </div>
-                                <div class="col-auto">
-
-                                  <!-- Text -->
-                                  <small>Facebook</small>
-
-                                </div>
-                              </div> <!-- / .row -->
-                            </div>
-                            <div class="list-group-item">
-                              <div class="row">
-                                <div class="col">
-
-                                  <!-- Text -->
-                                  <small>Lead Score</small>
-
-                                </div>
-                                <div class="col-auto">
-
-                                  <!-- Badge -->
-                                  <span class="item-score badge badge-soft-danger">3/10</span>
+                                  <!-- Time -->
+                                  <time class="item-created" datetime="2020-01-14">Jan 14, 2020</time>
 
                                 </div>
                               </div> <!-- / .row -->
