@@ -70,11 +70,11 @@
 
                     <!-- Navigation (button group) -->
                     <div class="nav btn-group d-inline-flex" role="tablist">
-                      <button class="btn btn-white active" id="contactsListTab" data-toggle="tab" data-target="#contactsList" role="tab" aria-controls="contactsList" aria-selected="true">
-                        <span class="fe fe-grid"></span>
-                      </button>
-                      <button class="btn btn-white" id="contactsCardsTab" data-toggle="tab" data-target="#contactsCards" role="tab" aria-controls="contactsCards" aria-selected="false">
+                      <button class="btn btn-white active" id="contactsListTab" data-toggle="tab" data-target="#contactsListPane" role="tab" aria-controls="contactsListPane" aria-selected="true">
                         <span class="fe fe-list"></span>
+                      </button>
+                      <button class="btn btn-white" id="contactsCardsTab" data-toggle="tab" data-target="#contactsCardsPane" role="tab" aria-controls="contactsCardsPane" aria-selected="false">
+                        <span class="fe fe-grid"></span>
                       </button>
                     </div> <!-- / .nav -->
 
@@ -114,10 +114,10 @@
 
             <!-- Tab content -->
             <div class="tab-content">
-              <div class="tab-pane fade show active" id="contactsList" role="tabpanel" aria-labelledby="contactsListTab">
+              <div class="tab-pane fade show active" id="contactsListPane" role="tabpanel" aria-labelledby="contactsListTab">
 
                 <!-- Card -->
-                <div class="card" data-list='{"valueNames": ["item-name", "item-title", "item-email", "item-phone", "item-score", "item-company"]}'>
+                <div class="card" data-list='{"valueNames": ["item-name", "item-title", "item-email", "item-phone", "item-score", "item-company"], "page": 5}' id="contactsList">
                   <div class="card-header">
                     <div class="row align-items-center">
                       <div class="col">
@@ -138,12 +138,15 @@
                       <div class="col-auto mr-n3">
 
                         <!-- Select -->
-                        <select class="custom-select custom-select-sm form-control-flush" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
-                          <option>5 per page</option>
-                          <option>10 per page</option>
-                          <option>25 per page</option>
-                          <option>50 per page</option>
-                        </select>
+                        <form>
+                          <select class="list-pages custom-select custom-select-sm form-control-flush" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
+                            <option value="1">1 per page</option>
+                            <option value="2">2 per page</option>
+                            <option value="3">3 per page</option>
+                            <option value="4">4 per page</option>
+                            <option value="5" selected>5 per page</option>
+                          </select>
+                        </form>
 
                       </div>
                       <div class="col-auto">
@@ -153,7 +156,7 @@
                           <button class="btn btn-sm btn-white" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fe fe-sliders mr-1"></i> Filter
                           </button>
-                          <form class="dropdown-menu dropdown-menu-right dropdown-menu-card">
+                          <form class="list-filter dropdown-menu dropdown-menu-right dropdown-menu-card">
                             <div class="card-header">
 
                               <!-- Title -->
@@ -162,7 +165,7 @@
                               </h4>
 
                               <!-- Link -->
-                              <a class="text-reset" href="#">
+                              <a class="text-reset" data-reset href="#">
                                 <small>Clear filters</small>
                               </a>
 
@@ -176,14 +179,17 @@
                                     <div class="col">
 
                                       <!-- Text -->
-                                      <small>Owner</small>
+                                      <small>Title</small>
 
                                     </div>
                                     <div class="col-auto">
 
                                       <!-- Select -->
-                                      <select class="custom-select custom-select-sm" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
-                                        <option>Dave Gamache</option>
+                                      <select class="custom-select custom-select-sm" name="item-title" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
+                                        <option value="Designer">Designer</option>
+                                        <option value="Developer">Developer</option>
+                                        <option value="Owner">Owner</option>
+                                        <option value="Founder">Founder</option>
                                       </select>
 
                                     </div>
@@ -194,14 +200,23 @@
                                     <div class="col">
 
                                       <!-- Text -->
-                                      <small>Industry</small>
+                                      <small>Lead scrore</small>
 
                                     </div>
                                     <div class="col-auto">
 
                                       <!-- Select -->
-                                      <select class="custom-select custom-select-sm" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
-                                        <option>Any</option>
+                                      <select class="custom-select custom-select-sm" name="item-score" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
+                                        <option value="1/10">1+</option>
+                                        <option value="2/10">2+</option>
+                                        <option value="3/10">3+</option>
+                                        <option value="4/10">4+</option>
+                                        <option value="5/10">5+</option>
+                                        <option value="6/10">6+</option>
+                                        <option value="7/10">7+</option>
+                                        <option value="8/10">8+</option>
+                                        <option value="9/10">9+</option>
+                                        <option value="10/10">10</option>
                                       </select>
 
                                     </div>
@@ -210,14 +225,13 @@
                               </div>
 
                               <!-- Button -->
-                              <button class="btn btn-block btn-primary">
+                              <button class="btn btn-block btn-primary" type="submit">
                                 Create new filter
                               </button>
 
                             </div>
                           </form>
                         </div>
-
 
                       </div>
                     </div> <!-- / .row -->
@@ -274,19 +288,22 @@
                             </div> <a class="item-name text-reset" href="profile-posts.html">Dianna Smiley</a>
 
                           </td>
-                          <td class="item-title">
-                            Designer
+                          <td>
+
+                            <!-- Text -->
+                            <span class="item-title">Designer</span>
+
                           </td>
-                          <td class="item-email">
+                          <td>
 
                             <!-- Email -->
-                            <a class="text-reset" href="mailto:diana.smiley@company.com">diana.smiley@company.com</a>
+                            <a class="item-email text-reset" href="mailto:diana.smiley@company.com">diana.smiley@company.com</a>
 
                           </td>
-                          <td class="item-phone">
+                          <td>
 
                             <!-- Phone -->
-                            <a class="text-reset" href="tel:1-650-430-1780">(988) 568-3568</a>
+                            <a class="item-phone text-reset" href="tel:1-650-430-1780">(988) 568-3568</a>
 
                           </td>
                           <td>
@@ -295,10 +312,10 @@
                             <span class="item-score badge badge-soft-danger">1/10</span>
 
                           </td>
-                          <td class="item-company">
+                          <td>
 
                             <!-- Link -->
-                            <a class="text-reset" href="team-overview.html">Twitter</a>
+                            <a class="item-company text-reset" href="team-overview.html">Twitter</a>
 
                           </td>
                           <td class="text-right">
@@ -341,19 +358,22 @@
                             </div> <a class="item-name text-reset" href="profile-posts.html">Ab Hadley</a>
 
                           </td>
-                          <td class="item-title">
-                            Software engineer
+                          <td class="">
+
+                            <!-- Text -->
+                            <span class="item-title">Developer</span>
+
                           </td>
-                          <td class="item-email">
+                          <td>
 
                             <!-- Email -->
-                            <a class="text-reset" href="mailto:ab.hadley@company.com">ab.hadley@company.com</a>
+                            <a class="item-email text-reset" href="mailto:ab.hadley@company.com">ab.hadley@company.com</a>
 
                           </td>
-                          <td class="item-phone">
+                          <td>
 
                             <!-- Phone -->
-                            <a class="text-reset" href="tel:1-650-430-1780">(650) 430-9876</a>
+                            <a class="item-phone text-reset" href="tel:1-650-430-1780">(650) 430-9876</a>
 
                           </td>
                           <td>
@@ -362,10 +382,10 @@
                             <span class="item-score badge badge-soft-success">8/10</span>
 
                           </td>
-                          <td class="item-company">
+                          <td>
 
                             <!-- Link -->
-                            <a class="text-reset" href="team-overview.html">Google</a>
+                            <a class="item-company text-reset" href="team-overview.html">Google</a>
 
                           </td>
                           <td class="text-right">
@@ -408,19 +428,22 @@
                             </div> <a class="item-name text-reset" href="profile-posts.html">Adolfo Hess</a>
 
                           </td>
-                          <td class="item-title">
-                            Sales engineer
+                          <td class="">
+
+                            <!-- Text -->
+                            <span class="item-title">Owner</span>
+
                           </td>
-                          <td class="item-email">
+                          <td>
 
                             <!-- Email -->
-                            <a class="text-reset" href="mailto:adolfo.hess@company.com">adolfo.hess@company.com</a>
+                            <a class="item-email text-reset" href="mailto:adolfo.hess@company.com">adolfo.hess@company.com</a>
 
                           </td>
-                          <td class="item-phone">
+                          <td>
 
                             <!-- Phone -->
-                            <a class="text-reset" href="tel:1-650-430-1780">(968) 682-1364</a>
+                            <a class="item-phone text-reset" href="tel:1-650-430-1780">(968) 682-1364</a>
 
                           </td>
                           <td>
@@ -429,10 +452,10 @@
                             <span class="item-score badge badge-soft-success">7/10</span>
 
                           </td>
-                          <td class="item-company">
+                          <td>
 
                             <!-- Link -->
-                            <a class="text-reset" href="team-overview.html">Google</a>
+                            <a class="item-company text-reset" href="team-overview.html">Google</a>
 
                           </td>
                           <td class="text-right">
@@ -475,19 +498,22 @@
                             </div> <a class="item-name text-reset" href="profile-posts.html">Daniela Dewitt</a>
 
                           </td>
-                          <td class="item-title">
-                            Designer
+                          <td>
+
+                            <!-- Text -->
+                            <span class="item-title">Designer</span>
+
                           </td>
-                          <td class="item-email">
+                          <td>
 
                             <!-- Email -->
-                            <a class="text-reset" href="mailto:daniela.dewitt@company.com">daniela.dewitt@company.com</a>
+                            <a class="item-email text-reset" href="mailto:daniela.dewitt@company.com">daniela.dewitt@company.com</a>
 
                           </td>
-                          <td class="item-phone">
+                          <td>
 
                             <!-- Phone -->
-                            <a class="text-reset" href="tel:1-650-430-1780">(650) 430-9876</a>
+                            <a class="item-phone text-reset" href="tel:1-650-430-1780">(650) 430-9876</a>
 
                           </td>
                           <td>
@@ -496,10 +522,10 @@
                             <span class="item-score badge badge-soft-warning">4/10</span>
 
                           </td>
-                          <td class="item-company">
+                          <td>
 
                             <!-- Link -->
-                            <a class="text-reset" href="team-overview.html">Twitch</a>
+                            <a class="item-company text-reset" href="team-overview.html">Twitch</a>
 
                           </td>
                           <td class="text-right">
@@ -542,19 +568,22 @@
                             </div> <a class="item-name text-reset" href="profile-posts.html">Miyah Myles</a>
 
                           </td>
-                          <td class="item-title">
-                            Program manager
+                          <td>
+
+                            <!-- Text -->
+                            <span class="item-title">Founder</span>
+
                           </td>
-                          <td class="item-email">
+                          <td>
 
                             <!-- Email -->
-                            <a class="text-reset" href="mailto:miyah.myles@company.com">miyah.myles@company.com</a>
+                            <a class="item-email text-reset" href="mailto:miyah.myles@company.com">miyah.myles@company.com</a>
 
                           </td>
-                          <td class="item-phone">
+                          <td>
 
                             <!-- Phone -->
-                            <a class="text-reset" href="tel:1-650-430-1780">(935) 165-8435</a>
+                            <a class="item-phone text-reset" href="tel:1-650-430-1780">(935) 165-8435</a>
 
                           </td>
                           <td>
@@ -563,10 +592,10 @@
                             <span class="item-score badge badge-soft-danger">3/10</span>
 
                           </td>
-                          <td class="item-company">
+                          <td>
 
                             <!-- Link -->
-                            <a class="text-reset" href="team-overview.html">Facebook</a>
+                            <a class="item-company text-reset" href="team-overview.html">Facebook</a>
 
                           </td>
                           <td class="text-right">
@@ -594,39 +623,20 @@
                       </tbody>
                     </table>
                   </div>
-                  <div class="card-footer">
+                  <div class="card-footer d-flex">
 
                     <!-- Pagination -->
-                    <ul class="pagination pagination-tabs pagination-overflow card-pagination">
-                      <li class="page-item mr-auto">
-                        <a class="page-link text-reset" href="#">
-                          <i class="fe fe-arrow-left mr-1"></i> Previous
-                        </a>
-                      </li>
-                      <li class="page-item active">
-                        <a class="page-link" href="#">1</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">2</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">3</a>
-                      </li>
-                      <li class="page-item ml-auto">
-                        <a class="page-link text-reset" href="#">
-                          Next <i class="fe fe-arrow-right ml-1"></i>
-                        </a>
-                      </li>
+                    <ul class="list-pagination pagination pagination-tabs pagination-overflow card-pagination">
                     </ul>
 
                   </div>
                 </div>
 
               </div>
-              <div class="tab-pane fade" id="contactsCards" role="tabpanel" aria-labelledby="contactsCardsTab">
+              <div class="tab-pane fade" id="contactsCardsPane" role="tabpanel" aria-labelledby="contactsCardsTab">
 
                 <!-- Cards -->
-                <div data-list='{"valueNames": ["item-name", "item-title", "item-email", "item-phone", "item-score", "item-company"]}'>
+                <div data-list='{"valueNames": ["item-name", "item-title", "item-email", "item-phone", "item-score", "item-company"], "page": 5}' id="contactsCards">
 
                   <!-- Header -->
                   <div class="row align-items-center mb-4">
@@ -648,12 +658,15 @@
                     <div class="col-auto mr-n3">
 
                       <!-- Select -->
-                      <select class="custom-select custom-select-sm form-control-flush" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
-                        <option>5 per page</option>
-                        <option>10 per page</option>
-                        <option>25 per page</option>
-                        <option>50 per page</option>
-                      </select>
+                      <form>
+                        <select class="list-pages custom-select custom-select-sm form-control-flush" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
+                          <option value="1">1 per page</option>
+                          <option value="2">2 per page</option>
+                          <option value="3">3 per page</option>
+                          <option value="4">4 per page</option>
+                          <option value="5" selected>5 per page</option>
+                        </select>
+                      </form>
 
                     </div>
                     <div class="col-auto">
@@ -663,7 +676,7 @@
                         <button class="btn btn-sm btn-white" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <i class="fe fe-sliders mr-1"></i> Filter
                         </button>
-                        <form class="dropdown-menu dropdown-menu-right dropdown-menu-card">
+                        <form class="list-filter dropdown-menu dropdown-menu-right dropdown-menu-card">
                           <div class="card-header">
 
                             <!-- Title -->
@@ -672,7 +685,7 @@
                             </h4>
 
                             <!-- Link -->
-                            <a class="text-reset" href="#">
+                            <a class="text-reset" data-reset href="#">
                               <small>Clear filters</small>
                             </a>
 
@@ -686,14 +699,17 @@
                                   <div class="col">
 
                                     <!-- Text -->
-                                    <small>Owner</small>
+                                    <small>Title</small>
 
                                   </div>
                                   <div class="col-auto">
 
                                     <!-- Select -->
-                                    <select class="custom-select custom-select-sm" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
-                                      <option>Dave Gamache</option>
+                                    <select class="custom-select custom-select-sm" name="item-title" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
+                                      <option value="Designer">Designer</option>
+                                      <option value="Developer">Developer</option>
+                                      <option value="Owner">Owner</option>
+                                      <option value="Founder">Founder</option>
                                     </select>
 
                                   </div>
@@ -704,14 +720,23 @@
                                   <div class="col">
 
                                     <!-- Text -->
-                                    <small>Industry</small>
+                                    <small>Lead scrore</small>
 
                                   </div>
                                   <div class="col-auto">
 
                                     <!-- Select -->
-                                    <select class="custom-select custom-select-sm" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
-                                      <option>Any</option>
+                                    <select class="custom-select custom-select-sm" name="item-score" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
+                                      <option value="1/10">1+</option>
+                                      <option value="2/10">2+</option>
+                                      <option value="3/10">3+</option>
+                                      <option value="4/10">4+</option>
+                                      <option value="5/10">5+</option>
+                                      <option value="6/10">6+</option>
+                                      <option value="7/10">7+</option>
+                                      <option value="8/10">8+</option>
+                                      <option value="9/10">9+</option>
+                                      <option value="10/10">10</option>
                                     </select>
 
                                   </div>
@@ -720,14 +745,13 @@
                             </div>
 
                             <!-- Button -->
-                            <button class="btn btn-block btn-primary">
+                            <button class="btn btn-block btn-primary" type="submit">
                               Create new filter
                             </button>
 
                           </div>
                         </form>
                       </div>
-
 
                     </div>
                   </div> <!-- / .row -->
@@ -745,7 +769,7 @@
                             <div class="col">
 
                               <!-- Checkbox -->
-                              <div class="custom-control custom-checkbox custom-checkbox-circle">
+                              <div class="custom-control custom-control-circle custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="cardsCheckboxOne">
                                 <label class="custom-control-label" for="cardsCheckboxOne"></label>
                               </div>
@@ -755,7 +779,7 @@
 
                               <!-- Dropdown -->
                               <div class="dropdown">
-                                <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   <i class="fe fe-more-vertical"></i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
@@ -783,8 +807,8 @@
                           <div class="text-center mb-5">
 
                             <!-- Heading -->
-                            <h2 class="card-title item-name">
-                              <a href="profile-posts.html">Dianna Smiley</a>
+                            <h2 class="card-title">
+                              <a class="item-name" href="profile-posts.html">Dianna Smiley</a>
                             </h2>
 
                             <!-- Text -->
@@ -856,7 +880,7 @@
                             <div class="col">
 
                               <!-- Checkbox -->
-                              <div class="custom-control custom-checkbox custom-checkbox-circle">
+                              <div class="custom-control custom-control-circle custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="cardsCheckboxTwo">
                                 <label class="custom-control-label" for="cardsCheckboxTwo"></label>
                               </div>
@@ -866,7 +890,7 @@
 
                               <!-- Dropdown -->
                               <div class="dropdown">
-                                <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   <i class="fe fe-more-vertical"></i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
@@ -894,13 +918,13 @@
                           <div class="text-center mb-5">
 
                             <!-- Heading -->
-                            <h2 class="card-title item-name">
-                              <a href="profile-posts.html">Ab Hadley</a>
+                            <h2 class="card-title">
+                              <a class="item-name" href="profile-posts.html">Ab Hadley</a>
                             </h2>
 
                             <!-- Text -->
                             <p class="small text-muted mb-3">
-                              <span class="item-title">Software engineer</span> at <span class="item-company">Google</span>
+                              <span class="item-title">Developer</span> at <span class="item-company">Google</span>
                             </p>
 
                             <!-- Buttons -->
@@ -967,7 +991,7 @@
                             <div class="col">
 
                               <!-- Checkbox -->
-                              <div class="custom-control custom-checkbox custom-checkbox-circle">
+                              <div class="custom-control custom-control-circle custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="cardsCheckBoxThree">
                                 <label class="custom-control-label" for="cardsCheckBoxThree"></label>
                               </div>
@@ -977,7 +1001,7 @@
 
                               <!-- Dropdown -->
                               <div class="dropdown">
-                                <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   <i class="fe fe-more-vertical"></i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
@@ -1005,13 +1029,13 @@
                           <div class="text-center mb-5">
 
                             <!-- Heading -->
-                            <h2 class="card-title item-name">
-                              <a href="profile-posts.html">Adolfo Hess</a>
+                            <h2 class="card-title">
+                              <a class="item-name" href="profile-posts.html">Adolfo Hess</a>
                             </h2>
 
                             <!-- Text -->
                             <p class="small text-muted mb-3">
-                              <span class="item-title">Sales engineer</span> at <span class="item-company">Google</span>
+                              <span class="item-title">Owner</span> at <span class="item-company">Google</span>
                             </p>
 
                             <!-- Buttons -->
@@ -1078,7 +1102,7 @@
                             <div class="col">
 
                               <!-- Checkbox -->
-                              <div class="custom-control custom-checkbox custom-checkbox-circle">
+                              <div class="custom-control custom-control-circle custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="cardsCheckboxFour">
                                 <label class="custom-control-label" for="cardsCheckboxFour"></label>
                               </div>
@@ -1088,7 +1112,7 @@
 
                               <!-- Dropdown -->
                               <div class="dropdown">
-                                <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   <i class="fe fe-more-vertical"></i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
@@ -1116,8 +1140,8 @@
                           <div class="text-center mb-5">
 
                             <!-- Heading -->
-                            <h2 class="card-title item-name">
-                              <a href="profile-posts.html">Daniela Dewitt</a>
+                            <h2 class="card-title">
+                              <a class="item-name" href="profile-posts.html">Daniela Dewitt</a>
                             </h2>
 
                             <!-- Text -->
@@ -1189,7 +1213,7 @@
                             <div class="col">
 
                               <!-- Checkbox -->
-                              <div class="custom-control custom-checkbox custom-checkbox-circle">
+                              <div class="custom-control custom-control-circle custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="cardsCheckboxFive">
                                 <label class="custom-control-label" for="cardsCheckboxFive"></label>
                               </div>
@@ -1199,7 +1223,7 @@
 
                               <!-- Dropdown -->
                               <div class="dropdown">
-                                <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   <i class="fe fe-more-vertical"></i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
@@ -1227,13 +1251,13 @@
                           <div class="text-center mb-5">
 
                             <!-- Heading -->
-                            <h2 class="card-title item-name">
-                              <a href="profile-posts.html">Miyah Myles</a>
+                            <h2 class="card-title">
+                              <a class="item-name" href="profile-posts.html">Miyah Myles</a>
                             </h2>
 
                             <!-- Text -->
                             <p class="small text-muted mb-3">
-                              <span class="item-title">Program manager</span> at <span class="item-company">Facebook</span>
+                              <span class="item-title">Founder</span> at <span class="item-company">Facebook</span>
                             </p>
 
                             <!-- Buttons -->
@@ -1292,26 +1316,7 @@
                   </div>
 
                   <!-- Pagination -->
-                  <ul class="pagination pagination-tabs pagination-overflow">
-                    <li class="page-item mr-auto">
-                      <a class="page-link text-reset" href="#">
-                        <i class="fe fe-arrow-left mr-1"></i> Previous
-                      </a>
-                    </li>
-                    <li class="page-item active">
-                      <a class="page-link" href="#">1</a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">2</a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">3</a>
-                    </li>
-                    <li class="page-item ml-auto">
-                      <a class="page-link text-reset" href="#">
-                        Next <i class="fe fe-arrow-right ml-1"></i>
-                      </a>
-                    </li>
+                  <ul class="list-pagination pagination pagination-tabs pagination-overflow">
                   </ul>
 
                 </div>

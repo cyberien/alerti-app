@@ -70,11 +70,11 @@
 
                     <!-- Navigation (button group) -->
                     <div class="nav btn-group d-inline-flex" role="tablist">
-                      <button class="btn btn-white active" id="dealsListTab" data-toggle="tab" data-target="#dealsList" role="tab" aria-controls="dealsList" aria-selected="true">
-                        <span class="fe fe-grid"></span>
-                      </button>
-                      <button class="btn btn-white" id="dealsCardsTab" data-toggle="tab" data-target="#dealsCards" role="tab" aria-controls="dealsCards" aria-selected="false">
+                      <button class="btn btn-white active" id="dealsListTab" data-toggle="tab" data-target="#dealsListPane" role="tab" aria-controls="dealsListPane" aria-selected="true">
                         <span class="fe fe-list"></span>
+                      </button>
+                      <button class="btn btn-white" id="dealsCardsTab" data-toggle="tab" data-target="#dealsCardsPane" role="tab" aria-controls="dealsCardsPane" aria-selected="false">
+                        <span class="fe fe-sidebar"></span>
                       </button>
                     </div> <!-- / .nav -->
 
@@ -114,10 +114,10 @@
 
             <!-- Tab content -->
             <div class="tab-content">
-              <div class="tab-pane fade show active" id="dealsList" role="tabpanel" aria-labelledby="dealsListTab">
+              <div class="tab-pane fade show active" id="dealsListPane" role="tabpanel" aria-labelledby="dealsListTab">
 
                 <!-- Card -->
-                <div class="card" data-list='{"valueNames": ["item-name", "item-stage", "item-amount", "item-owner", "item-contacted"]}'>
+                <div class="card" data-list='{"valueNames": ["item-name", "item-stage", "item-amount", "item-owner", "item-contacted"], "page": 5}' id="dealsList">
                   <div class="card-header">
                     <div class="row align-items-center">
                       <div class="col">
@@ -138,12 +138,15 @@
                       <div class="col-auto mr-n3">
 
                         <!-- Select -->
-                        <select class="custom-select custom-select-sm form-control-flush" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
-                          <option>5 per page</option>
-                          <option>10 per page</option>
-                          <option>25 per page</option>
-                          <option>50 per page</option>
-                        </select>
+                        <form>
+                          <select class="list-pages custom-select custom-select-sm form-control-flush" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
+                            <option value="1">1 per page</option>
+                            <option value="2">2 per page</option>
+                            <option value="3">3 per page</option>
+                            <option value="4">4 per page</option>
+                            <option value="5" selected>5 per page</option>
+                          </select>
+                        </form>
 
                       </div>
                       <div class="col-auto">
@@ -153,7 +156,7 @@
                           <button class="btn btn-sm btn-white" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fe fe-sliders mr-1"></i> Filter
                           </button>
-                          <form class="dropdown-menu dropdown-menu-right dropdown-menu-card">
+                          <form class="list-filter dropdown-menu dropdown-menu-right dropdown-menu-card">
                             <div class="card-header">
 
                               <!-- Title -->
@@ -162,7 +165,7 @@
                               </h4>
 
                               <!-- Link -->
-                              <a class="text-reset" href="#">
+                              <a class="text-reset" data-reset href="#">
                                 <small>Clear filters</small>
                               </a>
 
@@ -176,14 +179,20 @@
                                     <div class="col">
 
                                       <!-- Text -->
-                                      <small>Owner</small>
+                                      <small>Stage</small>
 
                                     </div>
                                     <div class="col-auto">
 
                                       <!-- Select -->
-                                      <select class="custom-select custom-select-sm" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
-                                        <option>Dave Gamache</option>
+                                      <select class="custom-select custom-select-sm" name="item-stage" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
+                                        <option value="Appointment scheduled">Appointment scheduled</option>
+                                        <option value="Kickoff call">Kickoff call</option>
+                                        <option value="Quote accepted">Quote accepted</option>
+                                        <option value="Project in progress">Project in progress</option>
+                                        <option value="Initial review">Initial review</option>
+                                        <option value="Final review">Final review</option>
+                                        <option value="Completed">Completed</option>
                                       </select>
 
                                     </div>
@@ -194,14 +203,18 @@
                                     <div class="col">
 
                                       <!-- Text -->
-                                      <small>Industry</small>
+                                      <small>Owner</small>
 
                                     </div>
                                     <div class="col-auto">
 
                                       <!-- Select -->
-                                      <select class="custom-select custom-select-sm" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
-                                        <option>Any</option>
+                                      <select class="custom-select custom-select-sm" name="item-owner" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
+                                        <option value="Dianna Smiley">Dianna Smiley</option>
+                                        <option value="Ab Hadley">Ab Hadley</option>
+                                        <option value="Adolfo Hess">Adolfo Hess</option>
+                                        <option value="Daniela Dewitt">Daniela Dewitt</option>
+                                        <option value="Miyah Myles">Miyah Myles</option>
                                       </select>
 
                                     </div>
@@ -210,14 +223,13 @@
                               </div>
 
                               <!-- Button -->
-                              <button class="btn btn-block btn-primary">
+                              <button class="btn btn-block btn-primary" type="submit">
                                 Create new filter
                               </button>
 
                             </div>
                           </form>
                         </div>
-
 
                       </div>
                     </div> <!-- / .row -->
@@ -263,17 +275,23 @@
                             </div>
 
                           </td>
-                          <td class="item-name">
+                          <td>
 
                             <!-- Link -->
-                            <a class="text-reset" href="http://localhost:3000/project-overview.html">Lyft brand redesign</a>
+                            <a class="item-name text-reset" href="http://localhost:3000/project-overview.html">Lyft brand redesign</a>
 
                           </td>
-                          <td class="item-stage">
-                            Quote accepted
+                          <td>
+
+                            <!-- Text -->
+                            <span class="item-stage">Quote accepted</span>
+
                           </td>
-                          <td class="item-amount">
-                            $16,000
+                          <td>
+
+                            <!-- Text -->
+                            <span class="item-amount">$16,000</span>
+
                           </td>
                           <td>
 
@@ -283,10 +301,10 @@
                             </div> <a class="item-owner text-reset" href="profile-posts.html">Dianna Smiley</a>
 
                           </td>
-                          <td class="item-contacted">
+                          <td>
 
                             <!-- Date -->
-                            <time datetime="2020-01-14">Jan 14, 2020</time>
+                            <time class="item-contacted" datetime="2020-01-14">Jan 14, 2020</time>
 
                           </td>
                           <td class="text-right">
@@ -321,17 +339,23 @@
                             </div>
 
                           </td>
-                          <td class="item-name">
+                          <td>
 
                             <!-- Link -->
-                            <a class="text-reset" href="http://localhost:3000/project-overview.html">Slack SEO audit</a>
+                            <a class="item-name text-reset" href="http://localhost:3000/project-overview.html">Slack SEO audit</a>
 
                           </td>
-                          <td class="item-stage">
-                            Completed
+                          <td>
+
+                            <!-- Text -->
+                            <span class="item-stage">Completed</span>
+
                           </td>
-                          <td class="item-amount">
-                            $29,000
+                          <td>
+
+                            <!-- Text -->
+                            <span class="item-amount">$29,000</span>
+
                           </td>
                           <td>
 
@@ -341,10 +365,10 @@
                             </div> <a class="item-owner text-reset" href="profile-posts.html">Ab Hadley</a>
 
                           </td>
-                          <td class="item-contacted">
+                          <td>
 
                             <!-- Date -->
-                            <time datetime="2020-04-18">Apr 18, 2020</time>
+                            <time class="item-contacted" datetime="2020-04-18">Apr 18, 2020</time>
 
                           </td>
                           <td class="text-right">
@@ -374,22 +398,28 @@
 
                             <!-- Checkbox -->
                             <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="custom-control-input" id="listCheckboxThree">
-                              <label class="custom-control-label" for="listCheckboxThree"></label>
+                              <input type="checkbox" class="custom-control-input" id="listCheckboxЕркуу">
+                              <label class="custom-control-label" for="listCheckboxЕркуу"></label>
                             </div>
 
                           </td>
-                          <td class="item-name">
+                          <td>
 
                             <!-- Link -->
-                            <a class="text-reset" href="http://localhost:3000/project-overview.html">Airbnb React development</a>
+                            <a class="item-name text-reset" href="http://localhost:3000/project-overview.html">Airbnb React development</a>
 
                           </td>
-                          <td class="item-stage">
-                            Kickoff call
+                          <td>
+
+                            <!-- Text -->
+                            <span class="item-stage">Kickoff call</span>
+
                           </td>
-                          <td class="item-amount">
-                            $8,000
+                          <td>
+
+                            <!-- Text -->
+                            <span class="item-amount">$8,000</span>
+
                           </td>
                           <td>
 
@@ -399,10 +429,10 @@
                             </div> <a class="item-owner text-reset" href="profile-posts.html">Adolfo Hess</a>
 
                           </td>
-                          <td class="item-contacted">
+                          <td>
 
                             <!-- Date -->
-                            <time datetime="2020-01-14">May 30, 2020</time>
+                            <time class="item-contacted" datetime="2020-05-30">May 30, 2020</time>
 
                           </td>
                           <td class="text-right">
@@ -437,17 +467,23 @@
                             </div>
 
                           </td>
-                          <td class="item-name">
+                          <td>
 
                             <!-- Link -->
-                            <a class="text-reset" href="http://localhost:3000/project-overview.html">PayPal microsite update</a>
+                            <a class="item-name text-reset" href="http://localhost:3000/project-overview.html">PayPal microsite update</a>
 
                           </td>
-                          <td class="item-stage">
-                            Project in progress
+                          <td>
+
+                            <!-- Text -->
+                            <span class="item-stage">Project in progress</span>
+
                           </td>
-                          <td class="item-amount">
-                            $68,000
+                          <td>
+
+                            <!-- Text -->
+                            <span class="item-amount">$68,000</span>
+
                           </td>
                           <td>
 
@@ -457,10 +493,10 @@
                             </div> <a class="item-owner text-reset" href="profile-posts.html">Daniela Dewitt</a>
 
                           </td>
-                          <td class="item-contacted">
+                          <td>
 
                             <!-- Date -->
-                            <time datetime="2020-06-05">Jun 05, 2020</time>
+                            <time class="item-contacted" datetime="2020-06-05">Jun 05, 2020</time>
 
                           </td>
                           <td class="text-right">
@@ -495,17 +531,23 @@
                             </div>
 
                           </td>
-                          <td class="item-name">
+                          <td>
 
                             <!-- Link -->
-                            <a class="text-reset" href="http://localhost:3000/project-overview.html">Uber Vue code review</a>
+                            <a class="item-name text-reset" href="http://localhost:3000/project-overview.html">Uber Vue code review</a>
 
                           </td>
-                          <td class="item-stage">
-                            Finall review
+                          <td>
+
+                            <!-- Text -->
+                            <span class="item-stage">Final review</span>
+
                           </td>
-                          <td class="item-amount">
-                            $11,000
+                          <td>
+
+                            <!-- Text -->
+                            <span class="item-amount"> $11,000</span>
+
                           </td>
                           <td>
 
@@ -515,10 +557,10 @@
                             </div> <a class="item-owner text-reset" href="profile-posts.html">Miyah Myles</a>
 
                           </td>
-                          <td class="item-contacted">
+                          <td>
 
                             <!-- Date -->
-                            <time datetime="2020-08-6">Aug 16, 2020</time>
+                            <time class="item-contacted" datetime="2020-04-16">Aug 16, 2020</time>
 
                           </td>
                           <td class="text-right">
@@ -549,33 +591,14 @@
                   <div class="card-footer">
 
                     <!-- Pagination -->
-                    <ul class="pagination pagination-tabs pagination-overflow card-pagination">
-                      <li class="page-item mr-auto">
-                        <a class="page-link text-reset" href="#">
-                          <i class="fe fe-arrow-left mr-1"></i> Previous
-                        </a>
-                      </li>
-                      <li class="page-item active">
-                        <a class="page-link" href="#">1</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">2</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">3</a>
-                      </li>
-                      <li class="page-item ml-auto">
-                        <a class="page-link text-reset" href="#">
-                          Next <i class="fe fe-arrow-right ml-1"></i>
-                        </a>
-                      </li>
+                    <ul class="list-pagination pagination pagination-tabs pagination-overflow card-pagination">
                     </ul>
 
                   </div>
                 </div>
 
               </div>
-              <div class="tab-pane fade" id="dealsCards" role="tabpanel" aria-labelledby="dealsCardsTab">
+              <div class="tab-pane fade" id="dealsCardsPane" role="tabpanel" aria-labelledby="dealsCardsTab">
 
               </div>
             </div>

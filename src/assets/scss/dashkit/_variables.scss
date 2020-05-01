@@ -767,12 +767,12 @@ $custom-switch-spacing: ($custom-switch-height - $custom-switch-indicator-size) 
 $custom-switch-indicator-bg: $white !default;
 $custom-switch-indicator-active-bg: $white !default;
 
-$custom-checkbox-circle-indicator-size: 1.375rem !default;
+$custom-control-circle-indicator-size: 1.375rem !default;
 
-$custom-checkbox-circle-indicator-border-radius: 50% !default;
-$custom-checkbox-circle-indicator-icon-checked: url(escape-svg("data:image/svg+xml,<svg viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M11.3333 1L3.99996 8.33333L0.666626 5' stroke='#{$white}' stroke-width='1.33333' stroke-linecap='round' stroke-linejoin='round'/></svg>")) !default;
+$custom-control-circle-indicator-border-radius: 50% !default;
+$custom-control-circle-indicator-icon-checked: url(escape-svg("data:image/svg+xml,<svg viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M11.3333 1L3.99996 8.33333L0.666626 5' stroke='#{$white}' stroke-width='1.33333' stroke-linecap='round' stroke-linejoin='round'/></svg>")) !default;
 
-$custom-checkbox-circle-indicator-bg-size: .75rem .5625rem !default;
+$custom-control-circle-indicator-bg-size: .75rem .5625rem !default;
 
 
 // Close

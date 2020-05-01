@@ -70,11 +70,11 @@
 
                     <!-- Navigation (button group) -->
                     <div class="nav btn-group d-inline-flex" role="tablist">
-                      <button class="btn btn-white active" id="companiesListTab" data-toggle="tab" data-target="#companiesList" role="tab" aria-controls="companiesList" aria-selected="true">
-                        <span class="fe fe-grid"></span>
-                      </button>
-                      <button class="btn btn-white" id="companiesCardsTab" data-toggle="tab" data-target="#companiesCards" role="tab" aria-controls="companiesCards" aria-selected="false">
+                      <button class="btn btn-white active" id="companiesListTab" data-toggle="tab" data-target="#companiesListPane" role="tab" aria-controls="companiesListPane" aria-selected="true">
                         <span class="fe fe-list"></span>
+                      </button>
+                      <button class="btn btn-white" id="companiesCardsTab" data-toggle="tab" data-target="#companiesCardsPane" role="tab" aria-controls="companiesCardsPane" aria-selected="false">
+                        <span class="fe fe-grid"></span>
                       </button>
                     </div> <!-- / .nav -->
 
@@ -114,10 +114,10 @@
 
             <!-- Tab content -->
             <div class="tab-content">
-              <div class="tab-pane fade show active" id="companiesList" role="tabpanel" aria-labelledby="companiesListTab">
+              <div class="tab-pane fade show active" id="companiesListPane" role="tabpanel" aria-labelledby="companiesListTab">
 
                 <!-- Card -->
-                <div class="card" data-list='{"valueNames": ["item-name", "item-industry", "item-location", "item-owner", "item-created"]}'>
+                <div class="card" data-list='{"valueNames": ["item-name", "item-industry", "item-location", "item-owner", "item-created"], "page": 5}' id="companiesList">
                   <div class="card-header">
                     <div class="row align-items-center">
                       <div class="col">
@@ -138,12 +138,15 @@
                       <div class="col-auto mr-n3">
 
                         <!-- Select -->
-                        <select class="custom-select custom-select-sm form-control-flush" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
-                          <option>5 per page</option>
-                          <option>10 per page</option>
-                          <option>25 per page</option>
-                          <option>50 per page</option>
-                        </select>
+                        <form>
+                          <select class="list-pages custom-select custom-select-sm form-control-flush" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
+                            <option value="1">1 per page</option>
+                            <option value="2">2 per page</option>
+                            <option value="3">3 per page</option>
+                            <option value="4">4 per page</option>
+                            <option value="5" selected>5 per page</option>
+                          </select>
+                        </form>
 
                       </div>
                       <div class="col-auto">
@@ -153,7 +156,7 @@
                           <button class="btn btn-sm btn-white" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fe fe-sliders mr-1"></i> Filter
                           </button>
-                          <form class="dropdown-menu dropdown-menu-right dropdown-menu-card">
+                          <form class="list-filter dropdown-menu dropdown-menu-right dropdown-menu-card">
                             <div class="card-header">
 
                               <!-- Title -->
@@ -162,7 +165,7 @@
                               </h4>
 
                               <!-- Link -->
-                              <a class="text-reset" href="#">
+                              <a class="text-reset" data-reset href="#">
                                 <small>Clear filters</small>
                               </a>
 
@@ -182,8 +185,12 @@
                                     <div class="col-auto">
 
                                       <!-- Select -->
-                                      <select class="custom-select custom-select-sm" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
-                                        <option>Dave Gamache</option>
+                                      <select class="custom-select custom-select-sm" name="item-owner" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
+                                        <option value="Dianna Smiley">Dianna Smiley</option>
+                                        <option value="Ab Hadley">Ab Hadley</option>
+                                        <option value="Adolfo Hess">Adolfo Hess</option>
+                                        <option value="Daniela Dewitt">Daniela Dewitt</option>
+                                        <option value="Miyah Myles">Miyah Myles</option>
                                       </select>
 
                                     </div>
@@ -200,8 +207,12 @@
                                     <div class="col-auto">
 
                                       <!-- Select -->
-                                      <select class="custom-select custom-select-sm" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
-                                        <option>Any</option>
+                                      <select class="custom-select custom-select-sm" name="item-industry" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
+                                        <option value="Web design">Web design</option>
+                                        <option value="Publishing">Publishing</option>
+                                        <option value="Transportation">Transportation</option>
+                                        <option value="Finance">Finance</option>
+                                        <option value="File hosting">File hosting</option>
                                       </select>
 
                                     </div>
@@ -210,14 +221,13 @@
                               </div>
 
                               <!-- Button -->
-                              <button class="btn btn-block btn-primary">
+                              <button class="btn btn-block btn-primary" type="submit">
                                 Create new filter
                               </button>
 
                             </div>
                           </form>
                         </div>
-
 
                       </div>
                     </div> <!-- / .row -->
@@ -271,11 +281,17 @@
                             </div> <a class="item-name text-reset" href="team-overview.html">Launchday</a>
 
                           </td>
-                          <td class="item-industry">
-                            Web design
+                          <td>
+
+                            <!-- Text -->
+                            <span class="item-industry">Web design</span>
+
                           </td>
-                          <td class="item-location">
-                            Los Angeles, CA
+                          <td>
+
+                            <!-- Text -->
+                            <span class="item-location">Los Angeles, CA</span>
+
                           </td>
                           <td class="item-phone">
 
@@ -285,10 +301,10 @@
                             </div> <a class="item-owner text-reset" href="profile-posts.html">Dianna Smiley</a>
 
                           </td>
-                          <td class="item-created">
+                          <td>
 
                             <!-- Badge -->
-                            <time datetime="2020-01-14">Jan 14, 2020</time>
+                            <time class="item-created" datetime="2020-01-14">Jan 14, 2020</time>
 
                           </td>
                           <td class="text-right">
@@ -331,11 +347,17 @@
                             </div> <a class="item-name text-reset" href="team-overview.html">Medium Corporation</a>
 
                           </td>
-                          <td class="item-industry">
-                            Publishing
+                          <td>
+
+                            <!-- Text -->
+                            <span class="item-industry">Publishing</span>
+
                           </td>
-                          <td class="item-location">
-                            San Francisco, CA
+                          <td>
+
+                            <!-- Text -->
+                            <span class="item-location">San Francisco, CA</span>
+
                           </td>
                           <td class="item-phone">
 
@@ -345,10 +367,10 @@
                             </div> <a class="item-owner text-reset" href="profile-posts.html">Ab Hadley</a>
 
                           </td>
-                          <td class="item-created">
+                          <td>
 
                             <!-- Badge -->
-                            <time datetime="2020-03-22">Mar 22, 2020</time>
+                            <time class="item-created" datetime="2020-03-22">Mar 22, 2020</time>
 
                           </td>
                           <td class="text-right">
@@ -391,11 +413,17 @@
                             </div> <a class="item-name text-reset" href="team-overview.html">Lyft</a>
 
                           </td>
-                          <td class="item-industry">
-                            Transportation
+                          <td>
+
+                            <!-- Text -->
+                            <span class="item-industry">Transportation</span>
+
                           </td>
-                          <td class="item-location">
-                            San Francisco, CA
+                          <td>
+
+                            <!-- Text -->
+                            <span class="item-location">San Francisco, CA</span>
+
                           </td>
                           <td class="item-phone">
 
@@ -405,10 +433,10 @@
                             </div> <a class="item-owner text-reset" href="profile-posts.html">Adolfo Hess</a>
 
                           </td>
-                          <td class="item-created">
+                          <td>
 
                             <!-- Badge -->
-                            <time datetime="2020-04-01">Apr 01, 2020</time>
+                            <time class="item-created" datetime="2020-04-01">Apr 01, 2020</time>
 
                           </td>
                           <td class="text-right">
@@ -451,11 +479,17 @@
                             </div> <a class="item-name text-reset" href="team-overview.html">PayPal</a>
 
                           </td>
-                          <td class="item-industry">
-                            Finance
+                          <td>
+
+                            <!-- Text -->
+                            <span class="item-industry">Finance</span>
+
                           </td>
-                          <td class="item-location">
-                            San Jose, CA
+                          <td>
+
+                            <!-- Text -->
+                            <span class="item-location">San Jose, CA</span>
+
                           </td>
                           <td class="item-phone">
 
@@ -465,10 +499,10 @@
                             </div> <a class="item-owner text-reset" href="profile-posts.html">Daniela Dewitt</a>
 
                           </td>
-                          <td class="item-created">
+                          <td>
 
                             <!-- Badge -->
-                            <time datetime="2020-05-09">May 09, 2020</time>
+                            <time class="item-created" datetime="2020-05-09">May 09, 2020</time>
 
                           </td>
                           <td class="text-right">
@@ -508,14 +542,20 @@
                             <!-- Avatar -->
                             <div class="avatar avatar-xs align-middle mr-2">
                               <img class="avatar-img rounded-circle" src="assets/img/avatars/teams/team-logo-5.jpg" alt="...">
-                            </div> <a class="item-name text-reset" href="team-overview.html">Dropbox Inc. </a>
+                            </div> <a class="item-name text-reset" href="team-overview.html">Dropbox Inc.</a>
 
                           </td>
-                          <td class="item-industry">
-                            File hosting
+                          <td>
+
+                            <!-- Text -->
+                            <span class="item-industry">File hosting</span>
+
                           </td>
-                          <td class="item-location">
-                            San Francisco, CA
+                          <td>
+
+                            <!-- Text -->
+                            <span class="item-location">San Francisco, CA</span>
+
                           </td>
                           <td class="item-phone">
 
@@ -525,10 +565,10 @@
                             </div> <a class="item-owner text-reset" href="profile-posts.html">Miyah Myles</a>
 
                           </td>
-                          <td class="item-created">
+                          <td>
 
                             <!-- Badge -->
-                            <time datetime="2020-06-16">June 16, 2020</time>
+                            <time class="item-created" datetime="2020-06-16">June 16, 2020</time>
 
                           </td>
                           <td class="text-right">
@@ -559,36 +599,17 @@
                   <div class="card-footer">
 
                     <!-- Pagination -->
-                    <ul class="pagination pagination-tabs pagination-overflow card-pagination">
-                      <li class="page-item mr-auto">
-                        <a class="page-link text-reset" href="#">
-                          <i class="fe fe-arrow-left mr-1"></i> Previous
-                        </a>
-                      </li>
-                      <li class="page-item active">
-                        <a class="page-link" href="#">1</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">2</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">3</a>
-                      </li>
-                      <li class="page-item ml-auto">
-                        <a class="page-link text-reset" href="#">
-                          Next <i class="fe fe-arrow-right ml-1"></i>
-                        </a>
-                      </li>
+                    <ul class="list-pagination pagination pagination-tabs pagination-overflow card-pagination">
                     </ul>
 
                   </div>
                 </div>
 
               </div>
-              <div class="tab-pane fade" id="companiesCards" role="tabpanel" aria-labelledby="companiesCardsTab">
+              <div class="tab-pane fade" id="companiesCardsPane" role="tabpanel" aria-labelledby="companiesCardsTab">
 
                 <!-- Cards -->
-                <div data-list='{"valueNames": ["item-name", "item-title", "item-email", "item-phone", "item-score", "item-company"]}'>
+                <div data-list='{"valueNames": ["item-name", "item-industry", "item-location", "item-owner", "item-created"], "page": 5}' id="companiesCards">
 
                   <!-- Header -->
                   <div class="row align-items-center mb-4">
@@ -610,12 +631,15 @@
                     <div class="col-auto mr-n3">
 
                       <!-- Select -->
-                      <select class="custom-select custom-select-sm form-control-flush" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
-                        <option>5 per page</option>
-                        <option>10 per page</option>
-                        <option>25 per page</option>
-                        <option>50 per page</option>
-                      </select>
+                      <form>
+                        <select class="list-pages custom-select custom-select-sm form-control-flush" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
+                          <option value="1">1 per page</option>
+                          <option value="2">2 per page</option>
+                          <option value="3">3 per page</option>
+                          <option value="4">4 per page</option>
+                          <option value="5" selected>5 per page</option>
+                        </select>
+                      </form>
 
                     </div>
                     <div class="col-auto">
@@ -625,7 +649,7 @@
                         <button class="btn btn-sm btn-white" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <i class="fe fe-sliders mr-1"></i> Filter
                         </button>
-                        <form class="dropdown-menu dropdown-menu-right dropdown-menu-card">
+                        <form class="list-filter dropdown-menu dropdown-menu-right dropdown-menu-card">
                           <div class="card-header">
 
                             <!-- Title -->
@@ -634,7 +658,7 @@
                             </h4>
 
                             <!-- Link -->
-                            <a class="text-reset" href="#">
+                            <a class="text-reset" data-reset href="#">
                               <small>Clear filters</small>
                             </a>
 
@@ -654,8 +678,12 @@
                                   <div class="col-auto">
 
                                     <!-- Select -->
-                                    <select class="custom-select custom-select-sm" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
-                                      <option>Dave Gamache</option>
+                                    <select class="custom-select custom-select-sm" name="item-owner" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
+                                      <option value="Dianna Smiley">Dianna Smiley</option>
+                                      <option value="Ab Hadley">Ab Hadley</option>
+                                      <option value="Adolfo Hess">Adolfo Hess</option>
+                                      <option value="Daniela Dewitt">Daniela Dewitt</option>
+                                      <option value="Miyah Myles">Miyah Myles</option>
                                     </select>
 
                                   </div>
@@ -672,8 +700,12 @@
                                   <div class="col-auto">
 
                                     <!-- Select -->
-                                    <select class="custom-select custom-select-sm" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
-                                      <option>Any</option>
+                                    <select class="custom-select custom-select-sm" name="item-industry" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
+                                      <option value="Web design">Web design</option>
+                                      <option value="Publishing">Publishing</option>
+                                      <option value="Transportation">Transportation</option>
+                                      <option value="Finance">Finance</option>
+                                      <option value="File hosting">File hosting</option>
                                     </select>
 
                                   </div>
@@ -682,7 +714,7 @@
                             </div>
 
                             <!-- Button -->
-                            <button class="btn btn-block btn-primary">
+                            <button class="btn btn-block btn-primary" type="submit">
                               Create new filter
                             </button>
 
@@ -707,7 +739,7 @@
                             <div class="col">
 
                               <!-- Checkbox -->
-                              <div class="custom-control custom-checkbox custom-checkbox-circle">
+                              <div class="custom-control custom-control-circle custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="cardsCheckboxFive">
                                 <label class="custom-control-label" for="cardsCheckboxFive"></label>
                               </div>
@@ -745,8 +777,8 @@
                           <div class="text-center mb-5">
 
                             <!-- Heading -->
-                            <h2 class="card-title item-name">
-                              <a href="team-overview.html">Launchday</a>
+                            <h2 class="card-title">
+                              <a class="item-name" href="team-overview.html">Launchday</a>
                             </h2>
 
                             <!-- Text -->
@@ -784,13 +816,13 @@
                                 <div class="col">
 
                                   <!-- Text -->
-                                  <small>Created</small>
+                                  <small>Industry</small>
 
                                 </div>
                                 <div class="col-auto">
 
-                                  <!-- Time -->
-                                  <time class="item-created" datetime="2020-01-14">Jan 14, 2020</time>
+                                  <!-- Text -->
+                                  <small class="item-industry">Web design</small>
 
                                 </div>
                               </div> <!-- / .row -->
@@ -812,7 +844,7 @@
                             <div class="col">
 
                               <!-- Checkbox -->
-                              <div class="custom-control custom-checkbox custom-checkbox-circle">
+                              <div class="custom-control custom-control-circle custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="cardsCheckboxOne">
                                 <label class="custom-control-label" for="cardsCheckboxOne"></label>
                               </div>
@@ -850,8 +882,8 @@
                           <div class="text-center mb-5">
 
                             <!-- Heading -->
-                            <h2 class="card-title item-name">
-                              <a href="team-overview.html">Medium Corporation</a>
+                            <h2 class="card-title">
+                              <a class="item-name" href="team-overview.html">Medium Corporation</a>
                             </h2>
 
                             <!-- Text -->
@@ -889,13 +921,13 @@
                                 <div class="col">
 
                                   <!-- Text -->
-                                  <small>Created</small>
+                                  <small>Industry</small>
 
                                 </div>
                                 <div class="col-auto">
 
-                                  <!-- Time -->
-                                  <time class="item-created" datetime="2020-03-22">Mar 22, 2020</time>
+                                  <!-- Text -->
+                                  <small class="item-industry">Publishing</small>
 
                                 </div>
                               </div> <!-- / .row -->
@@ -917,7 +949,7 @@
                             <div class="col">
 
                               <!-- Checkbox -->
-                              <div class="custom-control custom-checkbox custom-checkbox-circle">
+                              <div class="custom-control custom-control-circle custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="cardsCheckboxTwo">
                                 <label class="custom-control-label" for="cardsCheckboxTwo"></label>
                               </div>
@@ -955,8 +987,8 @@
                           <div class="text-center mb-5">
 
                             <!-- Heading -->
-                            <h2 class="card-title item-name">
-                              <a href="team-overview.html">Lyft</a>
+                            <h2 class="card-title">
+                              <a class="item-name" href="team-overview.html">Lyft</a>
                             </h2>
 
                             <!-- Text -->
@@ -999,8 +1031,8 @@
                                 </div>
                                 <div class="col-auto">
 
-                                  <!-- Time -->
-                                  <time class="item-created" datetime="2020-04-01">Apr 01, 2020</time>
+                                  <!-- Text -->
+                                  <small class="item-industry">Transportation</small>
 
                                 </div>
                               </div> <!-- / .row -->
@@ -1022,7 +1054,7 @@
                             <div class="col">
 
                               <!-- Checkbox -->
-                              <div class="custom-control custom-checkbox custom-checkbox-circle">
+                              <div class="custom-control custom-control-circle custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="cardsCheckboxThree">
                                 <label class="custom-control-label" for="cardsCheckboxThree"></label>
                               </div>
@@ -1060,8 +1092,8 @@
                           <div class="text-center mb-5">
 
                             <!-- Heading -->
-                            <h2 class="card-title item-name">
-                              <a href="team-overview.html">PayPal</a>
+                            <h2 class="card-title">
+                              <a class="item-name" href="team-overview.html">PayPal</a>
                             </h2>
 
                             <!-- Text -->
@@ -1104,8 +1136,8 @@
                                 </div>
                                 <div class="col-auto">
 
-                                  <!-- Time -->
-                                  <time class="item-created" datetime="2020-05-09">May 09, 2020</time>
+                                  <!-- Text -->
+                                  <small class="item-industry">Finance</small>
 
                                 </div>
                               </div> <!-- / .row -->
@@ -1127,7 +1159,7 @@
                             <div class="col">
 
                               <!-- Checkbox -->
-                              <div class="custom-control custom-checkbox custom-checkbox-circle">
+                              <div class="custom-control custom-control-circle custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="cardsCheckboxFour">
                                 <label class="custom-control-label" for="cardsCheckboxFour"></label>
                               </div>
@@ -1165,8 +1197,8 @@
                           <div class="text-center mb-5">
 
                             <!-- Heading -->
-                            <h2 class="card-title item-name">
-                              <a href="team-overview.html">Dropbox Inc.</a>
+                            <h2 class="card-title">
+                              <a class="item-name" href="team-overview.html">Dropbox Inc.</a>
                             </h2>
 
                             <!-- Text -->
@@ -1209,8 +1241,8 @@
                                 </div>
                                 <div class="col-auto">
 
-                                  <!-- Time -->
-                                  <time class="item-created" datetime="2020-06-16">June 16, 2020</time>
+                                  <!-- Text -->
+                                  <small class="item-industry">File hosting</small>
 
                                 </div>
                               </div> <!-- / .row -->
@@ -1224,26 +1256,7 @@
                   </div>
 
                   <!-- Pagination -->
-                  <ul class="pagination pagination-tabs pagination-overflow">
-                    <li class="page-item mr-auto">
-                      <a class="page-link text-reset" href="#">
-                        <i class="fe fe-arrow-left mr-1"></i> Previous
-                      </a>
-                    </li>
-                    <li class="page-item active">
-                      <a class="page-link" href="#">1</a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">2</a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">3</a>
-                    </li>
-                    <li class="page-item ml-auto">
-                      <a class="page-link text-reset" href="#">
-                        Next <i class="fe fe-arrow-right ml-1"></i>
-                      </a>
-                    </li>
+                  <ul class="list-pagination pagination pagination-tabs pagination-overflow">
                   </ul>
 
                 </div>
