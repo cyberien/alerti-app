@@ -3,6 +3,13 @@
 // List.js plugin overrides
 //
 
+// Pagination
+
+.page {
+  @extend .page-link;
+}
+
+
 // Alert
 
 .list-alert {
@@ -13,6 +20,10 @@
   min-width: $list-alert-min-width;
   margin-bottom: 0;
   transform: translateX(-50%);
+}
+
+.list-alert:not(.show) {
+  pointer-events: none;
 }
 
 @include media-breakpoint-up($navbar-vertical-expand-breakpoint) {

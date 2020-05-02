@@ -240,7 +240,7 @@
 
                             <!-- Checkbox -->
                             <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="custom-control-input" id="listCheckboxAll">
+                              <input type="checkbox" class="list-checkbox-all custom-control-input" id="listCheckboxAll">
                               <label class="custom-control-label" for="listCheckboxAll"></label>
                             </div>
 
@@ -268,7 +268,7 @@
 
                             <!-- Checkbox -->
                             <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="custom-control-input" id="listCheckboxOne">
+                              <input type="checkbox" class="list-checkbox custom-control-input" id="listCheckboxOne">
                               <label class="custom-control-label" for="listCheckboxOne"></label>
                             </div>
 
@@ -334,7 +334,7 @@
 
                             <!-- Checkbox -->
                             <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="custom-control-input" id="listCheckboxTwo">
+                              <input type="checkbox" class="list-checkbox custom-control-input" id="listCheckboxTwo">
                               <label class="custom-control-label" for="listCheckboxTwo"></label>
                             </div>
 
@@ -400,7 +400,7 @@
 
                             <!-- Checkbox -->
                             <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="custom-control-input" id="listCheckboxThree">
+                              <input type="checkbox" class="list-checkbox custom-control-input" id="listCheckboxThree">
                               <label class="custom-control-label" for="listCheckboxThree"></label>
                             </div>
 
@@ -466,7 +466,7 @@
 
                             <!-- Checkbox -->
                             <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="custom-control-input" id="listCheckboxFour">
+                              <input type="checkbox" class="list-checkbox custom-control-input" id="listCheckboxFour">
                               <label class="custom-control-label" for="listCheckboxFour"></label>
                             </div>
 
@@ -532,7 +532,7 @@
 
                             <!-- Checkbox -->
                             <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="custom-control-input" id="listCheckboxFive">
+                              <input type="checkbox" class="list-checkbox custom-control-input" id="listCheckboxFive">
                               <label class="custom-control-label" for="listCheckboxFive"></label>
                             </div>
 
@@ -599,8 +599,44 @@
                   <div class="card-footer">
 
                     <!-- Pagination -->
-                    <ul class="list-pagination pagination pagination-tabs pagination-overflow card-pagination">
+                    <ul class="list-pagination pagination pagination-tabs pagination-overflow card-pagination justify-content-center">
                     </ul>
+
+                    <!-- Alert -->
+                    <div class="list-alert alert alert-dark alert-dismissible fade" role="alert">
+
+                      <!-- Content -->
+                      <div class="row align-items-center">
+                        <div class="col">
+
+                          <!-- Checkbox -->
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="listAlertCheckbox" checked disabled>
+                            <label class="custom-control-label" for="listAlertCheckbox"><span class="list-alert-count">0</span> company(ies)</label>
+                          </div>
+
+                        </div>
+                        <div class="col-auto mr-n3">
+
+                          <!-- Button -->
+                          <button class="btn btn-sm btn-white-20">
+                            Edit
+                          </button>
+
+                          <!-- Button -->
+                          <button class="btn btn-sm btn-white-20">
+                            Delete
+                          </button>
+
+                        </div>
+                      </div> <!-- / .row -->
+
+                      <!-- Close -->
+                      <button type="button" class="close" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                      </button>
+
+                    </div>
 
                   </div>
                 </div>
@@ -740,8 +776,8 @@
 
                               <!-- Checkbox -->
                               <div class="custom-control custom-control-circle custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="cardsCheckboxFive">
-                                <label class="custom-control-label" for="cardsCheckboxFive"></label>
+                                <input type="checkbox" class="list-checkbox custom-control-input" id="cardsCheckboxOne">
+                                <label class="custom-control-label" for="cardsCheckboxOne"></label>
                               </div>
 
                             </div>
@@ -845,8 +881,8 @@
 
                               <!-- Checkbox -->
                               <div class="custom-control custom-control-circle custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="cardsCheckboxOne">
-                                <label class="custom-control-label" for="cardsCheckboxOne"></label>
+                                <input type="checkbox" class="list-checkbox custom-control-input" id="cardsCheckboxTwo">
+                                <label class="custom-control-label" for="cardsCheckboxTwo"></label>
                               </div>
 
                             </div>
@@ -950,8 +986,8 @@
 
                               <!-- Checkbox -->
                               <div class="custom-control custom-control-circle custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="cardsCheckboxTwo">
-                                <label class="custom-control-label" for="cardsCheckboxTwo"></label>
+                                <input type="checkbox" class="list-checkbox custom-control-input" id="cardsCheckboxThree">
+                                <label class="custom-control-label" for="cardsCheckboxThree"></label>
                               </div>
 
                             </div>
@@ -1055,8 +1091,8 @@
 
                               <!-- Checkbox -->
                               <div class="custom-control custom-control-circle custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="cardsCheckboxThree">
-                                <label class="custom-control-label" for="cardsCheckboxThree"></label>
+                                <input type="checkbox" class="list-checkbox custom-control-input" id="cardsCheckboxFour">
+                                <label class="custom-control-label" for="cardsCheckboxFour"></label>
                               </div>
 
                             </div>
@@ -1160,8 +1196,8 @@
 
                               <!-- Checkbox -->
                               <div class="custom-control custom-control-circle custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="cardsCheckboxFour">
-                                <label class="custom-control-label" for="cardsCheckboxFour"></label>
+                                <input type="checkbox" class="list-checkbox custom-control-input" id="cardsCheckboxFive">
+                                <label class="custom-control-label" for="cardsCheckboxFive"></label>
                               </div>
 
                             </div>
@@ -1256,8 +1292,44 @@
                   </div>
 
                   <!-- Pagination -->
-                  <ul class="list-pagination pagination pagination-tabs pagination-overflow">
+                  <ul class="list-pagination pagination pagination-tabs pagination-overflow justify-content-center">
                   </ul>
+
+                  <!-- Alert -->
+                  <div class="list-alert alert alert-dark alert-dismissible fade" role="alert">
+
+                    <!-- Content -->
+                    <div class="row align-items-center">
+                      <div class="col">
+
+                        <!-- Checkbox -->
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="cardAlertCheckbox" checked disabled>
+                          <label class="custom-control-label" for="cardAlertCheckbox"><span class="list-alert-count">0</span> company(ies)</label>
+                        </div>
+
+                      </div>
+                      <div class="col-auto mr-n3">
+
+                        <!-- Button -->
+                        <button class="btn btn-sm btn-white-20">
+                          Edit
+                        </button>
+
+                        <!-- Button -->
+                        <button class="btn btn-sm btn-white-20">
+                          Delete
+                        </button>
+
+                      </div>
+                    </div> <!-- / .row -->
+
+                    <!-- Close -->
+                    <button type="button" class="close" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                    </button>
+
+                  </div>
 
                 </div>
 

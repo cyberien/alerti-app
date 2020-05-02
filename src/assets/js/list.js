@@ -37,10 +37,13 @@
 
     var defaultOptions = {
       listClass: 'list',
-      paginationClass: 'list-pagination',
       searchClass: 'list-search',
       sortClass: 'list-sort',
-      pagination: true
+      pagination: [{
+        paginationClass: 'list-pagination',
+        innerWindow: 3,
+        outerWindow: 3
+      }]
     };
 
     // Merge options
@@ -101,7 +104,7 @@
       [].forEach.call(listPages, function(select) {
         $(select).on(pageEvents[0], function(e) {
           listObj.page = select.value;
-          listObj.update();
+          listObj.show(1, select.value);
         });
       });
     }
