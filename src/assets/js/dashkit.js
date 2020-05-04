@@ -496,18 +496,33 @@
   }
 })();
 
-// Orders select
+// List checkbox
 
 (function() {
-  var ordersSelect = document.querySelectorAll('[name="ordersSelect"]');
-  var ordersSelectAll = document.getElementById('ordersSelectAll');
+  var checkboxAll = document.querySelectorAll('thead [name="listCheckbox"]');
+  var checkboxes = document.querySelectorAll('tbody [name="listCheckbox"]');
 
-  if (ordersSelect && ordersSelectAll) {
-    ordersSelectAll.addEventListener('change', function() {
-      var that = this;
+  if (checkboxAll && checkboxes) {
 
-      [].forEach.call(ordersSelect, function(checkbox) {
-        checkbox.checked = that.checked;
+    // All
+    [].forEach.call(checkboxAll, function(checkbox) {
+      checkbox.addEventListener('change', function() {
+        var table = checkbox.closest('table');
+        var children = table.querySelectorAll('tbody [name="listCheckbox"]');
+
+        [].forEach.call(children, function(child) {
+          child.checked = checkbox.checked;
+        });
+      });
+    });
+
+    // Any
+    [].forEach.call(checkboxes, function(checkbox) {
+      checkbox.addEventListener('change', function() {
+        var table = checkbox.closest('table');
+        var child = table.querySelector('thead [name="listCheckbox"]');
+
+        child.checked = false;
       });
     });
   }

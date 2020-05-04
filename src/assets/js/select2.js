@@ -23,7 +23,7 @@
     var defaultOptions = {
       containerCssClass: el.getAttribute('class'),
       dropdownAutoWidth: true,
-      dropdownCssClass: 'dropdown-menu show',
+      dropdownCssClass: el.classList.contains('custom-select-sm') || el.classList.contains('form-control-sm') ? 'dropdown-menu dropdown-menu-sm show' : 'dropdown-menu show',
       dropdownParent: el.closest('.modal') ? el.closest('.modal') : document.body,
       templateResult: formatTemplate
     };

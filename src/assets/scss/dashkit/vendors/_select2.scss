@@ -15,6 +15,10 @@
   display: none;
 }
 
+.select2-selection {
+  cursor: pointer;
+}
+
 .select2-selection[aria-expanded="true"] {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;

@@ -308,7 +308,7 @@
 .card-pagination.pagination-tabs {
   margin-top: -$card-spacer-y;
   margin-bottom: -$card-spacer-y;
-  box-shadow: none;
+  border: 0;
 }
 
 .card-pagination.pagination-tabs .page-link {

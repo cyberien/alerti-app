@@ -8455,7 +8455,7 @@ a.text-white:hover, a.text-white:focus {
 .card-pagination.pagination-tabs {
   margin-top: -1rem;
   margin-bottom: -1rem;
-  box-shadow: none; }
+  border: 0; }
 
 .card-pagination.pagination-tabs .page-link, .card-pagination.pagination-tabs .page {
   border-top-width: 0 !important; }
@@ -8576,6 +8576,14 @@ a.text-white:hover, a.text-white:focus {
   .dropdown-menu-card .card-body {
     max-height: 350px;
     overflow-y: auto; }
+
+.dropdown-menu-sm {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 0.8125rem; }
+
+.dropdown-menu-sm .dropdown-item {
+  padding: 0.1875rem 0.75rem; }
 
 .form-text {
   margin-top: 0;
@@ -10021,9 +10029,10 @@ a.text-white:hover, a.text-white:focus {
 
 .pagination-tabs {
   border-radius: 0;
-  box-shadow: inset 0 1px #E3EBF6; }
+  border-top: 1px solid #E3EBF6; }
 
 .pagination-tabs .page-link, .pagination-tabs .page {
+  margin-top: -1px;
   padding: 1.25rem 0.75rem;
   background-color: transparent;
   border-width: 1px 0 0 0;
@@ -11276,9 +11285,6 @@ a:focus, button:focus {
   margin-bottom: 0;
   transform: translateX(-50%); }
 
-.list-alert:not(.show) {
-  pointer-events: none; }
-
 @media (min-width: 768px) {
   .navbar-vertical:not(.navbar-vertical-sm):not([style*="display: none"]) ~ .main-content .list-alert {
     left: calc(50% + 125px); } }
@@ -11295,6 +11301,9 @@ a:focus, button:focus {
 
 .select2-hidden-accessible {
   display: none; }
+
+.select2-selection {
+  cursor: pointer; }
 
 .select2-selection[aria-expanded="true"] {
   border-bottom-left-radius: 0;

@@ -20,10 +20,11 @@
 
 .pagination-tabs {
   border-radius: 0;
-  box-shadow: inset 0 $border-width $border-color; // border goes behind active item underline even with overflow: hidden
+  border-top: $border-width solid $border-color;
 }
 
 .pagination-tabs .page-link {
+  margin-top: -$border-width;
   padding: $pagination-tabs-padding-y $pagination-tabs-padding-x;
   background-color: $pagination-tabs-bg-color;
   border-width: $border-width 0 0 0;

@@ -117,7 +117,7 @@
               <div class="tab-pane fade show active" id="contactsListPane" role="tabpanel" aria-labelledby="contactsListTab">
 
                 <!-- Card -->
-                <div class="card" data-list='{"valueNames": ["item-name", "item-title", "item-email", "item-phone", "item-score", "item-company"], "page": 5}' id="contactsList">
+                <div class="card" data-list='{"valueNames": ["item-name", "item-title", "item-email", "item-phone", "item-score", "item-company"], "pagination": true}' id="contactsList">
                   <div class="card-header">
                     <div class="row align-items-center">
                       <div class="col">
@@ -139,12 +139,10 @@
 
                         <!-- Select -->
                         <form>
-                          <select class="list-pages custom-select custom-select-sm form-control-flush" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
-                            <option value="1">1 per page</option>
-                            <option value="2">2 per page</option>
-                            <option value="3">3 per page</option>
-                            <option value="4">4 per page</option>
+                          <select class="custom-select custom-select-sm form-control-flush" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
                             <option value="5" selected>5 per page</option>
+                            <option value="10">10 per page</option>
+                            <option value="*">All</option>
                           </select>
                         </form>
 
@@ -153,10 +151,14 @@
 
                         <!-- Dropdown -->
                         <div class="dropdown">
+
+                          <!-- Toggle -->
                           <button class="btn btn-sm btn-white" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fe fe-sliders mr-1"></i> Filter
+                            <i class="fe fe-sliders mr-1"></i> Filter <span class="badge badge-primary ml-1 d-none">0</span>
                           </button>
-                          <form class="list-filter dropdown-menu dropdown-menu-right dropdown-menu-card">
+
+                          <!-- Menu -->
+                          <form class="dropdown-menu dropdown-menu-right dropdown-menu-card">
                             <div class="card-header">
 
                               <!-- Title -->
@@ -165,9 +167,9 @@
                               </h4>
 
                               <!-- Link -->
-                              <a class="text-reset" data-reset href="#">
+                              <button class="btn btn-sm btn-link text-reset d-none" type="reset">
                                 <small>Clear filters</small>
-                              </a>
+                              </button>
 
                             </div>
                             <div class="card-body">
@@ -186,6 +188,7 @@
 
                                       <!-- Select -->
                                       <select class="custom-select custom-select-sm" name="item-title" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
+                                        <option value="*" selected>Any</option>
                                         <option value="Designer">Designer</option>
                                         <option value="Developer">Developer</option>
                                         <option value="Owner">Owner</option>
@@ -207,6 +210,7 @@
 
                                       <!-- Select -->
                                       <select class="custom-select custom-select-sm" name="item-score" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
+                                        <option value="*" selected>Any</option>
                                         <option value="1/10">1+</option>
                                         <option value="2/10">2+</option>
                                         <option value="3/10">3+</option>
@@ -226,11 +230,12 @@
 
                               <!-- Button -->
                               <button class="btn btn-block btn-primary" type="submit">
-                                Create new filter
+                                Apply filter
                               </button>
 
                             </div>
                           </form>
+
                         </div>
 
                       </div>
@@ -244,7 +249,7 @@
 
                             <!-- Checkbox -->
                             <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="list-checkbox-all custom-control-input" id="listCheckboxAll">
+                              <input type="checkbox" class="custom-control-input" name="listCheckbox" id="listCheckboxAll">
                               <label class="custom-control-label" for="listCheckboxAll"></label>
                             </div>
 
@@ -275,7 +280,7 @@
 
                             <!-- Checkbox -->
                             <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="list-checkbox custom-control-input" id="listCheckboxOne">
+                              <input type="checkbox" class="list-checkbox custom-control-input" name="listCheckbox" id="listCheckboxOne">
                               <label class="custom-control-label" for="listCheckboxOne"></label>
                             </div>
 
@@ -345,7 +350,7 @@
 
                             <!-- Checkbox -->
                             <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="list-checkbox custom-control-input" id="listCheckboxTwo">
+                              <input type="checkbox" class="list-checkbox custom-control-input" name="listCheckbox" id="listCheckboxTwo">
                               <label class="custom-control-label" for="listCheckboxTwo"></label>
                             </div>
 
@@ -415,7 +420,7 @@
 
                             <!-- Checkbox -->
                             <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="list-checkbox custom-control-input" id="listCheckboxThree">
+                              <input type="checkbox" class="list-checkbox custom-control-input" name="listCheckbox" id="listCheckboxThree">
                               <label class="custom-control-label" for="listCheckboxThree"></label>
                             </div>
 
@@ -485,7 +490,7 @@
 
                             <!-- Checkbox -->
                             <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="list-checkbox custom-control-input" id="listCheckboxFour">
+                              <input type="checkbox" class="list-checkbox custom-control-input" name="listCheckbox" id="listCheckboxFour">
                               <label class="custom-control-label" for="listCheckboxFour"></label>
                             </div>
 
@@ -555,7 +560,7 @@
 
                             <!-- Checkbox -->
                             <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="list-checkbox custom-control-input" id="listCheckboxFive">
+                              <input type="checkbox" class="list-checkbox custom-control-input" name="listCheckbox" id="listCheckboxFive">
                               <label class="custom-control-label" for="listCheckboxFive"></label>
                             </div>
 
@@ -620,17 +625,227 @@
 
                           </td>
                         </tr>
+                        <tr>
+                          <td>
+
+                            <!-- Checkbox -->
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="list-checkbox custom-control-input" name="listCheckbox" id="listCheckboxSix">
+                              <label class="custom-control-label" for="listCheckboxSix"></label>
+                            </div>
+
+                          </td>
+                          <td>
+
+                            <!-- Avatar -->
+                            <div class="avatar avatar-xs align-middle mr-2">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-6.jpg" alt="...">
+                            </div> <a class="item-name text-reset" href="profile-posts.html">Ryu Duke</a>
+
+                          </td>
+                          <td>
+
+                            <!-- Text -->
+                            <span class="item-title">Designer</span>
+
+                          </td>
+                          <td>
+
+                            <!-- Email -->
+                            <a class="item-email text-reset" href="mailto:ryu-duke@company.com">ryu-duke@company.com</a>
+
+                          </td>
+                          <td>
+
+                            <!-- Phone -->
+                            <a class="item-phone text-reset" href="tel:1-650-430-1780">(937) 596-0152</a>
+
+                          </td>
+                          <td>
+
+                            <!-- Badge -->
+                            <span class="item-score badge badge-soft-warning">6/10</span>
+
+                          </td>
+                          <td>
+
+                            <!-- Link -->
+                            <a class="item-company text-reset" href="team-overview.html">Netflix</a>
+
+                          </td>
+                          <td class="text-right">
+
+                            <!-- Dropdown -->
+                            <div class="dropdown">
+                              <a class="dropdown-ellipses dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fe fe-more-vertical"></i>
+                              </a>
+                              <div class="dropdown-menu dropdown-menu-right">
+                                <a href="#!" class="dropdown-item">
+                                  Action
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                  Another action
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                  Something else here
+                                </a>
+                              </div>
+                            </div>
+
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+
+                            <!-- Checkbox -->
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="list-checkbox custom-control-input" name="listCheckbox" id="listCheckboxSeven">
+                              <label class="custom-control-label" for="listCheckboxSeven"></label>
+                            </div>
+
+                          </td>
+                          <td>
+
+                            <!-- Avatar -->
+                            <div class="avatar avatar-xs align-middle mr-2">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-7.jpg" alt="...">
+                            </div> <a class="item-name text-reset" href="profile-posts.html">Glen Rouse</a>
+
+                          </td>
+                          <td>
+
+                            <!-- Text -->
+                            <span class="item-title">Designer</span>
+
+                          </td>
+                          <td>
+
+                            <!-- Email -->
+                            <a class="item-email text-reset" href="mailto:glen.rouse@company.com">glen.rouse@company.com</a>
+
+                          </td>
+                          <td>
+
+                            <!-- Phone -->
+                            <a class="item-phone text-reset" href="tel:1-650-430-1780">(689) 798-4635</a>
+
+                          </td>
+                          <td>
+
+                            <!-- Badge -->
+                            <span class="item-score badge badge-soft-success">9/10</span>
+
+                          </td>
+                          <td>
+
+                            <!-- Link -->
+                            <a class="item-company text-reset" href="team-overview.html">Netflix</a>
+
+                          </td>
+                          <td class="text-right">
+
+                            <!-- Dropdown -->
+                            <div class="dropdown">
+                              <a class="dropdown-ellipses dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fe fe-more-vertical"></i>
+                              </a>
+                              <div class="dropdown-menu dropdown-menu-right">
+                                <a href="#!" class="dropdown-item">
+                                  Action
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                  Another action
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                  Something else here
+                                </a>
+                              </div>
+                            </div>
+
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+
+                            <!-- Checkbox -->
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="list-checkbox custom-control-input" name="listCheckbox" id="listCheckboxEight">
+                              <label class="custom-control-label" for="listCheckboxEight"></label>
+                            </div>
+
+                          </td>
+                          <td>
+
+                            <!-- Avatar -->
+                            <div class="avatar avatar-xs align-middle mr-2">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-8.jpg" alt="...">
+                            </div> <a class="item-name text-reset" href="profile-posts.html">Grace Gross</a>
+
+                          </td>
+                          <td>
+
+                            <!-- Text -->
+                            <span class="item-title">Founder</span>
+
+                          </td>
+                          <td>
+
+                            <!-- Email -->
+                            <a class="item-email text-reset" href="mailto:glen.rouse@company.com">grace.gross@company.com</a>
+
+                          </td>
+                          <td>
+
+                            <!-- Phone -->
+                            <a class="item-phone text-reset" href="tel:1-650-430-1780">(689) 135-4856</a>
+
+                          </td>
+                          <td>
+
+                            <!-- Badge -->
+                            <span class="item-score badge badge-soft-danger">3/10</span>
+
+                          </td>
+                          <td>
+
+                            <!-- Link -->
+                            <a class="item-company text-reset" href="team-overview.html">Uber</a>
+
+                          </td>
+                          <td class="text-right">
+
+                            <!-- Dropdown -->
+                            <div class="dropdown">
+                              <a class="dropdown-ellipses dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fe fe-more-vertical"></i>
+                              </a>
+                              <div class="dropdown-menu dropdown-menu-right">
+                                <a href="#!" class="dropdown-item">
+                                  Action
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                  Another action
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                  Something else here
+                                </a>
+                              </div>
+                            </div>
+
+                          </td>
+                        </tr>
                       </tbody>
                     </table>
                   </div>
                   <div class="card-footer">
 
                     <!-- Pagination -->
-                    <ul class="list-pagination pagination pagination-tabs pagination-overflow card-pagination justify-content-center">
+                    <ul class="list-pagination pagination pagination-tabs card-pagination justify-content-center">
                     </ul>
 
                     <!-- Alert -->
-                    <div class="list-alert alert alert-dark alert-dismissible fade" role="alert">
+                    <div class="list-alert alert alert-dark alert-dismissible border fade show d-none" role="alert">
 
                       <!-- Content -->
                       <div class="row align-items-center">
@@ -639,7 +854,7 @@
                           <!-- Checkbox -->
                           <div class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input" id="listAlertCheckbox" checked disabled>
-                            <label class="custom-control-label" for="listAlertCheckbox"><span class="list-alert-count">0</span> contact(s)</label>
+                            <label class="custom-control-label text-white" for="listAlertCheckbox">0 contact(s)</label>
                           </div>
 
                         </div>
@@ -672,7 +887,7 @@
               <div class="tab-pane fade" id="contactsCardsPane" role="tabpanel" aria-labelledby="contactsCardsTab">
 
                 <!-- Cards -->
-                <div data-list='{"valueNames": ["item-name", "item-title", "item-email", "item-phone", "item-score", "item-company"], "page": 5}' id="contactsCards">
+                <div data-list='{"valueNames": ["item-name", "item-title", "item-email", "item-phone", "item-score", "item-company"], "pagination": true}' id="contactsCards">
 
                   <!-- Header -->
                   <div class="row align-items-center mb-4">
@@ -695,12 +910,9 @@
 
                       <!-- Select -->
                       <form>
-                        <select class="list-pages custom-select custom-select-sm form-control-flush" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
-                          <option value="1">1 per page</option>
-                          <option value="2">2 per page</option>
-                          <option value="3">3 per page</option>
-                          <option value="4">4 per page</option>
-                          <option value="5" selected>5 per page</option>
+                        <select class="custom-select custom-select-sm form-control-flush" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
+                          <option value="1" selected>9 per page</option>
+                          <option value="5">All</option>
                         </select>
                       </form>
 
@@ -709,10 +921,14 @@
 
                       <!-- Dropdown -->
                       <div class="dropdown">
+
+                        <!-- Toggle -->
                         <button class="btn btn-sm btn-white" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <i class="fe fe-sliders mr-1"></i> Filter
+                          <i class="fe fe-sliders mr-1"></i> Filter <span class="badge badge-primary ml-1 d-none">0</span>
                         </button>
-                        <form class="list-filter dropdown-menu dropdown-menu-right dropdown-menu-card">
+
+                        <!-- Menu -->
+                        <form class="dropdown-menu dropdown-menu-right dropdown-menu-card">
                           <div class="card-header">
 
                             <!-- Title -->
@@ -721,9 +937,9 @@
                             </h4>
 
                             <!-- Link -->
-                            <a class="text-reset" data-reset href="#">
+                            <button class="btn btn-sm btn-link text-reset d-none" type="reset">
                               <small>Clear filters</small>
-                            </a>
+                            </button>
 
                           </div>
                           <div class="card-body">
@@ -742,6 +958,7 @@
 
                                     <!-- Select -->
                                     <select class="custom-select custom-select-sm" name="item-title" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
+                                      <option value="*" selected>Any</option>
                                       <option value="Designer">Designer</option>
                                       <option value="Developer">Developer</option>
                                       <option value="Owner">Owner</option>
@@ -763,6 +980,7 @@
 
                                     <!-- Select -->
                                     <select class="custom-select custom-select-sm" name="item-score" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
+                                      <option value="*" selected>Any</option>
                                       <option value="1/10">1+</option>
                                       <option value="2/10">2+</option>
                                       <option value="3/10">3+</option>
@@ -782,11 +1000,12 @@
 
                             <!-- Button -->
                             <button class="btn btn-block btn-primary" type="submit">
-                              Create new filter
+                              Apply filter
                             </button>
 
                           </div>
                         </form>
+
                       </div>
 
                     </div>
@@ -1352,11 +1571,11 @@
                   </div>
 
                   <!-- Pagination -->
-                  <ul class="list-pagination pagination pagination-tabs pagination-overflow justify-content-center">
+                  <ul class="list-pagination pagination pagination-tabs justify-content-center">
                   </ul>
 
                   <!-- Alert -->
-                  <div class="list-alert alert alert-dark alert-dismissible fade" role="alert">
+                  <div class="list-alert alert alert-dark alert-dismissible border fade show d-none" role="alert">
 
                     <!-- Content -->
                     <div class="row align-items-center">
@@ -1365,7 +1584,7 @@
                         <!-- Checkbox -->
                         <div class="custom-control custom-checkbox">
                           <input type="checkbox" class="custom-control-input" id="cardAlertCheckbox" checked disabled>
-                          <label class="custom-control-label" for="cardAlertCheckbox"><span class="list-alert-count">0</span> contact(s)</label>
+                          <label class="custom-control-label text-white" for="cardAlertCheckbox">0 contact(s)</label>
                         </div>
 
                       </div>

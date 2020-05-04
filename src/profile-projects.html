@@ -126,8 +126,8 @@
       </div>
 
       <!-- CONTENT -->
-      <div data-toggle="lists" data-options='{"valueNames": ["name"]}'>
-        <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}" data-toggle="lists" data-options='{"valueNames": ["name"], "listClass": "listAlias"}'>
+      <div data-list='{"valueNames": ["name"]}'>
+        <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}" data-list='{"valueNames": ["name"], "listClass": "listAlias"}'>
           <div class="row mb-4">
             <div class="col">
 
@@ -136,7 +136,7 @@
                 <div class="input-group input-group-lg input-group-merge">
 
                   <!-- Input -->
-                  <input type="text" class="form-control form-control-prepended search" placeholder="Search">
+                  <input type="text" class="form-control form-control-prepended list-search" placeholder="Search">
 
                   <!-- Prepend -->
                   <div class="input-group-prepend">

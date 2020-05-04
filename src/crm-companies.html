@@ -117,7 +117,7 @@
               <div class="tab-pane fade show active" id="companiesListPane" role="tabpanel" aria-labelledby="companiesListTab">
 
                 <!-- Card -->
-                <div class="card" data-list='{"valueNames": ["item-name", "item-industry", "item-location", "item-owner", "item-created"], "page": 5}' id="companiesList">
+                <div class="card" data-list='{"valueNames": ["item-name", "item-industry", "item-location", "item-owner", "item-created"], "pagination": true}' id="companiesList">
                   <div class="card-header">
                     <div class="row align-items-center">
                       <div class="col">
@@ -139,12 +139,10 @@
 
                         <!-- Select -->
                         <form>
-                          <select class="list-pages custom-select custom-select-sm form-control-flush" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
-                            <option value="1">1 per page</option>
-                            <option value="2">2 per page</option>
-                            <option value="3">3 per page</option>
-                            <option value="4">4 per page</option>
+                          <select class="custom-select custom-select-sm form-control-flush" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
                             <option value="5" selected>5 per page</option>
+                            <option value="10">10 per page</option>
+                            <option value="*">All</option>
                           </select>
                         </form>
 
@@ -153,10 +151,14 @@
 
                         <!-- Dropdown -->
                         <div class="dropdown">
+
+                          <!-- Toggle -->
                           <button class="btn btn-sm btn-white" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fe fe-sliders mr-1"></i> Filter
+                            <i class="fe fe-sliders mr-1"></i> Filter <span class="badge badge-primary ml-1">1</span>
                           </button>
-                          <form class="list-filter dropdown-menu dropdown-menu-right dropdown-menu-card">
+
+                          <!-- Menu -->
+                          <form class="dropdown-menu dropdown-menu-right dropdown-menu-card">
                             <div class="card-header">
 
                               <!-- Title -->
@@ -165,9 +167,9 @@
                               </h4>
 
                               <!-- Link -->
-                              <a class="text-reset" data-reset href="#">
+                              <button class="btn btn-sm btn-link text-reset" type="reset">
                                 <small>Clear filters</small>
-                              </a>
+                              </button>
 
                             </div>
                             <div class="card-body">
@@ -179,18 +181,18 @@
                                     <div class="col">
 
                                       <!-- Text -->
-                                      <small>Owner</small>
+                                      <small>Title</small>
 
                                     </div>
                                     <div class="col-auto">
 
                                       <!-- Select -->
-                                      <select class="custom-select custom-select-sm" name="item-owner" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
-                                        <option value="Dianna Smiley">Dianna Smiley</option>
-                                        <option value="Ab Hadley">Ab Hadley</option>
-                                        <option value="Adolfo Hess">Adolfo Hess</option>
-                                        <option value="Daniela Dewitt">Daniela Dewitt</option>
-                                        <option value="Miyah Myles">Miyah Myles</option>
+                                      <select class="custom-select custom-select-sm" name="item-title" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
+                                        <option value="*">Any</option>
+                                        <option value="Designer" selected>Designer</option>
+                                        <option value="Developer">Developer</option>
+                                        <option value="Owner">Owner</option>
+                                        <option value="Founder">Founder</option>
                                       </select>
 
                                     </div>
@@ -201,18 +203,24 @@
                                     <div class="col">
 
                                       <!-- Text -->
-                                      <small>Industry</small>
+                                      <small>Lead scrore</small>
 
                                     </div>
                                     <div class="col-auto">
 
                                       <!-- Select -->
-                                      <select class="custom-select custom-select-sm" name="item-industry" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
-                                        <option value="Web design">Web design</option>
-                                        <option value="Publishing">Publishing</option>
-                                        <option value="Transportation">Transportation</option>
-                                        <option value="Finance">Finance</option>
-                                        <option value="File hosting">File hosting</option>
+                                      <select class="custom-select custom-select-sm" name="item-score" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
+                                        <option value="*" selected>Any</option>
+                                        <option value="1/10">1+</option>
+                                        <option value="2/10">2+</option>
+                                        <option value="3/10">3+</option>
+                                        <option value="4/10">4+</option>
+                                        <option value="5/10">5+</option>
+                                        <option value="6/10">6+</option>
+                                        <option value="7/10">7+</option>
+                                        <option value="8/10">8+</option>
+                                        <option value="9/10">9+</option>
+                                        <option value="10/10">10</option>
                                       </select>
 
                                     </div>
@@ -222,11 +230,12 @@
 
                               <!-- Button -->
                               <button class="btn btn-block btn-primary" type="submit">
-                                Create new filter
+                                Apply filter
                               </button>
 
                             </div>
                           </form>
+
                         </div>
 
                       </div>
@@ -240,7 +249,7 @@
 
                             <!-- Checkbox -->
                             <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="list-checkbox-all custom-control-input" id="listCheckboxAll">
+                              <input type="checkbox" class="custom-control-input" id="listCheckboxAll">
                               <label class="custom-control-label" for="listCheckboxAll"></label>
                             </div>
 
@@ -268,7 +277,7 @@
 
                             <!-- Checkbox -->
                             <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="list-checkbox custom-control-input" id="listCheckboxOne">
+                              <input type="checkbox" class="custom-control-input" id="listCheckboxOne">
                               <label class="custom-control-label" for="listCheckboxOne"></label>
                             </div>
 
@@ -334,7 +343,7 @@
 
                             <!-- Checkbox -->
                             <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="list-checkbox custom-control-input" id="listCheckboxTwo">
+                              <input type="checkbox" class="custom-control-input" id="listCheckboxTwo">
                               <label class="custom-control-label" for="listCheckboxTwo"></label>
                             </div>
 
@@ -400,7 +409,7 @@
 
                             <!-- Checkbox -->
                             <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="list-checkbox custom-control-input" id="listCheckboxThree">
+                              <input type="checkbox" class="custom-control-input" id="listCheckboxThree">
                               <label class="custom-control-label" for="listCheckboxThree"></label>
                             </div>
 
@@ -466,7 +475,7 @@
 
                             <!-- Checkbox -->
                             <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="list-checkbox custom-control-input" id="listCheckboxFour">
+                              <input type="checkbox" class="custom-control-input" id="listCheckboxFour">
                               <label class="custom-control-label" for="listCheckboxFour"></label>
                             </div>
 
@@ -532,7 +541,7 @@
 
                             <!-- Checkbox -->
                             <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="list-checkbox custom-control-input" id="listCheckboxFive">
+                              <input type="checkbox" class="custom-control-input" id="listCheckboxFive">
                               <label class="custom-control-label" for="listCheckboxFive"></label>
                             </div>
 
@@ -599,11 +608,11 @@
                   <div class="card-footer">
 
                     <!-- Pagination -->
-                    <ul class="list-pagination pagination pagination-tabs pagination-overflow card-pagination justify-content-center">
+                    <ul class="list-pagination pagination pagination-tabs card-pagination justify-content-center">
                     </ul>
 
                     <!-- Alert -->
-                    <div class="list-alert alert alert-dark alert-dismissible fade" role="alert">
+                    <div class="list-alert alert alert-dark alert-dismissible border fade-show" role="alert">
 
                       <!-- Content -->
                       <div class="row align-items-center">
@@ -612,7 +621,7 @@
                           <!-- Checkbox -->
                           <div class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input" id="listAlertCheckbox" checked disabled>
-                            <label class="custom-control-label" for="listAlertCheckbox"><span class="list-alert-count">0</span> company(ies)</label>
+                            <label class="custom-control-label text-white" for="listAlertCheckbox">1 company(ies)</label>
                           </div>
 
                         </div>
@@ -645,7 +654,7 @@
               <div class="tab-pane fade" id="companiesCardsPane" role="tabpanel" aria-labelledby="companiesCardsTab">
 
                 <!-- Cards -->
-                <div data-list='{"valueNames": ["item-name", "item-industry", "item-location", "item-owner", "item-created"], "page": 5}' id="companiesCards">
+                <div data-list='{"valueNames": ["item-name", "item-industry", "item-location", "item-owner", "item-created"], "pagination": true}' id="companiesCards">
 
                   <!-- Header -->
                   <div class="row align-items-center mb-4">
@@ -668,12 +677,9 @@
 
                       <!-- Select -->
                       <form>
-                        <select class="list-pages custom-select custom-select-sm form-control-flush" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
-                          <option value="1">1 per page</option>
-                          <option value="2">2 per page</option>
-                          <option value="3">3 per page</option>
-                          <option value="4">4 per page</option>
-                          <option value="5" selected>5 per page</option>
+                        <select class="custom-select custom-select-sm form-control-flush" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
+                          <option value="1" selected>9 per page</option>
+                          <option value="5">All</option>
                         </select>
                       </form>
 
@@ -682,10 +688,14 @@
 
                       <!-- Dropdown -->
                       <div class="dropdown">
+
+                        <!-- Toggle -->
                         <button class="btn btn-sm btn-white" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <i class="fe fe-sliders mr-1"></i> Filter
+                          <i class="fe fe-sliders mr-1"></i> Filter <span class="badge badge-primary ml-1">1</span>
                         </button>
-                        <form class="list-filter dropdown-menu dropdown-menu-right dropdown-menu-card">
+
+                        <!-- Menu -->
+                        <form class="dropdown-menu dropdown-menu-right dropdown-menu-card">
                           <div class="card-header">
 
                             <!-- Title -->
@@ -694,9 +704,9 @@
                             </h4>
 
                             <!-- Link -->
-                            <a class="text-reset" data-reset href="#">
+                            <button class="btn btn-sm btn-link text-reset" type="reset">
                               <small>Clear filters</small>
-                            </a>
+                            </button>
 
                           </div>
                           <div class="card-body">
@@ -708,18 +718,18 @@
                                   <div class="col">
 
                                     <!-- Text -->
-                                    <small>Owner</small>
+                                    <small>Title</small>
 
                                   </div>
                                   <div class="col-auto">
 
                                     <!-- Select -->
-                                    <select class="custom-select custom-select-sm" name="item-owner" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
-                                      <option value="Dianna Smiley">Dianna Smiley</option>
-                                      <option value="Ab Hadley">Ab Hadley</option>
-                                      <option value="Adolfo Hess">Adolfo Hess</option>
-                                      <option value="Daniela Dewitt">Daniela Dewitt</option>
-                                      <option value="Miyah Myles">Miyah Myles</option>
+                                    <select class="custom-select custom-select-sm" name="item-title" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
+                                      <option value="*">Any</option>
+                                      <option value="Designer" selected>Designer</option>
+                                      <option value="Developer">Developer</option>
+                                      <option value="Owner">Owner</option>
+                                      <option value="Founder">Founder</option>
                                     </select>
 
                                   </div>
@@ -730,18 +740,24 @@
                                   <div class="col">
 
                                     <!-- Text -->
-                                    <small>Industry</small>
+                                    <small>Lead scrore</small>
 
                                   </div>
                                   <div class="col-auto">
 
                                     <!-- Select -->
-                                    <select class="custom-select custom-select-sm" name="item-industry" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
-                                      <option value="Web design">Web design</option>
-                                      <option value="Publishing">Publishing</option>
-                                      <option value="Transportation">Transportation</option>
-                                      <option value="Finance">Finance</option>
-                                      <option value="File hosting">File hosting</option>
+                                    <select class="custom-select custom-select-sm" name="item-score" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
+                                      <option value="*" selected>Any</option>
+                                      <option value="1/10">1+</option>
+                                      <option value="2/10">2+</option>
+                                      <option value="3/10">3+</option>
+                                      <option value="4/10">4+</option>
+                                      <option value="5/10">5+</option>
+                                      <option value="6/10">6+</option>
+                                      <option value="7/10">7+</option>
+                                      <option value="8/10">8+</option>
+                                      <option value="9/10">9+</option>
+                                      <option value="10/10">10</option>
                                     </select>
 
                                   </div>
@@ -751,13 +767,13 @@
 
                             <!-- Button -->
                             <button class="btn btn-block btn-primary" type="submit">
-                              Create new filter
+                              Apply filter
                             </button>
 
                           </div>
                         </form>
-                      </div>
 
+                      </div>
 
                     </div>
                   </div> <!-- / .row -->
@@ -776,7 +792,7 @@
 
                               <!-- Checkbox -->
                               <div class="custom-control custom-control-circle custom-checkbox">
-                                <input type="checkbox" class="list-checkbox custom-control-input" id="cardsCheckboxOne">
+                                <input type="checkbox" class="custom-control-input" id="cardsCheckboxOne">
                                 <label class="custom-control-label" for="cardsCheckboxOne"></label>
                               </div>
 
@@ -881,7 +897,7 @@
 
                               <!-- Checkbox -->
                               <div class="custom-control custom-control-circle custom-checkbox">
-                                <input type="checkbox" class="list-checkbox custom-control-input" id="cardsCheckboxTwo">
+                                <input type="checkbox" class="custom-control-input" id="cardsCheckboxTwo">
                                 <label class="custom-control-label" for="cardsCheckboxTwo"></label>
                               </div>
 
@@ -986,7 +1002,7 @@
 
                               <!-- Checkbox -->
                               <div class="custom-control custom-control-circle custom-checkbox">
-                                <input type="checkbox" class="list-checkbox custom-control-input" id="cardsCheckboxThree">
+                                <input type="checkbox" class="custom-control-input" id="cardsCheckboxThree">
                                 <label class="custom-control-label" for="cardsCheckboxThree"></label>
                               </div>
 
@@ -1091,7 +1107,7 @@
 
                               <!-- Checkbox -->
                               <div class="custom-control custom-control-circle custom-checkbox">
-                                <input type="checkbox" class="list-checkbox custom-control-input" id="cardsCheckboxFour">
+                                <input type="checkbox" class="custom-control-input" id="cardsCheckboxFour">
                                 <label class="custom-control-label" for="cardsCheckboxFour"></label>
                               </div>
 
@@ -1196,7 +1212,7 @@
 
                               <!-- Checkbox -->
                               <div class="custom-control custom-control-circle custom-checkbox">
-                                <input type="checkbox" class="list-checkbox custom-control-input" id="cardsCheckboxFive">
+                                <input type="checkbox" class="custom-control-input" id="cardsCheckboxFive">
                                 <label class="custom-control-label" for="cardsCheckboxFive"></label>
                               </div>
 
@@ -1292,11 +1308,11 @@
                   </div>
 
                   <!-- Pagination -->
-                  <ul class="list-pagination pagination pagination-tabs pagination-overflow justify-content-center">
+                  <ul class="list-pagination pagination pagination-tabs justify-content-center">
                   </ul>
 
                   <!-- Alert -->
-                  <div class="list-alert alert alert-dark alert-dismissible fade" role="alert">
+                  <div class="list-alert alert alert-dark alert-dismissible border fade show" role="alert">
 
                     <!-- Content -->
                     <div class="row align-items-center">
@@ -1305,7 +1321,7 @@
                         <!-- Checkbox -->
                         <div class="custom-control custom-checkbox">
                           <input type="checkbox" class="custom-control-input" id="cardAlertCheckbox" checked disabled>
-                          <label class="custom-control-label" for="cardAlertCheckbox"><span class="list-alert-count">0</span> company(ies)</label>
+                          <label class="custom-control-label text-white" for="cardAlertCheckbox">1 company(ies)</label>
                         </div>
 
                       </div>
