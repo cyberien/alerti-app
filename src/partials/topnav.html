@@ -501,6 +501,22 @@
                 E-Commerce
               </a>
             </li>
+            <li class="dropright">
+              <a class="dropdown-item dropdown-toggle @@if(subcategory=='crm'){active}" href="#" id="topnavCrm" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                CRM
+              </a>
+              <div class="dropdown-menu" aria-labelledby="topnavCrm">
+                <a class="dropdown-item @@if(page=='crm-contacts.html'){active}" href="@@webRoot/crm-contacts.html">
+                  Contacts
+                </a>
+                <a class="dropdown-item @@if(page=='crm-companies.html'){active}" href="@@webRoot/crm-companies.html">
+                  Companies
+                </a>
+                <a class="dropdown-item @@if(page=='crm-deals.html'){active}" href="@@webRoot/crm-deals.html">
+                  Deals
+                </a>
+              </div>
+            </li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -713,7 +729,7 @@
                 Basics
               </a>
               <div class="dropdown-menu" aria-labelledby="topnavBasics">
-                <a class="dropdown-item @@if(page=='getting-started.html'){active}" href="@@webRoot/getting-started.html">
+                <a class="dropdown-item @@if(page=='getting-started.html'){active}" href="@@webRoot/docs/getting-started.html">
                   Getting Started
                 </a>
                 <a class="dropdown-item @@if(page=='design-file.html'){active}" href="@@webRoot/docs/design-file.html">

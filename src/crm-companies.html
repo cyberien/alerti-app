@@ -117,7 +117,7 @@
               <div class="tab-pane fade show active" id="companiesListPane" role="tabpanel" aria-labelledby="companiesListTab">
 
                 <!-- Card -->
-                <div class="card" data-list='{"valueNames": ["item-name", "item-industry", "item-location", "item-owner", "item-created"], "pagination": true}' id="companiesList">
+                <div class="card" data-list='{"valueNames": ["item-name", "item-industry", "item-location", "item-owner", "item-created"], "pagination": {"paginationClass": "list-pagination"}}' id="companiesList">
                   <div class="card-header">
                     <div class="row align-items-center">
                       <div class="col">
@@ -608,7 +608,20 @@
                   <div class="card-footer">
 
                     <!-- Pagination -->
-                    <ul class="list-pagination pagination pagination-tabs card-pagination justify-content-center">
+                    <ul class="pagination pagination-tabs card-pagination">
+                      <li class="page-item mr-auto">
+                        <a class="page-link" href="#!">
+                          <i class="fe fe-arrow-left mr-1"></i> Prev
+                        </a>
+                      </li>
+                      <li class="page-item">
+                        <ul class="list-pagination list-unstyled d-flex"></ul>
+                      </li>
+                      <li class="page-item ml-auto">
+                        <a class="page-link" href="#!">
+                          Next <i class="fe fe-arrow-right ml-1"></i>
+                        </a>
+                      </li>
                     </ul>
 
                     <!-- Alert -->
@@ -654,7 +667,7 @@
               <div class="tab-pane fade" id="companiesCardsPane" role="tabpanel" aria-labelledby="companiesCardsTab">
 
                 <!-- Cards -->
-                <div data-list='{"valueNames": ["item-name", "item-industry", "item-location", "item-owner", "item-created"], "pagination": true}' id="companiesCards">
+                <div data-list='{"valueNames": ["item-name", "item-industry", "item-location", "item-owner", "item-created"], "pagination": {"paginationClass": "list-pagination"}}' id="companiesCards">
 
                   <!-- Header -->
                   <div class="row align-items-center mb-4">
@@ -1308,7 +1321,20 @@
                   </div>
 
                   <!-- Pagination -->
-                  <ul class="list-pagination pagination pagination-tabs justify-content-center">
+                  <ul class="pagination pagination-tabs">
+                    <li class="page-item mr-auto">
+                      <a class="page-link" href="#!">
+                        <i class="fe fe-arrow-left mr-1"></i> Prev
+                      </a>
+                    </li>
+                    <li class="page-item">
+                      <ul class="list-pagination list-unstyled d-flex"></ul>
+                    </li>
+                    <li class="page-item ml-auto">
+                      <a class="page-link" href="#!">
+                        Next <i class="fe fe-arrow-right ml-1"></i>
+                      </a>
+                    </li>
                   </ul>
 
                   <!-- Alert -->

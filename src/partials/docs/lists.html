@@ -90,11 +90,11 @@
 
   <!-- Subheading -->
   <p class="text-muted mb-4">
-    Create searchable, sortable, and filterable lists and tables with the simple but powerful List.js plugin. Please read the <a target="_blank" href="http://listjs.com/">official plugin documentation</a> for a full list of options.
+    Create searchable, sortable, and filterable lists and tables with the simple but powerful List.js plugin. Please read the <a target="_blank" href="http://listjs.com/">official plugin documentation</a> for a full list of options. Either initialize List.js via JavaScript as suggested in the documentation, or use our custom <code>data-list</code> attribute to initialize it via HTML which is perfect for simpler cases. The default classnames in this case would be <code>.list</code>, <code>.list-search</code>, and <code>.list-sort</code>. Pagination must be initialized explicitely which can be done with <code>data-list='{"pagination": {"paginationClass": "list-pagination"}}'</code>.
   </p>
 
   <!-- Card -->
-  <div class="card" id="lists" data-toggle="lists" data-options='{"valueNames": ["name"], "page": 3, "pagination": true}'>
+  <div class="card" id="lists" data-list='{"valueNames": ["name"], "page": 3, "pagination": {"paginationClass": "list-pagination"}}'>
     <div class="card-header">
 
       <!-- Title -->
@@ -108,7 +108,7 @@
       <!-- Form -->
       <form>
         <div class="input-group input-group-flush input-group-merge">
-          <input type="search" class="form-control form-control-prepended search" placeholder="Search">
+          <input type="search" class="form-control form-control-prepended list-search" placeholder="Search">
           <div class="input-group-prepend">
             <div class="input-group-text">
               <span class="fe fe-search"></span>
@@ -265,7 +265,7 @@
     </div>
     <div class="card-footer bg-dark">
       <code class="highlight html bg-dark">
-        &lt;div&nbsp;id=&quot;lists&quot;&nbsp;data-toggle=&quot;lists&quot;&nbsp;data-options='{&quot;valueNames&quot;:&nbsp;[&quot;name&quot;],&nbsp;&quot;page&quot;:&nbsp;3,&nbsp;&quot;pagination&quot;:&nbsp;true}'&gt;<br /><br />&nbsp;&nbsp;&lt;!--&nbsp;Search&nbsp;--&gt;<br />&nbsp;&nbsp;&lt;input&nbsp;type=&quot;search&quot;&nbsp;class=&quot;search&quot;&gt;<br /><br />&nbsp;&nbsp;&lt;!--&nbsp;List&nbsp;--&gt;<br />&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;list&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;name&quot;&gt;Casey&nbsp;Fyfe&lt;/li&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;name&quot;&gt;Jane&nbsp;Roe&lt;/li&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;name&quot;&gt;Casey&nbsp;Fyfe&lt;/li&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;name&quot;&gt;Jane&nbsp;Roe&lt;/li&gt;<br />&nbsp;&nbsp;&lt;/ul&gt;<br /><br />&nbsp;&nbsp;&lt;!--&nbsp;Pagination&nbsp;--&gt;<br />&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;pagination&quot;&gt;&lt;/ul&gt;<br /><br />&lt;/div&gt;<br />
+        &lt;div&nbsp;id=&quot;lists&quot;&nbsp;data-list='{&quot;valueNames&quot;:&nbsp;[&quot;name&quot;],&nbsp;&quot;page&quot;:&nbsp;3,&nbsp;&quot;pagination&quot;:&nbsp;{&quot;paginationClass&quot;:&nbsp;&quot;list-pagination&quot;}}'&gt;<br /><br />&nbsp;&nbsp;&lt;!--&nbsp;Search&nbsp;--&gt;<br />&nbsp;&nbsp;&lt;input&nbsp;class=&quot;list-search&quot;&nbsp;type=&quot;search&quot;&gt;<br /><br />&nbsp;&nbsp;&lt;!--&nbsp;List&nbsp;--&gt;<br />&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;list&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;name&quot;&gt;Casey&nbsp;Fyfe&lt;/li&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;name&quot;&gt;Jane&nbsp;Roe&lt;/li&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;name&quot;&gt;Casey&nbsp;Fyfe&lt;/li&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;name&quot;&gt;Jane&nbsp;Roe&lt;/li&gt;<br />&nbsp;&nbsp;&lt;/ul&gt;<br /><br />&nbsp;&nbsp;&lt;!--&nbsp;Pagination&nbsp;--&gt;<br />&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;list-pagination&quot;&gt;&lt;/ul&gt;<br /><br />&lt;/div&gt;<br />
       </code>
     </div>
   </div>

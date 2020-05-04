@@ -75,6 +75,30 @@
                   E-Commerce
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="#sidebarCrm" class="nav-link" data-toggle="collapse" role="button" aria-expanded="@@if(subcategory=='crm'){true}@@if(subcategory!=='crm'){false}" aria-controls="sidebarCrm">
+                  CRM
+                </a>
+                <div class="collapse @@if(subcategory=='crm'){show}" id="sidebarCrm">
+                  <ul class="nav nav-sm flex-column">
+                    <li class="nav-item">
+                      <a href="@@webRoot/crm-contacts.html" class="nav-link @@if(page=='crm-contacts.html'){active}">
+                        Contacts
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="@@webRoot/crm-companies.html" class="nav-link @@if(page=='crm-companies.html'){active}">
+                        Companies
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="@@webRoot/crm-deals.html" class="nav-link @@if(page=='crm-deals.html'){active}">
+                        Deals
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
             </ul>
           </div>
         </li>
