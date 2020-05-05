@@ -30,6 +30,12 @@
   padding-right: 0;
 }
 
+// List group focus
+
+.list-group-focus .list-group-item:focus .text-focus {
+  color: $link-color !important;
+}
+
 
 //
 // Dashkit ===================================

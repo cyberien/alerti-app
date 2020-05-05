@@ -319,21 +319,6 @@
   border-width: 0 0 $border-width 0 !important;
 }
 
-.card-pagination.pagination-tabs .page-item:first-child .page-link {
-  padding-left: 0;
-  padding-right: $card-spacer-x;
-  margin-right: $card-spacer-x;
-  border-right: $border-width solid $card-border-color;
-}
-
-.card-pagination.pagination-tabs .page-item:last-child .page-link {
-  padding-right: 0;
-  padding-left: $card-spacer-x;
-  margin-left: $card-spacer-x;
-  border-left: $border-width solid $card-border-color;
-}
-
-
 // Card divider 
 
 .card-divider {

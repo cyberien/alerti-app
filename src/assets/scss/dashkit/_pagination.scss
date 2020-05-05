@@ -28,7 +28,7 @@
   padding: $pagination-tabs-padding-y $pagination-tabs-padding-x;
   background-color: $pagination-tabs-bg-color;
   border-width: $border-width 0 0 0;
-  border-radius: 0;
+  border-radius: 0 !important;
   color: $pagination-tabs-color;
 }
 

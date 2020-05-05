@@ -321,6 +321,7 @@ $custom-select-indicator: url("data:image/svg+xml,<svg viewBox='0 0 9 5' fill='n
 $custom-select-focus-border-color: $input-focus-border-color !default;
 $custom-select-focus-box-shadow: $input-focus-box-shadow !default;
 
+$custom-control-cursor: pointer !default;
 $custom-control-indicator-bg: $border-color !default;
 $custom-control-indicator-border-width: 0 !default;
 
@@ -460,6 +461,7 @@ $toast-header-border-color: $border-color !default;
 
 // Badges
 
+$badge-font-size: 76% !default;
 $badge-font-weight: $font-weight-normal !default;
 $badge-padding-y: .33em !default;
 
@@ -713,7 +715,7 @@ $nav-tabs-sm-link-margin-x: .5rem !default;
 
 $navbar-vertical-width: 250px !default;
 $navbar-vertical-width-sm: 66px !default;
-$navbar-vertical-expand-breakpoint: 'md' !default; // Doesn't affect the actual breakpoint at which the navbar expands. Used for positioning of other elements only (e.g. `list-alert`)
+$navbar-vertical-expand-breakpoint: 'md' !default; // Doesn't affect the actual breakpoint at which the navbar expands. Used for positioning of other elements only (e.g. `.select-alert`)
 
 $navbar-vertical-padding-x: 1.5rem !default;
 $navbar-vertical-padding-x-sm: 0.75rem !default;

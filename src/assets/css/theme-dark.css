@@ -2748,7 +2748,8 @@ input[type="button"].btn-block {
 .custom-control-label {
   position: relative;
   margin-bottom: 0;
-  vertical-align: top; }
+  vertical-align: top;
+  cursor: pointer; }
   .custom-control-label::before {
     position: absolute;
     top: 0.20313rem;
@@ -3640,7 +3641,7 @@ input[type="button"].btn-block {
 .badge {
   display: inline-block;
   padding: 0.33em 0.5em;
-  font-size: 75%;
+  font-size: 76%;
   font-weight: 400;
   line-height: 1;
   text-align: center;
@@ -8463,18 +8464,6 @@ a.text-white:hover, a.text-white:focus {
 .card-pagination.pagination-tabs .active .page-link, .card-pagination.pagination-tabs .active .page {
   border-width: 0 0 1px 0 !important; }
 
-.card-pagination.pagination-tabs .page-item:first-child .page-link, .card-pagination.pagination-tabs .page-item:first-child .page {
-  padding-left: 0;
-  padding-right: 1.5rem;
-  margin-right: 1.5rem;
-  border-right: 1px solid #1E3A5C; }
-
-.card-pagination.pagination-tabs .page-item:last-child .page-link, .card-pagination.pagination-tabs .page-item:last-child .page {
-  padding-right: 0;
-  padding-left: 1.5rem;
-  margin-left: 1.5rem;
-  border-left: 1px solid #1E3A5C; }
-
 .card-divider {
   border-color: #1E3A5C; }
 
@@ -8844,6 +8833,9 @@ a.text-white:hover, a.text-white:focus {
 .list-group-flush > .list-group-item {
   padding-left: 0;
   padding-right: 0; }
+
+.list-group-focus .list-group-item:focus .text-focus {
+  color: #2C7BE5 !important; }
 
 .list-group-activity .list-group-item {
   border: 0; }
@@ -10036,7 +10028,7 @@ a.text-white:hover, a.text-white:focus {
   padding: 1.25rem 0.75rem;
   background-color: transparent;
   border-width: 1px 0 0 0;
-  border-radius: 0;
+  border-radius: 0 !important;
   color: #6E84A3; }
 
 .pagination-tabs .page-link:hover, .pagination-tabs .page:hover {
@@ -11291,13 +11283,16 @@ a:focus, button:focus {
   margin-bottom: 0;
   transform: translateX(-50%); }
 
+.list-alert:not(.show) {
+  pointer-events: none; }
+
 @media (min-width: 768px) {
   .navbar-vertical:not(.navbar-vertical-sm):not([style*="display: none"]) ~ .main-content .list-alert {
     left: calc(50% + 125px); } }
 
 .list-alert .close {
   top: 50%;
-  transform: translatey(-50%); }
+  transform: translateY(-50%); }
 
 [class*="select2"] {
   display: block; }

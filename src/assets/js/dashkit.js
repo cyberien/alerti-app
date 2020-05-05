@@ -495,35 +495,3 @@
     });
   }
 })();
-
-// List checkbox
-
-(function() {
-  var checkboxAll = document.querySelectorAll('thead [name="listCheckbox"]');
-  var checkboxes = document.querySelectorAll('tbody [name="listCheckbox"]');
-
-  if (checkboxAll && checkboxes) {
-
-    // All
-    [].forEach.call(checkboxAll, function(checkbox) {
-      checkbox.addEventListener('change', function() {
-        var table = checkbox.closest('table');
-        var children = table.querySelectorAll('tbody [name="listCheckbox"]');
-
-        [].forEach.call(children, function(child) {
-          child.checked = checkbox.checked;
-        });
-      });
-    });
-
-    // Any
-    [].forEach.call(checkboxes, function(checkbox) {
-      checkbox.addEventListener('change', function() {
-        var table = checkbox.closest('table');
-        var child = table.querySelector('thead [name="listCheckbox"]');
-
-        child.checked = false;
-      });
-    });
-  }
-})();
