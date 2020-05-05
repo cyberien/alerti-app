@@ -17,7 +17,7 @@ The steps to compile and get started with development are covered in detail in d
 
 ### Design Files
 
-We provide an "unofficial" Dashkit Figma file for you to play with. View/download it here: https://www.figma.com/file/42GXnmUU91IthZs4SCkTTq/Dashkit-1.5.0-Distributed?node-id=2277%3A4410. You can install all the TTF fonts from Dashkit's source files in: `src/assets/fonts/cerebrisans`.
+We provide an "unofficial" Dashkit Figma file for you to play with. View/download it here: https://www.figma.com/file/WsNDMKNUbdqnYqUP330vfu/Dashkit-Distributed?node-id=2277%3A4410. You can install all the TTF fonts from Dashkit's source files in: `src/assets/fonts/cerebrisans`.
 
 ### Support
 

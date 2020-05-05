@@ -101,8 +101,10 @@
       return checkbox.checked;
     });
 
-    checked.length ? listAlert.classList.add('show') : listAlert.classList.remove('show');
-    listAlertCount.innerHTML = checked.length;
+    if (listAlert) {
+      checked.length ? listAlert.classList.add('show') : listAlert.classList.remove('show');
+      listAlertCount.innerHTML = checked.length;
+    }
   };
 
   if (typeof List !== 'undefined' && lists) {

@@ -8487,6 +8487,9 @@ a.text-white:hover, a.text-white:focus {
     background-color: #FFFFFF;
     transform: translateX(1.5rem); }
 
+.custom-select-sm {
+  line-height: 1.75; }
+
 .custom-control-circle {
   padding-left: 1.875rem; }
 
