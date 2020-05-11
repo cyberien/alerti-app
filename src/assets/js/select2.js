@@ -11,27 +11,27 @@
   // Variables
   //
 
-  var toggle = document.querySelectorAll('[data-toggle="select"]');
+  var selects = document.querySelectorAll('[data-toggle="select"]');
 
   //
   // Functions
   //
 
-  function init(el) {
-    var elementOptions = el.dataset.options ? JSON.parse(el.dataset.options) : {};
+  function init(select) {
+    var elementOptions = select.dataset.options ? JSON.parse(select.dataset.options) : {};
 
     var defaultOptions = {
-      containerCssClass: el.getAttribute('class'),
+      containerCssClass: select.getAttribute('class'),
       dropdownAutoWidth: true,
-      dropdownCssClass: el.classList.contains('custom-select-sm') || el.classList.contains('form-control-sm') ? 'dropdown-menu dropdown-menu-sm show' : 'dropdown-menu show',
-      dropdownParent: el.closest('.modal') ? el.closest('.modal') : document.body,
+      dropdownCssClass: select.classList.contains('custom-select-sm') || select.classList.contains('form-control-sm') ? 'dropdown-menu dropdown-menu-sm show' : 'dropdown-menu show',
+      dropdownParent: select.closest('.modal-body') || document.body,
       templateResult: formatTemplate
     };
 
     var options = Object.assign(defaultOptions, elementOptions);
 
     // Init
-    $(el).select2(options);
+    $(select).select2(options);
   }
 
   function formatTemplate(item) {
@@ -53,9 +53,9 @@
   // Events
   //
 
-  if (jQuery().select2 && toggle) {
-    [].forEach.call(toggle, function(el) {
-      init(el);
+  if (jQuery().select2 && selects) {
+    [].forEach.call(selects, function(select) {
+      init(select);
     });
   }
 
