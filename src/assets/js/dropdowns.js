@@ -42,9 +42,11 @@
   [].forEach.call(dropdowns, function(dropdown) {
     var toggle = dropdown.querySelector('[data-toggle="dropdown"]');
 
-    toggle.addEventListener(events[0], function(e) {
-      toggleDropdown(e, dropdown);
-    });
+    if (toggle) {
+      toggle.addEventListener(events[0], function(e) {
+        toggleDropdown(e, dropdown);
+      });
+    }
   });
 
   $(dropdowns).on('hide.bs.dropdown', function() {
