@@ -1,55 +1,31 @@
 <!doctype html>
 <html lang="en">
   <head>
-    @@include("partials/head.html", {
-    "title": "Dashkit"
-    })
+    {{> partials/head webRoot="." title="Dashkit"}}
   </head>
   <body>
 
-    <!-- MODALS
-    ================================================== -->
-    @@include("partials/modals.html")
+    <!-- MODALS -->
 
-    <!-- NAVIGATION
-    ================================================== -->
-    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
-    @@if (sidebarSize == 'base' || demoMode) {
-    @@include("partials/sidebar.html", {
-    "category": "dashboards",
-    "subcategory": "",
-    "page": "index.html"
-    })
-    }
-    @@if (sidebarSize == 'small' || demoMode) {
-    @@include("partials/sidebar-sm.html", {
-    "category": "dashboards",
-    "subcategory": "",
-    "page": "index.html"
-    })
-    }
-    }
-    @@if (navPosition == 'topnav' || demoMode) {
-    @@include("partials/topnav.html", {
-    "category": "dashboards",
-    "subcategory": "",
-    "page": "index.html"
-    })
-    }
+    <!-- NAVIGATION -->
 
-    <!-- MAIN CONTENT
-    ================================================== -->
+    <!-- MAIN CONTENT -->
     <div class="main-content">
+      <div class="container">
+        <div class="row">
+          <div class="col">
 
-      @@if (navPosition == 'combo' || demoMode) {
-      @@include("partials/topbar.html")
-      }
+            <a class="btn btn-primary" href="#!">
+              Button
+            </a>
 
-    </div> <!-- / .main-content -->
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <!-- JAVASCRIPT
-    ================================================== -->
-    @@include("partials/scripts.html")
+    <!-- JAVASCRIPT -->
+    {{> partials/scripts webRoot="."}}
 
   </body>
 </html>
