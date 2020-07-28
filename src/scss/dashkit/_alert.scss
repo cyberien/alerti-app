@@ -19,10 +19,10 @@
 
 @each $color, $value in $theme-colors {
   .alert-#{$color} {
-    @include alert-variant(theme-color-level($color, $alert-bg-level), theme-color-level($color, $alert-border-level), color-yiq(theme-color-level($color, $alert-bg-level)));
+    @include alert-variant(color-level($value, $alert-bg-level), color-level($value, $alert-border-level), color-contrast(color-level($value, $alert-bg-level)));
 
     .alert-link, .close {
-      color: color-yiq(theme-color-level($color, $alert-bg-level));
+      color: color-contrast(color-level($value, $alert-bg-level));
     }
   }
 }

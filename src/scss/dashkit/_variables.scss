@@ -35,10 +35,15 @@ $gray-900-dark: #132A46 !default;
 $black-dark: #12263F !default;
 
 $blue: #2C7BE5 !default;
+$indigo: #727cf5 !default; // NOT USED
 $purple: #6b5eae !default;
+$pink: #ff679b !default; // NOT USED
 $red: #E63757 !default;
+$orange: #fd7e14 !default; // NOT USED
 $yellow: #F6C343 !default;
 $green: #00D97E !default;
+$teal: #02a8b5 !default; // NOT USED
+$cyan: #39afd1 !default;
 
 $primary: $blue !default;
 $secondary: $gray-700 !default;
@@ -308,12 +313,13 @@ $input-group-addon-bg: $input-bg !default;
 $form-select-indicator-padding: 1.25rem !default;
 $form-select-bg-size: .75em .75em !default;
 $form-select-indicator-color: $gray-600 !default;
-$form-select-indicator: url("data:image/svg+xml,<svg viewBox='0 0 9 5' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M1 1L4.25 4.25L7.5 1' stroke='#{$custom-select-indicator-color}' stroke-width='1.08333' stroke-linecap='round' stroke-linejoin='round'/></svg>") !default;
+$form-select-indicator: url("data:image/svg+xml,<svg viewBox='0 0 9 5' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M1 1L4.25 4.25L7.5 1' stroke='#{$form-select-indicator-color}' stroke-width='1.08333' stroke-linecap='round' stroke-linejoin='round'/></svg>") !default;
 
 $form-select-focus-border-color: $input-focus-border-color !default;
 $form-select-focus-box-shadow: $input-focus-box-shadow !default;
 
 $form-switch-width: 3rem !default;
+$form-switch-padding-left: $form-switch-width + .5rem !default;
 
 
 // Navs
@@ -419,8 +425,6 @@ $popover-header-padding-y: 0 !default;
 $popover-header-padding-x: 0 !default;
 
 $popover-body-color: $text-muted !default;
-$popover-body-padding-x: .95rem !default;
-$popover-body-padding-y: .8rem !default;
 
 
 // Toasts
@@ -444,6 +448,7 @@ $toast-header-border-color: $border-color !default;
 $badge-font-size: 76% !default;
 $badge-font-weight: $font-weight-normal !default;
 $badge-padding-y: .33em !default;
+$badge-padding-x: .5em !default;
 
 
 // Modals
@@ -517,22 +522,18 @@ $code-color: $blue !default;
 // Dashkit =====================================
 //
 
-// Paths
-
-$path-to-fonts: '../fonts' !default;
-$path-to-img: '../img' !default;
-
 
 // Components
+//
+// Define common padding and border radius sizes and more.
 
-$border-sizing: () !default;
-$border-sizing: map-merge(("2": 2,
-    "3": 3,
-    "4": 4,
-    "5": 5), $border-sizing);
+$box-shadow-lift: 0 1rem 2.5rem fade-out($black, .9), 0 .5rem 1rem -.75rem fade-out($black, .9) !default;
+$box-shadow-lift-lg: 0 2rem 5rem fade-out($black, .9), 0 .5rem 1rem -.75rem fade-out($black, .95) !default;
 
 
-// Type
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
 
 $font-size-xs: ($font-size-base * .6666666667) !default; // 10px
 
@@ -541,138 +542,32 @@ $headings-letter-spacing: -.02em !default;
 $display-letter-spacing: -.02em !default;
 
 
-// Alerts
+// Tables
 
-$alert-link-text-decoration: underline !default;
-
-
-// Auth
-
-$auth-bg: $white !default;
+$table-head-bg: $gray-100 !default;
+$table-head-color: $text-muted !default;
 
 
-// Avatar
+// Buttons
 
-$avatar-size-base: 3rem !default;
-$avatar-size-xs: 1.625rem !default;
-$avatar-size-sm: 2.5rem !default;
-$avatar-size-lg: 4rem !default;
-$avatar-size-xl: 5.125rem !default;
-$avatar-size-xxl: 8rem !default;
-
-$avatar-title-bg: $gray-500 !default;
-$avatar-title-color: $white !default;
+$btn-text-color: $white !default;
 
 
-// Popover
+// Forms
 
-$popover-lg-max-width: 300px !default;
+$form-switch-height: 1.5rem !default;
+$form-switch-indicator-size: 1.125rem !default;
+$form-switch-spacing: ($form-switch-height - $form-switch-indicator-size) / 2 !default;
 
-$popover-dark-bg: $black !default;
-$popover-dark-border-color: $black !default;
+$form-switch-indicator-bg: $white !default;
+$form-switch-indicator-active-bg: $white !default;
 
-$popover-dark-header-bg: $black !default;
-$popover-dark-header-color: $white !default;
+$form-control-circle-indicator-size: 1.375rem !default;
 
+$form-control-circle-indicator-border-radius: 50% !default;
+$form-control-circle-indicator-icon-checked: url(escape-svg("data:image/svg+xml,<svg viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M11.3333 1L3.99996 8.33333L0.666626 5' stroke='#{$white}' stroke-width='1.33333' stroke-linecap='round' stroke-linejoin='round'/></svg>")) !default;
 
-// Badges
-
-$badge-soft-bg-level: -10 !default;
-
-$badge-padding-x: .5em !default;
-
-
-// Breadcrumb
-
-$breadcrumb-padding-y-sm: .5rem !default;
-$breadcrumb-padding-x-sm: .5rem !default;
-$breadcrumb-item-padding-sm: .25rem !default;
-
-$breadcrumb-margin-bottom-sm: .25rem !default;
-$breadcrumb-font-size-sm: $font-size-sm !default;
-
-
-// Cards
-
-$card-margin-bottom: $spacer !default;
-$card-spacer-x-sm: 1rem !default;
-
-$card-outline-color: $card-border-color !default;
-$card-box-shadow: 0 .75rem 1.5rem transparentize($black, .97) !default;
-
-$card-header-height: 60px !default;
-
-
-// Charts
-
-$chart-height: 300px !default;
-$chart-height-sm: 225px !default;
-
-$chart-sparkline-width: 75px !default;
-$chart-sparkline-height: 35px !default;
-
-$chart-legend-margin-top: 2.5rem !default;
-$chart-legend-font-size: $font-size-sm !default;
-$chart-legend-color: $text-muted !default;
-$chart-legend-height: $chart-legend-margin-top + $chart-legend-font-size * $line-height-base !default;
-
-
-// Comment
-
-$comment-margin-bottom: 1rem !default;
-
-$comment-body-padding-y: 1rem !default;
-$comment-body-padding-x: 1.25rem !default;
-$comment-body-bg: $body-bg !default;
-$comment-body-border-radius: $border-radius-lg !default;
-$comment-body-font-size: $font-size-sm !default;
-
-$comment-time-margin-bottom: .5625rem !default;
-$comment-time-font-size: $font-size-xs !default;
-$comment-time-color: $text-muted !default;
-
-
-// Dropdowns
-
-$dropdown-card-min-width: 350px !default;
-$dropdown-card-border-color: $dropdown-border-color !default;
-$dropdown-card-header-min-height: 3.125rem !default;
-$dropdown-card-body-max-height: 350px !default;
-
-$dropdown-padding-y-sm: .25rem !default;
-$dropdown-font-size-sm: $font-size-sm !default;
-$dropdown-item-padding-y-sm: .1875rem !default;
-$dropdown-item-padding-x-sm: .75rem !default;
-
-
-// Header
-
-$header-margin-bottom: 2rem !default;
-
-$header-spacing-y: 1.5rem !default;
-
-$header-body-border-width: 1px !default;
-$header-body-border-color: $border-color !default;
-
-$header-body-border-color-dark: fade-out($header-body-border-color, .9) !default;
-
-
-// List groups
-
-$list-group-item-padding-y-lg: $spacer !default;
-
-
-// Main content
-
-$main-content-padding-y: 40px !default;
-$main-content-padding-x: 24px !default; // in px to combine with $grid-gutter-width
-
-
-// Modal
-
-$modal-dialog-vertical-width: 350px !default;
-
-$modal-card-body-max-height: 350px !default;
+$form-control-circle-indicator-bg-size: .75rem .5625rem !default;
 
 
 // Navs
@@ -726,6 +621,19 @@ $navbar-light-brand-filter: none;
 $navbar-dropdown-toggle-on-hover: true !default;
 
 
+// Dropdowns
+
+$dropdown-card-min-width: 350px !default;
+$dropdown-card-border-color: $dropdown-border-color !default;
+$dropdown-card-header-min-height: 3.125rem !default;
+$dropdown-card-body-max-height: 350px !default;
+
+$dropdown-padding-y-sm: .25rem !default;
+$dropdown-font-size-sm: $font-size-sm !default;
+$dropdown-item-padding-y-sm: .1875rem !default;
+$dropdown-item-padding-x-sm: .75rem !default;
+
+
 // Pagination
 
 $pagination-tabs-padding-y: 1.25rem !default;
@@ -739,25 +647,70 @@ $pagination-tabs-hover-color: $body-color !default;
 $pagination-tabs-active-color: $body-color !default;
 
 
+// Cards
+
+$card-margin-bottom: $spacer !default;
+$card-spacer-x-sm: 1rem !default;
+
+$card-outline-color: $card-border-color !default;
+$card-box-shadow: 0 .75rem 1.5rem transparentize($black, .97) !default;
+
+$card-header-height: 60px !default;
+
+
+// Popovers
+
+$popover-padding-x: .95rem !default;
+$popover-padding-y: .8rem !default;
+
+$popover-lg-max-width: 300px !default;
+
+$popover-dark-bg: $black !default;
+$popover-dark-border-color: $black !default;
+
+$popover-dark-header-bg: $black !default;
+$popover-dark-header-color: $white !default;
+
+$popover-header-margin-bottom: .25rem !default;
+
+
+// List groups
+
+$list-group-item-padding-y-lg: $spacer !default;
+
+
+// Badges
+
+$badge-soft-bg-level: -10 !default;
+
+
+// Modal
+
+$modal-dialog-vertical-width: 350px !default;
+
+$modal-card-body-max-height: 350px !default;
+
+
+// Alerts
+//
+// Define alert colors, border radius, and padding.
+
+$alert-link-text-decoration: underline !default;
+
+
+// Breadcrumbs
+
+$breadcrumb-padding-y-sm: .5rem !default;
+$breadcrumb-padding-x-sm: .5rem !default;
+$breadcrumb-item-padding-sm: .25rem !default;
+
+$breadcrumb-margin-bottom-sm: .25rem !default;
+$breadcrumb-font-size-sm: $font-size-sm !default;
+
+
 // Progress bars
 
 $progress-height-sm: 0.25rem !default;
-
-
-// Forms
-
-$custom-switch-height: 1.5rem !default;
-$custom-switch-spacing: ($custom-switch-height - $custom-switch-indicator-size) / 2 !default;
-
-$custom-switch-indicator-bg: $white !default;
-$custom-switch-indicator-active-bg: $white !default;
-
-$custom-control-circle-indicator-size: 1.375rem !default;
-
-$custom-control-circle-indicator-border-radius: 50% !default;
-$custom-control-circle-indicator-icon-checked: url(escape-svg("data:image/svg+xml,<svg viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M11.3333 1L3.99996 8.33333L0.666626 5' stroke='#{$white}' stroke-width='1.33333' stroke-linecap='round' stroke-linejoin='round'/></svg>")) !default;
-
-$custom-control-circle-indicator-bg-size: .75rem .5625rem !default;
 
 
 // Close
@@ -765,15 +718,41 @@ $custom-control-circle-indicator-bg-size: .75rem .5625rem !default;
 $close-font-size-sm: $font-size-base !default;
 
 
-// Kanban
+// Auth
 
-$kanban-col-width: 375px !default;
+$auth-bg: $white !default;
 
 
-// Components
+// Avatar
 
-$box-shadow-lift: 0 1rem 2.5rem fade-out($black, .9), 0 .5rem 1rem -.75rem fade-out($black, .9) !default;
-$box-shadow-lift-lg: 0 2rem 5rem fade-out($black, .9), 0 .5rem 1rem -.75rem fade-out($black, .95) !default;
+$avatar-size-base: 3rem !default;
+$avatar-size-xs: 1.625rem !default;
+$avatar-size-sm: 2.5rem !default;
+$avatar-size-lg: 4rem !default;
+$avatar-size-xl: 5.125rem !default;
+$avatar-size-xxl: 8rem !default;
+
+$avatar-title-bg: $gray-500 !default;
+$avatar-title-color: $white !default;
+
+
+// Backgrounds
+
+$bg-soft-level: -11 !default;
+
+
+// Charts
+
+$chart-height: 300px !default;
+$chart-height-sm: 225px !default;
+
+$chart-sparkline-width: 75px !default;
+$chart-sparkline-height: 35px !default;
+
+$chart-legend-margin-top: 2.5rem !default;
+$chart-legend-font-size: $font-size-sm !default;
+$chart-legend-color: $text-muted !default;
+$chart-legend-height: $chart-legend-margin-top + $chart-legend-font-size * $line-height-base !default;
 
 
 // Checklist
@@ -782,9 +761,36 @@ $checklist-control-spacer: .75rem !default;
 $checklist-control-checked-color: $gray-700 !default;
 
 
-// Backgrounds
+// Comment
 
-$bg-soft-level: -11 !default;
+$comment-margin-bottom: 1rem !default;
+
+$comment-body-padding-y: 1rem !default;
+$comment-body-padding-x: 1.25rem !default;
+$comment-body-bg: $body-bg !default;
+$comment-body-border-radius: $border-radius-lg !default;
+$comment-body-font-size: $font-size-sm !default;
+
+$comment-time-margin-bottom: .5625rem !default;
+$comment-time-font-size: $font-size-xs !default;
+$comment-time-color: $text-muted !default;
+
+
+// Header
+
+$header-margin-bottom: 2rem !default;
+
+$header-spacing-y: 1.5rem !default;
+
+$header-body-border-width: 1px !default;
+$header-body-border-color: $border-color !default;
+
+$header-body-border-color-dark: fade-out($header-body-border-color, .9) !default;
+
+
+// Kanban
+
+$kanban-col-width: 375px !default;
 
 
 // List
@@ -792,16 +798,13 @@ $bg-soft-level: -11 !default;
 $list-alert-min-width: 350px !default;
 
 
-// Tables
+// Main content
 
-$table-head-bg: $gray-100 !default;
-$table-head-color: $text-muted !default;
+$main-content-padding-y: 2.5rem !default;
+$main-content-padding-x: 1.5rem !default;
 
 
-// Buttons
+// Paths
 
-$btn-text-color: $white !default;
-
-// Popover
-
-$popover-header-margin-bottom: .25rem !default;
+$path-to-fonts: '../fonts' !default;
+$path-to-img: '../img' !default;

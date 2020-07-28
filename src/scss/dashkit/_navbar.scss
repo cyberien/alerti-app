@@ -26,7 +26,7 @@
 }
 
 .navbar-dark .navbar-divider {
-  border-color: $navbar-dark-divider-color;
+  background-color: $navbar-dark-divider-color;
 }
 
 .navbar-dark .navbar-user {
@@ -36,7 +36,7 @@
 .navbar-dark .navbar-user-link {
   color: $navbar-dark-color;
 
-  @include hover-focus {
+  &:hover, &:focus {
     color: $navbar-dark-hover-color;
   }
 }
@@ -61,7 +61,7 @@
         .navbar-nav .dropdown-item {
           color: $navbar-dark-color;
 
-          @include hover-focus {
+          &:hover, &:focus {
             color: $navbar-dark-hover-color;
           }
         }
@@ -95,7 +95,7 @@
 .navbar-dark.navbar-vibrant .nav-link {
   color: $navbar-vibrant-color;
 
-  @include hover-focus {
+  &:hover, &:focus {
     color: $navbar-vibrant-hover-color;
   }
 }
@@ -110,7 +110,7 @@
 }
 
 .navbar-dark.navbar-vibrant .navbar-divider {
-  border-color: $navbar-vibrant-divider-color;
+  background-color: $navbar-vibrant-divider-color;
 }
 
 .navbar-dark.navbar-vibrant .navbar-user {
@@ -120,7 +120,7 @@
 .navbar-dark.navbar-vibrant .navbar-user-link {
   color: $navbar-vibrant-color;
 
-  @include hover-focus {
+  &:hover, &:focus {
     color: $navbar-vibrant-hover-color;
   }
 }
@@ -149,7 +149,7 @@
         .navbar-nav .dropdown-item {
           color: $navbar-vibrant-color;
 
-          @include hover-focus {
+          &:hover, &:focus {
             color: $navbar-vibrant-hover-color;
           }
         }
@@ -182,7 +182,7 @@
 }
 
 .navbar-light .navbar-divider {
-  border-color: $navbar-light-divider-color;
+  background-color: $navbar-light-divider-color;
 }
 
 .navbar-light .navbar-user {
@@ -192,7 +192,7 @@
 .navbar-light .navbar-user-link {
   color: $navbar-light-color;
 
-  @include hover-focus {
+  &:hover, &:focus {
     color: $navbar-light-hover-color;
   }
 }
@@ -359,11 +359,8 @@
         @if ($navbar-dropdown-toggle-on-hover) {
           .dropup, .dropright, .dropdown, .dropleft {
 
-            @include hover {
-
-              > .dropdown-menu {
-                display: block;
-              }
+            &:hover > .dropdown-menu {
+              display: block;
             }
           }
         }
@@ -569,6 +566,8 @@
             display: flex;
             flex-direction: column;
             align-items: stretch;
+            width: auto;
+            min-width: 100%;
             margin-left: -$navbar-vertical-padding-x;
             margin-right: -$navbar-vertical-padding-x;
             padding-left: $navbar-vertical-padding-x;

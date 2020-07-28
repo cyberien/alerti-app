@@ -1,50 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    @@include("partials/head.html", {
-    "title": "Dashkit"
-    })
+    {{> partials/head title="Dashkit"}}
   </head>
   <body>
 
-    <!-- MODALS
-    ================================================== -->
-    @@include("partials/modals.html")
+    <!-- MODALS -->
 
-    <!-- NAVIGATION
-    ================================================== -->
-    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
-    @@if (sidebarSize == 'base' || demoMode) {
-    @@include("partials/sidebar.html", {
-    "category": "dashboards",
-    "subcategory": "",
-    "page": "dashboard-ecommerce.html"
-    })
-    }
-    @@if (sidebarSize == 'small' || demoMode) {
-    @@include("partials/sidebar-sm.html", {
-    "category": "dashboards",
-    "subcategory": "",
-    "page": "dashboard-ecommerce.html"
-    })
-    }
-    }
-    @@if (navPosition == 'topnav' || demoMode) {
-    @@include("partials/topnav.html", {
-    "category": "dashboards",
-    "subcategory": "",
-    "page": "dashboard-ecommerce.html"
-    })
-    }
+    <!-- NAVIGATION -->
+    {{> partials/navigation category="dashboards" page="dashboard-ecommerce.html"}}
 
-    <!-- MAIN CONTENT
-    ================================================== -->
+    <!-- MAIN CONTENT -->
     <div class="main-content">
-      @@if (navPosition == 'combo' || demoMode) { @@include("partials/topbar.html") }
+      
+      {{#if demoMode}}
+        {{> partials/topbar}}
+      {{/if}}
+      
+      {{#is navPosition 'combo'}}
+        {{> partials/topbar}}
+      {{/is}}
 
       <!-- HEADER -->
       <div class="header bg-dark pb-5">
-        <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
+        <div class="{{#is navPosition 'sidenav || combo'}}container-fluid{{/is}}{{#is navPosition 'topnav'}}container{{/is}}">
 
           <!-- Body -->
           <div class="header-body">
@@ -116,7 +95,7 @@
       </div> <!-- / .header -->
 
       <!-- CARDS -->
-      <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container} mt-n6">
+      <div class="{{#is navPosition 'sidenav || combo'}}container-fluid{{/is}}{{#is navPosition 'topnav'}}container{{/is}} mt-n6">
         <div class="row">
           <div class="col-12 col-xl-8">
 
@@ -361,7 +340,7 @@
 
                           <!-- Avatar -->
                           <div class="avatar avatar-sm">
-                            <img src="@@webRoot/assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle" />
+                            <img src="{{webRoot}}/assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle" />
                           </div>
 
                         </div>
@@ -387,7 +366,7 @@
 
                           <!-- Avatar -->
                           <div class="avatar avatar-sm">
-                            <img src="@@webRoot/assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle" />
+                            <img src="{{webRoot}}/assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle" />
                           </div>
 
                         </div>
@@ -412,7 +391,7 @@
 
                           <!-- Avatar -->
                           <div class="avatar avatar-sm">
-                            <img src="@@webRoot/assets/img/avatars/profiles/avatar-3.jpg" alt="..." class="avatar-img rounded-circle" />
+                            <img src="{{webRoot}}/assets/img/avatars/profiles/avatar-3.jpg" alt="..." class="avatar-img rounded-circle" />
                           </div>
 
                         </div>
@@ -441,7 +420,7 @@
 
                           <!-- Avatar -->
                           <div class="avatar avatar-sm">
-                            <img src="@@webRoot/assets/img/avatars/profiles/avatar-4.jpg" alt="..." class="avatar-img rounded-circle" />
+                            <img src="{{webRoot}}/assets/img/avatars/profiles/avatar-4.jpg" alt="..." class="avatar-img rounded-circle" />
                           </div>
 
                         </div>
@@ -466,7 +445,7 @@
 
                           <!-- Avatar -->
                           <div class="avatar avatar-sm">
-                            <img src="@@webRoot/assets/img/avatars/profiles/avatar-5.jpg" alt="..." class="avatar-img rounded-circle" />
+                            <img src="{{webRoot}}/assets/img/avatars/profiles/avatar-5.jpg" alt="..." class="avatar-img rounded-circle" />
                           </div>
 
                         </div>
@@ -492,7 +471,7 @@
 
                           <!-- Avatar -->
                           <div class="avatar avatar-sm">
-                            <img src="@@webRoot/assets/img/avatars/profiles/avatar-6.jpg" alt="..." class="avatar-img rounded-circle" />
+                            <img src="{{webRoot}}/assets/img/avatars/profiles/avatar-6.jpg" alt="..." class="avatar-img rounded-circle" />
                           </div>
 
                         </div>
@@ -793,9 +772,8 @@
 
     </div> <!-- / .main-content -->
 
-    <!-- JAVASCRIPT
-    ================================================== -->
-    @@include("partials/scripts.html")
+    <!-- JAVASCRIPT -->
+    {{> partials/scripts}}
 
   </body>
 </html>

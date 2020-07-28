@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg @@if(navColor=='default' && !demoMode){navbar-light}@@if(navColor=='inverted' &&!demoMode){}@@if(navColor=='vibrant' && !demoMode){navbar-dark bg-vibrant}" id="topnav">
+<nav class="navbar navbar-expand-lg {{#unless demoMode}}{{#is navColor 'default'}}navbar-light{{/is}}{{#is navColor 'inverted'}}navbar-dark{{/is}}{{#is navColor 'vibrant'}}navbar-dark navbar-vibrant{{/is}}{{/unless}}" id="topnav">
   <div class="container">
 
     <!-- Toggler -->
@@ -7,8 +7,8 @@
     </button>
 
     <!-- Brand -->
-    <a class="navbar-brand mr-auto" href="@@webRoot/index.html">
-      <img src="@@webRoot/assets/img/logo.svg" alt="..." class="navbar-brand-img">
+    <a class="navbar-brand mr-auto" href="{{webRoot}}/index.html">
+      <img src="{{webRoot}}/assets/img/logo.svg" alt="..." class="navbar-brand-img">
     </a>
 
     <!-- Form -->
@@ -29,13 +29,13 @@
 
             <!-- List group -->
             <div class="list-group list-group-flush list-group-focus list my-n3">
-              <a class="list-group-item" href="@@webRoot/team-overview.html">
+              <a class="list-group-item" href="{{webRoot}}/team-overview.html">
                 <div class="row align-items-center">
                   <div class="col-auto">
 
                     <!-- Avatar -->
                     <div class="avatar">
-                      <img src="@@webRoot/assets/img/avatars/teams/team-logo-1.jpg" alt="..." class="avatar-img rounded">
+                      <img src="{{webRoot}}/assets/img/avatars/teams/team-logo-1.jpg" alt="..." class="avatar-img rounded">
                     </div>
 
                   </div>
@@ -54,13 +54,13 @@
                   </div>
                 </div> <!-- / .row -->
               </a>
-              <a class="list-group-item" href="@@webRoot/team-overview.html">
+              <a class="list-group-item" href="{{webRoot}}/team-overview.html">
                 <div class="row align-items-center">
                   <div class="col-auto">
 
                     <!-- Avatar -->
                     <div class="avatar">
-                      <img src="@@webRoot/assets/img/avatars/teams/team-logo-2.jpg" alt="..." class="avatar-img rounded">
+                      <img src="{{webRoot}}/assets/img/avatars/teams/team-logo-2.jpg" alt="..." class="avatar-img rounded">
                     </div>
 
                   </div>
@@ -79,13 +79,13 @@
                   </div>
                 </div> <!-- / .row -->
               </a>
-              <a class="list-group-item" href="@@webRoot/project-overview.html">
+              <a class="list-group-item" href="{{webRoot}}/project-overview.html">
                 <div class="row align-items-center">
                   <div class="col-auto">
 
                     <!-- Avatar -->
                     <div class="avatar avatar-4by3">
-                      <img src="@@webRoot/assets/img/avatars/projects/project-1.jpg" alt="..." class="avatar-img rounded">
+                      <img src="{{webRoot}}/assets/img/avatars/projects/project-1.jpg" alt="..." class="avatar-img rounded">
                     </div>
 
                   </div>
@@ -104,13 +104,13 @@
                   </div>
                 </div> <!-- / .row -->
               </a>
-              <a class="list-group-item" href="@@webRoot/project-overview.html">
+              <a class="list-group-item" href="{{webRoot}}/project-overview.html">
                 <div class="row align-items-center">
                   <div class="col-auto">
 
                     <!-- Avatar -->
                     <div class="avatar avatar-4by3">
-                      <img src="@@webRoot/assets/img/avatars/projects/project-2.jpg" alt="..." class="avatar-img rounded">
+                      <img src="{{webRoot}}/assets/img/avatars/projects/project-2.jpg" alt="..." class="avatar-img rounded">
                     </div>
 
                   </div>
@@ -129,13 +129,13 @@
                   </div>
                 </div> <!-- / .row -->
               </a>
-              <a class="list-group-item" href="@@webRoot/project-overview.html">
+              <a class="list-group-item" href="{{webRoot}}/project-overview.html">
                 <div class="row align-items-center">
                   <div class="col-auto">
 
                     <!-- Avatar -->
                     <div class="avatar avatar-4by3">
-                      <img src="@@webRoot/assets/img/avatars/projects/project-3.jpg" alt="..." class="avatar-img rounded">
+                      <img src="{{webRoot}}/assets/img/avatars/projects/project-3.jpg" alt="..." class="avatar-img rounded">
                     </div>
 
                   </div>
@@ -154,13 +154,13 @@
                   </div>
                 </div> <!-- / .row -->
               </a>
-              <a class="list-group-item" href="@@webRoot/profile-posts.html">
+              <a class="list-group-item" href="{{webRoot}}/profile-posts.html">
                 <div class="row align-items-center">
                   <div class="col-auto">
 
                     <!-- Avatar -->
                     <div class="avatar">
-                      <img src="@@webRoot/assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
+                      <img src="{{webRoot}}/assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
                     </div>
 
                   </div>
@@ -179,13 +179,13 @@
                   </div>
                 </div> <!-- / .row -->
               </a>
-              <a class="list-group-item" href="@@webRoot/profile-posts.html">
+              <a class="list-group-item" href="{{webRoot}}/profile-posts.html">
                 <div class="row align-items-center">
                   <div class="col-auto">
 
                     <!-- Avatar -->
                     <div class="avatar">
-                      <img src="@@webRoot/assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
+                      <img src="{{webRoot}}/assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
                     </div>
 
                   </div>
@@ -250,7 +250,7 @@
 
                     <!-- Avatar -->
                     <div class="avatar avatar-sm">
-                      <img src="@@webRoot/assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
+                      <img src="{{webRoot}}/assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
                     </div>
 
                   </div>
@@ -275,7 +275,7 @@
 
                     <!-- Avatar -->
                     <div class="avatar avatar-sm">
-                      <img src="@@webRoot/assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
+                      <img src="{{webRoot}}/assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
                     </div>
 
                   </div>
@@ -300,7 +300,7 @@
 
                     <!-- Avatar -->
                     <div class="avatar avatar-sm">
-                      <img src="@@webRoot/assets/img/avatars/profiles/avatar-3.jpg" alt="..." class="avatar-img rounded-circle">
+                      <img src="{{webRoot}}/assets/img/avatars/profiles/avatar-3.jpg" alt="..." class="avatar-img rounded-circle">
                     </div>
 
                   </div>
@@ -325,7 +325,7 @@
 
                     <!-- Avatar -->
                     <div class="avatar avatar-sm">
-                      <img src="@@webRoot/assets/img/avatars/profiles/avatar-4.jpg" alt="..." class="avatar-img rounded-circle">
+                      <img src="{{webRoot}}/assets/img/avatars/profiles/avatar-4.jpg" alt="..." class="avatar-img rounded-circle">
                     </div>
 
                   </div>
@@ -350,7 +350,7 @@
 
                     <!-- Avatar -->
                     <div class="avatar avatar-sm">
-                      <img src="@@webRoot/assets/img/avatars/profiles/avatar-5.jpg" alt="..." class="avatar-img rounded-circle">
+                      <img src="{{webRoot}}/assets/img/avatars/profiles/avatar-5.jpg" alt="..." class="avatar-img rounded-circle">
                     </div>
 
                   </div>
@@ -375,7 +375,7 @@
 
                     <!-- Avatar -->
                     <div class="avatar avatar-sm">
-                      <img src="@@webRoot/assets/img/avatars/profiles/avatar-6.jpg" alt="..." class="avatar-img rounded-circle">
+                      <img src="{{webRoot}}/assets/img/avatars/profiles/avatar-6.jpg" alt="..." class="avatar-img rounded-circle">
                     </div>
 
                   </div>
@@ -400,7 +400,7 @@
 
                     <!-- Avatar -->
                     <div class="avatar avatar-sm">
-                      <img src="@@webRoot/assets/img/avatars/profiles/avatar-7.jpg" alt="..." class="avatar-img rounded-circle">
+                      <img src="{{webRoot}}/assets/img/avatars/profiles/avatar-7.jpg" alt="..." class="avatar-img rounded-circle">
                     </div>
 
                   </div>
@@ -425,7 +425,7 @@
 
                     <!-- Avatar -->
                     <div class="avatar avatar-sm">
-                      <img src="@@webRoot/assets/img/avatars/profiles/avatar-8.jpg" alt="..." class="avatar-img rounded-circle">
+                      <img src="{{webRoot}}/assets/img/avatars/profiles/avatar-8.jpg" alt="..." class="avatar-img rounded-circle">
                     </div>
 
                   </div>
@@ -456,15 +456,15 @@
 
         <!-- Toggle -->
         <a href="#" class="avatar avatar-sm avatar-online dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <img src="@@webRoot/assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
+          <img src="{{webRoot}}/assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
         </a>
 
         <!-- Menu -->
         <div class="dropdown-menu dropdown-menu-right">
-          <a href="@@webRoot/profile-posts.html" class="dropdown-item">Profile</a>
-          <a href="@@webRoot/account-general.html" class="dropdown-item">Settings</a>
+          <a href="{{webRoot}}/profile-posts.html" class="dropdown-item">Profile</a>
+          <a href="{{webRoot}}/account-general.html" class="dropdown-item">Settings</a>
           <hr class="dropdown-divider">
-          <a href="@@webRoot/sign-in.html" class="dropdown-item">Logout</a>
+          <a href="{{webRoot}}/sign-in.html" class="dropdown-item">Logout</a>
         </div>
 
       </div>
@@ -482,170 +482,170 @@
       <!-- Navigation -->
       <ul class="navbar-nav mr-lg-auto">
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle @@if(category=='dashboards'){active}" href="#" id="topnavDashboards" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle {{#is category 'dashboards'}}active{{/is}}" href="#" id="topnavDashboards" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is category 'dashboards'}}true{{else}}false{{/is}}">
             Dashboards
           </a>
           <ul class="dropdown-menu" aria-labelledby="topnavDashboards">
             <li>
-              <a class="dropdown-item @@if(page=='index.html'){active}" href="@@webRoot/index.html">
+              <a class="dropdown-item {{#is page 'index.html'}}active{{/is}}" href="{{webRoot}}/index.html">
                 Default
               </a>
             </li>
             <li>
-              <a class="dropdown-item @@if(page=='dashboard-project-management.html'){active}" href="@@webRoot/dashboard-project-management.html">
+              <a class="dropdown-item {{#is page 'dashboard-project-management.html'}}active{{/is}}" href="{{webRoot}}/dashboard-project-management.html">
                 Project Management
               </a>
             </li>
             <li>
-              <a class="dropdown-item @@if(page=='dashboard-ecommerce.html'){active}" href="@@webRoot/dashboard-ecommerce.html">
+              <a class="dropdown-item {{#is page 'dashboard-ecommerce.html'}}active{{/is}}" href="{{webRoot}}/dashboard-ecommerce.html">
                 E-Commerce
               </a>
             </li>
           </ul>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle @@if(category=='pages'){active}" href="#" id="topnavPages" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle {{#is category 'pages'}}active{{/is}}" href="#" id="topnavPages" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is category 'pages'}}true{{else}}false{{/is}}">
             Pages
           </a>
           <ul class="dropdown-menu" aria-labelledby="topnavPages">
             <li class="dropright">
-              <a class="dropdown-item dropdown-toggle @@if(subcategory=='profile'){active}" href="#" id="topnavProfile" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="dropdown-item dropdown-toggle {{#is subcategory 'profile'}}active{{/is}}" href="#" id="topnavProfile" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is subcategory 'profile'}}true{{else}}false{{/is}}">
                 Profile
               </a>
               <div class="dropdown-menu" aria-labelledby="topnavProfile">
-                <a class="dropdown-item @@if(page=='profile-posts.html'){active}" href="@@webRoot/profile-posts.html">
+                <a class="dropdown-item {{#is page 'profile-posts.html'}}active{{/is}}" href="{{webRoot}}/profile-posts.html">
                   Posts
                 </a>
-                <a class="dropdown-item @@if(page=='profile-groups.html'){active}" href="@@webRoot/profile-groups.html">
+                <a class="dropdown-item {{#is page 'profile-groups.html'}}active{{/is}}" href="{{webRoot}}/profile-groups.html">
                   Groups
                 </a>
-                <a class="dropdown-item @@if(page=='profile-projects.html'){active}" href="@@webRoot/profile-projects.html">
+                <a class="dropdown-item {{#is page 'profile-projects.html'}}active{{/is}}" href="{{webRoot}}/profile-projects.html">
                   Projects
                 </a>
-                <a class="dropdown-item @@if(page=='profile-files.html'){active}" href="@@webRoot/profile-files.html">
+                <a class="dropdown-item {{#is page 'profile-files.html'}}active{{/is}}" href="{{webRoot}}/profile-files.html">
                   Files
                 </a>
-                <a class="dropdown-item @@if(page=='profile-subscribers.html'){active}" href="@@webRoot/profile-subscribers.html">
+                <a class="dropdown-item {{#is page 'profile-subscribers.html'}}active{{/is}}" href="{{webRoot}}/profile-subscribers.html">
                   Subscribers
                 </a>
               </div>
             </li>
             <li class="dropright">
-              <a class="dropdown-item dropdown-toggle @@if(subcategory=='project'){active}" href="#" id="topnavProject" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="dropdown-item dropdown-toggle {{#is subcategory 'project'}}active{{/is}}" href="#" id="topnavProject" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is subcategory 'project'}}true{{else}}false{{/is}}">
                 Project
               </a>
               <div class="dropdown-menu" aria-labelledby="topnavProject">
-                <a class="dropdown-item @@if(page=='project-overview.html'){active}" href="@@webRoot/project-overview.html">
+                <a class="dropdown-item {{#is page 'project-overview.html'}}active{{/is}}" href="{{webRoot}}/project-overview.html">
                   Overview
                 </a>
-                <a class="dropdown-item @@if(page=='project-files.html'){active}" href="@@webRoot/project-files.html">
+                <a class="dropdown-item {{#is page 'project-files.html'}}active{{/is}}" href="{{webRoot}}/project-files.html">
                   Files
                 </a>
-                <a class="dropdown-item @@if(page=='project-reports.html'){active}" href="@@webRoot/project-reports.html">
+                <a class="dropdown-item {{#is page 'project-reports.html'}}active{{/is}}" href="{{webRoot}}/project-reports.html">
                   Reports
                 </a>
-                <a class="dropdown-item @@if(page=='project-new.html'){active}" href="@@webRoot/project-new.html">
+                <a class="dropdown-item {{#is page 'project-new.html'}}active{{/is}}" href="{{webRoot}}/project-new.html">
                   New project
                 </a>
               </div>
             </li>
             <li class="dropright">
-              <a class="dropdown-item dropdown-toggle @@if(subcategory=='team'){active}" href="#" id="topnavTeam" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="dropdown-item dropdown-toggle {{#is subcategory 'team'}}active{{/is}}" href="#" id="topnavTeam" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is subcategory 'team'}}true{{else}}false{{/is}}">
                 Team
               </a>
               <div class="dropdown-menu" aria-labelledby="topnavTeam">
-                <a class="dropdown-item @@if(page=='team-overview.html'){active}" href="@@webRoot/team-overview.html">
+                <a class="dropdown-item {{#is page 'team-overview.html'}}active{{/is}}" href="{{webRoot}}/team-overview.html">
                   Overview
                 </a>
-                <a class="dropdown-item @@if(page=='team-projects.html'){active}" href="@@webRoot/team-projects.html">
+                <a class="dropdown-item {{#is page 'team-projects.html'}}active{{/is}}" href="{{webRoot}}/team-projects.html">
                   Projects
                 </a>
-                <a class="dropdown-item @@if(page=='team-members.html'){active}" href="@@webRoot/team-members.html">
+                <a class="dropdown-item {{#is page 'team-members.html'}}active{{/is}}" href="{{webRoot}}/team-members.html">
                   Members
                 </a>
-                <a class="dropdown-item @@if(page=='team-new.html'){active}" href="team-new.html">
+                <a class="dropdown-item {{#is page 'team-new.html'}}active{{/is}}" href="team-new.html">
                   New team
                 </a>
               </div>
             </li>
             <li class="dropright">
-              <a class="dropdown-item dropdown-toggle @@if(subcategory=='feed'){active}" href="#" id="topnavFeed" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="dropdown-item dropdown-toggle {{#is subcategory 'feed'}}active{{/is}}" href="#" id="topnavFeed" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is subcategory 'feed'}}true{{else}}false{{/is}}">
                 Feed
               </a>
               <div class="dropdown-menu" aria-labelledby="topnavFeed">
-                <a class="dropdown-item @@if(page=='feed.html'){active}" href="@@webRoot/feed.html">
+                <a class="dropdown-item {{#is page 'feed.html'}}active{{/is}}" href="{{webRoot}}/feed.html">
                   Platform
                 </a>
-                <a class="dropdown-item @@if(page=='social-feed.html'){active}" href="@@webRoot/social-feed.html">
+                <a class="dropdown-item {{#is page 'social-feed.html'}}active{{/is}}" href="{{webRoot}}/social-feed.html">
                   Social
                 </a>
               </div>
             </li>
             <li class="dropright">
-              <a class="dropdown-item dropdown-toggle @@if(subcategory=='account'){active}" href="#" id="topnavAccount" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="dropdown-item dropdown-toggle {{#is subcategory 'account'}}active{{/is}}" href="#" id="topnavAccount" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is subcategory 'account'}}true{{else}}false{{/is}}">
                 Account
               </a>
               <div class="dropdown-menu" aria-labelledby="topnavAccount">
-                <a class="dropdown-item @@if(page=='account-general.html'){active}" href="@@webRoot/account-general.html">
+                <a class="dropdown-item {{#is page 'account-general.html'}}active{{/is}}" href="{{webRoot}}/account-general.html">
                   General
                 </a>
-                <a class="dropdown-item @@if(page=='account-billing.html'){active}" href="@@webRoot/account-billing.html">
+                <a class="dropdown-item {{#is page 'account-billing.html'}}active{{/is}}" href="{{webRoot}}/account-billing.html">
                   Billing
                 </a>
-                <a class="dropdown-item @@if(page=='account-members.html'){active}" href="@@webRoot/account-members.html">
+                <a class="dropdown-item {{#is page 'account-members.html'}}active{{/is}}" href="{{webRoot}}/account-members.html">
                   Members
                 </a>
-                <a class="dropdown-item @@if(page=='account-security.html'){active}" href="@@webRoot/account-security.html">
+                <a class="dropdown-item {{#is page 'account-security.html'}}active{{/is}}" href="{{webRoot}}/account-security.html">
                   Security
                 </a>
-                <a class="dropdown-item @@if(page=='account-notifications.html'){active}" href="@@webRoot/account-notifications.html">
+                <a class="dropdown-item {{#is page 'account-notifications.html'}}active{{/is}}" href="{{webRoot}}/account-notifications.html">
                   Notifications
                 </a>
               </div>
             </li>
             <li class="dropright">
-              <a class="dropdown-item dropdown-toggle @@if(subcategory=='crm'){active}" href="#" id="topnavCrm" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="dropdown-item dropdown-toggle {{#is subcategory 'crm'}}active{{/is}}" href="#" id="topnavCrm" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is subcategory 'crm'}}true{{else}}false{{/is}}">
                 CRM
               </a>
               <div class="dropdown-menu" aria-labelledby="topnavCrm">
-                <a class="dropdown-item @@if(page=='crm-contacts.html'){active}" href="@@webRoot/crm-contacts.html">
+                <a class="dropdown-item {{#is page 'crm-contacts.html'}}active{{/is}}" href="{{webRoot}}/crm-contacts.html">
                   Contacts
                 </a>
-                <a class="dropdown-item @@if(page=='crm-companies.html'){active}" href="@@webRoot/crm-companies.html">
+                <a class="dropdown-item {{#is page 'crm-companies.html'}}active{{/is}}" href="{{webRoot}}/crm-companies.html">
                   Companies
                 </a>
-                <a class="dropdown-item @@if(page=='crm-deals.html'){active}" href="@@webRoot/crm-deals.html">
+                <a class="dropdown-item {{#is page 'crm-deals.html'}}active{{/is}}" href="{{webRoot}}/crm-deals.html">
                   Deals
                 </a>
               </div>
             </li>
             <li>
-              <a class="dropdown-item @@if(page=='wizard.html'){active}" href="@@webRoot/wizard.html">
+              <a class="dropdown-item {{#is page 'wizard.html'}}active{{/is}}" href="{{webRoot}}/wizard.html">
                 Wizard
               </a>
             </li>
             <li>
-              <a class="dropdown-item @@if(page=='kanban.html'){active}" href="@@webRoot/kanban.html">
+              <a class="dropdown-item {{#is page 'kanban.html'}}active{{/is}}" href="{{webRoot}}/kanban.html">
                 Kanban
               </a>
             </li>
             <li>
-              <a class="dropdown-item @@if(page=='orders.html'){active}" href="@@webRoot/orders.html">
+              <a class="dropdown-item {{#is page 'orders.html'}}active{{/is}}" href="{{webRoot}}/orders.html">
                 Orders
               </a>
             </li>
             <li>
-              <a class="dropdown-item @@if(page=='invoice.html'){active}" href="@@webRoot/invoice.html">
+              <a class="dropdown-item {{#is page 'invoice.html'}}active{{/is}}" href="{{webRoot}}/invoice.html">
                 Invoice
               </a>
             </li>
             <li>
-              <a class="dropdown-item @@if(page=='pricing.html'){active}" href="@@webRoot/pricing.html">
+              <a class="dropdown-item {{#is page 'pricing.html'}}active{{/is}}" href="{{webRoot}}/pricing.html">
                 Pricing
               </a>
             </li>
             <li>
-              <a class="dropdown-item @@if(page=='widgets.html'){active}" href="@@webRoot/widgets.html">
+              <a class="dropdown-item {{#is page 'widgets.html'}}active{{/is}}" href="{{webRoot}}/widgets.html">
                 Widgets
               </a>
             </li>
@@ -661,13 +661,13 @@
                 Sign in
               </a>
               <div class="dropdown-menu" aria-labelledby="topnavSignIn">
-                <a class="dropdown-item" href="@@webRoot/sign-in-cover.html">
+                <a class="dropdown-item" href="{{webRoot}}/sign-in-cover.html">
                   Cover
                 </a>
-                <a class="dropdown-item" href="@@webRoot/sign-in-illustration.html">
+                <a class="dropdown-item" href="{{webRoot}}/sign-in-illustration.html">
                   Illustration
                 </a>
-                <a class="dropdown-item" href="@@webRoot/sign-in-basics.html">
+                <a class="dropdown-item" href="{{webRoot}}/sign-in-basics.html">
                   Basic
                 </a>
               </div>
@@ -677,13 +677,13 @@
                 Sign up
               </a>
               <div class="dropdown-menu" aria-labelledby="topnavSignUp">
-                <a class="dropdown-item" href="@@webRoot/sign-up-cover.html">
+                <a class="dropdown-item" href="{{webRoot}}/sign-up-cover.html">
                   Cover
                 </a>
-                <a class="dropdown-item" href="@@webRoot/sign-up-illustration.html">
+                <a class="dropdown-item" href="{{webRoot}}/sign-up-illustration.html">
                   Illustration
                 </a>
-                <a class="dropdown-item" href="@@webRoot/sign-up.html">
+                <a class="dropdown-item" href="{{webRoot}}/sign-up.html">
                   Basic
                 </a>
               </div>
@@ -693,13 +693,13 @@
                 Password reset
               </a>
               <div class="dropdown-menu" aria-labelledby="topnavPassword">
-                <a class="dropdown-item" href="@@webRoot/password-reset-cover.html">
+                <a class="dropdown-item" href="{{webRoot}}/password-reset-cover.html">
                   Cover
                 </a>
-                <a class="dropdown-item" href="@@webRoot/password-reset-illustration.html">
+                <a class="dropdown-item" href="{{webRoot}}/password-reset-illustration.html">
                   Illustration
                 </a>
-                <a class="dropdown-item" href="@@webRoot/password-reset.html">
+                <a class="dropdown-item" href="{{webRoot}}/password-reset.html">
                   Basic
                 </a>
               </div>
@@ -709,10 +709,10 @@
                 Error
               </a>
               <div class="dropdown-menu" aria-labelledby="topnavError">
-                <a class="dropdown-item" href="@@webRoot/error-illustration.html">
+                <a class="dropdown-item" href="{{webRoot}}/error-illustration.html">
                   Illustration
                 </a>
-                <a class="dropdown-item" href="@@webRoot/error.html">
+                <a class="dropdown-item" href="{{webRoot}}/error.html">
                   Basic
                 </a>
               </div>
@@ -720,30 +720,30 @@
           </ul>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle @@if(category=='docs'){active}" href="#" id="topnavDocumentation" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle {{#is category 'docs'}}active{{/is}}" href="#" id="topnavDocumentation" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Docs
           </a>
           <ul class="dropdown-menu" aria-labelledby="topnavDocumentation">
             <li class="dropright">
-              <a class="dropdown-item dropdown-toggle @@if(subcategory=='basics'){active}" href="#" id="topnavBasics" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="dropdown-item dropdown-toggle {{#is subcategory 'basics'}}active{{/is}}" href="#" id="topnavBasics" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is subcategory 'basics'}}true{{else}}false{{/is}}">
                 Basics
               </a>
               <div class="dropdown-menu" aria-labelledby="topnavBasics">
-                <a class="dropdown-item @@if(page=='getting-started.html'){active}" href="@@webRoot/docs/getting-started.html">
+                <a class="dropdown-item {{#is page 'getting-started.html'}}active{{/is}}" href="{{webRoot}}/docs/getting-started.html">
                   Getting Started
                 </a>
-                <a class="dropdown-item @@if(page=='design-file.html'){active}" href="@@webRoot/docs/design-file.html">
+                <a class="dropdown-item {{#is page 'design-file.html'}}active{{/is}}" href="{{webRoot}}/docs/design-file.html">
                   Design File
                 </a>
               </div>
             </li>
             <li>
-              <a class="dropdown-item @@if(page=='components.html'){active}" href="@@webRoot/docs/components.html">
+              <a class="dropdown-item {{#is page 'components.html'}}active{{/is}}" href="{{webRoot}}/docs/components.html">
                 Components
               </a>
             </li>
             <li>
-              <a class="dropdown-item @@if(page=='changelog.html'){active}" href="@@webRoot/docs/changelog.html">
+              <a class="dropdown-item {{#is page 'changelog.html'}}active{{/is}}" href="{{webRoot}}/docs/changelog.html">
                 Changelog
               </a>
             </li>

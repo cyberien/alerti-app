@@ -1,0 +1,18 @@
+{{#if demoMode}}
+  {{> partials/sidebar category=category subcategory=subcategory page=page}}
+  {{> partials/sidebar-sm category=category subcategory=subcategory page="index.html"}}
+  {{> partials/topnav category=category subcategory=subcategory page=page}}
+{{/if}}
+
+{{#is navPosition 'sidenav || combo'}}
+  {{#is sidebarSize 'base'}}
+    {{> partials/sidebar category=category subcategory=subcategory page=page}}
+  {{/is}}
+  {{#is sidebarSize 'small'}}
+    {{> partials/sidebar-sm category=category subcategory=subcategory page="index.html"}}
+  {{/is}}
+{{/is}}
+
+{{#is navPosition 'topnav'}}
+  {{> partials/topnav category=category subcategory=subcategory page=page}}
+{{/is}}

@@ -1,31 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    {{> partials/head webRoot="." title="Dashkit"}}
+    {{> partials/head title="Dashkit"}}
   </head>
   <body>
-
+    
     <!-- MODALS -->
 
     <!-- NAVIGATION -->
+    {{> partials/navigation category="dashboards" page="index.html"}}
 
     <!-- MAIN CONTENT -->
     <div class="main-content">
-      <div class="container">
-        <div class="row">
-          <div class="col">
 
-            <a class="btn btn-primary" href="#!">
-              Button
-            </a>
+      {{#if demoMode}}
+        {{> partials/topbar}}
+      {{/if}}
 
-          </div>
-        </div>
-      </div>
+      {{#is navPosition 'combo'}}
+        {{> partials/topbar}}
+      {{/is}}
+
     </div>
 
     <!-- JAVASCRIPT -->
-    {{> partials/scripts webRoot="."}}
-
+    {{> partials/scripts}}
   </body>
 </html>

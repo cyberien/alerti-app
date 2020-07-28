@@ -13,8 +13,7 @@
     ================================================== -->
     @@include("../partials/modals.html")
 
-    <!-- NAVIGATION
-    ================================================== -->
+    <!-- NAVIGATION -->
     @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
     @@if (sidebarSize == 'base' || demoMode) {
     @@include("../partials/sidebar.html", {
@@ -39,15 +38,14 @@
     })
     }
 
-    <!-- MAIN CONTENT
-    ================================================== -->
+    <!-- MAIN CONTENT -->
     <div class="main-content pb-6">
 
       @@if (navPosition == 'combo' || demoMode) {
       @@include("../partials/topbar.html")
       }
 
-      <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid}@@if(navPosition=='topnav'){container}">
+      <div class="{{#is navPosition 'sidenav || combo'}}container-fluid{{/is}}{{#is navPosition 'topnav'}}container{{/is}}">
         <div class="row justify-content-center">
           <div class="col-12 col-lg-10 col-xl-8">
 

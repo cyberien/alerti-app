@@ -3,7 +3,6 @@
 // Extended from Bootstrap
 //
 
-
 //
 // Dashkit ===================================
 //
@@ -13,7 +12,7 @@
 .btn-white {
   border-color: $gray-300;
 
-  @include hover-focus {
+  &:hover, &:focus {
     background-color: $gray-100;
     border-color: $gray-400;
   }
@@ -39,7 +38,7 @@
   border-color: transparent;
   color: $white;
 
-  @include hover-focus {
+  &:hover, &:focus {
     background-color: rgba($white, .12);
     border-color: transparent;
     color: $white;

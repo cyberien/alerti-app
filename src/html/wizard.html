@@ -1,18 +1,13 @@
 <!doctype html>
 <html lang="en">
   <head>
-    @@include("partials/head.html", {
-    "title": "Dashkit"
-    })
+    {{> partials/head title="Dashkit"}}
   </head>
   <body>
 
-    <!-- MODALS
-    ================================================== -->
-    @@include("partials/modals.html")
+    <!-- MODALS -->
 
-    <!-- NAVIGATION
-    ================================================== -->
+    <!-- NAVIGATION -->
     @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
     @@if (sidebarSize == 'base' || demoMode) {
     @@include("partials/sidebar.html", {
@@ -37,13 +32,16 @@
     })
     }
 
-    <!-- MAIN CONTENT
-    ================================================== -->
+    <!-- MAIN CONTENT -->
     <div class="main-content">
 
-      @@if (navPosition == 'combo' || demoMode) {
-      @@include("partials/topbar.html")
-      }
+      {{#if demoMode}}
+        {{> partials/topbar}}
+      {{/if}}
+      
+      {{#is navPosition 'combo'}}
+        {{> partials/topbar}}
+      {{/is}}
 
       <div class="container-lg">
         <div class="row justify-content-center">
@@ -482,9 +480,8 @@
 
     </div> <!-- / .main-content -->
 
-    <!-- JAVASCRIPT
-    ================================================== -->
-    @@include("partials/scripts.html")
+    <!-- JAVASCRIPT -->
+    {{> partials/scripts}}
 
   </body>
 </html>

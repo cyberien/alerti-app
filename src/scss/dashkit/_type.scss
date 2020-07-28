@@ -113,3 +113,12 @@ a, button {
   font-weight: 600;
   font-style: normal;
 }
+
+// Include Feather icons
+
+@font-face {
+  font-family: 'Feather';
+  src: url('#{$path-to-fonts}/feather/Feather.ttf?sdxovp') format('truetype'), url('#{$path-to-fonts}/feather/Feather.woff?sdxovp') format('woff'), url('#{$path-to-fonts}/feather/Feather.svg?sdxovp#Feather') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
