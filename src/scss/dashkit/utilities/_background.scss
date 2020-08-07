@@ -1,7 +1,7 @@
 //
 // background.scss
+// Theme utilities
 //
-
 
 // Fixed at the bottom
 
@@ -11,6 +11,7 @@
   background-size: 100% auto;
   background-attachment: fixed;
 }
+
 
 // Calculate the width of the main container because 
 // the background-attachment property will use 100vw instead
@@ -30,13 +31,6 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-}
-
-
-// Auth
-
-.bg-auth {
-  background-color: $auth-bg;
 }
 
 
@@ -64,17 +58,10 @@
 }
 
 
-// Colors
-
-.bg-lighter {
-  background-color: $lighter !important;
-}
-
-
 // Soft colors
 
 @each $color, $value in $theme-colors {
   .bg-#{$color}-soft {
-    background-color: theme-color-level($color, $bg-soft-level) !important;
+    background-color: color-level($value, $bg-soft-level) !important;
   }
 }

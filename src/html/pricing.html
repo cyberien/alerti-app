@@ -8,29 +8,7 @@
     <!-- MODALS -->
 
     <!-- NAVIGATION -->
-    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
-    @@if (sidebarSize == 'base' || demoMode) {
-    @@include("partials/sidebar.html", {
-    "category": "pages",
-    "subcategory": "",
-    "page": "pricing.html"
-    })
-    }
-    @@if (sidebarSize == 'small' || demoMode) {
-    @@include("partials/sidebar-sm.html", {
-    "category": "pages",
-    "subcategory": "",
-    "page": "pricing.html"
-    })
-    }
-    }
-    @@if (navPosition == 'topnav' || demoMode) {
-    @@include("partials/topnav.html", {
-    "category": "pages",
-    "subcategory": "",
-    "page": "pricing.html"
-    })
-    }
+    {{> partials/navigation category="pages" page="pricing.html"}}
 
     <!-- MAIN CONTENT -->
     <div class="main-content">
@@ -79,7 +57,7 @@
                 </h6>
 
                 <!-- Price -->
-                <div class="row no-gutters align-items-center justify-content-center">
+                <div class="row g-0 align-items-center justify-content-center">
                   <div class="col-auto">
                     <div class="h2 mb-0">$</div>
                   </div>
@@ -132,7 +110,7 @@
                 </h6>
 
                 <!-- Price -->
-                <div class="row no-gutters align-items-center justify-content-center">
+                <div class="row g-0 align-items-center justify-content-center">
                   <div class="col-auto">
                     <div class="h2 mb-0">$</div>
                   </div>
@@ -185,7 +163,7 @@
                 </h6>
 
                 <!-- Price -->
-                <div class="row no-gutters align-items-center justify-content-center">
+                <div class="row g-0 align-items-center justify-content-center">
                   <div class="col-auto">
                     <div class="h2 mb-0">$</div>
                   </div>

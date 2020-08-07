@@ -24,5 +24,9 @@
     .alert-link, .close {
       color: color-contrast(color-level($value, $alert-bg-level));
     }
+
+    hr {
+      background-color: darken(color-level($value, $alert-border-level), 5%);
+    }
   }
 }

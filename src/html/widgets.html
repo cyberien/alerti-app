@@ -8,29 +8,7 @@
     <!-- MODALS -->
 
     <!-- NAVIGATION -->
-    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
-    @@if (sidebarSize == 'base' || demoMode) {
-    @@include("partials/sidebar.html", {
-    "category": "",
-    "subcategory": "",
-    "page": "widgets.html"
-    })
-    }
-    @@if (sidebarSize == 'small' || demoMode) {
-    @@include("partials/sidebar-sm.html", {
-    "category": "",
-    "subcategory": "",
-    "page": "widgets.html"
-    })
-    }
-    }
-    @@if (navPosition == 'topnav' || demoMode) {
-    @@include("partials/topnav.html", {
-    "category": "",
-    "subcategory": "",
-    "page": "widgets.html"
-    })
-    }
+    {{> partials/navigation page="widgets.html"}}
 
     <!-- MAIN CONTENT -->
     <div class="main-content">
@@ -99,7 +77,7 @@
                     </p>
 
                     <!-- Progress -->
-                    <div class="row align-items-center no-gutters">
+                    <div class="row align-items-center g-0">
                       <div class="col-auto">
 
                         <!-- Value -->
@@ -264,7 +242,7 @@
                     </div> <!-- / .row -->
 
                     <!-- Stats -->
-                    <div class="row no-gutters border-top border-bottom">
+                    <div class="row g-0 border-top border-bottom">
                       <div class="col-6 py-4 text-center">
 
                         <!-- Heading -->
@@ -350,7 +328,7 @@
                     <!-- Footer -->
                     <div class="row align-items-center">
                       <div class="col">
-                        <div class="row align-items-center no-gutters">
+                        <div class="row align-items-center g-0">
                           <div class="col-auto">
 
                             <!-- Text -->
@@ -642,7 +620,7 @@
                   <div class="card-footer card-footer-boxed">
                     <div class="row align-items-center">
                       <div class="col">
-                        <div class="row align-items-center no-gutters">
+                        <div class="row align-items-center g-0">
                           <div class="col-auto">
 
                             <!-- Value -->
@@ -1134,7 +1112,7 @@
                     </p>
 
                     <!-- Stats -->
-                    <div class="row no-gutters border-top border-bottom">
+                    <div class="row g-0 border-top border-bottom">
                       <div class="col-6 py-4 text-center">
 
                         <!-- Heading -->
@@ -1854,7 +1832,7 @@
                           Conversion Rate
                         </h6>
 
-                        <div class="row align-items-center no-gutters">
+                        <div class="row align-items-center g-0">
                           <div class="col-auto">
 
                             <!-- Heading -->
@@ -3814,7 +3792,7 @@
                         271
                       </td>
                       <td>
-                        <div class="row align-items-center no-gutters">
+                        <div class="row align-items-center g-0">
                           <div class="col-auto">
 
                             <!-- Value -->
@@ -3854,7 +3832,7 @@
                         44
                       </td>
                       <td>
-                        <div class="row align-items-center no-gutters">
+                        <div class="row align-items-center g-0">
                           <div class="col-auto">
 
                             <!-- Value -->
@@ -3894,7 +3872,7 @@
                         271
                       </td>
                       <td>
-                        <div class="row align-items-center no-gutters">
+                        <div class="row align-items-center g-0">
                           <div class="col-auto">
 
                             <!-- Value -->
@@ -3934,7 +3912,7 @@
                         44
                       </td>
                       <td>
-                        <div class="row align-items-center no-gutters">
+                        <div class="row align-items-center g-0">
                           <div class="col-auto">
 
                             <!-- Value -->
@@ -3974,7 +3952,7 @@
                         271
                       </td>
                       <td>
-                        <div class="row align-items-center no-gutters">
+                        <div class="row align-items-center g-0">
                           <div class="col-auto">
 
                             <!-- Value -->
@@ -4663,7 +4641,7 @@
                     </h6>
 
                     <!-- Price -->
-                    <div class="row no-gutters align-items-center justify-content-center">
+                    <div class="row g-0 align-items-center justify-content-center">
                       <div class="col-auto">
                         <div class="h2 mb-0">$</div>
                       </div>
@@ -5085,13 +5063,13 @@
 
                     <!-- Icons -->
                     <div class="text-muted mb-2">
-                      <a class="text-reset mr-3" href="#!" data-toggle="tooltip" title="" data-original-title="Add photo">
+                      <a class="text-reset mr-3" href="#" data-toggle="tooltip" title="" data-original-title="Add photo">
                         <i class="fe fe-camera"></i>
                       </a>
-                      <a class="text-reset mr-3" href="#!" data-toggle="tooltip" title="" data-original-title="Attach file">
+                      <a class="text-reset mr-3" href="#" data-toggle="tooltip" title="" data-original-title="Attach file">
                         <i class="fe fe-paperclip"></i>
                       </a>
-                      <a class="text-reset" href="#!" data-toggle="tooltip" title="" data-original-title="Record audio">
+                      <a class="text-reset" href="#" data-toggle="tooltip" title="" data-original-title="Record audio">
                         <i class="fe fe-mic"></i>
                       </a>
                     </div>

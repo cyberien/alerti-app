@@ -3,64 +3,43 @@
 // Theme module
 //
 
-'use strict';
+import Dropzone from 'dropzone';
 
-(function() {
+Dropzone.autoDiscover = false;
+Dropzone.thumbnailWidth = null;
+Dropzone.thumbnailHeight = null;
 
-  //
-  // Variables
-  //
+const toggles = document.querySelectorAll('[data-dropzone]');
 
-  var toggle = document.querySelectorAll('[data-toggle="dropzone"]');
+toggles.forEach(toggle => {
+  let currentFile = undefined;
 
-  //
-  // Functions
-  //
+  const elementOptions = toggle.dataset.dropzone ? JSON.parse(toggle.dataset.dropzone) : {};
 
-  function globalOptions() {
-    Dropzone.autoDiscover = false;
-    Dropzone.thumbnailWidth = null;
-    Dropzone.thumbnailHeight = null;
-  }
+  const defaultOptions = {
+    previewsContainer: toggle.querySelector('.dz-preview'),
+    previewTemplate: toggle.querySelector('.dz-preview').innerHTML,
+    init: function() {
+      this.on('addedfile', function(file) {
+        const maxFiles = elementOptions.maxFiles;
 
-  function init(el) {
-    var currentFile = undefined;
+        if (maxFiles == 1 && currentFile) {
+          this.removeFile(currentFile);
+        }
 
-    var elementOptions = el.dataset.options;
-    elementOptions = elementOptions ? JSON.parse(elementOptions) : {};
-
-    var defaultOptions = {
-      previewsContainer: el.querySelector('.dz-preview'),
-      previewTemplate: el.querySelector('.dz-preview').innerHTML,
-      init: function() {
-        this.on('addedfile', function(file) {
-          var maxFiles = elementOptions.maxFiles;
-          if (maxFiles == 1 && currentFile) {
-            this.removeFile(currentFile);
-          }
-          currentFile = file;
-        });
-      }
+        currentFile = file;
+      });
     }
-    var options = Object.assign(defaultOptions, elementOptions);
-
-    // Clear preview
-    el.querySelector('.dz-preview').innerHTML = '';
-
-    // Init dropzone
-    new Dropzone(el, options);
   }
 
-  //
-  // Events
-  //
+  const options = {
+    ...elementOptions,
+    ...defaultOptions
+  };
 
-  if (typeof Dropzone !== 'undefined' && toggle) {
-    globalOptions();
+  // Clear preview
+  toggle.querySelector('.dz-preview').innerHTML = '';
 
-    [].forEach.call(toggle, function(el) {
-      init(el);
-    });
-  }
-
-})();
+  // Init dropzone
+  new Dropzone(toggle, options);
+});

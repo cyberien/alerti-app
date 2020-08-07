@@ -36,13 +36,6 @@
   border-top-width: 0;
 }
 
-// Title
-
-.card-title {
-  margin-bottom: $card-spacer-y / 2;
-}
-
-
 
 //
 // Dashkit ===================================
@@ -67,6 +60,10 @@
 .card-header-tabs .nav-link {
   padding-top: calc((#{$card-header-height} - 1em * #{$line-height-base}) / 2) !important;
   padding-bottom: calc((#{$card-header-height} - 1em * #{$line-height-base}) / 2) !important;
+}
+
+.card-header-tabs .nav-link.active {
+  border-bottom-color: $primary;
 }
 
 
@@ -127,7 +124,7 @@
   display: block !important;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: $card-spacer-y;
+  margin-bottom: 1rem;
 }
 
 .card-avatar-top {

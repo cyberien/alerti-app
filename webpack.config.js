@@ -11,6 +11,7 @@ const config = {
   entry: {
     libs: './src/scss/libs.scss',
     theme: ['./src/js/theme.js', './src/scss/theme.scss'],
+    dashkit: './src/js/dashkit.js',
   },
   mode: 'development',
   module: {
@@ -112,10 +113,6 @@ const config = {
         },
         isnt: function (v1, v2, options) {
           return v1 !== v2 ? options.fn(this) : options.inverse(this);
-        },
-        or: function (v1, options) {
-          console.log(v1);
-          console.log('foooooooooooooooooooooooo');
         },
         webRoot: function () {
           return '{{webRoot}}';

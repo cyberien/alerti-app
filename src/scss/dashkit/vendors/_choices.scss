@@ -1,0 +1,47 @@
+//
+// choices.scss
+// Choices plugin overrides
+//
+
+.choices::after {
+  display: none;
+}
+
+
+// Dropdown menu
+
+.choices > .dropdown-menu {
+  width: 100%;
+}
+
+.choices > .dropdown-menu .form-control {
+  width: calc(100% - #{$input-padding-x} * 2);
+  margin: $dropdown-item-padding-y $input-padding-x;
+}
+
+.choices > .dropdown-menu .dropdown-item {
+  padding-left: $input-padding-x;
+  padding-right: $input-padding-x;
+}
+
+
+// Open
+
+.choices.is-open > .form-control {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.choices.is-open > .form-control + .dropdown-menu {
+  margin-top: -$dropdown-border-width;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+
+// Placeholder
+
+.choices__placeholder {
+  color: $input-placeholder-color;
+  opacity: 1;
+}

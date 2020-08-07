@@ -8,29 +8,7 @@
     <!-- MODALS -->
 
     <!-- NAVIGATION -->
-    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
-    @@if (sidebarSize == 'base' || demoMode) {
-    @@include("partials/sidebar.html", {
-    "category": "pages",
-    "subcategory": "crm",
-    "page": "crm-companies.html"
-    })
-    }
-    @@if (sidebarSize == 'small' || demoMode) {
-    @@include("partials/sidebar-sm.html", {
-    "category": "pages",
-    "subcategory": "crm",
-    "page": "crm-companies.html"
-    })
-    }
-    }
-    @@if (navPosition == 'topnav' || demoMode) {
-    @@include("partials/topnav.html", {
-    "category": "pages",
-    "subcategory": "crm",
-    "page": "crm-companies.html"
-    })
-    }
+    {{> partials/navigation category="pages" subcategory="crm" page="crm-companies.html"}}
 
     <!-- MAIN CONTENT -->
     <div class="main-content">
@@ -3732,7 +3710,7 @@
                   </div>
 
                   <!-- Pagination -->
-                  <div class="row no-gutters">
+                  <div class="row g-0">
 
                     <!-- Pagination (prev) -->
                     <ul class="col list-pagination-prev pagination pagination-tabs justify-content-start">

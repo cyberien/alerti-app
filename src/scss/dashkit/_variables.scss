@@ -28,6 +28,20 @@ $gray-800: #3B506C !default;
 $gray-900: #283E59 !default;
 $black: #12263F !default;
 
+/* beautify ignore:start */
+$grays: (
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900
+) !default;
+/* beautify ignore:end */
+
 $gray-600-dark: #244166 !default;
 $gray-700-dark: #1E3A5C !default;
 $gray-800-dark: #152E4D !default;
@@ -57,6 +71,7 @@ $dark: $black !default;
 
 /* beautify ignore:start */
 $theme-colors: () !default;
+
 $theme-colors: map-merge(
   (
     "primary": $primary,
@@ -71,6 +86,10 @@ $theme-colors: map-merge(
   ), 
 $theme-colors);
 /* beautify ignore:end */
+
+// The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
+// See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
+$min-contrast-ratio: 1.75 !default;
 
 // Customize the light and dark text colors for use in our YIQ color contrast function.
 $color-contrast-dark: $gray-900 !default;
@@ -94,6 +113,7 @@ $escaped-characters: (
 
 $enable-rfs: false !default;
 $enable-validation-icons: false !default;
+$enable-negative-margins: true !default;
 
 
 // Spacing
@@ -105,6 +125,7 @@ $enable-validation-icons: false !default;
 /* beautify ignore:start */
 $spacer: 1.5rem !default;
 $spacers: () !default;
+
 $spacers: map-merge(
   (
     0: 0,
@@ -134,6 +155,7 @@ $body-color: $black !default;
 // Style anchor elements.
 
 $link-color: $primary !default;
+$link-decoration: none !default;
 $link-hover-color: darken($link-color, 15%) !default;
 $link-hover-decoration: none !default;
 
@@ -157,6 +179,7 @@ $border-radius-xs: .1875rem !default;
 $border-radius-sm: 0.25rem !default;
 $border-radius-lg: 0.5rem !default;
 
+$component-active-color: $white !default;
 $component-active-bg: $primary !default;
 
 $caret-width: .25em !default;
@@ -213,6 +236,7 @@ $text-muted: $gray-600 !default;
 $blockquote-font-size: ($font-size-base * 1.25) !default;
 
 $hr-margin-y: 1rem !default;
+$hr-color: $gray-300 !default;
 $hr-opacity: 1 !default;
 
 $list-inline-padding: 6px !default;
@@ -235,6 +259,8 @@ $table-border-color: $gray-200 !default;
 
 $table-striped-order: even !default;
 
+$table-group-seperator-color: $table-border-color !default;
+
 
 // Buttons + Forms
 //
@@ -246,7 +272,7 @@ $input-btn-line-height: $line-height-base !default;
 
 $input-btn-focus-width: .15rem !default;
 $input-btn-focus-color: rgba($primary, .25) !default;
-$input-btn-focus-box-shadow: 0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
+$input-btn-focus-box-shadow: none !default;
 
 $input-btn-padding-y-sm: .125rem !default;
 $input-btn-padding-x-sm: .5rem !default;
@@ -301,11 +327,39 @@ $input-color: $body-color !default;
 $input-border-color: $gray-400 !default;
 
 $input-focus-border-color: $primary !default;
-$input-focus-box-shadow: transparent !default;
+$input-focus-box-shadow: $input-btn-focus-box-shadow !default;
 
 $input-placeholder-color: $gray-500 !default;
 
 $input-height-inner-sm: ($font-size-sm * $input-btn-line-height-sm) + ($input-btn-padding-y-sm * 2) !default;
+
+$form-check-input-active-filter: none !default;
+
+$form-check-padding-left: 1.5rem !default;
+
+$form-check-input-bg: $gray-300 !default;
+$form-check-input-border: transparent !default;
+$form-check-input-border-radius: $border-radius !default;
+$form-check-input-focus-border: $form-check-input-border !default;
+$form-check-input-focus-box-shadow: none !default;
+
+$form-check-input-checked-color: $component-active-color !default;
+$form-check-input-checked-bg-color: $component-active-bg !default;
+$form-check-input-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$form-check-input-checked-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/></svg>") !default;
+$form-check-radio-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$form-check-input-checked-color}'/></svg>") !default;
+
+$form-check-input-indeterminate-color: $component-active-color !default;
+
+$form-switch-color: $white !default;
+$form-switch-width: 3rem !default;
+$form-switch-padding-left: $form-switch-width + .5rem !default;
+$form-switch-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3.25' fill='#{$form-switch-color}'/></svg>") !default;
+
+$form-switch-focus-color: $form-switch-color !default;
+$form-switch-focus-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3.25' fill='#{$form-switch-focus-color}'/></svg>") !default;
+
+$form-switch-checked-color: $form-switch-color !default;
+$form-switch-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3.25' fill='#{$form-switch-checked-color}'/></svg>") !default;
 
 $input-group-addon-color: $text-muted !default;
 $input-group-addon-bg: $input-bg !default;
@@ -317,9 +371,6 @@ $form-select-indicator: url("data:image/svg+xml,<svg viewBox='0 0 9 5' fill='non
 
 $form-select-focus-border-color: $input-focus-border-color !default;
 $form-select-focus-box-shadow: $input-focus-box-shadow !default;
-
-$form-switch-width: 3rem !default;
-$form-switch-padding-left: $form-switch-width + .5rem !default;
 
 
 // Navs
@@ -396,13 +447,17 @@ $pagination-active-border-color: $pagination-active-bg !default;
 
 // Cards
 
-$card-spacer-y: 1rem !default;
+$card-spacer-y: $spacer !default;
 $card-spacer-x: $spacer !default;
+$card-title-spacer-y: .5rem !default;
 $card-border-width: $border-width !default;
 $card-border-radius: $border-radius-lg !default;
 $card-border-color: $gray-200 !default;
 $card-inner-border-radius: calc(#{$card-border-radius} - #{$card-border-width}) !default;
+$card-cap-padding-y: 1rem !default;
+$card-cap-padding-x: $card-spacer-x !default;
 $card-cap-bg: transparent !default;
+$card-bg: $white !default;
 
 
 // Tooltips
@@ -469,8 +524,10 @@ $modal-md: 600px !default;
 //
 // Define alert colors, border radius, and padding.
 
-$alert-link-font-weight: $font-weight-normal !default;
+$alert-padding-y: .75rem !default;
+$alert-padding-x: 1.25rem !default;
 $alert-margin-bottom: $spacer !default;
+$alert-link-font-weight: $font-weight-normal !default;
 
 $alert-bg-level: 0 !default;
 $alert-border-level: 0 !default;
@@ -500,6 +557,7 @@ $figure-caption-font-size: $small-font-size !default;
 // Breadcrumbs
 
 $breadcrumb-padding-x: 0 !default;
+$breadcrumb-item-padding-x: .35rem !default;
 $breadcrumb-margin-bottom: 0 !default;
 $breadcrumb-bg: transparent !default;
 $breadcrumb-divider-color: $gray-400 !default;
@@ -515,6 +573,7 @@ $close-text-shadow: none !default;
 
 // Code
 
+$code-font-size: 87.5% !default;
 $code-color: $blue !default;
 
 
@@ -555,19 +614,17 @@ $btn-text-color: $white !default;
 
 // Forms
 
-$form-switch-height: 1.5rem !default;
-$form-switch-indicator-size: 1.125rem !default;
-$form-switch-spacing: ($form-switch-height - $form-switch-indicator-size) / 2 !default;
-
-$form-switch-indicator-bg: $white !default;
-$form-switch-indicator-active-bg: $white !default;
-
 $form-control-circle-indicator-size: 1.375rem !default;
-
 $form-control-circle-indicator-border-radius: 50% !default;
 $form-control-circle-indicator-icon-checked: url(escape-svg("data:image/svg+xml,<svg viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M11.3333 1L3.99996 8.33333L0.666626 5' stroke='#{$white}' stroke-width='1.33333' stroke-linecap='round' stroke-linejoin='round'/></svg>")) !default;
-
 $form-control-circle-indicator-bg-size: .75rem .5625rem !default;
+
+$form-check-size: 1rem !default; // using this instead of $form-check-input-width because of the units incompatibility bug
+$form-check-input-focus-bg: lighten($primary, 35%) !default;
+
+$form-switch-min-height: 1.5rem !default;
+
+$form-group-margin-bottom: 1.375rem !default;
 
 
 // Navs
@@ -682,6 +739,7 @@ $list-group-item-padding-y-lg: $spacer !default;
 // Badges
 
 $badge-soft-bg-level: -10 !default;
+$badge-pill-padding-x: .6em !default;
 
 
 // Modal
@@ -808,3 +866,80 @@ $main-content-padding-x: 1.5rem !default;
 
 $path-to-fonts: '../fonts' !default;
 $path-to-img: '../img' !default;
+
+
+// 
+// Utilities =====================================
+//
+
+/* beautify ignore:start */
+$border-widths: (
+  2: $border-width * 2,
+  3: $border-width * 3,
+  4: $border-width * 4,
+  5: $border-width * 5,
+);
+
+$utilities: (
+  "background-color": (
+    property: background-color,
+    class: bg,
+    values: map-merge(
+      $theme-colors,
+      (
+        "body": $body-bg,
+        "white": $white,
+        "transparent": transparent,
+        "auth": $auth-bg,
+        "lighter": $lighter,
+      )
+    )
+  ),
+  "border-width": (
+    property: border-width,
+    class: border,
+    values: $border-widths
+  ),
+  "border-top-width": (
+    property: border-top-width,
+    class: border-top,
+    values: $border-widths
+  ),
+  "border-right-width": (
+    property: border-right-width,
+    class: border-right,
+    values: $border-widths
+  ),
+  "border-bottom-width": (
+    property: border-bottom-width,
+    class: border-bottom,
+    values: $border-widths
+  ),
+  "border-left-width": (
+    property: border-left-width,
+    class: border-left,
+    values: $border-widths
+  ),
+  "border-color": (
+    property: border-color,
+    class: border,
+    values: (
+      "body": $body-bg,
+      "card": $card-bg,
+    )
+  ),
+  "font-size": (
+    property: font-size,
+    values: (
+      "base": $font-size-base,
+      "lg": $font-size-lg,
+      "sm": $font-size-sm,
+    )
+  ),
+  "text-gray": (
+    property: color,
+    class: text-gray,
+    values: $grays
+  ),
+);
+/* beautify ignore:end */

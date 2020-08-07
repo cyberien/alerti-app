@@ -16,6 +16,24 @@
   top: -2px;
 }
 
+// Pills
+
+.badge.rounded-pill {
+  padding-right: $badge-pill-padding-x;
+  padding-left: $badge-pill-padding-x;
+}
+
+// Text color
+//
+// Replacing the default white text color
+
+@each $color, $value in $theme-colors {
+  .badge.bg-#{$color} {
+    color: color-contrast($value);
+  }
+}
+
+
 // 
 // Dashkit =====================================
 //

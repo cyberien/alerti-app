@@ -1,31 +1,30 @@
-// Extended Bootstrap components
+// Configuration
+@import "mixins";
+@import "utilities";
 
-@import 'mixins';
-@import 'alert';
-@import 'badge';
-@import 'breadcrumb';
-@import 'buttons';
-@import 'card';
-@import 'close';
-// @import 'custom-forms';
-@import 'dropdowns';
-// @import 'forms';
-@import 'list-group';
-@import 'modal';
-@import 'nav';
-@import 'navbar';
-@import 'pagination';
-@import 'popover';
-@import 'progress';
-@import 'reboot';
-@import 'root';
-@import 'tables';
-@import 'toasts';
-@import 'type';
-// @import 'utilities';
+// Layout & components
+@import "root";
+@import "reboot";
+@import "type";
+@import "tables";
+@import "forms";
+@import "buttons";
+@import "dropdown";
+@import "nav";
+@import "navbar";
+@import "card";
+@import "breadcrumb";
+@import "pagination";
+@import "badge";
+@import "alert";
+@import "progress";
+@import "list-group";
+@import "close";
+@import "toasts";
+@import "modal";
+@import "popover";
 
-// Dashkit only components
-
+// Dashkit
 @import 'avatar';
 @import 'chart';
 @import 'comment';

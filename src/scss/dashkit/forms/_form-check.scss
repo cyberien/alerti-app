@@ -1,0 +1,51 @@
+// 
+// form-check.scss
+// Extended from Bootstrap
+//
+
+//
+// Bootstrap Overrides ===================================
+//
+
+//
+// Check
+//
+
+.form-check {
+  margin-bottom: 0;
+}
+
+.form-check + .form-check {
+  margin-top: $form-check-margin-bottom;
+}
+
+// Input
+
+.form-check-input {
+  width: $form-check-size;
+  height: $form-check-size;
+  margin-top: calc((#{$line-height-base} * 1em - 1rem) / 2);
+  cursor: pointer;
+}
+
+.form-check-input:focus:not(:checked) {
+  background-color: $form-check-input-focus-bg;
+}
+
+
+//
+// Switch
+//
+
+.form-switch {
+  min-height: $form-switch-min-height;
+}
+
+.form-switch .form-check-input {
+  height: $form-switch-min-height;
+  margin-top: 0; // Form switch input height is always equal to the height of the switch
+}
+
+.form-switch .form-check-label {
+  margin-top: calc((#{$form-switch-min-height} - #{$line-height-base} * 1em) / 2);
+}

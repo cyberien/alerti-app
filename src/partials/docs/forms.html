@@ -24,11 +24,11 @@
       <!-- Form -->
       <form>
         <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
           <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
+          <label for="exampleInputPassword1" class="form-label">Password</label>
           <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
         </div>
 
@@ -58,32 +58,32 @@
 
       <!-- Form -->
       <form>
-        <div class="form-row">
+        <div class="row g-3">
           <div class="col-12 col-md-6 mb-3">
-            <label for="validationServer01">First name</label>
+            <label for="validationServer01" class="form-label">First name</label>
             <input type="text" class="form-control is-valid" id="validationServer01" placeholder="First name" value="Mark" required>
             <div class="valid-feedback">
               Looks good!
             </div>
           </div>
           <div class="col-12 col-md-6 mb-3">
-            <label for="validationServer02">Last name</label>
+            <label for="validationServer02" class="form-label">Last name</label>
             <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Last name" value="Otto" required>
             <div class="valid-feedback">
               Looks good!
             </div>
           </div>
         </div>
-        <div class="form-row">
+        <div class="row g-3">
           <div class="col-12 col-md-6 mb-3">
-            <label for="validationServer03">City</label>
+            <label for="validationServer03" class="form-label">City</label>
             <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="City" required>
             <div class="invalid-feedback">
               Please provide a valid city.
             </div>
           </div>
           <div class="col-12 col-md-6 mb-3">
-            <label for="validationServer04">State</label>
+            <label for="validationServer04" class="form-label">State</label>
             <input type="text" class="form-control is-invalid" id="validationServer04" placeholder="State" required>
             <div class="invalid-feedback">
               Please provide a valid state.
@@ -217,49 +217,41 @@
     <div class="card-body">
 
       <!-- Input group -->
-      <div class="input-group input-group-merge mb-3">
-        <input type="text" class="form-control form-control-prepended" placeholder="Input group prepended">
-        <div class="input-group-prepend">
-          <div class="input-group-text">
-            <span class="fe fe-eye"></span>
-          </div>
+      <div class="input-group input-group-merge input-group-reverse mb-3">
+        <input class="form-control" placeholder="Input group reverse" type="text" aria-label="Input group reverse" aria-describedby="inputGroupReverse">
+        <div class="input-group-text" id="inputGroupReverse">
+          <span class="fe fe-eye"></span>
         </div>
       </div>
 
       <!-- Input group -->
       <div class="input-group input-group-merge mb-3">
-        <input type="text" class="form-control form-control-appended" placeholder="Input group appended">
-        <div class="input-group-append">
-          <div class="input-group-text">
-            <span class="fe fe-lock"></span>
-          </div>
+        <input class="form-control" placeholder="Input group appended" type="text" aria-label="Input group appended" aria-describedby="inputGroup">
+        <div class="input-group-text" id="inputGroup">
+          <span class="fe fe-lock"></span>
         </div>
       </div>
 
       <!-- Input group -->
-      <div class="input-group input-group-merge mb-3">
-        <input type="text" class="form-control form-control-prepended is-valid" placeholder="Input group prepended">
-        <div class="input-group-prepend">
-          <div class="input-group-text">
-            <span class="fe fe-eye"></span>
-          </div>
+      <div class="input-group input-group-merge input-group-reverse mb-3">
+        <input class="form-control is-valid" placeholder="Input group reverse" type="text" aria-label="Input group reverse" aria-describedby="inputGroupValid">
+        <div class="input-group-text" id="inputGroupValid">
+          <span class="fe fe-eye"></span>
         </div>
       </div>
 
       <!-- Input group -->
       <div class="input-group input-group-merge">
-        <input type="text" class="form-control form-control-appended is-invalid" placeholder="Input group appended">
-        <div class="input-group-append">
-          <div class="input-group-text">
-            <span class="fe fe-lock"></span>
-          </div>
+        <input class="form-control is-invalid" placeholder="Input group appended" type="text" aria-label="Input group appended" aria-describedby="inputGroupInvalid">
+        <div class="input-group-text" id="inputGroupInvalid">
+          <span class="fe fe-lock"></span>
         </div>
       </div>
 
     </div>
     <div class="card-footer bg-dark">
       <code class="highlight html bg-dark">
-        &lt;div&nbsp;class=&quot;input-group&nbsp;input-group-merge&quot;&gt;<br />&nbsp;&nbsp;&lt;input&nbsp;type=&quot;text&quot;&nbsp;class=&quot;form-control&nbsp;form-control-prepended&quot;&nbsp;placeholder=&quot;Input&nbsp;group&nbsp;prepended&quot;&gt;<br />&nbsp;&nbsp;&lt;div&nbsp;class=&quot;input-group-prepend&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;input-group-text&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;fe&nbsp;fe-eye&quot;&gt;&lt;/span&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />&nbsp;&nbsp;&lt;/div&gt;<br />&lt;/div&gt;<br /><br />&lt;div&nbsp;class=&quot;input-group&nbsp;input-group-merge&quot;&gt;<br />&nbsp;&nbsp;&lt;input&nbsp;type=&quot;text&quot;&nbsp;class=&quot;form-control&nbsp;form-control-appended&quot;&nbsp;placeholder=&quot;Input&nbsp;group&nbsp;appended&quot;&gt;<br />&nbsp;&nbsp;&lt;div&nbsp;class=&quot;input-group-append&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;input-group-text&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;fe&nbsp;fe-lock&quot;&gt;&lt;/span&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />&nbsp;&nbsp;&lt;/div&gt;<br />&lt;/div&gt;<br /><br />&lt;div&nbsp;class=&quot;input-group&nbsp;input-group-merge&quot;&gt;<br />&nbsp;&nbsp;&lt;input&nbsp;type=&quot;text&quot;&nbsp;class=&quot;form-control&nbsp;form-control-prepended&nbsp;is-valid&quot;&nbsp;placeholder=&quot;Input&nbsp;group&nbsp;prepended&quot;&gt;<br />&nbsp;&nbsp;&lt;div&nbsp;class=&quot;input-group-prepend&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;input-group-text&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;fe&nbsp;fe-eye&quot;&gt;&lt;/span&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />&nbsp;&nbsp;&lt;/div&gt;<br />&lt;/div&gt;<br /><br />&lt;div&nbsp;class=&quot;input-group&nbsp;input-group-merge&quot;&gt;<br />&nbsp;&nbsp;&lt;input&nbsp;type=&quot;text&quot;&nbsp;class=&quot;form-control&nbsp;form-control-appended&nbsp;is-invalid&quot;&nbsp;placeholder=&quot;Input&nbsp;group&nbsp;appended&quot;&gt;<br />&nbsp;&nbsp;&lt;div&nbsp;class=&quot;input-group-append&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;input-group-text&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;fe&nbsp;fe-lock&quot;&gt;&lt;/span&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />&nbsp;&nbsp;&lt;/div&gt;<br />&lt;/div&gt;
+        &lt;div&nbsp;class=&quot;input-group&nbsp;input-group-merge&nbsp;input-group-reverse&nbsp;mb-3&quot;&gt;<br />&nbsp;&nbsp;&lt;input&nbsp;class=&quot;form-control&quot;&nbsp;placeholder=&quot;Input&nbsp;group&nbsp;reverse&quot;&nbsp;type=&quot;text&quot;&nbsp;aria-label=&quot;Input&nbsp;group&nbsp;reverse&quot;&nbsp;aria-describedby=&quot;inputGroupReverse&quot;&gt;<br />&nbsp;&nbsp;&lt;div&nbsp;class=&quot;input-group-text&quot;&nbsp;id=&quot;inputGroupReverse&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;fe&nbsp;fe-eye&quot;&gt;&lt;/span&gt;<br />&nbsp;&nbsp;&lt;/div&gt;<br />&lt;/div&gt;<br /><br />&lt;div&nbsp;class=&quot;input-group&nbsp;input-group-merge&nbsp;mb-3&quot;&gt;<br />&nbsp;&nbsp;&lt;input&nbsp;class=&quot;form-control&quot;&nbsp;placeholder=&quot;Input&nbsp;group&nbsp;appended&quot;&nbsp;type=&quot;text&quot;&nbsp;aria-label=&quot;Input&nbsp;group&nbsp;appended&quot;&nbsp;aria-describedby=&quot;inputGroup&quot;&gt;<br />&nbsp;&nbsp;&lt;div&nbsp;class=&quot;input-group-text&quot;&nbsp;id=&quot;inputGroup&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;fe&nbsp;fe-lock&quot;&gt;&lt;/span&gt;<br />&nbsp;&nbsp;&lt;/div&gt;<br />&lt;/div&gt;<br /><br />&lt;div&nbsp;class=&quot;input-group&nbsp;input-group-merge&nbsp;input-group-reverse&nbsp;mb-3&quot;&gt;<br />&nbsp;&nbsp;&lt;input&nbsp;class=&quot;form-control&nbsp;is-valid&quot;&nbsp;placeholder=&quot;Input&nbsp;group&nbsp;reverse&quot;&nbsp;type=&quot;text&quot;&nbsp;aria-label=&quot;Input&nbsp;group&nbsp;reverse&quot;&nbsp;aria-describedby=&quot;inputGroupValid&quot;&gt;<br />&nbsp;&nbsp;&lt;div&nbsp;class=&quot;input-group-text&quot;&nbsp;id=&quot;inputGroupValid&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;fe&nbsp;fe-eye&quot;&gt;&lt;/span&gt;<br />&nbsp;&nbsp;&lt;/div&gt;<br />&lt;/div&gt;<br /><br />&lt;div&nbsp;class=&quot;input-group&nbsp;input-group-merge&quot;&gt;<br />&nbsp;&nbsp;&lt;input&nbsp;class=&quot;form-control&nbsp;is-invalid&quot;&nbsp;placeholder=&quot;Input&nbsp;group&nbsp;appended&quot;&nbsp;type=&quot;text&quot;&nbsp;aria-label=&quot;Input&nbsp;group&nbsp;appended&quot;&nbsp;aria-describedby=&quot;inputGroupInvalid&quot;&gt;<br />&nbsp;&nbsp;&lt;div&nbsp;class=&quot;input-group-text&quot;&nbsp;id=&quot;inputGroupInvalid&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class=&quot;fe&nbsp;fe-lock&quot;&gt;&lt;/span&gt;<br />&nbsp;&nbsp;&lt;/div&gt;<br />&lt;/div&gt;
       </code>
     </div>
   </div>
@@ -282,15 +274,15 @@
     <div class="card-body">
 
       <!-- Switch -->
-      <div class="custom-control custom-switch">
-        <input type="checkbox" class="custom-control-input" id="customSwitch1">
-        <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+        <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
       </div>
 
     </div>
     <div class="card-footer bg-dark">
       <code class="highlight html bg-dark">
-        &lt;div&nbsp;class=&quot;custom-control&nbsp;custom-switch&quot;&gt;<br />&nbsp;&nbsp;&lt;input&nbsp;type=&quot;checkbox&quot;&nbsp;class=&quot;custom-control-input&quot;&nbsp;id=&quot;customSwitch1&quot;&gt;<br />&nbsp;&nbsp;&lt;label&nbsp;class=&quot;custom-control-label&quot;&nbsp;for=&quot;customSwitch1&quot;&gt;Toggle&nbsp;this&nbsp;switch&nbsp;element&lt;/label&gt;<br />&lt;/div&gt;
+        &lt;div&nbsp;class=&quot;form-check&nbsp;form-switch&quot;&gt;<br />&nbsp;&nbsp;&lt;input&nbsp;class=&quot;form-check-input&quot;&nbsp;type=&quot;checkbox&quot;&nbsp;id=&quot;flexSwitchCheckDefault&quot;&gt;<br />&nbsp;&nbsp;&lt;label&nbsp;class=&quot;form-check-label&quot;&nbsp;for=&quot;flexSwitchCheckDefault&quot;&gt;Default&nbsp;switch&nbsp;checkbox&nbsp;input&lt;/label&gt;<br />&lt;/div&gt;
       </code>
     </div>
   </div>
@@ -316,15 +308,15 @@
     <div class="card-body">
 
       <!-- Input -->
-      <input type="text" class="form-control mb-3" placeholder="Flatpickr example" data-toggle="flatpickr">
+      <input type="text" class="form-control mb-3" placeholder="Flatpickr example" data-flatpickr>
 
       <!-- Input -->
-      <input type="text" class="form-control" placeholder="Flatpickr range example" data-toggle="flatpickr" data-options='{"mode": "range"}'>
+      <input type="text" class="form-control" placeholder="Flatpickr range example" data-flatpickr='{"mode": "range"}'>
 
     </div>
     <div class="card-footer bg-dark">
       <code class="highlight html bg-dark">
-        &lt;input&nbsp;type=&quot;text&quot;&nbsp;class=&quot;form-control&quot;&nbsp;placeholder=&quot;Flatpickr&nbsp;example&quot;&nbsp;data-toggle=&quot;flatpickr&quot;&gt;<br /><br />&lt;input&nbsp;type=&quot;text&quot;&nbsp;class=&quot;form-control&quot;&nbsp;placeholder=&quot;Flatpickr&nbsp;range&nbsp;example&quot;&nbsp;data-toggle=&quot;flatpickr&quot;&nbsp;data-options='{&quot;mode&quot;:&nbsp;&quot;range&quot;}'&gt;
+        &lt;input&nbsp;type=&quot;text&quot;&nbsp;class=&quot;form-control&quot;&nbsp;placeholder=&quot;Flatpickr&nbsp;example&quot;&nbsp;data-flatpickr&quot;&gt;<br /><br />&lt;input&nbsp;type=&quot;text&quot;&nbsp;class=&quot;form-control&quot;&nbsp;placeholder=&quot;Flatpickr&nbsp;range&nbsp;example&quot;&nbsp;data-flatpickr='{&quot;mode&quot;:&nbsp;&quot;range&quot;}'&gt;
       </code>
     </div>
   </div>
@@ -339,7 +331,7 @@
 
   <!-- Subheading -->
   <p class="text-muted mb-4">
-    Mask your form controls depending on the context with the jQuery Mask plugin. Please read the <a target="_blank" href="https://igorescobar.github.io/jQuery-Mask-Plugin/">official plugin documentation</a> for a full list of options.
+    Mask your form controls depending on the context with the Inputmask plugin. Please read the <a target="_blank" href="https://github.com/RobinHerbots/Inputmask">official plugin documentation</a> for a full list of options.
   </p>
 
   <!-- Card -->
@@ -347,18 +339,18 @@
     <div class="card-body">
 
       <!-- Input -->
-      <input type="text" class="form-control mb-3" placeholder="$" data-mask="#.##0,00" data-mask-reverse="true">
+      <input type="text" class="form-control mb-3" placeholder="$0.00" data-inputmask="'alias': 'currency', 'numericInput': 'true', 'prefix': '$'">
 
       <!-- Input -->
-      <input type="text" class="form-control mb-3" placeholder="(___)___-____" data-mask="(000) 000-0000">
+      <input type="text" class="form-control mb-3" placeholder="(___)___-____" data-inputmask="'mask': '(999)999-9999'">
 
       <!-- Input -->
-      <input type="text" class="form-control" placeholder="__/__/____" data-mask="00/00/0000">
+      <input type="text" class="form-control" placeholder="__/__/____" data-inputmask="'mask': '99/99/9999'">
 
     </div>
     <div class="card-footer bg-dark">
       <code class="highlight html bg-dark">
-        &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;US currency example&quot; data-mask=&quot;#.##0,00&quot; data-mask-reverse=&quot;true&quot;&gt;<br /><br />&lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;US telephone example&quot; data-mask=&quot;(000) 000-0000&quot;&gt;<br /><br />&lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;US data example&quot; data-mask=&quot;00/00/0000&quot;&gt;
+        &lt;input&nbsp;type=&quot;text&quot;&nbsp;class=&quot;form-control&nbsp;mb-3&quot;&nbsp;placeholder=&quot;$0.00&quot;&nbsp;data-inputmask=&quot;'alias':&nbsp;'currency',&nbsp;'numericInput':&nbsp;'true',&nbsp;'prefix':&nbsp;'$'&quot;&gt;<br /><br />&lt;input&nbsp;type=&quot;text&quot;&nbsp;class=&quot;form-control&nbsp;mb-3&quot;&nbsp;placeholder=&quot;(___)___-____&quot;&nbsp;data-inputmask=&quot;'mask':&nbsp;'(999)999-9999'&quot;&gt;<br /><br />&lt;input&nbsp;type=&quot;text&quot;&nbsp;class=&quot;form-control&quot;&nbsp;placeholder=&quot;__/__/____&quot;&nbsp;data-inputmask=&quot;'mask':&nbsp;'99/99/9999'&quot;&gt;
       </code>
     </div>
   </div>
@@ -382,13 +374,13 @@
 
       <!-- Form -->
       <form>
-        <div data-toggle="quill" data-options='{"placeholder": "Quill WYSIWYG"}'></div>
+        <div data-quill='{"placeholder": "Quill WYSIWYG"}'></div>
       </form>
 
     </div>
     <div class="card-footer bg-dark">
       <code class="highlight html bg-dark">
-        &lt;div&nbsp;data-toggle=&quot;quill&quot;&nbsp;data-options='{&quot;placeholder&quot;:&nbsp;&quot;Quill&nbsp;WYSIWYG&quot;}'&gt;&lt;/div&gt;
+        &lt;div&nbsp;data-quill='{&quot;placeholder&quot;:&nbsp;&quot;Quill&nbsp;WYSIWYG&quot;}'&gt;&lt;/div&gt;
       </code>
     </div>
   </div>
@@ -411,7 +403,7 @@
     <div class="card-body">
 
       <!-- Dropzone -->
-      <div class="dropzone dropzone-single mb-3" data-toggle="dropzone" data-options='{"url": "https://", "maxFiles": 1, "acceptedFiles": "image/*"}'>
+      <div class="dropzone dropzone-single mb-3" data-dropzone='{"url": "https://", "maxFiles": 1, "acceptedFiles": "image/*"}'>
 
         <!-- Fallback -->
         <div class="fallback">
@@ -431,7 +423,7 @@
       </div>
 
       <!-- Dropzone -->
-      <div class="dropzone dropzone-multiple" data-toggle="dropzone" data-options='{"url": "https://"}'>
+      <div class="dropzone dropzone-multiple" data-dropzone='{"url": "https://"}'>
 
         <!-- Fallback -->
         <div class="fallback">
@@ -486,7 +478,7 @@
     </div>
     <div class="card-footer bg-dark">
       <code class="highlight html bg-dark">
-        &lt;!--&nbsp;Dropzone&nbsp;--&gt;<br />&lt;div&nbsp;class=&quot;dropzone&nbsp;dropzone-single&nbsp;mb-3&quot;&nbsp;data-toggle=&quot;dropzone&quot;&nbsp;data-options='{&quot;url&quot;:&nbsp;&quot;https://&quot;,&nbsp;&quot;maxFiles&quot;:&nbsp;1,&nbsp;&quot;acceptedFiles&quot;:&nbsp;&quot;image/*&quot;}'&gt;<br /><br />&nbsp;&nbsp;&lt;!--&nbsp;Fallback&nbsp;--&gt;<br />&nbsp;&nbsp;&lt;div&nbsp;class=&quot;fallback&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;custom-file&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;file&quot;&nbsp;class=&quot;custom-file-input&quot;&nbsp;id=&quot;projectCoverUploads&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;custom-file-label&quot;&nbsp;for=&quot;projectCoverUploads&quot;&gt;Choose&nbsp;file&lt;/label&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />&nbsp;&nbsp;&lt;/div&gt;<br /><br />&nbsp;&nbsp;&lt;!--&nbsp;Preview&nbsp;--&gt;<br />&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dz-preview&nbsp;dz-preview-single&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dz-preview-cover&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;class=&quot;dz-preview-img&quot;&nbsp;src=&quot;data:image/svg+xml,%3csvg3c/svg%3e&quot;&nbsp;alt=&quot;...&quot;&nbsp;data-dz-thumbnail&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />&nbsp;&nbsp;&lt;/div&gt;<br /><br />&lt;/div&gt;<br /><br />&lt;!--&nbsp;Dropzone&nbsp;--&gt;<br />&lt;div&nbsp;class=&quot;dropzone&nbsp;dropzone-multiple&quot;&nbsp;data-toggle=&quot;dropzone&quot;&nbsp;data-options='{&quot;url&quot;:&nbsp;&quot;https://&quot;}'&gt;<br /><br />&nbsp;&nbsp;&lt;!--&nbsp;Fallback&nbsp;--&gt;<br />&nbsp;&nbsp;&lt;div&nbsp;class=&quot;fallback&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;custom-file&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;file&quot;&nbsp;class=&quot;custom-file-input&quot;&nbsp;id=&quot;customFileUploadMultiple&quot;&nbsp;multiple&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;custom-file-label&quot;&nbsp;for=&quot;customFileUploadMultiple&quot;&gt;Choose&nbsp;file&lt;/label&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />&nbsp;&nbsp;&lt;/div&gt;<br /><br />&nbsp;&nbsp;&lt;!--&nbsp;Preview&nbsp;--&gt;<br />&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;dz-preview&nbsp;dz-preview-multiple&nbsp;list-group&nbsp;list-group-lg&nbsp;list-group-flush&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;list-group-item&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;row&nbsp;align-items-center&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;Image&nbsp;--&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;avatar&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;class=&quot;avatar-img&nbsp;rounded&quot;&nbsp;src=&quot;data:image/svg+xml,%3csvg3c/svg%3e&quot;&nbsp;alt=&quot;...&quot;&nbsp;data-dz-thumbnail&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col&nbsp;ml-n3&quot;&gt;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;Heading&nbsp;--&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&nbsp;class=&quot;mb-1&quot;&nbsp;data-dz-name&gt;...&lt;/h4&gt;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;Text&nbsp;--&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;small&nbsp;class=&quot;text-muted&quot;&nbsp;data-dz-size&gt;...&lt;/small&gt;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;Dropdown&nbsp;--&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dropdown&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-ellipses&nbsp;dropdown-toggle&quot;&nbsp;role=&quot;button&quot;&nbsp;data-toggle=&quot;dropdown&quot;&nbsp;aria-haspopup=&quot;true&quot;&nbsp;aria-expanded=&quot;false&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i&nbsp;class=&quot;fe&nbsp;fe-more-vertical&quot;&gt;&lt;/i&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dropdown-menu&nbsp;dropdown-menu-right&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-item&quot;&nbsp;data-dz-remove&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remove<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br />&nbsp;&nbsp;&lt;/ul&gt;<br /><br />&lt;/div&gt;
+        &lt;!--&nbsp;Dropzone&nbsp;--&gt;<br />&lt;div&nbsp;class=&quot;dropzone&nbsp;dropzone-single&nbsp;mb-3&quot;&nbsp;data-dropzone='{&quot;url&quot;:&nbsp;&quot;https://&quot;,&nbsp;&quot;maxFiles&quot;:&nbsp;1,&nbsp;&quot;acceptedFiles&quot;:&nbsp;&quot;image/*&quot;}'&gt;<br /><br />&nbsp;&nbsp;&lt;!--&nbsp;Fallback&nbsp;--&gt;<br />&nbsp;&nbsp;&lt;div&nbsp;class=&quot;fallback&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;custom-file&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;file&quot;&nbsp;class=&quot;custom-file-input&quot;&nbsp;id=&quot;projectCoverUploads&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;custom-file-label&quot;&nbsp;for=&quot;projectCoverUploads&quot;&gt;Choose&nbsp;file&lt;/label&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />&nbsp;&nbsp;&lt;/div&gt;<br /><br />&nbsp;&nbsp;&lt;!--&nbsp;Preview&nbsp;--&gt;<br />&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dz-preview&nbsp;dz-preview-single&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dz-preview-cover&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;class=&quot;dz-preview-img&quot;&nbsp;src=&quot;data:image/svg+xml,%3csvg3c/svg%3e&quot;&nbsp;alt=&quot;...&quot;&nbsp;data-dz-thumbnail&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />&nbsp;&nbsp;&lt;/div&gt;<br /><br />&lt;/div&gt;<br /><br />&lt;!--&nbsp;Dropzone&nbsp;--&gt;<br />&lt;div&nbsp;class=&quot;dropzone&nbsp;dropzone-multiple&quot;&nbsp;data-dropzone='{&quot;url&quot;:&nbsp;&quot;https://&quot;}'&gt;<br /><br />&nbsp;&nbsp;&lt;!--&nbsp;Fallback&nbsp;--&gt;<br />&nbsp;&nbsp;&lt;div&nbsp;class=&quot;fallback&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;custom-file&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type=&quot;file&quot;&nbsp;class=&quot;custom-file-input&quot;&nbsp;id=&quot;customFileUploadMultiple&quot;&nbsp;multiple&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&nbsp;class=&quot;custom-file-label&quot;&nbsp;for=&quot;customFileUploadMultiple&quot;&gt;Choose&nbsp;file&lt;/label&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />&nbsp;&nbsp;&lt;/div&gt;<br /><br />&nbsp;&nbsp;&lt;!--&nbsp;Preview&nbsp;--&gt;<br />&nbsp;&nbsp;&lt;ul&nbsp;class=&quot;dz-preview&nbsp;dz-preview-multiple&nbsp;list-group&nbsp;list-group-lg&nbsp;list-group-flush&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&nbsp;class=&quot;list-group-item&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;row&nbsp;align-items-center&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;Image&nbsp;--&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;avatar&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;class=&quot;avatar-img&nbsp;rounded&quot;&nbsp;src=&quot;data:image/svg+xml,%3csvg3c/svg%3e&quot;&nbsp;alt=&quot;...&quot;&nbsp;data-dz-thumbnail&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col&nbsp;ml-n3&quot;&gt;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;Heading&nbsp;--&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&nbsp;class=&quot;mb-1&quot;&nbsp;data-dz-name&gt;...&lt;/h4&gt;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;Text&nbsp;--&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;small&nbsp;class=&quot;text-muted&quot;&nbsp;data-dz-size&gt;...&lt;/small&gt;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;col-auto&quot;&gt;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;Dropdown&nbsp;--&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dropdown&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-ellipses&nbsp;dropdown-toggle&quot;&nbsp;role=&quot;button&quot;&nbsp;data-toggle=&quot;dropdown&quot;&nbsp;aria-haspopup=&quot;true&quot;&nbsp;aria-expanded=&quot;false&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i&nbsp;class=&quot;fe&nbsp;fe-more-vertical&quot;&gt;&lt;/i&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class=&quot;dropdown-menu&nbsp;dropdown-menu-right&quot;&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#&quot;&nbsp;class=&quot;dropdown-item&quot;&nbsp;data-dz-remove&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remove<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;<br />&nbsp;&nbsp;&lt;/ul&gt;<br /><br />&lt;/div&gt;
       </code>
     </div>
   </div>
@@ -501,7 +493,7 @@
 
   <!-- Subheading -->
   <p class="text-muted mb-4">
-    Customizable select box with support for searching, tagging, remote data sets, infinite scrolling, and many other highly used options powered by Select2. You can pass any options supported by the plugin via the <code>data-options</code> attribute. The value must be a valid JSON object. Please read the <a target="_blank" href="https://select2.org/">official plugin documentation</a> for a full list of options.
+    A vanilla, lightweight, configurable select box/text input plugin. Similar to Select2 and Selectize but without the jQuery dependency. You can pass any options supported by the plugin via the <code>data-options</code> attribute. The value must be a valid JSON object. Please read the <a target="_blank" href="https://github.com/jshjohnson/Choices">official plugin documentation</a> for a full list of options.
   </p>
 
   <!-- Card -->
@@ -509,7 +501,7 @@
     <div class="card-body">
 
       <!-- Select -->
-      <select class="custom-select mb-3" data-toggle="select">
+      <select class="form-control mb-3" data-choices>
         <option>My first option</option>
         <option>Another option</option>
         <option>Third option is here</option>
@@ -548,7 +540,7 @@
       </select>
 
       <!-- Select -->
-      <select class="custom-select custom-select-sm mb-4" data-toggle="select">
+      <select class="form-control form-control-sm mb-4" data-choices>
         <option>My first option</option>
         <option>Another option</option>
         <option>Third option is here</option>
@@ -563,8 +555,8 @@
       </select>
 
       <!-- Select -->
-      <select class="custom-select is-invalid" data-toggle="select" data-options='{"placeholder": "Invalid input"}'>
-        <option></option>
+      <select class="form-control is-invalid" data-choices>
+        <option value="">Invalid input</option>
         <option>My first option</option>
         <option>Another option</option>
         <option>Third option is here</option>

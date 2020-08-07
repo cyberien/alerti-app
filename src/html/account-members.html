@@ -8,30 +8,7 @@
     <!-- MODALS -->
 
     <!-- NAVIGATION -->
-    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
-    @@if (sidebarSize == 'base' || demoMode) {
-    @@include("partials/sidebar.html", {
-    "category": "pages",
-    "subcategory": "account",
-    "page": "account-members.html"
-    })
-    }
-    @@if (sidebarSize == 'small' || demoMode) {
-    @@include("partials/sidebar-sm.html", {
-    "category": "pages",
-    "subcategory": "account",
-    "page": "account-members.html"
-    })
-    }
-    }
-    @@if (navPosition == 'topnav' || demoMode) {
-    @@include("partials/topnav.html", {
-    "category": "pages",
-    "subcategory": "account",
-    "page": "account-members.html"
-    })
-    }
-
+    {{> partials/navigation category="pages" subcategory="account" page="account-members.html"}}
 
     <!-- MAIN CONTENT -->
     <div class="main-content">
@@ -195,7 +172,7 @@
 
                     </div>
                     <div class="card-header">
-                      <div class="row no-gutters align-items-center">
+                      <div class="row g-0 align-items-center">
                         <div class="col-3">
 
                           <!-- Label -->
@@ -213,7 +190,7 @@
                       </div> <!-- / .row -->
                     </div>
                     <div class="card-header">
-                      <div class="row no-gutters align-items-center">
+                      <div class="row g-0 align-items-center">
                         <div class="col-3">
 
                           <!-- Label -->

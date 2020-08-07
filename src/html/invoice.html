@@ -8,29 +8,7 @@
     <!-- MODALS -->
 
     <!-- NAVIGATION -->
-    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
-    @@if (sidebarSize == 'base' || demoMode) {
-    @@include("partials/sidebar.html", {
-    "category": "pages",
-    "subcategory": "",
-    "page": "invoice.html"
-    })
-    }
-    @@if (sidebarSize == 'small' || demoMode) {
-    @@include("partials/sidebar-sm.html", {
-    "category": "pages",
-    "subcategory": "",
-    "page": "invoice.html"
-    })
-    }
-    }
-    @@if (navPosition == 'topnav' || demoMode) {
-    @@include("partials/topnav.html", {
-    "category": "pages",
-    "subcategory": "",
-    "page": "invoice.html"
-    })
-    }
+    {{> partials/navigation category="pages" page="invoice.html"}}
 
     <!-- MAIN CONTENT -->
     <div class="main-content">

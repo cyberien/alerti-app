@@ -3,6 +3,21 @@
 // Extended from Bootstrap
 //
 
+// 
+// Bootstrap Overrides =====================================
+//
+
+// Sizing
+
+.btn-lg {
+  line-height: $btn-line-height-lg;
+}
+
+.btn-sm {
+  line-height: $btn-line-height-sm;
+}
+
+
 //
 // Dashkit ===================================
 //
@@ -19,9 +34,11 @@
 }
 
 .btn-group-toggle .btn-white:not(:disabled):not(.disabled):active,
-.btn-group-toggle .btn-white:not(:disabled):not(.disabled).active {
+.btn-group-toggle .btn-white:not(:disabled):not(.disabled).active,
+.btn-group-toggle .btn-check:checked + .btn-white {
   background-color: $input-bg;
   border-color: $input-focus-border-color;
+  box-shadow: none;
   color: $primary;
 }
 

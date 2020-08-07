@@ -1,47 +1,25 @@
 <!doctype html>
 <html lang="en">
   <head>
-    @@include("../partials/head.html", {
-    "title": "Dashkit"
-    })
+    {{> partials/head title="Dashkit"}}
   </head>
   <body>
 
-    <!-- MODALS
-    ================================================== -->
-    @@include("../partials/modals.html")
+    <!-- MODALS -->
 
     <!-- NAVIGATION -->
-    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
-    @@if (sidebarSize == 'base' || demoMode) {
-    @@include("../partials/sidebar.html", {
-    "category": "",
-    "subcategory": "",
-    "page": "changelog.html"
-    })
-    }
-    @@if (sidebarSize == 'small' || demoMode) {
-    @@include("../partials/sidebar-sm.html", {
-    "category": "",
-    "subcategory": "",
-    "page": "changelog.html"
-    })
-    }
-    }
-    @@if (navPosition == 'topnav' || demoMode) {
-    @@include("../partials/topnav.html", {
-    "category": "",
-    "subcategory": "",
-    "page": "changelog.html"
-    })
-    }
+    {{> partials/navigation page="changelog.html"}}
 
     <!-- MAIN CONTENT -->
     <div class="main-content">
 
-      @@if (navPosition == 'combo' || demoMode) {
-      @@include("../partials/topbar.html")
-      }
+      {{#if demoMode}}
+        {{> partials/topbar}}
+      {{/if}}
+
+      {{#is navPosition 'combo'}}
+        {{> partials/topbar}}
+      {{/is}}
 
       <div class="{{#is navPosition 'sidenav || combo'}}container-fluid{{/is}}{{#is navPosition 'topnav'}}container{{/is}}">
         <div class="row justify-content-center">
@@ -515,9 +493,8 @@
 
     </div> <!-- / .main-content -->
 
-    <!-- JAVASCRIPT
-    ================================================== -->
-    @@include("../partials/scripts.html")
+    <!-- JAVASCRIPT -->
+    {{> partials/scripts}}
 
   </body>
 </html>

@@ -1,82 +1,60 @@
 <!doctype html>
 <html lang="en">
   <head>
-    @@include("../partials/head.html", {
-    "title": "Dashkit"
-    })
+    {{> partials/head title="Dashkit"}}
   </head>
   <body>
 
-    <!-- MODALS
-    ================================================== -->
-    @@include("../partials/modals.html")
+    <!-- MODALS -->
 
     <!-- NAVIGATION -->
-    @@if (navPosition == 'sidenav' || navPosition == 'combo' || demoMode) {
-    @@if (sidebarSize == 'base' || demoMode) {
-    @@include("../partials/sidebar.html", {
-    "category": "",
-    "subcategory": "",
-    "page": "components.html"
-    })
-    }
-    @@if (sidebarSize == 'small' || demoMode) {
-    @@include("../partials/sidebar-sm.html", {
-    "category": "",
-    "subcategory": "",
-    "page": "components.html"
-    })
-    }
-    }
-    @@if (navPosition == 'topnav' || demoMode) {
-    @@include("../partials/topnav.html", {
-    "category": "",
-    "subcategory": "",
-    "page": "components.html"
-    })
-    }
+    {{> partials/navigation page="components.html"}}
 
     <!-- MAIN CONTENT -->
     <div class="main-content">
 
-      @@if (navPosition == 'combo' || demoMode) {
-      @@include("../partials/topbar.html")
-      }
+      {{#if demoMode}}
+        {{> partials/topbar}}
+      {{/if}}
+
+      {{#is navPosition 'combo'}}
+        {{> partials/topbar}}
+      {{/is}}
 
       <div class="{{#is navPosition 'sidenav || combo'}}container-fluid{{/is}}{{#is navPosition 'topnav'}}container{{/is}}">
         <div class="row justify-content-center">
           <div class="col-12 col-lg-10 col-xl-8">
 
-            @@include("../partials/docs/alerts.html")
-            @@include("../partials/docs/autosize.html")
-            @@include("../partials/docs/avatars.html")
-            @@include("../partials/docs/badges.html")
-            @@include("../partials/docs/breadcrumb.html")
-            @@include("../partials/docs/button-group.html")
-            @@include("../partials/docs/buttons.html")
-            @@include("../partials/docs/cards.html")
-            @@include("../partials/docs/charts.html")
-            @@include("../partials/docs/checklist.html")
-            @@include("../partials/docs/dropdowns.html")
-            @@include("../partials/docs/forms.html")
-            @@include("../partials/docs/icons.html")
-            @@include("../partials/docs/kanban.html")
-            @@include("../partials/docs/lists.html")
-            @@include("../partials/docs/map.html")
-            @@include("../partials/docs/modals.html")
-            @@include("../partials/docs/navbar.html")
-            @@include("../partials/docs/navs.html")
-            @@include("../partials/docs/page-headers.html")
-            @@include("../partials/docs/pagination.html")
-            @@include("../partials/docs/popovers.html")
-            @@include("../partials/docs/progress.html")
-            @@include("../partials/docs/social-posts.html")
-            @@include("../partials/docs/spinners.html")
-            @@include("../partials/docs/tables.html")
-            @@include("../partials/docs/toasts.html")
-            @@include("../partials/docs/tooltips.html")
-            @@include("../partials/docs/typography.html")
-            @@include("../partials/docs/utilities.html")
+            {{> docs/alerts}}
+            {{> docs/autosize}}
+            {{> docs/avatars}}
+            {{> docs/badges}}
+            {{> docs/breadcrumb}}
+            {{> docs/button-group}}
+            {{> docs/buttons}}
+            {{> docs/cards}}
+            {{> docs/charts}}
+            {{> docs/checklist}}
+            {{> docs/dropdowns}}
+            {{> docs/forms}}
+            {{> docs/icons}}
+            {{> docs/kanban}}
+            {{> docs/lists}}
+            {{> docs/map}}
+            {{> docs/modals}}
+            {{> docs/navbar}}
+            {{> docs/navs}}
+            {{> docs/page-headers}}
+            {{> docs/pagination}}
+            {{> docs/popovers}}
+            {{> docs/progress}}
+            {{> docs/social-posts}}
+            {{> docs/spinners}}
+            {{> docs/tables}}
+            {{> docs/toasts}}
+            {{> docs/tooltips}}
+            {{> docs/typography}}
+            {{> docs/utilities}}
 
           </div>
         </div> <!-- / .row -->
@@ -84,9 +62,8 @@
 
     </div> <!-- / .main-content -->
 
-    <!-- JAVASCRIPT
-    ================================================== -->
-    @@include("../partials/scripts.html")
+    <!-- JAVASCRIPT -->
+    {{> partials/scripts}}
 
   </body>
 </html>

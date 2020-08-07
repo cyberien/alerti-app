@@ -1,15 +1,18 @@
 //
 // dashkit.js
+// Example plugin initialization
 //
 
-'use strict';
+import Chart from 'chart.js';
 
-// Audience chart
+// Chart.js styling and helper functions
+import chart from './chart';
+import chartExtension from './../libs/chart.js/Chart.extension.js';
 
 (function() {
-  var chart = document.getElementById('audienceChart');
+  const chart = document.getElementById('audienceChart');
 
-  if (typeof Chart !== 'undefined' && chart) {
+  if (chart) {
     new Chart(chart, {
       type: 'line',
       options: {
@@ -68,9 +71,9 @@
 // Convertions chart
 
 (function() {
-  var chart = document.getElementById('conversionsChart');
+  const chart = document.getElementById('conversionsChart');
 
-  if (typeof Chart !== 'undefined' && chart) {
+  if (chart) {
     new Chart(chart, {
       type: 'bar',
       options: {
@@ -103,9 +106,9 @@
 // Traffic chart
 
 (function() {
-  var chart = document.getElementById('trafficChart');
+  const chart = document.getElementById('trafficChart');
 
-  if (typeof Chart !== 'undefined' && chart) {
+  if (chart) {
     new Chart(chart, {
       type: 'doughnut',
       options: {
@@ -135,9 +138,9 @@
 // Traffic chart (alt)
 
 (function() {
-  var chart = document.getElementById('trafficChartAlt');
+  const chart = document.getElementById('trafficChartAlt');
 
-  if (typeof Chart !== 'undefined' && chart) {
+  if (chart) {
     new Chart(chart, {
       type: 'doughnut',
       options: {
@@ -167,9 +170,9 @@
 // Sales chart
 
 (function() {
-  var chart = document.getElementById('salesChart');
+  const chart = document.getElementById('salesChart');
 
-  if (typeof Chart !== 'undefined' && chart) {
+  if (chart) {
     new Chart(chart, {
       type: 'line',
       options: {
@@ -205,9 +208,9 @@
 // Orders chart
 
 (function() {
-  var chart = document.getElementById('ordersChart');
+  const chart = document.getElementById('ordersChart');
 
-  if (typeof Chart !== 'undefined' && chart) {
+  if (chart) {
     new Chart(chart, {
       type: 'bar',
       options: {
@@ -240,9 +243,9 @@
 // Earnings chart
 
 (function() {
-  var chart = document.getElementById('earningsChart');
+  const chart = document.getElementById('earningsChart');
 
-  if (typeof Chart !== 'undefined' && chart) {
+  if (chart) {
     new Chart(chart, {
       type: 'bar',
       options: {
@@ -302,9 +305,9 @@
 // Weekly hours chart
 
 (function() {
-  var chart = document.getElementById('weeklyHoursChart');
+  const chart = document.getElementById('weeklyHoursChart');
 
-  if (typeof Chart !== 'undefined' && chart) {
+  if (chart) {
     new Chart(chart, {
       type: 'bar',
       options: {
@@ -331,7 +334,7 @@
 // Overview chart
 
 (function() {
-  var chart = document.getElementById('overviewChart');
+  const chart = document.getElementById('overviewChart');
 
   if (chart) {
     new Chart(chart, {
@@ -379,9 +382,9 @@
 // Sparkline chart
 
 (function() {
-  var chart = document.getElementById('sparklineChart');
+  const chart = document.getElementById('sparklineChart');
 
-  if (typeof Chart !== 'undefined' && chart) {
+  if (chart) {
     new Chart(chart, {
       type: 'line',
       options: {
@@ -420,9 +423,9 @@
 // Sparkline chart (gray)
 
 (function() {
-  var charts = document.querySelectorAll('#sparklineChartSocialOne, #sparklineChartSocialTwo, #sparklineChartSocialThree, #sparklineChartSocialFour');
+  const charts = document.querySelectorAll('#sparklineChartSocialOne, #sparklineChartSocialTwo, #sparklineChartSocialThree, #sparklineChartSocialFour');
 
-  if (typeof Chart !== 'undefined' && charts) {
+  if (charts) {
     [].forEach.call(charts, function(chart) {
       new Chart(chart, {
         type: 'line',
@@ -464,7 +467,7 @@
 // Feed chart
 
 (function() {
-  var chart = document.getElementById('feedChart');
+  const chart = document.getElementById('feedChart');
 
   if (chart) {
     new Chart(chart, {

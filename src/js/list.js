@@ -1,39 +1,42 @@
 //
 // list.js
+// Theme module
 //
 
-(function() {
-  var lists = document.querySelectorAll('[data-list]');
-  var sorts = document.querySelectorAll('[data-sort]');
+import List from 'list.js';
+
+export default (function() {
+  const lists = document.querySelectorAll('[data-list]');
+  const sorts = document.querySelectorAll('[data-sort]');
 
   function init(list) {
-    var listAlert = list.querySelector('.list-alert');
-    var listAlertCount = list.querySelector('.list-alert-count');
-    var listAlertClose = list.querySelector('.list-alert .close');
-    var listCheckboxes = list.querySelectorAll('.list-checkbox');
-    var listCheckboxAll = list.querySelector('.list-checkbox-all');
-    var listPaginationPrev = list.querySelector('.list-pagination-prev');
-    var listPaginationNext = list.querySelector('.list-pagination-next');
-    var listOptions = list.dataset.list && JSON.parse(list.dataset.list);
+    const listAlert = list.querySelector('.list-alert');
+    const listAlertCount = list.querySelector('.list-alert-count');
+    const listAlertClose = list.querySelector('.list-alert .close');
+    const listCheckboxes = list.querySelectorAll('.list-checkbox');
+    const listCheckboxAll = list.querySelector('.list-checkbox-all');
+    const listPaginationPrev = list.querySelector('.list-pagination-prev');
+    const listPaginationNext = list.querySelector('.list-pagination-next');
+    const listOptions = list.dataset.list && JSON.parse(list.dataset.list);
 
-    var defaultOptions = {
+    const defaultOptions = {
       listClass: 'list',
       searchClass: 'list-search',
       sortClass: 'list-sort'
     };
 
     // Merge options
-    var options = Object.assign(defaultOptions, listOptions);
+    const options = Object.assign(defaultOptions, listOptions);
 
     // Init
-    var listObj = new List(list, options);
+    const listObj = new List(list, options);
 
     // Pagination (next)
     if (listPaginationNext) {
       listPaginationNext.addEventListener('click', function(e) {
         e.preventDefault();
 
-        var nextItem = listObj.i + listObj.page;
+        const nextItem = listObj.i + listObj.page;
 
         if (nextItem <= listObj.size()) {
           listObj.show(nextItem, listObj.page);
@@ -46,7 +49,7 @@
       listPaginationPrev.addEventListener('click', function(e) {
         e.preventDefault();
 
-        var prevItem = listObj.i - listObj.page;
+        const prevItem = listObj.i - listObj.page;
 
         if (prevItem > 0) {
           listObj.show(prevItem, listObj.page);
@@ -97,7 +100,7 @@
   };
 
   function countCheckboxes(listCheckboxes, listAlert, listAlertCount) {
-    var checked = [].slice.call(listCheckboxes).filter(function(checkbox) {
+    const checked = [].slice.call(listCheckboxes).filter(function(checkbox) {
       return checkbox.checked;
     });
 

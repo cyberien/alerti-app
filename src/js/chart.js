@@ -1,17 +1,17 @@
 //
-// charts.js
+// chart.js
 // Theme module
 //
 
-'use strict';
+import Chart from 'chart.js';
 
-(function() {
+export default (function() {
 
   //
   // Variables
   //
 
-  var colors = {
+  const colors = {
     gray: {
       300: '#E3EBF6',
       600: '#95AAC9',
@@ -29,12 +29,12 @@
     transparent: 'transparent',
   };
 
-  var fonts = {
+  const fonts = {
     base: 'Cerebri Sans'
   };
 
-  var toggles = document.querySelectorAll('[data-toggle="chart"]');
-  var legends = document.querySelectorAll('[data-toggle="legend"]');
+  const toggles = document.querySelectorAll('[data-toggle="chart"]');
+  const legends = document.querySelectorAll('[data-toggle="legend"]');
 
   //
   // Functions
@@ -87,8 +87,8 @@
     Chart.defaults.global.tooltips.mode = 'index';
     Chart.defaults.global.tooltips.intersect = false;
     Chart.defaults.global.tooltips.custom = function(model) {
-      var tooltip = document.getElementById('chart-tooltip');
-      var chartType = this._chart.config.type;
+      let tooltip = document.getElementById('chart-tooltip');
+      const chartType = this._chart.config.type;
 
       // Create tooltip if doesn't exist
       if (!tooltip) {
@@ -110,13 +110,13 @@
       }
 
       if (model.body) {
-        var title = model.title || [];
-        var body = model.body.map(function(body) {
+        const title = model.title || [];
+        const body = model.body.map(function(body) {
           return body.lines;
         });
 
         // Add arrow
-        var content = '<div class="arrow"></div>';
+        let content = '<div class="arrow"></div>';
 
         // Add title
         title.forEach(function(title) {
@@ -125,10 +125,10 @@
 
         // Add content
         body.forEach(function(body, i) {
-          var colors = model.labelColors[i];
-          var indicatorColor = (chartType === 'line' && colors.borderColor !== 'rgba(0,0,0,0.1)') ? colors.borderColor : colors.backgroundColor;
-          var indicator = '<span class="popover-body-indicator" style="background-color: ' + indicatorColor + '"></span>';
-          var justifyContent = (body.length > 1) ? 'justify-content-left' : 'justify-content-center';
+          const colors = model.labelColors[i];
+          const indicatorColor = (chartType === 'line' && colors.borderColor !== 'rgba(0,0,0,0.1)') ? colors.borderColor : colors.backgroundColor;
+          const indicator = '<span class="popover-body-indicator" style="background-color: ' + indicatorColor + '"></span>';
+          const justifyContent = (body.length > 1) ? 'justify-content-left' : 'justify-content-center';
 
           content += '<div class="popover-body d-flex align-items-center ' + justifyContent + '">' + indicator + body + '</div>';
         });
@@ -136,20 +136,20 @@
         tooltip.innerHTML = content;
       }
 
-      var canvas = this._chart.canvas;
-      var canvasRect = canvas.getBoundingClientRect();
+      const canvas = this._chart.canvas;
+      const canvasRect = canvas.getBoundingClientRect();
 
-      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-      var scrollLeft = window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0;
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0;
 
-      var canvasTop = canvasRect.top + scrollTop;
-      var canvasLeft = canvasRect.left + scrollLeft;
+      const canvasTop = canvasRect.top + scrollTop;
+      const canvasLeft = canvasRect.left + scrollLeft;
 
-      var tooltipWidth = tooltip.offsetWidth;
-      var tooltipHeight = tooltip.offsetHeight;
+      const tooltipWidth = tooltip.offsetWidth;
+      const tooltipHeight = tooltip.offsetHeight;
 
-      var top = canvasTop + model.caretY - tooltipHeight - 16;
-      var left = canvasLeft + model.caretX - tooltipWidth / 2;
+      const top = canvasTop + model.caretY - tooltipHeight - 16;
+      const left = canvasLeft + model.caretX - tooltipWidth / 2;
 
       tooltip.style.top = top + 'px';
       tooltip.style.left = left + 'px';
@@ -157,25 +157,25 @@
     };
 
     Chart.defaults.global.tooltips.callbacks.label = function(item, data) {
-      var content = '';
+      let content = '';
 
-      var value = item.yLabel;
-      var dataset = data.datasets[item.datasetIndex]
-      var label = dataset.label;
+      const value = item.yLabel;
+      const dataset = data.datasets[item.datasetIndex]
+      const label = dataset.label;
 
-      var yAxisID = dataset.yAxisID ? dataset.yAxisID : 0;
-      var yAxes = this._chart.options.scales.yAxes;
-      var yAxis = yAxes[0];
+      const yAxisID = dataset.yAxisID ? dataset.yAxisID : 0;
+      const yAxes = this._chart.options.scales.yAxes;
+      const yAxis = yAxes[0];
 
       if (yAxisID) {
-        var yAxis = yAxes.filter(function(item) {
+        const yAxis = yAxes.filter(function(item) {
           return item.id == yAxisID;
         })[0];
       }
 
-      var callback = yAxis.ticks.callback;
+      const callback = yAxis.ticks.callback;
 
-      var activeDatasets = data.datasets.filter(function(dataset) {
+      const activeDatasets = data.datasets.filter(function(dataset) {
         return !dataset.hidden;
       });
 
@@ -194,19 +194,19 @@
       return data.labels[item[0].index];
     };
     Chart.defaults.doughnut.tooltips.callbacks.label = function(item, data) {
-      var value = data.datasets[0].data[item.index];
-      var callbacks = this._chart.options.tooltips.callbacks;
-      var afterLabel = callbacks.afterLabel() ? callbacks.afterLabel() : '';
-      var beforeLabel = callbacks.beforeLabel() ? callbacks.beforeLabel() : '';
+      const value = data.datasets[0].data[item.index];
+      const callbacks = this._chart.options.tooltips.callbacks;
+      const afterLabel = callbacks.afterLabel() ? callbacks.afterLabel() : '';
+      const beforeLabel = callbacks.beforeLabel() ? callbacks.beforeLabel() : '';
 
       return '<span class="popover-body-value">' + beforeLabel + value + afterLabel + '</span>';
     };
     Chart.defaults.doughnut.legendCallback = function(chart) {
-      var data = chart.data;
-      var content = '';
+      const data = chart.data;
+      let content = '';
 
       data.labels.forEach(function(label, index) {
-        var bgColor = data.datasets[0].backgroundColor[index];
+        const bgColor = data.datasets[0].backgroundColor[index];
 
         content += '<span class="chart-legend-item">';
         content += '<i class="chart-legend-indicator" style="background-color: ' + bgColor + '"></i>';
@@ -250,7 +250,7 @@
   }
 
   function getChartInstance(chart) {
-    var chartInstance = undefined;
+    let chartInstance = undefined;
 
     Chart.helpers.each(Chart.instances, function(instance) {
       if (chart == instance.chart.canvas) {
@@ -262,22 +262,22 @@
   }
 
   function toggleDataset(toggle) {
-    var id = toggle.dataset.target;
-    var action = toggle.dataset.action;
-    var index = parseInt(toggle.dataset.dataset);
+    const id = toggle.dataset.target;
+    const action = toggle.dataset.action;
+    const index = parseInt(toggle.dataset.dataset);
 
-    var chart = document.querySelector(id);
-    var chartInstance = getChartInstance(chart);
+    const chart = document.querySelector(id);
+    const chartInstance = getChartInstance(chart);
 
     // Action: Toggle
     if (action === 'toggle') {
-      var datasets = chartInstance.data.datasets;
+      const datasets = chartInstance.data.datasets;
 
-      var activeDataset = datasets.filter(function(dataset) {
+      const activeDataset = datasets.filter(function(dataset) {
         return !dataset.hidden;
       })[0];
 
-      var backupDataset = datasets.filter(function(dataset) {
+      let backupDataset = datasets.filter(function(dataset) {
         return dataset.order === 1000;
       })[0];
 
@@ -285,7 +285,7 @@
       if (!backupDataset) {
         backupDataset = {};
 
-        for (var prop in activeDataset) {
+        for (const prop in activeDataset) {
           if (prop !== '_meta') {
             backupDataset[prop] = activeDataset[prop];
           }
@@ -299,9 +299,9 @@
       }
 
       // Toggle dataset
-      var sourceDataset = (datasets[index] === activeDataset) ? backupDataset : datasets[index];
+      const sourceDataset = (datasets[index] === activeDataset) ? backupDataset : datasets[index];
 
-      for (var prop in activeDataset) {
+      for (const prop in activeDataset) {
         if (prop !== '_meta') {
           activeDataset[prop] = sourceDataset[prop];
         }
@@ -313,8 +313,8 @@
 
     // Action: Add
     if (action === 'add') {
-      var dataset = chartInstance.data.datasets[index];
-      var isHidden = dataset.hidden;
+      const dataset = chartInstance.data.datasets[index];
+      const isHidden = dataset.hidden;
 
       // Toggle dataset
       dataset.hidden = !isHidden;
@@ -325,11 +325,11 @@
   }
 
   function toggleLegend(legend) {
-    var chart = getChartInstance(legend);
-    var content = chart.generateLegend();
+    const chart = getChartInstance(legend);
+    const content = chart.generateLegend();
 
-    var id = legend.dataset.target;
-    var container = document.querySelector(id);
+    const id = legend.dataset.target;
+    const container = document.querySelector(id);
 
     container.innerHTML = content;
   }
@@ -338,30 +338,27 @@
   // Events
   //
 
-  if (typeof Chart !== 'undefined') {
+  // Global options
+  globalOptions();
 
-    // Global options
-    globalOptions();
+  // Toggle dataset
+  if (toggles) {
+    [].forEach.call(toggles, function(toggle) {
+      const event = toggle.dataset.trigger;
 
-    // Toggle dataset
-    if (toggles) {
-      [].forEach.call(toggles, function(toggle) {
-        var event = toggle.dataset.trigger;
-
-        toggle.addEventListener(event, function() {
-          toggleDataset(toggle);
-        });
-
+      toggle.addEventListener(event, function() {
+        toggleDataset(toggle);
       });
-    }
 
-    // Toggle legend
-    if (legends) {
-      document.addEventListener('DOMContentLoaded', function() {
-        [].forEach.call(legends, function(legend) {
-          toggleLegend(legend);
-        });
+    });
+  }
+
+  // Toggle legend
+  if (legends) {
+    document.addEventListener('DOMContentLoaded', function() {
+      [].forEach.call(legends, function(legend) {
+        toggleLegend(legend);
       });
-    }
+    });
   }
 })();
