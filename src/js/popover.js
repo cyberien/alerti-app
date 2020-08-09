@@ -3,30 +3,10 @@
 // Theme module
 //
 
-'use strict';
+import { Popover } from 'bootstrap';
 
-(function() {
+const popovers = document.querySelectorAll('[data-toggle="popover"]');
 
-  //
-  // Variables
-  //
-
-  var toggle = document.querySelectorAll('[data-toggle="popover"]');
-
-  //
-  // Functions
-  //
-
-  function init(toggle) {
-    $(toggle).popover();
-  }
-
-  //
-  // Events
-  //
-
-  if (toggle) {
-    init(toggle);
-  }
-
-})();
+popovers.forEach(popover => {
+  new Popover(popover);
+});

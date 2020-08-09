@@ -7,8 +7,19 @@
 // Bootstrap Overrides =====================================
 //
 
+.pagination .page-link {
+  line-height: $pagination-line-height;
+  font-size: $pagination-font-size;
+}
+
 .pagination-lg .page-link {
-  font-size: $font-size-base;
+  line-height: $pagination-line-height-lg;
+  font-size: $pagination-font-size-lg;
+}
+
+.pagination-sm .page-link {
+  line-height: $pagination-line-height-sm;
+  font-size: $pagination-font-size-sm;
 }
 
 

@@ -7,12 +7,12 @@ import { Sortable } from '@shopify/draggable';
 
 const checklists = document.querySelectorAll('.checklist');
 
-checklists.forEach(checklist => {
-  new Sortable(checklist, {
+if (checklists) {
+  new Sortable(checklists, {
     draggable: '.form-check',
     handle: '.form-check-label',
     mirror: {
       constrainDimensions: true
     }
   });
-});
+}

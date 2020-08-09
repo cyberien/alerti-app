@@ -85,14 +85,14 @@
 
 // Rounded
 
-.input-group-rounded.input-group-merge > .input-group-text {
-  border-top-right-radius: $rounded-pill;
-  border-bottom-right-radius: $rounded-pill;
-}
-
 .input-group-rounded.input-group-merge > .form-control {
   border-top-left-radius: $rounded-pill;
   border-bottom-left-radius: $rounded-pill;
+}
+
+.input-group-rounded.input-group-merge > .input-group-text {
+  border-top-right-radius: $rounded-pill;
+  border-bottom-right-radius: $rounded-pill;
 }
 
 .input-group-rounded.input-group-merge.input-group-reverse > .input-group-text {
@@ -101,6 +101,34 @@
 
 .input-group-rounded.input-group-merge.input-group-reverse > .form-control {
   border-radius: 0 $rounded-pill $rounded-pill 0;
+}
+
+
+// Flush
+
+.input-group-flush.input-group-merge > .form-control,
+.input-group-flush.input-group-merge > .input-group-text {
+  padding-top: 0;
+  padding-bottom: 0;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.input-group-flush.input-group-merge > .form-control {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.input-group-flush.input-group-merge > .form-control:focus + .input-group-text {
+  border-color: transparent;
+}
+
+.input-group-flush.input-group-merge:not(.input-group-reverse) > .input-group-text {
+  padding-right: 0;
+}
+
+.input-group-flush.input-group-merge.input-group-reverse > .input-group-text {
+  padding-left: 0;
 }
 
 

@@ -43,5 +43,5 @@ dropdowns.forEach(dropdown => {
 
   dropdown.addEventListener('hide.bs.dropdown', (e) => {
     hideDropdowns(e, dropdown);
-  })
+  });
 });

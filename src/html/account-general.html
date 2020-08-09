@@ -16,7 +16,7 @@
       {{#if demoMode}}
         {{> partials/topbar}}
       {{/if}}
-      
+
       {{#is navPosition 'combo'}}
         {{> partials/topbar}}
       {{/is}}
@@ -129,7 +129,7 @@
                   <div class="form-group">
 
                     <!-- Label -->
-                    <label>
+                    <label class="form-label">
                       First name
                     </label>
 
@@ -145,7 +145,7 @@
                   <div class="form-group">
 
                     <!-- Label -->
-                    <label>
+                    <label class="form-label">
                       Last name
                     </label>
 
@@ -182,12 +182,12 @@
                   <div class="form-group">
 
                     <!-- Label -->
-                    <label>
+                    <label class="form-label">
                       Phone
                     </label>
 
                     <!-- Input -->
-                    <input type="text" class="form-control mb-3" placeholder="(___)___-____" data-mask="(000) 000-0000">
+                    <input type="text" class="form-control mb-3" placeholder="(___)___-____" data-inputmask="'mask': '(999)999-9999'">
 
                   </div>
 
@@ -198,12 +198,12 @@
                   <div class="form-group">
 
                     <!-- Label -->
-                    <label>
+                    <label class="form-label">
                       Birthday
                     </label>
 
                     <!-- Input -->
-                    <input type="text" class="form-control" data-toggle="flatpickr">
+                    <input type="text" class="form-control" data-flatpickr>
 
                   </div>
 
@@ -238,9 +238,9 @@
                       <div class="col-auto">
 
                         <!-- Switch -->
-                        <div class="custom-control custom-switch">
-                          <input type="checkbox" class="custom-control-input" id="switchOne">
-                          <label class="custom-control-label" for="switchOne"></label>
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox" id="switchOne" />
+                          <label class="form-check-label" for="switchOne"></label>
                         </div>
 
                       </div>
@@ -275,9 +275,9 @@
                       <div class="col-auto">
 
                         <!-- Switch -->
-                        <div class="custom-control custom-switch">
-                          <input type="checkbox" class="custom-control-input" id="switchTwo" checked>
-                          <label class="custom-control-label" for="switchTwo"></label>
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox" id="switchTwo" checked />
+                          <label class="form-check-label" for="switchTwo"></label>
                         </div>
 
                       </div>

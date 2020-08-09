@@ -16,7 +16,7 @@
       {{#if demoMode}}
         {{> partials/topbar}}
       {{/if}}
-      
+
       {{#is navPosition 'combo'}}
         {{> partials/topbar}}
       {{/is}}
@@ -53,7 +53,7 @@
               <div class="form-group">
 
                 <!-- Label  -->
-                <label>
+                <label class="form-label">
                   Project name
                 </label>
 
@@ -66,7 +66,7 @@
               <div class="form-group">
 
                 <!-- Label -->
-                <label class="mb-1">
+                <label class="form-label mb-1">
                   Project description
                 </label>
 
@@ -76,7 +76,7 @@
                 </small>
 
                 <!-- Textarea -->
-                <div data-toggle="quill"></div>
+                <div data-quill></div>
 
               </div>
 
@@ -84,12 +84,12 @@
               <div class="form-group">
 
                 <!-- Label -->
-                <label>
+                <label class="form-label">
                   Project tags
                 </label>
 
                 <!-- Select -->
-                <select class="form-control" data-toggle="select" multiple>
+                <select class="form-control" data-choices='{"removeItemButton": true}' multiple>
                   <option>CSS</option>
                   <option>HTML</option>
                   <option>JavaScript</option>
@@ -105,12 +105,12 @@
                   <div class="form-group">
 
                     <!-- Label -->
-                    <label>
+                    <label class="form-label">
                       Start date
                     </label>
 
                     <!-- Input -->
-                    <input type="text" class="form-control" data-toggle="flatpickr">
+                    <input type="text" class="form-control" data-flatpickr>
 
                   </div>
 
@@ -121,12 +121,12 @@
                   <div class="form-group">
 
                     <!-- Label -->
-                    <label>
+                    <label class="form-label">
                       End date
                     </label>
 
                     <!-- Input -->
-                    <input type="text" class="form-control" data-toggle="flatpickr">
+                    <input type="text" class="form-control" data-flatpickr>
 
                   </div>
 
@@ -140,7 +140,7 @@
               <div class="form-group">
 
                 <!-- Label  -->
-                <label class="mb-1">
+                <label class="form-label mb-1">
                   Project cover
                 </label>
 
@@ -150,7 +150,7 @@
                 </small>
 
                 <!-- Dropzone -->
-                <div class="dropzone dropzone-single mb-3" data-toggle="dropzone" data-options='{"url": "https://", "maxFiles": 1, "acceptedFiles": "image/*"}'>
+                <div class="dropzone dropzone-single mb-3" data-dropzone='{"url": "https://", "maxFiles": 1, "acceptedFiles": "image/*"}'>
 
                   <!-- Fallback -->
                   <div class="fallback">
@@ -191,7 +191,7 @@
                   <div class="card-body">
 
                     <!-- Dropzone -->
-                    <div class="dropzone dropzone-multiple" data-toggle="dropzone" data-options='{"url": "https://"}'>
+                    <div class="dropzone dropzone-multiple" data-dropzone='{"url": "https://"}'>
 
                       <!-- Fallback -->
                       <div class="fallback">
@@ -262,7 +262,7 @@
                   <div class="form-group">
 
                     <!-- Label -->
-                    <label class="mb-1">
+                    <label class="form-label mb-1">
                       Private project
                     </label>
 
@@ -272,9 +272,9 @@
                     </small>
 
                     <!-- Switch -->
-                    <div class="custom-control custom-switch">
-                      <input type="checkbox" class="custom-control-input" id="switchOne">
-                      <label class="custom-control-label" for="switchOne"></label>
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" id="switchOne" />
+                      <label class="form-check-label" for="switchOne"></label>
                     </div>
 
                   </div>

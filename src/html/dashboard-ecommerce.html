@@ -12,11 +12,11 @@
 
     <!-- MAIN CONTENT -->
     <div class="main-content">
-      
+
       {{#if demoMode}}
         {{> partials/topbar}}
       {{/if}}
-      
+
       {{#is navPosition 'combo'}}
         {{> partials/topbar}}
       {{/is}}
@@ -114,9 +114,9 @@
                 </span>
 
                 <!-- Switch -->
-                <div class="custom-control custom-switch">
-                  <input type="checkbox" class="custom-control-input" id="cardToggle" data-toggle="chart" data-target="#ordersChart" data-trigger="change" data-action="add" data-dataset="1" />
-                  <label class="custom-control-label" for="cardToggle"></label>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" id="cardToggle" data-toggle="chart" data-target="#ordersChart" data-trigger="change" data-action="add" data-dataset="1" />
+                  <label class="form-check-label" for="cardToggle"></label>
                 </div>
 
               </div>

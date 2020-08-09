@@ -16,7 +16,7 @@
       {{#if demoMode}}
         {{> partials/topbar}}
       {{/if}}
-      
+
       {{#is navPosition 'combo'}}
         {{> partials/topbar}}
       {{/is}}
@@ -117,8 +117,8 @@
 
                 <!-- Select -->
                 <form class="mr-3">
-                  <select class="custom-select custom-select-sm form-control-flush" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
-                    <option value="asc" selected disabled>Sort order</option>
+                  <select class="form-select form-select-sm form-control-flush" data-choices='{"searchEnabled": false}'>
+                    <option value="" selected disabled>Sort order</option>
                     <option value="asc">Asc</option>
                     <option value="desc">Desc</option>
                   </select>
@@ -134,13 +134,16 @@
 
                 <!-- Form -->
                 <form>
-                  <div class="input-group input-group-flush input-group-merge">
-                    <input type="search" class="form-control form-control-prepended list-search" placeholder="Search">
-                    <div class="input-group-prepend">
-                      <div class="input-group-text">
-                        <span class="fe fe-search"></span>
-                      </div>
+                  <div class="input-group input-group-flush input-group-merge input-group-reverse">
+
+                    <!-- Input -->
+                    <input class="form-control list-search" type="search" placeholder="Search">
+
+                    <!-- Prepend -->
+                    <div class="input-group-text">
+                      <span class="fe fe-search"></span>
                     </div>
+
                   </div>
                 </form>
 

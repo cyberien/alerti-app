@@ -9,14 +9,14 @@
 
     <!-- NAVIGATION -->
     {{> partials/navigation category="pages" subcategory="team" page="team-overview.html"}}
-    
+
     <!-- MAIN CONTENT -->
     <div class="main-content">
 
       {{#if demoMode}}
         {{> partials/topbar}}
       {{/if}}
-      
+
       {{#is navPosition 'combo'}}
         {{> partials/topbar}}
       {{/is}}
@@ -111,13 +111,11 @@
                   <div class="input-group input-group-lg input-group-flush input-group-merge">
 
                     <!-- Input -->
-                    <input type="text" class="form-control form-control-appended" placeholder="Post to Project">
+                    <input type="text" class="form-control" placeholder="Post to Project">
 
                     <!-- Append -->
-                    <div class="input-group-append">
-                      <div class="input-group-text">
-                        <span class="fe fe-camera"></span>
-                      </div>
+                    <div class="input-group-text">
+                      <span class="fe fe-camera"></span>
                     </div>
 
                   </div>
@@ -356,7 +354,7 @@
                       <label class="sr-only">Leave a comment...</label>
 
                       <!-- Textarea -->
-                      <textarea class="form-control form-control-flush" data-toggle="autosize" rows="1" placeholder="Leave a comment"></textarea>
+                      <textarea class="form-control form-control-flush" data-autosize rows="1" placeholder="Leave a comment"></textarea>
 
                     </form>
 
@@ -612,7 +610,7 @@
                       <label class="sr-only">Leave a comment...</label>
 
                       <!-- Textarea -->
-                      <textarea class="form-control form-control-flush" data-toggle="autosize" rows="1" placeholder="Leave a comment"></textarea>
+                      <textarea class="form-control form-control-flush" data-autosize rows="1" placeholder="Leave a comment"></textarea>
 
                     </form>
 

@@ -16,7 +16,7 @@
       {{#if demoMode}}
         {{> partials/topbar}}
       {{/if}}
-      
+
       {{#is navPosition 'combo'}}
         {{> partials/topbar}}
       {{/is}}
@@ -109,16 +109,14 @@
 
               <!-- Form -->
               <form>
-                <div class="input-group input-group-lg input-group-merge">
+                <div class="input-group input-group-lg input-group-merge input-group-reverse">
 
                   <!-- Input -->
-                  <input type="text" class="form-control form-control-prepended list-search" placeholder="Search">
+                  <input class="form-control list-search" type="text" placeholder="Search">
 
                   <!-- Prepend -->
-                  <div class="input-group-prepend">
-                    <div class="input-group-text">
-                      <span class="fe fe-search"></span>
-                    </div>
+                  <div class="input-group-text">
+                    <span class="fe fe-search"></span>
                   </div>
 
                 </div>

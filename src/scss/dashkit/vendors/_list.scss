@@ -9,6 +9,10 @@
   @extend .page-link;
 }
 
+.list-pagination > li + li {
+  margin-left: -$pagination-border-width;
+}
+
 
 // Alert
 
