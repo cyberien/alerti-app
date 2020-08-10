@@ -67,19 +67,6 @@
 }
 
 
-// Table checkbox
-
-.table-checkbox {
-  min-height: 0;
-}
-
-.table-checkbox .custom-control-label::before,
-.table-checkbox .custom-control-label::after {
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-
 // Links
 
 .table a[class*="text-reset"]:hover {

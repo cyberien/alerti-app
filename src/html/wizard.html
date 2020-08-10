@@ -16,7 +16,7 @@
       {{#if demoMode}}
         {{> partials/topbar}}
       {{/if}}
-      
+
       {{#is navPosition 'combo'}}
         {{> partials/topbar}}
       {{/is}}
@@ -27,7 +27,7 @@
 
             <!-- Form -->
             <form class="tab-content py-6" id="wizardSteps">
-              <div class="tab-pane fade show active" id="wizardStepOne" role="tabpanel" aria-labelledby="wizardTabOne">
+              <div class="tab-pane fade" id="wizardStepOne" role="tabpanel" aria-labelledby="wizardTabOne">
 
                 <!-- Header -->
                 <div class="row justify-content-center">
@@ -55,7 +55,7 @@
                 <div class="form-group">
 
                   <!-- Label -->
-                  <label>
+                  <label class="form-label">
                     Team name
                   </label>
 
@@ -68,7 +68,7 @@
                 <div class="form-group">
 
                   <!-- Label -->
-                  <label class="mb-1">
+                  <label class="form-label mb-1">
                     Team description
                   </label>
 
@@ -78,7 +78,7 @@
                   </small>
 
                   <!-- Quill -->
-                  <div data-toggle="quill"></div>
+                  <div data-quill></div>
 
                 </div>
 
@@ -86,25 +86,41 @@
                 <div class="form-group">
 
                   <!-- Label -->
-                  <label>
+                  <label class="form-label">
                     Add team members
                   </label>
 
                   <!-- Select -->
-                  <select class="form-control" data-toggle="select" multiple>
-                    <option data-avatar-src="assets/img/avatars/profiles/avatar-1.jpg">
-                      Dianna Smiley
-                    </option>
-                    <option data-avatar-src="assets/img/avatars/profiles/avatar-2.jpg">
-                      Ab Hadley
-                    </option>
-                    <option data-avatar-src="assets/img/avatars/profiles/avatar-3.jpg">
-                      Adolfo Hess
-                    </option>
-                    <option data-avatar-src="assets/img/avatars/profiles/avatar-4.jpg">
-                      Daniela Dewitt
-                    </option>
-                  </select>
+                  <select class="form-select mb-3" data-choices='{"searchEnabled": false, "choices": [
+                    {
+                      "value": "Dianna Smiley",
+                      "label": "Dianna Smiley",
+                      "customProperties": {
+                        "avatarSrc": "../assets/img/avatars/profiles/avatar-1.jpg"
+                      }
+                    },
+                    {
+                      "value": "Ab Hadley",
+                      "label": "Ab Hadley",
+                      "customProperties": {
+                        "avatarSrc": "../assets/img/avatars/profiles/avatar-2.jpg"
+                      }
+                    },
+                    {
+                      "value": "Adolfo Hess",
+                      "label": "Adolfo Hess",
+                      "customProperties": {
+                        "avatarSrc": "../assets/img/avatars/profiles/avatar-3.jpg"
+                      }
+                    },
+                    {
+                      "value": "Daniela Dewitt",
+                      "label": "Daniela Dewitt",
+                      "customProperties": {
+                        "avatarSrc": "../assets/img/avatars/profiles/avatar-4.jpg"
+                      }
+                    }
+                  ]}'></select>
 
                 </div>
 
@@ -162,7 +178,7 @@
                 <div class="form-group">
 
                   <!-- Label -->
-                  <label class="mb-1">
+                  <label class="form-label mb-1">
                     Project cover
                   </label>
 
@@ -172,7 +188,7 @@
                   </small>
 
                   <!-- Dropzone -->
-                  <div class="dropzone dropzone-single mb-3" data-toggle="dropzone" data-options='{"url": "https://", "maxFiles": 1, "acceptedFiles": "image/*"}'>
+                  <div class="dropzone dropzone-single mb-3" data-dropzone='{"url": "https://", "maxFiles": 1, "acceptedFiles": "image/*"}'>
 
                     <!-- Fallback -->
                     <div class="fallback">
@@ -199,7 +215,7 @@
                 <div class="form-group">
 
                   <!-- Label -->
-                  <label class="mb-1">
+                  <label class="form-label mb-1">
                     Starting files
                   </label>
 
@@ -211,7 +227,7 @@
                   <!-- Card -->
                   <div class="card">
                     <div class="card-body">
-                      <div class="dropzone dropzone-multiple" data-toggle="dropzone" data-options='{"url": "https://"}'>
+                      <div class="dropzone dropzone-multiple" data-dropzone='{"url": "https://"}'>
 
                         <!-- Fallback -->
                         <div class="fallback">
@@ -297,7 +313,7 @@
                 </div>
 
               </div>
-              <div class="tab-pane fade" id="wizardStepThree" role="tabpanel" aria-labelledby="wizardTabThree">
+              <div class="tab-pane fade show active" id="wizardStepThree" role="tabpanel" aria-labelledby="wizardTabThree">
 
                 <!-- Header -->
                 <div class="row justify-content-center">
@@ -325,12 +341,12 @@
                 <div class="form-group">
 
                   <!-- Label -->
-                  <label>
+                  <label class="form-label">
                     Project tags
                   </label>
 
                   <!-- Select -->
-                  <select class="form-control" data-toggle="select" multiple>
+                  <select class="form-control" data-choices='{"removeItemButton": true}' multiple>
                     <option>CSS</option>
                     <option>HTML</option>
                     <option>JavaScript</option>
@@ -346,12 +362,12 @@
                     <div class="form-group">
 
                       <!-- Label -->
-                      <label>
+                      <label class="form-label">
                         Start date
                       </label>
 
                       <!-- Input -->
-                      <input type="text" class="form-control" data-toggle="flatpickr">
+                      <input type="text" class="form-control" data-flatpickr>
 
                     </div>
 
@@ -362,12 +378,12 @@
                     <div class="form-group">
 
                       <!-- Label -->
-                      <label>
+                      <label class="form-label">
                         End date
                       </label>
 
                       <!-- Input -->
-                      <input type="text" class="form-control" data-toggle="flatpickr">
+                      <input type="text" class="form-control" data-flatpickr>
 
                     </div>
 
@@ -384,7 +400,7 @@
                     <div class="form-group">
 
                       <!-- Label -->
-                      <label class="mb-1">
+                      <label class="form-label mb-1">
                         Private project
                       </label>
 
@@ -394,9 +410,9 @@
                       </small>
 
                       <!-- Switch -->
-                      <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="switchOne">
-                        <label class="custom-control-label" for="switchOne"></label>
+                      <div class="form-check form-switch">
+                        <input class="form-check-input" id="switchOne" type="checkbox">
+                        <label class="form-check-label" for="switchOne"></label>
                       </div>
 
                     </div>

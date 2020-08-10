@@ -23,12 +23,18 @@
   padding-bottom: $list-group-item-padding-y-lg;
 }
 
+
 // List group flush
 
 .list-group-flush > .list-group-item {
   padding-left: 0;
   padding-right: 0;
 }
+
+.list-group-flush:not(:last-child) > .list-group-item:last-child {
+  border-bottom-width: $list-group-border-width;
+}
+
 
 // List group focus
 

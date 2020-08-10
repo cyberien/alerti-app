@@ -11,6 +11,7 @@ const config = {
   entry: {
     libs: './src/scss/libs.scss',
     theme: ['./src/js/theme.js', './src/scss/theme.scss'],
+    'theme-dark': ['./src/scss/theme-dark.scss'],
     dashkit: './src/js/dashkit.js',
   },
   mode: 'development',

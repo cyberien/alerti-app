@@ -7,12 +7,9 @@
 {{#is navPosition 'sidenav || combo'}}
   {{#is sidebarSize 'base'}}
     {{> partials/sidebar category=category subcategory=subcategory page=page}}
-  {{/is}}
-  {{#is sidebarSize 'small'}}
+  {{else is sidebarSize 'small'}}
     {{> partials/sidebar-sm category=category subcategory=subcategory page="index.html"}}
   {{/is}}
-{{/is}}
-
-{{#is navPosition 'topnav'}}
+{{else is navPosition 'topnav'}}
   {{> partials/topnav category=category subcategory=subcategory page=page}}
 {{/is}}

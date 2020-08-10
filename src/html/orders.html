@@ -16,7 +16,7 @@
       {{#if demoMode}}
         {{> partials/topbar}}
       {{/if}}
-      
+
       {{#is navPosition 'combo'}}
         {{> partials/topbar}}
       {{/is}}
@@ -58,22 +58,22 @@
                     <ul class="nav nav-tabs nav-overflow header-tabs">
                       <li class="nav-item">
                         <a href="#!" class="nav-link active">
-                          All <span class="badge badge-pill badge-soft-secondary">823</span>
+                          All <span class="badge rounded-pill bg-soft-secondary">823</span>
                         </a>
                       </li>
                       <li class="nav-item">
                         <a href="#!" class="nav-link">
-                          Pending <span class="badge badge-pill badge-soft-secondary">24</span>
+                          Pending <span class="badge rounded-pill bg-soft-secondary">24</span>
                         </a>
                       </li>
                       <li class="nav-item">
                         <a href="#!" class="nav-link">
-                          Processing <span class="badge badge-pill badge-soft-secondary">3</span>
+                          Processing <span class="badge rounded-pill bg-soft-secondary">3</span>
                         </a>
                       </li>
                       <li class="nav-item">
                         <a href="#!" class="nav-link">
-                          Refunded <span class="badge badge-pill badge-soft-secondary">71</span>
+                          Refunded <span class="badge rounded-pill bg-soft-secondary">71</span>
                         </a>
                       </li>
                     </ul>
@@ -89,13 +89,11 @@
 
                 <!-- Search -->
                 <form>
-                  <div class="input-group input-group-flush">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text">
-                        <i class="fe fe-search"></i>
-                      </span>
-                    </div>
+                  <div class="input-group input-group-flush input-group-merge input-group-reverse">
                     <input class="form-control list-search" type="search" placeholder="Search">
+                    <span class="input-group-text">
+                      <i class="fe fe-search"></i>
+                    </span>
                   </div>
                 </form>
 
@@ -119,9 +117,9 @@
                       <th>
 
                         <!-- Checkbox -->
-                        <div class="custom-control custom-checkbox table-checkbox">
-                          <input type="checkbox" class="list-checkbox-all custom-control-input" name="ordersSelect" id="ordersSelectAll">
-                          <label class="custom-control-label" for="ordersSelectAll">&nbsp;</label>
+                        <div class="form-check mb-n2">
+                          <input class="form-check-input list-checkbox-all" name="ordersSelect" id="ordersSelectAll" type="checkbox">
+                          <label class="form-check-label" for="ordersSelectAll">&nbsp;</label>
                         </div>
 
                       </th>
@@ -162,9 +160,9 @@
                       <td>
 
                         <!-- Checkbox -->
-                        <div class="custom-control custom-checkbox table-checkbox">
-                          <input type="checkbox" class="list-checkbox custom-control-input" name="ordersSelect" id="ordersSelectOne">
-                          <label class="custom-control-label" for="ordersSelectOne">&nbsp;</label>
+                        <div class="form-check mb-n2">
+                          <input class="form-check-input list-checkbox" type="checkbox" name="ordersSelect" id="ordersSelectOne">
+                          <label class="form-check-label" for="ordersSelectOne">&nbsp;</label>
                         </div>
 
                       </td>
@@ -186,7 +184,7 @@
                       <td class="orders-status">
 
                         <!-- Badge -->
-                        <div class="badge badge-soft-success">
+                        <div class="badge bg-soft-success">
                           Shipped
                         </div>
 
@@ -220,9 +218,9 @@
                       <td>
 
                         <!-- Checkbox -->
-                        <div class="custom-control custom-checkbox table-checkbox">
-                          <input type="checkbox" class="list-checkbox custom-control-input" name="ordersSelect" id="ordersSelectOne">
-                          <label class="custom-control-label" for="ordersSelectOne">&nbsp;</label>
+                        <div class="form-check mb-n2">
+                          <input class="form-check-input list-checkbox" type="checkbox" name="ordersSelect" id="ordersSelectOne">
+                          <label class="form-check-label" for="ordersSelectOne">&nbsp;</label>
                         </div>
 
                       </td>
@@ -244,7 +242,7 @@
                       <td class="orders-status">
 
                         <!-- Badge -->
-                        <div class="badge badge-soft-success">
+                        <div class="badge bg-soft-success">
                           Shipped
                         </div>
 
@@ -278,9 +276,9 @@
                       <td>
 
                         <!-- Checkbox -->
-                        <div class="custom-control custom-checkbox table-checkbox">
-                          <input type="checkbox" class="list-checkbox custom-control-input" name="ordersSelect" id="ordersSelectOne">
-                          <label class="custom-control-label" for="ordersSelectOne">&nbsp;</label>
+                        <div class="form-check mb-n2">
+                          <input class="form-check-input list-checkbox" type="checkbox" name="ordersSelect" id="ordersSelectOne">
+                          <label class="form-check-label" for="ordersSelectOne">&nbsp;</label>
                         </div>
 
                       </td>
@@ -302,7 +300,7 @@
                       <td class="orders-sratus">
 
                         <!-- Badge -->
-                        <div class="badge badge-soft-warning">
+                        <div class="badge bg-soft-warning">
                           Processing
                         </div>
 
@@ -336,9 +334,9 @@
                       <td>
 
                         <!-- Checkbox -->
-                        <div class="custom-control custom-checkbox table-checkbox">
-                          <input type="checkbox" class="list-checkbox custom-control-input" name="ordersSelect" id="ordersSelectOne">
-                          <label class="custom-control-label" for="ordersSelectOne">&nbsp;</label>
+                        <div class="form-check mb-n2">
+                          <input class="form-check-input list-checkbox" type="checkbox" name="ordersSelect" id="ordersSelectOne">
+                          <label class="form-check-label" for="ordersSelectOne">&nbsp;</label>
                         </div>
 
                       </td>
@@ -360,7 +358,7 @@
                       <td class="orders-status">
 
                         <!-- Badge -->
-                        <div class="badge badge-soft-danger">
+                        <div class="badge bg-soft-danger">
                           Cancelled
                         </div>
 
@@ -394,9 +392,9 @@
                       <td>
 
                         <!-- Checkbox -->
-                        <div class="custom-control custom-checkbox table-checkbox">
-                          <input type="checkbox" class="list-checkbox custom-control-input" name="ordersSelect" id="ordersSelectOne">
-                          <label class="custom-control-label" for="ordersSelectOne">&nbsp;</label>
+                        <div class="form-check mb-n2">
+                          <input class="form-check-input list-checkbox" type="checkbox" name="ordersSelect" id="ordersSelectOne">
+                          <label class="form-check-label" for="ordersSelectOne">&nbsp;</label>
                         </div>
 
                       </td>
@@ -418,7 +416,7 @@
                       <td class="orders-status">
 
                         <!-- Badge -->
-                        <div class="badge badge-soft-success">
+                        <div class="badge bg-soft-success">
                           Shipped
                         </div>
 
@@ -452,9 +450,9 @@
                       <td>
 
                         <!-- Checkbox -->
-                        <div class="custom-control custom-checkbox table-checkbox">
-                          <input type="checkbox" class="list-checkbox custom-control-input" name="ordersSelect" id="ordersSelectOne">
-                          <label class="custom-control-label" for="ordersSelectOne">&nbsp;</label>
+                        <div class="form-check mb-n2">
+                          <input class="form-check-input list-checkbox" type="checkbox" name="ordersSelect" id="ordersSelectOne">
+                          <label class="form-check-label" for="ordersSelectOne">&nbsp;</label>
                         </div>
 
                       </td>
@@ -476,7 +474,7 @@
                       <td class="orders-status">
 
                         <!-- Badge -->
-                        <div class="badge badge-soft-success">
+                        <div class="badge bg-soft-success">
                           Shipped
                         </div>
 
@@ -510,9 +508,9 @@
                       <td>
 
                         <!-- Checkbox -->
-                        <div class="custom-control custom-checkbox table-checkbox">
-                          <input type="checkbox" class="list-checkbox custom-control-input" name="ordersSelect" id="ordersSelectOne">
-                          <label class="custom-control-label" for="ordersSelectOne">&nbsp;</label>
+                        <div class="form-check mb-n2">
+                          <input class="form-check-input list-checkbox" type="checkbox" name="ordersSelect" id="ordersSelectOne">
+                          <label class="form-check-label" for="ordersSelectOne">&nbsp;</label>
                         </div>
 
                       </td>
@@ -534,7 +532,7 @@
                       <td class="orders-status">
 
                         <!-- Badge -->
-                        <div class="badge badge-soft-warning">
+                        <div class="badge bg-soft-warning">
                           Processing
                         </div>
 
@@ -568,9 +566,9 @@
                       <td>
 
                         <!-- Checkbox -->
-                        <div class="custom-control custom-checkbox table-checkbox">
-                          <input type="checkbox" class="list-checkbox custom-control-input" name="ordersSelect" id="ordersSelectOne">
-                          <label class="custom-control-label" for="ordersSelectOne">&nbsp;</label>
+                        <div class="form-check mb-n2">
+                          <input class="form-check-input list-checkbox" type="checkbox" name="ordersSelect" id="ordersSelectOne">
+                          <label class="form-check-label" for="ordersSelectOne">&nbsp;</label>
                         </div>
 
                       </td>
@@ -592,7 +590,7 @@
                       <td class="orders-sratus">
 
                         <!-- Badge -->
-                        <div class="badge badge-soft-success">
+                        <div class="badge bg-soft-success">
                           Shipped
                         </div>
 

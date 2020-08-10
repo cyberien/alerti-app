@@ -1,18 +1,22 @@
 //
 // wizard.js
-// 
+// Dashkit module
+//
 
-'use strict';
+import { Tab } from 'bootstrap';
 
-(function() {
-  var toggles = document.querySelectorAll('[data-toggle="wizard"]');
+const toggles = document.querySelectorAll('[data-toggle="wizard"]');
 
-  [].forEach.call(toggles, function(toggle) {
-    toggle.addEventListener('click', function(e) {
-      e.preventDefault();
+toggles.forEach(toggle => {
+  toggle.addEventListener('click', function(e) {
+    e.preventDefault();
 
-      // Toggle tab
-      $(toggle).tab('show').removeClass('active');
-    });
+    // Toggle new tab
+    const tab = new Tab(toggle);
+
+    tab.show();
+
+    // Remove active state
+    toggle.classList.remove('active');
   });
-})();
+});

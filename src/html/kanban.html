@@ -68,7 +68,7 @@
       <!-- CONTENT -->
       <div class="tab-content">
         <div class="tab-pane fade show active" id="kanbanColumns" role="tabpanel" aria-labelledby="kanbanColumnsToggle">
-          <div class="@@if(navPosition=='sidenav'||navPosition=='combo'){container-fluid kanban-container}@@if(navPosition=='topnav'){container kanban-container}">
+          <div class="{{#is navPosition 'sidenav || combo'}}container-fluid{{else is navPosition 'topnav'}}container{{/is}} kanban-container">
             <div class="row">
               <div class="col-12">
 
@@ -219,7 +219,7 @@
                                 </span>
 
                                 <!-- Input -->
-                                <input type="text" class="form-control form-control-sm form-control-flush form-control-auto" text-muted" data-toggle="flatpickr" data-options='{"dateFormat": "M j"}' placeholder="No due date">
+                                <input type="text" class="form-control form-control-sm form-control-flush form-control-auto" text-muted data-flatpickr data-options='{"dateFormat": "M j"}' placeholder="No due date">
 
                               </div>
                               <div class="col-auto">
@@ -371,7 +371,7 @@
 
                             <!-- Badge -->
                             <p class="mb-3">
-                              <span class="badge badge-soft-success">
+                              <span class="badge bg-soft-success">
                                 Reviewed
                               </span>
                             </p>
@@ -451,7 +451,7 @@
                                 </span>
 
                                 <!-- Input -->
-                                <input type="text" class="form-control form-control-sm form-control-flush form-control-auto" text-muted" data-toggle="flatpickr" data-options='{"dateFormat": "M j"}' placeholder="No due date">
+                                <input type="text" class="form-control form-control-sm form-control-flush form-control-auto" text-muted" data-flatpickr data-options='{"dateFormat": "M j"}' placeholder="No due date">
 
                               </div>
                               <div class="col-auto">
@@ -690,7 +690,7 @@
                                 </span>
 
                                 <!-- Input -->
-                                <input type="text" class="form-control form-control-sm form-control-flush form-control-auto" text-muted" data-toggle="flatpickr" data-options='{"dateFormat": "M j"}' placeholder="No due date">
+                                <input type="text" class="form-control form-control-sm form-control-flush form-control-auto" text-muted" data-flatpickr data-options='{"dateFormat": "M j"}' placeholder="No due date">
 
                               </div>
                               <div class="col-auto">
@@ -842,7 +842,7 @@
 
                             <!-- Badge -->
                             <p class="mb-3">
-                              <span class="badge badge-soft-success">
+                              <span class="badge bg-soft-success">
                                 Reviewed
                               </span>
                             </p>
@@ -922,7 +922,7 @@
                                 </span>
 
                                 <!-- Input -->
-                                <input type="text" class="form-control form-control-sm form-control-flush form-control-auto" text-muted" data-toggle="flatpickr" data-options='{"dateFormat": "M j"}' placeholder="No due date">
+                                <input type="text" class="form-control form-control-sm form-control-flush form-control-auto" text-muted" data-flatpickr data-options='{"dateFormat": "M j"}' placeholder="No due date">
 
                               </div>
                               <div class="col-auto">
@@ -1137,7 +1137,7 @@
                                 </span>
 
                                 <!-- Input -->
-                                <input type="text" class="form-control form-control-sm form-control-flush form-control-auto text-muted" data-toggle="flatpickr" data-options='{"dateFormat": "M j"}' placeholder="No due date">
+                                <input type="text" class="form-control form-control-sm form-control-flush form-control-auto text-muted" data-flatpickr data-options='{"dateFormat": "M j"}' placeholder="No due date">
 
                               </div>
                               <div class="col-6 col-md-auto">
@@ -1277,7 +1277,7 @@
                       <div class="kanban-item">
                         <div class="card card-sm mb-3" data-toggle="modal" data-target="#modalKanbanTaskEmpty">
                           <div class="card-body">
-                            <span class="badge badge-soft-success mr-2">Reviewed</span> Clear all the deprecation warnings for out of date NPM packages
+                            <span class="badge bg-soft-success mr-2">Reviewed</span> Clear all the deprecation warnings for out of date NPM packages
                           </div>
                         </div>
                       </div>
@@ -1345,7 +1345,7 @@
                                 </span>
 
                                 <!-- Input -->
-                                <input type="text" class="form-control form-control-sm form-control-flush form-control-auto" text-muted" data-toggle="flatpickr" data-options='{"dateFormat": "M j"}' placeholder="No due date">
+                                <input type="text" class="form-control form-control-sm form-control-flush form-control-auto" text-muted" data-flatpickr data-options='{"dateFormat": "M j"}' placeholder="No due date">
 
                               </div>
                               <div class="col-6 col-md-auto">
@@ -1572,7 +1572,7 @@
                                 </span>
 
                                 <!-- Input -->
-                                <input type="text" class="form-control form-control-sm form-control-flush form-control-auto" text-muted" data-toggle="flatpickr" data-options='{"dateFormat": "M j"}' placeholder="No due date">
+                                <input type="text" class="form-control form-control-sm form-control-flush form-control-auto" text-muted" data-flatpickr data-options='{"dateFormat": "M j"}' placeholder="No due date">
 
                               </div>
                               <div class="col-6 col-md-auto">

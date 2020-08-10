@@ -6,7 +6,11 @@
 <link rel="stylesheet" href="{{webRoot}}/assets/css/libs.bundle.css" />
 
 <!-- Theme CSS -->
+{{#is colorScheme 'light'}}
 <link rel="stylesheet" href="{{webRoot}}/assets/css/theme.bundle.css" />
+{{else is colorScheme 'dark'}}
+<link rel="stylesheet" href="{{webRoot}}/assets/css/theme-dark.bundle.css" />
+{{/is}}
 
 <!-- Map CSS -->
 <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css" />

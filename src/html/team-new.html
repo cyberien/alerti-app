@@ -53,7 +53,7 @@
               <div class="form-group">
 
                 <!-- Label -->
-                <label>
+                <label class="form-label">
                   Team name
                 </label>
 
@@ -66,7 +66,7 @@
               <div class="form-group">
 
                 <!-- Label -->
-                <label class="mb-1">
+                <label class="form-label mb-1">
                   Team description
                 </label>
 
@@ -76,7 +76,7 @@
                 </small>
 
                 <!-- Textarea -->
-                <div data-toggle="quill"></div>
+                <div data-quill></div>
 
               </div>
 
@@ -84,12 +84,12 @@
               <div class="form-group">
 
                 <!-- Label -->
-                <label>
+                <label class="form-label">
                   Add team members
                 </label>
 
                 <!-- Select -->
-                <select class="form-control" data-toggle="select" multiple>
+                <select class="form-control" data-choices='{"removeItemButton": true}' multiple>
                   <option data-avatar-src="assets/img/avatars/profiles/avatar-1.jpg">
                     Dianna Smiley
                   </option>
@@ -113,7 +113,7 @@
               <div class="form-group">
 
                 <!-- Label -->
-                <label class="mb-1">
+                <label class="form-label mb-1">
                   Team cover
                 </label>
 
@@ -123,7 +123,7 @@
                 </small>
 
                 <!-- Dropzone -->
-                <div class="dropzone dropzone-single mb-3" data-toggle="dropzone" data-options='{"url": "https://", "maxFiles": 1, "acceptedFiles": "image/*"}'>
+                <div class="dropzone dropzone-single mb-3" data-dropzone='{"url": "https://", "maxFiles": 1, "acceptedFiles": "image/*"}'>
 
                   <!-- Fallback -->
                   <div class="fallback">
@@ -153,7 +153,7 @@
                   <div class="form-group">
 
                     <!-- Label -->
-                    <label class="mb-1">
+                    <label class="form-label mb-1">
                       Private team
                     </label>
 
@@ -163,9 +163,9 @@
                     </small>
 
                     <!-- SWitch -->
-                    <div class="custom-control custom-switch">
-                      <input type="checkbox" class="custom-control-input" id="switchOne">
-                      <label class="custom-control-label" for="switchOne"></label>
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" id="switchOne" type="checkbox">
+                      <label class="form-check-label" for="switchOne"></label>
                     </div>
 
                   </div>

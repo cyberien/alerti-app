@@ -112,7 +112,7 @@
   padding-right: .375rem;
   padding-left: .375rem;
   font-size: $font-size-sm;
-  background-color: $gray-200;
+  background-color: $light;
   border-radius: $border-radius-xs;
 }
 
@@ -122,6 +122,7 @@
   padding: 0;
   outline: none;
   border-width: 0;
+  background-color: transparent;
   background-repeat: no-repeat;
   background-position: center center;
   background-image: url(escape-svg("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='#{$body-color}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='18' y1='6' x2='6' y2='18'></line><line x1='6' y1='6' x2='18' y2='18'></line></svg>"));

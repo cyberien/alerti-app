@@ -16,3 +16,4 @@ import './map';
 import './popover';
 import './tooltip';
 import './quill';
+import './wizard';

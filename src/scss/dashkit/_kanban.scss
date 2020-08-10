@@ -63,6 +63,6 @@
 
 // Add form
 
-.kanban-add-form .form-control[data-toggle="flatpickr"] {
+.kanban-add-form .form-control[data-flatpickr] {
   width: 12ch; // there is no CSS way to set input's width to auto so hardcoding this value
 }

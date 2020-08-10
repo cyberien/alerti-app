@@ -167,6 +167,11 @@ $link-hover-decoration: none !default;
 $grid-gutter-width: 1.5rem !default;
 
 
+// Container padding
+
+$container-padding-x: $grid-gutter-width / 2 !default;
+
+
 // Components
 //
 // Define common padding and border radius sizes and more.
@@ -236,7 +241,7 @@ $text-muted: $gray-600 !default;
 $blockquote-font-size: ($font-size-base * 1.25) !default;
 
 $hr-margin-y: 1rem !default;
-$hr-color: $gray-300 !default;
+$hr-color: $border-color !default;
 $hr-opacity: 1 !default;
 
 $list-inline-padding: 6px !default;
@@ -340,6 +345,7 @@ $input-height-inner-sm: ($font-size-sm * $input-btn-line-height-sm) + ($input-bt
 $form-check-input-active-filter: none !default;
 
 $form-check-padding-left: 1.5rem !default;
+$form-check-label-cursor: pointer !default;
 
 $form-check-input-bg: $gray-300 !default;
 $form-check-input-border: transparent !default;
@@ -624,15 +630,17 @@ $btn-text-color: $white !default;
 
 $form-text-margin-bottom: .5rem !default;
 
-$form-control-circle-indicator-size: 1.375rem !default;
-$form-control-circle-indicator-border-radius: 50% !default;
-$form-control-circle-indicator-icon-checked: url(escape-svg("data:image/svg+xml,<svg viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M11.3333 1L3.99996 8.33333L0.666626 5' stroke='#{$white}' stroke-width='1.33333' stroke-linecap='round' stroke-linejoin='round'/></svg>")) !default;
-$form-control-circle-indicator-bg-size: .75rem .5625rem !default;
-
 $form-check-size: 1rem !default; // using this instead of $form-check-input-width because of the units incompatibility bug
 $form-check-input-focus-bg: lighten($primary, 35%) !default;
+$form-check-input-checked-bg-size: 75% 75% !default;
 
 $form-switch-min-height: 1.5rem !default;
+
+$form-check-circle-indicator-size: 1.375rem !default;
+$form-check-circle-indicator-border-radius: 50% !default;
+$form-check-circle-indicator-icon-checked: url(escape-svg("data:image/svg+xml,<svg viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M11.3333 1L3.99996 8.33333L0.666626 5' stroke='#{$white}' stroke-width='1.33333' stroke-linecap='round' stroke-linejoin='round'/></svg>")) !default;
+$form-check-circle-indicator-bg-size: .75rem .5625rem !default;
+$form-check-circle-padding-left: 1.875rem !default;
 
 $form-group-margin-bottom: 1.375rem !default;
 
@@ -757,7 +765,7 @@ $list-group-item-padding-y-lg: $spacer !default;
 // Badges
 
 $badge-soft-bg-level: -10 !default;
-$badge-pill-padding-x: .6em !default;
+$rounded-pill-padding-x: .6em !default;
 
 
 // Modal
@@ -941,9 +949,12 @@ $utilities: (
   "border-color": (
     property: border-color,
     class: border,
-    values: (
-      "body": $body-bg,
-      "card": $card-bg,
+    values: map-merge(
+      $theme-colors, (
+        "white": $white,
+        "body": $body-bg,
+        "card": $card-bg
+      )
     )
   ),
   "font-size": (

@@ -16,7 +16,7 @@
       {{#if demoMode}}
         {{> partials/topbar}}
       {{/if}}
-      
+
       {{#is navPosition 'combo'}}
         {{> partials/topbar}}
       {{/is}}
@@ -68,17 +68,17 @@
                     <ul class="nav nav-tabs nav-overflow header-tabs">
                       <li class="nav-item">
                         <a href="#!" class="nav-link text-nowrap active">
-                          All companies <span class="badge badge-pill badge-soft-secondary">627</span>
+                          All companies <span class="badge rounded-pill bg-soft-secondary">627</span>
                         </a>
                       </li>
                       <li class="nav-item">
                         <a href="#!" class="nav-link text-nowrap">
-                          Your companies <span class="badge badge-pill badge-soft-secondary">198</span>
+                          Your companies <span class="badge rounded-pill bg-soft-secondary">198</span>
                         </a>
                       </li>
                       <li class="nav-item">
                         <a href="#!" class="nav-link text-nowrap">
-                          Deleted <span class="badge badge-pill badge-soft-secondary">29</span>
+                          Deleted <span class="badge rounded-pill bg-soft-secondary">29</span>
                         </a>
                       </li>
                     </ul>
@@ -100,13 +100,11 @@
 
                         <!-- Form -->
                         <form>
-                          <div class="input-group input-group-flush">
-                            <div class="input-group-prepend">
-                              <span class="input-group-text">
-                                <i class="fe fe-search"></i>
-                              </span>
-                            </div>
-                            <input class="list-search form-control" type="search" placeholder="Search">
+                          <div class="input-group input-group-flush input-group-merge input-group-reverse">
+                            <input class="form-control list-search" type="search" placeholder="Search">
+                            <span class="input-group-text">
+                              <i class="fe fe-search"></i>
+                            </span>
                           </div>
                         </form>
 
@@ -115,10 +113,10 @@
 
                         <!-- Select -->
                         <form>
-                          <select class="custom-select custom-select-sm form-control-flush" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
-                            <option value="5" selected>5 per page</option>
-                            <option value="10">10 per page</option>
-                            <option value="*">All</option>
+                          <select class="form-select form-select-sm form-control-flush" data-choices='{"searchEnabled": false}'>
+                            <option selected>5 per page</option>
+                            <option>10 per page</option>
+                            <option>All</option>
                           </select>
                         </form>
 
@@ -130,7 +128,7 @@
 
                           <!-- Toggle -->
                           <button class="btn btn-sm btn-white" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fe fe-sliders mr-1"></i> Filter <span class="badge badge-primary ml-1">1</span>
+                            <i class="fe fe-sliders mr-1"></i> Filter <span class="badge bg-primary ml-1">1</span>
                           </button>
 
                           <!-- Menu -->
@@ -163,7 +161,7 @@
                                     <div class="col-auto">
 
                                       <!-- Select -->
-                                      <select class="custom-select custom-select-sm" name="item-title" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
+                                      <select class="form-select form-select-sm" name="item-title" data-choices='{"searchEnabled": false}'>
                                         <option value="*">Any</option>
                                         <option value="Designer" selected>Designer</option>
                                         <option value="Developer">Developer</option>
@@ -185,7 +183,7 @@
                                     <div class="col-auto">
 
                                       <!-- Select -->
-                                      <select class="custom-select custom-select-sm" name="item-score" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
+                                      <select class="form-select form-select-sm" name="item-score" data-choices='{"searchEnabled": false}'>
                                         <option value="*" selected>Any</option>
                                         <option value="1/10">1+</option>
                                         <option value="2/10">2+</option>
@@ -224,9 +222,9 @@
                           <th>
 
                             <!-- Checkbox -->
-                            <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="list-checkbox-all custom-control-input" id="listCheckboxAll">
-                              <label class="custom-control-label" for="listCheckboxAll"></label>
+                            <div class="form-check mb-n2">
+                              <input class="form-check-input list-checkbox-all" type="checkbox" id="listCheckboxAll">
+                              <label class="form-check-label" for="listCheckboxAll"></label>
                             </div>
 
                           </th>
@@ -252,9 +250,9 @@
                           <td>
 
                             <!-- Checkbox -->
-                            <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="list-checkbox custom-control-input" id="listCheckboxOne">
-                              <label class="custom-control-label" for="listCheckboxOne"></label>
+                            <div class="form-check">
+                              <input class="form-check-input list-checkbox" type="checkbox" id="listCheckboxOne">
+                              <label class="form-check-label" for="listCheckboxOne"></label>
                             </div>
 
                           </td>
@@ -318,9 +316,9 @@
                           <td>
 
                             <!-- Checkbox -->
-                            <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="list-checkbox custom-control-input" id="listCheckboxTwo">
-                              <label class="custom-control-label" for="listCheckboxTwo"></label>
+                            <div class="form-check">
+                              <input class="form-check-input list-checkbox" type="checkbox" id="listCheckboxTwo">
+                              <label class="form-check-label" for="listCheckboxTwo"></label>
                             </div>
 
                           </td>
@@ -384,9 +382,9 @@
                           <td>
 
                             <!-- Checkbox -->
-                            <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="list-checkbox custom-control-input" id="listCheckboxThree">
-                              <label class="custom-control-label" for="listCheckboxThree"></label>
+                            <div class="form-check">
+                              <input class="form-check-input list-checkbox" type="checkbox" id="listCheckboxThree">
+                              <label class="form-check-label" for="listCheckboxThree"></label>
                             </div>
 
                           </td>
@@ -450,9 +448,9 @@
                           <td>
 
                             <!-- Checkbox -->
-                            <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="list-checkbox custom-control-input" id="listCheckboxFour">
-                              <label class="custom-control-label" for="listCheckboxFour"></label>
+                            <div class="form-check">
+                              <input class="form-check-input list-checkbox" type="checkbox" id="listCheckboxFour">
+                              <label class="form-check-label" for="listCheckboxFour"></label>
                             </div>
 
                           </td>
@@ -516,9 +514,9 @@
                           <td>
 
                             <!-- Checkbox -->
-                            <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="list-checkbox custom-control-input" id="listCheckboxFive">
-                              <label class="custom-control-label" for="listCheckboxFive"></label>
+                            <div class="form-check">
+                              <input class="form-check-input list-checkbox" type="checkbox" id="listCheckboxFive">
+                              <label class="form-check-label" for="listCheckboxFive"></label>
                             </div>
 
                           </td>
@@ -582,9 +580,9 @@
                           <td>
 
                             <!-- Checkbox -->
-                            <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="list-checkbox custom-control-input" id="listCheckboxSix">
-                              <label class="custom-control-label" for="listCheckboxSix"></label>
+                            <div class="form-check">
+                              <input class="form-check-input list-checkbox" type="checkbox" id="listCheckboxSix">
+                              <label class="form-check-label" for="listCheckboxSix"></label>
                             </div>
 
                           </td>
@@ -648,9 +646,9 @@
                           <td>
 
                             <!-- Checkbox -->
-                            <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="list-checkbox custom-control-input" id="listCheckboxSeven">
-                              <label class="custom-control-label" for="listCheckboxSeven"></label>
+                            <div class="form-check">
+                              <input class="form-check-input list-checkbox" type="checkbox" id="listCheckboxSeven">
+                              <label class="form-check-label" for="listCheckboxSeven"></label>
                             </div>
 
                           </td>
@@ -714,9 +712,9 @@
                           <td>
 
                             <!-- Checkbox -->
-                            <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="list-checkbox custom-control-input" id="listCheckboxEight">
-                              <label class="custom-control-label" for="listCheckboxEight"></label>
+                            <div class="form-check">
+                              <input class="form-check-input list-checkbox" type="checkbox" id="listCheckboxEight">
+                              <label class="form-check-label" for="listCheckboxEight"></label>
                             </div>
 
                           </td>
@@ -780,9 +778,9 @@
                           <td>
 
                             <!-- Checkbox -->
-                            <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="list-checkbox custom-control-input" id="listCheckboxNine">
-                              <label class="custom-control-label" for="listCheckboxNine"></label>
+                            <div class="form-check">
+                              <input class="form-check-input list-checkbox" type="checkbox" id="listCheckboxNine">
+                              <label class="form-check-label" for="listCheckboxNine"></label>
                             </div>
 
                           </td>
@@ -846,9 +844,9 @@
                           <td>
 
                             <!-- Checkbox -->
-                            <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="list-checkbox custom-control-input" id="listCheckboxTen">
-                              <label class="custom-control-label" for="listCheckboxTen"></label>
+                            <div class="form-check">
+                              <input class="form-check-input list-checkbox" type="checkbox" id="listCheckboxTen">
+                              <label class="form-check-label" for="listCheckboxTen"></label>
                             </div>
 
                           </td>
@@ -912,9 +910,9 @@
                           <td>
 
                             <!-- Checkbox -->
-                            <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="list-checkbox custom-control-input" id="listCheckboxEleven">
-                              <label class="custom-control-label" for="listCheckboxEleven"></label>
+                            <div class="form-check">
+                              <input class="form-check-input list-checkbox" type="checkbox" id="listCheckboxEleven">
+                              <label class="form-check-label" for="listCheckboxEleven"></label>
                             </div>
 
                           </td>
@@ -978,9 +976,9 @@
                           <td>
 
                             <!-- Checkbox -->
-                            <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="list-checkbox custom-control-input" id="listCheckboxTwelve">
-                              <label class="custom-control-label" for="listCheckboxTwelve"></label>
+                            <div class="form-check">
+                              <input class="form-check-input list-checkbox" type="checkbox" id="listCheckboxTwelve">
+                              <label class="form-check-label" for="listCheckboxTwelve"></label>
                             </div>
 
                           </td>
@@ -1044,9 +1042,9 @@
                           <td>
 
                             <!-- Checkbox -->
-                            <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="list-checkbox custom-control-input" id="listCheckboxThirteen">
-                              <label class="custom-control-label" for="listCheckboxThirteen"></label>
+                            <div class="form-check">
+                              <input class="form-check-input list-checkbox" type="checkbox" id="listCheckboxThirteen">
+                              <label class="form-check-label" for="listCheckboxThirteen"></label>
                             </div>
 
                           </td>
@@ -1110,9 +1108,9 @@
                           <td>
 
                             <!-- Checkbox -->
-                            <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="list-checkbox custom-control-input" id="listCheckboxFourteen">
-                              <label class="custom-control-label" for="listCheckboxFourteen"></label>
+                            <div class="form-check">
+                              <input class="form-check-input list-checkbox" type="checkbox" id="listCheckboxFourteen">
+                              <label class="form-check-label" for="listCheckboxFourteen"></label>
                             </div>
 
                           </td>
@@ -1176,9 +1174,9 @@
                           <td>
 
                             <!-- Checkbox -->
-                            <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="list-checkbox custom-control-input" id="listCheckboxFifteen">
-                              <label class="custom-control-label" for="listCheckboxFifteen"></label>
+                            <div class="form-check">
+                              <input class="form-check-input list-checkbox" type="checkbox" id="listCheckboxFifteen">
+                              <label class="form-check-label" for="listCheckboxFifteen"></label>
                             </div>
 
                           </td>
@@ -1242,9 +1240,9 @@
                           <td>
 
                             <!-- Checkbox -->
-                            <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="list-checkbox custom-control-input" id="listCheckboxSixteen">
-                              <label class="custom-control-label" for="listCheckboxSixteen"></label>
+                            <div class="form-check">
+                              <input class="form-check-input list-checkbox" type="checkbox" id="listCheckboxSixteen">
+                              <label class="form-check-label" for="listCheckboxSixteen"></label>
                             </div>
 
                           </td>
@@ -1308,9 +1306,9 @@
                           <td>
 
                             <!-- Checkbox -->
-                            <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="list-checkbox custom-control-input" id="listCheckboxSeventeen">
-                              <label class="custom-control-label" for="listCheckboxSeventeen"></label>
+                            <div class="form-check">
+                              <input class="form-check-input list-checkbox" type="checkbox" id="listCheckboxSeventeen">
+                              <label class="form-check-label" for="listCheckboxSeventeen"></label>
                             </div>
 
                           </td>
@@ -1374,9 +1372,9 @@
                           <td>
 
                             <!-- Checkbox -->
-                            <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="list-checkbox custom-control-input" id="listCheckboxEighteen">
-                              <label class="custom-control-label" for="listCheckboxEighteen"></label>
+                            <div class="form-check">
+                              <input class="form-check-input list-checkbox" type="checkbox" id="listCheckboxEighteen">
+                              <label class="form-check-label" for="listCheckboxEighteen"></label>
                             </div>
 
                           </td>
@@ -1440,9 +1438,9 @@
                           <td>
 
                             <!-- Checkbox -->
-                            <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="list-checkbox custom-control-input" id="listCheckboxNineteen">
-                              <label class="custom-control-label" for="listCheckboxNineteen"></label>
+                            <div class="form-check">
+                              <input class="form-check-input list-checkbox" type="checkbox" id="listCheckboxNineteen">
+                              <label class="form-check-label" for="listCheckboxNineteen"></label>
                             </div>
 
                           </td>
@@ -1506,9 +1504,9 @@
                           <td>
 
                             <!-- Checkbox -->
-                            <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="list-checkbox custom-control-input" id="listCheckboxTwenty">
-                              <label class="custom-control-label" for="listCheckboxTwenty"></label>
+                            <div class="form-check">
+                              <input class="form-check-input list-checkbox" type="checkbox" id="listCheckboxTwenty">
+                              <label class="form-check-label" for="listCheckboxTwenty"></label>
                             </div>
 
                           </td>
@@ -1572,9 +1570,9 @@
                           <td>
 
                             <!-- Checkbox -->
-                            <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="list-checkbox custom-control-input" id="listCheckboxTwentyOne">
-                              <label class="custom-control-label" for="listCheckboxTwentyOne"></label>
+                            <div class="form-check">
+                              <input class="form-check-input list-checkbox" type="checkbox" id="listCheckboxTwentyOne">
+                              <label class="form-check-label" for="listCheckboxTwentyOne"></label>
                             </div>
 
                           </td>
@@ -1638,9 +1636,9 @@
                           <td>
 
                             <!-- Checkbox -->
-                            <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="list-checkbox custom-control-input" id="listCheckboxTwentyTwo">
-                              <label class="custom-control-label" for="listCheckboxTwentyTwo"></label>
+                            <div class="form-check">
+                              <input class="form-check-input list-checkbox" type="checkbox" id="listCheckboxTwentyTwo">
+                              <label class="form-check-label" for="listCheckboxTwentyTwo"></label>
                             </div>
 
                           </td>
@@ -1704,9 +1702,9 @@
                           <td>
 
                             <!-- Checkbox -->
-                            <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="list-checkbox custom-control-input" id="listCheckboxTwentyThree">
-                              <label class="custom-control-label" for="listCheckboxTwentyThree"></label>
+                            <div class="form-check">
+                              <input class="form-check-input list-checkbox" type="checkbox" id="listCheckboxTwentyThree">
+                              <label class="form-check-label" for="listCheckboxTwentyThree"></label>
                             </div>
 
                           </td>
@@ -1770,9 +1768,9 @@
                           <td>
 
                             <!-- Checkbox -->
-                            <div class="custom-control custom-checkbox">
-                              <input type="checkbox" class="list-checkbox custom-control-input" id="listCheckboxTwentyFour">
-                              <label class="custom-control-label" for="listCheckboxTwentyFour"></label>
+                            <div class="form-check">
+                              <input class="form-check-input list-checkbox" type="checkbox" id="listCheckboxTwentyFour">
+                              <label class="form-check-label" for="listCheckboxTwentyFour"></label>
                             </div>
 
                           </td>
@@ -1866,9 +1864,11 @@
                         <div class="col">
 
                           <!-- Checkbox -->
-                          <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="cardAlertCheckbox" checked disabled>
-                            <label class="custom-control-label text-white" for="cardAlertCheckbox"><span class="list-alert-count">0</span> deal(s)</label>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="cardAlertCheckbox" checked disabled>
+                            <label class="form-check-label text-white" for="cardAlertCheckbox">
+                              <span class="list-alert-count">0</span> deal(s)
+                            </label>
                           </div>
 
                         </div>
@@ -1909,12 +1909,10 @@
 
                       <!-- Form -->
                       <form>
-                        <div class="input-group input-group-lg input-group-merge">
-                          <input class="list-search form-control form-control-prepended" type="search" placeholder="Search">
-                          <div class="input-group-prepend">
-                            <div class="input-group-text">
-                              <span class="fe fe-search"></span>
-                            </div>
+                        <div class="input-group input-group-lg input-group-merge input-group-reverse">
+                          <input class="form-control list-search" type="search" placeholder="Search">
+                          <div class="input-group-text">
+                            <span class="fe fe-search"></span>
                           </div>
                         </div>
                       </form>
@@ -1924,9 +1922,9 @@
 
                       <!-- Select -->
                       <form>
-                        <select class="custom-select custom-select-sm form-control-flush" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
-                          <option value="1" selected>9 per page</option>
-                          <option value="5">All</option>
+                        <select class="form-select form-select-sm form-control-flush" data-choices='{"searchEnabled": false}'>
+                          <option selected>9 per page</option>
+                          <option>All</option>
                         </select>
                       </form>
 
@@ -1938,7 +1936,7 @@
 
                         <!-- Toggle -->
                         <button class="btn btn-sm btn-white" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <i class="fe fe-sliders mr-1"></i> Filter <span class="badge badge-primary ml-1">1</span>
+                          <i class="fe fe-sliders mr-1"></i> Filter <span class="badge bg-primary ml-1">1</span>
                         </button>
 
                         <!-- Menu -->
@@ -1971,7 +1969,7 @@
                                   <div class="col-auto">
 
                                     <!-- Select -->
-                                    <select class="custom-select custom-select-sm" name="item-title" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
+                                    <select class="form-select form-select-sm" name="item-title" data-choices='{"searchEnabled": false}'>
                                       <option value="*">Any</option>
                                       <option value="Designer" selected>Designer</option>
                                       <option value="Developer">Developer</option>
@@ -1993,7 +1991,7 @@
                                   <div class="col-auto">
 
                                     <!-- Select -->
-                                    <select class="custom-select custom-select-sm" name="item-score" data-toggle="select" data-options='{"minimumResultsForSearch": -1}'>
+                                    <select class="form-select form-select-sm" name="item-score" data-choices='{"searchEnabled": false}'>
                                       <option value="*" selected>Any</option>
                                       <option value="1/10">1+</option>
                                       <option value="2/10">2+</option>
@@ -2038,9 +2036,9 @@
                             <div class="col">
 
                               <!-- Checkbox -->
-                              <div class="custom-control custom-control-circle custom-checkbox">
-                                <input type="checkbox" class="list-checkbox custom-control-input" id="cardsCheckboxOne">
-                                <label class="custom-control-label" for="cardsCheckboxOne"></label>
+                              <div class="form-check form-check-circle">
+                                <input class="form-check-input list-checkbox" type="checkbox" id="cardsCheckboxOne">
+                                <label class="form-check-label" for="cardsCheckboxOne"></label>
                               </div>
 
                             </div>
@@ -2048,7 +2046,7 @@
 
                               <!-- Dropdown -->
                               <div class="dropdown">
-                                <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   <i class="fe fe-more-vertical"></i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
@@ -2143,9 +2141,9 @@
                             <div class="col">
 
                               <!-- Checkbox -->
-                              <div class="custom-control custom-control-circle custom-checkbox">
-                                <input type="checkbox" class="list-checkbox custom-control-input" id="cardsCheckboxTwo">
-                                <label class="custom-control-label" for="cardsCheckboxTwo"></label>
+                              <div class="form-check form-check-circle">
+                                <input class="form-check-input list-checkbox" type="checkbox" id="cardsCheckboxTwo">
+                                <label class="form-check-label" for="cardsCheckboxTwo"></label>
                               </div>
 
                             </div>
@@ -2153,7 +2151,7 @@
 
                               <!-- Dropdown -->
                               <div class="dropdown">
-                                <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   <i class="fe fe-more-vertical"></i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
@@ -2248,9 +2246,9 @@
                             <div class="col">
 
                               <!-- Checkbox -->
-                              <div class="custom-control custom-control-circle custom-checkbox">
-                                <input type="checkbox" class="list-checkbox custom-control-input" id="cardsCheckboxThree">
-                                <label class="custom-control-label" for="cardsCheckboxThree"></label>
+                              <div class="form-check form-check-circle">
+                                <input class="form-check-input list-checkbox" type="checkbox" id="cardsCheckboxThree">
+                                <label class="form-check-label" for="cardsCheckboxThree"></label>
                               </div>
 
                             </div>
@@ -2258,7 +2256,7 @@
 
                               <!-- Dropdown -->
                               <div class="dropdown">
-                                <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   <i class="fe fe-more-vertical"></i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
@@ -2353,9 +2351,9 @@
                             <div class="col">
 
                               <!-- Checkbox -->
-                              <div class="custom-control custom-control-circle custom-checkbox">
-                                <input type="checkbox" class="list-checkbox custom-control-input" id="cardsCheckboxFour">
-                                <label class="custom-control-label" for="cardsCheckboxFour"></label>
+                              <div class="form-check form-check-circle">
+                                <input class="form-check-input list-checkbox" type="checkbox" id="cardsCheckboxFour">
+                                <label class="form-check-label" for="cardsCheckboxFour"></label>
                               </div>
 
                             </div>
@@ -2363,7 +2361,7 @@
 
                               <!-- Dropdown -->
                               <div class="dropdown">
-                                <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   <i class="fe fe-more-vertical"></i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
@@ -2458,9 +2456,9 @@
                             <div class="col">
 
                               <!-- Checkbox -->
-                              <div class="custom-control custom-control-circle custom-checkbox">
-                                <input type="checkbox" class="list-checkbox custom-control-input" id="cardsCheckboxFive">
-                                <label class="custom-control-label" for="cardsCheckboxFive"></label>
+                              <div class="form-check form-check-circle">
+                                <input class="form-check-input list-checkbox" type="checkbox" id="cardsCheckboxFive">
+                                <label class="form-check-label" for="cardsCheckboxFive"></label>
                               </div>
 
                             </div>
@@ -2468,7 +2466,7 @@
 
                               <!-- Dropdown -->
                               <div class="dropdown">
-                                <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   <i class="fe fe-more-vertical"></i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
@@ -2563,9 +2561,9 @@
                             <div class="col">
 
                               <!-- Checkbox -->
-                              <div class="custom-control custom-control-circle custom-checkbox">
-                                <input type="checkbox" class="list-checkbox custom-control-input" id="cardsCheckboxSix">
-                                <label class="custom-control-label" for="cardsCheckboxSix"></label>
+                              <div class="form-check form-check-circle">
+                                <input class="form-check-input list-checkbox" type="checkbox" id="cardsCheckboxSix">
+                                <label class="form-check-label" for="cardsCheckboxSix"></label>
                               </div>
 
                             </div>
@@ -2573,7 +2571,7 @@
 
                               <!-- Dropdown -->
                               <div class="dropdown">
-                                <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   <i class="fe fe-more-vertical"></i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
@@ -2668,9 +2666,9 @@
                             <div class="col">
 
                               <!-- Checkbox -->
-                              <div class="custom-control custom-control-circle custom-checkbox">
-                                <input type="checkbox" class="list-checkbox custom-control-input" id="cardsCheckboxSeven">
-                                <label class="custom-control-label" for="cardsCheckboxSeven"></label>
+                              <div class="form-check form-check-circle">
+                                <input class="form-check-input list-checkbox" type="checkbox" id="cardsCheckboxSeven">
+                                <label class="form-check-label" for="cardsCheckboxSeven"></label>
                               </div>
 
                             </div>
@@ -2678,7 +2676,7 @@
 
                               <!-- Dropdown -->
                               <div class="dropdown">
-                                <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   <i class="fe fe-more-vertical"></i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
@@ -2773,9 +2771,9 @@
                             <div class="col">
 
                               <!-- Checkbox -->
-                              <div class="custom-control custom-control-circle custom-checkbox">
-                                <input type="checkbox" class="list-checkbox custom-control-input" id="cardsCheckboxEight">
-                                <label class="custom-control-label" for="cardsCheckboxEight"></label>
+                              <div class="form-check form-check-circle">
+                                <input class="form-check-input list-checkbox" type="checkbox" id="cardsCheckboxEight">
+                                <label class="form-check-label" for="cardsCheckboxEight"></label>
                               </div>
 
                             </div>
@@ -2783,7 +2781,7 @@
 
                               <!-- Dropdown -->
                               <div class="dropdown">
-                                <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   <i class="fe fe-more-vertical"></i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
@@ -2878,9 +2876,9 @@
                             <div class="col">
 
                               <!-- Checkbox -->
-                              <div class="custom-control custom-control-circle custom-checkbox">
-                                <input type="checkbox" class="list-checkbox custom-control-input" id="cardsCheckboxNine">
-                                <label class="custom-control-label" for="cardsCheckboxNine"></label>
+                              <div class="form-check form-check-circle">
+                                <input class="form-check-input list-checkbox" type="checkbox" id="cardsCheckboxNine">
+                                <label class="form-check-label" for="cardsCheckboxNine"></label>
                               </div>
 
                             </div>
@@ -2888,7 +2886,7 @@
 
                               <!-- Dropdown -->
                               <div class="dropdown">
-                                <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   <i class="fe fe-more-vertical"></i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
@@ -2983,9 +2981,9 @@
                             <div class="col">
 
                               <!-- Checkbox -->
-                              <div class="custom-control custom-control-circle custom-checkbox">
-                                <input type="checkbox" class="list-checkbox custom-control-input" id="cardsCheckboxTen">
-                                <label class="custom-control-label" for="cardsCheckboxTen"></label>
+                              <div class="form-check form-check-circle">
+                                <input class="form-check-input list-checkbox" type="checkbox" id="cardsCheckboxTen">
+                                <label class="form-check-label" for="cardsCheckboxTen"></label>
                               </div>
 
                             </div>
@@ -2993,7 +2991,7 @@
 
                               <!-- Dropdown -->
                               <div class="dropdown">
-                                <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   <i class="fe fe-more-vertical"></i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
@@ -3088,9 +3086,9 @@
                             <div class="col">
 
                               <!-- Checkbox -->
-                              <div class="custom-control custom-control-circle custom-checkbox">
-                                <input type="checkbox" class="list-checkbox custom-control-input" id="cardsCheckboxEleven">
-                                <label class="custom-control-label" for="cardsCheckboxEleven"></label>
+                              <div class="form-check form-check-circle">
+                                <input class="form-check-input list-checkbox" type="checkbox" id="cardsCheckboxEleven">
+                                <label class="form-check-label" for="cardsCheckboxEleven"></label>
                               </div>
 
                             </div>
@@ -3098,7 +3096,7 @@
 
                               <!-- Dropdown -->
                               <div class="dropdown">
-                                <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   <i class="fe fe-more-vertical"></i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
@@ -3193,9 +3191,9 @@
                             <div class="col">
 
                               <!-- Checkbox -->
-                              <div class="custom-control custom-control-circle custom-checkbox">
-                                <input type="checkbox" class="list-checkbox custom-control-input" id="cardsCheckboxTwelve">
-                                <label class="custom-control-label" for="cardsCheckboxTwelve"></label>
+                              <div class="form-check form-check-circle">
+                                <input class="form-check-input list-checkbox" type="checkbox" id="cardsCheckboxTwelve">
+                                <label class="form-check-label" for="cardsCheckboxTwelve"></label>
                               </div>
 
                             </div>
@@ -3203,7 +3201,7 @@
 
                               <!-- Dropdown -->
                               <div class="dropdown">
-                                <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   <i class="fe fe-more-vertical"></i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
@@ -3298,9 +3296,9 @@
                             <div class="col">
 
                               <!-- Checkbox -->
-                              <div class="custom-control custom-control-circle custom-checkbox">
-                                <input type="checkbox" class="list-checkbox custom-control-input" id="cardsCheckboxThirteen">
-                                <label class="custom-control-label" for="cardsCheckboxThirteen"></label>
+                              <div class="form-check form-check-circle">
+                                <input class="form-check-input list-checkbox" type="checkbox" id="cardsCheckboxThirteen">
+                                <label class="form-check-label" for="cardsCheckboxThirteen"></label>
                               </div>
 
                             </div>
@@ -3308,7 +3306,7 @@
 
                               <!-- Dropdown -->
                               <div class="dropdown">
-                                <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   <i class="fe fe-more-vertical"></i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
@@ -3403,9 +3401,9 @@
                             <div class="col">
 
                               <!-- Checkbox -->
-                              <div class="custom-control custom-control-circle custom-checkbox">
-                                <input type="checkbox" class="list-checkbox custom-control-input" id="cardsCheckboxFourteen">
-                                <label class="custom-control-label" for="cardsCheckboxFourteen"></label>
+                              <div class="form-check form-check-circle">
+                                <input class="form-check-input list-checkbox" type="checkbox" id="cardsCheckboxFourteen">
+                                <label class="form-check-label" for="cardsCheckboxFourteen"></label>
                               </div>
 
                             </div>
@@ -3413,7 +3411,7 @@
 
                               <!-- Dropdown -->
                               <div class="dropdown">
-                                <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   <i class="fe fe-more-vertical"></i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
@@ -3508,9 +3506,9 @@
                             <div class="col">
 
                               <!-- Checkbox -->
-                              <div class="custom-control custom-control-circle custom-checkbox">
-                                <input type="checkbox" class="list-checkbox custom-control-input" id="cardsCheckboxFifteen">
-                                <label class="custom-control-label" for="cardsCheckboxFifteen"></label>
+                              <div class="form-check form-check-circle">
+                                <input class="form-check-input list-checkbox" type="checkbox" id="cardsCheckboxFifteen">
+                                <label class="form-check-label" for="cardsCheckboxFifteen"></label>
                               </div>
 
                             </div>
@@ -3518,7 +3516,7 @@
 
                               <!-- Dropdown -->
                               <div class="dropdown">
-                                <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   <i class="fe fe-more-vertical"></i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
@@ -3613,9 +3611,9 @@
                             <div class="col">
 
                               <!-- Checkbox -->
-                              <div class="custom-control custom-control-circle custom-checkbox">
-                                <input type="checkbox" class="list-checkbox custom-control-input" id="cardsCheckboxSixteen">
-                                <label class="custom-control-label" for="cardsCheckboxSixteen"></label>
+                              <div class="form-check form-check-circle">
+                                <input class="form-check-input list-checkbox" type="checkbox" id="cardsCheckboxSixteen">
+                                <label class="form-check-label" for="cardsCheckboxSixteen"></label>
                               </div>
 
                             </div>
@@ -3623,7 +3621,7 @@
 
                               <!-- Dropdown -->
                               <div class="dropdown">
-                                <a href="#!" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   <i class="fe fe-more-vertical"></i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
@@ -3743,9 +3741,11 @@
                       <div class="col">
 
                         <!-- Checkbox -->
-                        <div class="custom-control custom-checkbox">
-                          <input type="checkbox" class="custom-control-input" id="listAlertCheckbox" checked disabled>
-                          <label class="custom-control-label text-white" for="listAlertCheckbox"><span class="list-alert-count">0</span> deal(s)</label>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="listAlertCheckbox" checked disabled>
+                          <label class="form-check-label text-white" for="listAlertCheckbox">
+                            <span class="list-alert-count">0</span> deal(s)
+                          </label>
                         </div>
 
                       </div>

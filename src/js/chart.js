@@ -116,7 +116,7 @@ export default (function() {
         });
 
         // Add arrow
-        let content = '<div class="arrow"></div>';
+        let content = '<div class="popover-arrow"></div>';
 
         // Add title
         title.forEach(function(title) {
