@@ -56,7 +56,7 @@
   color: $popover-dark-header-color;
 }
 
-.popover-dark.bs-popover-top .arrow {
+.popover-dark.bs-popover-top .popover-arrow {
 
   &::before {
     border-top-color: $popover-dark-border-color;
@@ -67,7 +67,7 @@
   }
 }
 
-.popover-dark.bs-popover-right .arrow {
+.popover-dark.bs-popover-right .popover-arrow {
 
   &::before {
     border-right-color: $popover-dark-border-color;
@@ -78,7 +78,7 @@
   }
 }
 
-.popover-dark.bs-popover-bottom .arrow {
+.popover-dark.bs-popover-bottom .popover-arrow {
 
   &::before {
     border-bottom-color: $popover-dark-border-color;
@@ -89,7 +89,7 @@
   }
 }
 
-.popover-dark.bs-popover-left .arrow {
+.popover-dark.bs-popover-left .popover-arrow {
 
   &::before {
     border-left-color: $popover-dark-border-color;

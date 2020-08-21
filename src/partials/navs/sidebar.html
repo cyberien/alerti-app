@@ -41,12 +41,10 @@
 
       <!-- Form -->
       <form class="mt-4 mb-3 d-md-none">
-        <div class="input-group input-group-rounded input-group-merge">
-          <input type="search" class="form-control form-control-rounded form-control-prepended" placeholder="Search" aria-label="Search">
-          <div class="input-group-prepend">
-            <div class="input-group-text">
-              <span class="fe fe-search"></span>
-            </div>
+        <div class="input-group input-group-rounded input-group-merge input-group-reverse">
+          <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-text">
+            <span class="fe fe-search"></span>
           </div>
         </div>
       </form>
@@ -591,53 +589,53 @@
       <div class="mt-auto"></div>
 
       {{#if demoMode}}
-      <!-- Customize -->
-      <div id="popoverDemo" data-toggle="popover" data-trigger="manual" title="Make Dashkit Your Own!" data-content="Switch the demo to Dark Mode or adjust the navigation layout, icons, and colors!">
-        <a href="#modalDemo" class="btn btn-block btn-primary mb-4" data-toggle="modal">
-          <i class="fe fe-sliders mr-2"></i> Customize
-        </a>
-      </div>
+        <!-- Customize -->
+        <div id="popoverDemo" data-content="Switch the demo to Dark Mode or adjust the navigation layout, icons, and colors!" title="Make Dashkit Your Own!">
+          <a class="btn btn-block btn-primary mb-4" data-toggle="modal" href="#modalDemo">
+            <i class="fe fe-sliders mr-2"></i> Customize
+          </a>
+        </div>
       {{/if}}
 
       {{#is navPosition 'sidenav'}}
-      <!-- User (md) -->
-      <div class="navbar-user d-none d-md-flex" id="sidebarUser">
+        <!-- User (md) -->
+        <div class="navbar-user d-none d-md-flex" id="sidebarUser">
 
-        <!-- Icon -->
-        <a href="#sidebarModalActivity" class="navbar-user-link" data-toggle="modal">
-          <span class="icon">
-            <i class="fe fe-bell"></i>
-          </span>
-        </a>
-
-        <!-- Dropup -->
-        <div class="dropup">
-
-          <!-- Toggle -->
-          <a href="#" id="sidebarIconCopy" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <div class="avatar avatar-sm avatar-online">
-              <img src="{{webRoot}}/assets/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle" alt="...">
-            </div>
+          <!-- Icon -->
+          <a href="#sidebarModalActivity" class="navbar-user-link" data-toggle="modal">
+            <span class="icon">
+              <i class="fe fe-bell"></i>
+            </span>
           </a>
 
-          <!-- Menu -->
-          <div class="dropdown-menu" aria-labelledby="sidebarIconCopy">
-            <a href="{{webRoot}}/profile-posts.html" class="dropdown-item">Profile</a>
-            <a href="{{webRoot}}/account-general.html" class="dropdown-item">Settings</a>
-            <hr class="dropdown-divider">
-            <a href="{{webRoot}}/sign-in.html" class="dropdown-item">Logout</a>
+          <!-- Dropup -->
+          <div class="dropup">
+
+            <!-- Toggle -->
+            <a href="#" id="sidebarIconCopy" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <div class="avatar avatar-sm avatar-online">
+                <img src="{{webRoot}}/assets/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle" alt="...">
+              </div>
+            </a>
+
+            <!-- Menu -->
+            <div class="dropdown-menu" aria-labelledby="sidebarIconCopy">
+              <a href="{{webRoot}}/profile-posts.html" class="dropdown-item">Profile</a>
+              <a href="{{webRoot}}/account-general.html" class="dropdown-item">Settings</a>
+              <hr class="dropdown-divider">
+              <a href="{{webRoot}}/sign-in.html" class="dropdown-item">Logout</a>
+            </div>
+
           </div>
 
+          <!-- Icon -->
+          <a href="#sidebarModalSearch" class="navbar-user-link" data-toggle="modal">
+            <span class="icon">
+              <i class="fe fe-search"></i>
+            </span>
+          </a>
+
         </div>
-
-        <!-- Icon -->
-        <a href="#sidebarModalSearch" class="navbar-user-link" data-toggle="modal">
-          <span class="icon">
-            <i class="fe fe-search"></i>
-          </span>
-        </a>
-
-      </div>
       {{/is}}
 
     </div> <!-- / .navbar-collapse -->

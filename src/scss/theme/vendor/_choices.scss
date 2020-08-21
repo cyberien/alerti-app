@@ -33,6 +33,10 @@
   padding-right: $input-padding-x;
 }
 
+.choices > .dropdown-menu .dropdown-item.is-highlighted {
+  color: $dropdown-link-hover-color;
+}
+
 // Sizing
 
 .choices > .form-control-sm + .dropdown-menu,

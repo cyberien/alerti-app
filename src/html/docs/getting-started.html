@@ -8,19 +8,20 @@
   <body>
 
     <!-- MODALS -->
+    {{> partials/modals}}
 
     <!-- NAVIGATION -->
-    {{> partials/navigation category="basics" page="getting-started.html"}}
+    {{> partials/navs category="basics" page="getting-started.html"}}
 
     <!-- MAIN CONTENT -->
     <div class="main-content pb-6">
 
       {{#if demoMode}}
-        {{> partials/topbar}}
+        {{> navs/topbar}}
       {{/if}}
 
       {{#is navPosition 'combo'}}
-        {{> partials/topbar}}
+        {{> navs/topbar}}
       {{/is}}
 
       <div class="{{#is navPosition 'sidenav || combo'}}container-fluid{{/is}}{{#is navPosition 'topnav'}}container{{/is}}">

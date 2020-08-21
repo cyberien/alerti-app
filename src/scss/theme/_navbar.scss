@@ -13,6 +13,11 @@
   border-style: solid;
 }
 
+.navbar > [class*="container"] {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 
 // Navbar dark
 
@@ -222,6 +227,7 @@
 // Navbar collapse
 
 .navbar-collapse {
+  width: calc(100% + #{$navbar-padding-x * 2});
   margin-left: -$navbar-padding-x;
   margin-right: -$navbar-padding-x;
   padding-left: $navbar-padding-x;
@@ -324,6 +330,8 @@
 
         .navbar-collapse {
           flex-grow: inherit;
+          flex-basis: auto;
+          width: auto;
 
           &:before {
             display: none;

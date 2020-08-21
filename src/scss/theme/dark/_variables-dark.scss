@@ -11,9 +11,14 @@
 // Color system
 
 $white: #FFFFFF !default;
+$gray-100: #F9FBFD !default;
+$gray-200: #EDF2F9 !default;
 $gray-300: #E3EBF6 !default;
+$gray-400: #D2DDEC !default;
+$gray-500: #B1C2D9 !default;
 $gray-600: #95AAC9 !default;
 $gray-700: #6E84A3 !default;
+$gray-800: #3B506C !default;
 $gray-900: #283E59 !default;
 $black: #12263F !default;
 
@@ -160,6 +165,27 @@ $list-group-hover-bg: $gray-900-dark !default;
 // 
 // Dashkit =====================================
 //
+
+
+// Charts
+
+/* beautify ignore:start */
+$chart-colors: (
+  "gray-300": $gray-300,
+  "gray-600": $gray-600,
+  "gray-700": $gray-700,
+  "gray-800": $gray-800,
+  "gray-900": $gray-900,
+  "primary-100": "#D2DDEC",
+  "primary-300": "#A6C5F7",
+  "default-color": $gray-700,
+  "default-font-color": $gray-700,
+  "arc-border-color": $gray-800-dark,
+  "arc-hover-border-color": $gray-800-dark,
+  "grid-line-color": $gray-900,
+  "grid-line-zero-line-color": $gray-900
+) !default;
+/* beautify ignore:end */
 
 
 // Tables

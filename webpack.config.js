@@ -9,10 +9,11 @@ const path = require('path');
 const config = {
   devtool: 'source-map',
   entry: {
-    libs: './src/scss/libs.scss',
-    theme: ['./src/js/theme.js', './src/scss/theme.scss'],
-    'theme-dark': ['./src/scss/theme-dark.scss'],
-    dashkit: './src/js/dashkit.js',
+    'demo': './src/js/demo.js',
+    'libs': './src/scss/libs.scss',
+    'theme': ['./src/js/theme.js', './src/scss/theme.scss'],
+    'theme-dark': './src/scss/theme-dark.scss',
+    'user': './src/js/user.js',
   },
   mode: 'development',
   module: {
@@ -48,6 +49,15 @@ const config = {
     ],
   },
   optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]vendor|node_modules[\\/]/,
+          name: 'vendor',
+          chunks: 'all'
+        }
+      }
+    },
     minimizer: [
       new OptimizeCssAssetsPlugin({
         cssProcessorOptions: {
@@ -95,9 +105,9 @@ const config = {
           to: './assets/img',
         },
         {
-          from: './src/libs',
-          to: './assets/libs',
-        }
+          from: './src/vendor',
+          to: './assets/vendor',
+        },
       ],
     }),
     new HandlebarsPlugin({

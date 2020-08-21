@@ -6,19 +6,20 @@
   <body>
 
     <!-- MODALS -->
+    {{> partials/modals}}
 
     <!-- NAVIGATION -->
-    {{> partials/navigation category="pages" subcategory="feed" page="feed.html"}}
+    {{> partials/navs category="pages" subcategory="feed" page="feed.html"}}
 
     <!-- MAIN CONTENT -->
     <div class="main-content bg-fixed-bottom" style="background-image: url(assets/img/illustrations/sticky.svg);">
 
       {{#if demoMode}}
-        {{> partials/topbar}}
+        {{> navs/topbar}}
       {{/if}}
 
       {{#is navPosition 'combo'}}
-        {{> partials/topbar}}
+        {{> navs/topbar}}
       {{/is}}
 
       <div class="{{#is navPosition 'sidenav || combo'}}container-fluid{{/is}}{{#is navPosition 'topnav'}}container{{/is}}">

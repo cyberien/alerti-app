@@ -46,7 +46,7 @@
   border-right-width: 0;
 }
 
-.input-group-merge.input-group-reverse > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
+.input-group-merge.input-group-reverse:not(.input-group-rounded) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
   border-top-right-radius: $input-border-radius;
   border-bottom-right-radius: $input-border-radius;
 }
@@ -63,7 +63,7 @@
   border-radius: $input-border-radius-sm 0 0 $input-border-radius-sm;
 }
 
-.input-group-sm.input-group-merge.input-group-reverse > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
+.input-group-sm.input-group-merge.input-group-reverse:not(.input-group-rounded) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
   border-top-right-radius: $input-border-radius-sm;
   border-bottom-right-radius: $input-border-radius-sm;
 }
@@ -77,7 +77,7 @@
   border-radius: $input-border-radius-lg 0 0 $input-border-radius-lg;
 }
 
-.input-group-lg.input-group-merge.input-group-reverse > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
+.input-group-lg.input-group-merge.input-group-reverse:not(.input-group-rounded) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
   border-top-right-radius: $input-border-radius-lg;
   border-bottom-right-radius: $input-border-radius-lg;
 }
@@ -95,12 +95,12 @@
   border-bottom-right-radius: $rounded-pill;
 }
 
-.input-group-rounded.input-group-merge.input-group-reverse > .input-group-text {
-  border-radius: $rounded-pill 0 0 $rounded-pill;
-}
-
 .input-group-rounded.input-group-merge.input-group-reverse > .form-control {
   border-radius: 0 $rounded-pill $rounded-pill 0;
+}
+
+.input-group-rounded.input-group-merge.input-group-reverse > .input-group-text {
+  border-radius: $rounded-pill 0 0 $rounded-pill;
 }
 
 

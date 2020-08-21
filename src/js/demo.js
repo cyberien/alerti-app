@@ -3,263 +3,258 @@
 // Theme module
 //
 
-'use strict';
+import { Popover, Collapse } from 'bootstrap';
 
-var demoMode = (function() {
+const popover = document.querySelector('#popoverDemo');
+const form = document.querySelector('#demoForm');
+const topnav = document.querySelector('#topnav');
+const topbar = document.querySelector('#topbar');
+const sidebar = document.querySelector('#sidebar');
+const sidebarSmall = document.querySelector('#sidebarSmall');
+const sidebarUser = document.querySelector('#sidebarUser');
+const sidebarUserSmall = document.querySelector('#sidebarSmallUser');
+const sidebarSizeContainer = document.querySelector('#sidebarSizeContainer')
+const navPositionToggle = document.querySelectorAll('input[name="navPosition"]');
+const containers = document.querySelectorAll('[class^="container"]');
+const stylesheetLight = document.querySelector('#stylesheetLight');
+const stylesheetDark = document.querySelector('#stylesheetDark');
 
-  //
-  // Variables
-  //
+const config = {
+  showPopover: (localStorage.getItem('dashkitShowPopover')) ? localStorage.getItem('dashkitShowPopover') : true,
+  colorScheme: (localStorage.getItem('dashkitColorScheme')) ? localStorage.getItem('dashkitColorScheme') : 'light',
+  navPosition: (localStorage.getItem('dashkitNavPosition')) ? localStorage.getItem('dashkitNavPosition') : 'sidenav',
+  navColor: (localStorage.getItem('dashkitNavColor')) ? localStorage.getItem('dashkitNavColor') : 'default',
+  sidebarSize: (localStorage.getItem('dashkitSidebarSize')) ? localStorage.getItem('dashkitSidebarSize') : 'base'
+}
 
-  var popover = document.querySelector('#popoverDemo');
-  var form = document.querySelector('#demoForm');
-  var topnav = document.querySelector('#topnav');
-  var topbar = document.querySelector('#topbar');
-  var sidebar = document.querySelector('#sidebar');
-  var sidebarSmall = document.querySelector('#sidebarSmall');
-  var sidebarUser = document.querySelector('#sidebarUser');
-  var sidebarUserSmall = document.querySelector('#sidebarSmallUser');
-  var sidebarSizeContainer = document.querySelector('#sidebarSizeContainer')
-  var navPositionToggle = document.querySelectorAll('input[name="navPosition"]');
-  var containers = document.querySelectorAll('[class^="container"]');
-  var stylesheetLight = document.querySelector('#stylesheetLight');
-  var stylesheetDark = document.querySelector('#stylesheetDark');
+const sidebarSizeCollapse = new Collapse(sidebarSizeContainer);
 
-  var config = {
-    showPopover: (localStorage.getItem('dashkitShowPopover')) ? localStorage.getItem('dashkitShowPopover') : true,
-    colorScheme: (localStorage.getItem('dashkitColorScheme')) ? localStorage.getItem('dashkitColorScheme') : 'light',
-    navPosition: (localStorage.getItem('dashkitNavPosition')) ? localStorage.getItem('dashkitNavPosition') : 'sidenav',
-    navColor: (localStorage.getItem('dashkitNavColor')) ? localStorage.getItem('dashkitNavColor') : 'default',
-    sidebarSize: (localStorage.getItem('dashkitSidebarSize')) ? localStorage.getItem('dashkitSidebarSize') : 'base'
-  }
+function togglePopover() {
+  if (popover) {
+    const showPopover = JSON.parse(config.showPopover) && config.sidebarSize === 'base';
+    const demoPopover = new Popover(popover, {
+      boundary: 'viewport',
+      container: 'body',
+      offset: '50px',
+      placement: 'top',
+      template: `
+        <div class="popover popover-lg popover-dark d-none d-md-block" role="tooltip">
+          <div class="popover-arrow"></div>
+          <h3 class="popover-header"></h3>
+          <div class="popover-body"></div>
+        </div>`,
+       trigger: 'manual'
+    });
 
-  //
-  // Functions
-  //
+    // Show popover on load
+    if (showPopover) {
+      demoPopover.show();
+    }
 
-  function togglePopover() {
-    if (popover) {
-      var showPopover = JSON.parse(config.showPopover) && config.sidebarSize === 'base';
-
-      // Show popover on load
+    // Hide popover on click
+    popover.addEventListener('click', function() {
       if (showPopover) {
-        $(popover).popover({
-          'boundary': 'viewport',
-          'offset': '50px',
-          'placement': 'top',
-          'template': '<div class="popover popover-lg popover-dark d-none d-md-block" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
-        }).popover('show');
+        demoPopover.hide();
       }
 
-      // Hide popover on click
-      popover.addEventListener('click', function() {
-        $(popover).popover('hide');
+      localStorage.setItem('dashkitShowPopover', false);
+    });
+  }
+}
 
-        localStorage.setItem('dashkitShowPopover', false);
-      });
+function parseUrl() {
+  const search = window.location.search.substring(1);
+  const params = search.split('&');
+
+  for (let i = 0; i < params.length; i++) {
+    const arr = params[i].split('=');
+    const prop = arr[0];
+    const val = arr[1];
+
+    if (prop == 'colorScheme' || prop == 'navPosition' || prop == 'navColor' || prop == 'sidebarSize') {
+
+      // Save to localStorage
+      localStorage.setItem('dashkit' + prop.charAt(0).toUpperCase() + prop.slice(1), val);
+
+      // Update local variables
+      config[prop] = val;
     }
   }
+}
 
-  function parseUrl() {
-    var search = window.location.search.substring(1);
-    var params = search.split('&');
+function toggleColorScheme(colorScheme) {
+  if (colorScheme == 'light') {
+    stylesheetLight.disabled = false;
+    stylesheetDark.disabled = true;
 
-    for (var i = 0; i < params.length; i++) {
-      var arr = params[i].split('=');
-      var prop = arr[0];
-      var val = arr[1];
+    colorScheme = 'light';
+  } else if (colorScheme == 'dark') {
+    stylesheetLight.disabled = true;
+    stylesheetDark.disabled = false;
 
-      if (prop == 'colorScheme' || prop == 'navPosition' || prop == 'navColor' || prop == 'sidebarSize') {
-
-        // Save to localStorage
-        localStorage.setItem('dashkit' + prop.charAt(0).toUpperCase() + prop.slice(1), val);
-
-        // Update local variables
-        config[prop] = val;
-      }
-    }
+    colorScheme = 'dark';
   }
+}
 
-  function toggleColorScheme(colorScheme) {
-    if (colorScheme == 'light') {
-      stylesheetLight.disabled = false;
-      stylesheetDark.disabled = true;
-      colorScheme = 'light';
-    } else if (colorScheme == 'dark') {
-      stylesheetLight.disabled = true;
-      stylesheetDark.disabled = false;
-      colorScheme = 'dark';
-    }
-  }
-
-  function toggleNavPosition(navPosition) {
-    if (topnav && topbar && sidebar && sidebarSmall && sidebarUser && sidebarUserSmall) {
-      if (navPosition == 'topnav') {
-        hideNode(topbar);
-        hideNode(sidebar);
-        hideNode(sidebarSmall);
-
-        for (var i = 0; i < containers.length; i++) {
-          containers[i].classList.remove('container-fluid');
-          containers[i].classList.add('container');
-        }
-      } else if (navPosition == 'combo') {
-        hideNode(topnav);
-        hideNode(sidebarUser);
-        hideNode(sidebarUserSmall);
-
-        for (var i = 0; i < containers.length; i++) {
-          containers[i].classList.remove('container');
-          containers[i].classList.add('container-fluid');
-        }
-      } else if (navPosition == 'sidenav') {
-        hideNode(topnav);
-        hideNode(topbar);
-
-        for (var i = 0; i < containers.length; i++) {
-          containers[i].classList.remove('container');
-          containers[i].classList.add('container-fluid');
-        }
-      }
-    }
-  }
-
-  function toggleNavColor(navColor) {
-
-    if (sidebar && sidebarSmall && topnav) {
-
-      if (navColor == 'default') {
-
-        // Sidebar
-        sidebar.classList.add('navbar-light');
-
-        // Sidebar small
-        sidebarSmall.classList.add('navbar-light');
-
-        // Topnav
-        topnav.classList.add('navbar-light');
-
-      } else if (navColor == 'inverted') {
-
-        // Sidebar
-        sidebar.classList.add('navbar-dark');
-
-        // Sidebar small
-        sidebarSmall.classList.add('navbar-dark');
-
-        // Topnav
-        topnav.classList.add('navbar-dark');
-
-      } else if (navColor == 'vibrant') {
-
-        // Sidebar
-        sidebar.classList.add('navbar-dark', 'navbar-vibrant');
-
-        // Sidebar small
-        sidebarSmall.classList.add('navbar-dark', 'navbar-vibrant');
-
-        // Sidebar small
-        topnav.classList.add('navbar-dark', 'navbar-vibrant');
-
-      }
-    }
-  }
-
-  function toggleSidebarSize(sidebarSize) {
-    if (sidebarSize == 'base') {
-      hideNode(sidebarSmall);
-    } else if (sidebarSize == 'small') {
-      hideNode(sidebar);
-    }
-  }
-
-  function toggleFormControls(form, colorScheme, navPosition, navColor, sidebarSize) {
-    $(form).find('[name="colorScheme"][value="' + colorScheme + '"]').closest('.btn').button('toggle');
-    $(form).find('[name="navPosition"][value="' + navPosition + '"]').closest('.btn').button('toggle');
-    $(form).find('[name="navColor"][value="' + navColor + '"]').closest('.btn').button('toggle');
-    $(form).find('[name="sidebarSize"][value="' + sidebarSize + '"]').closest('.btn').button('toggle');
-  }
-
-  function toggleSidebarSizeCongainer(navPosition) {
+function toggleNavPosition(navPosition) {
+  if (topnav && topbar && sidebar && sidebarSmall && sidebarUser && sidebarUserSmall) {
     if (navPosition == 'topnav') {
-      $(sidebarSizeContainer).collapse('hide');
-    } else {
-      $(sidebarSizeContainer).collapse('show');
+      hideNode(topbar);
+      hideNode(sidebar);
+      hideNode(sidebarSmall);
+
+      for (let i = 0; i < containers.length; i++) {
+        containers[i].classList.remove('container-fluid');
+        containers[i].classList.add('container');
+      }
+    } else if (navPosition == 'combo') {
+      hideNode(topnav);
+      hideNode(sidebarUser);
+      hideNode(sidebarUserSmall);
+
+      for (let i = 0; i < containers.length; i++) {
+        containers[i].classList.remove('container');
+        containers[i].classList.add('container-fluid');
+      }
+    } else if (navPosition == 'sidenav') {
+      hideNode(topnav);
+      hideNode(topbar);
+
+      for (let i = 0; i < containers.length; i++) {
+        containers[i].classList.remove('container');
+        containers[i].classList.add('container-fluid');
+      }
     }
   }
+}
 
-  function submitForm(form) {
-    var colorScheme = form.querySelector('[name="colorScheme"]:checked').value;
-    var navPosition = form.querySelector('[name="navPosition"]:checked').value;
-    var navColor = form.querySelector('[name="navColor"]:checked').value;
-    var sidebarSize = form.querySelector('[name="sidebarSize"]:checked').value;
+function toggleNavColor(navColor) {
+  if (sidebar && sidebarSmall && topnav) {
+    if (navColor == 'default') {
 
-    // Save data to localStorage
-    localStorage.setItem('dashkitColorScheme', colorScheme);
-    localStorage.setItem('dashkitNavPosition', navPosition);
-    localStorage.setItem('dashkitNavColor', navColor);
-    localStorage.setItem('dashkitSidebarSize', sidebarSize);
+      // Sidebar
+      sidebar.classList.add('navbar-light');
 
-    // Reload page
-    window.location = window.location.pathname;
+      // Sidebar small
+      sidebarSmall.classList.add('navbar-light');
+
+      // Topnav
+      topnav.classList.add('navbar-light');
+
+    } else if (navColor == 'inverted') {
+
+      // Sidebar
+      sidebar.classList.add('navbar-dark');
+
+      // Sidebar small
+      sidebarSmall.classList.add('navbar-dark');
+
+      // Topnav
+      topnav.classList.add('navbar-dark');
+
+    } else if (navColor == 'vibrant') {
+
+      // Sidebar
+      sidebar.classList.add('navbar-dark', 'navbar-vibrant');
+
+      // Sidebar small
+      sidebarSmall.classList.add('navbar-dark', 'navbar-vibrant');
+
+      // Sidebar small
+      topnav.classList.add('navbar-dark', 'navbar-vibrant');
+    }
   }
+}
 
-  function hideNode(node) {
-    node && node.setAttribute('style', 'display: none !important');
+function toggleSidebarSize(sidebarSize) {
+  if (sidebarSize == 'base') {
+    hideNode(sidebarSmall);
+  } else if (sidebarSize == 'small') {
+    hideNode(sidebar);
   }
+}
 
-  //
-  // Event
-  //
+function toggleFormControls(form, colorScheme, navPosition, navColor, sidebarSize) {
+  form.querySelector('[name="colorScheme"][value="' + colorScheme + '"]').checked = true;
+  form.querySelector('[name="navPosition"][value="' + navPosition + '"]').checked = true;
+  form.querySelector('[name="navColor"][value="' + navColor + '"]').checked = true;
+  form.querySelector('[name="sidebarSize"][value="' + sidebarSize + '"]').checked = true;
+}
 
-  // Toggle popover
-  togglePopover();
+function toggleSidebarSizeContainer(navPosition) {
+  if (navPosition == 'topnav') {
+    sidebarSizeCollapse.hide();
+  } else {
+    sidebarSizeCollapse.show();
+  }
+}
 
-  // Parse url
-  parseUrl();
+function submitForm(form) {
+  const colorScheme = form.querySelector('[name="colorScheme"]:checked').value;
+  const navPosition = form.querySelector('[name="navPosition"]:checked').value;
+  const navColor = form.querySelector('[name="navColor"]:checked').value;
+  const sidebarSize = form.querySelector('[name="sidebarSize"]:checked').value;
 
-  // Toggle color scheme
-  toggleColorScheme(config.colorScheme);
+  // Save data to localStorage
+  localStorage.setItem('dashkitColorScheme', colorScheme);
+  localStorage.setItem('dashkitNavPosition', navPosition);
+  localStorage.setItem('dashkitNavColor', navColor);
+  localStorage.setItem('dashkitSidebarSize', sidebarSize);
 
-  // Toggle nav position
-  toggleNavPosition(config.navPosition);
+  // Reload page
+  window.location = window.location.pathname;
+}
 
-  // Toggle sidebar color
-  toggleNavColor(config.navColor);
+function hideNode(node) {
+  node && node.setAttribute('style', 'display: none !important');
+}
 
-  // Toggle sidebar size
-  toggleSidebarSize(config.sidebarSize);
+//
+// Events
+//
 
-  // Toggle form controls
-  toggleFormControls(form, config.colorScheme, config.navPosition, config.navColor, config.sidebarSize);
+// Toggle popover
+togglePopover();
 
-  // Toggle sidebarSize container
-  toggleSidebarSizeCongainer(config.navPosition);
+// Parse url
+parseUrl();
 
-  // Enable body
-  document.body.style.display = 'block';
+// Toggle color scheme
+toggleColorScheme(config.colorScheme);
 
-  if (form) {
+// Toggle nav position
+toggleNavPosition(config.navPosition);
 
-    // Form submitted
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      submitForm(form);
+// Toggle sidebar color
+toggleNavColor(config.navColor);
+
+// Toggle sidebar size
+toggleSidebarSize(config.sidebarSize);
+
+// Toggle form controls
+toggleFormControls(form, config.colorScheme, config.navPosition, config.navColor, config.sidebarSize);
+
+// Toggle sidebarSize container
+toggleSidebarSizeContainer(config.navPosition);
+
+// Enable body
+document.body.style.display = 'block';
+
+if (form) {
+
+  // Form submitted
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    submitForm(form);
+  });
+
+  // Nav position changed
+  navPositionToggle.forEach(function(toggle) {
+    toggle.parentElement.addEventListener('click', function() {
+      const navPosition = toggle.value;
+
+      toggleSidebarSizeContainer(navPosition);
     });
-
-    // Nav position changed
-    [].forEach.call(navPositionToggle, function(el) {
-      el.parentElement.addEventListener('click', function() {
-        var navPosition = el.value;
-        toggleSidebarSizeCongainer(navPosition);
-      });
-    });
-  }
-
-  //
-  // Return
-  //
-
-  return true;
-
-})();
+  });
+}

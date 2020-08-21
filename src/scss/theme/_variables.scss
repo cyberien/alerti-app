@@ -160,6 +160,20 @@ $link-hover-color: darken($link-color, 15%) !default;
 $link-hover-decoration: none !default;
 
 
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+/* beautify ignore:start */
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+) !default;
+/* beautify ignore:end */
+
+
 // Grid columns
 //
 // Set the number of columns and specify the width of the gutters.
@@ -403,6 +417,7 @@ $navbar-brand-font-size: $font-size-lg !default;
 $navbar-brand-padding-y: 0 !default;
 
 $navbar-toggler-padding-x: 0 !default;
+$navbar-toggler-focus-width: 0 !default;
 
 $navbar-dark-color: $gray-700 !default;
 $navbar-dark-hover-color: $white !default;
@@ -837,6 +852,24 @@ $chart-legend-margin-top: 2.5rem !default;
 $chart-legend-font-size: $font-size-sm !default;
 $chart-legend-color: $text-muted !default;
 $chart-legend-height: $chart-legend-margin-top + $chart-legend-font-size * $line-height-base !default;
+
+/* beautify ignore:start */
+$chart-colors: (
+  "gray-300": $gray-300,
+  "gray-600": $gray-600,
+  "gray-700": $gray-700,
+  "gray-800": $gray-800,
+  "gray-900": $gray-900,
+  "primary-100": "#D2DDEC",
+  "primary-300": "#A6C5F7",
+  "default-color": $gray-600,
+  "default-font-color": $gray-600,
+  "arc-border-color": $white,
+  "arc-hover-border-color": $white,
+  "grid-line-color": $gray-300,
+  "grid-line-zero-line-color": $gray-300
+) !default;
+/* beautify ignore:end */
 
 
 // Checklist

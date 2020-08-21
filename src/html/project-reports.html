@@ -6,19 +6,20 @@
   <body>
 
     <!-- MODALS -->
+    {{> partials/modals}}
 
     <!-- NAVIGATION -->
-    {{> partials/navigation category="pages" subcategory="project" page="project-reports.html"}}
+    {{> partials/navs category="pages" subcategory="project" page="project-reports.html"}}
 
     <!-- MAIN CONTENT -->
     <div class="main-content">
 
       {{#if demoMode}}
-        {{> partials/topbar}}
+        {{> navs/topbar}}
       {{/if}}
       
       {{#is navPosition 'combo'}}
-        {{> partials/topbar}}
+        {{> navs/topbar}}
       {{/is}}
 
       <!-- HEADER -->

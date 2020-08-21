@@ -6,19 +6,20 @@
   <body>
 
     <!-- MODALS -->
+    {{> partials/modals}}
 
     <!-- NAVIGATION -->
-    {{> partials/navigation category="pages" subcategory="account" page="account-general.html"}}
+    {{> partials/navs category="pages" subcategory="account" page="account-general.html"}}
 
     <!-- MAIN CONTENT -->
     <div class="main-content">
 
       {{#if demoMode}}
-        {{> partials/topbar}}
+        {{> navs/topbar}}
       {{/if}}
 
       {{#is navPosition 'combo'}}
-        {{> partials/topbar}}
+        {{> navs/topbar}}
       {{/is}}
 
       <div class="{{#is navPosition 'sidenav || combo'}}container-fluid{{/is}}{{#is navPosition 'topnav'}}container{{/is}}">

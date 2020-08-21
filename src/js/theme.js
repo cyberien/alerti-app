@@ -1,5 +1,5 @@
-// Libs
-import bootstrap from 'bootstrap';
+// Vendor
+import 'bootstrap';
 
 // Theme
 import './autosize';

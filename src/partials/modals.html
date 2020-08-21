@@ -1,19 +1,19 @@
-@@if (demoMode) {
-<!-- Modal: Demo -->
-@@include("modal-demo.html")
-}
+{{#if demoMode}}
+  <!-- Modal: Demo -->
+  {{> modals/modal-demo}}
+{{/if}}
 
 <!-- Modal: Members -->
-@@include("modal-members.html")
+{{> modals/modal-members}}
 
 <!-- Modal: Search -->
-@@include("modal-search.html")
+{{> modals/modal-search}}
 
 <!-- Modal: Activity -->
-@@include("modal-activity.html")
+{{> modals/modal-activity}}
 
 <!-- Modal: Kanban task -->
-@@include("modal-kanban-task.html")
+{{> modals/modal-kanban-task}}
 
-<!-- Modal: Kanban task -->
-@@include("modal-kanban-task-empty.html")
+<!-- Modal: Kanban task empty -->
+{{> modals/modal-kanban-task-empty}}

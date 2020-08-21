@@ -4,21 +4,22 @@
     {{> partials/head title="Dashkit"}}
   </head>
   <body>
-    
+
     <!-- MODALS -->
+    {{> partials/modals}}
 
     <!-- NAVIGATION -->
-    {{> partials/navigation category="dashboards" page="index.html"}}
+    {{> partials/navs category="dashboards" page="index.html"}}
 
     <!-- MAIN CONTENT -->
     <div class="main-content">
 
       {{#if demoMode}}
-        {{> partials/topbar}}
+        {{> navs/topbar}}
       {{/if}}
 
       {{#is navPosition 'combo'}}
-        {{> partials/topbar}}
+        {{> navs/topbar}}
       {{/is}}
 
     </div>

@@ -1,8 +1,16 @@
+{{#if demoMode}}
+  <!-- Demo JS -->
+  <script src="{{webRoot}}/assets/js/demo.bundle.js"></script>
+{{/if}}
+
 <!-- Map JS -->
 <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+<!-- Vendor JS -->
+<script src="{{webRoot}}/assets/js/vendor.bundle.js"></script>
 
 <!-- Theme JS -->
 <script src="{{webRoot}}/assets/js/theme.bundle.js"></script>
 
-<!-- Dashkit JS (remove on a production website) -->
-<script src="{{webRoot}}/assets/js/dashkit.bundle.js"></script>
+<!-- User JS -->
+<script src="{{webRoot}}/assets/js/user.bundle.js"></script>

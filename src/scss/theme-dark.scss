@@ -1,7 +1,7 @@
 //
-// Dashkit
+// Theme
 //
-// Custom variables followed by Dashkit variables followed by Bootstrap variables
+// Custom variables followed by Theme variables followed by Bootstrap variables
 // to ensure cascade of styles.
 //
 
@@ -12,19 +12,19 @@
 @import 'user-variables';
 
 // Dark mode variables
-@import 'dashkit/dark/variables-dark';
+@import 'theme/dark/variables-dark';
 
-// Dashkit variables
-@import 'dashkit/variables';
+// Theme variables
+@import 'theme/variables';
 
 // Bootstrap core
 @import '~bootstrap/scss/bootstrap';
 
-// Dashkit core
-@import 'dashkit/dashkit';
+// Theme core
+@import 'theme/theme';
 
 // Dark mode overrides
-@import 'dashkit/dark/overrides-dark';
+@import 'theme/dark/overrides-dark';
 
 // Custom core
 @import 'user';
