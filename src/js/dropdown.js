@@ -3,45 +3,30 @@
 // Dashkit module
 //
 
-const dropdowns = document.querySelectorAll('.dropup, .dropright, .dropdown, .dropleft');
-const events = ['click'];
+const selectors = '.dropup, .dropright, .dropdown, .dropleft';
+const dropdowns = document.querySelectorAll(selectors);
 
-function toggleDropdown(e, dropdown) {
-  const parentMenu = dropdown.closest('.dropdown-menu');
+let currentTarget = undefined;
 
-  if (parentMenu) {
-    const currentMenu = dropdown.querySelector('.dropdown-menu');
-    const siblingMenus = parentMenu.querySelectorAll('.dropdown-menu');
-
-    siblingMenus.forEach(menu => {
-      if (menu !== currentMenu) {
-        menu.classList.remove('show');
-      }
-    });
-
-    currentMenu.classList.toggle('show');
-  }
-}
-
-function hideDropdowns(e, dropdown) {
-  !e.clickEvent && e.preventDefault();
-
-  const currentMenu = dropdown.querySelector('.dropdown-menu');
-  const nestedMenus = currentMenu.querySelectorAll('.dropdown-menu');
-
-  nestedMenus.forEach(menu => {
-    menu.classList.remove('show');
-  });
-}
-
+// Enable nested dropdowns
 dropdowns.forEach(dropdown => {
-  const toggle = dropdown.querySelector('[data-toggle="dropdown"]');
+  dropdown.addEventListener('mousedown', (e) => {
+    e.stopPropagation();
 
-  toggle.addEventListener(events[0], e => {
-    toggleDropdown(e, dropdown);
+    if (e.target.dataset.toggle && e.target.dataset.toggle === 'dropdown') {
+      currentTarget = e.currentTarget;
+    }
   });
 
   dropdown.addEventListener('hide.bs.dropdown', (e) => {
-    hideDropdowns(e, dropdown);
+    e.stopPropagation();
+
+    const parentDropdown = currentTarget ? currentTarget.parentElement.closest(selectors) : undefined;
+
+    if (parentDropdown && parentDropdown === dropdown) {
+      e.preventDefault();
+    }
+
+    currentTarget = undefined;
   });
 });

@@ -13,6 +13,7 @@ import './inputmask';
 import './kanban';
 import './list';
 import './map';
+import './navbar-collapse';
 import './popover';
 import './tooltip';
 import './quill';
