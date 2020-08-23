@@ -1,26 +1,46 @@
-const CopyPlugin = require('copy-webpack-plugin');
-const HandlebarsPlugin = require('handlebars-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
-const autoprefixer = require('autoprefixer');
-const path = require('path');
+const CopyPlugin =                require('copy-webpack-plugin');
+const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
+const HandlebarsPlugin =          require('handlebars-webpack-plugin');
+const MiniCssExtractPlugin =      require('mini-css-extract-plugin');
+const OptimizeCssAssetsPlugin =   require('optimize-css-assets-webpack-plugin');
+const TerserPlugin =              require('terser-webpack-plugin');
+const autoprefixer =              require('autoprefixer');
+const path =                      require('path');
+
+const paths = {
+  src: {
+    favicon:  './src/favicon',
+    fonts:    './src/fonts',
+    img:      './src/img',
+    js:       './src/js',
+    scss:     './src/scss',
+    vendor:   './src/vendor',
+  },
+  dist: {
+    css:      './assets/css',
+    favicon:  './assets/favicon',
+    fonts:    './assets/fonts',
+    img:      './assets/img',
+    js:       './assets/js',
+    vendor:   './assets/vendor',
+  }
+}
 
 const config = {
   devtool: 'source-map',
   entry: {
-    'demo': './src/js/demo.js',
-    'libs': './src/scss/libs.scss',
-    'theme': ['./src/js/theme.js', './src/scss/theme.scss'],
-    'theme-dark': './src/scss/theme-dark.scss',
-    'user': './src/js/user.js',
+    'demo':       [paths.src.js + '/demo.js'],
+    'libs':       [paths.src.scss + '/libs.scss'],
+    'theme':      [paths.src.js + '/theme.js', paths.src.scss + '/theme.scss'],
+    'theme-dark': [paths.src.scss + '/theme-dark.scss'],
+    'user':       [paths.src.js + '/user.js'],
   },
   mode: 'development',
   module: {
     rules: [
       {
         test: /\.(sass|scss)$/,
-        include: path.resolve(__dirname, 'src/scss'),
+        include: path.resolve(__dirname, paths.src.scss.slice(2)),
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
@@ -52,8 +72,8 @@ const config = {
     splitChunks: {
       cacheGroups: {
         vendor: {
-          test: /[\\/]vendor|node_modules[\\/]/,
-          name: 'vendor',
+          test:   /[\\/](vendor|node_modules)[\\/](?=.*\.js$)/,
+          name:   'vendor',
           chunks: 'all'
         }
       }
@@ -87,38 +107,38 @@ const config = {
     ],
   },
   output: {
-    filename: './assets/js/[name].bundle.js',
+    filename: paths.dist.js + '/[name].bundle.js',
   },
   plugins: [
     new CopyPlugin({
       patterns: [
         {
-          from: './src/favicon',
-          to: './assets/favicon',
+          from: paths.src.favicon,
+          to:   paths.dist.favicon,
         },
         {
-          from: './src/fonts',
-          to: './assets/fonts',
+          from: paths.src.fonts,
+          to:   paths.dist.fonts,
         },
         {
-          from: './src/img',
-          to: './assets/img',
+          from: paths.src.img,
+          to:   paths.dist.img,
         },
         {
-          from: './src/vendor',
-          to: './assets/vendor',
+          from: paths.src.vendor,
+          to:   paths.dist.vendor,
         },
       ],
     }),
     new HandlebarsPlugin({
-      entry: path.join(process.cwd(), 'src', 'html', '**', '*.html'),
-      output: path.join(process.cwd(), 'dist', '[path]', '[name].html'),
-      data: path.join(__dirname, 'config.json'),
+      entry:    path.join(process.cwd(), 'src', 'html', '**', '*.html'),
+      output:   path.join(process.cwd(), 'dist', '[path]', '[name].html'),
+      data:     path.join(__dirname, 'config.json'),
       partials: [path.join(process.cwd(), 'src', 'partials', '**', '*.{html,svg}')],
       helpers: {
         is: function (v1, v2, options) {
-          const variants = v2.split(' || ');
-          const isTrue = variants.some(variant => v1 === variant);
+          const variants =  v2.split(' || ');
+          const isTrue =    variants.some(variant => v1 === variant);
 
           return isTrue ? options.fn(this) : options.inverse(this);
         },
@@ -130,14 +150,15 @@ const config = {
         },
       },
       onBeforeSave: function (Handlebars, resultHtml, filename) {
-        const level = filename.split('//').pop().split('/').length;
+        const level =     filename.split('//').pop().split('/').length;
         const finalHtml = resultHtml.split('{{webRoot}}').join('.'.repeat(level));
 
         return finalHtml;
       },
     }),
+    new FixStyleOnlyEntriesPlugin(),
     new MiniCssExtractPlugin({
-      filename: './assets/css/[name].bundle.css',
+      filename: paths.dist.css + '/[name].bundle.css',
     }),
   ],
 };

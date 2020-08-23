@@ -13,16 +13,16 @@
 
 <!-- Theme CSS -->
 {{#if demoMode}}
-  <link rel="stylesheet" href="{{webRoot}}/assets/css/theme.bundle.css" id="stylesheetLight" />
-  <link rel="stylesheet" href="{{webRoot}}/assets/css/theme-dark.bundle.css" id="stylesheetDark" />
+<link rel="stylesheet" href="{{webRoot}}/assets/css/theme.bundle.css" id="stylesheetLight" />
+<link rel="stylesheet" href="{{webRoot}}/assets/css/theme-dark.bundle.css" id="stylesheetDark" />
 
-  <style>body { display: none; }</style>
+<style>body { display: none; }</style>
 {{else}}
-  {{#is colorScheme 'light'}}
-    <link rel="stylesheet" href="{{webRoot}}/assets/css/theme.bundle.css" />
-  {{else is colorScheme 'dark'}}
-    <link rel="stylesheet" href="{{webRoot}}/assets/css/theme-dark.bundle.css" />
-  {{/is}}
+{{#is colorScheme 'light'}}
+<link rel="stylesheet" href="{{webRoot}}/assets/css/theme.bundle.css" />
+{{else is colorScheme 'dark'}}
+<link rel="stylesheet" href="{{webRoot}}/assets/css/theme-dark.bundle.css" />
+{{/is}}
 {{/if}}
 
 <!-- Title -->

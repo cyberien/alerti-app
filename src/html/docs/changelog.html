@@ -14,13 +14,8 @@
     <!-- MAIN CONTENT -->
     <div class="main-content">
 
-      {{#if demoMode}}
-        {{> navs/topbar}}
-      {{/if}}
-
-      {{#is navPosition 'combo'}}
-        {{> navs/topbar}}
-      {{/is}}
+      {{#if demoMode}}{{> navs/topbar}}{{/if}}
+      {{#is navPosition 'combo'}}{{> navs/topbar}}{{/is}}
 
       <div class="{{#is navPosition 'sidenav || combo'}}container-fluid{{/is}}{{#is navPosition 'topnav'}}container{{/is}}">
         <div class="row justify-content-center">
@@ -42,6 +37,35 @@
 
               </div>
             </div>
+
+            <!-- Heading -->
+            <h2 class="d-inline-block"><span class="badge bg-soft-primary mt-n1">v2.0.0-alpha</span></h2> <span class="text-muted"> – August 24th, 2020</span>
+
+            <!-- List -->
+            <ul>
+              <li>Updated to Bootstrap v5.0.0-alpha1.</li>
+              <li>Improved folder structure.</li>
+              <li>Replaced Gulp with Webpack & npm-scripts.</li>
+              <li>Replaced Gulp File Include with Handlebars Webpack Plugin.</li>
+              <li>Replaced Select2 with Choices.js.</li>
+              <li>Replaced jQuery Mask Plugin with Inputmask.</li>
+              <li>Removed jQuery dependency.</li>
+              <li>Moved all JavaScript to ES6 modules.</li>
+              <li>Other small changes.</li>
+            </ul>
+
+            <!-- Text -->
+            <p>
+              <strong>Known issues:</strong>
+            </p>
+
+            <!-- List -->
+            <ul class="mb-5">
+              <li>Tooltips won't work with avatars.</li>
+              <li>Choices.js won't work in dropdown menus.</li>
+              <li>Collapse containers with nested expanded collapse containers collapse awkwardly.</li>
+              <li>Bundled plugins are not available globally (might be a problem for those who work with compiled files only).</li>
+            </ul>
 
             <!-- Heading -->
             <h2 class="d-inline-block"><span class="badge bg-soft-primary mt-n1">v1.6.0</span></h2> <span class="text-muted"> – May 5th, 2020</span>

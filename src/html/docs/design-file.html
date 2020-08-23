@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     {{> partials/head title="Dashkit"}}
@@ -14,13 +14,8 @@
     <!-- MAIN CONTENT -->
     <div class="main-content pb-6">
 
-      {{#if demoMode}}
-        {{> navs/topbar}}
-      {{/if}}
-
-      {{#is navPosition 'combo'}}
-        {{> navs/topbar}}
-      {{/is}}
+      {{#if demoMode}}{{> navs/topbar}}{{/if}}
+      {{#is navPosition 'combo'}}{{> navs/topbar}}{{/is}}
 
       <div class="{{#is navPosition 'sidenav || combo'}}container-fluid{{/is}}{{#is navPosition 'topnav'}}container{{/is}}">
         <div class="row justify-content-center">

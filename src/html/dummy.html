@@ -14,13 +14,8 @@
     <!-- MAIN CONTENT -->
     <div class="main-content">
 
-      {{#if demoMode}}
-        {{> navs/topbar}}
-      {{/if}}
-
-      {{#is navPosition 'combo'}}
-        {{> navs/topbar}}
-      {{/is}}
+      {{#if demoMode}}{{> navs/topbar}}{{/if}}
+      {{#is navPosition 'combo'}}{{> navs/topbar}}{{/is}}
 
     </div>
 

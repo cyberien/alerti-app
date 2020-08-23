@@ -14,13 +14,8 @@
     <!-- MAIN CONTENT -->
     <div class="main-content bg-fixed-bottom" style="background-image: url(assets/img/illustrations/sticky.svg);">
 
-      {{#if demoMode}}
-        {{> navs/topbar}}
-      {{/if}}
-
-      {{#is navPosition 'combo'}}
-        {{> navs/topbar}}
-      {{/is}}
+      {{#if demoMode}}{{> navs/topbar}}{{/if}}
+      {{#is navPosition 'combo'}}{{> navs/topbar}}{{/is}}
 
       <div class="{{#is navPosition 'sidenav || combo'}}container-fluid{{/is}}{{#is navPosition 'topnav'}}container{{/is}}">
         <div class="row justify-content-center">
