@@ -6,6 +6,7 @@ const OptimizeCssAssetsPlugin =   require('optimize-css-assets-webpack-plugin');
 const TerserPlugin =              require('terser-webpack-plugin');
 const autoprefixer =              require('autoprefixer');
 const path =                      require('path');
+const config =                    require('./config.json');
 
 const paths = {
   src: {
@@ -26,14 +27,12 @@ const paths = {
   }
 }
 
-const config = {
+module.exports = {
   devtool: 'source-map',
   entry: {
-    'demo':       [paths.src.js + '/demo.js'],
     'libs':       [paths.src.scss + '/libs.scss'],
-    'theme':      [paths.src.js + '/theme.js', paths.src.scss + '/theme.scss'],
+    'theme':      [...(config.demoMode ? [paths.src.js + '/demo.js'] : []), ...[paths.src.js + '/theme.js', paths.src.scss + '/theme.scss']],
     'theme-dark': [paths.src.scss + '/theme-dark.scss'],
-    'user':       [paths.src.js + '/user.js'],
   },
   mode: 'development',
   module: {
@@ -72,7 +71,7 @@ const config = {
     splitChunks: {
       cacheGroups: {
         vendor: {
-          test:   /[\\/](vendor|node_modules)[\\/](?=.*\.js$)/,
+          test:   /[\\/](vendor|node_modules)[\\/].+\.js$/,
           name:   'vendor',
           chunks: 'all'
         }
@@ -133,7 +132,7 @@ const config = {
     new HandlebarsPlugin({
       entry:    path.join(process.cwd(), 'src', 'html', '**', '*.html'),
       output:   path.join(process.cwd(), 'dist', '[path]', '[name].html'),
-      data:     path.join(__dirname, 'config.json'),
+      data:     config,
       partials: [path.join(process.cwd(), 'src', 'partials', '**', '*.{html,svg}')],
       helpers: {
         is: function (v1, v2, options) {
@@ -162,5 +161,3 @@ const config = {
     }),
   ],
 };
-
-module.exports = config;

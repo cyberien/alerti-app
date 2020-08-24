@@ -18,3 +18,6 @@ import './popover';
 import './tooltip';
 import './quill';
 import './wizard';
+
+// User
+import './user';

@@ -509,6 +509,44 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="topnavPages">
             <li class="dropright">
+              <a class="dropdown-item dropdown-toggle {{#is subcategory 'account'}}active{{/is}}" href="#" id="topnavAccount" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is subcategory 'account'}}true{{else}}false{{/is}}">
+                Account
+              </a>
+              <div class="dropdown-menu" aria-labelledby="topnavAccount">
+                <a class="dropdown-item {{#is page 'account-general.html'}}active{{/is}}" href="{{webRoot}}/account-general.html">
+                  General
+                </a>
+                <a class="dropdown-item {{#is page 'account-billing.html'}}active{{/is}}" href="{{webRoot}}/account-billing.html">
+                  Billing
+                </a>
+                <a class="dropdown-item {{#is page 'account-members.html'}}active{{/is}}" href="{{webRoot}}/account-members.html">
+                  Members
+                </a>
+                <a class="dropdown-item {{#is page 'account-security.html'}}active{{/is}}" href="{{webRoot}}/account-security.html">
+                  Security
+                </a>
+                <a class="dropdown-item {{#is page 'account-notifications.html'}}active{{/is}}" href="{{webRoot}}/account-notifications.html">
+                  Notifications
+                </a>
+              </div>
+            </li>
+            <li class="dropright">
+              <a class="dropdown-item dropdown-toggle {{#is subcategory 'crm'}}active{{/is}}" href="#" id="topnavCrm" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is subcategory 'crm'}}true{{else}}false{{/is}}">
+                CRM
+              </a>
+              <div class="dropdown-menu" aria-labelledby="topnavCrm">
+                <a class="dropdown-item {{#is page 'crm-contacts.html'}}active{{/is}}" href="{{webRoot}}/crm-contacts.html">
+                  Contacts
+                </a>
+                <a class="dropdown-item {{#is page 'crm-companies.html'}}active{{/is}}" href="{{webRoot}}/crm-companies.html">
+                  Companies
+                </a>
+                <a class="dropdown-item {{#is page 'crm-deals.html'}}active{{/is}}" href="{{webRoot}}/crm-deals.html">
+                  Deals
+                </a>
+              </div>
+            </li>
+            <li class="dropright">
               <a class="dropdown-item dropdown-toggle {{#is subcategory 'profile'}}active{{/is}}" href="#" id="topnavProfile" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is subcategory 'profile'}}true{{else}}false{{/is}}">
                 Profile
               </a>
@@ -578,44 +616,6 @@
                 </a>
                 <a class="dropdown-item {{#is page 'social-feed.html'}}active{{/is}}" href="{{webRoot}}/social-feed.html">
                   Social
-                </a>
-              </div>
-            </li>
-            <li class="dropright">
-              <a class="dropdown-item dropdown-toggle {{#is subcategory 'account'}}active{{/is}}" href="#" id="topnavAccount" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is subcategory 'account'}}true{{else}}false{{/is}}">
-                Account
-              </a>
-              <div class="dropdown-menu" aria-labelledby="topnavAccount">
-                <a class="dropdown-item {{#is page 'account-general.html'}}active{{/is}}" href="{{webRoot}}/account-general.html">
-                  General
-                </a>
-                <a class="dropdown-item {{#is page 'account-billing.html'}}active{{/is}}" href="{{webRoot}}/account-billing.html">
-                  Billing
-                </a>
-                <a class="dropdown-item {{#is page 'account-members.html'}}active{{/is}}" href="{{webRoot}}/account-members.html">
-                  Members
-                </a>
-                <a class="dropdown-item {{#is page 'account-security.html'}}active{{/is}}" href="{{webRoot}}/account-security.html">
-                  Security
-                </a>
-                <a class="dropdown-item {{#is page 'account-notifications.html'}}active{{/is}}" href="{{webRoot}}/account-notifications.html">
-                  Notifications
-                </a>
-              </div>
-            </li>
-            <li class="dropright">
-              <a class="dropdown-item dropdown-toggle {{#is subcategory 'crm'}}active{{/is}}" href="#" id="topnavCrm" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is subcategory 'crm'}}true{{else}}false{{/is}}">
-                CRM
-              </a>
-              <div class="dropdown-menu" aria-labelledby="topnavCrm">
-                <a class="dropdown-item {{#is page 'crm-contacts.html'}}active{{/is}}" href="{{webRoot}}/crm-contacts.html">
-                  Contacts
-                </a>
-                <a class="dropdown-item {{#is page 'crm-companies.html'}}active{{/is}}" href="{{webRoot}}/crm-companies.html">
-                  Companies
-                </a>
-                <a class="dropdown-item {{#is page 'crm-deals.html'}}active{{/is}}" href="{{webRoot}}/crm-deals.html">
-                  Deals
                 </a>
               </div>
             </li>
