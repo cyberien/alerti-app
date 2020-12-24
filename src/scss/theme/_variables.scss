@@ -111,6 +111,7 @@ $escaped-characters: (
 //
 // Quickly modify global styling by enabling or disabling optional features.
 
+$enable-smooth-scroll: false !default;
 $enable-rfs: false !default;
 $enable-validation-icons: false !default;
 $enable-negative-margins: true !default;
