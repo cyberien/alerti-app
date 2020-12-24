@@ -180,7 +180,7 @@ function globalOptions() {
     });
 
     if (activeDatasets.length > 1) {
-      content = '<span class="popover-body-label mr-auto">' + label + '</span>';
+      content = '<span class="popover-body-label me-auto">' + label + '</span>';
     }
 
     content += '<span class="popover-body-value">' + callback(value) + '</span>';

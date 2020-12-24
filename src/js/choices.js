@@ -30,7 +30,7 @@ toggles.forEach((toggle) => {
           const selectText = this.config.itemSelectText;
 
           const label = data.customProperties && data.customProperties.avatarSrc ? `
-            <div class="avatar avatar-xs mr-3">
+            <div class="avatar avatar-xs me-3">
               <img class="avatar-img rounded-circle" src="${data.customProperties.avatarSrc}" alt="${data.label}" >
             </div> ${data.label}
           ` : data.label;
