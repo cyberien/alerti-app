@@ -19,14 +19,14 @@
 
 @each $color, $value in $theme-colors {
   .alert-#{$color} {
-    @include alert-variant(color-level($value, $alert-bg-level), color-level($value, $alert-border-level), color-contrast(color-level($value, $alert-bg-level)));
+    @include alert-variant(shift-color($value, $alert-bg-scale), shift-color($value, $alert-border-scale), color-contrast(shift-color($value, $alert-bg-scale)));
 
     .alert-link, .close {
-      color: color-contrast(color-level($value, $alert-bg-level));
+      color: color-contrast(shift-color($value, $alert-bg-scale));
     }
 
     hr {
-      background-color: darken(color-level($value, $alert-border-level), 5%);
+      background-color: darken(shift-color($value, $alert-border-scale), 5%);
     }
   }
 }

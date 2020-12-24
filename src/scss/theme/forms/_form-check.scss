@@ -63,13 +63,13 @@
 // Circle
 
 .form-check-circle {
-  padding-left: $form-check-circle-padding-left;
+  padding-left: $form-check-circle-padding-start;
 }
 
 .form-check-circle > .form-check-input {
   width: $form-check-circle-indicator-size;
   height: $form-check-circle-indicator-size;
-  margin-left: -$form-check-circle-padding-left;
+  margin-left: -$form-check-circle-padding-start;
   border-radius: $form-check-circle-indicator-border-radius;
   background-image: escape-svg($form-check-circle-indicator-icon-checked);
   background-size: $form-check-circle-indicator-bg-size;

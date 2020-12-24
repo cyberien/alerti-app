@@ -65,7 +65,7 @@ $table-striped-bg: $gray-900-dark !default;
 $table-active-bg: $gray-900-dark !default;
 $table-hover-bg: $gray-900-dark !default;
 
-$table-bg-level: 0 !default;
+$table-bg-scale: 0 !default;
 
 
 // Forms
@@ -219,7 +219,7 @@ $card-box-shadow: 0 .75rem 1.5rem transparentize($black-dark, .5) !default;
 
 // Badges
 
-$badge-soft-bg-level: 10 !default;
+$badge-soft-bg-scale: 10 !default;
 
 
 // Auth
@@ -234,7 +234,7 @@ $avatar-title-bg: $gray-600-dark !default;
 
 // Backgrounds
 
-$bg-soft-level: 10 !default;
+$bg-soft-scale: 10 !default;
 
 
 // Comment

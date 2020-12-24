@@ -19,8 +19,8 @@
 // Pills
 
 .badge.rounded-pill {
-  padding-right: $rounded-pill-padding-x;
-  padding-left: $rounded-pill-padding-x;
+  padding-right: $border-radius-pill-padding-x;
+  padding-left: $border-radius-pill-padding-x;
 }
 
 // Text color
@@ -41,6 +41,6 @@
 // Creates the "soft" badge variant
 @each $color, $value in $theme-colors {
   .badge.bg-soft-#{$color} {
-    @include badge-variant-soft(color-level($value, $badge-soft-bg-level), $value);
+    @include badge-variant-soft(shift-color($value, $badge-soft-bg-scale), $value);
   }
 }

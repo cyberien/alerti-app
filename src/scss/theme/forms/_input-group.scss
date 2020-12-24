@@ -86,21 +86,21 @@
 // Rounded
 
 .input-group-rounded.input-group-merge > .form-control {
-  border-top-left-radius: $rounded-pill;
-  border-bottom-left-radius: $rounded-pill;
+  border-top-left-radius: $border-radius-pill;
+  border-bottom-left-radius: $border-radius-pill;
 }
 
 .input-group-rounded.input-group-merge > .input-group-text {
-  border-top-right-radius: $rounded-pill;
-  border-bottom-right-radius: $rounded-pill;
+  border-top-right-radius: $border-radius-pill;
+  border-bottom-right-radius: $border-radius-pill;
 }
 
 .input-group-rounded.input-group-merge.input-group-reverse > .form-control {
-  border-radius: 0 $rounded-pill $rounded-pill 0;
+  border-radius: 0 $border-radius-pill $border-radius-pill 0;
 }
 
 .input-group-rounded.input-group-merge.input-group-reverse > .input-group-text {
-  border-radius: $rounded-pill 0 0 $rounded-pill;
+  border-radius: $border-radius-pill 0 0 $border-radius-pill;
 }
 
 

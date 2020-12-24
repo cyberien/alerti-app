@@ -62,6 +62,6 @@
 
 @each $color, $value in $theme-colors {
   .bg-#{$color}-soft {
-    background-color: color-level($value, $bg-soft-level) !important;
+    background-color: shift-color($value, $bg-soft-scale) !important;
   }
 }

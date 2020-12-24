@@ -358,7 +358,7 @@ $input-height-inner-sm: ($font-size-sm * $input-btn-line-height-sm) + ($input-bt
 
 $form-check-input-active-filter: none !default;
 
-$form-check-padding-left: 1.5rem !default;
+$form-check-padding-start: 1.5rem !default;
 $form-check-label-cursor: pointer !default;
 
 $form-check-input-bg: $gray-300 !default;
@@ -376,7 +376,7 @@ $form-check-input-indeterminate-color: $component-active-color !default;
 
 $form-switch-color: $white !default;
 $form-switch-width: 3rem !default;
-$form-switch-padding-left: $form-switch-width + .5rem !default;
+$form-switch-padding-start: $form-switch-width + .5rem !default;
 $form-switch-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$form-switch-color}'/></svg>") !default;
 
 $form-switch-focus-color: $form-switch-color !default;
@@ -557,9 +557,9 @@ $alert-padding-x: 1.25rem !default;
 $alert-margin-bottom: $spacer !default;
 $alert-link-font-weight: $font-weight-normal !default;
 
-$alert-bg-level: 0 !default;
-$alert-border-level: 0 !default;
-$alert-color-level: 6 !default;
+$alert-bg-scale: 0 !default;
+$alert-border-scale: 0 !default;
+$alert-color-scale: 60% !default;
 
 
 // Progress bars
@@ -655,7 +655,7 @@ $form-check-circle-indicator-size: 1.375rem !default;
 $form-check-circle-indicator-border-radius: 50% !default;
 $form-check-circle-indicator-icon-checked: url(escape-svg("data:image/svg+xml,<svg viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M11.3333 1L3.99996 8.33333L0.666626 5' stroke='#{$white}' stroke-width='1.33333' stroke-linecap='round' stroke-linejoin='round'/></svg>")) !default;
 $form-check-circle-indicator-bg-size: .75rem .5625rem !default;
-$form-check-circle-padding-left: 1.875rem !default;
+$form-check-circle-padding-start: 1.875rem !default;
 
 $form-group-margin-bottom: 1.375rem !default;
 
@@ -779,8 +779,8 @@ $list-group-item-padding-y-lg: $spacer !default;
 
 // Badges
 
-$badge-soft-bg-level: -10 !default;
-$rounded-pill-padding-x: .6em !default;
+$badge-soft-bg-scale: -10% !default;
+$border-radius-pill-padding-x: .6em !default;
 
 
 // Modal
@@ -837,7 +837,7 @@ $avatar-title-color: $white !default;
 
 // Backgrounds
 
-$bg-soft-level: -11 !default;
+$bg-soft-scale: -11% !default;
 
 
 // Charts
@@ -964,9 +964,9 @@ $utilities: (
     class: border-top,
     values: $border-widths
   ),
-  "border-right-width": (
+  "border-end-width": (
     property: border-right-width,
-    class: border-right,
+    class: border-end,
     values: $border-widths
   ),
   "border-bottom-width": (
@@ -974,9 +974,9 @@ $utilities: (
     class: border-bottom,
     values: $border-widths
   ),
-  "border-left-width": (
+  "border-start-width": (
     property: border-left-width,
-    class: border-left,
+    class: border-start,
     values: $border-widths
   ),
   "border-color": (
