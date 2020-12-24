@@ -2,7 +2,7 @@
   <div class="container-fluid">
 
     <!-- Toggler -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebarSmallCollapse" aria-controls="sidebarSmallCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarSmallCollapse" aria-controls="sidebarSmallCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -19,7 +19,7 @@
       <div class="dropdown">
 
         <!-- Toggle -->
-        <a href="#" id="sidebarSmallIcon" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a href="#" id="sidebarSmallIcon" class="dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <div class="avatar avatar-sm avatar-online">
             <img src="{{webRoot}}/assets/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle" alt="...">
           </div>
@@ -56,7 +56,7 @@
       <!-- Navigation -->
       <ul class="navbar-nav">
         <li class="nav-item dropright">
-          <a class="nav-link dropdown-toggle {{#is category 'dashboards'}}active{{/is}}" id="sidebarSmallDashboards" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="{{#is category 'dashboards'}}true{{else}}false{{/is}}" title="Dashboards">
+          <a class="nav-link dropdown-toggle {{#is category 'dashboards'}}active{{/is}}" id="sidebarSmallDashboards" href="#" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="{{#is category 'dashboards'}}true{{else}}false{{/is}}" title="Dashboards">
             <i class="fe fe-home"></i> <span class="d-md-none">Dashboards</span>
           </a>
           <ul class="dropdown-menu" aria-labelledby="sidebarSmallDashboards">
@@ -81,7 +81,7 @@
           </ul>
         </li>
         <li class="nav-item dropright">
-          <a class="nav-link dropdown-toggle {{#is category 'pages'}}active{{/is}}" id="sidebarSmallPages" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="{{#is category 'pages'}}true{{else}}false{{/is}}">
+          <a class="nav-link dropdown-toggle {{#is category 'pages'}}active{{/is}}" id="sidebarSmallPages" href="#" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="{{#is category 'pages'}}true{{else}}false{{/is}}">
             <i class="fe fe-file"></i> <span class="d-md-none">Pages</span>
           </a>
           <ul class="dropdown-menu" aria-labelledby="sidebarSmallPages">
@@ -89,7 +89,7 @@
               <h6 class="text-uppercase mb-0">Pages</h6>
             </li>
             <li class="dropright">
-              <a class="dropdown-item dropdown-toggle {{#is subcategory 'account'}}active{{/is}}" href="#" id="sidebarSmallAccount" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is subcategory 'account'}}true{{else}}false{{/is}}">
+              <a class="dropdown-item dropdown-toggle {{#is subcategory 'account'}}active{{/is}}" href="#" id="sidebarSmallAccount" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is subcategory 'account'}}true{{else}}false{{/is}}">
                 Account
               </a>
               <div class="dropdown-menu" aria-labelledby="sidebarSmallAccount">
@@ -111,7 +111,7 @@
               </div>
             </li>
             <li class="dropright">
-              <a class="dropdown-item dropdown-toggle {{#is subcategory 'crm'}}active{{/is}}" href="#" id="sidebarSmallCrm" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is subcategory 'crm'}}true{{else}}false{{/is}}">
+              <a class="dropdown-item dropdown-toggle {{#is subcategory 'crm'}}active{{/is}}" href="#" id="sidebarSmallCrm" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is subcategory 'crm'}}true{{else}}false{{/is}}">
                 CRM
               </a>
               <div class="dropdown-menu" aria-labelledby="sidebarSmallCrm">
@@ -127,7 +127,7 @@
               </div>
             </li>
             <li class="dropright">
-              <a class="dropdown-item dropdown-toggle {{#is subcategory 'profile'}}active{{/is}}" href="#" id="sidebarSmallProfile" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is subcategory 'profile'}}true{{else}}false{{/is}}">
+              <a class="dropdown-item dropdown-toggle {{#is subcategory 'profile'}}active{{/is}}" href="#" id="sidebarSmallProfile" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is subcategory 'profile'}}true{{else}}false{{/is}}">
                 Profile
               </a>
               <div class="dropdown-menu" aria-labelledby="sidebarSmallProfile">
@@ -149,7 +149,7 @@
               </div>
             </li>
             <li class="dropright">
-              <a class="dropdown-item dropdown-toggle {{#is subcategory 'project'}}active{{/is}}" href="#" id="sidebarSmallProject" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is subcategory 'project'}}true{{else}}false{{/is}}">
+              <a class="dropdown-item dropdown-toggle {{#is subcategory 'project'}}active{{/is}}" href="#" id="sidebarSmallProject" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is subcategory 'project'}}true{{else}}false{{/is}}">
                 Project
               </a>
               <div class="dropdown-menu" aria-labelledby="sidebarSmallProject">
@@ -168,7 +168,7 @@
               </div>
             </li>
             <li class="dropright">
-              <a class="dropdown-item dropdown-toggle {{#is subcategory 'team'}}active{{/is}}" href="#" id="sidebarSmallTeam" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is subcategory 'team'}}true{{else}}false{{/is}}">
+              <a class="dropdown-item dropdown-toggle {{#is subcategory 'team'}}active{{/is}}" href="#" id="sidebarSmallTeam" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is subcategory 'team'}}true{{else}}false{{/is}}">
                 Team
               </a>
               <div class="dropdown-menu" aria-labelledby="sidebarSmallTeam">
@@ -187,7 +187,7 @@
               </div>
             </li>
             <li class="dropright">
-              <a class="dropdown-item dropdown-toggle {{#is subcategory 'feed'}}active{{/is}}" href="#" id="sidebarSmallFeed" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is subcategory 'feed'}}true{{else}}false{{/is}}">
+              <a class="dropdown-item dropdown-toggle {{#is subcategory 'feed'}}active{{/is}}" href="#" id="sidebarSmallFeed" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is subcategory 'feed'}}true{{else}}false{{/is}}">
                 Feed
               </a>
               <div class="dropdown-menu" aria-labelledby="sidebarSmallFeed">
@@ -226,13 +226,13 @@
             </li>
           </ul>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" data-template='<div class="tooltip d-none d-md-block" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>' title="Widgets">
+        <li class="nav-item" data-bs-toggle="tooltip" data-placement="right" data-template='<div class="tooltip d-none d-md-block" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>' title="Widgets">
           <a class="nav-link {{#is page 'widgets.html'}}active{{/is}}" href="{{webRoot}}/widgets.html">
             <i class="fe fe-grid"></i> <span class="d-md-none">Widgets</span>
           </a>
         </li>
         <li class="nav-item dropright">
-          <a class="nav-link dropdown-toggle" id="sidebarSmallAuth" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" id="sidebarSmallAuth" href="#" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
             <i class="fe fe-user"></i> <span class="d-md-none">Auth</span>
           </a>
           <ul class="dropdown-menu" aria-labelledby="sidebarSmallAuth">
@@ -240,7 +240,7 @@
               <h6 class="text-uppercase mb-0">Authentication</h6>
             </li>
             <li class="dropright">
-              <a class="dropdown-item dropdown-toggle" href="#" id="sidebarSmallSignIn" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="dropdown-item dropdown-toggle" href="#" id="sidebarSmallSignIn" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Sign in
               </a>
               <div class="dropdown-menu" aria-labelledby="sidebarSmallSignIn">
@@ -256,7 +256,7 @@
               </div>
             </li>
             <li class="dropright">
-              <a class="dropdown-item dropdown-toggle" href="#" id="sidebarSmallSignUp" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="dropdown-item dropdown-toggle" href="#" id="sidebarSmallSignUp" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Sign up
               </a>
               <div class="dropdown-menu" aria-labelledby="sidebarSmallSignUp">
@@ -272,7 +272,7 @@
               </div>
             </li>
             <li class="dropright">
-              <a class="dropdown-item dropdown-toggle" href="#" id="sidebarSmallPassword" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="dropdown-item dropdown-toggle" href="#" id="sidebarSmallPassword" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Password reset
               </a>
               <div class="dropdown-menu" aria-labelledby="sidebarSmallPassword">
@@ -288,7 +288,7 @@
               </div>
             </li>
             <li class="dropright">
-              <a class="dropdown-item dropdown-toggle" href="#" id="sidebarSmallError" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="dropdown-item dropdown-toggle" href="#" id="sidebarSmallError" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Error
               </a>
               <div class="dropdown-menu" aria-labelledby="sidebarSmallError">
@@ -303,7 +303,7 @@
           </ul>
         </li>
         <li class="nav-item d-md-none">
-          <a class="nav-link" href="#sidebarModalActivity" data-toggle="modal">
+          <a class="nav-link" href="#sidebarModalActivity" data-bs-toggle="modal">
             <span class="fe fe-bell"></span> Notifications
           </a>
         </li>
@@ -315,7 +315,7 @@
       <!-- Navigation -->
       <ul class="navbar-nav mb-md-4">
         <li class="nav-item dropright">
-          <a class="nav-link dropdown-toggle {{#is category 'basics'}}active{{/is}}" id="sidebarSmallBasics" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="{{#is category 'basics'}}true{{else}}false{{/is}}" title="Basics">
+          <a class="nav-link dropdown-toggle {{#is category 'basics'}}active{{/is}}" id="sidebarSmallBasics" href="#" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="{{#is category 'basics'}}true{{else}}false{{/is}}" title="Basics">
             <i class="fe fe-clipboard"></i> <span class="d-md-none">Basics</span>
           </a>
           <ul class="dropdown-menu" aria-labelledby="sidebarSmallBasics">
@@ -335,12 +335,12 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{#is page 'components.html'}}active{{/is}}" href="{{webRoot}}/docs/components.html" data-toggle="tooltip" data-placement="right" data-template='<div class="tooltip d-none d-md-block" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>' title="Components">
+          <a class="nav-link {{#is page 'components.html'}}active{{/is}}" href="{{webRoot}}/docs/components.html" data-bs-toggle="tooltip" data-placement="right" data-template='<div class="tooltip d-none d-md-block" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>' title="Components">
             <i class="fe fe-book-open"></i> <span class="d-md-none">Components</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{#is page 'changelog.html'}}active{{/is}}" href="{{webRoot}}/docs/changelog.html" data-toggle="tooltip" data-placement="right" data-template='<div class="tooltip d-none d-md-block" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>' title="Changelog">
+          <a class="nav-link {{#is page 'changelog.html'}}active{{/is}}" href="{{webRoot}}/docs/changelog.html" data-bs-toggle="tooltip" data-placement="right" data-template='<div class="tooltip d-none d-md-block" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>' title="Changelog">
             <i class="fe fe-git-branch"></i> <span class="d-md-none">Changelog</span> <span class="badge bg-primary ms-auto d-md-none">v2.0.0-alpha</span>
           </a>
         </li>
@@ -351,8 +351,8 @@
 
       {{#if demoMode}}
         <!-- Customize -->
-        <div class="mb-4" data-toggle="tooltip" data-placement="right" data-template='<div class="tooltip d-none d-md-block" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>' title="Customize">
-          <a href="#modalDemo" class="btn btn-block btn-primary" data-toggle="modal">
+        <div class="mb-4" data-bs-toggle="tooltip" data-placement="right" data-template='<div class="tooltip d-none d-md-block" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>' title="Customize">
+          <a href="#modalDemo" class="btn btn-block btn-primary" data-bs-toggle="modal">
             <i class="fe fe-sliders"></i> <span class="d-md-none ms-2">Customize</span>
           </a>
         </div>
@@ -363,14 +363,14 @@
         <div class="navbar-user d-none d-md-flex flex-column" id="sidebarSmallUser">
 
           <!-- Icon -->
-          <a href="#sidebarModalSearch" class="navbar-user-link mb-3" data-toggle="modal">
+          <a href="#sidebarModalSearch" class="navbar-user-link mb-3" data-bs-toggle="modal">
             <span class="icon">
               <i class="fe fe-search"></i>
             </span>
           </a>
 
           <!-- Icon -->
-          <a href="#sidebarModalActivity" class="navbar-user-link mb-3" data-toggle="modal">
+          <a href="#sidebarModalActivity" class="navbar-user-link mb-3" data-bs-toggle="modal">
             <span class="icon">
               <i class="fe fe-bell"></i>
             </span>
@@ -380,7 +380,7 @@
           <div class="dropright">
 
             <!-- Toggle -->
-            <a href="#" id="sidebarSmallIconCopy" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a href="#" id="sidebarSmallIconCopy" class="dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <div class="avatar avatar-sm avatar-online">
                 <img src="{{webRoot}}/assets/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle" alt="...">
               </div>

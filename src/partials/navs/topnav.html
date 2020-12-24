@@ -2,7 +2,7 @@
   <div class="container">
 
     <!-- Toggler -->
-    <button class="navbar-toggler me-auto" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler me-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -16,7 +16,7 @@
       <div class="input-group input-group-rounded input-group-merge input-group-reverse" data-list='{"valueNames": ["name"]}'>
 
         <!-- Input -->
-        <input type="search" class="form-control dropdown-toggle list-search" data-toggle="dropdown" placeholder="Search" aria-label="Search">
+        <input type="search" class="form-control dropdown-toggle list-search" data-bs-toggle="dropdown" placeholder="Search" aria-label="Search">
 
         <!-- Icon -->
         <div class="input-group-text">
@@ -219,7 +219,7 @@
       <div class="dropdown me-4 d-none d-lg-flex">
 
         <!-- Toggle -->
-        <a href="#" class="navbar-user-link" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a href="#" class="navbar-user-link" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <span class="icon active">
             <i class="fe fe-bell"></i>
           </span>
@@ -455,7 +455,7 @@
       <div class="dropdown">
 
         <!-- Toggle -->
-        <a href="#" class="avatar avatar-sm avatar-online dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a href="#" class="avatar avatar-sm avatar-online dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <img src="{{webRoot}}/assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
         </a>
 
@@ -482,7 +482,7 @@
       <!-- Navigation -->
       <ul class="navbar-nav me-lg-auto">
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle {{#is category 'dashboards'}}active{{/is}}" href="#" id="topnavDashboards" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is category 'dashboards'}}true{{else}}false{{/is}}">
+          <a class="nav-link dropdown-toggle {{#is category 'dashboards'}}active{{/is}}" href="#" id="topnavDashboards" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is category 'dashboards'}}true{{else}}false{{/is}}">
             Dashboards
           </a>
           <ul class="dropdown-menu" aria-labelledby="topnavDashboards">
@@ -504,12 +504,12 @@
           </ul>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle {{#is category 'pages'}}active{{/is}}" href="#" id="topnavPages" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is category 'pages'}}true{{else}}false{{/is}}">
+          <a class="nav-link dropdown-toggle {{#is category 'pages'}}active{{/is}}" href="#" id="topnavPages" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is category 'pages'}}true{{else}}false{{/is}}">
             Pages
           </a>
           <ul class="dropdown-menu" aria-labelledby="topnavPages">
             <li class="dropright">
-              <a class="dropdown-item dropdown-toggle {{#is subcategory 'account'}}active{{/is}}" href="#" id="topnavAccount" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is subcategory 'account'}}true{{else}}false{{/is}}">
+              <a class="dropdown-item dropdown-toggle {{#is subcategory 'account'}}active{{/is}}" href="#" id="topnavAccount" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is subcategory 'account'}}true{{else}}false{{/is}}">
                 Account
               </a>
               <div class="dropdown-menu" aria-labelledby="topnavAccount">
@@ -531,7 +531,7 @@
               </div>
             </li>
             <li class="dropright">
-              <a class="dropdown-item dropdown-toggle {{#is subcategory 'crm'}}active{{/is}}" href="#" id="topnavCrm" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is subcategory 'crm'}}true{{else}}false{{/is}}">
+              <a class="dropdown-item dropdown-toggle {{#is subcategory 'crm'}}active{{/is}}" href="#" id="topnavCrm" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is subcategory 'crm'}}true{{else}}false{{/is}}">
                 CRM
               </a>
               <div class="dropdown-menu" aria-labelledby="topnavCrm">
@@ -547,7 +547,7 @@
               </div>
             </li>
             <li class="dropright">
-              <a class="dropdown-item dropdown-toggle {{#is subcategory 'profile'}}active{{/is}}" href="#" id="topnavProfile" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is subcategory 'profile'}}true{{else}}false{{/is}}">
+              <a class="dropdown-item dropdown-toggle {{#is subcategory 'profile'}}active{{/is}}" href="#" id="topnavProfile" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is subcategory 'profile'}}true{{else}}false{{/is}}">
                 Profile
               </a>
               <div class="dropdown-menu" aria-labelledby="topnavProfile">
@@ -569,7 +569,7 @@
               </div>
             </li>
             <li class="dropright">
-              <a class="dropdown-item dropdown-toggle {{#is subcategory 'project'}}active{{/is}}" href="#" id="topnavProject" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is subcategory 'project'}}true{{else}}false{{/is}}">
+              <a class="dropdown-item dropdown-toggle {{#is subcategory 'project'}}active{{/is}}" href="#" id="topnavProject" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is subcategory 'project'}}true{{else}}false{{/is}}">
                 Project
               </a>
               <div class="dropdown-menu" aria-labelledby="topnavProject">
@@ -588,7 +588,7 @@
               </div>
             </li>
             <li class="dropright">
-              <a class="dropdown-item dropdown-toggle {{#is subcategory 'team'}}active{{/is}}" href="#" id="topnavTeam" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is subcategory 'team'}}true{{else}}false{{/is}}">
+              <a class="dropdown-item dropdown-toggle {{#is subcategory 'team'}}active{{/is}}" href="#" id="topnavTeam" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is subcategory 'team'}}true{{else}}false{{/is}}">
                 Team
               </a>
               <div class="dropdown-menu" aria-labelledby="topnavTeam">
@@ -607,7 +607,7 @@
               </div>
             </li>
             <li class="dropright">
-              <a class="dropdown-item dropdown-toggle {{#is subcategory 'feed'}}active{{/is}}" href="#" id="topnavFeed" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is subcategory 'feed'}}true{{else}}false{{/is}}">
+              <a class="dropdown-item dropdown-toggle {{#is subcategory 'feed'}}active{{/is}}" href="#" id="topnavFeed" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is subcategory 'feed'}}true{{else}}false{{/is}}">
                 Feed
               </a>
               <div class="dropdown-menu" aria-labelledby="topnavFeed">
@@ -652,12 +652,12 @@
           </ul>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="topnavAuth" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="topnavAuth" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Auth
           </a>
           <ul class="dropdown-menu" aria-labelledby="topnavAuth">
             <li class="dropright">
-              <a class="dropdown-item dropdown-toggle" href="#" id="topnavSignIn" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="dropdown-item dropdown-toggle" href="#" id="topnavSignIn" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Sign in
               </a>
               <div class="dropdown-menu" aria-labelledby="topnavSignIn">
@@ -673,7 +673,7 @@
               </div>
             </li>
             <li class="dropright">
-              <a class="dropdown-item dropdown-toggle" href="#" id="topnavSignUp" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="dropdown-item dropdown-toggle" href="#" id="topnavSignUp" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Sign up
               </a>
               <div class="dropdown-menu" aria-labelledby="topnavSignUp">
@@ -689,7 +689,7 @@
               </div>
             </li>
             <li class="dropright">
-              <a class="dropdown-item dropdown-toggle" href="#" id="topnavPassword" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="dropdown-item dropdown-toggle" href="#" id="topnavPassword" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Password reset
               </a>
               <div class="dropdown-menu" aria-labelledby="topnavPassword">
@@ -705,7 +705,7 @@
               </div>
             </li>
             <li class="dropright">
-              <a class="dropdown-item dropdown-toggle" href="#" id="topnavError" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="dropdown-item dropdown-toggle" href="#" id="topnavError" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Error
               </a>
               <div class="dropdown-menu" aria-labelledby="topnavError">
@@ -720,12 +720,12 @@
           </ul>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle {{#is category 'docs'}}active{{/is}}" href="#" id="topnavDocumentation" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle {{#is category 'docs'}}active{{/is}}" href="#" id="topnavDocumentation" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Docs
           </a>
           <ul class="dropdown-menu" aria-labelledby="topnavDocumentation">
             <li class="dropright">
-              <a class="dropdown-item dropdown-toggle {{#is subcategory 'basics'}}active{{/is}}" href="#" id="topnavBasics" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is subcategory 'basics'}}true{{else}}false{{/is}}">
+              <a class="dropdown-item dropdown-toggle {{#is subcategory 'basics'}}active{{/is}}" href="#" id="topnavBasics" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="{{#is subcategory 'basics'}}true{{else}}false{{/is}}">
                 Basics
               </a>
               <div class="dropdown-menu" aria-labelledby="topnavBasics">
@@ -750,7 +750,7 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#modalDemo" data-toggle="modal">
+          <a class="nav-link" href="#modalDemo" data-bs-toggle="modal">
             Customize
           </a>
         </li>
