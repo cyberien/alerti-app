@@ -40,7 +40,7 @@
 
 // Creates the "soft" badge variant
 @each $color, $value in $theme-colors {
-  .badge.bg-soft-#{$color} {
+  .badge.bg-#{$color}-soft {
     @include badge-variant-soft(shift-color($value, $badge-soft-bg-scale), $value);
   }
 }
