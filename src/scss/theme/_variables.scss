@@ -597,9 +597,8 @@ $breadcrumb-divider: "" !default;
 
 // Close
 
-$close-color: $text-muted !default;
-$close-text-shadow: none !default;
-
+$btn-close-width: .5em !default;
+$btn-close-padding-x: .5em !default;
 
 // Code
 
@@ -811,11 +810,6 @@ $breadcrumb-font-size-sm: $font-size-sm !default;
 // Progress bars
 
 $progress-height-sm: 0.25rem !default;
-
-
-// Close
-
-$close-font-size-sm: $font-size-base !default;
 
 
 // Auth

@@ -12,7 +12,7 @@ export default (function() {
   function init(list) {
     const listAlert = list.querySelector('.list-alert');
     const listAlertCount = list.querySelector('.list-alert-count');
-    const listAlertClose = list.querySelector('.list-alert .close');
+    const listAlertClose = list.querySelector('.list-alert .btn-close');
     const listCheckboxes = list.querySelectorAll('.list-checkbox');
     const listCheckboxAll = list.querySelector('.list-checkbox-all');
     const listPaginationPrev = list.querySelector('.list-pagination-prev');
