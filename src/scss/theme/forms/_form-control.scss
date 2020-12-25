@@ -28,7 +28,7 @@
 // Sets the height of the input to auto
 
 .form-control-auto {
-  min-height: 0;
+  min-height: 0 !important;
   padding-top: 0;
   padding-bottom: 0;
 }
