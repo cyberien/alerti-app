@@ -111,11 +111,11 @@
 }
 
 .input-group-rounded.input-group-merge.input-group-reverse > .form-control {
-  border-radius: 0 $border-radius-pill $border-radius-pill 0;
+  border-radius: 0 $border-radius-pill $border-radius-pill 0 !important;
 }
 
 .input-group-rounded.input-group-merge.input-group-reverse > .input-group-text {
-  border-radius: $border-radius-pill 0 0 $border-radius-pill;
+  border-radius: $border-radius-pill 0 0 $border-radius-pill !important;
 }
 
 
