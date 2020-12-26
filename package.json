@@ -1,6 +1,6 @@
 {
-  "name": "Dashkit",
-  "version": "2.0.0",
+  "name": "dashkit",
+  "version": "2.0.0-beta1",
   "description": "",
   "scripts": {
     "start": "webpack-dev-server --open",
