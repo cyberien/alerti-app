@@ -15,6 +15,7 @@ export default (function() {
     const listAlertClose = list.querySelector('.list-alert .btn-close');
     const listCheckboxes = list.querySelectorAll('.list-checkbox');
     const listCheckboxAll = list.querySelector('.list-checkbox-all');
+    const listPagination = list.querySelectorAll('.list-pagination');
     const listPaginationPrev = list.querySelector('.list-pagination-prev');
     const listPaginationNext = list.querySelector('.list-pagination-next');
     const listOptions = list.dataset.list && JSON.parse(list.dataset.list);
@@ -30,6 +31,15 @@ export default (function() {
 
     // Init
     const listObj = new List(list, options);
+
+    // Pagination
+    if (listPagination) {
+      [].forEach.call(listPagination, function(pagination) {
+        pagination.addEventListener('click', function(e) {
+          e.preventDefault();
+        });
+      });
+    }
 
     // Pagination (next)
     if (listPaginationNext) {
