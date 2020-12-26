@@ -27,7 +27,7 @@ const config = {
   sidebarSize: (localStorage.getItem('dashkitSidebarSize')) ? localStorage.getItem('dashkitSidebarSize') : 'base'
 }
 
-const sidebarSizeCollapse = new Collapse(sidebarSizeContainer);
+const sidebarSizeCollapse = sidebarSizeContainer ? new Collapse(sidebarSizeContainer) : null;
 
 function togglePopover() {
   if (popover) {
@@ -232,10 +232,14 @@ toggleNavColor(config.navColor);
 toggleSidebarSize(config.sidebarSize);
 
 // Toggle form controls
-toggleFormControls(form, config.colorScheme, config.navPosition, config.navColor, config.sidebarSize);
+if (form) {
+  toggleFormControls(form, config.colorScheme, config.navPosition, config.navColor, config.sidebarSize);
+}
 
 // Toggle sidebarSize container
-toggleSidebarSizeContainer(config.navPosition);
+if (sidebarSizeContainer) {
+  toggleSidebarSizeContainer(config.navPosition);
+}
 
 // Enable body
 document.body.style.display = 'block';

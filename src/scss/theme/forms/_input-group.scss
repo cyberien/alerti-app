@@ -51,6 +51,11 @@
   border-bottom-right-radius: $input-border-radius;
 }
 
+.input-group-merge.input-group-reverse:not(.input-group-rounded) > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+  border-top-left-radius: $input-border-radius;
+  border-bottom-left-radius: $input-border-radius;
+}
+
 
 // Sizing
 
@@ -68,6 +73,11 @@
   border-bottom-right-radius: $input-border-radius-sm;
 }
 
+.input-group-sm.input-group-merge.input-group-reverse:not(.input-group-rounded) > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+  border-top-left-radius: $input-border-radius-sm;
+  border-bottom-left-radius: $input-border-radius-sm;
+}
+
 .input-group-lg.input-group-merge.input-group-reverse > .form-control {
   padding-right: $input-padding-x-lg;
   border-radius: 0 $input-border-radius-lg $input-border-radius-lg 0;
@@ -80,6 +90,11 @@
 .input-group-lg.input-group-merge.input-group-reverse:not(.input-group-rounded) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
   border-top-right-radius: $input-border-radius-lg;
   border-bottom-right-radius: $input-border-radius-lg;
+}
+
+.input-group-lg.input-group-merge.input-group-reverse:not(.input-group-rounded) > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+  border-top-left-radius: $input-border-radius-lg;
+  border-bottom-left-radius: $input-border-radius-lg;
 }
 
 
@@ -108,8 +123,6 @@
 
 .input-group-flush.input-group-merge > .form-control,
 .input-group-flush.input-group-merge > .input-group-text {
-  padding-top: 0;
-  padding-bottom: 0;
   border-color: transparent;
   background-color: transparent;
 }
