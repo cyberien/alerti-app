@@ -11,7 +11,6 @@ toggles.forEach((toggle) => {
   const elementOptions = toggle.dataset.choices ? JSON.parse(toggle.dataset.choices) : {};
 
   const defaultOptions = {
-    shouldSort: false,
     classNames: {
       containerInner: toggle.className,
       input: 'form-control',
@@ -21,6 +20,7 @@ toggles.forEach((toggle) => {
       activeState: 'show',
       selectedState: 'active',
     },
+    shouldSort: false,
     callbackOnCreateTemplates: function(template) {
       return {
         choice: (classNames, data) => {

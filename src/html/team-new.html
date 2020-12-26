@@ -90,20 +90,36 @@
                 </label>
 
                 <!-- Select -->
-                <select class="form-control" data-choices='{"removeItemButton": true}' multiple>
-                  <option data-avatar-src="assets/img/avatars/profiles/avatar-1.jpg">
-                    Dianna Smiley
-                  </option>
-                  <option data-avatar-src="assets/img/avatars/profiles/avatar-2.jpg">
-                    Ab Hadley
-                  </option>
-                  <option data-avatar-src="assets/img/avatars/profiles/avatar-3.jpg">
-                    Adolfo Hess
-                  </option>
-                  <option data-avatar-src="assets/img/avatars/profiles/avatar-4.jpg">
-                    Daniela Dewitt
-                  </option>
-                </select>
+                <select class="form-select mb-3" data-choices='{"removeItemButton": true, "searchEnabled": false, "choices": [
+                  {
+                    "value": "Dianna Smiley",
+                    "label": "Dianna Smiley",
+                    "customProperties": {
+                      "avatarSrc": "assets/img/avatars/profiles/avatar-1.jpg"
+                    }
+                  },
+                  {
+                    "value": "Ab Hadley",
+                    "label": "Ab Hadley",
+                    "customProperties": {
+                      "avatarSrc": "assets/img/avatars/profiles/avatar-2.jpg"
+                    }
+                  },
+                  {
+                    "value": "Adolfo Hess",
+                    "label": "Adolfo Hess",
+                    "customProperties": {
+                      "avatarSrc": "assets/img/avatars/profiles/avatar-3.jpg"
+                    }
+                  },
+                  {
+                    "value": "Daniela Dewitt",
+                    "label": "Daniela Dewitt",
+                    "customProperties": {
+                      "avatarSrc": "assets/img/avatars/profiles/avatar-4.jpg"
+                    }
+                  }
+                ]}' multiple></select>
 
               </div>
 
