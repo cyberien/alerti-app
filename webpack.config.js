@@ -1,8 +1,8 @@
 const CopyPlugin =                require('copy-webpack-plugin');
-const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
 const HandlebarsPlugin =          require('handlebars-webpack-plugin');
 const MiniCssExtractPlugin =      require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin =   require('optimize-css-assets-webpack-plugin');
+const RemoveEmptyScriptsPlugin =  require('webpack-remove-empty-scripts');
 const TerserPlugin =              require('terser-webpack-plugin');
 const autoprefixer =              require('autoprefixer');
 const path =                      require('path');
@@ -53,12 +53,14 @@ module.exports = {
           {
             loader: 'postcss-loader',
             options: {
-              plugins: function () {
-                return [
-                  require('autoprefixer')
-                ];
-              }
-            }
+              postcssOptions: {
+                plugins: [
+                  [
+                    "autoprefixer",
+                  ],
+                ],
+              },
+            },
           },
           {
             loader: 'sass-loader',
@@ -155,7 +157,7 @@ module.exports = {
         return finalHtml;
       },
     }),
-    new FixStyleOnlyEntriesPlugin(),
+    new RemoveEmptyScriptsPlugin(),
     new MiniCssExtractPlugin({
       filename: paths.dist.css + '/[name].bundle.css',
     }),
