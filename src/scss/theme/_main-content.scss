@@ -33,13 +33,13 @@
 
         // Left
 
-        &.fixed-left:not([style*="display: none"]) ~ .main-content {
+        &.fixed-start:not([style*="display: none"]) ~ .main-content {
           margin-left: $navbar-vertical-width;
         }
 
         // Right
 
-        &.fixed-right:not([style*="display: none"]) ~ .main-content {
+        &.fixed-end:not([style*="display: none"]) ~ .main-content {
           margin-right: $navbar-vertical-width;
         }
       }
@@ -55,13 +55,13 @@
 
         // Left
 
-        &.fixed-left:not([style*="display: none"]) ~ .main-content {
+        &.fixed-start:not([style*="display: none"]) ~ .main-content {
           margin-left: $navbar-vertical-width-sm;
         }
 
         // Right
 
-        &.fixed-right:not([style*="display: none"]) ~ .main-content {
+        &.fixed-end:not([style*="display: none"]) ~ .main-content {
           margin-right: $navbar-vertical-width-sm;
         }
       }

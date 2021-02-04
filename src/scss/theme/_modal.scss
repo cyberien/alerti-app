@@ -64,19 +64,19 @@
 
 // Positioning
 
-.modal.fixed-right {
+.modal.fixed-end {
   padding-right: 0 !important;
 }
 
-.modal.fixed-right .modal-dialog-vertical {
+.modal.fixed-end .modal-dialog-vertical {
   margin-left: auto;
 }
 
-.modal.fixed-right.fade .modal-dialog-vertical {
+.modal.fixed-end.fade .modal-dialog-vertical {
   transform: translateX(100%);
 }
 
-.modal.fixed-right.show .modal-dialog-vertical {
+.modal.fixed-end.show .modal-dialog-vertical {
   transform: translateX(0);
 }
 
