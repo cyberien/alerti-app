@@ -162,4 +162,5 @@ module.exports = {
       filename: paths.dist.css + '/[name].bundle.css',
     }),
   ],
+  target: 'web',
 };
