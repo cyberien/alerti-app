@@ -365,11 +365,42 @@
 
         // Toggle dropdown on hover
         @if ($navbar-dropdown-toggle-on-hover) {
-          .dropup, .dropright, .dropdown, .dropleft {
+          
+          .dropup, .dropend, .dropdown, .dropleft {
 
             &:hover > .dropdown-menu {
               display: block;
             }
+          }
+
+          .dropdown > .dropdown-menu:not([data-bs-popper]) {
+            left: 0;
+            margin-top: 0;
+          }
+          
+          .dropdown > .dropdown-menu-start:not([data-bs-popper]) {
+            right: auto /* rtl:ignore */;
+            left: 0 /* rtl:ignore */;
+          }
+          
+          .dropdown > .dropdown-menu-end:not([data-bs-popper]) {
+            right: 0 /* rtl:ignore */;
+            left: auto /* rtl:ignore */;
+          }
+        
+          .dropup > .dropdown-menu:not([data-bs-popper]) {
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+          
+          .dropend > .dropdown-menu:not([data-bs-popper]) {
+            margin-top: 0;
+            margin-left: 0;
+          }
+          
+          .dropstart > .dropdown-menu:not([data-bs-popper]) {
+            margin-top: 0;
+            margin-right: 0;
           }
         }
 
@@ -718,7 +749,7 @@
             padding-right: $navbar-vertical-padding-x-sm;
           }
 
-          .navbar-user .dropright .dropdown-menu {
+          .navbar-user .dropend .dropdown-menu {
             top: auto;
             bottom: 0;
           }

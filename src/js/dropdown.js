@@ -6,27 +6,25 @@
 const selectors = '.dropup, .dropright, .dropdown, .dropleft';
 const dropdowns = document.querySelectorAll(selectors);
 
-let currentTarget = undefined;
+let target = undefined;
 
 // Enable nested dropdowns
 dropdowns.forEach(dropdown => {
   dropdown.addEventListener('mousedown', (e) => {
-    e.stopPropagation();
+    const dataset = e.target.dataset;
 
-    if (e.target.dataset.toggle && e.target.dataset.toggle === 'dropdown') {
-      currentTarget = e.currentTarget;
+    if (dataset.bsToggle && dataset.bsToggle === 'dropdown') {
+      target = e.target;
     }
   });
 
   dropdown.addEventListener('hide.bs.dropdown', (e) => {
-    e.stopPropagation();
+    const parent = target ? target.parentElement.closest(selectors) : undefined;
 
-    const parentDropdown = currentTarget ? currentTarget.parentElement.closest(selectors) : undefined;
-
-    if (parentDropdown && parentDropdown === dropdown) {
+    if (parent && parent === dropdown && target !== e.target) {
       e.preventDefault();
     }
 
-    currentTarget = undefined;
+    target = undefined;
   });
 });
