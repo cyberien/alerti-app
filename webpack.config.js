@@ -1,37 +1,38 @@
-const CopyPlugin =                require('copy-webpack-plugin');
-const HandlebarsPlugin =          require('handlebars-webpack-plugin');
-const MiniCssExtractPlugin =      require('mini-css-extract-plugin');
-const OptimizeCssAssetsPlugin =   require('optimize-css-assets-webpack-plugin');
-const RemoveEmptyScriptsPlugin =  require('webpack-remove-empty-scripts');
-const TerserPlugin =              require('terser-webpack-plugin');
-const autoprefixer =              require('autoprefixer');
-const path =                      require('path');
-const config =                    require('./config.json');
+const CopyPlugin = require('copy-webpack-plugin');
+const HandlebarsPlugin = require('handlebars-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
+const TerserPlugin = require('terser-webpack-plugin');
+const autoprefixer = require('autoprefixer');
+const path = require('path');
+const config = require('./config.json');
 
 const paths = {
   src: {
-    favicon:  './src/favicon',
-    fonts:    './src/fonts',
-    img:      './src/img',
-    js:       './src/js',
-    scss:     './src/scss',
-    vendor:   './src/vendor',
+    favicon: './src/favicon',
+    fonts: './src/fonts',
+    img: './src/img',
+    js: './src/js',
+    scss: './src/scss',
   },
   dist: {
-    css:      './assets/css',
-    favicon:  './assets/favicon',
-    fonts:    './assets/fonts',
-    img:      './assets/img',
-    js:       './assets/js',
-    vendor:   './assets/vendor',
-  }
-}
+    css: './assets/css',
+    favicon: './assets/favicon',
+    fonts: './assets/fonts',
+    img: './assets/img',
+    js: './assets/js',
+  },
+};
 
 module.exports = {
   devtool: 'source-map',
   entry: {
-    'libs':       [paths.src.scss + '/libs.scss'],
-    'theme':      [...(config.demoMode ? [paths.src.js + '/demo.js'] : []), ...[paths.src.js + '/theme.js', paths.src.scss + '/theme.scss']],
+    libs: [paths.src.scss + '/libs.scss'],
+    theme: [
+      ...(config.demoMode ? [paths.src.js + '/demo.js'] : []),
+      ...[paths.src.js + '/theme.js', paths.src.scss + '/theme.scss'],
+    ],
     'theme-dark': [paths.src.scss + '/theme-dark.scss'],
   },
   mode: 'development',
@@ -54,11 +55,7 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               postcssOptions: {
-                plugins: [
-                  [
-                    "autoprefixer",
-                  ],
-                ],
+                plugins: [['autoprefixer']],
               },
             },
           },
@@ -73,30 +70,14 @@ module.exports = {
     splitChunks: {
       cacheGroups: {
         vendor: {
-          test:   /[\\/](vendor|node_modules)[\\/].+\.js$/,
-          name:   'vendor',
-          chunks: 'all'
-        }
-      }
+          test: /[\\/](node_modules)[\\/].+\.js$/,
+          name: 'vendor',
+          chunks: 'all',
+        },
+      },
     },
     minimizer: [
-      new OptimizeCssAssetsPlugin({
-        cssProcessorOptions: {
-          map: {
-            inline: false,
-          },
-        },
-        cssProcessorPluginOptions: {
-          preset: [
-            'default',
-            {
-              discardComments: {
-                removeAll: true,
-              },
-            },
-          ],
-        },
-      }),
+      new CssMinimizerPlugin(),
       new TerserPlugin({
         extractComments: false,
         terserOptions: {
@@ -115,31 +96,27 @@ module.exports = {
       patterns: [
         {
           from: paths.src.favicon,
-          to:   paths.dist.favicon,
+          to: paths.dist.favicon,
         },
         {
           from: paths.src.fonts,
-          to:   paths.dist.fonts,
+          to: paths.dist.fonts,
         },
         {
           from: paths.src.img,
-          to:   paths.dist.img,
-        },
-        {
-          from: paths.src.vendor,
-          to:   paths.dist.vendor,
+          to: paths.dist.img,
         },
       ],
     }),
     new HandlebarsPlugin({
-      entry:    path.join(process.cwd(), 'src', 'html', '**', '*.html'),
-      output:   path.join(process.cwd(), 'dist', '[path]', '[name].html'),
-      data:     config,
+      entry: path.join(process.cwd(), 'src', 'html', '**', '*.html'),
+      output: path.join(process.cwd(), 'dist', '[path]', '[name].html'),
+      data: config,
       partials: [path.join(process.cwd(), 'src', 'partials', '**', '*.{html,svg}')],
       helpers: {
         is: function (v1, v2, options) {
-          const variants =  v2.split(' || ');
-          const isTrue =    variants.some(variant => v1 === variant);
+          const variants = v2.split(' || ');
+          const isTrue = variants.some((variant) => v1 === variant);
 
           return isTrue ? options.fn(this) : options.inverse(this);
         },
@@ -151,7 +128,7 @@ module.exports = {
         },
       },
       onBeforeSave: function (Handlebars, resultHtml, filename) {
-        const level =     filename.split('//').pop().split('/').length;
+        const level = filename.split('//').pop().split('/').length;
         const finalHtml = resultHtml.split('{{webRoot}}').join('.'.repeat(level));
 
         return finalHtml;

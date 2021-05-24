@@ -5,7 +5,7 @@
 
 import List from 'list.js';
 
-export default (function() {
+export default (function () {
   const lists = document.querySelectorAll('[data-list]');
   const sorts = document.querySelectorAll('[data-sort]');
 
@@ -23,7 +23,7 @@ export default (function() {
     const defaultOptions = {
       listClass: 'list',
       searchClass: 'list-search',
-      sortClass: 'list-sort'
+      sortClass: 'list-sort',
     };
 
     // Merge options
@@ -34,8 +34,8 @@ export default (function() {
 
     // Pagination
     if (listPagination) {
-      [].forEach.call(listPagination, function(pagination) {
-        pagination.addEventListener('click', function(e) {
+      [].forEach.call(listPagination, function (pagination) {
+        pagination.addEventListener('click', function (e) {
           e.preventDefault();
         });
       });
@@ -43,10 +43,10 @@ export default (function() {
 
     // Pagination (next)
     if (listPaginationNext) {
-      listPaginationNext.addEventListener('click', function(e) {
+      listPaginationNext.addEventListener('click', function (e) {
         e.preventDefault();
 
-        const nextItem = listObj.i + listObj.page;
+        const nextItem = parseInt(listObj.i) + parseInt(listObj.page);
 
         if (nextItem <= listObj.size()) {
           listObj.show(nextItem, listObj.page);
@@ -56,10 +56,10 @@ export default (function() {
 
     // Pagination (prev)
     if (listPaginationPrev) {
-      listPaginationPrev.addEventListener('click', function(e) {
+      listPaginationPrev.addEventListener('click', function (e) {
         e.preventDefault();
 
-        const prevItem = listObj.i - listObj.page;
+        const prevItem = parseInt(listObj.i) - parseInt(listObj.page);
 
         if (prevItem > 0) {
           listObj.show(prevItem, listObj.page);
@@ -69,8 +69,8 @@ export default (function() {
 
     // Checkboxes
     if (listCheckboxes) {
-      [].forEach.call(listCheckboxes, function(checkbox) {
-        checkbox.addEventListener('change', function() {
+      [].forEach.call(listCheckboxes, function (checkbox) {
+        checkbox.addEventListener('change', function () {
           countCheckboxes(listCheckboxes, listAlert, listAlertCount);
 
           if (listCheckboxAll) {
@@ -82,8 +82,8 @@ export default (function() {
 
     // Checkbox
     if (listCheckboxAll) {
-      listCheckboxAll.addEventListener('change', function() {
-        [].forEach.call(listCheckboxes, function(checkbox) {
+      listCheckboxAll.addEventListener('change', function () {
+        [].forEach.call(listCheckboxes, function (checkbox) {
           checkbox.checked = listCheckboxAll.checked;
         });
 
@@ -93,24 +93,24 @@ export default (function() {
 
     // Alert
     if (listAlertClose) {
-      listAlertClose.addEventListener('click', function(e) {
+      listAlertClose.addEventListener('click', function (e) {
         e.preventDefault();
 
         if (listCheckboxAll) {
           listCheckboxAll.checked = false;
         }
 
-        [].forEach.call(listCheckboxes, function(checkbox) {
+        [].forEach.call(listCheckboxes, function (checkbox) {
           checkbox.checked = false;
         });
 
         countCheckboxes(listCheckboxes, listAlert, listAlertCount);
       });
     }
-  };
+  }
 
   function countCheckboxes(listCheckboxes, listAlert, listAlertCount) {
-    const checked = [].slice.call(listCheckboxes).filter(function(checkbox) {
+    const checked = [].slice.call(listCheckboxes).filter(function (checkbox) {
       return checkbox.checked;
     });
 
@@ -118,17 +118,17 @@ export default (function() {
       checked.length ? listAlert.classList.add('show') : listAlert.classList.remove('show');
       listAlertCount.innerHTML = checked.length;
     }
-  };
+  }
 
   if (typeof List !== 'undefined' && lists) {
-    [].forEach.call(lists, function(list) {
+    [].forEach.call(lists, function (list) {
       init(list);
     });
   }
 
   if (typeof List !== 'undefined' && sorts) {
-    [].forEach.call(sorts, function(sort) {
-      sort.addEventListener('click', function(e) {
+    [].forEach.call(sorts, function (sort) {
+      sort.addEventListener('click', function (e) {
         e.preventDefault();
       });
     });
