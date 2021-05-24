@@ -28,6 +28,7 @@ $gray-800-dark: #152E4D !default;
 $gray-900-dark: #132A46 !default;
 $black-dark: #12263F !default;
 
+$primary: #2C7BE5 !default;
 $light: $gray-800-dark !default;
 $lighter: $gray-900-dark !default;
 
@@ -178,6 +179,7 @@ $chart-colors: (
   "gray-900": $gray-900,
   "primary-100": "#D2DDEC",
   "primary-300": "#A6C5F7",
+  "primary-700": $primary,
   "default-color": $gray-700,
   "default-font-color": $gray-700,
   "arc-border-color": $gray-800-dark,

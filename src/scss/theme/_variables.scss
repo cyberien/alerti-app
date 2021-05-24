@@ -600,6 +600,13 @@ $breadcrumb-divider: "" !default;
 $btn-close-width: .5em !default;
 $btn-close-padding-x: .5em !default;
 
+
+// Offcanvas
+
+$offcanvas-horizontal-width: 350px !default;
+$offcanvas-padding-x: $modal-inner-padding !default;
+
+
 // Code
 
 $code-font-size: 87.5% !default;
@@ -784,8 +791,6 @@ $border-radius-pill-padding-x: .6em !default;
 
 // Modal
 
-$modal-dialog-vertical-width: 350px !default;
-
 $modal-card-body-max-height: 350px !default;
 
 
@@ -809,6 +814,11 @@ $breadcrumb-font-size-sm: $font-size-sm !default;
 // Progress bars
 
 $progress-height-sm: 0.25rem !default;
+
+
+// Offcanvas
+$offcanvas-header-padding-y: 1rem !default;
+$offcanvas-header-padding-x: $offcanvas-padding-x !default;
 
 
 // Auth

@@ -3,29 +3,29 @@
 // Theme module
 //
 
-import { Popover, Collapse } from 'bootstrap';
+import { Collapse, Popover } from 'bootstrap';
 
 const popover = document.querySelector('#popoverDemo');
-const form = document.querySelector('#demoForm');
+const form = document.querySelector('#offcanvasDemo');
 const topnav = document.querySelector('#topnav');
 const topbar = document.querySelector('#topbar');
 const sidebar = document.querySelector('#sidebar');
 const sidebarSmall = document.querySelector('#sidebarSmall');
 const sidebarUser = document.querySelector('#sidebarUser');
 const sidebarUserSmall = document.querySelector('#sidebarSmallUser');
-const sidebarSizeContainer = document.querySelector('#sidebarSizeContainer')
+const sidebarSizeContainer = document.querySelector('#sidebarSizeContainer');
 const navPositionToggle = document.querySelectorAll('input[name="navPosition"]');
 const containers = document.querySelectorAll('[class^="container"]');
 const stylesheetLight = document.querySelector('#stylesheetLight');
 const stylesheetDark = document.querySelector('#stylesheetDark');
 
 const config = {
-  showPopover: (localStorage.getItem('dashkitShowPopover')) ? localStorage.getItem('dashkitShowPopover') : true,
-  colorScheme: (localStorage.getItem('dashkitColorScheme')) ? localStorage.getItem('dashkitColorScheme') : 'light',
-  navPosition: (localStorage.getItem('dashkitNavPosition')) ? localStorage.getItem('dashkitNavPosition') : 'sidenav',
-  navColor: (localStorage.getItem('dashkitNavColor')) ? localStorage.getItem('dashkitNavColor') : 'default',
-  sidebarSize: (localStorage.getItem('dashkitSidebarSize')) ? localStorage.getItem('dashkitSidebarSize') : 'base'
-}
+  showPopover: localStorage.getItem('dashkitShowPopover') ? localStorage.getItem('dashkitShowPopover') : true,
+  colorScheme: localStorage.getItem('dashkitColorScheme') ? localStorage.getItem('dashkitColorScheme') : 'light',
+  navPosition: localStorage.getItem('dashkitNavPosition') ? localStorage.getItem('dashkitNavPosition') : 'sidenav',
+  navColor: localStorage.getItem('dashkitNavColor') ? localStorage.getItem('dashkitNavColor') : 'default',
+  sidebarSize: localStorage.getItem('dashkitSidebarSize') ? localStorage.getItem('dashkitSidebarSize') : 'base',
+};
 
 const sidebarSizeCollapse = sidebarSizeContainer ? new Collapse(sidebarSizeContainer) : null;
 
@@ -43,7 +43,7 @@ function togglePopover() {
           <h3 class="popover-header"></h3>
           <div class="popover-body"></div>
         </div>`,
-       trigger: 'manual'
+      trigger: 'manual',
     });
 
     // Show popover on load
@@ -52,7 +52,7 @@ function togglePopover() {
     }
 
     // Hide popover on click
-    popover.addEventListener('click', function() {
+    popover.addEventListener('click', function () {
       if (showPopover) {
         demoPopover.hide();
       }
@@ -72,7 +72,6 @@ function parseUrl() {
     const val = arr[1];
 
     if (prop == 'colorScheme' || prop == 'navPosition' || prop == 'navColor' || prop == 'sidebarSize') {
-
       // Save to localStorage
       localStorage.setItem('dashkit' + prop.charAt(0).toUpperCase() + prop.slice(1), val);
 
@@ -131,7 +130,6 @@ function toggleNavPosition(navPosition) {
 function toggleNavColor(navColor) {
   if (sidebar && sidebarSmall && topnav) {
     if (navColor == 'default') {
-
       // Sidebar
       sidebar.classList.add('navbar-light');
 
@@ -140,9 +138,7 @@ function toggleNavColor(navColor) {
 
       // Topnav
       topnav.classList.add('navbar-light');
-
     } else if (navColor == 'inverted') {
-
       // Sidebar
       sidebar.classList.add('navbar-dark');
 
@@ -151,9 +147,7 @@ function toggleNavColor(navColor) {
 
       // Topnav
       topnav.classList.add('navbar-dark');
-
     } else if (navColor == 'vibrant') {
-
       // Sidebar
       sidebar.classList.add('navbar-dark', 'navbar-vibrant');
 
@@ -245,17 +239,16 @@ if (sidebarSizeContainer) {
 document.body.style.display = 'block';
 
 if (form) {
-
   // Form submitted
-  form.addEventListener('submit', function(e) {
+  form.addEventListener('submit', function (e) {
     e.preventDefault();
 
     submitForm(form);
   });
 
   // Nav position changed
-  navPositionToggle.forEach(function(toggle) {
-    toggle.parentElement.addEventListener('click', function() {
+  navPositionToggle.forEach(function (toggle) {
+    toggle.parentElement.addEventListener('click', function () {
       const navPosition = toggle.value;
 
       toggleSidebarSizeContainer(navPosition);

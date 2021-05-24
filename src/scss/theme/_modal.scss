@@ -28,59 +28,6 @@
 // Theme ===================================
 //
 
-// Modal dialog vertical
-//
-// Creates a vertically aligned version of the modal dialog
-
-.modal-dialog-vertical {
-  height: 100%;
-  max-width: $modal-dialog-vertical-width;
-  margin: 0;
-
-  .modal-content {
-    height: inherit;
-    border-width: 0 $modal-content-border-width 0 0;
-    border-radius: 0;
-  }
-
-  .modal-header {
-    border-radius: inherit;
-  }
-
-  .modal-body {
-    height: inherit;
-    overflow-y: auto;
-  }
-}
-
-.modal.fade .modal-dialog-vertical {
-  transform: translateX(-100%);
-}
-
-.modal.show .modal-dialog-vertical {
-  transform: translateX(0);
-}
-
-
-// Positioning
-
-.modal.fixed-end {
-  padding-right: 0 !important;
-}
-
-.modal.fixed-end .modal-dialog-vertical {
-  margin-left: auto;
-}
-
-.modal.fixed-end.fade .modal-dialog-vertical {
-  transform: translateX(100%);
-}
-
-.modal.fixed-end.show .modal-dialog-vertical {
-  transform: translateX(0);
-}
-
-
 // Modal card
 
 .modal-card {
