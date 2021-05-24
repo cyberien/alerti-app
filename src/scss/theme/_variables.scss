@@ -231,6 +231,15 @@ $h4-font-size: 0.9375rem !default;
 $h5-font-size: 0.8125rem !default;
 $h6-font-size: 0.625rem !default;
 
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size
+) !default;
+
 $headings-margin-bottom: $spacer * .75 !default;
 $headings-font-weight: 500 !default;
 $headings-line-height: 1.1 !default;
@@ -996,10 +1005,14 @@ $utilities: (
   ),
   "font-size": (
     property: font-size,
-    values: (
-      "base": $font-size-base,
-      "lg": $font-size-lg,
-      "sm": $font-size-sm,
+    class: fs,
+    values: map-merge(
+      $font-sizes,
+      (
+        "base": $font-size-base,
+        "lg": $font-size-lg,
+        "sm": $font-size-sm,
+      )
     )
   ),
   "text-gray": (
