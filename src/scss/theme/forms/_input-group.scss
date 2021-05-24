@@ -4,6 +4,21 @@
 //
 
 //
+// Bootstrap overrides ===================================
+//
+
+// Sizing
+
+.input-group-sm > .form-control {
+  line-height: $input-line-height-sm;
+}
+
+.input-group-lg > .form-control {
+  line-height: $input-line-height-lg;
+}
+
+
+//
 // Theme ===================================
 //
 
