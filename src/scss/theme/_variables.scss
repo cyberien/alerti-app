@@ -389,7 +389,7 @@ $form-switch-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3
 $input-group-addon-color: $text-muted !default;
 $input-group-addon-bg: $input-bg !default;
 
-$form-select-indicator-padding: 1.25rem !default;
+$form-select-indicator-padding: 1.75rem !default;
 $form-select-bg-size: .75em .75em !default;
 $form-select-indicator-color: $gray-600 !default;
 $form-select-indicator: url("data:image/svg+xml,<svg viewBox='0 0 9 5' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M1 1L4.25 4.25L7.5 1' stroke='#{$form-select-indicator-color}' stroke-width='1.08333' stroke-linecap='round' stroke-linejoin='round'/></svg>") !default;
