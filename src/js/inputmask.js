@@ -12,3 +12,6 @@ const options = {
 };
 
 Inputmask(options).mask(toggles);
+
+// Make available globally
+window.Inputmask = Inputmask;

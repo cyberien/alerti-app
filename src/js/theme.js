@@ -3,6 +3,7 @@ import 'bootstrap';
 
 // Theme
 import './autosize';
+import './bootstrap';
 import './checklist';
 import './choices';
 import './dropzone';

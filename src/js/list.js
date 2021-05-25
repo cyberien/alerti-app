@@ -134,3 +134,6 @@ export default (function () {
     });
   }
 })();
+
+// Make available globally
+window.List = List;

@@ -31,24 +31,26 @@ if (categories) {
   new Sortable(categories, {
     draggable: '.kanban-item',
     mirror: {
-      constrainDimensions: true
-    }
+      constrainDimensions: true,
+    },
   });
 }
 
-links.forEach(link => {
+links.forEach((link) => {
   link.addEventListener('click', () => {
     toggleItems(link);
   });
 });
 
-forms.forEach(form => {
-  form.addEventListener('reset', function() {
+forms.forEach((form) => {
+  form.addEventListener('reset', function () {
     toggleItems(form);
   });
 
-  form.addEventListener('submit', function(e) {
+  form.addEventListener('submit', function (e) {
     e.preventDefault();
   });
 });
 
+// Make available globally
+window.Sortable = Sortable;

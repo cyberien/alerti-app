@@ -7,6 +7,9 @@ import autosize from 'autosize';
 
 const toggles = document.querySelectorAll('[data-autosize]');
 
-toggles.forEach(toggle => {
+toggles.forEach((toggle) => {
   autosize(toggle);
 });
+
+// Make available globally
+window.autosize = autosize;

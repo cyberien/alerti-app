@@ -7,7 +7,7 @@ import Quill from 'quill';
 
 const toggles = document.querySelectorAll('[data-quill]');
 
-toggles.forEach(toggle => {
+toggles.forEach((toggle) => {
   const elementOptions = toggle.dataset.quill ? JSON.parse(toggle.dataset.quill) : {};
 
   const defaultOptions = {
@@ -15,11 +15,14 @@ toggles.forEach(toggle => {
       toolbar: [
         ['bold', 'italic'],
         ['link', 'blockquote', 'code', 'image'],
-        [{
-          'list': 'ordered'
-        }, {
-          'list': 'bullet'
-        }]
+        [
+          {
+            list: 'ordered',
+          },
+          {
+            list: 'bullet',
+          },
+        ],
       ],
     },
     theme: 'snow',
@@ -27,8 +30,11 @@ toggles.forEach(toggle => {
 
   const options = {
     ...elementOptions,
-    ...defaultOptions
+    ...defaultOptions,
   };
 
   new Quill(toggle, options);
 });
+
+// Make available globally
+window.Quill = Quill;

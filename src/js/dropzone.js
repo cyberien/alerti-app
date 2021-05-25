@@ -11,7 +11,7 @@ Dropzone.thumbnailHeight = null;
 
 const toggles = document.querySelectorAll('[data-dropzone]');
 
-toggles.forEach(toggle => {
+toggles.forEach((toggle) => {
   let currentFile = undefined;
 
   const elementOptions = toggle.dataset.dropzone ? JSON.parse(toggle.dataset.dropzone) : {};
@@ -19,8 +19,8 @@ toggles.forEach(toggle => {
   const defaultOptions = {
     previewsContainer: toggle.querySelector('.dz-preview'),
     previewTemplate: toggle.querySelector('.dz-preview').innerHTML,
-    init: function() {
-      this.on('addedfile', function(file) {
+    init: function () {
+      this.on('addedfile', function (file) {
         const maxFiles = elementOptions.maxFiles;
 
         if (maxFiles == 1 && currentFile) {
@@ -29,12 +29,12 @@ toggles.forEach(toggle => {
 
         currentFile = file;
       });
-    }
-  }
+    },
+  };
 
   const options = {
     ...elementOptions,
-    ...defaultOptions
+    ...defaultOptions,
   };
 
   // Clear preview
@@ -43,3 +43,6 @@ toggles.forEach(toggle => {
   // Init dropzone
   new Dropzone(toggle, options);
 });
+
+// Make available globally
+window.Dropzone = Dropzone;

@@ -58,7 +58,6 @@ Chart.register(
   Tooltip
 );
 
-
 const colors = {
   gray: {
     300: getCSSVariableValue('--bs-chart-gray-300'),
@@ -370,3 +369,6 @@ document.addEventListener('DOMContentLoaded', function () {
     toggleLegend(legend);
   });
 });
+
+// Make available globally
+window.Chart = Chart;

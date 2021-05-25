@@ -7,8 +7,11 @@ import flatpickr from 'flatpickr';
 
 const toggles = document.querySelectorAll('[data-flatpickr]');
 
-toggles.forEach(toggle => {
+toggles.forEach((toggle) => {
   const options = toggle.dataset.flatpickr ? JSON.parse(toggle.dataset.flatpickr) : {};
 
   flatpickr(toggle, options);
 });
+
+// Make available globally
+window.flatpickr = flatpickr;

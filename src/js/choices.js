@@ -21,19 +21,24 @@ toggles.forEach((toggle) => {
       selectedState: 'active',
     },
     shouldSort: false,
-    callbackOnCreateTemplates: function(template) {
+    callbackOnCreateTemplates: function (template) {
       return {
         choice: (classNames, data) => {
-          const classes = `${classNames.item} ${classNames.itemChoice} ${data.disabled ? classNames.itemDisabled : classNames.itemSelectable}`;
+          const classes = `${classNames.item} ${classNames.itemChoice} ${
+            data.disabled ? classNames.itemDisabled : classNames.itemSelectable
+          }`;
           const disabled = data.disabled ? 'data-choice-disabled aria-disabled="true"' : 'data-choice-selectable';
           const role = data.groupId > 0 ? 'role="treeitem"' : 'role="option"';
           const selectText = this.config.itemSelectText;
 
-          const label = data.customProperties && data.customProperties.avatarSrc ? `
+          const label =
+            data.customProperties && data.customProperties.avatarSrc
+              ? `
             <div class="avatar avatar-xs me-3">
               <img class="avatar-img rounded-circle" src="${data.customProperties.avatarSrc}" alt="${data.label}" >
             </div> ${data.label}
-          ` : data.label;
+          `
+              : data.label;
 
           return template(`
             <div class="${classes}" data-select-text="${selectText}" data-choice ${disabled} data-id="${data.id}" data-value="${data.value}" ${role}>
@@ -52,3 +57,6 @@ toggles.forEach((toggle) => {
 
   new Choices(toggle, options);
 });
+
+// Make available globally
+window.Choices = Choices;
