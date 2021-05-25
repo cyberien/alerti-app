@@ -30,6 +30,8 @@ import {
   Tooltip,
 } from 'chart.js';
 
+import { getCSSVariableValue } from './helpers';
+
 Chart.register(
   ArcElement,
   BarController,
@@ -55,6 +57,7 @@ Chart.register(
   Title,
   Tooltip
 );
+
 
 const colors = {
   gray: {
@@ -84,10 +87,6 @@ const legends = document.querySelectorAll('[data-toggle="legend"]');
 //
 // Functions
 //
-
-function getCSSVariableValue(variable) {
-  return getComputedStyle(document.documentElement).getPropertyValue(variable);
-}
 
 function globalOptions() {
   Chart.defaults.responsive = true;
