@@ -1,5 +1,5 @@
 {
-  "demoMode": true,
+  "demoMode": false,
   "colorScheme": "light",
   "navPosition": "sidenav",
   "sidebarSize": "base",
