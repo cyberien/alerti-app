@@ -58,14 +58,38 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{#is page 'alertes.html'}}active{{/is}}" href="{{webRoot}}/alertes.html">
-            <i class="fe fe-grid"></i> Alerts
+          <a class="nav-link" href="#sidebarRadar" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarRadar">
+            <i class="fe fe-user"></i> Radar
           </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {{#is page 'radar.html'}}active{{/is}}" href="{{webRoot}}/radar.html">
-            <i class="fe fe-rss"></i> Radar
-          </a>
+          <div class="collapse" id="sidebarRadar">
+            <ul class="nav nav-sm flex-column">
+              <li class="nav-item">
+                <a class="nav-link {{#is page 'crm-contacts.html'}}active{{/is}}" href="{{webRoot}}/crm-contacts.html">
+                  Alerts
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {{#is page 'crm-companies.html'}}active{{/is}}" href="{{webRoot}}/crm-companies.html">
+                  Feeds
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {{#is page 'crm-companies.html'}}active{{/is}}" href="{{webRoot}}/crm-companies.html">
+                  Social accounts
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {{#is page 'crm-companies.html'}}active{{/is}}" href="{{webRoot}}/crm-companies.html">
+                  Newslettesr
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {{#is page 'crm-companies.html'}}active{{/is}}" href="{{webRoot}}/crm-companies.html">
+                  URL
+                </a>
+              </li>
+            </ul>
+          </div>
         </li>
         <li class="nav-item">
           <a class="nav-link {{#is page 'inbox.html'}}active{{/is}}" href="{{webRoot}}/inbox.html">
@@ -163,8 +187,13 @@
       <!-- Navigation -->
       <ul class="navbar-nav mb-md-4">
         <li class="nav-item">
+          <a class="nav-link {{#is page 'marketplace.html'}}active{{/is}}" href="{{webRoot}}/marketplace.html">
+            <i class="fe fe-settings"></i> Settings & Members
+          </a>
+        </li> 
+        <li class="nav-item">
           <a class="nav-link" href="#sidebarHelp" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarHelp">
-            <i class="fe fe-user"></i> Help Center
+            <i class="fe fe-help-circle"></i> Help Center
           </a>
           <div class="collapse" id="sidebarHelp">
             <ul class="nav nav-sm flex-column">
@@ -186,9 +215,10 @@
               <a class="nav-link {{#is page 'automation.html'}}active{{/is}}" href="{{webRoot}}/automations.html">
                   Contact support
               </a>
-            </li> 
+            </li>
             </ul>
-          </div>  
+          </div>
+        </li>
       </ul>
 
       <!-- Push content down -->
