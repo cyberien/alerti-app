@@ -64,27 +64,27 @@
           <div class="collapse" id="sidebarRadar">
             <ul class="nav nav-sm flex-column">
               <li class="nav-item">
-                <a class="nav-link {{#is page 'crm-contacts.html'}}active{{/is}}" href="{{webRoot}}/crm-contacts.html">
+                <a class="nav-link {{#is page 'alerts.html'}}active{{/is}}" href="{{webRoot}}/alerts.html">
                   Alerts
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {{#is page 'crm-companies.html'}}active{{/is}}" href="{{webRoot}}/crm-companies.html">
+                <a class="nav-link {{#is page 'feeds.html'}}active{{/is}}" href="{{webRoot}}/feedss.html">
                   Feeds
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {{#is page 'crm-companies.html'}}active{{/is}}" href="{{webRoot}}/crm-companies.html">
+                <a class="nav-link {{#is page 'social-accounts.html'}}active{{/is}}" href="{{webRoot}}/social-accounts.html">
                   Social accounts
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {{#is page 'crm-companies.html'}}active{{/is}}" href="{{webRoot}}/crm-companies.html">
-                  Newslettesr
+                <a class="nav-link {{#is page 'newsletters.html'}}active{{/is}}" href="{{webRoot}}/newsletters.html">
+                  Newsletters
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {{#is page 'crm-companies.html'}}active{{/is}}" href="{{webRoot}}/crm-companies.html">
+                <a class="nav-link {{#is page 'url.html'}}active{{/is}}" href="{{webRoot}}/url.html">
                   URL
                 </a>
               </li>
@@ -102,10 +102,10 @@
           </a>
         </li> 
         <li class="nav-item">
-          <a class="nav-link" href="#sidebarInfluencers" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarInfuencers">
+          <a class="nav-link" href="#sidebarInfluencers" data-bs-toggle="collapse" role="button" aria-expanded="{{#is category 'influencerss'}}true{{else}}false{{/is}}" aria-controls="sidebarInfluencers">
             <i class="fe fe-user"></i> Influencers
           </a>
-          <div class="collapse" id="sidebarInfluencers">
+          <div class="collapse {{#is category 'influencers'}}show{{/is}}" id="sidebarInfluencers">
             <ul class="nav nav-sm flex-column">
               <li class="nav-item">
                 <a class="nav-link {{#is page 'crm-contacts.html'}}active{{/is}}" href="{{webRoot}}/crm-contacts.html">
