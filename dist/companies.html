@@ -1789,10 +1789,45 @@
           <span class="navbar-toggler-icon"></span>
         </button>
     
-        <!-- Brand -->
-        <a class="navbar-brand" href="./index.html">
-          <img src="./assets/img/logo.svg" class="navbar-brand-img mx-auto" alt="...">
-        </a>
+    
+        <!-- User (md) -->
+        <div class="navbar-user d-none d-md-flex" id="sidebarUser">
+    
+          <!-- Icon -->
+          <a class="navbar-user-link" data-bs-toggle="offcanvas" href="#sidebarOffcanvasActivity" aria-controls="sidebarOffcanvasActivity">
+            <span class="icon">
+              <i class="fe fe-bell"></i>
+            </span>
+          </a>
+    
+          <!-- Dropup -->
+          <div class="dropdown">
+    
+            <!-- Toggle -->
+            <a href="#" id="sidebarIconCopy" class="dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <div class="avatar avatar-xs">
+                <img src="./assets/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle" alt="Profile picture">
+              </div>
+            </a>
+    
+            <!-- Menu -->
+            <div class="dropdown-menu" aria-labelledby="sidebarIconCopy">
+              <a href="./profile-posts.html" class="dropdown-item">Profile</a>
+              <a href="./account-general.html" class="dropdown-item">Account</a>
+              <hr class="dropdown-divider">
+              <a href="./sign-in.html" class="dropdown-item">Logout &nbsp;&nbsp; <span class="fe fe-log-out"></span></a>
+            </div>
+    
+          </div>
+    
+          <!-- Icon -->
+          <a class="navbar-user-link" data-bs-toggle="offcanvas" href="#sidebarOffcanvasSearch" aria-controls="sidebarOffcanvasSearch">
+            <span class="icon">
+              <i class="fe fe-search"></i>
+            </span>
+          </a>
+    
+        </div>
     
         <!-- User (xs) -->
         <div class="navbar-user d-md-none">
@@ -1802,7 +1837,7 @@
     
             <!-- Toggle -->
             <a href="#" id="sidebarIcon" class="dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <div class="avatar avatar-sm avatar-online">
+              <div class="avatar avatar-sm">
                 <img src="./assets/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle" alt="...">
               </div>
             </a>
@@ -1810,9 +1845,9 @@
             <!-- Menu -->
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="sidebarIcon">
               <a href="./profile-posts.html" class="dropdown-item">Profile</a>
-              <a href="./account-general.html" class="dropdown-item">Settings</a>
+              <a href="./account-general.html" class="dropdown-item">Account</a>
               <hr class="dropdown-divider">
-              <a href="./sign-in.html" class="dropdown-item">Logout</a>
+              <a href="./sign-in.html" class="dropdown-item">Logout &nbsp;&nbsp; <span class="fe fe-log-out"></span></a>
             </div>
     
           </div>
@@ -1832,73 +1867,113 @@
             </div>
           </form>
     
-          <!-- Navigation -->
-    
           <!-- Divider -->
           <hr class="navbar-divider my-3">
-          <!-- Heading -->
-          <h6 class="navbar-heading">
-            Workspace
-          </h6>
+    
+          <!-- Navigation -->
     
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#sidebarDashboards" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarDashboards">
-                <i class="fe fe-home"></i> Accueil
+              <a class="nav-link" href="#sidebarorkspace" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarorkspace">
+                ACME inc
               </a>
-              <div class="collapse " id="sidebarDashboards">
+            </li>
+            <div class="collapse " id="sidebarorkspace">
+              <ul class="nav nav-sm flex-column">
+                <li class="nav-item">
+                  <a href="./new-workspace.html" class="nav-link ">
+                    <i class="fe fe-plus-square"></i> New workspace
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+    
+            <!-- Divider -->
+            <hr class="navbar-divider my-3">
+    
+            <!-- Heading -->
+            <h6 class="navbar-heading">
+              WORKSPACE
+            </h6>
+    
+            <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link " href="./index.html">
+                <i class="fe fe-home"></i> Dashboard
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#sidebarRadar" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarRadar">
+                <i class="fe fe-compass"></i> Radar
+              </a>
+              <div class="collapse " id="sidebarRadar">
                 <ul class="nav nav-sm flex-column">
                   <li class="nav-item">
-                    <a href="./dashboard-ecommerce.html" class="nav-link ">
-                      Réseaux sociaux
+                    <a href="./alerts.html" class="nav-link ">
+                      <i class="fe fe-bell"></i> Alerts
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="./dashboard-ecommerce.html" class="nav-link ">
-                      Sires Web
+                    <a href="./feeds.html" class="nav-link ">
+                      <i class="fe fe-rss"></i> Feeds
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="./dashboard-ecommerce.html" class="nav-link ">
-                      Apps mobiles
+                    <a href="./social-accounts.html" class="nav-link ">
+                      <i class="fe fe-thumbs-up"></i> Social accounts
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./newsletters.html" class="nav-link ">
+                      <i class="fe fe-mail"></i> Newsletters
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./websites.html" class="nav-link ">
+                      <i class="fe fe-globe"></i> Websites
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./url.html" class="nav-link ">
+                      <i class="fe fe-link"></i> URL
                     </a>
                   </li>
                 </ul>
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="./widgets.html">
-                <i class="fe fe-alert-circle"></i> Alertes
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " href="./widgets.html">
-                <i class="fe fe-rss"></i> Radar
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " href="./widgets.html">
+              <a class="nav-link " href="./inbox.html">
                 <i class="fe fe-inbox"></i> Inbox
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="./widgets.html">
-                <i class="fe fe-bar-chart-2"></i> Insights
+              <a class="nav-link " href="./analytics.html">
+                <i class="fe fe-bar-chart"></i> Analytics
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="./widgets.html">
+              <a class="nav-link" href="#sidebarInfluencers" data-bs-toggle="collapse" role="button" aria-expanded="true" aria-controls="sidebarInfluencers">
+                <i class="fe fe-user-check"></i> Influencers
+              </a>
+              <div class="collapse show" id="sidebarInfluencers">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="./contacts.html" class="nav-link ">
+                      <i class="fe fe-user"></i> Contacts
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./companies.html" class="nav-link active">
+                      <i class="fe fe-users"></i> Companies
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="./publisher.html">
                 <i class="fe fe-edit"></i> Publisher
-              </a>
-            </li>        
-            <li class="nav-item">
-              <a class="nav-link " href="./widgets.html">
-                <i class="fe fe-users"></i> Influencers
-              </a>
-            </li>
-            <li class="nav-item d-md-none">
-              <a class="nav-link" data-bs-toggle="offcanvas" href="#sidebarOffcanvasActivity" aria-contrtols="sidebarOffcanvasActivity">
-                <span class="fe fe-bell"></span> Notifications
               </a>
             </li>
           </ul>
@@ -1906,97 +1981,157 @@
           <!-- Divider -->
           <hr class="navbar-divider my-3">
     
-    
           <!-- Heading -->
           <h6 class="navbar-heading">
-            Tools
+            DATA INTELLIGENCE
           </h6>
     
           <!-- Navigation -->
           <ul class="navbar-nav mb-md-4">
             <li class="nav-item">
-              <a class="nav-link" href="#sidebarBasics" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarBasics">
+              <a class="nav-link" href="#sidebarData" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarData">
                 <i class="fe fe-database"></i> Data
               </a>
-              <div class="collapse " id="sidebarBasics">
+              <div class="collapse " id="sidebarData">
                 <ul class="nav nav-sm flex-column">
                   <li class="nav-item">
-                    <a href="./docs/getting-started.html" class="nav-link ">
-                      Getting Started
+                    <a href="./extraction.html" class="nav-link ">
+                      Extraction
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./integrations.html" class="nav-link ">
+                      Integrations
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./automation.html" class="nav-link ">
+                      Automation
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./import.html" class="nav-link ">
+                      Import
                     </a>
                   </li>
                 </ul>
               </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#sidebarComponents" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarComponents">
-                <i class="fe fe-bar-chart"></i> Analytics
-              </a>
-              <div class="collapse " id="sidebarComponents">
-                <ul class="nav nav-sm flex-column">
-                  <li>
-                    <a href="./docs/components.html#alerts" class="nav-link">
-                      Alerts
-                    </a>
-                  </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#sidebarInsights" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarInsights">
+                  <i class="fe fe-database"></i> Insights
+                </a>
+                <div class="collapse " id="sidebarInsights">
+                  <ul class="nav nav-sm flex-column">
+                    <li class="nav-item">
+                      <a href="./customer-insights.html" class="nav-link ">
+                        Customer Insights
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="./competitor-insights.html" class="nav-link ">
+                        Competitor Insights
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="./market-insights.html" class="nav-link ">
+                        Market Insights
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#sidebarIntelligence" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarIntelligence">
+                    <i class="fe fe-cpu"></i> Intelligence
+                  </a>
+                  <div class="collapse " id="sidebarIntelligence">
+                    <ul class="nav nav-sm flex-column">
+                      <li class="nav-item">
+                        <a href="./sentiment-analysis.html" class="nav-link ">
+                          Sentiment analysis
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="./named-entities-recognition.html" class="nav-link ">
+                          Named Entities Recognition
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="./translation.html" class="nav-link ">
+                          Translation
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="./transcription.html" class="nav-link ">
+                          Transcripton
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="./image-recognition.html" class="nav-link ">
+                          Image Recognition
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="./ocr.html" class="nav-link ">
+                          OCR
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
     
-                </ul>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link " href="./docs/changelog.html">
-                <i class="fe fe-git-branch"></i> Intelligence <span class="badge bg-primary ms-auto">new</span>
-              </a>
-            </li>        
-            <li class="nav-item">
-              <a class="nav-link " href="./docs/changelog.html">
-                <i class="fe fe-layers"></i> Apps 
-              </a>
-            </li>
+          <!-- Divider -->
+          <hr class="navbar-divider my-3">
+    
+                <li class="nav-item">
+                  <a href="./store.html" class="nav-link ">
+                    <i class="fe fe-shopping-cart"></i>Store
+                  </a>
+                </li>
           </ul>
     
           <!-- Push content down -->
           <div class="mt-auto"></div>
     
     
-            <!-- User (md) -->
-            <div class="navbar-user d-none d-md-flex" id="sidebarUser">
-    
-              <!-- Icon -->
-              <a class="navbar-user-link" data-bs-toggle="offcanvas" href="#sidebarOffcanvasActivity" aria-controls="sidebarOffcanvasActivity">
-                <span class="icon">
-                  <i class="fe fe-bell"></i>
-                </span>
+            <!-- Navigation -->
+            <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#sidebarHelp" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarHelp">
+                <i class="fe fe-help-circle"></i> Help Center
               </a>
-    
-              <!-- Dropup -->
-              <div class="dropup">
-    
-                <!-- Toggle -->
-                <a href="#" id="sidebarIconCopy" class="dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <div class="avatar avatar-sm avatar-online">
-                    <img src="./assets/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle" alt="...">
-                  </div>
-                </a>
-    
-                <!-- Menu -->
-                <div class="dropdown-menu" aria-labelledby="sidebarIconCopy">
-                  <a href="./profile-posts.html" class="dropdown-item">Profile</a>
-                  <a href="./account-general.html" class="dropdown-item">Settings</a>
-                  <hr class="dropdown-divider">
-                  <a href="./sign-in.html" class="dropdown-item">Logout</a>
-                </div>
-    
+              <div class="collapse " id="sidebarHelp">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="./getting-started.html" class="nav-link ">
+                      Getting started
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./product-tour.html" class="nav-link ">
+                      Product tour
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./knowledge-base.html" class="nav-link ">
+                      Knowledge Base
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./on-demand-services.html" class="nav-link ">
+                      On demand services
+                    </a>
+                  </li>
+                </ul>
               </div>
-    
-              <!-- Icon -->
-              <a class="navbar-user-link" data-bs-toggle="offcanvas" href="#sidebarOffcanvasSearch" aria-controls="sidebarOffcanvasSearch">
-                <span class="icon">
-                  <i class="fe fe-search"></i>
-                </span>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="./account-general.html">
+                <i class="fe fe-settings"></i> Settings & Members
               </a>
-    
-            </div>
+            </li>
+            </ul>
     
         </div> <!-- / .navbar-collapse -->
     
@@ -2026,7 +2161,7 @@
 
                     <!-- Title -->
                     <h1 class="header-title text-truncate">
-                      Contacts
+                      Companies
                     </h1>
 
                   </div>
@@ -2034,17 +2169,17 @@
 
                     <!-- Navigation (button group) -->
                     <div class="nav btn-group d-inline-flex" role="tablist">
-                      <button class="btn btn-white active" id="contactsListTab" data-bs-toggle="tab" data-bs-target="#contactsListPane" role="tab" aria-controls="contactsListPane" aria-selected="true">
+                      <button class="btn btn-white active" id="companiesListTab" data-bs-toggle="tab" data-bs-target="#companiesListPane" role="tab" aria-controls="companiesListPane" aria-selected="true">
                         <span class="fe fe-list"></span>
                       </button>
-                      <button class="btn btn-white" id="contactsCardsTab" data-bs-toggle="tab" data-bs-target="#contactsCardsPane" role="tab" aria-controls="contactsCardsPane" aria-selected="false">
+                      <button class="btn btn-white" id="companiesCardsTab" data-bs-toggle="tab" data-bs-target="#companiesCardsPane" role="tab" aria-controls="companiesCardsPane" aria-selected="false">
                         <span class="fe fe-grid"></span>
                       </button>
                     </div> <!-- / .nav -->
 
                     <!-- Buttons -->
                     <a href="#!" class="btn btn-primary ms-2">
-                      Add contact
+                      Add company
                     </a>
 
                   </div>
@@ -2056,17 +2191,17 @@
                     <ul class="nav nav-tabs nav-overflow header-tabs">
                       <li class="nav-item">
                         <a href="#!" class="nav-link text-nowrap active">
-                          All contacts <span class="badge rounded-pill bg-secondary-soft">823</span>
+                          All companies <span class="badge rounded-pill bg-secondary-soft">627</span>
                         </a>
                       </li>
                       <li class="nav-item">
                         <a href="#!" class="nav-link text-nowrap">
-                          Your contacts <span class="badge rounded-pill bg-secondary-soft">231</span>
+                          Your companies <span class="badge rounded-pill bg-secondary-soft">198</span>
                         </a>
                       </li>
                       <li class="nav-item">
                         <a href="#!" class="nav-link text-nowrap">
-                          Deleted <span class="badge rounded-pill bg-secondary-soft">22</span>
+                          Deleted <span class="badge rounded-pill bg-secondary-soft">29</span>
                         </a>
                       </li>
                     </ul>
@@ -2078,10 +2213,10 @@
 
             <!-- Tab content -->
             <div class="tab-content">
-              <div class="tab-pane fade show active" id="contactsListPane" role="tabpanel" aria-labelledby="contactsListTab">
+              <div class="tab-pane fade show active" id="companiesListPane" role="tabpanel" aria-labelledby="companiesListTab">
 
                 <!-- Card -->
-                <div class="card" data-list='{"valueNames": ["item-name", "item-title", "item-email", "item-phone", "item-score", "item-company"], "page": 10, "pagination": {"paginationClass": "list-pagination"}}' id="contactsList">
+                <div class="card" data-list='{"valueNames": ["item-name", "item-industry", "item-location", "item-owner", "item-created"], "page": 10, "pagination": {"paginationClass": "list-pagination"}}' id="companiesList">
                   <div class="card-header">
                     <div class="row align-items-center">
                       <div class="col">
@@ -2102,8 +2237,8 @@
                         <!-- Select -->
                         <form>
                           <select class="form-select form-select-sm form-control-flush" data-choices='{"searchEnabled": false}'>
-                            <option>5 per page</option>
-                            <option selected>10 per page</option>
+                            <option selected>5 per page</option>
+                            <option>10 per page</option>
                             <option>All</option>
                           </select>
                         </form>
@@ -2116,7 +2251,7 @@
 
                           <!-- Toggle -->
                           <button class="btn btn-sm btn-white" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">
-                            <i class="fe fe-sliders me-1"></i> Filter <span class="badge bg-primary ms-1 d-none">0</span>
+                            <i class="fe fe-sliders me-1"></i> Filter <span class="badge bg-primary ms-1">1</span>
                           </button>
 
                           <!-- Menu -->
@@ -2129,7 +2264,7 @@
                               </h4>
 
                               <!-- Link -->
-                              <button class="btn btn-sm btn-link text-reset d-none" type="reset">
+                              <button class="btn btn-sm btn-link text-reset" type="reset">
                                 <small>Clear filters</small>
                               </button>
 
@@ -2150,8 +2285,8 @@
 
                                       <!-- Select -->
                                       <select class="form-select form-select-sm" name="item-title" data-choices='{"searchEnabled": false}'>
-                                        <option value="*" selected>Any</option>
-                                        <option value="Designer">Designer</option>
+                                        <option value="*">Any</option>
+                                        <option value="Designer" selected>Designer</option>
                                         <option value="Developer">Developer</option>
                                         <option value="Owner">Owner</option>
                                         <option value="Founder">Founder</option>
@@ -2211,7 +2346,7 @@
 
                             <!-- Checkbox -->
                             <div class="form-check mb-n2">
-                              <input class="form-check-input list-checkbox-all" id="listCheckboxAll" type="checkbox">
+                              <input class="form-check-input list-checkbox-all" type="checkbox" id="listCheckboxAll">
                               <label class="form-check-label" for="listCheckboxAll"></label>
                             </div>
 
@@ -2220,19 +2355,16 @@
                             <a class="list-sort text-muted" data-sort="item-name" href="#">Name</a>
                           </th>
                           <th>
-                            <a class="list-sort text-muted" data-sort="item-title" href="#">Job title</a>
+                            <a class="list-sort text-muted" data-sort="item-industry" href="#">Industry</a>
                           </th>
                           <th>
-                            <a class="list-sort text-muted" data-sort="item-email" href="#">Email</a>
+                            <a class="list-sort text-muted" data-sort="item-location" href="#">Location</a>
                           </th>
                           <th>
-                            <a class="list-sort text-muted" data-sort="item-phone" href="#">Phone</a>
-                          </th>
-                          <th>
-                            <a class="list-sort text-muted" data-sort="item-score" href="#">Lead score</a>
+                            <a class="list-sort text-muted" data-sort="item-owner" href="#">Owner</a>
                           </th>
                           <th colspan="2">
-                            <a class="list-sort text-muted" data-sort="item-company" href="#">Company</a>
+                            <a class="list-sort text-muted" data-sort="item-created" href="#">Created at</a>
                           </th>
                         </tr>
                       </thead>
@@ -2242,7 +2374,7 @@
 
                             <!-- Checkbox -->
                             <div class="form-check">
-                              <input class="form-check-input list-checkbox" id="listCheckboxOne" type="checkbox">
+                              <input class="form-check-input list-checkbox" type="checkbox" id="listCheckboxOne">
                               <label class="form-check-label" for="listCheckboxOne"></label>
                             </div>
 
@@ -2251,38 +2383,34 @@
 
                             <!-- Avatar -->
                             <div class="avatar avatar-xs align-middle me-2">
-                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-1.jpg" alt="...">
-                            </div> <a class="item-name text-reset" href="profile-posts.html">Dianna Smiley</a>
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/teams/team-logo-1.jpg" alt="...">
+                            </div> <a class="item-name text-reset" href="team-overview.html">Launchday</a>
 
                           </td>
                           <td>
 
                             <!-- Text -->
-                            <span class="item-title">Designer</span>
+                            <span class="item-industry">Web design</span>
 
                           </td>
                           <td>
 
-                            <!-- Email -->
-                            <a class="item-email text-reset" href="mailto:john.doe@company.com">diana.smiley@company.com</a>
+                            <!-- Text -->
+                            <span class="item-location">Los Angeles, CA</span>
 
                           </td>
-                          <td>
+                          <td class="item-phone">
 
-                            <!-- Phone -->
-                            <a class="item-phone text-reset" href="tel:1-123-456-4890">(988) 568-3568</a>
+                            <!-- Avatar -->
+                            <div class="avatar avatar-xs align-middle me-2">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-1.jpg" alt="...">
+                            </div> <a class="item-owner text-reset" href="profile-posts.html">Dianna Smiley</a>
 
                           </td>
                           <td>
 
                             <!-- Badge -->
-                            <span class="item-score badge bg-danger-soft">1/10</span>
-
-                          </td>
-                          <td>
-
-                            <!-- Link -->
-                            <a class="item-company text-reset" href="team-overview.html">Twitter</a>
+                            <time class="item-created" datetime="2020-01-14">Jan 14, 2020</time>
 
                           </td>
                           <td class="text-end">
@@ -2312,7 +2440,7 @@
 
                             <!-- Checkbox -->
                             <div class="form-check">
-                              <input class="form-check-input list-checkbox" id="listCheckboxTwo" type="checkbox">
+                              <input class="form-check-input list-checkbox" type="checkbox" id="listCheckboxTwo">
                               <label class="form-check-label" for="listCheckboxTwo"></label>
                             </div>
 
@@ -2321,38 +2449,34 @@
 
                             <!-- Avatar -->
                             <div class="avatar avatar-xs align-middle me-2">
-                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-2.jpg" alt="...">
-                            </div> <a class="item-name text-reset" href="profile-posts.html">Ab Hadley</a>
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/teams/team-logo-2.jpg" alt="...">
+                            </div> <a class="item-name text-reset" href="team-overview.html">Medium Corporation</a>
 
                           </td>
-                          <td class="">
+                          <td>
 
                             <!-- Text -->
-                            <span class="item-title">Developer</span>
+                            <span class="item-industry">Publishing</span>
 
                           </td>
                           <td>
 
-                            <!-- Email -->
-                            <a class="item-email text-reset" href="mailto:john.doe@company.com">ab.hadley@company.com</a>
+                            <!-- Text -->
+                            <span class="item-location">San Francisco, CA</span>
 
                           </td>
-                          <td>
+                          <td class="item-phone">
 
-                            <!-- Phone -->
-                            <a class="item-phone text-reset" href="tel:1-123-456-7890">(650) 430-9876</a>
+                            <!-- Avatar -->
+                            <div class="avatar avatar-xs align-middle me-2">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-2.jpg" alt="...">
+                            </div> <a class="item-owner text-reset" href="profile-posts.html">Ab Hadley</a>
 
                           </td>
                           <td>
 
                             <!-- Badge -->
-                            <span class="item-score badge bg-success-soft">8/10</span>
-
-                          </td>
-                          <td>
-
-                            <!-- Link -->
-                            <a class="item-company text-reset" href="team-overview.html">Google</a>
+                            <time class="item-created" datetime="2020-03-22">Mar 22, 2020</time>
 
                           </td>
                           <td class="text-end">
@@ -2382,7 +2506,7 @@
 
                             <!-- Checkbox -->
                             <div class="form-check">
-                              <input class="form-check-input list-checkbox" id="listCheckboxThree" type="checkbox">
+                              <input class="form-check-input list-checkbox" type="checkbox" id="listCheckboxThree">
                               <label class="form-check-label" for="listCheckboxThree"></label>
                             </div>
 
@@ -2391,38 +2515,34 @@
 
                             <!-- Avatar -->
                             <div class="avatar avatar-xs align-middle me-2">
-                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-3.jpg" alt="...">
-                            </div> <a class="item-name text-reset" href="profile-posts.html">Adolfo Hess</a>
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/teams/team-logo-3.jpg" alt="...">
+                            </div> <a class="item-name text-reset" href="team-overview.html">Lyft</a>
 
                           </td>
-                          <td class="">
+                          <td>
 
                             <!-- Text -->
-                            <span class="item-title">Owner</span>
+                            <span class="item-industry">Transportation</span>
 
                           </td>
                           <td>
 
-                            <!-- Email -->
-                            <a class="item-email text-reset" href="mailto:john.doe@company.com">adolfo.hess@company.com</a>
+                            <!-- Text -->
+                            <span class="item-location">San Francisco, CA</span>
 
                           </td>
-                          <td>
+                          <td class="item-phone">
 
-                            <!-- Phone -->
-                            <a class="item-phone text-reset" href="tel:1-123-456-7890">(968) 682-1364</a>
+                            <!-- Avatar -->
+                            <div class="avatar avatar-xs align-middle me-2">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-3.jpg" alt="...">
+                            </div> <a class="item-owner text-reset" href="profile-posts.html">Adolfo Hess</a>
 
                           </td>
                           <td>
 
                             <!-- Badge -->
-                            <span class="item-score badge bg-success-soft">7/10</span>
-
-                          </td>
-                          <td>
-
-                            <!-- Link -->
-                            <a class="item-company text-reset" href="team-overview.html">Google</a>
+                            <time class="item-created" datetime="2020-04-01">Apr 01, 2020</time>
 
                           </td>
                           <td class="text-end">
@@ -2452,7 +2572,7 @@
 
                             <!-- Checkbox -->
                             <div class="form-check">
-                              <input class="form-check-input list-checkbox" id="listCheckboxFour" type="checkbox">
+                              <input class="form-check-input list-checkbox" type="checkbox" id="listCheckboxFour">
                               <label class="form-check-label" for="listCheckboxFour"></label>
                             </div>
 
@@ -2461,38 +2581,34 @@
 
                             <!-- Avatar -->
                             <div class="avatar avatar-xs align-middle me-2">
-                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-4.jpg" alt="...">
-                            </div> <a class="item-name text-reset" href="profile-posts.html">Daniela Dewitt</a>
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/teams/team-logo-4.jpg" alt="...">
+                            </div> <a class="item-name text-reset" href="team-overview.html">PayPal</a>
 
                           </td>
                           <td>
 
                             <!-- Text -->
-                            <span class="item-title">Designer</span>
+                            <span class="item-industry">Finance</span>
 
                           </td>
                           <td>
 
-                            <!-- Email -->
-                            <a class="item-email text-reset" href="mailto:john.doe@company.com">daniela.dewitt@company.com</a>
+                            <!-- Text -->
+                            <span class="item-location">San Jose, CA</span>
 
                           </td>
-                          <td>
+                          <td class="item-phone">
 
-                            <!-- Phone -->
-                            <a class="item-phone text-reset" href="tel:1-123-456-489">(650) 430-9876</a>
+                            <!-- Avatar -->
+                            <div class="avatar avatar-xs align-middle me-2">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-4.jpg" alt="...">
+                            </div> <a class="item-owner text-reset" href="profile-posts.html">Daniela Dewitt</a>
 
                           </td>
                           <td>
 
                             <!-- Badge -->
-                            <span class="item-score badge bg-warning-soft">4/10</span>
-
-                          </td>
-                          <td>
-
-                            <!-- Link -->
-                            <a class="item-company text-reset" href="team-overview.html">Twitch</a>
+                            <time class="item-created" datetime="2020-05-09">May 09, 2020</time>
 
                           </td>
                           <td class="text-end">
@@ -2522,7 +2638,7 @@
 
                             <!-- Checkbox -->
                             <div class="form-check">
-                              <input class="form-check-input list-checkbox" id="listCheckboxFive" type="checkbox">
+                              <input class="form-check-input list-checkbox" type="checkbox" id="listCheckboxFive">
                               <label class="form-check-label" for="listCheckboxFive"></label>
                             </div>
 
@@ -2531,38 +2647,34 @@
 
                             <!-- Avatar -->
                             <div class="avatar avatar-xs align-middle me-2">
-                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-5.jpg" alt="...">
-                            </div> <a class="item-name text-reset" href="profile-posts.html">Miyah Myles</a>
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/teams/team-logo-5.jpg" alt="...">
+                            </div> <a class="item-name text-reset" href="team-overview.html">Dropbox Inc.</a>
 
                           </td>
                           <td>
 
                             <!-- Text -->
-                            <span class="item-title">Founder</span>
+                            <span class="item-industry">File hosting</span>
 
                           </td>
                           <td>
 
-                            <!-- Email -->
-                            <a class="item-email text-reset" href="mailto:john.doe@company.com">miyah.myles@company.com</a>
+                            <!-- Text -->
+                            <span class="item-location">San Francisco, CA</span>
 
                           </td>
-                          <td>
+                          <td class="item-phone">
 
-                            <!-- Phone -->
-                            <a class="item-phone text-reset" href="tel:1-123-456-7890">(935) 165-8435</a>
+                            <!-- Avatar -->
+                            <div class="avatar avatar-xs align-middle me-2">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-5.jpg" alt="...">
+                            </div> <a class="item-owner text-reset" href="profile-posts.html">Miyah Myles</a>
 
                           </td>
                           <td>
 
                             <!-- Badge -->
-                            <span class="item-score badge bg-danger-soft">3/10</span>
-
-                          </td>
-                          <td>
-
-                            <!-- Link -->
-                            <a class="item-company text-reset" href="team-overview.html">Facebook</a>
+                            <time class="item-created" datetime="2020-06-16">Jun 16, 2020</time>
 
                           </td>
                           <td class="text-end">
@@ -2592,7 +2704,7 @@
 
                             <!-- Checkbox -->
                             <div class="form-check">
-                              <input class="form-check-input list-checkbox" id="listCheckboxSix" type="checkbox">
+                              <input class="form-check-input list-checkbox" type="checkbox" id="listCheckboxSix">
                               <label class="form-check-label" for="listCheckboxSix"></label>
                             </div>
 
@@ -2601,38 +2713,34 @@
 
                             <!-- Avatar -->
                             <div class="avatar avatar-xs align-middle me-2">
-                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-6.jpg" alt="...">
-                            </div> <a class="item-name text-reset" href="profile-posts.html">Ryu Duke</a>
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/teams/team-logo-6.jpg" alt="...">
+                            </div> <a class="item-name text-reset" href="team-overview.html">Squarespace</a>
 
                           </td>
                           <td>
 
                             <!-- Text -->
-                            <span class="item-title">Designer</span>
+                            <span class="item-industry">Hosting</span>
 
                           </td>
                           <td>
 
-                            <!-- Email -->
-                            <a class="item-email text-reset" href="mailto:john.doe@company.com">ryu.duke@company.com</a>
+                            <!-- Text -->
+                            <span class="item-location">New York City</span>
 
                           </td>
-                          <td>
+                          <td class="item-phone">
 
-                            <!-- Phone -->
-                            <a class="item-phone text-reset" href="tel:1-123-456-7890">(937) 596-0152</a>
+                            <!-- Avatar -->
+                            <div class="avatar avatar-xs align-middle me-2">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-6.jpg" alt="...">
+                            </div> <a class="item-owner text-reset" href="profile-posts.html">Ryu Duke</a>
 
                           </td>
                           <td>
 
                             <!-- Badge -->
-                            <span class="item-score badge bg-warning-soft">6/10</span>
-
-                          </td>
-                          <td>
-
-                            <!-- Link -->
-                            <a class="item-company text-reset" href="team-overview.html">Netflix</a>
+                            <time class="item-created" datetime="2020-08-22">Aug 22, 2020</time>
 
                           </td>
                           <td class="text-end">
@@ -2662,7 +2770,7 @@
 
                             <!-- Checkbox -->
                             <div class="form-check">
-                              <input class="form-check-input list-checkbox" id="listCheckboxSeven" type="checkbox">
+                              <input class="form-check-input list-checkbox" type="checkbox" id="listCheckboxSeven">
                               <label class="form-check-label" for="listCheckboxSeven"></label>
                             </div>
 
@@ -2671,38 +2779,34 @@
 
                             <!-- Avatar -->
                             <div class="avatar avatar-xs align-middle me-2">
-                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-7.jpg" alt="...">
-                            </div> <a class="item-name text-reset" href="profile-posts.html">Glen Rouse</a>
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/teams/team-logo-7.jpg" alt="...">
+                            </div> <a class="item-name text-reset" href="team-overview.html">Github</a>
 
                           </td>
                           <td>
 
                             <!-- Text -->
-                            <span class="item-title">Designer</span>
+                            <span class="item-industry">Hosting</span>
 
                           </td>
                           <td>
 
-                            <!-- Email -->
-                            <a class="item-email text-reset" href="mailto:john.doe@company.com">glen.rouse@company.com</a>
+                            <!-- Text -->
+                            <span class="item-location">Redmond, WA</span>
 
                           </td>
-                          <td>
+                          <td class="item-phone">
 
-                            <!-- Phone -->
-                            <a class="item-phone text-reset" href="tel:1-123-456-7890">(689) 798-4635</a>
+                            <!-- Avatar -->
+                            <div class="avatar avatar-xs align-middle me-2">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-7.jpg" alt="...">
+                            </div> <a class="item-owner text-reset" href="profile-posts.html">Glen Rouse</a>
 
                           </td>
                           <td>
 
                             <!-- Badge -->
-                            <span class="item-score badge bg-success-soft">9/10</span>
-
-                          </td>
-                          <td>
-
-                            <!-- Link -->
-                            <a class="item-company text-reset" href="team-overview.html">Netflix</a>
+                            <time class="item-created" datetime="2020-03-05">Mar 05, 2020</time>
 
                           </td>
                           <td class="text-end">
@@ -2732,7 +2836,7 @@
 
                             <!-- Checkbox -->
                             <div class="form-check">
-                              <input class="form-check-input list-checkbox" id="listCheckboxEight" type="checkbox">
+                              <input class="form-check-input list-checkbox" type="checkbox" id="listCheckboxEight">
                               <label class="form-check-label" for="listCheckboxEight"></label>
                             </div>
 
@@ -2741,38 +2845,34 @@
 
                             <!-- Avatar -->
                             <div class="avatar avatar-xs align-middle me-2">
-                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-1.jpg" alt="...">
-                            </div> <a class="item-name text-reset" href="profile-posts.html">Daniela Dewitt</a>
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/teams/team-logo-8.jpg" alt="...">
+                            </div> <a class="item-name text-reset" href="team-overview.html">Slack</a>
 
                           </td>
                           <td>
 
                             <!-- Text -->
-                            <span class="item-title">Developer</span>
+                            <span class="item-industry">Messaging</span>
 
                           </td>
                           <td>
 
-                            <!-- Email -->
-                            <a class="item-email text-reset" href="mailto:john.doe@company.com">daniela.dewitt@company.com</a>
+                            <!-- Text -->
+                            <span class="item-location">San Francisco, CA</span>
 
                           </td>
-                          <td>
+                          <td class="item-phone">
 
-                            <!-- Phone -->
-                            <a class="item-phone text-reset" href="tel:1-123-456-7890">(937) 568-8946</a>
+                            <!-- Avatar -->
+                            <div class="avatar avatar-xs align-middle me-2">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-5.jpg" alt="...">
+                            </div> <a class="item-owner text-reset" href="profile-posts.html">Miyah Myles</a>
 
                           </td>
                           <td>
 
                             <!-- Badge -->
-                            <span class="item-score badge bg-success-soft">7/10</span>
-
-                          </td>
-                          <td>
-
-                            <!-- Link -->
-                            <a class="item-company text-reset" href="team-overview.html">Uber</a>
+                            <time class="item-created" datetime="2020-04-30">Apr 30, 2020</time>
 
                           </td>
                           <td class="text-end">
@@ -2802,7 +2902,7 @@
 
                             <!-- Checkbox -->
                             <div class="form-check">
-                              <input class="form-check-input list-checkbox" id="listCheckboxNine" type="checkbox">
+                              <input class="form-check-input list-checkbox" type="checkbox" id="listCheckboxNine">
                               <label class="form-check-label" for="listCheckboxNine"></label>
                             </div>
 
@@ -2811,38 +2911,34 @@
 
                             <!-- Avatar -->
                             <div class="avatar avatar-xs align-middle me-2">
-                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-2.jpg" alt="...">
-                            </div> <a class="item-name text-reset" href="profile-posts.html">Adolfo Hess</a>
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/teams/team-logo-1.jpg" alt="...">
+                            </div> <a class="item-name text-reset" href="team-overview.html">Launchday</a>
 
                           </td>
-                          <td class="">
+                          <td>
 
                             <!-- Text -->
-                            <span class="item-title">Founder</span>
+                            <span class="item-industry">Web design</span>
 
                           </td>
                           <td>
 
-                            <!-- Email -->
-                            <a class="item-email text-reset" href="mailto:john.doe@company.com">adolfo.hess@company.com</a>
+                            <!-- Text -->
+                            <span class="item-location">Los Angeles, CA</span>
 
                           </td>
-                          <td>
+                          <td class="item-phone">
 
-                            <!-- Phone -->
-                            <a class="item-phone text-reset" href="tel:1-123-456-7890">(568) 498-0365</a>
+                            <!-- Avatar -->
+                            <div class="avatar avatar-xs align-middle me-2">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-1.jpg" alt="...">
+                            </div> <a class="item-owner text-reset" href="profile-posts.html">Dianna Smiley</a>
 
                           </td>
                           <td>
 
                             <!-- Badge -->
-                            <span class="item-score badge bg-success-soft">10/10</span>
-
-                          </td>
-                          <td>
-
-                            <!-- Link -->
-                            <a class="item-company text-reset" href="team-overview.html">Amazon</a>
+                            <time class="item-created" datetime="2020-01-14">Jan 14, 2020</time>
 
                           </td>
                           <td class="text-end">
@@ -2872,7 +2968,7 @@
 
                             <!-- Checkbox -->
                             <div class="form-check">
-                              <input class="form-check-input list-checkbox" id="listCheckboxTen" type="checkbox">
+                              <input class="form-check-input list-checkbox" type="checkbox" id="listCheckboxTen">
                               <label class="form-check-label" for="listCheckboxTen"></label>
                             </div>
 
@@ -2881,38 +2977,34 @@
 
                             <!-- Avatar -->
                             <div class="avatar avatar-xs align-middle me-2">
-                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-3.jpg" alt="...">
-                            </div> <a class="item-name text-reset" href="profile-posts.html">Glen Rouse</a>
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/teams/team-logo-2.jpg" alt="...">
+                            </div> <a class="item-name text-reset" href="team-overview.html">Medium Corporation</a>
 
                           </td>
-                          <td class="">
+                          <td>
 
                             <!-- Text -->
-                            <span class="item-title">Owner</span>
+                            <span class="item-industry">Publishing</span>
 
                           </td>
                           <td>
 
-                            <!-- Email -->
-                            <a class="item-email text-reset" href="mailto:john.doe@company.com">glen.rouse@company.com</a>
+                            <!-- Text -->
+                            <span class="item-location">San Francisco, CA</span>
 
                           </td>
-                          <td>
+                          <td class="item-phone">
 
-                            <!-- Phone -->
-                            <a class="item-phone text-reset" href="tel:1-123-456-67890">(968) 135-6458</a>
+                            <!-- Avatar -->
+                            <div class="avatar avatar-xs align-middle me-2">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-2.jpg" alt="...">
+                            </div> <a class="item-owner text-reset" href="profile-posts.html">Ab Hadley</a>
 
                           </td>
                           <td>
 
                             <!-- Badge -->
-                            <span class="item-score badge bg-warning-soft">6/10</span>
-
-                          </td>
-                          <td>
-
-                            <!-- Link -->
-                            <a class="item-company text-reset" href="team-overview.html">Twitch</a>
+                            <time class="item-created" datetime="2020-03-22">Mar 22, 2020</time>
 
                           </td>
                           <td class="text-end">
@@ -2942,7 +3034,7 @@
 
                             <!-- Checkbox -->
                             <div class="form-check">
-                              <input class="form-check-input list-checkbox" id="listCheckboxEleven" type="checkbox">
+                              <input class="form-check-input list-checkbox" type="checkbox" id="listCheckboxEleven">
                               <label class="form-check-label" for="listCheckboxEleven"></label>
                             </div>
 
@@ -2951,38 +3043,34 @@
 
                             <!-- Avatar -->
                             <div class="avatar avatar-xs align-middle me-2">
-                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-4.jpg" alt="...">
-                            </div> <a class="item-name text-reset" href="profile-posts.html">Miyah Myles</a>
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/teams/team-logo-3.jpg" alt="...">
+                            </div> <a class="item-name text-reset" href="team-overview.html">Lyft</a>
 
                           </td>
                           <td>
 
                             <!-- Text -->
-                            <span class="item-title">Designer</span>
+                            <span class="item-industry">Transportation</span>
 
                           </td>
                           <td>
 
-                            <!-- Email -->
-                            <a class="item-email text-reset" href="mailto:john.doe@company.com">miyah.myles@company.com</a>
+                            <!-- Text -->
+                            <span class="item-location">San Francisco, CA</span>
 
                           </td>
-                          <td>
+                          <td class="item-phone">
 
-                            <!-- Phone -->
-                            <a class="item-phone text-reset" href="tel:1-123-456-7890">(650) 430-9876</a>
+                            <!-- Avatar -->
+                            <div class="avatar avatar-xs align-middle me-2">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-3.jpg" alt="...">
+                            </div> <a class="item-owner text-reset" href="profile-posts.html">Adolfo Hess</a>
 
                           </td>
                           <td>
 
                             <!-- Badge -->
-                            <span class="item-score badge bg-success-soft">8/10</span>
-
-                          </td>
-                          <td>
-
-                            <!-- Link -->
-                            <a class="item-company text-reset" href="team-overview.html">Twitter</a>
+                            <time class="item-created" datetime="2020-04-01">Apr 01, 2020</time>
 
                           </td>
                           <td class="text-end">
@@ -3012,7 +3100,7 @@
 
                             <!-- Checkbox -->
                             <div class="form-check">
-                              <input class="form-check-input list-checkbox" id="listCheckboxTwelve" type="checkbox">
+                              <input class="form-check-input list-checkbox" type="checkbox" id="listCheckboxTwelve">
                               <label class="form-check-label" for="listCheckboxTwelve"></label>
                             </div>
 
@@ -3021,38 +3109,34 @@
 
                             <!-- Avatar -->
                             <div class="avatar avatar-xs align-middle me-2">
-                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-5.jpg" alt="...">
-                            </div> <a class="item-name text-reset" href="profile-posts.html">Dianna Smiley</a>
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/teams/team-logo-4.jpg" alt="...">
+                            </div> <a class="item-name text-reset" href="team-overview.html">PayPal</a>
 
                           </td>
                           <td>
 
                             <!-- Text -->
-                            <span class="item-title">Developer</span>
+                            <span class="item-industry">Finance</span>
 
                           </td>
                           <td>
 
-                            <!-- Email -->
-                            <a class="item-email text-reset" href="mailto:john.doe@company.com">dianna.smiley@company.com</a>
+                            <!-- Text -->
+                            <span class="item-location">San Jose, CA</span>
 
                           </td>
-                          <td>
+                          <td class="item-phone">
 
-                            <!-- Phone -->
-                            <a class="item-phone text-reset" href="tel:1-123-456-7890">(968) 165-8790</a>
+                            <!-- Avatar -->
+                            <div class="avatar avatar-xs align-middle me-2">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-4.jpg" alt="...">
+                            </div> <a class="item-owner text-reset" href="profile-posts.html">Daniela Dewitt</a>
 
                           </td>
                           <td>
 
                             <!-- Badge -->
-                            <span class="item-score badge bg-warning-soft">5/10</span>
-
-                          </td>
-                          <td>
-
-                            <!-- Link -->
-                            <a class="item-company text-reset" href="team-overview.html">Google</a>
+                            <time class="item-created" datetime="2020-05-09">May 09, 2020</time>
 
                           </td>
                           <td class="text-end">
@@ -3082,7 +3166,7 @@
 
                             <!-- Checkbox -->
                             <div class="form-check">
-                              <input class="form-check-input list-checkbox" id="listCheckboxThirteen" type="checkbox">
+                              <input class="form-check-input list-checkbox" type="checkbox" id="listCheckboxThirteen">
                               <label class="form-check-label" for="listCheckboxThirteen"></label>
                             </div>
 
@@ -3091,38 +3175,34 @@
 
                             <!-- Avatar -->
                             <div class="avatar avatar-xs align-middle me-2">
-                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-6.jpg" alt="...">
-                            </div> <a class="item-name text-reset" href="profile-posts.html">Glen Rouse</a>
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/teams/team-logo-5.jpg" alt="...">
+                            </div> <a class="item-name text-reset" href="team-overview.html">Dropbox Inc.</a>
 
                           </td>
                           <td>
 
                             <!-- Text -->
-                            <span class="item-title">Owner</span>
+                            <span class="item-industry">File hosting</span>
 
                           </td>
                           <td>
 
-                            <!-- Email -->
-                            <a class="item-email text-reset" href="mailto:john.doe@company.com">glen.rouse@company.com</a>
+                            <!-- Text -->
+                            <span class="item-location">San Francisco, CA</span>
 
                           </td>
-                          <td>
+                          <td class="item-phone">
 
-                            <!-- Phone -->
-                            <a class="item-phone text-reset" href="tel:1-123-456-7890">(937) 596-0152</a>
+                            <!-- Avatar -->
+                            <div class="avatar avatar-xs align-middle me-2">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-5.jpg" alt="...">
+                            </div> <a class="item-owner text-reset" href="profile-posts.html">Miyah Myles</a>
 
                           </td>
                           <td>
 
                             <!-- Badge -->
-                            <span class="item-score badge bg-danger-soft">2/10</span>
-
-                          </td>
-                          <td>
-
-                            <!-- Link -->
-                            <a class="item-company text-reset" href="team-overview.html">Uber</a>
+                            <time class="item-created" datetime="2020-06-16">Jun 16, 2020</time>
 
                           </td>
                           <td class="text-end">
@@ -3152,7 +3232,7 @@
 
                             <!-- Checkbox -->
                             <div class="form-check">
-                              <input class="form-check-input list-checkbox" id="listCheckboxFourteen" type="checkbox">
+                              <input class="form-check-input list-checkbox" type="checkbox" id="listCheckboxFourteen">
                               <label class="form-check-label" for="listCheckboxFourteen"></label>
                             </div>
 
@@ -3161,38 +3241,34 @@
 
                             <!-- Avatar -->
                             <div class="avatar avatar-xs align-middle me-2">
-                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-7.jpg" alt="...">
-                            </div> <a class="item-name text-reset" href="profile-posts.html">Adolfo Hess</a>
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/teams/team-logo-6.jpg" alt="...">
+                            </div> <a class="item-name text-reset" href="team-overview.html">Squarespace</a>
 
                           </td>
                           <td>
 
                             <!-- Text -->
-                            <span class="item-title">Designer</span>
+                            <span class="item-industry">Hosting</span>
 
                           </td>
                           <td>
 
-                            <!-- Email -->
-                            <a class="item-email text-reset" href="mailto:john.doe@company.com">adolfo.hess@company.com</a>
+                            <!-- Text -->
+                            <span class="item-location">New York City</span>
 
                           </td>
-                          <td>
+                          <td class="item-phone">
 
-                            <!-- Phone -->
-                            <a class="item-phone text-reset" href="tel:1-123-456-7890">(689) 798-4635</a>
+                            <!-- Avatar -->
+                            <div class="avatar avatar-xs align-middle me-2">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-6.jpg" alt="...">
+                            </div> <a class="item-owner text-reset" href="profile-posts.html">Ryu Duke</a>
 
                           </td>
                           <td>
 
                             <!-- Badge -->
-                            <span class="item-score badge bg-warning-soft">4/10</span>
-
-                          </td>
-                          <td>
-
-                            <!-- Link -->
-                            <a class="item-company text-reset" href="team-overview.html">Netflix</a>
+                            <time class="item-created" datetime="2020-08-22">Aug 22, 2020</time>
 
                           </td>
                           <td class="text-end">
@@ -3222,8 +3298,8 @@
 
                             <!-- Checkbox -->
                             <div class="form-check">
-                              <input class="form-check-input list-checkbox" id="Fifteen" type="checkbox">
-                              <label class="form-check-label" for="Fifteen"></label>
+                              <input class="form-check-input list-checkbox" type="checkbox" id="listCheckboxFifteen">
+                              <label class="form-check-label" for="listCheckboxFifteen"></label>
                             </div>
 
                           </td>
@@ -3231,38 +3307,34 @@
 
                             <!-- Avatar -->
                             <div class="avatar avatar-xs align-middle me-2">
-                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-8.jpg" alt="...">
-                            </div> <a class="item-name text-reset" href="profile-posts.html">Daniela Dewitt</a>
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/teams/team-logo-7.jpg" alt="...">
+                            </div> <a class="item-name text-reset" href="team-overview.html">Github</a>
 
                           </td>
                           <td>
 
                             <!-- Text -->
-                            <span class="item-title">Owner</span>
+                            <span class="item-industry">Hosting</span>
 
                           </td>
                           <td>
 
-                            <!-- Email -->
-                            <a class="item-email text-reset" href="mailto:john.doe@company.com">daniela.dewitt@company.com</a>
+                            <!-- Text -->
+                            <span class="item-location">Redmond, WA</span>
 
                           </td>
-                          <td>
+                          <td class="item-phone">
 
-                            <!-- Phone -->
-                            <a class="item-phone text-reset" href="tel:1-123-456-7890">(365) 489-1365</a>
+                            <!-- Avatar -->
+                            <div class="avatar avatar-xs align-middle me-2">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-7.jpg" alt="...">
+                            </div> <a class="item-owner text-reset" href="profile-posts.html">Glen Rouse</a>
 
                           </td>
                           <td>
 
                             <!-- Badge -->
-                            <span class="item-score badge bg-success-soft">9/10</span>
-
-                          </td>
-                          <td>
-
-                            <!-- Link -->
-                            <a class="item-company text-reset" href="team-overview.html">Uber</a>
+                            <time class="item-created" datetime="2020-03-05">Mar 05, 2020</time>
 
                           </td>
                           <td class="text-end">
@@ -3292,7 +3364,7 @@
 
                             <!-- Checkbox -->
                             <div class="form-check">
-                              <input class="form-check-input list-checkbox" id="listCheckboxSixteen" type="checkbox">
+                              <input class="form-check-input list-checkbox" type="checkbox" id="listCheckboxSixteen">
                               <label class="form-check-label" for="listCheckboxSixteen"></label>
                             </div>
 
@@ -3301,38 +3373,34 @@
 
                             <!-- Avatar -->
                             <div class="avatar avatar-xs align-middle me-2">
-                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-1.jpg" alt="...">
-                            </div> <a class="item-name text-reset" href="profile-posts.html">Miyah Myles</a>
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/teams/team-logo-8.jpg" alt="...">
+                            </div> <a class="item-name text-reset" href="team-overview.html">Slack</a>
 
                           </td>
                           <td>
 
                             <!-- Text -->
-                            <span class="item-title">Owner</span>
+                            <span class="item-industry">Messaging</span>
 
                           </td>
                           <td>
 
-                            <!-- Email -->
-                            <a class="item-email text-reset" href="mailto:john.doe@company.com">miyah.myles@company.com</a>
+                            <!-- Text -->
+                            <span class="item-location">San Francisco, CA</span>
 
                           </td>
-                          <td>
+                          <td class="item-phone">
 
-                            <!-- Phone -->
-                            <a class="item-phone text-reset" href="tel:1-123-456-4890">(968) 165-8920</a>
+                            <!-- Avatar -->
+                            <div class="avatar avatar-xs align-middle me-2">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-5.jpg" alt="...">
+                            </div> <a class="item-owner text-reset" href="profile-posts.html">Miyah Myles</a>
 
                           </td>
                           <td>
 
                             <!-- Badge -->
-                            <span class="item-score badge bg-warning-soft">5/10</span>
-
-                          </td>
-                          <td>
-
-                            <!-- Link -->
-                            <a class="item-company text-reset" href="team-overview.html">Twitch</a>
+                            <time class="item-created" datetime="2020-04-30">Apr 30, 2020</time>
 
                           </td>
                           <td class="text-end">
@@ -3371,38 +3439,34 @@
 
                             <!-- Avatar -->
                             <div class="avatar avatar-xs align-middle me-2">
-                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-2.jpg" alt="...">
-                            </div> <a class="item-name text-reset" href="profile-posts.html">Glen Rouse</a>
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/teams/team-logo-1.jpg" alt="...">
+                            </div> <a class="item-name text-reset" href="team-overview.html">Launchday</a>
 
                           </td>
-                          <td class="">
+                          <td>
 
                             <!-- Text -->
-                            <span class="item-title">Designer</span>
+                            <span class="item-industry">Web design</span>
 
                           </td>
                           <td>
 
-                            <!-- Email -->
-                            <a class="item-email text-reset" href="mailto:john.doe@company.com">glen.rouse@company.com</a>
+                            <!-- Text -->
+                            <span class="item-location">Los Angeles, CA</span>
 
                           </td>
-                          <td>
+                          <td class="item-phone">
 
-                            <!-- Phone -->
-                            <a class="item-phone text-reset" href="tel:1-123-456-7890">(689) 263-4856</a>
+                            <!-- Avatar -->
+                            <div class="avatar avatar-xs align-middle me-2">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-1.jpg" alt="...">
+                            </div> <a class="item-owner text-reset" href="profile-posts.html">Dianna Smiley</a>
 
                           </td>
                           <td>
 
                             <!-- Badge -->
-                            <span class="item-score badge bg-danger-soft">3/10</span>
-
-                          </td>
-                          <td>
-
-                            <!-- Link -->
-                            <a class="item-company text-reset" href="team-overview.html">Facebook</a>
+                            <time class="item-created" datetime="2020-01-14">Jan 14, 2020</time>
 
                           </td>
                           <td class="text-end">
@@ -3441,38 +3505,34 @@
 
                             <!-- Avatar -->
                             <div class="avatar avatar-xs align-middle me-2">
-                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-3.jpg" alt="...">
-                            </div> <a class="item-name text-reset" href="profile-posts.html">Ab Hadley</a>
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/teams/team-logo-2.jpg" alt="...">
+                            </div> <a class="item-name text-reset" href="team-overview.html">Medium Corporation</a>
 
                           </td>
-                          <td class="">
+                          <td>
 
                             <!-- Text -->
-                            <span class="item-title">Founder</span>
+                            <span class="item-industry">Publishing</span>
 
                           </td>
                           <td>
 
-                            <!-- Email -->
-                            <a class="item-email text-reset" href="mailto:john.doe@company.com">ab.hadley@company.com</a>
+                            <!-- Text -->
+                            <span class="item-location">San Francisco, CA</span>
 
                           </td>
-                          <td>
+                          <td class="item-phone">
 
-                            <!-- Phone -->
-                            <a class="item-phone text-reset" href="tel:1-123-456-7890">(346) 795-1685</a>
+                            <!-- Avatar -->
+                            <div class="avatar avatar-xs align-middle me-2">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-2.jpg" alt="...">
+                            </div> <a class="item-owner text-reset" href="profile-posts.html">Ab Hadley</a>
 
                           </td>
                           <td>
 
                             <!-- Badge -->
-                            <span class="item-score badge bg-success-soft">9/10</span>
-
-                          </td>
-                          <td>
-
-                            <!-- Link -->
-                            <a class="item-company text-reset" href="team-overview.html">Lyft</a>
+                            <time class="item-created" datetime="2020-03-22">Mar 22, 2020</time>
 
                           </td>
                           <td class="text-end">
@@ -3511,38 +3571,34 @@
 
                             <!-- Avatar -->
                             <div class="avatar avatar-xs align-middle me-2">
-                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-4.jpg" alt="...">
-                            </div> <a class="item-name text-reset" href="profile-posts.html">Daniela Dewitt</a>
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/teams/team-logo-3.jpg" alt="...">
+                            </div> <a class="item-name text-reset" href="team-overview.html">Lyft</a>
 
                           </td>
                           <td>
 
                             <!-- Text -->
-                            <span class="item-title">Developer</span>
+                            <span class="item-industry">Transportation</span>
 
                           </td>
                           <td>
 
-                            <!-- Email -->
-                            <a class="item-email text-reset" href="mailto:john.doe@company.com">daniela.dewitt@company.com</a>
+                            <!-- Text -->
+                            <span class="item-location">San Francisco, CA</span>
 
                           </td>
-                          <td>
+                          <td class="item-phone">
 
-                            <!-- Phone -->
-                            <a class="item-phone text-reset" href="tel:1-123-456-489">(892) 678-0028</a>
+                            <!-- Avatar -->
+                            <div class="avatar avatar-xs align-middle me-2">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-3.jpg" alt="...">
+                            </div> <a class="item-owner text-reset" href="profile-posts.html">Adolfo Hess</a>
 
                           </td>
                           <td>
 
                             <!-- Badge -->
-                            <span class="item-score badge bg-success-soft">10/10</span>
-
-                          </td>
-                          <td>
-
-                            <!-- Link -->
-                            <a class="item-company text-reset" href="team-overview.html">Microsoft</a>
+                            <time class="item-created" datetime="2020-04-01">Apr 01, 2020</time>
 
                           </td>
                           <td class="text-end">
@@ -3581,38 +3637,34 @@
 
                             <!-- Avatar -->
                             <div class="avatar avatar-xs align-middle me-2">
-                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-5.jpg" alt="...">
-                            </div> <a class="item-name text-reset" href="profile-posts.html">Daniela Dewitt</a>
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/teams/team-logo-4.jpg" alt="...">
+                            </div> <a class="item-name text-reset" href="team-overview.html">PayPal</a>
 
                           </td>
                           <td>
 
                             <!-- Text -->
-                            <span class="item-title">Developer</span>
+                            <span class="item-industry">Finance</span>
 
                           </td>
                           <td>
 
-                            <!-- Email -->
-                            <a class="item-email text-reset" href="mailto:john.doe@company.com">daniela.dewitt@company.com</a>
+                            <!-- Text -->
+                            <span class="item-location">San Jose, CA</span>
 
                           </td>
-                          <td>
+                          <td class="item-phone">
 
-                            <!-- Phone -->
-                            <a class="item-phone text-reset" href="tel:1-123-456-7890">(036) 000-8935</a>
+                            <!-- Avatar -->
+                            <div class="avatar avatar-xs align-middle me-2">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-4.jpg" alt="...">
+                            </div> <a class="item-owner text-reset" href="profile-posts.html">Daniela Dewitt</a>
 
                           </td>
                           <td>
 
                             <!-- Badge -->
-                            <span class="item-score badge bg-danger-soft">1/10</span>
-
-                          </td>
-                          <td>
-
-                            <!-- Link -->
-                            <a class="item-company text-reset" href="team-overview.html">Lyft</a>
+                            <time class="item-created" datetime="2020-05-09">May 09, 2020</time>
 
                           </td>
                           <td class="text-end">
@@ -3651,38 +3703,34 @@
 
                             <!-- Avatar -->
                             <div class="avatar avatar-xs align-middle me-2">
-                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-6.jpg" alt="...">
-                            </div> <a class="item-name text-reset" href="profile-posts.html">Adolfo Hess</a>
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/teams/team-logo-5.jpg" alt="...">
+                            </div> <a class="item-name text-reset" href="team-overview.html">Dropbox Inc.</a>
 
                           </td>
                           <td>
 
                             <!-- Text -->
-                            <span class="item-title">Founder</span>
+                            <span class="item-industry">File hosting</span>
 
                           </td>
                           <td>
 
-                            <!-- Email -->
-                            <a class="item-email text-reset" href="mailto:john.doe@company.com">adolfo.hess@company.com</a>
+                            <!-- Text -->
+                            <span class="item-location">San Francisco, CA</span>
 
                           </td>
-                          <td>
+                          <td class="item-phone">
 
-                            <!-- Phone -->
-                            <a class="item-phone text-reset" href="tel:1-123-456-7890">(968) 264-8964</a>
+                            <!-- Avatar -->
+                            <div class="avatar avatar-xs align-middle me-2">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-5.jpg" alt="...">
+                            </div> <a class="item-owner text-reset" href="profile-posts.html">Miyah Myles</a>
 
                           </td>
                           <td>
 
                             <!-- Badge -->
-                            <span class="item-score badge bg-danger-soft">2/10</span>
-
-                          </td>
-                          <td>
-
-                            <!-- Link -->
-                            <a class="item-company text-reset" href="team-overview.html">Google</a>
+                            <time class="item-created" datetime="2020-06-16">Jun 16, 2020</time>
 
                           </td>
                           <td class="text-end">
@@ -3721,38 +3769,34 @@
 
                             <!-- Avatar -->
                             <div class="avatar avatar-xs align-middle me-2">
-                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-7.jpg" alt="...">
-                            </div> <a class="item-name text-reset" href="profile-posts.html">Adolfo Hess</a>
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/teams/team-logo-6.jpg" alt="...">
+                            </div> <a class="item-name text-reset" href="team-overview.html">Squarespace</a>
 
                           </td>
                           <td>
 
                             <!-- Text -->
-                            <span class="item-title">Owner</span>
+                            <span class="item-industry">Hosting</span>
 
                           </td>
                           <td>
 
-                            <!-- Email -->
-                            <a class="item-email text-reset" href="mailto:john.doe@company.com">adolfo.hess@company.com</a>
+                            <!-- Text -->
+                            <span class="item-location">New York City</span>
 
                           </td>
-                          <td>
+                          <td class="item-phone">
 
-                            <!-- Phone -->
-                            <a class="item-phone text-reset" href="tel:1-123-456-7890">(158) 167-0680</a>
+                            <!-- Avatar -->
+                            <div class="avatar avatar-xs align-middle me-2">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-6.jpg" alt="...">
+                            </div> <a class="item-owner text-reset" href="profile-posts.html">Ryu Duke</a>
 
                           </td>
                           <td>
 
                             <!-- Badge -->
-                            <span class="item-score badge bg-warning-soft">5/10</span>
-
-                          </td>
-                          <td>
-
-                            <!-- Link -->
-                            <a class="item-company text-reset" href="team-overview.html">Uber</a>
+                            <time class="item-created" datetime="2020-08-22">Aug 22, 2020</time>
 
                           </td>
                           <td class="text-end">
@@ -3791,38 +3835,34 @@
 
                             <!-- Avatar -->
                             <div class="avatar avatar-xs align-middle me-2">
-                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-1.jpg" alt="...">
-                            </div> <a class="item-name text-reset" href="profile-posts.html">Miyah Myles</a>
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/teams/team-logo-7.jpg" alt="...">
+                            </div> <a class="item-name text-reset" href="team-overview.html">Github</a>
 
                           </td>
                           <td>
 
                             <!-- Text -->
-                            <span class="item-title">Owner</span>
+                            <span class="item-industry">Hosting</span>
 
                           </td>
                           <td>
 
-                            <!-- Email -->
-                            <a class="item-email text-reset" href="mailto:john.doe@company.com">miyah.myles@company.com</a>
+                            <!-- Text -->
+                            <span class="item-location">Redmond, WA</span>
 
                           </td>
-                          <td>
+                          <td class="item-phone">
 
-                            <!-- Phone -->
-                            <a class="item-phone text-reset" href="tel:1-123-456-7890">(038) 876-3917</a>
+                            <!-- Avatar -->
+                            <div class="avatar avatar-xs align-middle me-2">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-7.jpg" alt="...">
+                            </div> <a class="item-owner text-reset" href="profile-posts.html">Glen Rouse</a>
 
                           </td>
                           <td>
 
                             <!-- Badge -->
-                            <span class="item-score badge bg-warning-soft">6/10</span>
-
-                          </td>
-                          <td>
-
-                            <!-- Link -->
-                            <a class="item-company text-reset" href="team-overview.html">Twitter</a>
+                            <time class="item-created" datetime="2020-03-05">Mar 05, 2020</time>
 
                           </td>
                           <td class="text-end">
@@ -3861,38 +3901,34 @@
 
                             <!-- Avatar -->
                             <div class="avatar avatar-xs align-middle me-2">
-                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-2.jpg" alt="...">
-                            </div> <a class="item-name text-reset" href="profile-posts.html">Ryu.Duke</a>
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/teams/team-logo-8.jpg" alt="...">
+                            </div> <a class="item-name text-reset" href="team-overview.html">Slack</a>
 
                           </td>
-                          <td class="">
+                          <td>
 
                             <!-- Text -->
-                            <span class="item-title">Designer</span>
+                            <span class="item-industry">Messaging</span>
 
                           </td>
                           <td>
 
-                            <!-- Email -->
-                            <a class="item-email text-reset" href="mailto:john.doe@company.com">ryu.duke@company.com</a>
+                            <!-- Text -->
+                            <span class="item-location">San Francisco, CA</span>
 
                           </td>
-                          <td>
+                          <td class="item-phone">
 
-                            <!-- Phone -->
-                            <a class="item-phone text-reset" href="tel:1-123-456-7890">(862) 0057-9806</a>
+                            <!-- Avatar -->
+                            <div class="avatar avatar-xs align-middle me-2">
+                              <img class="avatar-img rounded-circle" src="assets/img/avatars/profiles/avatar-5.jpg" alt="...">
+                            </div> <a class="item-owner text-reset" href="profile-posts.html">Miyah Myles</a>
 
                           </td>
                           <td>
 
                             <!-- Badge -->
-                            <span class="item-score badge bg-danger-soft">1/10</span>
-
-                          </td>
-                          <td>
-
-                            <!-- Link -->
-                            <a class="item-company text-reset" href="team-overview.html">Amazon</a>
+                            <time class="item-created" datetime="2020-04-30">Apr 30, 2020</time>
 
                           </td>
                           <td class="text-end">
@@ -3952,8 +3988,8 @@
 
                           <!-- Checkbox -->
                           <div class="form-check">
-                            <input class="form-check-input" id="listAlertCheckbox" type="checkbox" checked disabled>
-                            <label class="form-check-label text-white" for="listAlertCheckbox">
+                            <input class="form-check-input" type="checkbox" id="cardAlertCheckbox" checked disabled>
+                            <label class="form-check-label text-white" for="cardAlertCheckbox">
                               <span class="list-alert-count">0</span> deal(s)
                             </label>
                           </div>
@@ -3983,10 +4019,10 @@
                 </div>
 
               </div>
-              <div class="tab-pane fade" id="contactsCardsPane" role="tabpanel" aria-labelledby="contactsCardsTab">
+              <div class="tab-pane fade" id="companiesCardsPane" role="tabpanel" aria-labelledby="companiesCardsTab">
 
                 <!-- Cards -->
-                <div data-list='{"valueNames": ["item-name", "item-title", "item-email", "item-phone", "item-score", "item-company"], "page": 9, "pagination": {"paginationClass": "list-pagination"}}' id="contactsCards">
+                <div data-list='{"valueNames": ["item-name", "item-industry", "item-location", "item-owner", "item-created"], "page": 9, "pagination": {"paginationClass": "list-pagination"}}' id="companiesCards">
 
                   <!-- Header -->
                   <div class="row align-items-center mb-4">
@@ -3996,9 +4032,9 @@
                       <form>
                         <div class="input-group input-group-lg input-group-merge input-group-reverse">
                           <input class="form-control list-search" type="search" placeholder="Search">
-                          <span class="input-group-text">
-                            <i class="fe fe-search"></i>
-                          </span>
+                          <div class="input-group-text">
+                            <span class="fe fe-search"></span>
+                          </div>
                         </div>
                       </form>
 
@@ -4021,7 +4057,7 @@
 
                         <!-- Toggle -->
                         <button class="btn btn-sm btn-white" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <i class="fe fe-sliders me-1"></i> Filter <span class="badge bg-primary ms-1 d-none">0</span>
+                          <i class="fe fe-sliders me-1"></i> Filter <span class="badge bg-primary ms-1">1</span>
                         </button>
 
                         <!-- Menu -->
@@ -4034,7 +4070,7 @@
                             </h4>
 
                             <!-- Link -->
-                            <button class="btn btn-sm btn-link text-reset d-none" type="reset">
+                            <button class="btn btn-sm btn-link text-reset" type="reset">
                               <small>Clear filters</small>
                             </button>
 
@@ -4055,8 +4091,8 @@
 
                                     <!-- Select -->
                                     <select class="form-select form-select-sm" name="item-title" data-choices='{"searchEnabled": false}'>
-                                      <option value="*" selected>Any</option>
-                                      <option value="Designer">Designer</option>
+                                      <option value="*">Any</option>
+                                      <option value="Designer" selected>Designer</option>
                                       <option value="Developer">Developer</option>
                                       <option value="Owner">Owner</option>
                                       <option value="Founder">Founder</option>
@@ -4151,8 +4187,8 @@
                           </div> <!-- / .row -->
 
                           <!-- Image -->
-                          <a href="profile-posts.html" class="avatar avatar-xl card-avatar">
-                            <img src="assets/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle" alt="...">
+                          <a href="team-overview.html" class="avatar avatar-xl card-avatar">
+                            <img src="assets/img/avatars/teams/team-logo-1.jpg" class="avatar-img rounded" alt="...">
                           </a>
 
                           <!-- Body -->
@@ -4160,21 +4196,13 @@
 
                             <!-- Heading -->
                             <h2 class="card-title">
-                              <a class="item-name" href="profile-posts.html">Dianna Smiley</a>
+                              <a class="item-name" href="team-overview.html">Launchday</a>
                             </h2>
 
                             <!-- Text -->
-                            <p class="small text-muted mb-3">
-                              <span class="item-title">Designer</span> at <span class="item-company">Twitter</span>
+                            <p class="small text-muted mb-0">
+                              Launchday is a SaaS website builder with a focus on quality, easy to build product sites.
                             </p>
-
-                            <!-- Buttons -->
-                            <a class="btn btn-sm btn-white" href="tel:1-123-456-7890">
-                              <i class="fe fe-phone me-1"></i> Call
-                            </a>
-                            <a class="btn btn-sm btn-white" href="mailto:john.doe@company.com">
-                              <i class="fe fe-mail me-1"></i> Email
-                            </a>
 
                           </div>
 
@@ -4188,13 +4216,15 @@
                                 <div class="col">
 
                                   <!-- Text -->
-                                  <small>Company</small>
+                                  <small>Contact</small>
 
                                 </div>
                                 <div class="col-auto">
 
-                                  <!-- Text -->
-                                  <small>Twitter</small>
+                                  <!-- Link -->
+                                  <a href="profile-posts.html">
+                                    <small class="item-owner">Dianna Smiley</small>
+                                  </a>
 
                                 </div>
                               </div> <!-- / .row -->
@@ -4204,13 +4234,13 @@
                                 <div class="col">
 
                                   <!-- Text -->
-                                  <small>Lead Score</small>
+                                  <small>Industry</small>
 
                                 </div>
                                 <div class="col-auto">
 
-                                  <!-- Badge -->
-                                  <span class="item-score badge bg-danger-soft">1/10</span>
+                                  <!-- Text -->
+                                  <small class="item-industry">Web design</small>
 
                                 </div>
                               </div> <!-- / .row -->
@@ -4262,8 +4292,8 @@
                           </div> <!-- / .row -->
 
                           <!-- Image -->
-                          <a href="profile-posts.html" class="avatar avatar-xl card-avatar">
-                            <img src="assets/img/avatars/profiles/avatar-2.jpg" class="avatar-img rounded-circle" alt="...">
+                          <a href="team-overview.html" class="avatar avatar-xl card-avatar">
+                            <img src="assets/img/avatars/teams/team-logo-2.jpg" class="avatar-img rounded" alt="...">
                           </a>
 
                           <!-- Body -->
@@ -4271,21 +4301,13 @@
 
                             <!-- Heading -->
                             <h2 class="card-title">
-                              <a class="item-name" href="profile-posts.html">Ab Hadley</a>
+                              <a class="item-name" href="team-overview.html">Medium Corporation</a>
                             </h2>
 
                             <!-- Text -->
-                            <p class="small text-muted mb-3">
-                              <span class="item-title">Developer</span> at <span class="item-company">Google</span>
+                            <p class="small text-muted mb-0">
+                              Medium is an online publishing platform developed by Evan Williams, and launched in August 2012.
                             </p>
-
-                            <!-- Buttons -->
-                            <a class="btn btn-sm btn-white" href="tel:1-123-456-7890">
-                              <i class="fe fe-phone me-1"></i> Call
-                            </a>
-                            <a class="btn btn-sm btn-white" href="mailto:john.doe@company.com">
-                              <i class="fe fe-mail me-1"></i> Email
-                            </a>
 
                           </div>
 
@@ -4299,13 +4321,15 @@
                                 <div class="col">
 
                                   <!-- Text -->
-                                  <small>Company</small>
+                                  <small>Contact</small>
 
                                 </div>
                                 <div class="col-auto">
 
-                                  <!-- Text -->
-                                  <small>Google</small>
+                                  <!-- Link -->
+                                  <a href="profile-posts.html">
+                                    <small class="item-owner">Ab Hadley</small>
+                                  </a>
 
                                 </div>
                               </div> <!-- / .row -->
@@ -4315,13 +4339,13 @@
                                 <div class="col">
 
                                   <!-- Text -->
-                                  <small>Lead Score</small>
+                                  <small>Industry</small>
 
                                 </div>
                                 <div class="col-auto">
 
-                                  <!-- Badge -->
-                                  <span class="item-score badge bg-success-soft">8/10</span>
+                                  <!-- Text -->
+                                  <small class="item-industry">Publishing</small>
 
                                 </div>
                               </div> <!-- / .row -->
@@ -4344,8 +4368,8 @@
 
                               <!-- Checkbox -->
                               <div class="form-check form-check-circle">
-                                <input class="form-check-input list-checkbox" type="checkbox" id="cardsCheckBoxThree">
-                                <label class="form-check-label" for="cardsCheckBoxThree"></label>
+                                <input class="form-check-input list-checkbox" type="checkbox" id="cardsCheckboxThree">
+                                <label class="form-check-label" for="cardsCheckboxThree"></label>
                               </div>
 
                             </div>
@@ -4373,8 +4397,8 @@
                           </div> <!-- / .row -->
 
                           <!-- Image -->
-                          <a href="profile-posts.html" class="avatar avatar-xl card-avatar">
-                            <img src="assets/img/avatars/profiles/avatar-3.jpg" class="avatar-img rounded-circle" alt="...">
+                          <a href="team-overview.html" class="avatar avatar-xl card-avatar">
+                            <img src="assets/img/avatars/teams/team-logo-3.jpg" class="avatar-img rounded" alt="...">
                           </a>
 
                           <!-- Body -->
@@ -4382,21 +4406,13 @@
 
                             <!-- Heading -->
                             <h2 class="card-title">
-                              <a class="item-name" href="profile-posts.html">Adolfo Hess</a>
+                              <a class="item-name" href="team-overview.html">Lyft</a>
                             </h2>
 
                             <!-- Text -->
-                            <p class="small text-muted mb-3">
-                              <span class="item-title">Owner</span> at <span class="item-company">Google</span>
+                            <p class="small text-muted mb-0">
+                              Lyft is an on-demand transportation company based in San Francisco, California.
                             </p>
-
-                            <!-- Buttons -->
-                            <a class="btn btn-sm btn-white" href="tel:1-123-456-7890">
-                              <i class="fe fe-phone me-1"></i> Call
-                            </a>
-                            <a class="btn btn-sm btn-white" href="mailto:john.doe@company.com">
-                              <i class="fe fe-mail me-1"></i> Email
-                            </a>
 
                           </div>
 
@@ -4410,13 +4426,15 @@
                                 <div class="col">
 
                                   <!-- Text -->
-                                  <small>Company</small>
+                                  <small>Contact</small>
 
                                 </div>
                                 <div class="col-auto">
 
-                                  <!-- Text -->
-                                  <small>Google</small>
+                                  <!-- Link -->
+                                  <a href="profile-posts.html">
+                                    <small class="item-owner">Adolfo Hess</small>
+                                  </a>
 
                                 </div>
                               </div> <!-- / .row -->
@@ -4426,13 +4444,13 @@
                                 <div class="col">
 
                                   <!-- Text -->
-                                  <small>Lead Score</small>
+                                  <small>Industry</small>
 
                                 </div>
                                 <div class="col-auto">
 
-                                  <!-- Badge -->
-                                  <span class="item-score badge bg-success-soft">7/10</span>
+                                  <!-- Text -->
+                                  <small class="item-industry">Transportation</small>
 
                                 </div>
                               </div> <!-- / .row -->
@@ -4484,8 +4502,8 @@
                           </div> <!-- / .row -->
 
                           <!-- Image -->
-                          <a href="profile-posts.html" class="avatar avatar-xl card-avatar">
-                            <img src="assets/img/avatars/profiles/avatar-4.jpg" class="avatar-img rounded-circle" alt="...">
+                          <a href="team-overview.html" class="avatar avatar-xl card-avatar">
+                            <img src="assets/img/avatars/teams/team-logo-4.jpg" class="avatar-img rounded" alt="...">
                           </a>
 
                           <!-- Body -->
@@ -4493,21 +4511,13 @@
 
                             <!-- Heading -->
                             <h2 class="card-title">
-                              <a class="item-name" href="profile-posts.html">Daniela Dewitt</a>
+                              <a class="item-name" href="team-overview.html">PayPal</a>
                             </h2>
 
                             <!-- Text -->
-                            <p class="small text-muted mb-3">
-                              <span class="item-title">Designer</span> at <span class="item-position">Twitch</span>
+                            <p class="small text-muted mb-0">
+                              PayPal is a worldwide online payments system that supports online money transfers and services.
                             </p>
-
-                            <!-- Buttons -->
-                            <a class="btn btn-sm btn-white" href="tel:tel:1-123-456-7890">
-                              <i class="fe fe-phone me-1"></i> Call
-                            </a>
-                            <a class="btn btn-sm btn-white" href="mailto:john.doe@company.com">
-                              <i class="fe fe-mail me-1"></i> Email
-                            </a>
 
                           </div>
 
@@ -4521,13 +4531,15 @@
                                 <div class="col">
 
                                   <!-- Text -->
-                                  <small>Company</small>
+                                  <small>Contact</small>
 
                                 </div>
                                 <div class="col-auto">
 
-                                  <!-- Text -->
-                                  <small>Twitch</small>
+                                  <!-- Link -->
+                                  <a href="profile-posts.html">
+                                    <small class="item-owner">Daniela Dewitt</small>
+                                  </a>
 
                                 </div>
                               </div> <!-- / .row -->
@@ -4537,13 +4549,13 @@
                                 <div class="col">
 
                                   <!-- Text -->
-                                  <small>Lead Score</small>
+                                  <small>Industry</small>
 
                                 </div>
                                 <div class="col-auto">
 
-                                  <!-- Badge -->
-                                  <span class="item-score badge bg-warning-soft">4/10</span>
+                                  <!-- Text -->
+                                  <small class="item-industry">Finance</small>
 
                                 </div>
                               </div> <!-- / .row -->
@@ -4595,8 +4607,8 @@
                           </div> <!-- / .row -->
 
                           <!-- Image -->
-                          <a href="profile-posts.html" class="avatar avatar-xl card-avatar">
-                            <img src="assets/img/avatars/profiles/avatar-5.jpg" class="avatar-img rounded-circle" alt="...">
+                          <a href="team-overview.html" class="avatar avatar-xl card-avatar">
+                            <img src="assets/img/avatars/teams/team-logo-5.jpg" class="avatar-img rounded" alt="...">
                           </a>
 
                           <!-- Body -->
@@ -4604,21 +4616,13 @@
 
                             <!-- Heading -->
                             <h2 class="card-title">
-                              <a class="item-name" href="profile-posts.html">Miyah Myles</a>
+                              <a class="item-name" href="team-overview.html">Dropbox Inc.</a>
                             </h2>
 
                             <!-- Text -->
-                            <p class="small text-muted mb-3">
-                              <span class="item-title">Founder</span> at <span class="item-company">Facebook</span>
+                            <p class="small text-muted mb-0">
+                              Dropbox is a file hosting service that offers cloud storage, file synchronization, a personal cloud.
                             </p>
-
-                            <!-- Buttons -->
-                            <a class="btn btn-sm btn-white" href="tel:1-123-456-7890">
-                              <i class="fe fe-phone me-1"></i> Call
-                            </a>
-                            <a class="btn btn-sm btn-white" href="mailto:john.doe@company.com">
-                              <i class="fe fe-mail me-1"></i> Email
-                            </a>
 
                           </div>
 
@@ -4632,13 +4636,15 @@
                                 <div class="col">
 
                                   <!-- Text -->
-                                  <small>Company</small>
+                                  <small>Contact</small>
 
                                 </div>
                                 <div class="col-auto">
 
-                                  <!-- Text -->
-                                  <small>Facebook</small>
+                                  <!-- Link -->
+                                  <a href="profile-posts.html">
+                                    <small class="item-owner">Miyah Myles</small>
+                                  </a>
 
                                 </div>
                               </div> <!-- / .row -->
@@ -4648,13 +4654,13 @@
                                 <div class="col">
 
                                   <!-- Text -->
-                                  <small>Lead Score</small>
+                                  <small>Industry</small>
 
                                 </div>
                                 <div class="col-auto">
 
-                                  <!-- Badge -->
-                                  <span class="item-score badge bg-danger-soft">3/10</span>
+                                  <!-- Text -->
+                                  <small class="item-industry">File hosting</small>
 
                                 </div>
                               </div> <!-- / .row -->
@@ -4677,8 +4683,8 @@
 
                               <!-- Checkbox -->
                               <div class="form-check form-check-circle">
-                                <input class="form-check-input list-checkbox" type="checkbox" id="cardsCheckBoxSix">
-                                <label class="form-check-label" for="cardsCheckBoxSix"></label>
+                                <input class="form-check-input list-checkbox" type="checkbox" id="cardsCheckboxSix">
+                                <label class="form-check-label" for="cardsCheckboxSix"></label>
                               </div>
 
                             </div>
@@ -4706,8 +4712,8 @@
                           </div> <!-- / .row -->
 
                           <!-- Image -->
-                          <a href="profile-posts.html" class="avatar avatar-xl card-avatar">
-                            <img src="assets/img/avatars/profiles/avatar-6.jpg" class="avatar-img rounded-circle" alt="...">
+                          <a href="team-overview.html" class="avatar avatar-xl card-avatar">
+                            <img src="assets/img/avatars/teams/team-logo-6.jpg" class="avatar-img rounded" alt="...">
                           </a>
 
                           <!-- Body -->
@@ -4715,21 +4721,13 @@
 
                             <!-- Heading -->
                             <h2 class="card-title">
-                              <a class="item-name" href="profile-posts.html">Ryu Duke</a>
+                              <a class="item-name" href="team-overview.html">Squarespace</a>
                             </h2>
 
                             <!-- Text -->
-                            <p class="small text-muted mb-3">
-                              <span class="item-title">Owner</span> at <span class="item-company">Netflix</span>
+                            <p class="small text-muted mb-0">
+                              Squarespace provides software as a service for website building and hosting. Headquartered in NYC.
                             </p>
-
-                            <!-- Buttons -->
-                            <a class="btn btn-sm btn-white" href="tel:1-123-456-7890">
-                              <i class="fe fe-phone me-1"></i> Call
-                            </a>
-                            <a class="btn btn-sm btn-white" href="mailto:john.doe@company.com">
-                              <i class="fe fe-mail me-1"></i> Email
-                            </a>
 
                           </div>
 
@@ -4743,13 +4741,15 @@
                                 <div class="col">
 
                                   <!-- Text -->
-                                  <small>Company</small>
+                                  <small>Contact</small>
 
                                 </div>
                                 <div class="col-auto">
 
-                                  <!-- Text -->
-                                  <small>Netflix</small>
+                                  <!-- Link -->
+                                  <a href="profile-posts.html">
+                                    <small class="item-owner">Ryu Duke</small>
+                                  </a>
 
                                 </div>
                               </div> <!-- / .row -->
@@ -4759,13 +4759,13 @@
                                 <div class="col">
 
                                   <!-- Text -->
-                                  <small>Lead Score</small>
+                                  <small>Industry</small>
 
                                 </div>
                                 <div class="col-auto">
 
-                                  <!-- Badge -->
-                                  <span class="item-score badge bg-warning-soft">6/10</span>
+                                  <!-- Text -->
+                                  <small class="item-industry">Hosting</small>
 
                                 </div>
                               </div> <!-- / .row -->
@@ -4817,8 +4817,8 @@
                           </div> <!-- / .row -->
 
                           <!-- Image -->
-                          <a href="profile-posts.html" class="avatar avatar-xl card-avatar">
-                            <img src="assets/img/avatars/profiles/avatar-7.jpg" class="avatar-img rounded-circle" alt="...">
+                          <a href="team-overview.html" class="avatar avatar-xl card-avatar">
+                            <img src="assets/img/avatars/teams/team-logo-7.jpg" class="avatar-img rounded" alt="...">
                           </a>
 
                           <!-- Body -->
@@ -4826,21 +4826,13 @@
 
                             <!-- Heading -->
                             <h2 class="card-title">
-                              <a class="item-name" href="profile-posts.html">Glen Rouse</a>
+                              <a class="item-name" href="team-overview.html">Github</a>
                             </h2>
 
                             <!-- Text -->
-                            <p class="small text-muted mb-3">
-                              <span class="item-title">Designer</span> at <span class="item-position">Netflix</span>
+                            <p class="small text-muted mb-0">
+                              GitHub is a web-based hosting service for version control of code using Git.
                             </p>
-
-                            <!-- Buttons -->
-                            <a class="btn btn-sm btn-white" href="tel:tel:1-123-456-7890">
-                              <i class="fe fe-phone me-1"></i> Call
-                            </a>
-                            <a class="btn btn-sm btn-white" href="mailto:john.doe@company.com">
-                              <i class="fe fe-mail me-1"></i> Email
-                            </a>
 
                           </div>
 
@@ -4854,13 +4846,15 @@
                                 <div class="col">
 
                                   <!-- Text -->
-                                  <small>Company</small>
+                                  <small>Contact</small>
 
                                 </div>
                                 <div class="col-auto">
 
-                                  <!-- Text -->
-                                  <small>Netflix</small>
+                                  <!-- Link -->
+                                  <a href="profile-posts.html">
+                                    <small class="item-owner">Glen Rouse</small>
+                                  </a>
 
                                 </div>
                               </div> <!-- / .row -->
@@ -4870,13 +4864,13 @@
                                 <div class="col">
 
                                   <!-- Text -->
-                                  <small>Lead Score</small>
+                                  <small>Industry</small>
 
                                 </div>
                                 <div class="col-auto">
 
-                                  <!-- Badge -->
-                                  <span class="item-score badge bg-success-soft">9/10</span>
+                                  <!-- Text -->
+                                  <small class="item-industry">Hosting</small>
 
                                 </div>
                               </div> <!-- / .row -->
@@ -4928,8 +4922,8 @@
                           </div> <!-- / .row -->
 
                           <!-- Image -->
-                          <a href="profile-posts.html" class="avatar avatar-xl card-avatar">
-                            <img src="assets/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle" alt="...">
+                          <a href="team-overview.html" class="avatar avatar-xl card-avatar">
+                            <img src="assets/img/avatars/teams/team-logo-8.jpg" class="avatar-img rounded" alt="...">
                           </a>
 
                           <!-- Body -->
@@ -4937,21 +4931,13 @@
 
                             <!-- Heading -->
                             <h2 class="card-title">
-                              <a class="item-name" href="profile-posts.html">Miyah Myles</a>
+                              <a class="item-name" href="team-overview.html">Slack</a>
                             </h2>
 
                             <!-- Text -->
-                            <p class="small text-muted mb-3">
-                              <span class="item-title">Designer</span> at <span class="item-company">Google</span>
+                            <p class="small text-muted mb-0">
+                              Slack is a cloud-based set of team collaboration tools and services, founded by Stewart Butterfield.
                             </p>
-
-                            <!-- Buttons -->
-                            <a class="btn btn-sm btn-white" href="tel:1-123-456-7890">
-                              <i class="fe fe-phone me-1"></i> Call
-                            </a>
-                            <a class="btn btn-sm btn-white" href="mailto:john.doe@company.com">
-                              <i class="fe fe-mail me-1"></i> Email
-                            </a>
 
                           </div>
 
@@ -4965,13 +4951,15 @@
                                 <div class="col">
 
                                   <!-- Text -->
-                                  <small>Company</small>
+                                  <small>Messaging</small>
 
                                 </div>
                                 <div class="col-auto">
 
-                                  <!-- Text -->
-                                  <small>Google</small>
+                                  <!-- Link -->
+                                  <a href="profile-posts.html">
+                                    <small class="item-owner">Miyah Myles</small>
+                                  </a>
 
                                 </div>
                               </div> <!-- / .row -->
@@ -4981,13 +4969,13 @@
                                 <div class="col">
 
                                   <!-- Text -->
-                                  <small>Lead Score</small>
+                                  <small>Industry</small>
 
                                 </div>
                                 <div class="col-auto">
 
-                                  <!-- Badge -->
-                                  <span class="item-score badge bg-success-soft">10/10</span>
+                                  <!-- Text -->
+                                  <small class="item-industry">Messaging</small>
 
                                 </div>
                               </div> <!-- / .row -->
@@ -5039,8 +5027,8 @@
                           </div> <!-- / .row -->
 
                           <!-- Image -->
-                          <a href="profile-posts.html" class="avatar avatar-xl card-avatar">
-                            <img src="assets/img/avatars/profiles/avatar-2.jpg" class="avatar-img rounded-circle" alt="...">
+                          <a href="team-overview.html" class="avatar avatar-xl card-avatar">
+                            <img src="assets/img/avatars/teams/team-logo-1.jpg" class="avatar-img rounded" alt="...">
                           </a>
 
                           <!-- Body -->
@@ -5048,21 +5036,13 @@
 
                             <!-- Heading -->
                             <h2 class="card-title">
-                              <a class="item-name" href="profile-posts.html">Ryu Duke</a>
+                              <a class="item-name" href="team-overview.html">Launchday</a>
                             </h2>
 
                             <!-- Text -->
-                            <p class="small text-muted mb-3">
-                              <span class="item-title">Developer</span> at <span class="item-company">Microsoft</span>
+                            <p class="small text-muted mb-0">
+                              Launchday is a SaaS website builder with a focus on quality, easy to build product sites.
                             </p>
-
-                            <!-- Buttons -->
-                            <a class="btn btn-sm btn-white" href="tel:1-123-456-7890">
-                              <i class="fe fe-phone me-1"></i> Call
-                            </a>
-                            <a class="btn btn-sm btn-white" href="mailto:john.doe@company.com">
-                              <i class="fe fe-mail me-1"></i> Email
-                            </a>
 
                           </div>
 
@@ -5076,13 +5056,15 @@
                                 <div class="col">
 
                                   <!-- Text -->
-                                  <small>Company</small>
+                                  <small>Contact</small>
 
                                 </div>
                                 <div class="col-auto">
 
-                                  <!-- Text -->
-                                  <small>Microsoft</small>
+                                  <!-- Link -->
+                                  <a href="profile-posts.html">
+                                    <small class="item-owner">Dianna Smiley</small>
+                                  </a>
 
                                 </div>
                               </div> <!-- / .row -->
@@ -5092,13 +5074,13 @@
                                 <div class="col">
 
                                   <!-- Text -->
-                                  <small>Lead Score</small>
+                                  <small>Industry</small>
 
                                 </div>
                                 <div class="col-auto">
 
-                                  <!-- Badge -->
-                                  <span class="item-score badge bg-warning-soft">6/10</span>
+                                  <!-- Text -->
+                                  <small class="item-industry">Web design</small>
 
                                 </div>
                               </div> <!-- / .row -->
@@ -5121,8 +5103,8 @@
 
                               <!-- Checkbox -->
                               <div class="form-check form-check-circle">
-                                <input class="form-check-input list-checkbox" type="checkbox" id="cardsCheckBoxTen">
-                                <label class="form-check-label" for="cardsCheckBoxTen"></label>
+                                <input class="form-check-input list-checkbox" type="checkbox" id="cardsCheckboxTen">
+                                <label class="form-check-label" for="cardsCheckboxTen"></label>
                               </div>
 
                             </div>
@@ -5150,8 +5132,8 @@
                           </div> <!-- / .row -->
 
                           <!-- Image -->
-                          <a href="profile-posts.html" class="avatar avatar-xl card-avatar">
-                            <img src="assets/img/avatars/profiles/avatar-3.jpg" class="avatar-img rounded-circle" alt="...">
+                          <a href="team-overview.html" class="avatar avatar-xl card-avatar">
+                            <img src="assets/img/avatars/teams/team-logo-2.jpg" class="avatar-img rounded" alt="...">
                           </a>
 
                           <!-- Body -->
@@ -5159,21 +5141,13 @@
 
                             <!-- Heading -->
                             <h2 class="card-title">
-                              <a class="item-name" href="profile-posts.html">Glen Rouse</a>
+                              <a class="item-name" href="team-overview.html">Medium Corporation</a>
                             </h2>
 
                             <!-- Text -->
-                            <p class="small text-muted mb-3">
-                              <span class="item-title">Owner</span> at <span class="item-company">Uber</span>
+                            <p class="small text-muted mb-0">
+                              Medium is an online publishing platform developed by Evan Williams, and launched in August 2012.
                             </p>
-
-                            <!-- Buttons -->
-                            <a class="btn btn-sm btn-white" href="tel:1-123-456-7890">
-                              <i class="fe fe-phone me-1"></i> Call
-                            </a>
-                            <a class="btn btn-sm btn-white" href="mailto:john.doe@company.com">
-                              <i class="fe fe-mail me-1"></i> Email
-                            </a>
 
                           </div>
 
@@ -5187,13 +5161,15 @@
                                 <div class="col">
 
                                   <!-- Text -->
-                                  <small>Company</small>
+                                  <small>Contact</small>
 
                                 </div>
                                 <div class="col-auto">
 
-                                  <!-- Text -->
-                                  <small>Uber</small>
+                                  <!-- Link -->
+                                  <a href="profile-posts.html">
+                                    <small class="item-owner">Ab Hadley</small>
+                                  </a>
 
                                 </div>
                               </div> <!-- / .row -->
@@ -5203,13 +5179,13 @@
                                 <div class="col">
 
                                   <!-- Text -->
-                                  <small>Lead Score</small>
+                                  <small>Industry</small>
 
                                 </div>
                                 <div class="col-auto">
 
-                                  <!-- Badge -->
-                                  <span class="item-score badge bg-danger-soft">2/10</span>
+                                  <!-- Text -->
+                                  <small class="item-industry">Publishing</small>
 
                                 </div>
                               </div> <!-- / .row -->
@@ -5261,8 +5237,8 @@
                           </div> <!-- / .row -->
 
                           <!-- Image -->
-                          <a href="profile-posts.html" class="avatar avatar-xl card-avatar">
-                            <img src="assets/img/avatars/profiles/avatar-4.jpg" class="avatar-img rounded-circle" alt="...">
+                          <a href="team-overview.html" class="avatar avatar-xl card-avatar">
+                            <img src="assets/img/avatars/teams/team-logo-3.jpg" class="avatar-img rounded" alt="...">
                           </a>
 
                           <!-- Body -->
@@ -5270,21 +5246,13 @@
 
                             <!-- Heading -->
                             <h2 class="card-title">
-                              <a class="item-name" href="profile-posts.html">Dianna Smiley</a>
+                              <a class="item-name" href="team-overview.html">Lyft</a>
                             </h2>
 
                             <!-- Text -->
-                            <p class="small text-muted mb-3">
-                              <span class="item-title">Designer</span> at <span class="item-position">Twitter</span>
+                            <p class="small text-muted mb-0">
+                              Lyft is an on-demand transportation company based in San Francisco, California.
                             </p>
-
-                            <!-- Buttons -->
-                            <a class="btn btn-sm btn-white" href="tel:tel:1-123-456-7890">
-                              <i class="fe fe-phone me-1"></i> Call
-                            </a>
-                            <a class="btn btn-sm btn-white" href="mailto:john.doe@company.com">
-                              <i class="fe fe-mail me-1"></i> Email
-                            </a>
 
                           </div>
 
@@ -5298,13 +5266,15 @@
                                 <div class="col">
 
                                   <!-- Text -->
-                                  <small>Company</small>
+                                  <small>Contact</small>
 
                                 </div>
                                 <div class="col-auto">
 
-                                  <!-- Text -->
-                                  <small>Twitter</small>
+                                  <!-- Link -->
+                                  <a href="profile-posts.html">
+                                    <small class="item-owner">Adolfo Hess</small>
+                                  </a>
 
                                 </div>
                               </div> <!-- / .row -->
@@ -5314,13 +5284,13 @@
                                 <div class="col">
 
                                   <!-- Text -->
-                                  <small>Lead Score</small>
+                                  <small>Industry</small>
 
                                 </div>
                                 <div class="col-auto">
 
-                                  <!-- Badge -->
-                                  <span class="item-score badge bg-warning-soft">6/10</span>
+                                  <!-- Text -->
+                                  <small class="item-industry">Transportation</small>
 
                                 </div>
                               </div> <!-- / .row -->
@@ -5372,8 +5342,8 @@
                           </div> <!-- / .row -->
 
                           <!-- Image -->
-                          <a href="profile-posts.html" class="avatar avatar-xl card-avatar">
-                            <img src="assets/img/avatars/profiles/avatar-5.jpg" class="avatar-img rounded-circle" alt="...">
+                          <a href="team-overview.html" class="avatar avatar-xl card-avatar">
+                            <img src="assets/img/avatars/teams/team-logo-4.jpg" class="avatar-img rounded" alt="...">
                           </a>
 
                           <!-- Body -->
@@ -5381,21 +5351,13 @@
 
                             <!-- Heading -->
                             <h2 class="card-title">
-                              <a class="item-name" href="profile-posts.html">Daniela Dewitt</a>
+                              <a class="item-name" href="team-overview.html">PayPal</a>
                             </h2>
 
                             <!-- Text -->
-                            <p class="small text-muted mb-3">
-                              <span class="item-title">Founder</span> at <span class="item-company">Netflix</span>
+                            <p class="small text-muted mb-0">
+                              PayPal is a worldwide online payments system that supports online money transfers and services.
                             </p>
-
-                            <!-- Buttons -->
-                            <a class="btn btn-sm btn-white" href="tel:1-123-456-7890">
-                              <i class="fe fe-phone me-1"></i> Call
-                            </a>
-                            <a class="btn btn-sm btn-white" href="mailto:john.doe@company.com">
-                              <i class="fe fe-mail me-1"></i> Email
-                            </a>
 
                           </div>
 
@@ -5409,13 +5371,15 @@
                                 <div class="col">
 
                                   <!-- Text -->
-                                  <small>Company</small>
+                                  <small>Contact</small>
 
                                 </div>
                                 <div class="col-auto">
 
-                                  <!-- Text -->
-                                  <small>Netflix</small>
+                                  <!-- Link -->
+                                  <a href="profile-posts.html">
+                                    <small class="item-owner">Daniela Dewitt</small>
+                                  </a>
 
                                 </div>
                               </div> <!-- / .row -->
@@ -5425,13 +5389,13 @@
                                 <div class="col">
 
                                   <!-- Text -->
-                                  <small>Lead Score</small>
+                                  <small>Industry</small>
 
                                 </div>
                                 <div class="col-auto">
 
-                                  <!-- Badge -->
-                                  <span class="item-score badge bg-success-soft">8/10</span>
+                                  <!-- Text -->
+                                  <small class="item-industry">Finance</small>
 
                                 </div>
                               </div> <!-- / .row -->
@@ -5454,8 +5418,8 @@
 
                               <!-- Checkbox -->
                               <div class="form-check form-check-circle">
-                                <input class="form-check-input list-checkbox" type="checkbox" id="cardsCheckBoxThirteen">
-                                <label class="form-check-label" for="cardsCheckBoxThirteen"></label>
+                                <input class="form-check-input list-checkbox" type="checkbox" id="cardsCheckboxThirteen">
+                                <label class="form-check-label" for="cardsCheckboxThirteen"></label>
                               </div>
 
                             </div>
@@ -5483,8 +5447,8 @@
                           </div> <!-- / .row -->
 
                           <!-- Image -->
-                          <a href="profile-posts.html" class="avatar avatar-xl card-avatar">
-                            <img src="assets/img/avatars/profiles/avatar-6.jpg" class="avatar-img rounded-circle" alt="...">
+                          <a href="team-overview.html" class="avatar avatar-xl card-avatar">
+                            <img src="assets/img/avatars/teams/team-logo-5.jpg" class="avatar-img rounded" alt="...">
                           </a>
 
                           <!-- Body -->
@@ -5492,21 +5456,13 @@
 
                             <!-- Heading -->
                             <h2 class="card-title">
-                              <a class="item-name" href="profile-posts.html">Ab Hadley</a>
+                              <a class="item-name" href="team-overview.html">Dropbox Inc.</a>
                             </h2>
 
                             <!-- Text -->
-                            <p class="small text-muted mb-3">
-                              <span class="item-title">Owner</span> at <span class="item-company">Lyft</span>
+                            <p class="small text-muted mb-0">
+                              Dropbox is a file hosting service that offers cloud storage, file synchronization, a personal cloud.
                             </p>
-
-                            <!-- Buttons -->
-                            <a class="btn btn-sm btn-white" href="tel:1-123-456-7890">
-                              <i class="fe fe-phone me-1"></i> Call
-                            </a>
-                            <a class="btn btn-sm btn-white" href="mailto:john.doe@company.com">
-                              <i class="fe fe-mail me-1"></i> Email
-                            </a>
 
                           </div>
 
@@ -5520,13 +5476,15 @@
                                 <div class="col">
 
                                   <!-- Text -->
-                                  <small>Company</small>
+                                  <small>Contact</small>
 
                                 </div>
                                 <div class="col-auto">
 
-                                  <!-- Text -->
-                                  <small>Lyft</small>
+                                  <!-- Link -->
+                                  <a href="profile-posts.html">
+                                    <small class="item-owner">Miyah Myles</small>
+                                  </a>
 
                                 </div>
                               </div> <!-- / .row -->
@@ -5536,13 +5494,13 @@
                                 <div class="col">
 
                                   <!-- Text -->
-                                  <small>Lead Score</small>
+                                  <small>Industry</small>
 
                                 </div>
                                 <div class="col-auto">
 
-                                  <!-- Badge -->
-                                  <span class="item-score badge bg-warning-soft">4/10</span>
+                                  <!-- Text -->
+                                  <small class="item-industry">File hosting</small>
 
                                 </div>
                               </div> <!-- / .row -->
@@ -5594,8 +5552,8 @@
                           </div> <!-- / .row -->
 
                           <!-- Image -->
-                          <a href="profile-posts.html" class="avatar avatar-xl card-avatar">
-                            <img src="assets/img/avatars/profiles/avatar-7.jpg" class="avatar-img rounded-circle" alt="...">
+                          <a href="team-overview.html" class="avatar avatar-xl card-avatar">
+                            <img src="assets/img/avatars/teams/team-logo-6.jpg" class="avatar-img rounded" alt="...">
                           </a>
 
                           <!-- Body -->
@@ -5603,21 +5561,13 @@
 
                             <!-- Heading -->
                             <h2 class="card-title">
-                              <a class="item-name" href="profile-posts.html">Adolfo Hess</a>
+                              <a class="item-name" href="team-overview.html">Squarespace</a>
                             </h2>
 
                             <!-- Text -->
-                            <p class="small text-muted mb-3">
-                              <span class="item-title">Designer</span> at <span class="item-position">Google</span>
+                            <p class="small text-muted mb-0">
+                              Squarespace provides software as a service for website building and hosting. Headquartered in NYC.
                             </p>
-
-                            <!-- Buttons -->
-                            <a class="btn btn-sm btn-white" href="tel:tel:1-123-456-7890">
-                              <i class="fe fe-phone me-1"></i> Call
-                            </a>
-                            <a class="btn btn-sm btn-white" href="mailto:john.doe@company.com">
-                              <i class="fe fe-mail me-1"></i> Email
-                            </a>
 
                           </div>
 
@@ -5631,13 +5581,15 @@
                                 <div class="col">
 
                                   <!-- Text -->
-                                  <small>Company</small>
+                                  <small>Contact</small>
 
                                 </div>
                                 <div class="col-auto">
 
-                                  <!-- Text -->
-                                  <small>Google</small>
+                                  <!-- Link -->
+                                  <a href="profile-posts.html">
+                                    <small class="item-owner">Ryu Duke</small>
+                                  </a>
 
                                 </div>
                               </div> <!-- / .row -->
@@ -5647,13 +5599,223 @@
                                 <div class="col">
 
                                   <!-- Text -->
-                                  <small>Lead Score</small>
+                                  <small>Industry</small>
 
                                 </div>
                                 <div class="col-auto">
 
-                                  <!-- Badge -->
-                                  <span class="item-score badge bg-success-soft">7/10</span>
+                                  <!-- Text -->
+                                  <small class="item-industry">Hosting</small>
+
+                                </div>
+                              </div> <!-- / .row -->
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4">
+
+                      <!-- Card -->
+                      <div class="card">
+                        <div class="card-body">
+
+                          <!-- Header -->
+                          <div class="row align-items-center">
+                            <div class="col">
+
+                              <!-- Checkbox -->
+                              <div class="form-check form-check-circle">
+                                <input class="form-check-input list-checkbox" type="checkbox" id="cardsCheckboxFifteen">
+                                <label class="form-check-label" for="cardsCheckboxFifteen"></label>
+                              </div>
+
+                            </div>
+                            <div class="col-auto">
+
+                              <!-- Dropdown -->
+                              <div class="dropdown">
+                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <i class="fe fe-more-vertical"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                  <a href="#!" class="dropdown-item">
+                                    Action
+                                  </a>
+                                  <a href="#!" class="dropdown-item">
+                                    Another action
+                                  </a>
+                                  <a href="#!" class="dropdown-item">
+                                    Something else here
+                                  </a>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div> <!-- / .row -->
+
+                          <!-- Image -->
+                          <a href="team-overview.html" class="avatar avatar-xl card-avatar">
+                            <img src="assets/img/avatars/teams/team-logo-7.jpg" class="avatar-img rounded" alt="...">
+                          </a>
+
+                          <!-- Body -->
+                          <div class="text-center mb-5">
+
+                            <!-- Heading -->
+                            <h2 class="card-title">
+                              <a class="item-name" href="team-overview.html">Github</a>
+                            </h2>
+
+                            <!-- Text -->
+                            <p class="small text-muted mb-0">
+                              GitHub is a web-based hosting service for version control of code using Git.
+                            </p>
+
+                          </div>
+
+                          <!-- Divider -->
+                          <hr class="card-divider mb-0">
+
+                          <!-- List group -->
+                          <div class="list-group list-group-flush mb-n3">
+                            <div class="list-group-item">
+                              <div class="row">
+                                <div class="col">
+
+                                  <!-- Text -->
+                                  <small>Contact</small>
+
+                                </div>
+                                <div class="col-auto">
+
+                                  <!-- Link -->
+                                  <a href="profile-posts.html">
+                                    <small class="item-owner">Glen Rouse</small>
+                                  </a>
+
+                                </div>
+                              </div> <!-- / .row -->
+                            </div>
+                            <div class="list-group-item">
+                              <div class="row">
+                                <div class="col">
+
+                                  <!-- Text -->
+                                  <small>Industry</small>
+
+                                </div>
+                                <div class="col-auto">
+
+                                  <!-- Text -->
+                                  <small class="item-industry">Hosting</small>
+
+                                </div>
+                              </div> <!-- / .row -->
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4">
+
+                      <!-- Card -->
+                      <div class="card">
+                        <div class="card-body">
+
+                          <!-- Header -->
+                          <div class="row align-items-center">
+                            <div class="col">
+
+                              <!-- Checkbox -->
+                              <div class="form-check form-check-circle">
+                                <input class="form-check-input list-checkbox" type="checkbox" id="cardsCheckboxSixteen">
+                                <label class="form-check-label" for="cardsCheckboxSixteen"></label>
+                              </div>
+
+                            </div>
+                            <div class="col-auto">
+
+                              <!-- Dropdown -->
+                              <div class="dropdown">
+                                <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <i class="fe fe-more-vertical"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                  <a href="#!" class="dropdown-item">
+                                    Action
+                                  </a>
+                                  <a href="#!" class="dropdown-item">
+                                    Another action
+                                  </a>
+                                  <a href="#!" class="dropdown-item">
+                                    Something else here
+                                  </a>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div> <!-- / .row -->
+
+                          <!-- Image -->
+                          <a href="team-overview.html" class="avatar avatar-xl card-avatar">
+                            <img src="assets/img/avatars/teams/team-logo-8.jpg" class="avatar-img rounded" alt="...">
+                          </a>
+
+                          <!-- Body -->
+                          <div class="text-center mb-5">
+
+                            <!-- Heading -->
+                            <h2 class="card-title">
+                              <a class="item-name" href="team-overview.html">Slack</a>
+                            </h2>
+
+                            <!-- Text -->
+                            <p class="small text-muted mb-0">
+                              Slack is a cloud-based set of team collaboration tools and services, founded by Stewart Butterfield.
+                            </p>
+
+                          </div>
+
+                          <!-- Divider -->
+                          <hr class="card-divider mb-0">
+
+                          <!-- List group -->
+                          <div class="list-group list-group-flush mb-n3">
+                            <div class="list-group-item">
+                              <div class="row">
+                                <div class="col">
+
+                                  <!-- Text -->
+                                  <small>Messaging</small>
+
+                                </div>
+                                <div class="col-auto">
+
+                                  <!-- Link -->
+                                  <a href="profile-posts.html">
+                                    <small class="item-owner">Miyah Myles</small>
+                                  </a>
+
+                                </div>
+                              </div> <!-- / .row -->
+                            </div>
+                            <div class="list-group-item">
+                              <div class="row">
+                                <div class="col">
+
+                                  <!-- Text -->
+                                  <small>Industry</small>
+
+                                </div>
+                                <div class="col-auto">
+
+                                  <!-- Text -->
+                                  <small class="item-industry">Messaging</small>
 
                                 </div>
                               </div> <!-- / .row -->
@@ -5701,8 +5863,8 @@
 
                         <!-- Checkbox -->
                         <div class="form-check">
-                          <input class="form-check-input" id="cardAlertCheckbox" type="checkbox" checked disabled>
-                          <label class="form-check-label text-white" for="cardAlertCheckbox">
+                          <input class="form-check-input" type="checkbox" id="listAlertCheckbox" checked disabled>
+                          <label class="form-check-label text-white" for="listAlertCheckbox">
                             <span class="list-alert-count">0</span> deal(s)
                           </label>
                         </div>

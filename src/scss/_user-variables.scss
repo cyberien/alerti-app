@@ -5,11 +5,20 @@
 
 // Example of a variable override to change theme's background color
 // Remove the "//" to comment it in and see it in action!
+// $body-bg: #12263F;
 
 .nav-link.active {
-    background-color: #e6edfe;
-    font-color: #2c8cff;
-  }
-  .nav-link:hover {
-    background-color: #e6edfe;
-  }
+    color: #ff390e;
+    }
+
+.nav-link:hover {
+    color: #ff390e;
+    }
+
+.nav-iitem:actiive {        
+    color: #ff390e;
+    }
+
+.nav-iitem:hover {        
+    color: #ff390e;
+    }
