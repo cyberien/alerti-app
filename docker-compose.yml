@@ -6,13 +6,13 @@ services:
 
     mailhog:
       image: mailhog/mailhog:latest
-      container_name: datatourisme-mailhog
+      container_name: alerti-mailhog
       ports:
         - "1026:8025"
 
     postgres:
       image: postgres:10.3-alpine
-      container_name: datatourisme-postgres
+      container_name: alerti-postgres
       restart: unless-stopped
       volumes:
         - pgdata:/var/lib/postgresql/data      
@@ -20,7 +20,7 @@ services:
         - "5432:5432"
       environment:
         - POSTGRES_ROOT_PASSWORD=yes
-        - POSTGRES_DB=craftcms_datatourisme
+        - POSTGRES_DB=craftcms_alerti
         - POSTGRES_USER=${DB_USER}
         - POSTGRES_PASSWORD=${DB_PASSWORD}
 
@@ -28,7 +28,7 @@ services:
       build: 
         context: .
         dockerfile: ./phpdocker/php-fpm/dev-Dockerfile
-      container_name: datatourisme-php-fpm-nginx
+      container_name: alerti-php-fpm-nginx
       working_dir: /application
       volumes:
         - .:/application
