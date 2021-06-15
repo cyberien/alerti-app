@@ -1,0 +1,29 @@
+
+FROM h1rkul2/nginx-php:1.0
+
+EXPOSE 80
+
+COPY . .
+
+COPY ./phpdocker/php-fpm/php-ini-overrides.ini  /etc/php/7.2/fpm/conf.d/99-overrides.ini
+
+RUN rm  /etc/nginx/sites-available/default
+
+COPY  ./phpdocker/nginx/vhost.conf /etc/nginx/sites-available/default
+
+ 
+RUN  composer install 
+     
+     
+RUN rm  /etc/supervisor/supervisord.conf
+
+COPY ./phpdocker/php-fpm/supervisord.conf  /etc/supervisor/supervisord.conf
+
+RUN chown -R www-data:www-data /application /var/log/nginx 
+
+
+
+RUN  chmod +x /application/phpdocker/php-fpm/entrypoint.sh
+
+ENTRYPOINT ["bash","/application/phpdocker/php-fpm/entrypoint.sh" ]
+

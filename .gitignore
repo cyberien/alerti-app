@@ -1,5 +1,0 @@
-# https://git-scm.com/docs/gitignore
-
-.DS_Store
-debug.log
-node_modules/

@@ -1,0 +1,47 @@
+###############################################################################
+#                          Generated on phpdocker.io                          #
+###############################################################################
+version: "3"
+services:
+
+    mailhog:
+      image: mailhog/mailhog:latest
+      container_name: datatourisme-mailhog
+      ports:
+        - "1026:8025"
+
+    postgres:
+      image: postgres:10.3-alpine
+      container_name: datatourisme-postgres
+      restart: unless-stopped
+      volumes:
+        - pgdata:/var/lib/postgresql/data      
+      ports:
+        - "5432:5432"
+      environment:
+        - POSTGRES_ROOT_PASSWORD=yes
+        - POSTGRES_DB=craftcms_datatourisme
+        - POSTGRES_USER=${DB_USER}
+        - POSTGRES_PASSWORD=${DB_PASSWORD}
+
+    webserver:
+      build: 
+        context: .
+        dockerfile: ./phpdocker/php-fpm/dev-Dockerfile
+      container_name: datatourisme-php-fpm-nginx
+      working_dir: /application
+      volumes:
+        - .:/application
+        - ./phpdocker/php-fpm/php-ini-overrides.ini:/etc/php/7.2/fpm/conf.d/99-overrides.ini
+      ports:
+       - "80:80"
+      env_file: ./.env
+
+    redis:
+      image: redis:4-alpine
+      volumes:
+        - redisdata:/data
+
+volumes:
+  pgdata:
+  redisdata:
