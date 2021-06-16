@@ -1,5 +1,6 @@
 {
   "require": {
+    "angellco/auth0": "^1.1",
     "craftcms/cms": "^3.6.4",
     "vlucas/phpdotenv": "^3.4.0"
   },
