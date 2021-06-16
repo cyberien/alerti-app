@@ -34,4 +34,9 @@ return [
 
     // Whether crawlers should be allowed to index pages and following links
     'disallowRobots' => !$isProd,
+
+    'loginPath' => "/actions/auth0/auth/login",
+    'logoutPath' => "/actions/auth0/auth/logout",
+
+    
 ];

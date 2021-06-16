@@ -1,8 +1,13 @@
-dateModified: 1623773931
+dateModified: 1623852268
 email:
   fromEmail: aminembarki@gmail.com
   fromName: alerti
   transportType: craft\mail\transportadapters\Sendmail
+plugins:
+  auth0:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
 system:
   edition: pro
   live: true
