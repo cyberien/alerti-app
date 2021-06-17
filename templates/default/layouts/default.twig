@@ -1,0 +1,36 @@
+{% extends 'layouts/base.twig' %}
+
+{% requireLogin %}
+
+
+
+{% block head %}
+	{# {% include 'partials/head.twig' %} #}
+{% endblock %}
+
+{% block body %}
+
+	{% include 'partials/header.twig' %}
+
+
+	{% include 'partials/sidebar.twig' %}
+
+
+	<!-- MAIN CONTENT
+													    ================================================== -->
+	<div class="main-content">
+
+		{% include 'partials/topbar.twig' %}
+		{% block content %}{% endblock %}
+
+
+	</div>
+	<!-- / .main-content -->
+
+
+	{% include 'partials/footer.twig' %}
+	{% include 'partials/scripts.twig' %}
+
+	{% block scripts %}{% endblock %}
+
+{% endblock %}
