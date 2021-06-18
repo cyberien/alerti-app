@@ -109,6 +109,11 @@
            </a>
         </li>
         <li class="nav-item">
+          <a class="nav-link {{#is page 'inbox.html'}}active{{/is}}" href="{{webRoot}}/inbox.html">
+            <i class="fe fe-inbox"></i> Inbox
+          </a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="#sidebarRadar" data-bs-toggle="collapse" role="button" aria-expanded="{{#is category 'radar'}}true{{else}}false{{/is}}" aria-controls="sidebarRadar">
             <i class="fe fe-globe"></i> Radar
           </a>
@@ -146,11 +151,6 @@
               </li>
             </ul>
           </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {{#is page 'inbox.html'}}active{{/is}}" href="{{webRoot}}/inbox.html">
-            <i class="fe fe-inbox"></i> Inbox
-          </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#sidebarInsights" data-bs-toggle="collapse" role="button" aria-expanded="{{#is category 'insights'}}true{{else}}false{{/is}}" aria-controls="sidebarInsights">
