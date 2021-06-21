@@ -1,7 +1,7 @@
 {
   "demoMode": false,
   "colorScheme": "light",
-  "navPosition": "sidenav",
+  "navPosition": "combo",
   "sidebarSize": "base",
   "navColor": "default"
 }
