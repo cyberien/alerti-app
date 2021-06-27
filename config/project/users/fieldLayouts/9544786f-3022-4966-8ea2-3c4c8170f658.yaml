@@ -1,0 +1,61 @@
+tabs:
+  -
+    elements:
+      -
+        heading: 'Social apps'
+        type: craft\fieldlayoutelements\Heading
+      -
+        fieldUid: 84f2e376-097e-407f-b9e7-c929d03fe75c # facebook_module
+        instructions: null
+        label: null
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        warning: null
+        width: 100
+      -
+        fieldUid: cb228cef-7351-44cc-920f-45b31dbb5462 # twitter_module
+        instructions: null
+        label: null
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        warning: null
+        width: 100
+    name: Apps
+    sortOrder: 1
+  -
+    elements:
+      -
+        style: warning
+        tip: 'unless you know what are you doing'
+        type: craft\fieldlayoutelements\Tip
+      -
+        fieldUid: d6085f2e-5a8f-46a5-bd52-08658fa9fc14 # Freeze
+        instructions: null
+        label: null
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        warning: null
+        width: 100
+      -
+        fieldUid: 5477b8a1-181b-4fb6-8c39-c00917fd2ea8 # user_status
+        instructions: null
+        label: null
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        warning: null
+        width: 100
+      -
+        fieldUid: a1d69ef7-d42d-4502-9e9e-983c33d4c2fb # state
+        instructions: null
+        label: null
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        warning: null
+        width: 100
+    name: Settings
+    sortOrder: 2

@@ -1,0 +1,13 @@
+contentColumnType: boolean
+fieldGroup: 5231c0d7-43a0-48e7-ae53-eac9714fde6d # User
+handle: freeze
+instructions: ''
+name: Freeze
+searchable: false
+settings:
+  default: false
+  offLabel: unfreeze
+  onLabel: freeze
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

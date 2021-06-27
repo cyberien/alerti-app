@@ -1,4 +1,4 @@
-dateModified: 1623852268
+dateModified: 1624793726
 email:
   fromEmail: aminembarki@gmail.com
   fromName: alerti
@@ -8,15 +8,14 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  navigation:
+    edition: standard
+    enabled: true
+    licenseKey: PED0LL8EK7L28QQ0PLZAQBQO
+    schemaVersion: 1.0.21
 system:
   edition: pro
   live: true
   name: alerti
   schemaVersion: 3.6.8
   timeZone: America/Los_Angeles
-users:
-  allowPublicRegistration: false
-  defaultGroup: null
-  photoSubpath: null
-  photoVolumeUid: null
-  requireEmailVerification: true

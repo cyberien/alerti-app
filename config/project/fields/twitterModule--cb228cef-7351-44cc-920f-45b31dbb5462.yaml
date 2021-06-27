@@ -1,0 +1,19 @@
+contentColumnType: integer(10)
+fieldGroup: 5231c0d7-43a0-48e7-ae53-eac9714fde6d # User
+handle: twitterModule
+instructions: ''
+name: twitter_module
+searchable: false
+settings:
+  decimals: 0
+  defaultValue: null
+  max: null
+  min: '0'
+  prefix: null
+  previewCurrency: ''
+  previewFormat: decimal
+  size: null
+  suffix: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Number

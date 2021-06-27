@@ -1,0 +1,29 @@
+handle: main
+instructions: ''
+maxNodes: ''
+name: main
+permissions:
+  craft\elements\Asset:
+    enabled: ''
+    permissions: ''
+  craft\elements\Category:
+    enabled: ''
+    permissions: ''
+  craft\elements\Entry:
+    enabled: '1'
+    permissions:
+      - 'section:9306d451-fdb6-4ce4-b1c9-5bd9d3b5e74d' # app
+  craft\elements\Tag:
+    enabled: '1'
+    permissions: '*'
+  custom:
+    enabled: '1'
+  verbb\navigation\nodetypes\PassiveType:
+    enabled: '1'
+propagateNodes: false
+siteSettings:
+  e7ddbb89-e989-43d1-86e9-e9e4f45da062: null # alerti
+sortOrder: 1
+structure:
+  maxLevels: '2'
+  uid: 2959ff9f-a2eb-4694-9e28-4a395cf9d057

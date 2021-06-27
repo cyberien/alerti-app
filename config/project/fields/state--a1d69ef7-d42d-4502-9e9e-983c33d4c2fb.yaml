@@ -1,0 +1,18 @@
+contentColumnType: string(1020)
+fieldGroup: 5231c0d7-43a0-48e7-ae53-eac9714fde6d # User
+handle: state
+instructions: ''
+name: state
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: 255
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText
