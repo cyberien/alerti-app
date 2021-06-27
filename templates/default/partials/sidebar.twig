@@ -1,391 +1,364 @@
-<!-- NAVIGATION -->
 <nav class="navbar navbar-vertical fixed-start navbar-expand-md navbar-light" id="sidebar">
-	<div
-		class="container-fluid">
 
-		<!-- Toggler -->
-		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarCollapse" aria-controls="sidebarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
+ 
+
+
+	<div class="dropdown">
+<button class="btn w-100 dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true">
+
+			ACME inc
 		</button>
+		<div class="dropdown-menu" >
+			<a class="dropdown-item" href="button">Workspace 2</a>
+<a class="dropdown-item" href="button">Workspace 3</a>
+
+			<div class="dropdown-divider"></div>
+<a class="dropdown-item" href="button">Create a new workspace</a>
+
+		</div>
+	</div>
+
+	<!-- Toggler -->
+	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarCollapse" aria-controls="sidebarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
 
 
-		<!-- User (md) -->
+	<!-- User (xs) -->
+	<div
+		class="navbar-user d-md-none">
+
+		<!-- Dropdown -->
 		<div
-			class="navbar-user d-none d-md-flex" id="sidebarUser">
+			class="dropdown">
 
-			<!-- Icon -->
-			<a class="navbar-user-link" data-bs-toggle="offcanvas" href="#sidebarOffcanvasActivity" aria-controls="sidebarOffcanvasActivity">
-				<span class="icon">
-					<i class="fe fe-bell"></i>
-				</span>
+			<!-- Toggle -->
+			<a href="#" id="sidebarIcon" class="dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<div class="avatar avatar-sm">
+					<img src="./assets/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle" alt="...">
+				</div>
 			</a>
 
-			<!-- Dropup -->
-			<div
-				class="dropdown">
+			<!-- Menu -->
+			<div class="dropdown-menu dropdown-menu-end" aria-labelledby="sidebarIcon">
+				<a href="./profile-posts.html" class="dropdown-item">Profile</a>
+				<a href="./account-general.html" class="dropdown-item">Account</a>
+				<hr class="dropdown-divider">
+<a href="{{ actionUrl('auth0/auth/logout') }}" class="dropdown-item">Logout &nbsp;&nbsp;
 
-				<!-- Toggle -->
-				<a href="#" id="sidebarIconCopy" class="dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					<div class="avatar avatar-xs">
-						<img src="./assets/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle" alt="Profile picture">
-					</div>
+					<span class="fe fe-log-out"></span>
 				</a>
-
-				<!-- Menu -->
-				<div class="dropdown-menu" aria-labelledby="sidebarIconCopy">
-					<a href="./profile-posts.html" class="dropdown-item">Profile</a>
-					<a href="./account-general.html" class="dropdown-item">Account</a>
-					<hr class="dropdown-divider">
-					<a href="./sign-in.html" class="dropdown-item">Logout &nbsp;&nbsp;
-						<span class="fe fe-log-out"></span>
-					</a>
-				</div>
-
 			</div>
 
-			<!-- Icon -->
-			<a class="navbar-user-link" data-bs-toggle="offcanvas" href="#sidebarOffcanvasSearch" aria-controls="sidebarOffcanvasSearch">
-				<span class="icon">
+		</div>
+
+	</div>
+
+	<!-- Collapse -->
+	<div
+		class="collapse navbar-collapse" id="sidebarCollapse">
+
+		<!-- Form -->
+		<form class="mt-4 mb-3 d-md-none">
+			<div class="input-group input-group-rounded input-group-merge input-group-reverse">
+				<input class="form-control" type="search" placeholder="Search" aria-label="Search">
+				<div class="input-group-text">
+					<span class="fe fe-search"></span>
+				</div>
+			</div>
+		</form>
+
+		<!-- Divider -->
+		<hr
+		class="navbar-divider my-3">
+
+		<!-- Navigation -->
+
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<a class="nav-link" href="https://htmlstream.com/front/landing-classic-consulting.html">
 					<i class="fe fe-search"></i>
-				</span>
-			</a>
-
-		</div>
-
-		<!-- User (xs) -->
-		<div
-			class="navbar-user d-md-none">
-
-			<!-- Dropdown -->
-			<div
-				class="dropdown">
-
-				<!-- Toggle -->
-				<a href="#" id="sidebarIcon" class="dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					<div class="avatar avatar-sm">
-						<img src="./assets/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle" alt="...">
-					</div>
+					Search
 				</a>
-
-				<!-- Menu -->
-				<div class="dropdown-menu dropdown-menu-end" aria-labelledby="sidebarIcon">
-					<a href="./profile-posts.html" class="dropdown-item">Profile</a>
-					<a href="./account-general.html" class="dropdown-item">Account</a>
-					<hr class="dropdown-divider">
-					<a href="./sign-in.html" class="dropdown-item">Logout &nbsp;&nbsp;
-						<span class="fe fe-log-out"></span>
-					</a>
-				</div>
-
-			</div>
-
-		</div>
-
-		<!-- Collapse -->
-		<div
-			class="collapse navbar-collapse" id="sidebarCollapse">
-
-			<!-- Form -->
-			<form class="mt-4 mb-3 d-md-none">
-				<div class="input-group input-group-rounded input-group-merge input-group-reverse">
-					<input class="form-control" type="search" placeholder="Search" aria-label="Search">
-					<div class="input-group-text">
-						<span class="fe fe-search"></span>
-					</div>
-				</div>
-			</form>
-
-			<!-- Divider -->
-			<hr
-			class="navbar-divider my-3">
-
-			<!-- Navigation -->
-
-			<ul class="navbar-nav">
-				<li class="nav-item">
-					<a class="nav-link" href="#sidebarorkspace" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarorkspace">
-						ACME inc
-					</a>
-				</li>
-				<div class="collapse " id="sidebarorkspace">
+			</li>
+			<li class="nav-item">
+				<a class="nav-link active" href="./index.html">
+					<i class="fe fe-home"></i>
+					Home
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link " href="./inbox.html">
+					<i class="fe fe-inbox"></i>
+					Inbox
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link collapsed" href="#sidebarRadar" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarRadar">
+					<i class="fe fe-globe"></i>
+					Radar
+				</a>
+				<div class="collapse" id="sidebarRadar" style="">
 					<ul class="nav nav-sm flex-column">
 						<li class="nav-item">
-							<a href="./new-workspace.html" class="nav-link ">
-								<i class="fe fe-plus-square"></i>
-								New workspace
+							<a href="./alerts.html" class="nav-link ">
+								<i class="fe fe-bell"></i>
+								Alerts
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./feeds.html" class="nav-link ">
+								<i class="fe fe-rss"></i>
+								Feeds
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./social-accounts.html" class="nav-link ">
+								<i class="fe fe-thumbs-up"></i>
+								Social accounts
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./newsletters.html" class="nav-link ">
+								<i class="fe fe-mail"></i>
+								Newsletters
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./websites.html" class="nav-link ">
+								<i class="fe fe-globe"></i>
+								Websites
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./url.html" class="nav-link ">
+								<i class="fe fe-link"></i>
+								URL
 							</a>
 						</li>
 					</ul>
 				</div>
-			</ul>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link collapsed" href="#sidebarInsights" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarInsights">
+					<i class="fe fe-trending-up"></i>
+					Insights
+				</a>
+				<div class="collapse " id="sidebarInsights">
+					<ul class="nav nav-sm flex-column">
+						<li class="nav-item">
+							<a href="./social-insights.html" class="nav-link ">
+								Social Insights
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./content-insights.html" class="nav-link ">
+								Content insights
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./audience-insights.html" class="nav-link ">
+								Audience Insights
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./reputation-insights.html" class="nav-link ">
+								Reputation Insights
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./customer-insights.html" class="nav-link ">
+								Customer Insights
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./competitor-insights.html" class="nav-link ">
+								Competitor Insights
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./market-insights.html" class="nav-link ">
+								Market Insights
+							</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link collapsed" href="#sidebarInfluencers" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarInfluencers">
+					<i class="fe fe-user-check"></i>
+					Influencers
+				</a>
+				<div class="collapse " id="sidebarInfluencers">
+					<ul class="nav nav-sm flex-column">
+						<li class="nav-item">
+							<a href="./influencers-search.html" class="nav-link ">
+								<i class="fe fe-search"></i>
+								Influencers Search
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./contacts.html" class="nav-link ">
+								<i class="fe fe-user"></i>
+								Contacts
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./companies.html" class="nav-link ">
+								<i class="fe fe-users"></i>
+								Companies
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./connect-your-crm.html" class="nav-link ">
+								<i class="fe fe-grid"></i>
+								Connect your CRM
+							</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link " href="./publisher.html">
+					<i class="fe fe-edit"></i>
+					Publisher
+				</a>
+			</li>
+		</ul>
+
+		<!-- Divider -->
+		<hr
+		class="navbar-divider my-3">
+
+		<!-- Navigation -->
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<a class="nav-link collapsed" href="#sidebarData" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarData">
+					<i class="fe fe-database"></i>
+					Data
+				</a>
+				<div class="collapse " id="sidebarData">
+					<ul class="nav nav-sm flex-column">
+						<li class="nav-item">
+							<a href="./extraction.html" class="nav-link ">
+								Extraction
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./integrations.html" class="nav-link ">
+								Integrations
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./automation.html" class="nav-link ">
+								Automation
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./import.html" class="nav-link ">
+								Import
+							</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="nav-item">
+				<a href="./analytics.html" class="nav-link ">
+					<i class="fe fe-bar-chart-2"></i>Analytics
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link collapsed" href="#sidebarIntelligence" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarIntelligence">
+					<i class="fe fe-cpu"></i>
+					Intelligence
+				</a>
+				<div class="collapse " id="sidebarIntelligence">
+					<ul class="nav nav-sm flex-column">
+						<li class="nav-item">
+							<a href="./sentiment-analysis.html" class="nav-link ">
+								Sentiment analysis
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./named-entities-recognition.html" class="nav-link ">
+								Named Entities Recognition
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./translation.html" class="nav-link ">
+								Translation
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./transcription.html" class="nav-link ">
+								Transcripton
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./image-recognition.html" class="nav-link ">
+								Image Recognition
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./ocr.html" class="nav-link ">
+								OCR
+							</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="nav-item">
+				<a href="./store.html" class="nav-link ">
+					<i class="fe fe-grid"></i>Apps
+				</a>
+			</li>
 
 			<!-- Divider -->
-			<hr
-			class="navbar-divider my-3">
+			<hr class="navbar-divider my-3">
+		</ul>
+		<!-- Navigation -->
+		<ul class="navbar-nav">
+			<li>
+				<a class="nav-link " href="./account-general.html">
+					<i class="fe fe-settings"></i>
+					Settings
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link collapsed" href="#sidebarHelp" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarHelp">
+					<i class="fe fe-help-circle"></i>
+					Help
+				</a>
+				<div class="collapse " id="sidebarHelp">
+					<ul class="nav nav-sm d-flex align-items-end">
+						<li class="nav-item">
+							<a href="./getting-started.html" class="nav-link ">
+								Getting started
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./product-tour.html" class="nav-link ">
+								Product tour
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./knowledge-base.html" class="nav-link ">
+								Knowledge Base
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="./on-demand-services.html" class="nav-link ">
+								On demand services
+							</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
 
-			<!-- Heading -->
-			<h6 class="navbar-heading">
-				WORKSPACE
-			</h6>
-
-			<ul class="navbar-nav">
-				<li class="nav-item">
-					<a class="nav-link " href="./index.html">
-						<i class="fe fe-home"></i>
-						Dashboard
-					</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#sidebarRadar" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarRadar">
-						<i class="fe fe-compass"></i>
-						Radar
-					</a>
-					<div class="collapse " id="sidebarRadar">
-						<ul class="nav nav-sm flex-column">
-							<li class="nav-item">
-								<a href="./alerts.html" class="nav-link ">
-									<i class="fe fe-bell"></i>
-									Alerts
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="./feeds.html" class="nav-link ">
-									<i class="fe fe-rss"></i>
-									Feeds
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="./social-accounts.html" class="nav-link ">
-									<i class="fe fe-thumbs-up"></i>
-									Social accounts
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="./newsletters.html" class="nav-link ">
-									<i class="fe fe-mail"></i>
-									Newsletters
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="./websites.html" class="nav-link ">
-									<i class="fe fe-globe"></i>
-									Websites
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="./url.html" class="nav-link ">
-									<i class="fe fe-link"></i>
-									URL
-								</a>
-							</li>
-						</ul>
-					</div>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link " href="./inbox.html">
-						<i class="fe fe-inbox"></i>
-						Inbox
-					</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link " href="./analytics.html">
-						<i class="fe fe-bar-chart"></i>
-						Analytics
-					</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#sidebarInfluencers" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarInfluencers">
-						<i class="fe fe-user-check"></i>
-						Influencers
-					</a>
-					<div class="collapse " id="sidebarInfluencers">
-						<ul class="nav nav-sm flex-column">
-							<li class="nav-item">
-								<a href="./contacts.html" class="nav-link ">
-									<i class="fe fe-user"></i>
-									Contacts
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="./companies.html" class="nav-link ">
-									<i class="fe fe-users"></i>
-									Companies
-								</a>
-							</li>
-						</ul>
-					</div>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link " href="./publisher.html">
-						<i class="fe fe-edit"></i>
-						Publisher
-					</a>
-				</li>
-			</ul>
-
-			<!-- Divider -->
-			<hr
-			class="navbar-divider my-3">
-
-			<!-- Heading -->
-			<h6 class="navbar-heading">
-				DATA INTELLIGENCE
-			</h6>
-
-			<!-- Navigation -->
-			<ul class="navbar-nav mb-md-4">
-				<li class="nav-item">
-					<a class="nav-link" href="#sidebarData" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarData">
-						<i class="fe fe-database"></i>
-						Data
-					</a>
-					<div class="collapse " id="sidebarData">
-						<ul class="nav nav-sm flex-column">
-							<li class="nav-item">
-								<a href="./extraction.html" class="nav-link ">
-									Extraction
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="./integrations.html" class="nav-link ">
-									Integrations
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="./automation.html" class="nav-link ">
-									Automation
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="./import.html" class="nav-link ">
-									Import
-								</a>
-							</li>
-						</ul>
-					</div>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#sidebarInsights" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarInsights">
-						<i class="fe fe-database"></i>
-						Insights
-					</a>
-					<div class="collapse " id="sidebarInsights">
-						<ul class="nav nav-sm flex-column">
-							<li class="nav-item">
-								<a href="./customer-insights.html" class="nav-link ">
-									Customer Insights
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="./competitor-insights.html" class="nav-link ">
-									Competitor Insights
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="./market-insights.html" class="nav-link ">
-									Market Insights
-								</a>
-							</li>
-						</ul>
-					</div>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#sidebarIntelligence" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarIntelligence">
-						<i class="fe fe-cpu"></i>
-						Intelligence
-					</a>
-					<div class="collapse " id="sidebarIntelligence">
-						<ul class="nav nav-sm flex-column">
-							<li class="nav-item">
-								<a href="./sentiment-analysis.html" class="nav-link ">
-									Sentiment analysis
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="./named-entities-recognition.html" class="nav-link ">
-									Named Entities Recognition
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="./translation.html" class="nav-link ">
-									Translation
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="./transcription.html" class="nav-link ">
-									Transcripton
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="./image-recognition.html" class="nav-link ">
-									Image Recognition
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="./ocr.html" class="nav-link ">
-									OCR
-								</a>
-							</li>
-						</ul>
-					</div>
-				</li>
-
-				<!-- Divider -->
-				<hr class="navbar-divider my-3">
-
-				<li class="nav-item">
-					<a href="./store.html" class="nav-link ">
-						<i class="fe fe-shopping-cart"></i>Store
-					</a>
-				</li>
-			</ul>
-
-			<!-- Push content down -->
-			<div class="mt-auto"></div>
-
-
-			<!-- Navigation -->
-			<ul class="navbar-nav">
-				<li class="nav-item">
-					<a class="nav-link" href="#sidebarHelp" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarHelp">
-						<i class="fe fe-help-circle"></i>
-						Help Center
-					</a>
-					<div class="collapse " id="sidebarHelp">
-						<ul class="nav nav-sm flex-column">
-							<li class="nav-item">
-								<a href="./getting-started.html" class="nav-link ">
-									Getting started
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="./product-tour.html" class="nav-link ">
-									Product tour
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="./knowledge-base.html" class="nav-link ">
-									Knowledge Base
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="./on-demand-services.html" class="nav-link ">
-									On demand services
-								</a>
-							</li>
-						</ul>
-					</div>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link " href="./account-general.html">
-						<i class="fe fe-settings"></i>
-						Settings & Members
-					</a>
-				</li>
-			</ul>
-
-		</div>
-		<!-- / .navbar-collapse -->
 
 	</div>
+	<!-- / .navbar-collapse -->
+
+
 </nav>
