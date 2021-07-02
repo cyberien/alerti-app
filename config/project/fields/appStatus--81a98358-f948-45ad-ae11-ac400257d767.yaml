@@ -1,0 +1,56 @@
+contentColumnType: string
+fieldGroup: 601a3482-84dc-49e0-b997-fda3e0696dc3 # app
+handle: appStatus
+instructions: ''
+name: 'App status'
+searchable: false
+settings:
+  optgroups: true
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - enabled
+        -
+          - value
+          - enabled
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - disabled
+        -
+          - value
+          - disabled
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - locked
+        -
+          - value
+          - locked
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - installed
+        -
+          - value
+          - installed
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

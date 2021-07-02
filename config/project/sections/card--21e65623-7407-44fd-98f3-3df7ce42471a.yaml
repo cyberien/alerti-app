@@ -1,6 +1,6 @@
 enableVersioning: true
-handle: workspace
-name: workspace
+handle: card
+name: card
 previewTargets:
   -
     __assoc__:
@@ -16,8 +16,8 @@ previewTargets:
 propagationMethod: all
 siteSettings:
   e7ddbb89-e989-43d1-86e9-e9e4f45da062: # alerti
-    enabledByDefault: true
-    hasUrls: true
-    template: workspace/_entry
-    uriFormat: 'workspace/{slug}'
+    enabledByDefault: false
+    hasUrls: false
+    template: null
+    uriFormat: null
 type: channel

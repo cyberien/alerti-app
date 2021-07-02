@@ -1,0 +1,14 @@
+contentColumnType: string(255)
+fieldGroup: 601a3482-84dc-49e0-b997-fda3e0696dc3 # app
+handle: entrypoint
+instructions: ''
+name: entrypoint
+searchable: false
+settings:
+  maxLength: '255'
+  placeholder: null
+  types:
+    - url
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url

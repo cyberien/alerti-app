@@ -1,0 +1,196 @@
+field: f41d9808-f911-483e-b548-90f6a5227850 # Members
+fieldLayouts:
+  b07bc894-c13b-48a4-bcf4-7f904db2055e:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 4fc50610-fb20-48bc-8c45-dd7dc1e66d5e # user
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 2a712d60-6c82-4e23-82db-86a6437abbf7 # Role
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 4dadaa66-ca7d-4632-941a-91941580eee5 # Status
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  2a712d60-6c82-4e23-82db-86a6437abbf7: # Role
+    contentColumnType: string
+    fieldGroup: null
+    handle: role
+    instructions: ''
+    name: Role
+    searchable: false
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - ''
+            -
+              - value
+              - ''
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - Admin
+            -
+              - value
+              - admin
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Manager
+            -
+              - value
+              - manager
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Staff
+            -
+              - value
+              - staff
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Viewer
+            -
+              - value
+              - viewer
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  4dadaa66-ca7d-4632-941a-91941580eee5: # Status
+    contentColumnType: string
+    fieldGroup: null
+    handle: statut
+    instructions: ''
+    name: Status
+    searchable: false
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - ''
+            -
+              - value
+              - ''
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - Active
+            -
+              - value
+              - '1'
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Invited
+            -
+              - value
+              - '2'
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Locked
+            -
+              - value
+              - '3'
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Deleted
+            -
+              - value
+              - '4'
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  4fc50610-fb20-48bc-8c45-dd7dc1e66d5e: # user
+    contentColumnType: string
+    fieldGroup: null
+    handle: user
+    instructions: ''
+    name: user
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      limit: '1'
+      localizeRelations: false
+      selectionLabel: 'Search by username, full name, email'
+      showSiteMenu: true
+      source: null
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: true
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Users
+handle: member
+name: member
+sortOrder: 1

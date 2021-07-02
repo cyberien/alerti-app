@@ -1,5 +1,5 @@
 fieldLayouts:
-  bbaf5ae9-2613-42d9-b313-fef620c5d4e6:
+  150dbd00-58e0-4459-bc13-398a0ba0f45e:
     tabs:
       -
         elements:
@@ -26,12 +26,30 @@ fieldLayouts:
             type: craft\fieldlayoutelements\EntryTitleField
             warning: null
             width: 100
+          -
+            fieldUid: f41d9808-f911-483e-b548-90f6a5227850 # Members
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 198e7265-6068-4291-aa4e-e30a5203c507 # workspace
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
         name: Content
         sortOrder: 1
-handle: workspace
+handle: board
 hasTitleField: true
-name: workspace
-section: b7a53bf6-7166-47ad-b0e4-5d287878ce7c # workspace
+name: board
+section: e6e2e3d7-e6c4-4e9e-bd02-ec313ef684e9 # board
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

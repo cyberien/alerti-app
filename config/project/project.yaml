@@ -1,4 +1,4 @@
-dateModified: 1624865482
+dateModified: 1625225444
 email:
   fromEmail: aminembarki@gmail.com
   fromName: alerti
@@ -8,11 +8,44 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  aws-s3:
+    edition: standard
+    enabled: true
+    schemaVersion: '1.2'
+  comments-work:
+    edition: standard
+    enabled: true
+    licenseKey: U66BV4M2EK7TKPFHFVT7SWB9
+    schemaVersion: 1.0.3
+    settings:
+      allowAnonymous: ''
+      autoApprove: '1'
+  commerce:
+    edition: lite
+    enabled: true
+    licenseKey: 8MCWYWFY1113YK9XWA2UXPVV
+    schemaVersion: 3.4.1
+  commerce-stripe:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.2.0
+  digital-products:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.1.0
+  feed-me:
+    edition: standard
+    enabled: true
+    schemaVersion: 4.3.0
   navigation:
     edition: standard
     enabled: true
     licenseKey: PED0LL8EK7L28QQ0PLZAQBQO
     schemaVersion: 1.0.21
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
 system:
   edition: pro
   live: true

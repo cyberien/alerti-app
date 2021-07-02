@@ -12,7 +12,7 @@ permissions:
   craft\elements\Entry:
     enabled: '1'
     permissions:
-      - 'section:9306d451-fdb6-4ce4-b1c9-5bd9d3b5e74d' # app
+      - 'section:9306d451-fdb6-4ce4-b1c9-5bd9d3b5e74d'
   craft\elements\Tag:
     enabled: '1'
     permissions: '*'

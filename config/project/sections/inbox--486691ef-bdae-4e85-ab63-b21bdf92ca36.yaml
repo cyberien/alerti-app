@@ -1,6 +1,6 @@
 enableVersioning: true
-handle: app
-name: app
+handle: inbox
+name: inbox
 previewTargets:
   -
     __assoc__:
@@ -18,6 +18,6 @@ siteSettings:
   e7ddbb89-e989-43d1-86e9-e9e4f45da062: # alerti
     enabledByDefault: true
     hasUrls: true
-    template: app/_entry
-    uriFormat: 'app/{slug}'
+    template: inbox/_entry
+    uriFormat: 'inbox/{slug}'
 type: channel

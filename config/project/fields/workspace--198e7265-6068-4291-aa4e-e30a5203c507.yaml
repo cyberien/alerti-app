@@ -1,0 +1,23 @@
+contentColumnType: string
+fieldGroup: b99fcb37-7036-4e10-bbb4-061931f8d954 # Common
+handle: workspace
+instructions: ''
+name: workspace
+searchable: true
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  allowSelfRelations: false
+  branchLimit: '1'
+  limit: null
+  localizeRelations: false
+  selectionLabel: workspace
+  showSiteMenu: false
+  source: 'group:071d2968-01a4-4194-8890-fa7d518e3889' # workspace
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: true
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

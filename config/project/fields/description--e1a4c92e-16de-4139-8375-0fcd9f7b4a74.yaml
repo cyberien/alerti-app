@@ -1,0 +1,18 @@
+contentColumnType: text
+fieldGroup: 601a3482-84dc-49e0-b997-fda3e0696dc3 # app
+handle: description
+instructions: ''
+name: Description
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: '1'
+  placeholder: null
+  uiMode: enlarged
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

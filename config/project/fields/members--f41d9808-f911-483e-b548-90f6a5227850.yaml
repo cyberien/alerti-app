@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: b99fcb37-7036-4e10-bbb4-061931f8d954 # Common
+handle: members
+instructions: ''
+name: Members
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_members}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

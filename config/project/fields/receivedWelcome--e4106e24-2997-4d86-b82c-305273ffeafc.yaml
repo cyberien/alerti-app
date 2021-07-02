@@ -1,0 +1,13 @@
+contentColumnType: boolean
+fieldGroup: b99fcb37-7036-4e10-bbb4-061931f8d954 # Common
+handle: receivedWelcome
+instructions: ''
+name: received_welcome
+searchable: false
+settings:
+  default: false
+  offLabel: 'no'
+  onLabel: 'yes'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

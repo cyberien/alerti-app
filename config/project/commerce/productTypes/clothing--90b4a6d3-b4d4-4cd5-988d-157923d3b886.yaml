@@ -1,0 +1,45 @@
+descriptionFormat: ''
+handle: clothing
+hasDimensions: true
+hasProductTitleField: true
+hasVariantTitleField: true
+hasVariants: false
+name: Clothing
+productFieldLayouts:
+  b42960bb-c7cc-4f83-ae0f-7af46909c668:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\commerce\fieldlayoutelements\ProductTitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+productTitleFormat: ''
+siteSettings:
+  e7ddbb89-e989-43d1-86e9-e9e4f45da062: # alerti
+    hasUrls: true
+    template: shop/products/_product
+    uriFormat: 'shop/products/{slug}'
+skuFormat: ''
+titleFormat: '{product.title}'
