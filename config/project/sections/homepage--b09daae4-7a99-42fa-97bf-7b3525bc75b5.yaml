@@ -1,0 +1,11 @@
+enableVersioning: false
+handle: homepage
+name: Homepage
+propagationMethod: all
+siteSettings:
+  e7ddbb89-e989-43d1-86e9-e9e4f45da062: # alerti
+    enabledByDefault: true
+    hasUrls: true
+    template: kanban/index
+    uriFormat: __home__
+type: single

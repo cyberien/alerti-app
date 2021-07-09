@@ -8,6 +8,7 @@
     "craftcms/digital-products": "2.4.3.1",
     "craftcms/feed-me": "^4.3",
     "craftcms/redactor": "^2.8",
+    "hashtagerrors/user-initials-photo": "^1.1",
     "twentyfourhoursmedia/comments-work": "^1.3",
     "verbb/navigation": "^1.4",
     "vlucas/phpdotenv": "^3.4.0"

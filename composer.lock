@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e8358dc84a439725554b1495f473d329",
+    "content-hash": "ed3d847aefcb5a76f6e5f8310c17fb62",
     "packages": [
         {
             "name": "angellco/auth0",
@@ -1749,6 +1749,65 @@
                 "url"
             ],
             "time": "2021-04-26T09:17:50+00:00"
+        },
+        {
+            "name": "hashtagerrors/user-initials-photo",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hashtagerrors/userinitialsphoto.git",
+                "reference": "a574eacc7af9a985f20353a3e58148ecb8f9eb48"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hashtagerrors/userinitialsphoto/zipball/a574eacc7af9a985f20353a3e58148ecb8f9eb48",
+                "reference": "a574eacc7af9a985f20353a3e58148ecb8f9eb48",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "User Initials Photo",
+                "handle": "user-initials-photo",
+                "hasCpSettings": true,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/hashtagerror/user-initials-photo/master/CHANGELOG.md",
+                "components": {
+                    "userInitialsPhotoService": "hashtagerrors\\userinitialsphoto\\services\\UserInitialsPhotoService"
+                },
+                "class": "hashtagerrors\\userinitialsphoto\\UserInitialsPhoto"
+            },
+            "autoload": {
+                "psr-4": {
+                    "hashtagerrors\\userinitialsphoto\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Hashtag Errors",
+                    "homepage": "http://www.hashtagerrors.com"
+                }
+            ],
+            "description": "A plugin to assign profile picture of user with their name initials.",
+            "keywords": [
+                "Craft",
+                "cms",
+                "craft-plugin",
+                "craftcms",
+                "user initials photo"
+            ],
+            "support": {
+                "docs": "https://github.com/hashtagerror/user-initials-photo/blob/master/README.md",
+                "issues": "https://github.com/hashtagerror/user-initials-photo/issues",
+                "source": "https://github.com/hashtagerrors/userinitialsphoto/tree/master"
+            },
+            "time": "2019-04-30T14:01:57+00:00"
         },
         {
             "name": "ibericode/vat",

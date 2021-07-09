@@ -1,0 +1,20 @@
+isPublic: false
+name: kanban
+scope:
+  - 'elements.drafts:read'
+  - 'elements.revisions:read'
+  - 'elements.inactive:read'
+  - 'sections.e6e2e3d7-e6c4-4e9e-bd02-ec313ef684e9:read' # board
+  - 'entrytypes.cd44c146-d469-429b-a56c-3b71d321437c:read' # board
+  - 'sections.21e65623-7407-44fd-98f3-3df7ce42471a:read' # card
+  - 'entrytypes.d6c07a9f-0c44-4166-b63c-4859385e5f7a:read' # card
+  - 'sections.e6e2e3d7-e6c4-4e9e-bd02-ec313ef684e9:edit' # board
+  - 'entrytypes.cd44c146-d469-429b-a56c-3b71d321437c:edit' # board
+  - 'entrytypes.cd44c146-d469-429b-a56c-3b71d321437c:create' # board
+  - 'entrytypes.cd44c146-d469-429b-a56c-3b71d321437c:save' # board
+  - 'entrytypes.cd44c146-d469-429b-a56c-3b71d321437c:delete' # board
+  - 'sections.21e65623-7407-44fd-98f3-3df7ce42471a:edit' # card
+  - 'entrytypes.d6c07a9f-0c44-4166-b63c-4859385e5f7a:edit' # card
+  - 'entrytypes.d6c07a9f-0c44-4166-b63c-4859385e5f7a:create' # card
+  - 'entrytypes.d6c07a9f-0c44-4166-b63c-4859385e5f7a:save' # card
+  - 'entrytypes.d6c07a9f-0c44-4166-b63c-4859385e5f7a:delete' # card
