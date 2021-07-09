@@ -27,7 +27,16 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            fieldUid: f41d9808-f911-483e-b548-90f6a5227850 # Members
+            fieldUid: c3de8e28-a14f-4f00-9d6d-084093cdc03d # content
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: cd8fe174-a89c-4e35-80c1-8c8e21c51acf # files
             instructions: null
             label: null
             required: false
@@ -37,6 +46,28 @@ fieldLayouts:
             width: 100
         name: Content
         sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 4cd32ffe-18c8-4521-b8a4-e6bfe0f570a4 # relatedBoard
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: f41d9808-f911-483e-b548-90f6a5227850 # Members
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Settings
+        sortOrder: 2
 handle: card
 hasTitleField: true
 name: card

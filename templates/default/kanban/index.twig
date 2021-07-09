@@ -1011,7 +1011,10 @@
 										<div class="kanban-category">
 
 
-											{% set relatedCards = craft.entries().section('cards').relatedTo(entry).all() %}
+{% set relatedCards = craft.entries().section('card').relatedboard(entry).all() %}
+
+
+
 
 											{% for card in relatedCards %}
 

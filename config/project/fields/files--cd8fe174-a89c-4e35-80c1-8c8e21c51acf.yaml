@@ -1,0 +1,41 @@
+contentColumnType: string
+fieldGroup: b99fcb37-7036-4e10-bbb4-061931f8d954 # Common
+handle: files
+instructions: ''
+name: files
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowUploads: true
+  allowedKinds:
+    - audio
+    - compressed
+    - excel
+    - image
+    - json
+    - pdf
+    - powerpoint
+    - text
+    - word
+    - xml
+  defaultUploadLocationSource: 'volume:c33b1c95-d218-4344-bba1-2e7d5772076c' # my-alerti-app
+  defaultUploadLocationSubpath: '{author.username}/'
+  limit: ''
+  localizeRelations: false
+  previewMode: full
+  restrictFiles: '1'
+  selectionLabel: 'Add files'
+  showSiteMenu: false
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  singleUploadLocationSource: 'volume:c33b1c95-d218-4344-bba1-2e7d5772076c' # my-alerti-app
+  singleUploadLocationSubpath: ''
+  source: null
+  sources: '*'
+  targetSiteId: null
+  useSingleFolder: false
+  validateRelatedElements: false
+  viewMode: large
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

@@ -1,0 +1,21 @@
+contentColumnType: string
+fieldGroup: cf2e7add-ac4e-42ec-9ed6-ec94ab1a6f86 # kanban
+handle: relatedboard
+instructions: ''
+name: relatedBoard
+searchable: true
+settings:
+  allowSelfRelations: false
+  limit: '1'
+  localizeRelations: false
+  selectionLabel: 'Related Board'
+  showSiteMenu: true
+  source: null
+  sources:
+    - 'section:e6e2e3d7-e6c4-4e9e-bd02-ec313ef684e9' # board
+  targetSiteId: null
+  validateRelatedElements: true
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries
