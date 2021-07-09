@@ -39,10 +39,10 @@ settings:
   cfDistributionId: ''
   cfPrefix: ''
   expires: ''
-  keyId: AKIAQTBY3BVK4PEYCA7X
+  keyId: S3_KEY
   makeUploadsPublic: '1'
   region: us-east-1
-  secret: ' Gl9ijRhEqiMMxVBQDfHHYZFmzw0TJEdZfN6mQ2F2'
+  secret: 'S3_SECRET'
   storageClass: ''
   subfolder: ''
 sortOrder: 1
