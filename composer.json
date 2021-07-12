@@ -18,7 +18,8 @@
   },
   "autoload": {
     "psr-4": {
-      "modules\\": "modules/"
+        "modules\\kanbanmodule\\": "modules/kanbanmodule/src/",
+        "modules\\alertimodule\\": "modules/alertimodule/src/"
     }
   },
   "config": {

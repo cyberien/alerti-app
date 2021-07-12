@@ -437,6 +437,7 @@
 									</form>
 
 								</div>
+								
 								<div
 									class="col-auto align-self-end">
 
@@ -876,8 +877,6 @@
 						<!-- Title -->
 						<p class="lead text-center text-white">
 							{{ 'Welcome to Alerti'|t }}
-
-
 						</p>
 
 						<!-- Text -->
@@ -973,7 +972,6 @@
 										<h4 class="card-header-title">
 											{{ entry.title }}
 
-
 										</h4>
 
 										<!-- Dropdown -->
@@ -1010,11 +1008,7 @@
 										<!-- Category -->
 										<div class="kanban-category">
 
-
-{% set relatedCards = craft.entries().section('card').relatedboard(entry).all() %}
-
-
-
+	                                    {% set relatedCards = craft.entries().section('card').relatedboard(entry).all() %}
 
 											{% for card in relatedCards %}
 

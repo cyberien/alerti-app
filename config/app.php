@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Yii Application Config
  *
@@ -22,7 +23,12 @@ use craft\helpers\App;
 return [
     'id' => App::env('APP_ID') ?: 'CraftCMS',
     'modules' => [
-        'my-module' => \modules\Module::class,
+        'alerti-module' => [
+            'class' => \modules\alertimodule\AlertiModule::class,
+        ],
+        'kanban-module' => [
+            'class' => \modules\kanbanmodule\KanbanModule::class,
+        ],
     ],
-    //'bootstrap' => ['my-module'],
+    'bootstrap' => ['alerti-module', 'kanban-module'],
 ];

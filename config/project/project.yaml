@@ -1,4 +1,4 @@
-dateModified: 1625832836
+dateModified: 1626110872
 email:
   fromEmail: aminembarki@gmail.com
   fromName: alerti
@@ -46,6 +46,12 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.3.0
+  user-initials-photo:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      newUsersOnly: ''
 system:
   edition: pro
   live: true
