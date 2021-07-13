@@ -13,8 +13,11 @@ namespace modules\kanbanmodule\controllers;
 
 
 use Craft;
+use craft\base\Element;
+use craft\elements\Entry;
 use craft\web\Controller;
 use yii\web\BadRequestHttpException;
+use yii\web\ForbiddenHttpException;
 use yii\web\Response;
 
 
@@ -22,17 +25,54 @@ class CardController extends Controller
 {
 
 
+    public function beforeAction($action)
+    {
+         $user = Craft::$app->getUser();
+
+        if ($user) {
+            return parent::beforeAction($action); 
+        }
+
+       return false;
+    }
+
     public function actionAdd(): Response
     {
 
-        if (Craft::$app->request->acceptsJson) {
-            return $this->asJson([
-                'success' => true,
-            ]);
+        $request = Craft::$app->getRequest();
+
+        // Get the related board
+        $boradId = $request->getValidatedBodyParam('boradId');
+        $boradId = 57;
+        $currentBorad = Entry::find()->id($boradId)->anyStatus()->one();
+
+        if (!$currentBorad) {
+            throw new BadRequestHttpException('Invalid board ID: ' . $boradId);
         }
+        
+        // Save the new card
+        $section = Craft::$app->sections->getSectionByHandle('card');
+        $entryTypes = $section->getEntryTypes();
+        $entryType = $entryTypes[0];
+
+        $entry = new Entry();
+        $entry->authorId = Craft::$app->getUser()->id;
+        $entry->sectionId = $section->id;
+        $entry->typeId = $entryType->id;
+        $entry->enabled = true;
+        $entry->title = $request->getValidatedBodyParam('title');
+        $entry->setFieldValues([
+            'relatedboard'=> [$currentBorad->id]
+        ]);
+    
+        $success = Craft::$app->elements->saveElement($entry);
+
+        return $this->asJson([
+            'success' => $success,
+        ]);
     }
 
-    public function actionUpdate(): Response
+    public function actionSave(): Response
     {
 
         if (Craft::$app->request->acceptsJson) {
@@ -45,11 +85,30 @@ class CardController extends Controller
     public function actionDelete(): Response
     {
 
-        if (Craft::$app->request->acceptsJson) {
-            return $this->asJson([
-                'success' => true,
-            ]);
+
+        // $this->requirePostRequest();
+
+        $request = Craft::$app->getRequest();
+
+        $entryId = $request->getValidatedBodyParam('entryId');
+
+        $currentCard = Entry::find()->id($entryId)->one();
+
+        if (!$currentCard) {
+
+            throw new BadRequestHttpException('No card exists');
         }
+
+        if ($currentCard->authorId != Craft::$app->getUser()->id) {
+
+            throw new ForbiddenHttpException('You are not allowed to delete the card  with the ID “'.$entryId.'”.');
+        }
+
+        $success = Craft::$app->elements->deleteElementById($currentCard->id);
+
+        return $this->asJson([
+            'success' => $success,
+        ]);
     }
 
     public function actionOrder(): Response

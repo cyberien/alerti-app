@@ -32,21 +32,9 @@ handle: myAlertiApp
 hasUrls: false
 name: my-alerti-app
 settings:
-  addSubfolderToRootUrl: '1'
-  autoFocalPoint: ''
-  bucket: my-alerti-app-dev
-  bucketSelectionMode: manual
-  cfDistributionId: ''
-  cfPrefix: ''
-  expires: ''
-  keyId: $S3_KEY
-  makeUploadsPublic: '1'
-  region: us-east-1
-  secret: $S3_SECRET
-  storageClass: ''
-  subfolder: ''
+  path: '@webroot/uploads/'
 sortOrder: 1
 titleTranslationKeyFormat: null
 titleTranslationMethod: null
-type: craft\awss3\Volume
+type: craft\volumes\Local
 url: ''
