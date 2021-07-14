@@ -14,6 +14,7 @@ namespace modules\kanbanmodule\controllers;
 
 use Craft;
 use craft\base\Element;
+use craft\elements\Category;
 use craft\elements\Entry;
 use craft\web\Controller;
 use yii\web\BadRequestHttpException;
@@ -28,21 +29,64 @@ class BoardController extends Controller
     public function actionAdd(): Response
     {
 
-        if (Craft::$app->request->acceptsJson) {
-            return $this->asJson([
-                'success' => true,
-            ]);
+        $request = Craft::$app->getRequest();
+
+        // Get the related board
+        $workspaceId = $request->getValidatedBodyParam('workspaceId');
+        $currentWorkspace = Category::find()->id($workspaceId)->anyStatus()->one();
+
+        if (!$currentWorkspace) {
+            throw new BadRequestHttpException('Invalid workspace ID: ' . $workspaceId);
         }
+
+        // Save the new card
+        $section = Craft::$app->sections->getSectionByHandle('board');
+        $entryTypes = $section->getEntryTypes();
+        $entryType = $entryTypes[0];
+
+        $entry = new Entry();
+        $entry->authorId = Craft::$app->getUser()->id;
+        $entry->sectionId = $section->id;
+        $entry->typeId = $entryType->id;
+        $entry->enabled = true;
+        $entry->title = $request->getValidatedBodyParam('title');
+        $entry->setFieldValues([
+            'workspace' => [$currentWorkspace->id]
+        ]);
+
+        $success = Craft::$app->elements->saveElement($entry);
+
+        return $this->asJson([
+            'success' => $success,
+        ]);
     }
 
-    public function actionUpdate(): Response
+    public function actionSave(): Response
     {
 
-        if (Craft::$app->request->acceptsJson) {
-            return $this->asJson([
-                'success' => true,
-            ]);
+        $request = Craft::$app->getRequest();
+
+        // Get the related board
+        $entryId = $request->getValidatedBodyParam('boardId');
+
+        $entry = Entry::find()->id($entryId)->one();
+
+        if (!$entry) {
+            throw new BadRequestHttpException('Invalid board ID: ' . $workspaceId);
         }
+        
+        $entry->title = $request->getValidatedBodyParam('title');
+
+        
+
+        
+
+        $success = Craft::$app->elements->saveElement($entry);
+
+        return $this->asJson([
+            'success' => $success,
+        ]);
+        
     }
 
     public function actionDelete(): Response
@@ -73,13 +117,26 @@ class BoardController extends Controller
         ]);
     }
 
-    public function actionOrder(): Response
+    public function actionPosition(): Response
     {
 
-        if (Craft::$app->request->acceptsJson) {
-            return $this->asJson([
-                'success' => true,
-            ]);
+        $request = Craft::$app->getRequest();
+
+        // Get the related board
+        $entryId = $request->getValidatedBodyParam('boardId');
+
+        $entry = Entry::find()->id($entryId)->one();
+
+        if (!$entry) {
+            throw new BadRequestHttpException('Invalid board ID: ' . $workspaceId);
         }
+
+        $entry->position = intval($request->getValidatedBodyParam('position'));
+
+        $success = Craft::$app->elements->saveElement($entry);
+
+        return $this->asJson([
+            'success' => $success,
+        ]);
     }
 }
