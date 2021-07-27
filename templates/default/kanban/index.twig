@@ -957,144 +957,10 @@
 				<div class="container-fluid kanban-container">
 					<div class="row">
 
-						{% for entry in lists %}
+					
 
+<div id="kanban"></div>
 
-							<div
-								class="col-12">
-
-								<!-- Card -->
-								<div class="card">
-									<div
-										class="card-header card-header-flush">
-
-										<!-- Title -->
-										<h4 class="card-header-title">
-											{{ entry.title }}
-
-										</h4>
-
-										<!-- Dropdown -->
-										<div class="dropdown">
-											<a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-												<i class="fe fe-more-vertical"></i>
-											</a>
-											<div class="dropdown-menu dropdown-menu-end">
-												<a href="{{ entry.url }}" class="dropdown-item">
-
-													{{'Rename this list' |t}}
-
-												</a>
-												<a href="{{ entry.url }}" class="dropdown-item">
-													{{'Delete this list' |t}}
-
-												</a>
-												<a href="{{ entry.url }}" class="dropdown-item">
-
-													{{'Add card' |t}}
-												</a>
-												<a href="{{ entry.url }}" class="dropdown-item">
-
-													{{'Change color' |t}}
-
-												</a>
-											</div>
-										</div>
-
-									</div>
-									<div
-										class="card-body">
-
-										<!-- Category -->
-										<div class="kanban-category">
-
-	                                    {% set relatedCards = craft.entries().section('card').relatedboard(entry).all() %}
-
-											{% for card in relatedCards %}
-
-
-												<!-- Card -->
-												<div class="kanban-item">
-													<div class="card card-sm mb-3" data-bs-toggle="modal" data-bs-target="#modalKanbanTask">
-														<div
-															class="card-body">
-
-															<!-- Body -->
-															<p class="mb-0">
-																{{ card.title }}
-															</p>
-
-														</div>
-													</div>
-												</div>
-
-
-											{% endfor %}
-
-
-										</div>
-
-										<!-- Add -->
-										<div class="kanban-add">
-											<div class="card card-sm card-flush mb-0">
-												<div
-													class="card-body">
-
-													<!-- Link -->
-													<div class="text-center">
-														<a class="kanban-add-link" href="#!">Add Card</a>
-													</div>
-
-													<!-- Form -->
-													<form
-														class="kanban-add-form d-none">
-
-														<!-- Input -->
-														<div class="form-group">
-															<textarea class="form-control form-control-flush form-control-auto" placeholder="Draft your card"></textarea>
-														</div>
-
-														<!-- Footer -->
-														<div class="row align-items-center">
-															<div
-																class="col d-flex align-items-center">
-
-																<!-- Icon -->
-																<span class="text-muted small me-2">
-																	<i class="fe fe-clock"></i>
-																</span>
-
-																<!-- Input -->
-																<input type="text" class="form-control form-control-sm form-control-flush form-control-auto" text-muted data-flatpickr data-options='{"dateFormat": "M j"}' placeholder="No due date">
-
-															</div>
-															<div
-																class="col-auto">
-
-																<!-- Buttons -->
-																<button class="btn btn-sm btn-white" type="reset">
-																	Cancel
-																</button>
-																<button class="btn btn-sm btn-primary" type="submit">
-																	Add
-																</button>
-
-															</div>
-														</div>
-														<!-- / .row -->
-
-													</form>
-
-												</div>
-											</div>
-										</div>
-
-									</div>
-								</div>
-
-							</div>
-
-						{% endfor %}
 
 
 						<div
@@ -1387,5 +1253,12 @@
 
 	</div>
 	<!-- / .main-content -->
+
+<script type="module" crossorigin src="/kanban/dist/assets/index.93ba6130.js"></script>
+
+<link rel="modulepreload" href="/kanban/dist/assets/vendor.17a1589d.js">
+
+<link rel="stylesheet" href="/kanban/dist/assets/index.6d7a5b7a.css">
+
 
 {% endblock %}

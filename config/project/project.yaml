@@ -1,8 +1,54 @@
-dateModified: 1626173727
+dateModified: 1626353517
 email:
   fromEmail: aminembarki@gmail.com
   fromName: alerti
   transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    1a19df7d-a96f-44a7-96ae-79747920243e: 'App Name' # App Name
+    2a712d60-6c82-4e23-82db-86a6437abbf7: Role # Role
+    4cd32ffe-18c8-4521-b8a4-e6bfe0f570a4: relatedBoard # relatedBoard
+    4dadaa66-ca7d-4632-941a-91941580eee5: Status # Status
+    4ecab635-a8dc-42bf-a490-54bbf8d59d7f: entrypoint # entrypoint
+    4fc50610-fb20-48bc-8c45-dd7dc1e66d5e: user # user
+    05e79526-d431-4b06-a275-52d90d77a025: medium4x3 # medium4x3
+    6d9a3e71-a1db-4230-896b-f9a218fde7ea: Dummy # Dummy
+    21e65623-7407-44fd-98f3-3df7ce42471a: card # card
+    071d2968-01a4-4194-8890-fa7d518e3889: workspace # workspace
+    81a98358-f948-45ad-ae11-ac400257d767: 'App status' # App status
+    84f2e376-097e-407f-b9e7-c929d03fe75c: facebook_module # facebook_module
+    90b4a6d3-b4d4-4cd5-988d-157923d3b886: Clothing # Clothing
+    95e2be85-40a6-496a-92af-33157c52bd20: member # member
+    198e7265-6068-4291-aa4e-e30a5203c507: workspace # workspace
+    601a3482-84dc-49e0-b997-fda3e0696dc3: app # app
+    5231c0d7-43a0-48e7-ae53-eac9714fde6d: User # User
+    5477b8a1-181b-4fb6-8c39-c00917fd2ea8: user_status # user_status
+    7418fefd-14e0-4f94-928e-d2cd40968524: 'Public Schema' # Public Schema
+    67353ffa-25ba-4ff5-a3b6-dee608e15fa3: kanban # kanban
+    486691ef-bdae-4e85-ab63-b21bdf92ca36: inbox # inbox
+    a1d69ef7-d42d-4502-9e9e-983c33d4c2fb: state # state
+    a92e1ae3-d409-4aae-826e-3ae6758e2bc8: small1x1 # small1x1
+    ab8fe038-16af-4835-972f-2d4455a0752e: Homepage # Homepage
+    b09daae4-7a99-42fa-97bf-7b3525bc75b5: Homepage # Homepage
+    b99fcb37-7036-4e10-bbb4-061931f8d954: Common # Common
+    c3de8e28-a14f-4f00-9d6d-084093cdc03d: content # content
+    c33b1c95-d218-4344-bba1-2e7d5772076c: my-alerti-app # my-alerti-app
+    cb228cef-7351-44cc-920f-45b31dbb5462: twitter_module # twitter_module
+    cd8fe174-a89c-4e35-80c1-8c8e21c51acf: files # files
+    cd44c146-d469-429b-a56c-3b71d321437c: board # board
+    cf2e7add-ac4e-42ec-9ed6-ec94ab1a6f86: kanban # kanban
+    d5f95edd-804e-41ba-927b-9201536c452b: alerti # alerti
+    d6c07a9f-0c44-4166-b63c-4859385e5f7a: card # card
+    d5116a5c-3528-46ce-9bc9-70fc9aee8b46: main # main
+    d6085f2e-5a8f-46a5-bd52-08658fa9fc14: Freeze # Freeze
+    dfe6fb43-8b4d-42c8-9d22-4ebfd116b7a0: position # position
+    e1a4c92e-16de-4139-8375-0fcd9f7b4a74: Description # Description
+    e6e2e3d7-e6c4-4e9e-bd02-ec313ef684e9: board # board
+    e7ddbb89-e989-43d1-86e9-e9e4f45da062: alerti # alerti
+    e64afb9c-e8e8-4e8d-acbf-8b8fbf15d4e1: inbox # inbox
+    e4106e24-2997-4d86-b82c-305273ffeafc: received_welcome # received_welcome
+    f41d9808-f911-483e-b548-90f6a5227850: Members # Members
+    fc81a817-cee1-4abf-9c45-904ac9328d78: New # New
 plugins:
   auth0:
     edition: standard
@@ -33,6 +79,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.1.0
+  element-api:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   feed-me:
     edition: standard
     enabled: true
@@ -56,5 +106,5 @@ system:
   edition: pro
   live: true
   name: alerti
-  schemaVersion: 3.6.8
+  schemaVersion: 3.7.7
   timeZone: America/Los_Angeles

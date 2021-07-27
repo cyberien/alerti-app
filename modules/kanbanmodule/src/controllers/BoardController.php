@@ -26,6 +26,52 @@ class BoardController extends Controller
 {
 
 
+    
+
+    public function actionGet(): Response
+    {
+
+        $request = Craft::$app->getRequest();
+
+        // Get the related board
+        $workspaceId = $request->getValidatedBodyParam('workspaceId');
+
+      
+        $currentWorkspace = Category::find()->id($workspaceId)->anyStatus()->one();
+
+        if (!$currentWorkspace) {
+            throw new BadRequestHttpException('Invalid workspace ID: ' . $workspaceId);
+        }
+
+        if ($currentWorkspace->authorId != Craft::$app->getUser()->id) {
+
+            throw new ForbiddenHttpException('You are not allowed to access to this workspace');
+        }
+
+
+        // Save the new card
+        $section = Craft::$app->sections->getSectionByHandle('board');
+        $entryTypes = $section->getEntryTypes();
+        $entryType = $entryTypes[0];
+
+        $entry = new Entry();
+        $entry->authorId = Craft::$app->getUser()->id;
+        $entry->sectionId = $section->id;
+        $entry->typeId = $entryType->id;
+        $entry->enabled = true;
+        $entry->title = $request->getValidatedBodyParam('title');
+        $entry->setFieldValues([
+            'workspace' => [$currentWorkspace->id]
+        ]);
+
+        $success = Craft::$app->elements->saveElement($entry);
+
+        return $this->asJson([
+            'success' => $success,
+        ]);
+    }
+
+
     public function actionAdd(): Response
     {
 

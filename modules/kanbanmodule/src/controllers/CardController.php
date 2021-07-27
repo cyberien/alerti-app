@@ -111,13 +111,26 @@ class CardController extends Controller
         ]);
     }
 
-    public function actionOrder(): Response
+    public function actionPosition(): Response
     {
 
-        if (Craft::$app->request->acceptsJson) {
-            return $this->asJson([
-                'success' => true,
-            ]);
+        $request = Craft::$app->getRequest();
+
+        // Get the related board
+        $entryId = $request->getValidatedBodyParam('boardId');
+
+        $entry = Entry::find()->id($entryId)->one();
+
+        if (!$entry) {
+            throw new BadRequestHttpException('Invalid board ID: ' . $workspaceId);
         }
+
+        $entry->position = intval($request->getValidatedBodyParam('position'));
+
+        $success = Craft::$app->elements->saveElement($entry);
+
+        return $this->asJson([
+            'success' => $success,
+        ]);
     }
 }

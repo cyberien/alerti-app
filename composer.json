@@ -6,6 +6,7 @@
     "craftcms/commerce": "3.3.4.1",
     "craftcms/commerce-stripe": "2.3.2.1",
     "craftcms/digital-products": "2.4.3.1",
+    "craftcms/element-api": "^2.7",
     "craftcms/feed-me": "^4.3",
     "craftcms/redactor": "^2.8",
     "hashtagerrors/user-initials-photo": "^1.1",
