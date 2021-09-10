@@ -1,5 +1,7 @@
-allowPublicRegistration: false
-defaultGroup: null
-photoSubpath: null
-photoVolumeUid: null
+allowPublicRegistration: true
+defaultGroup: ec5c8786-d087-40b6-9425-a5a6bff6bce2 # default
+photoSubpath: '/{username}'
+photoVolumeUid: 62da4356-e4a6-4cc8-9503-99657dc7ae55 # userProfile
 requireEmailVerification: true
+suspendByDefault: true
+validateOnPublicRegistration: true

@@ -134,7 +134,7 @@
 
 									<!-- Avatar -->
 									<div class="avatar avatar-sm">
-										<img class="avatar-img rounded-circle" src="./assets/img/avatars/profiles/avatar-1.jpg" alt="...">
+										<img class="avatar-img rounded-circle" src="" alt="...">
 									</div>
 
 								</div>

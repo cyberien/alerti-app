@@ -1,0 +1,403 @@
+{% extends 'layouts/default.twig' %}
+
+
+{% block content %}
+
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+
+			<div
+				class="col-12 col-lg-10 col-xl-8">
+
+				<!-- Header -->
+				{% include "settings/nav.twig" with {'active':'security'} %}
+
+
+				<div class="row justify-content-between align-items-center mb-5">
+					<div
+						class="col-12 col-md-9 col-xl-7">
+
+						<!-- Heading -->
+						<h2 class="mb-2">
+							{{ "Two factor security" | t }}
+
+						</h2>
+
+						<!-- Text -->
+						<p class="text-muted mb-md-0">
+							{{ "Two-factor authentication adds an additional layer of security to your account by requiring more than just a password to log in." | t }}
+
+						</p>
+
+					</div>
+					<div
+						class="col-12 col-md-auto">
+
+						<!-- Button -->
+						<button class="btn btn-primary">
+							{{ "Enable" | t }}
+
+						</button>
+
+					</div>
+				</div>
+				<!-- / .row -->
+
+				<!-- Card -->
+
+
+				<!-- Divider -->
+				<hr class="my-5"> <div class="row justify-content-between align-items-center mb-5">
+					<div
+						class="col-12 col-md-9 col-xl-7">
+
+						<!-- Heading -->
+						<h2 class="mb-2">
+							{{ "Change your password" | t }}
+
+						</h2>
+
+						<!-- Text -->
+						<p class="text-muted mb-xl-0">
+							{{ "We will email you a confirmation when changing your password, so please expect that email after submitting." | t }}
+
+						</p>
+
+					</div>
+					<div
+						class="col-12 col-xl-auto">
+
+						<!-- Button -->
+						<button class="btn btn-white">
+							{{ "Forgot your password?" | t }}
+
+						</button>
+
+					</div>
+				</div>
+				<!-- / .row -->
+
+				<div class="row">
+					<div
+						class="col-12 col-md-6 order-md-2">
+
+						<!-- Card -->
+						<div class="card bg-light border ms-md-4">
+							<div
+								class="card-body">
+
+								<!-- Text -->
+								<p class="mb-2">
+									{{ "Password requirements" | t }}
+
+								</p>
+
+								<!-- Text -->
+								<p class="small text-muted mb-2">
+									{{ "To create a new password, you have to meet all of the following requirements:" | t }}
+
+								</p>
+
+								<!-- List group -->
+								<ul class="small text-muted ps-4 mb-0">
+									<li>
+										{{ "Minimum 8 character" | t }}
+
+									</li>
+									<li>
+										{{ "At least one special character" | t }}
+
+									</li>
+									<li>
+										{{ "At least one number" | t }}
+
+									</li>
+									<li>
+										{{ "Can’t be the same as a previous password" | t }}
+
+									</li>
+								</ul>
+
+							</div>
+						</div>
+
+					</div>
+					<div
+						class="col-12 col-md-6">
+
+						<!-- Form -->
+						<form method="post" accept-charset="UTF-8" enctype="multipart/form-data">
+							{{ csrfInput() }}
+							{{ actionInput('users/save-user') }}
+							{{ hiddenInput('userId', user.id) }}
+							{{ redirectInput("settings/security") }}
+
+
+							<!-- Password -->
+							<div
+								class="form-group">
+
+								<!-- Label -->
+								<label class="form-label">
+									{{ "Current password" | t }}
+
+								</label>
+
+								<!-- Input -->
+								{{ input('password', 'password', null, {
+    id: 'current-password',
+          class: "form-control " ~ (user.hasErrors('currentPassword') ? 'error'),
+
+
+    autocomplete: 'current-password',
+  }) }}
+								{{ _self.errorList(user.getErrors('currentPassword')) }}
+
+
+							</div>
+
+							<!-- New password -->
+							<div
+								class="form-group">
+
+								<!-- Label -->
+								<label class="form-label">
+									{{ 'New password' | t }}
+
+								</label>
+
+								<!-- Input -->
+								{{ input('password', 'newPassword', null, {
+                 id: 'new-password',
+              class: "form-control " ~ (user.hasErrors('newPassword') ? 'error'),
+    autocomplete: 'new-password',
+  }) }}
+								{{ _self.errorList(user.getErrors('newPassword')) }}
+
+
+							</div>
+
+							<!-- Confirm new password -->
+							<div
+								class="form-group">
+
+								<!-- Label -->
+								<label class="form-label">
+									{{ "Confirm new password" | t }}
+
+								</label>
+
+								<!-- Input -->
+								<input type="password" class="form-control" name="password-confirm">
+
+
+							</div>
+
+							<!-- Submit -->
+							<button class="btn w-100 btn-primary lift" type="submit">
+								{{ "Update password" | t }}
+
+							</button>
+
+						</form>
+
+					</div>
+				</div>
+				<!-- / .row -->
+
+				<!-- Divider -->
+				<hr class="my-5">
+
+				<div class="row justify-content-between align-items-center mb-5">
+					<div
+						class="col-12 col-md-9 col-xl-7">
+
+						<!-- Heading -->
+						<h2 class="mb-2">
+							Device History
+						</h2>
+
+						<!-- Text -->
+						<p class="text-muted mb-xl-0">
+							If you see a device here that you believe wasn’t you, please contact our account
+							<a href="#!">fraud department</a>
+							immediately.
+						</p>
+
+					</div>
+					<div
+						class="col-12 col-xl-auto">
+
+						<!-- Button -->
+						<button class="btn btn-white">
+							Log out all devices
+						</button>
+
+					</div>
+				</div>
+				<!-- / .row -->
+
+				<!-- Card -->
+				<div class="card">
+					<div
+						class="card-body">
+
+						<!-- List group -->
+						<div class="list-group list-group-flush my-n3">
+							<div class="list-group-item">
+								<div class="row align-items-center">
+									<div
+										class="col-auto">
+
+										<!-- Icon -->
+										<i class="fe fe-smartphone h1"></i>
+
+									</div>
+									<div
+										class="col ms-n2">
+
+										<!-- Heading -->
+										<h4 class="mb-1">
+											iPhone 11
+										</h4>
+
+										<!-- Text -->
+										<small class="text-muted">
+											Los Angeles, CA ·
+											<time datetime="2020-04-20T16:16">April 20 at 4:16pm</time>
+										</small>
+
+									</div>
+									<div
+										class="col-auto">
+
+										<!-- Button -->
+										<button class="btn btn-sm btn-white">
+											Log out
+										</button>
+
+									</div>
+								</div>
+							</div>
+							<div class="list-group-item">
+								<div class="row align-items-center">
+									<div
+										class="col-auto">
+
+										<!-- Icon -->
+										<i class="fe fe-monitor h1"></i>
+
+									</div>
+									<div
+										class="col ms-n2">
+
+										<!-- Heading -->
+										<h4 class="mb-1">
+											iMac OSX ·
+											<span class="fw-normal">Safari 10.2</span>
+										</h4>
+
+										<!-- Text -->
+										<small class="text-muted">
+											Los Angeles, CA ·
+											<time datetime="2020-04-20T16:16">April 20 at 4:16pm</time>
+										</small>
+
+									</div>
+									<div
+										class="col-auto">
+
+										<!-- Button -->
+										<button class="btn btn-sm btn-white">
+											Log out
+										</button>
+
+									</div>
+								</div>
+							</div>
+							<div class="list-group-item">
+								<div class="row align-items-center">
+									<div
+										class="col-auto">
+
+										<!-- Icon -->
+										<i class="fe fe-smartphone h1"></i>
+
+									</div>
+									<div
+										class="col ms-n2">
+
+										<!-- Heading -->
+										<h4 class="mb-1">
+											iPhone 11
+										</h4>
+
+										<!-- Text -->
+										<small class="text-muted">
+											Los Angeles, CA ·
+											<time datetime="2020-04-20T16:16">April 20 at 4:16pm</time>
+										</small>
+
+									</div>
+									<div
+										class="col-auto">
+
+										<!-- Button -->
+										<button class="btn btn-sm btn-white">
+											Log out
+										</button>
+
+									</div>
+								</div>
+							</div>
+							<div class="list-group-item">
+								<div class="row align-items-center">
+									<div
+										class="col-auto">
+
+										<!-- Icon -->
+										<i class="fe fe-monitor h1"></i>
+
+									</div>
+									<div
+										class="col ms-n2">
+
+										<!-- Heading -->
+										<h4 class="mb-1">
+											iMac OSX ·
+											<span class="fw-normal">Safari 10.2</span>
+										</h4>
+
+										<!-- Text -->
+										<small class="text-muted">
+											Los Angeles, CA ·
+											<time datetime="2020-04-20T16:16">April 20 at 4:16pm</time>
+										</small>
+
+									</div>
+									<div
+										class="col-auto">
+
+										<!-- Button -->
+										<button class="btn btn-sm btn-white">
+											Log out
+										</button>
+
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<br>
+
+			</div>
+
+		</div>
+		<!-- / .row -->
+	</div>
+
+
+{% endblock %}

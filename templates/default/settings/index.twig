@@ -1,0 +1,398 @@
+{% extends 'layouts/default.twig' %}
+
+{# Require that a user is logged in to view this form. #}
+{% requireLogin %}
+
+{% macro errorList(errors) %}
+	{% if errors %}
+		{{ ul(errors, {class: 'errors'}) }}
+	{% endif %}
+{% endmacro %}
+
+{# If there were any validation errors, a `user` variable will be passed to the
+   template, which contains the posted values and validation errors. If that’s not
+   set, we’ll default to the current user. #}
+{% set user = user ?? currentUser %}
+
+
+{% block content %}
+
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div
+				class="col-12 col-lg-10 col-xl-8">
+
+				<!-- Header -->
+				{% include "settings/nav.twig" with {'active':'index'} %}
+
+
+				<!-- Form -->
+				<form method="post" accept-charset="UTF-8" enctype="multipart/form-data">
+					{{ csrfInput() }}
+					{{ actionInput('users/save-user') }}
+					{{ hiddenInput('userId', user.id) }}
+					{{ redirectInput("settings") }}
+
+
+					{% if user.hasErrors() %}
+						<p>{{ "Unable to save your profile." | t }}</p>
+					</p>
+
+				{% endif %}
+
+
+				<div class="row justify-content-between align-items-center">
+					<div class="col">
+
+
+						<label for="photo">{{ "Upload a new photo" | t }}</label>
+
+
+						<div class="row align-items-center">
+							<div
+								class="col-auto">
+
+								<!-- Avatar -->
+								<div class="avatar">
+
+									{% if user.photo %}
+
+										{{ user.photo.getImg({width: 150, height: 150}) }}
+
+
+										<label for="delete-photo">
+											{{ input('checkbox', 'deletePhoto', '1', {
+        id: 'delete-photo',
+      }) }}
+											{{ "Delete photo" | t }}
+
+										</label>
+									{% endif %}
+
+
+								</div>
+
+							</div>
+							<div
+								class="col ms-n2">
+
+								<!-- Heading -->
+								<h4 class="mb-1">
+									{{ "Your avatar" | t }}
+
+								</h4>
+
+								<!-- Text -->
+								<small class="text-muted">
+									{{ "PNG or JPG no bigger than 1000px wide and tall." | t }}
+
+								</small>
+
+							</div>
+						</div>
+						<!-- / .row -->
+					</div>
+					<div
+						class="col-auto">
+
+						<!-- Button -->
+						<button class="btn btn-sm btn-primary">
+							{{ "Upload" | t }}
+
+						</button>
+
+						{{ input('file', 'photo', null, {
+    id: 'photo',
+    accept: 'image/png,image/jpeg',
+  }) }}
+
+
+					</div>
+				</div>
+				<!-- / .row -->
+
+				<!-- Divider -->
+				<hr class="my-5">
+
+				<div class="row">
+					<div
+						class="col-12 col-md-6">
+
+						<!-- First name -->
+						<div
+							class="form-group">
+
+							<!-- Label -->
+							<label class="form-label">
+								{{ 'First name'|t}}
+
+							</label>
+
+							{{ input('text', 'firstName', user.firstName, {
+									id: 'first-name',
+								class: "form-control " ~ (user.hasErrors('firstName') ? 'error'),
+									autocomplete: 'given-name',
+								}) }}
+
+							{{ _self.errorList(user.getErrors('firstName')) }}
+
+						</div>
+
+					</div>
+					<div
+						class="col-12 col-md-6">
+
+						<!-- Last name -->
+						<div
+							class="form-group">
+
+							<!-- Label -->
+							<label class="form-label">
+
+								{{ 'Last name'|t}}
+
+
+							</label>
+
+							<!-- Input -->
+							{{ input('text', 'lastName', user.lastName, {
+							id: 'last-name',
+									class: "form-control " ~ (user.hasErrors('lastName') ? 'error'),
+							autocomplete: 'family-name',
+  								}) }}
+
+							{{ _self.errorList(user.getErrors('lastName')) }}
+
+
+						</div>
+
+					</div>
+					<div
+						class="col-12">
+
+						<!-- Email address -->
+						<div
+							class="form-group">
+
+							<!-- Label -->
+							<label class="mb-1">
+								{{ "Email address" | t }}
+
+							</label>
+
+							<!-- Form text -->
+							<small class="form-text text-muted">
+								{{ "This contact will be shown to others publicly, so choose it carefully." | t }}
+
+							</small>
+
+							<!-- Input -->
+							{{ input('text', 'email', user.unverifiedEmail ?? user.email, {
+    id: 'email',
+class: "form-control " ~ (user.hasErrors('email') ? 'error'),
+
+    autocomplete: 'email',
+  }) }}
+							{{ _self.errorList(user.getErrors('username')) }}
+
+							{% if craft.app.projectConfig.get('users.requireEmailVerification') %}
+								<p>{{"New email addresses need to be verified."|t}}</p>
+
+							{% endif %}
+
+
+						</div>
+
+					</div>
+					<div
+						class="col-12 col-md-6">
+
+						<!-- Phone -->
+						<div
+							class="form-group">
+
+							<!-- Label -->
+							<label class="form-label">
+								Phone
+							</label>
+
+							<!-- Input -->
+							<input type="text" class="form-control mb-3" placeholder="(___)___-____" data-inputmask="'mask': '(999)999-9999'" inputmode="text">
+
+						</div>
+
+					</div>
+					<div
+						class="col-12 col-md-6">
+
+						<!-- Birthday -->
+						<div
+							class="form-group">
+
+							<!-- Label -->
+							<label class="form-label">
+								Birthday
+							</label>
+
+							<!-- Input -->
+							<input type="text" class="form-control flatpickr-input" data-flatpickr="" readonly="readonly">
+
+						</div>
+
+					</div>
+				</div>
+				<!-- / .row -->
+
+				<!-- Button -->
+				<button type="submit" class="btn btn-primary">
+					{{ "Save changes" | t }}
+
+				</button>
+
+				<!-- Divider -->
+				<hr class="my-5">
+
+				<div class="row">
+					<div
+						class="col-12 col-md-6">
+
+						<!-- Public profile -->
+						<div
+							class="form-group">
+
+							<!-- Label -->
+							<label class="mb-1">
+								{{ "Public profile" | t }}
+
+							</label>
+
+							<!-- Form text -->
+							<small class="form-text text-muted">
+								{{ "Making your profile public means that anyone on the Dashkit network will be able to find you." | t }}
+
+							</small>
+
+							<div class="row">
+								<div
+									class="col-auto">
+
+									<!-- Switch -->
+									<div class="form-check form-switch">
+										<input class="form-check-input" type="checkbox" id="switchOne">
+										<label class="form-check-label" for="switchOne"></label>
+									</div>
+
+								</div>
+								<div
+									class="col ms-n2">
+
+									<!-- Help text -->
+									<small class="text-muted">
+										{{ "You're currently invisible" | t }}
+
+									</small>
+
+								</div>
+							</div>
+							<!-- / .row -->
+						</div>
+
+					</div>
+					<div
+						class="col-12 col-md-6">
+
+						<!-- Allow for additional Bookings -->
+						<div
+							class="form-group">
+
+							<!-- Label -->
+							<label class="mb-1">
+								Allow for additional Bookings
+							</label>
+
+							<!-- Form text -->
+							<small class="form-text text-muted">
+								If you are available for hire outside of the current situation, you can encourage others to hire you.
+							</small>
+
+							<div class="row">
+								<div
+									class="col-auto">
+
+									<!-- Switch -->
+									<div class="form-check form-switch">
+										<input class="form-check-input" type="checkbox" id="switchTwo" checked="">
+										<label class="form-check-label" for="switchTwo"></label>
+									</div>
+
+								</div>
+								<div
+									class="col ms-n2">
+
+									<!-- Help text -->
+									<small class="text-muted">
+										You're currently available
+									</small>
+
+								</div>
+							</div>
+							<!-- / .row -->
+						</div>
+
+					</div>
+				</div>
+				<!-- / .row -->
+
+				<!-- Divider -->
+				<hr class="mt-4 mb-5">
+
+				<div class="row justify-content-between">
+					<div
+						class="col-12 col-md-6">
+
+						<!-- Heading -->
+						<h4>
+							{{ "Delete your account" | t }}
+
+						</h4>
+
+						<!-- Text -->
+						<p class="small text-muted mb-md-0">
+							{{ "Please note, deleting your account is a permanent action and will no be recoverable once completed." | t }}
+
+						</p>
+
+					</div>
+					<div
+						class="col-auto">
+
+						<!-- Button -->
+						<button class="btn btn-danger">
+							{{ "Delete" | t }}
+
+						</button>
+
+					</div>
+				</div>
+				<!-- / .row -->
+
+			</form>
+
+
+			{# Custom “Bio” field #}
+			{# <label for="bio">Bio</label>
+																								{{ tag('textarea', {
+																							    text: user.bio,
+																							    id: 'bio',
+																							    name: 'fields[bio]',
+																							    class: user.hasErrors('bio') ? 'error',
+																							  }) }}
+																								{{ _self.errorList(user.getErrors('bio')) }} #}
+
+
+			<br><br>
+
+		</div>
+	</div>
+	<!-- / .row -->
+</div>{% endblock %}

@@ -28,7 +28,7 @@ import Board from "./components/Board.vue";
 import NewBoard from "./components/NewBoard.vue";
 import CardModal from "./components/CardModal.vue";
 
-import Api from "./services/api.js" ;
+import Api from "./services/api.js";
 
 export default {
   data: function () {
@@ -42,20 +42,23 @@ export default {
     CardModal,
   },
   created() {
-      this.boards = Api.getBoards().catch(error => {
-      console.log(error)
-    });
+    Api.getBoards()
+      .then((data) => {
+        this.boards = data;
+      })
+      .catch((err) => console.log(err));
   },
   methods: {
     deleteBoard: function (id) {
-
-      let success =  Api.deleteBoard(id);
-
-      if (success) {
-        if (this.boards.length > 0) {
-          this.boards.splice(id, 1);
-        }
-      }
+      Api.deleteBoard(id)
+        .then((data) => {
+          if (data) {
+            if (this.boards.length > 0) {
+              this.boards.splice(id, 1);
+            }
+          }
+        })
+        .catch((err) => console.log(err));
     },
   },
 };

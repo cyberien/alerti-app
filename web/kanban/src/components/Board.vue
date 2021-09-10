@@ -20,7 +20,7 @@
           >
             <i class="fe fe-more-vertical"></i>
           </a>
-          <div class="">
+          <div class="dropdown-menu dropdown-menu-end">
             <a href="" class="dropdown-item"> Rename this list </a>
             <a @click.stop="$emit('deleteBoard', index)" class="dropdown-item">
               Delete this list
@@ -63,9 +63,11 @@ export default {
   },
   emits: ["deleteBoard","addBoard"],
   created() {
-    this.cards = Api.getCards(this.board.id).catch(error => {
-    console.log(error)
-    });
+     Api.getCards(this.board.id)
+      .then((data) => {
+        this.cards = data;
+      })
+      .catch((err) => console.log(err));
   },
   methods: {
     deleteCard: function (id) {

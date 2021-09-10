@@ -1,0 +1,75 @@
+<!-- Header -->
+<div class="header mt-md-5">
+	<div class="header-body">
+		<div class="row align-items-center">
+			<div
+				class="col">
+
+				<!-- Pretitle -->
+				<h6 class="header-pretitle">
+					{{ "OVERVIEW" | t }}
+
+
+				</h6>
+
+				<!-- Title -->
+				<h1 class="header-title">
+					{{ "Account" | t }}
+				</h1>
+
+			</div>
+		</div>
+		<!-- / .row -->
+		<div class="row align-items-center">
+			<div
+				class="col">
+				<!-- Nav -->
+				<ul class="nav nav-tabs nav-overflow header-tabs">
+					<li class="nav-item text-nowrap">
+						<a href="/settings/" class="nav-link {{(active=='index') ? 'active' : ''}} ">
+
+							{{ "General" | t }}
+						</a>
+					</li>
+					<li class="nav-item text-nowrap">
+						<a href="/settings/billing" class="nav-link {{(active=='billing') ? 'active' : ''}}">
+
+
+							{{ "Billing" | t }}
+
+
+						</a>
+					</li>
+					<li class="nav-item text-nowrap">
+						<a href="/settings/members" class="nav-link {{(active=='members') ? 'active' : ''}}">
+
+
+							{{ "Members" | t }}
+
+
+						</a>
+					</li>
+					<li class="nav-item text-nowrap">
+						<a href="/settings/security" class="nav-link {{(active=='security') ? 'active' : ''}}">
+
+
+							{{ "Security" | t }}
+
+
+						</a>
+					</li>
+					<li class="nav-item text-nowrap">
+						<a href="/settings/notifications" class="nav-link {{(active=='notifications') ? 'active' : ''}}">
+
+
+							{{ "Notifications" | t }}
+
+
+						</a>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+</div>

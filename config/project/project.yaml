@@ -1,4 +1,4 @@
-dateModified: 1626353517
+dateModified: 1628249483
 email:
   fromEmail: aminembarki@gmail.com
   fromName: alerti
@@ -14,6 +14,7 @@ meta:
     05e79526-d431-4b06-a275-52d90d77a025: medium4x3 # medium4x3
     6d9a3e71-a1db-4230-896b-f9a218fde7ea: Dummy # Dummy
     21e65623-7407-44fd-98f3-3df7ce42471a: card # card
+    62da4356-e4a6-4cc8-9503-99657dc7ae55: userProfile # userProfile
     071d2968-01a4-4194-8890-fa7d518e3889: workspace # workspace
     81a98358-f948-45ad-ae11-ac400257d767: 'App status' # App status
     84f2e376-097e-407f-b9e7-c929d03fe75c: facebook_module # facebook_module
@@ -47,6 +48,7 @@ meta:
     e7ddbb89-e989-43d1-86e9-e9e4f45da062: alerti # alerti
     e64afb9c-e8e8-4e8d-acbf-8b8fbf15d4e1: inbox # inbox
     e4106e24-2997-4d86-b82c-305273ffeafc: received_welcome # received_welcome
+    ec5c8786-d087-40b6-9425-a5a6bff6bce2: default # default
     f41d9808-f911-483e-b548-90f6a5227850: Members # Members
     fc81a817-cee1-4abf-9c45-904ac9328d78: New # New
 plugins:

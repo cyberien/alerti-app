@@ -31,6 +31,15 @@ tabs:
         tip: 'unless you know what are you doing'
         type: craft\fieldlayoutelements\Tip
       -
+        fieldUid: e4106e24-2997-4d86-b82c-305273ffeafc # received_welcome
+        instructions: null
+        label: null
+        required: false
+        tip: null
+        type: craft\fieldlayoutelements\CustomField
+        warning: null
+        width: 100
+      -
         fieldUid: d6085f2e-5a8f-46a5-bd52-08658fa9fc14 # Freeze
         instructions: null
         label: null
